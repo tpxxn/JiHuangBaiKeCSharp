@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:饥荒百科全书CSharp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="饥荒百科全书" AllowsTransparency="True" WindowStyle="None" Height="350" Width="525" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseLeftButtonUp="Window_MouseLeftButtonUp" MouseMove="Window_MouseMove" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <ScrollViewer HorizontalAlignment="Left" Height="148" Margin="146,118,0,0" VerticalAlignment="Top" Width="118">
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="160"/>
+        </ScrollViewer>
+
     </Grid>
 </Window>
