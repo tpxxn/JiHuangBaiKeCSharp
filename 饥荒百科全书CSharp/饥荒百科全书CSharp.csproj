@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\DST.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -98,6 +101,3981 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_ancient_guardian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_baby_beefalo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_baby_beefalo_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_baby_beefalo_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_baby_doydoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_baby_tentacle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_batilisk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_beardling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_beardling_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_beardlord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_bearger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_bee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_beefalo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_big_tentacle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_bioluminescence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_birchnutter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_blue_hound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_blue_spore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_blue_whale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_blue_whale_carcass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_bottenosed_ballphin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_bunnyman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_butterfly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_butterfly_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_buzzards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_catcoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_cave_spider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_charlie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_chester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_clckwork_rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_clockwork_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_clockwork_knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_crabbit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_crawling_horror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_crawling_nightmare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_crow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_damage_rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_damaged_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_damaged_knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_dangling_depth_dweller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_deerclops.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_depths_worm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_dogfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_doydoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_doydoy_child.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_dragonfly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_dragoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_eel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_elephant_cactus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_ewecus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_eye_plant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_fat_packim_baggims.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_fire_packim_baggims.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_fireflies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_fishermerm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_floaty_boaty_knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_flup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_frog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_fugu_hutch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_glommer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_gobbler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_grass_gekko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_grass_gekko_disease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_Grass_Gekko_notail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_Grass_Gekko_notail_disease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_green_spore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_guard_pig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_hound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_hutch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_killer_bee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_koalefant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_krampus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_krampus_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_lavae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_lureplants.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_mactusk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_mandrake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_merm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_moleworm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_moose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_mosling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_mosquito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_mosquito_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_mr_skits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_mr_skittish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_music_box_hutch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_night_hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_packim_baggims.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_palm_treeguard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_parrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_parrot_pirate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_pengull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_pig_king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_pig_man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_pirate_ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_poison_birchnut_trees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_poison_snake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_prime_ape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_quacken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_quacken_tentacle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_rabbit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_rabbit_winter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_red_hound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_red_spore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_redbird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_rock_lobster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_sea_hound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_seagull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_seal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_sealnado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_shadow_chester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_shadow_splumonkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_shadow_tentacle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_shadow_watcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_sharkitten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_slurper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_slurtles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_smallbird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_snake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_snow_chester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_snowbird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_snurtles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_spider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_spider_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_spider_warrior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_spider_warrior_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_spitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_splumonkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_stink_ray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_swimming_horror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_swordfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_tallbird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_teentallbird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_tentacle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_tiger_shark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_toucan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_treeguard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_varg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_volt_goat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_volt_goat_withelectric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_water_beefalo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_wee_mactusk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_werepig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_white_whale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_white_whale_carcass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_wildbore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_winter_koalefant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_wobster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A_yaarctopus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchLeft_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchLeft_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchLeft_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchLeft_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchRight_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchRight_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchRight_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\B_SwitchRight_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_walani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_walani_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_warly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_warly_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wathgrithr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_waxwell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_waxwell_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_webber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wendy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wendy_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wendy_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wes_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wickerbottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wilbur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_willow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_willow_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wilson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wolfgang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_woodie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_woodie_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_woodie_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_woodlegs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_woodlegs_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_woodlegs_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\C_wx78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CP_CrockPot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CP_PortableCrockPot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_DST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_ROG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_SW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_bacon_and_eggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_banana_pop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_batilisk_wing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_berries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_bisque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_blubber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_blue_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_brainy_matter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_braised_eggplant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_butter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_butter_muffin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_butterfly_wing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_butterfly_wing_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cactus_flesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cactus_flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_california_roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_carrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_carrot_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_ceviche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_coconut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_coffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_coffee_beans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_batilisk_wing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_blue_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_cactus_flesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_eel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_fish_morsel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_frog_legs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_green_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_leafy_meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_limpets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_mandrake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_monster_meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_morsel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_mussel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_red_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_cooked_sweet_potato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_corn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_corn_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dark_petals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dead_dogfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dead_jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dead_swordfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dead_wobster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_deerclops_eyeball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_delicious_wobster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_doydoy_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dragon_fruit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dragon_fruit_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dragonpie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dragoon_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dried_jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_dried_seaweed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_drumstick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_durian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_durian_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_eel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_eggplant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_eggplant_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_electric_milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_extra_smelly_durian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_eye_of_the_tiger_shark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fish_morsel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fish_steak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fish_tacos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fishsticks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fist_full_of_jam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_flower_salad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_foliage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fresh_fruit_crepes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fried_doydoy_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fried_drumstick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fried_tallbird_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_frog_legs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_froggle_bunwich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_fruit_medley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_glommer%27s_goop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_glow_berry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_green_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_grilled_watermelon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_guacamole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_guardian%27s_horn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_hail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_halved_coconut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_hatching_tallbird_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_honey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_honey_ham.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_honey_nuggets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_honeycomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_hot_pumpkin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_ice_cream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_jelly-O_pop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_jerky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_juicy_berries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_kabobs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_koalefant_trunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_koalefant_trunk_steak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_leafy_meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_lesser_glow_berry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_lichen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_light_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_limpets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_lobster_bisque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_lobster_dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_mandrake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_mandrake_soup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_meatballs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_meaty_stew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_melonsicle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_moleworm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_monster_jerky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_monster_lasagna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_monster_meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_monster_tartare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_morsel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_mussel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_mussel_bouillabaise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_petals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_phlegm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_pierogi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_pomegranate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_pomegranate_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_popcorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_Portable_Crock_Pot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_powdercake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_prepared_dragon_fruit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_pumpkin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_pumpkin_cookie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_pumpkin_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_ratatouille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_raw_fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_red_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_roasted_berrie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_roasted_birchnut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_roasted_carrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_roasted_coconut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_roasted_coffee_beans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_roasted_juicy_berries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_roasted_seaweed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_rot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_rotten_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_seafood_gumbo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_seaweed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_shark_fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_shark_fin_soup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_sliced_pomegranate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_small_jerky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_spicy_chili.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_spoiled_fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_stuffed_eggplant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_surf_%27n%27_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_sweet_potato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_sweet_potato_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_sweet_potato_souffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_taffy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_tallbird_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_toasted_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_trail_mix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_tropical_fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_turkey_dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_unagi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_waffles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_watermelon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_watermelon_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_wet_goop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_winter_koalefant_trunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\F_wobster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Dairy_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Eggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Fishes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Fruit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Meats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Monster_Meats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Sweetener.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FC_Vegetables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_ash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_ashy_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_azure_feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_ballphin_free_tuna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_ballphin_free_tuna_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_bamboo_patch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_bamboo_root.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_beach_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_beard_hair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_beefalo_horn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_beefalo_wool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_berry_bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_berry_bush_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_bioluminescence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_birchnut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_blue_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_blueprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_boards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_bone_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_boneshard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_box_thing_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_box_thing_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_broken_shell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_bunny_puff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_cactus_spike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_carrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_cave_rock_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_charcoal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_coffee_plant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_coontail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_coral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_crank_thing_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_crank_thing_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_crimson_feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_cut_grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_cut_grass_SW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_cut_reeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_dark_petals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_dead_swordfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_deciduous_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_down_feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_doydoy_feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_dragoon_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_dubloons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_elephant_cactus_stump.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_eye_bone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_eye_bone_died.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_eye_bone_died_shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_eye_bone_died_snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_eye_bone_shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_eye_bone_snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_eyeshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fireflies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fishbone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fishbone_died.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fleshy_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_flint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_foliage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_forest_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fungal_turf_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fungal_turf_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fungal_turf_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_fur_tuft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_glommer%27s_flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_glommer%27s_flower_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_glommer%27s_wings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_golden_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_grass_tuft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_grass_tuft_SW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_grass_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_grassy_thing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_green_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_guano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_guano_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_hail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_harpoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_horn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_hound%27s_tooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_hunger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_iron_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_jet_feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_juicy_berry_bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_jungle_tree_seed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_jungle_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_koalefant_trunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_krampus_sack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_lavae_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_lavae_egg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_lavae_tooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_light_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_living_log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_lucy_the_axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_magic_seal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_magma_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_manure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_marble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_marsh_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_meadow_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_message_in_a_bottle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_metal_potato_thing_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_metal_potato_thing_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_moon_rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_mosquito_sack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_mud_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_nightmare_fuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_nitre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_obsidian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_orange_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_palm_leaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_parrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_peg_leg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_petals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_pig_skin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_pine_cone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_pirate_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_portable_crock_pot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_purple_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_rawling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_red_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_ring_thing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_ring_thing_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_ring_thing_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_rocks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_rocky_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_sand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_sandy_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_sanity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_sapling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_savanna_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_scales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_screw_thing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_sea_worther.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_seashell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_shark_fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_shark_gills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_shelmet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_silk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_slimey_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_slurper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_slurper_pelt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_slurtle_slime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_snake_oil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_snakeskin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_snurtle_shell_armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_spider_gland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_spiderhat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_spiky_bushes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_Star_sky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_Star_sky_died.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_steel_wool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_sticky_webbing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_stinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_straw_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_tam_o%27shanter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_tarnished_crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_tentacle_spike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_tentacle_spots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_thulecite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_thulecite_fragments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_tidal_marsh_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_trident.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_turbine_blades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_turf_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_turf_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_twiggy_tree_cone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_twigs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_venom_gland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_vine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_viney_bush_root.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_volcano_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_volt_goat_horn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_walrus_tusk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_webber%27s_skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_winter_koalefant_trunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_wooden_platform_thing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_wooden_potato_thing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_yellow_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\G_yellow_mosquito_sack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\giftest.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_83.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_92.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_93.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Minimized_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Minimized_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Minimized_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_algae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ancient_pseudoscience_station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ancient_statue_head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ancient_statue_head_nogem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ancient_statue_mage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ancient_statue_mage_nogem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_animal_track.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_bamboo_patch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_bamboo_patch_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_bamboo_patch_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_basalt_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_basalt_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_basalt_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_basalt_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_beach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_beehive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_dead_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_dead_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_diseased.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_diseased_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_diseased_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_empty_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_berry_bush_empty_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_birchnut_tree_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_birchnut_tree_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_birchnut_tree_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_birchnut_tree_old_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_birchnut_tree_old_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_birchnut_tree_old_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_blue_mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_blue_mushtree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_blue_mushtree_blooming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_blue_mushtree_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_bones_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_bones_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_bones_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_bones_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_booty_bag_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_booty_bag_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_boulder_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_boulder_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_boulder_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_boulder_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_brainy_sprout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_broken_ancient_pseudoscience_station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_broken_clockworks_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_broken_clockworks_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_broken_clockworks_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_burnt_ash_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_burrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_cactus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_cactus_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_cactus_flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_cave_banana_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_cave_lichen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_cave_lichen_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_cave_pillar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_charcoal_boulder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_chess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_chest_of_the_depths.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_coffee_plant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_coffee_plant_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_coffee_plant_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_coral_reef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_coral_reef_bio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crabbit_den.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_crate_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_deciduous_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_deeper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_desert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_diving_rod_holder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_dragoon_den.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_dragoon_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_electric_isosceles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_elephant_cactus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_elephant_cactus_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_elephant_cactus_stump.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evergreen_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evergreen_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evergreen_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evergreen_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_evil_flower_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fern_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_fishermerm%27s_hut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_florid_postern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flotsam_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_flower_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_glommer%27s_statue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass_diseased.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass_diseased_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass_diseased_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass_empty_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grass_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grasslands.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_grave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_graveyard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_green_mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_green_mushtree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_green_mushtree_blooming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_green_mushtree_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_gunpowder_barrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_harp_statue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_headstone_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_headstone_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_headstone_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_headstone_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_hollow_stump.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_hound_mound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_juicy_berry_bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_juicy_berry_bush_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_juicy_berry_bush_diseased.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_juicy_berry_bush_diseased_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_juicy_berry_bush_diseased_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_juicy_berry_bush_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_jungle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_jungle_tree_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_jungle_tree_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_jungle_tree_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_killer_bee_hive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_krissure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_labyrinth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_lava_pool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_empty_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_empty_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_empty_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_springy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_springy_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_light_flower_swamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_limpet_rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_lumpy_evergreen_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_lumpy_evergreen_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_lumpy_evergreen_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_Magma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_magma_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_magma_pile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_magma_pile_gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mangrove_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mangrove_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mangrove_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mangrove_bio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_marble_pillar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_marble_tree_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_marble_tree_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_marble_tree_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_marble_tree_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_marsh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_maxwell_statue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_maxwell%27s_door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_maxwell%27s_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_maxwell%27s_phonograph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_meadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_merm_head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_merm_hut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_military.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mini_glacier_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mini_glacier_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mini_glacier_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mosaic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mushroom_inground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mushroom_picked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mushtree_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_mussel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_nightmare_fissure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_nightmare_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_nightmare_lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_nightmare_throne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_obelisk_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_obelisk_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_obsidian_boulder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_obsidian_workbench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ocean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ocean_deep.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ocean_medium.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ocean_shallow.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ornate_chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_palm_tree_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_palm_tree_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_palm_tree_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_petrified_tree_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_petrified_tree_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_petrified_tree_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_petrified_tree_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_pig_head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_pig_house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_pig_torch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_plant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_plugged_hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_plugged_sinkhole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_poisonous_hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_pond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_pond_cave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_pond_frozen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_pond_mos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_prime_ape_hut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_rabbit_hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_rabbit_hutch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_red_mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_red_mushtree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_red_mushtree_blooming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_red_mushtree_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_reeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_reeds_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_regular_jungle_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_relic_bowl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_relic_chair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_relic_chipbowl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_relic_plant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_relic_table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_relic_vase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_rocky_plains.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_rockyland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ruins_pillar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_rundown_house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sacred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sandy_pile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sapling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sapling_diseased.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sapling_diseased_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sapling_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_savanna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_seaweed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_seaweed_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sharkitten_den.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_ship_graveyard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_shoal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sick_worm_hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sinkhole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_skeleton_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_skeleton_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_skeleton_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_skeleton_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_skeleton_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_skeleton_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_slimy_pillar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_slot_machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_slurtle_mound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spider_den_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spider_den_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spider_den_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spider_infested.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spiky_bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spiky_bush_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spiky_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_spilagmite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_splumonkey_pod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_stalagmite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_stalagmite_biomes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_stalagmite_tall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_steamer_trunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sunken_boat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_sunken_forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_suspicious_bubbles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_suspicious_dirt_pile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_tall_stalagmite_biomes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_tallbird_nest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_thulecite_wall_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_thulecite_wall_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_thulecite_wall_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_tidal_marsh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_tidal_pool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_totally_normal_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_touch_stone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_tumbleweed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_diseased_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_diseased_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_diseased_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_twiggy_tree_diseased_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_village.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_viney_bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_viney_bush_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_viney_bush_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_volcano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_volcano_altar_of_snackrifice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_volcano_bio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_volcano_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_walrus_camp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_watery_grave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_watery_grave_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_watery_grave_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_watery_grave_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_watery_grave_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_watery_grave_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_waves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_webbed_blue_mushtree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wildbore_head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wildbore_house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wilds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wobster_den.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wooden_thing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wooden_thing_advanture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wooden_thing_sw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_woodlegs%27_cage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_worm_hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wreck_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wreck_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wreck_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_wreck_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\N_x_marks_the_spot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\P_NULL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Cyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Khaki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBar_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PercentageBarBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\QRCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\QRCode_Qun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_abigail%27s_flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_abigail%27s_flower_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_abigail%27s_flower_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_accomploshrine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_alchemy_engine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_anti_venom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_applied_horticulture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_armoured_boat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_backpack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_basic_farm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bat_bat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_battle_helm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_battle_spear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bee_box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bee_mine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_beefalo_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_beekeeper_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_belt_of_hunger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bernie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bernie_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bird_trap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_birdcage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_birds_of_the_world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_blow_dart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_blubber_suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_boards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_boat_cannon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_boat_lantern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_boat_repair_kit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_boat_torch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_boomerang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_booster_shot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bottle_lantern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_brain_of_thought.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_breezy_vest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_brush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bucket-o-poop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bug_net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_buoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_bush_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cactus_armour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_campfire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_captain_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cargo_boat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_carpeted_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cat_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_checkered_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_chef_pouch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_chilled_amulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_chiminea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cloth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cloth_sail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cobblestones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_coconade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_codex_umbra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_compass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_construction_amulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_crock_pot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cut_stone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_cutlass_supreme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_dapper_vest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_dark_sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_deconstruction_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_directional_sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_divining_rod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_doydoy_nest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_dragoon_den.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_dripple_pipes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_drying_rack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_dumbrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_electrical_doodad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_empty_bottle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_endothermic_fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_endothermic_fire_pit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_eyebrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_fashion_melon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_feather_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_feather_lite_sail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_fire_dart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_fire_pit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_fire_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_fishing_rod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_floral_shirt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_football_helmet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_fur_roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_garland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_glossamer_saddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_gold_nugget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_goldenaxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_goldenpickaxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_goldenshovel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_grass_suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_gunpowder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ham_bat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_hammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_hay_wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_healing_salve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_hibearnation_vest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_honey_poultice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_horned_helmet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_houndius_shootius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_howling_conch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ice_box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ice_cube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ice_flingomatic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ice_maker_3000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ice_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_ancient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_dress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_fight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_magic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_nautical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_refine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_science.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_structures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_survival.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_ico_volcanic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_improved_farm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_insulated_pack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_iron_wind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_joy_of_volcanology.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_lantern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_lantern_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_life_giving_amulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_life_jacket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_lightning_rod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_limestone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_limestone_suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_limestone_wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_log_raft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_log_suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_lucky_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_luxury_fan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_luxury_machete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_machete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_magiluminescence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_marble_suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_meat_effigy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_miner_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_moggles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_moon_rock_wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_morning_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_mussel_stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_night_armour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_night_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_nightmare_amulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_nightmare_fuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_obsidian_armour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_obsidian_axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_obsidian_coconade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_obsidian_fire_pit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_obsidian_machete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_obsidian_spear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_old_bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_on_tentacles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_one-man_band.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_palm_leaf_hut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pan_flute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_papyrus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_particulate_purifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pickaxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pickaxe_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pig_house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_piggyback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pile_o%27_balloons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pirate_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pitchfork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_poison_dart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_poison_spear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_potted_fern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_prestihatitator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_prestihatitator_SW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pretty_parasol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_prime_ape_hut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_puffy_vest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_pumpkin_lantern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_purple_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_rabbit_earmuffs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_rabbit_hutch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_raft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_rain_coat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_rain_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_rainometer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_razor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_rope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_row_boat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_saddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_saddlehorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sail_stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_salt_lick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sand_castle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sandbag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_scaled_chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_scaled_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_scalemail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_science_machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sea_sack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sea_trap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_seashell_suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_Seaworthy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sewing_kit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_shadow_digger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_shadow_duelist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_shadow_logger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_shadow_manipulator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_shadow_miner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_shark_tooth_crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_shovel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_siesta_lean-to.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_silly_monkey_ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sleek_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sleep_dart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_sleepytime_stories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_snakeskin_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_snakeskin_jacket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_snakeskin_rug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_snakeskin_sail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_spear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_spear_gun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_spider_eggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_spyglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_star_caller%27s_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_stone_wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_straw_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_straw_roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_summer_frest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_super_spyglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_surfboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_tail_o%27_three_cats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_telelocator_focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_telelocator_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_telltale_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_tent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thatch_pack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thatch_sail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_the_end_is_nigh!.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_the_lazy_explorer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_the_lazy_forager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_the_%27sea_legs%27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thermal_measurer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thermal_stone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thermal_stone_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thermal_stone_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thermal_stone_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thermal_stone_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thick_fur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite_crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite_medallion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite_medallion_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite_medallion_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite_suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_thulecite_wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_tooth_trap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_top_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_torch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_trap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_trawl_net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_tropical_fan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_tropical_parasol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_umbrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_volcano_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_walking_cane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_war_saddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_wardrobe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_waterballoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_weather_pain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_whirly_fan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_wildbore_house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_willow%27s_lighter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_windbreaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_winter_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_wood_wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\S_wooden_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Setting_Shortcut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Setting_Skin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Setting_Skin_Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_air_unfreshener.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_ancient_vase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_back_scratcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_ball_and_cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_beaten_beater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_bent_spork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_black_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_brain_cloud_pill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_broken_AAC_device.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_dessicated_tentacle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_fake_kazoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_frayed_yarn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_frazzled_wires.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_gnome_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_gnome_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_gord%27s_knot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_hardened_rubber_bung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_leaky_teacup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_license_plate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_lucky_cat_jar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_lying_robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_melty_marbles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_mismatched_buttons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_old_boot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_one_true_earring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_orange_soda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_potato_cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_sea_worther.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_second_hand_dentures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_sextant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_shoe_horn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_soaked_candle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_tiny_rocketship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_toy_boat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_toy_trojan_horse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_ukulele.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_unbalanced_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_voodoo_doll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_white_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_wine_bottle_candle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\T_wire_hanger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_ashy_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_beach_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_carpeted_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_cave_rock_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_checkered_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_cobblestone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_deciduous_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_forest_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_fungal_turf_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_fungal_turf_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_fungal_turf_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_grass_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_guano_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_jungle_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_magma_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_marsh_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_meadow_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_mud_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_rocky_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_sandy_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_savanna_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_scaled_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_slimey_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_snakeskin_rug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_sticky_webbing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_tidal_marsh_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_volcano_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Texture_wooden_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Yarrctopus_arrow_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DST.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
