@@ -5743,6 +5743,36 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap HamburgerMenu_01 {
+            get {
+                object obj = ResourceManager.GetObject("HamburgerMenu_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap HamburgerMenu_02 {
+            get {
+                object obj = ResourceManager.GetObject("HamburgerMenu_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap HamburgerMenu_03 {
+            get {
+                object obj = ResourceManager.GetObject("HamburgerMenu_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap HamburgerMenu_11 {
             get {
                 object obj = ResourceManager.GetObject("HamburgerMenu_11", resourceCulture);
@@ -6046,6 +6076,36 @@ namespace 饥荒百科全书CSharp.Properties {
         internal static System.Drawing.Bitmap Loading {
             get {
                 object obj = ResourceManager.GetObject("Loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Maximized_1 {
+            get {
+                object obj = ResourceManager.GetObject("Maximized_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Maximized_2 {
+            get {
+                object obj = ResourceManager.GetObject("Maximized_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Maximized_3 {
+            get {
+                object obj = ResourceManager.GetObject("Maximized_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -9606,6 +9666,36 @@ namespace 饥荒百科全书CSharp.Properties {
         internal static System.Drawing.Bitmap N_x_marks_the_spot {
             get {
                 object obj = ResourceManager.GetObject("N_x_marks_the_spot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Normal_1 {
+            get {
+                object obj = ResourceManager.GetObject("Normal_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Normal_2 {
+            get {
+                object obj = ResourceManager.GetObject("Normal_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Normal_3 {
+            get {
+                object obj = ResourceManager.GetObject("Normal_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

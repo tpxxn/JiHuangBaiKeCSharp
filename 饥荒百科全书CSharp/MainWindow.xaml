@@ -1,16 +1,359 @@
-﻿<Window x:Class="饥荒百科全书CSharp.MainWindow"
+﻿<Window x:Name="mainWindow" x:Class="饥荒百科全书CSharp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:饥荒百科全书CSharp"
         mc:Ignorable="d"
-        Title="饥荒百科全书" AllowsTransparency="True" WindowStyle="None" Height="350" Width="525" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseLeftButtonUp="Window_MouseLeftButtonUp" MouseMove="Window_MouseMove" WindowStartupLocation="CenterScreen" Icon="Assets/DST.ico" >
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        
-    </Grid>
+        Title="饥荒百科全书" Icon="Resources/DST.ico" 
+        Height="660" Width="1000" 
+        MinWidth="800" MinHeight="660" 
+        WindowStyle="None" AllowsTransparency="True" 
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" 
+        MouseLeftButtonUp="Window_MouseLeftButtonUp" 
+        MouseMove="Window_MouseMove" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanResizeWithGrip" 
+        SizeChanged="mainWindow_SizeChanged">
+    <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FF2B2B2B">
+        <Canvas x:Name="MainCanvas">
+            <Grid x:Name="MainGrid" Grid.Column="1" HorizontalAlignment="Right" Width="950" Canvas.Right="0" Height="658">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="Background" HorizontalAlignment="Left" Grid.RowSpan="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="Resources/Texture_volcano_turf.png" Stretch="Fill"/>
+                <TextBlock x:Name="TextBlock_Title" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" />
+                <Button x:Name="UI_btn_close" Width="15" Cursor="Hand" ToolTip="退出" Click="UI_btn_close_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,10,10,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Image x:Name="btnbg_close" Source="/Resources/close_1.png" />
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Source"  Value="/Resources/close_2.png" TargetName="btnbg_close" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Source" Value="/Resources/close_3.png" TargetName="btnbg_close" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="UI_btn_maximized" Width="15" Cursor="Hand" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,10,30,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Image x:Name="btnbg_maximized" Source="Resources/Maximized_1.png" />
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Source"  Value="/Resources/Maximized_2.png" TargetName="btnbg_maximized" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Source" Value="/Resources/Maximized_3.png" TargetName="btnbg_maximized" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="UI_btn_normal" Width="15" Cursor="Hand" ToolTip="还原" Click="UI_btn_normal_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,10,30,0" Visibility="Collapsed">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Image x:Name="btnbg_normal" Source="Resources/Normal_1.png" />
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Source"  Value="/Resources/Normal_2.png" TargetName="btnbg_normal" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Source" Value="/Resources/Normal_3.png" TargetName="btnbg_normal" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="UI_btn_minimized" Width="15" Cursor="Hand" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,10,50,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Image x:Name="btnbg_minimized" Source="/Resources/Minimized_1.png" />
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Source"  Value="/Resources/Minimized_2.png" TargetName="btnbg_minimized" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Source" Value="/Resources/Minimized_3.png" TargetName="btnbg_minimized" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+            <Canvas x:Name="LeftCanvas" Margin="0" Width="50" HorizontalAlignment="Left">
+                <WrapPanel x:Name="LeftWrapPanel" Width="50" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="660">
+                    <Button x:Name="LeftButton_Menu" Width="50" Height="50" Click="LeftButton_Menu_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu_01.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source"  Value="/Resources/HamburgerMenu_02.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_03.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <RadioButton x:Name="LeftButton_Welcome" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_11.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_12.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_13.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_13.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Character" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_41.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_42.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_43.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_43.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Food" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_21.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_22.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_23.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_23.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Science" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_31.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_32.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Cooking_Simulator" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_51.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_52.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_53.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_53.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Animal" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_61.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_62.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_63.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_63.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Natural" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_71.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_72.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_73.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_73.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Goods" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_81.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_82.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_83.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_83.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Setting" Content="RadioButton" Height="50" Width="150">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_121.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_122.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_123.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_123.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                </WrapPanel>
+            </Canvas>
+        </Canvas>
+    </Border>
 </Window>

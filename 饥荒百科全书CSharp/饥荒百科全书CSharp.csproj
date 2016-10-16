@@ -39,10 +39,12 @@
     <ApplicationIcon>Resources\DST.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -65,6 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AnimationClass.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -1802,15 +1805,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\giftest.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu_11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu_12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu_13.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\HamburgerMenu_21.png" />
@@ -4076,6 +4070,42 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DST.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Maximized_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Maximized_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Maximized_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Normal_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Normal_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Normal_3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
