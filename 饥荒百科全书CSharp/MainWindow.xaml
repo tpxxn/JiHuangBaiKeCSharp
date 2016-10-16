@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="饥荒百科全书" AllowsTransparency="True" WindowStyle="None" Height="350" Width="525" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseLeftButtonUp="Window_MouseLeftButtonUp" MouseMove="Window_MouseMove" WindowStartupLocation="CenterScreen" Icon="Assets/DST.ico" >
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         
     </Grid>
 </Window>
