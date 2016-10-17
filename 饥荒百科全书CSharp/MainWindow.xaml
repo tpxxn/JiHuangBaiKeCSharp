@@ -42,10 +42,14 @@
                     <ColumnDefinition Width="200" MinWidth="200" MaxWidth="280"/>
                     <ColumnDefinition Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
+                <Border x:Name="BackGroundBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="658" Grid.RowSpan="2" VerticalAlignment="Top" Width="950" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <ImageBrush TileMode="None" ImageSource="Resources/DST.ico"/>
+                    </Border.Background>
+                </Border>
                 <GridSplitter x:Name="SPLITTER" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Grid.Column="1" Background="#FF1A348F" Grid.Row="1" Cursor="{DynamicResource Cursor_horz}"/>
-                <Border x:Name="BORDERLEFT" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Background="#FFEA4040" Margin="2,0,0,0"/>
-                <Border x:Name="BORDERRIGHT" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="1" Background="#FFD1E8D0" Margin="5,0,0,0"/>
-                <Image x:Name="Background" HorizontalAlignment="Left" Grid.RowSpan="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="Resources/Texture_volcano_turf.png" Stretch="Fill" Visibility="Hidden"/>
+                <Border x:Name="BORDERLEFT" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Background="#55EA4040" Margin="2,0,0,0"/>
+                <Border x:Name="BORDERRIGHT" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="1" Background="#55D1E8D0" Margin="5,0,0,0"/>
                 <TextBlock x:Name="TextBlock_Title" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" />
                 <Button x:Name="UI_btn_close" Width="15" ToolTip="退出" Click="UI_btn_close_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,-10,10,0" Cursor="{DynamicResource Cursor_link}">
                     <Button.Style>
@@ -131,8 +135,9 @@
                         </Style>
                     </Button.Style>
                 </Button>
+                <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="button_Click"/>
                 <ScrollViewer x:Name="ScrollViewer_Right" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Margin="6,1,0,0" Width="743" Height="606" Template="{DynamicResource MyScrollViewer}">
-                    <WrapPanel x:Name="WrapPanel_Right" HorizontalAlignment="Left" VerticalAlignment="Top" Width="726" Height="800" Background="#FFAEBAF0">
+                    <WrapPanel x:Name="WrapPanel_Right" HorizontalAlignment="Left" VerticalAlignment="Top" Width="726" Height="800" Background="#55AEBAF0">
                         <uc:ButtonWithText x:Name="test" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         <uc:ButtonWithText x:Name="test_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         <uc:ButtonWithText x:Name="test_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" />

@@ -22,5 +22,17 @@ namespace 饥荒百科全书CSharp.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SettingBackground {
+            get {
+                return ((string)(this["SettingBackground"]));
+            }
+            set {
+                this["SettingBackground"] = value;
+            }
+        }
     }
 }

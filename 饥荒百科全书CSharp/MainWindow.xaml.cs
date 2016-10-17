@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -11,9 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
+using 饥荒百科全书CSharp.Properties;
 
 namespace 饥荒百科全书CSharp
 {
@@ -117,6 +119,7 @@ namespace 饥荒百科全书CSharp
             MainGrid.Height = ActualHeight - 2;
             LeftCanvas.Height = ActualHeight - 2;
             LeftWrapPanel.Height = ActualHeight - 2;
+            BackGroundBorder.Width = ActualWidth;
             SPLITTER.Height = ActualHeight - 52;
             if (LeftMenuState == 0)
             {
@@ -134,6 +137,34 @@ namespace 饥荒百科全书CSharp
             test.TextP = "23242342343434";
             test.ImageP = "F_honeycomb";
             test.TextWidthP = true;
+            string bg = Settings.Default.SettingBackground.ToString();
+            if (bg != "")
+            {
+                try
+                {
+                    var brush = new ImageBrush();
+                    brush.ImageSource = new BitmapImage(new Uri(bg));
+                    BackGroundBorder.Background = brush;
+                }
+                catch
+                {
+                    BackGroundBorder.Visibility = Visibility.Collapsed;
+                }
+            }
+            else
+            {
+
+            }
+            /*
+              If RegReadBG <> "" Then
+                  Dim brush As New ImageBrush
+                  brush.ImageSource = New BitmapImage(New Uri(RegReadBG))
+                  BackGroundBorder.Background = brush
+              Else
+                  Se_TextBlock_Alpha.Foreground = Brushes.Silver
+                  Setting_slider_Alpha.IsEnabled = False
+              End If
+             */
             //控件计数
             //int sum = 0;
             //foreach (Control vControl in WrapPanel_Right.Children)
@@ -143,6 +174,54 @@ namespace 饥荒百科全书CSharp
             //        sum += 1;
             //    }
             //}
+        }
+
+        public void SetBackground()
+        {
+            var OFD = new OpenFileDialog();
+            OFD.FileName = ""; //默认文件名
+            OFD.DefaultExt = ".png"; // 默认文件扩展名
+            OFD.Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png"; //文件扩展名过滤器
+
+            bool? result = OFD.ShowDialog(); //显示打开文件对话框
+
+            BackGroundBorder.Visibility = Visibility.Visible;
+            try
+            {
+                string PictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\"; //设置文件夹位置
+                if ((Directory.Exists(PictruePath)) == false) //若文件夹不存在
+                {
+                    Directory.CreateDirectory(PictruePath);
+                }
+                var filename = Path.GetFileName(OFD.FileName); //设置文件名
+                try
+                {
+                    File.Copy(OFD.FileName, PictruePath + filename, true);
+                }
+                catch (Exception) { }
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(PictruePath + filename));
+                BackGroundBorder.Background = brush;
+                Settings.Default.SettingBackground = PictruePath + filename;
+                Settings.Default.Save();//保存设置
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("没有选择正确的图片");
+            }
+        }
+
+        private void ClearBackground()
+        {
+            BackGroundBorder.Visibility = Visibility.Collapsed;
+            Settings.Default.SettingBackground = "";
+            Settings.Default.Save();//保存设置
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            SetBackground();
         }
     }
 }
