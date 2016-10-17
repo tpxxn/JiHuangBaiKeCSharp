@@ -1971,6 +1971,146 @@ namespace 饥荒百科全书CSharp.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_alternate {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_alternate", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_cross {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_cross", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_dgn1 {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_dgn1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_dgn2 {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_dgn2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_hand {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_hand", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_help {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_help", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_horz {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_horz", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_link {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_link", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_move {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_move", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_pointer {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_pointer", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_text {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_text", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_unavailiable {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_unavailiable", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_vert {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_vert", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        internal static byte[] Cursor_workOrbusy {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_workOrbusy", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap DLC_DST {

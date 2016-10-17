@@ -7,7 +7,7 @@ using System.Windows.Media.Animation;
 
 namespace 饥荒百科全书CSharp
 {
-    public partial class AnimationClass : Window
+    public partial class AnimationClass
     {
         public void Animation(UIElement obj, double from, double to, DependencyProperty property, double time=0.1)
         {

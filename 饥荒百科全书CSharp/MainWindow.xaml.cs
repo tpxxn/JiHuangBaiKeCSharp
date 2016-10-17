@@ -115,6 +115,7 @@ namespace 饥荒百科全书CSharp
             MainGrid.Height = ActualHeight - 2;
             LeftCanvas.Height = ActualHeight - 2;
             LeftWrapPanel.Height = ActualHeight - 2;
+            SPLITTER.Height = ActualHeight - 52;
             if (LeftMenuState == 0)
             {
                 animation.Animation(MainGrid, ActualWidth - 50, ActualWidth - 50, WidthProperty, 0.001);
@@ -125,5 +126,10 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
+
+        private void mainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            //UI_btn_maximized.Cursor = ((TextBlock)Resources["Cursor_link"]).Cursor;
+        }
     }
 }
