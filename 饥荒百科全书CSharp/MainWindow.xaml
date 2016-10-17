@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:饥荒百科全书CSharp"
+        xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
         mc:Ignorable="d"
         Title="饥荒百科全书" Icon="Resources/DST.ico" 
         Height="660" Width="1000" 
@@ -25,6 +26,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/CursorDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/ScrollViewerDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -129,6 +131,20 @@
                         </Style>
                     </Button.Style>
                 </Button>
+                <ScrollViewer x:Name="ScrollViewer_Right" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Margin="6,1,0,0" Width="743" Height="606" Template="{DynamicResource MyScrollViewer}">
+                    <WrapPanel x:Name="WrapPanel_Right" HorizontalAlignment="Left" VerticalAlignment="Top" Width="726" Height="800" Background="#FFAEBAF0">
+                        <uc:ButtonWithText x:Name="test" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy3" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy4" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy5" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy6" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <uc:ButtonWithText x:Name="test_Copy7" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <Slider x:Name="slider" Width="116"/>
+                    </WrapPanel>
+                </ScrollViewer>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
@@ -225,30 +241,6 @@
                             </Style>
                         </RadioButton.Style>
                     </RadioButton>
-                    <RadioButton x:Name="LeftButton_Science" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}">
-                        <RadioButton.Style>
-                            <Style TargetType="{x:Type RadioButton}">
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type RadioButton}">
-                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_31.png" />
-                                            <ControlTemplate.Triggers>
-                                                <Trigger Property="IsMouseOver" Value="True">
-                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_32.png" TargetName="btnbg_minimized" />
-                                                </Trigger>
-                                                <Trigger Property="IsPressed" Value="True">
-                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
-                                                </Trigger>
-                                                <Trigger Property="IsChecked" Value="True">
-                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
-                                                </Trigger>
-                                            </ControlTemplate.Triggers>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </RadioButton.Style>
-                    </RadioButton>
                     <RadioButton x:Name="LeftButton_Cooking_Simulator" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}">
                         <RadioButton.Style>
                             <Style TargetType="{x:Type RadioButton}">
@@ -265,6 +257,30 @@
                                                 </Trigger>
                                                 <Trigger Property="IsChecked" Value="True">
                                                     <Setter Property="Source" Value="/Resources/HamburgerMenu_53.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton x:Name="LeftButton_Science" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}">
+                        <RadioButton.Style>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type RadioButton}">
+                                            <Image x:Name="btnbg_minimized" Source="Resources/HamburgerMenu_31.png" />
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_32.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Source" Value="/Resources/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
                                                 </Trigger>
                                             </ControlTemplate.Triggers>
                                         </ControlTemplate>

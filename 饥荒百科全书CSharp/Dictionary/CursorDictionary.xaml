@@ -16,6 +16,7 @@
     <Cursor x:Key="Cursor_alternate">../Resources/Cursor_alternate.cur</Cursor>
     <Cursor x:Key="Cursor_link">../Resources/Cursor_link.ani</Cursor>
     <!-->
+    //UI_btn_maximized.Cursor = ((TextBlock)Resources["Cursor_link"]).Cursor;
     <TextBlock x:Key="Cursor_help" Cursor="../Resources/Cursor_help.cur"/>
     <TextBlock x:Key="Cursor_workOrbusy" Cursor="../Resources/Cursor_workOrbusy.ani"/>
     <TextBlock x:Key="Cursor_cross" Cursor="../Resources/Cursor_cross.cur"/>

@@ -12,6 +12,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using 饥荒百科全书CSharp.Class;
+using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp
 {
@@ -129,7 +131,18 @@ namespace 饥荒百科全书CSharp
 
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            //UI_btn_maximized.Cursor = ((TextBlock)Resources["Cursor_link"]).Cursor;
+            test.TextP = "23242342343434";
+            test.ImageP = "F_honeycomb";
+            test.TextWidthP = true;
+            //控件计数
+            //int sum = 0;
+            //foreach (Control vControl in WrapPanel_Right.Children)
+            //{
+            //    if (vControl is ButtonWithText)
+            //    {
+            //        sum += 1;
+            //    }
+            //}
         }
     }
 }
