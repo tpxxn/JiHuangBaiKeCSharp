@@ -94,19 +94,28 @@ namespace 饥荒百科全书CSharp
         private void LeftButton_Menu_Click(object sender, RoutedEventArgs e)
         {
             var animation = new AnimationClass();
-            var MainWindowWidth = ActualWidth;//获取窗口宽度
+            var MainWindowWidth = mainWindow.ActualWidth;//获取窗口宽度
+            double MainGridWidth = MainGrid.ActualWidth;
             if (LeftMenuState == 0)
             {
+                UI_Version.Visibility = Visibility.Visible;
+                animation.Animation(LCWidth, 50, 150, WidthProperty);
+                LCWidth.Width = new GridLength(150);
                 animation.Animation(LeftCanvas, 50, 150, WidthProperty);
+                LeftCanvas.Width = 150;
                 animation.Animation(LeftWrapPanel, 50, 150, WidthProperty);
-                animation.Animation(MainGrid, ActualWidth - 50, ActualWidth - 150, WidthProperty);
+                LeftWrapPanel.Width = 150;
                 LeftMenuState = 1;
             }
             else
             {
+                UI_Version.Visibility = Visibility.Collapsed;
+                animation.Animation(LCWidth, 150, 50, WidthProperty);
+                LCWidth.Width = new GridLength(50);
                 animation.Animation(LeftCanvas, 150, 50, WidthProperty);
+                LeftCanvas.Width = 50;
                 animation.Animation(LeftWrapPanel, 150, 50, WidthProperty);
-                animation.Animation(MainGrid, ActualWidth - 150, ActualWidth - 50, WidthProperty);
+                LeftWrapPanel.Width = 50;
                 LeftMenuState = 0;
             }
 
@@ -114,21 +123,27 @@ namespace 饥荒百科全书CSharp
 
         private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            UpdateLayout();
-            var animation = new AnimationClass();
-            MainGrid.Height = ActualHeight - 2;
-            LeftCanvas.Height = ActualHeight - 2;
-            LeftWrapPanel.Height = ActualHeight - 2;
-            BackGroundBorder.Width = ActualWidth;
-            SPLITTER.Height = ActualHeight - 52;
-            if (LeftMenuState == 0)
-            {
-                animation.Animation(MainGrid, ActualWidth - 50, ActualWidth - 50, WidthProperty, 0.001);
-            }
-            else
-            {
-                animation.Animation(MainGrid, ActualWidth - 150, ActualWidth - 150, WidthProperty, 0.001);
-            }
+            UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
+            //UpdateLayout();
+            //var animation = new AnimationClass();
+            LeftCanvas.Height = mainWindow.ActualHeight - 2;
+            LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
+
+            //MainGrid.Height = mainWindow.ActualHeight - 2;
+            //UI_BackGroundBorder.Width = mainWindow.ActualWidth - 51;
+            //UI_BackGroundBorder.Height = ActualHeight;
+            UI_Splitter.Height = ActualHeight - 52;
+            //WrapPanel_Right.Width = MainGrid.ActualWidth - 200;
+            //if (LeftMenuState == 0)
+            //{
+            //    animation.Animation(MainGrid, mainWindow.ActualWidth - 51, mainWindow.ActualWidth - 51, WidthProperty, 0.001);
+            //    animation.Animation(MainGrid, mainWindow.ActualWidth - 51, mainWindow.ActualWidth - 51, WidthProperty, 0.001);
+            //}
+            //else
+            //{
+            //    animation.Animation(UI_BackGroundBorder, mainWindow.ActualWidth - 151, mainWindow.ActualWidth - 151, WidthProperty, 0.001);
+            //    animation.Animation(UI_BackGroundBorder, mainWindow.ActualWidth - 151, mainWindow.ActualWidth - 151, WidthProperty, 0.001);
+            //}
         }
         #endregion
 
@@ -137,6 +152,8 @@ namespace 饥荒百科全书CSharp
             test.TextP = "23242342343434";
             test.ImageP = "F_honeycomb";
             test.TextWidthP = true;
+
+            UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             string bg = Settings.Default.SettingBackground.ToString();
             if (bg != "")
             {
@@ -144,11 +161,11 @@ namespace 饥荒百科全书CSharp
                 {
                     var brush = new ImageBrush();
                     brush.ImageSource = new BitmapImage(new Uri(bg));
-                    BackGroundBorder.Background = brush;
+                    UI_BackGroundBorder.Background = brush;
                 }
                 catch
                 {
-                    BackGroundBorder.Visibility = Visibility.Collapsed;
+                    UI_BackGroundBorder.Visibility = Visibility.Collapsed;
                 }
             }
             else
@@ -185,7 +202,7 @@ namespace 饥荒百科全书CSharp
 
             bool? result = OFD.ShowDialog(); //显示打开文件对话框
 
-            BackGroundBorder.Visibility = Visibility.Visible;
+            UI_BackGroundBorder.Visibility = Visibility.Visible;
             try
             {
                 string PictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\"; //设置文件夹位置
@@ -201,9 +218,9 @@ namespace 饥荒百科全书CSharp
                 catch (Exception) { }
                 var brush = new ImageBrush();
                 brush.ImageSource = new BitmapImage(new Uri(PictruePath + filename));
-                BackGroundBorder.Background = brush;
+                UI_BackGroundBorder.Background = brush;
                 Settings.Default.SettingBackground = PictruePath + filename;
-                Settings.Default.Save();//保存设置
+                Settings.Default.Save();
             }
             catch (Exception)
             {
@@ -214,9 +231,9 @@ namespace 饥荒百科全书CSharp
 
         private void ClearBackground()
         {
-            BackGroundBorder.Visibility = Visibility.Collapsed;
+            UI_BackGroundBorder.Visibility = Visibility.Collapsed;
             Settings.Default.SettingBackground = "";
-            Settings.Default.Save();//保存设置
+            Settings.Default.Save();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

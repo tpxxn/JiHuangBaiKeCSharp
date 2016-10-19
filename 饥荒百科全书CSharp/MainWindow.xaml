@@ -32,112 +32,113 @@
     </Window.Resources>
 
     <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FF2B2B2B">
-        <Canvas x:Name="MainCanvas">
-            <Grid x:Name="MainGrid" Grid.Column="1" HorizontalAlignment="Right" Width="950" Canvas.Right="0" Height="658">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="#FFCDEEEB">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LCWidth" Width="50" MinWidth="50" MaxWidth="150"/>
+                <ColumnDefinition x:Name="RWidth" Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border x:Name="UI_BackGroundBorder" BorderThickness="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="1,0" Grid.Column="1"/>
+            <TextBlock x:Name="UI_Title" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Button x:Name="UI_btn_close" Width="15" ToolTip="退出" Click="UI_btn_close_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="2" Margin="0,-10,10,0" Cursor="{DynamicResource Cursor_link}">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Image x:Name="btnbg_close" Source="/Resources/close_1.png" />
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source"  Value="/Resources/close_2.png" TargetName="btnbg_close" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Source" Value="/Resources/close_3.png" TargetName="btnbg_close" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="UI_btn_maximized" Width="15" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="2" Margin="0,-10,30,0" Cursor="{DynamicResource Cursor_link}">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Image x:Name="btnbg_maximized" Source="Resources/Maximized_1.png" />
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source"  Value="/Resources/Maximized_2.png" TargetName="btnbg_maximized" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Source" Value="/Resources/Maximized_3.png" TargetName="btnbg_maximized" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="UI_btn_normal" Width="15" ToolTip="还原" Click="UI_btn_normal_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="2" Margin="0,-10,30,0" Visibility="Collapsed" Cursor="{DynamicResource Cursor_link}">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Image x:Name="btnbg_normal" Source="Resources/Normal_1.png" />
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source"  Value="/Resources/Normal_2.png" TargetName="btnbg_normal" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Source" Value="/Resources/Normal_3.png" TargetName="btnbg_normal" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="UI_btn_minimized" Width="15" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="2" Margin="0,-10,50,0" Cursor="{DynamicResource Cursor_link}">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Image x:Name="btnbg_minimized" Source="/Resources/Minimized_1.png" />
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source"  Value="/Resources/Minimized_2.png" TargetName="btnbg_minimized" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Source" Value="/Resources/Minimized_3.png" TargetName="btnbg_minimized" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Click="button_Click" Grid.Column="2"/>
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200" MinWidth="200" MaxWidth="280"/>
-                    <ColumnDefinition Width="*" MinWidth="100"/>
+                    <ColumnDefinition x:Name="SLWidth" Width="200" MinWidth="200" MaxWidth="280"/>
+                    <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <Border x:Name="BackGroundBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="658" Grid.RowSpan="2" VerticalAlignment="Top" Width="950" Grid.ColumnSpan="2">
-                    <Border.Background>
-                        <ImageBrush TileMode="None" ImageSource="Resources/DST.ico"/>
-                    </Border.Background>
-                </Border>
-                <GridSplitter x:Name="SPLITTER" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Grid.Column="1" Background="#FF1A348F" Grid.Row="1" Cursor="{DynamicResource Cursor_horz}"/>
-                <Border x:Name="BORDERLEFT" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Background="#55EA4040" Margin="2,0,0,0"/>
-                <Border x:Name="BORDERRIGHT" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="1" Background="#55D1E8D0" Margin="5,0,0,0"/>
-                <TextBlock x:Name="TextBlock_Title" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" />
-                <Button x:Name="UI_btn_close" Width="15" ToolTip="退出" Click="UI_btn_close_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,-10,10,0" Cursor="{DynamicResource Cursor_link}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Image x:Name="btnbg_close" Source="/Resources/close_1.png" />
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Source"  Value="/Resources/close_2.png" TargetName="btnbg_close" />
-                                            </Trigger>
-                                            <Trigger Property="IsPressed" Value="True">
-                                                <Setter Property="Source" Value="/Resources/close_3.png" TargetName="btnbg_close" />
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <Button x:Name="UI_btn_maximized" Width="15" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,-10,30,0" Cursor="{DynamicResource Cursor_link}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Image x:Name="btnbg_maximized" Source="Resources/Maximized_1.png" />
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Source"  Value="/Resources/Maximized_2.png" TargetName="btnbg_maximized" />
-                                            </Trigger>
-                                            <Trigger Property="IsPressed" Value="True">
-                                                <Setter Property="Source" Value="/Resources/Maximized_3.png" TargetName="btnbg_maximized" />
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <Button x:Name="UI_btn_normal" Width="15" ToolTip="还原" Click="UI_btn_normal_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,-10,30,0" Visibility="Collapsed" Cursor="{DynamicResource Cursor_link}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Image x:Name="btnbg_normal" Source="Resources/Normal_1.png" />
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Source"  Value="/Resources/Normal_2.png" TargetName="btnbg_normal" />
-                                            </Trigger>
-                                            <Trigger Property="IsPressed" Value="True">
-                                                <Setter Property="Source" Value="/Resources/Normal_3.png" TargetName="btnbg_normal" />
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <Button x:Name="UI_btn_minimized" Width="15" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="15" HorizontalAlignment="Right" Focusable="False" Grid.Column="1" Margin="0,-10,50,0" Cursor="{DynamicResource Cursor_link}">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Image x:Name="btnbg_minimized" Source="/Resources/Minimized_1.png" />
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Source"  Value="/Resources/Minimized_2.png" TargetName="btnbg_minimized" />
-                                            </Trigger>
-                                            <Trigger Property="IsPressed" Value="True">
-                                                <Setter Property="Source" Value="/Resources/Minimized_3.png" TargetName="btnbg_minimized" />
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-                <ScrollViewer x:Name="ScrollViewer_Right" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Margin="6,1,0,0" Width="743" Height="606" Template="{DynamicResource MyScrollViewer}">
-                    <WrapPanel x:Name="WrapPanel_Right" HorizontalAlignment="Left" VerticalAlignment="Top" Width="726" Height="800" Background="#55AEBAF0">
+                <ScrollViewer x:Name="ScrollViewer_Left" Template="{DynamicResource MyScrollViewer}">
+                    <WrapPanel x:Name="WrapPanel_Left" Height="760" Background="#88DE9191"/>
+                </ScrollViewer>
+                <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Margin="50,50,0,-558"/>
+                <ScrollViewer x:Name="ScrollViewer_Right" Template="{DynamicResource MyScrollViewer}" Grid.Column="1">
+                    <WrapPanel x:Name="WrapPanel_Right" Height="800" Background="#88409A9E">
                         <uc:ButtonWithText x:Name="test" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         <uc:ButtonWithText x:Name="test_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         <uc:ButtonWithText x:Name="test_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" />
@@ -151,7 +152,7 @@
                     </WrapPanel>
                 </ScrollViewer>
             </Grid>
-            <Canvas x:Name="LeftCanvas" Margin="0" Width="50" HorizontalAlignment="Left">
+            <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
                     <Button x:Name="LeftButton_Menu" Width="50" Height="50" Click="LeftButton_Menu_Click" Cursor="{DynamicResource Cursor_link}">
                         <Button.Style>
@@ -391,7 +392,8 @@
                         </RadioButton.Style>
                     </RadioButton>
                 </WrapPanel>
+                <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Visibility="Collapsed" />
             </Canvas>
-        </Canvas>
+        </Grid>
     </Border>
 </Window>
