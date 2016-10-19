@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ using System.Windows.Navigation;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
 using 饥荒百科全书CSharp.Properties;
+using static 饥荒百科全书CSharp.Class.ControlVisibility;
 
 namespace 饥荒百科全书CSharp
 {
@@ -91,7 +93,7 @@ namespace 饥荒百科全书CSharp
         #region "模拟SplitView按钮"
         public static byte LeftMenuState = 0;
 
-        private void LeftButton_Menu_Click(object sender, RoutedEventArgs e)
+        private void Sidebar_Menu_Click(object sender, RoutedEventArgs e)
         {
             var animation = new AnimationClass();
             var MainWindowWidth = mainWindow.ActualWidth;//获取窗口宽度
@@ -100,10 +102,10 @@ namespace 饥荒百科全书CSharp
             {
                 UI_Version.Visibility = Visibility.Visible;
                 animation.Animation(LCWidth, 50, 150, WidthProperty);
-                LCWidth.Width = new GridLength(150);
                 animation.Animation(LeftCanvas, 50, 150, WidthProperty);
-                LeftCanvas.Width = 150;
                 animation.Animation(LeftWrapPanel, 50, 150, WidthProperty);
+                LCWidth.Width = new GridLength(150);
+                LeftCanvas.Width = 150;
                 LeftWrapPanel.Width = 150;
                 LeftMenuState = 1;
             }
@@ -111,10 +113,10 @@ namespace 饥荒百科全书CSharp
             {
                 UI_Version.Visibility = Visibility.Collapsed;
                 animation.Animation(LCWidth, 150, 50, WidthProperty);
-                LCWidth.Width = new GridLength(50);
                 animation.Animation(LeftCanvas, 150, 50, WidthProperty);
-                LeftCanvas.Width = 50;
                 animation.Animation(LeftWrapPanel, 150, 50, WidthProperty);
+                LCWidth.Width = new GridLength(50);
+                LeftCanvas.Width = 50;
                 LeftWrapPanel.Width = 50;
                 LeftMenuState = 0;
             }
@@ -149,11 +151,14 @@ namespace 饥荒百科全书CSharp
 
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            test.TextP = "23242342343434";
-            test.ImageP = "F_honeycomb";
-            test.TextWidthP = true;
-
+            RightPanelVisibility("Initialize");
+            ///测试
+            //test.TextP = "23242342343434";
+            //test.ImageP = "F_honeycomb";
+            //test.TextWidthP = true;
+            ///初始化版本
             UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            ///设置背景
             string bg = Settings.Default.SettingBackground.ToString();
             if (bg != "")
             {
@@ -172,16 +177,6 @@ namespace 饥荒百科全书CSharp
             {
 
             }
-            /*
-              If RegReadBG <> "" Then
-                  Dim brush As New ImageBrush
-                  brush.ImageSource = New BitmapImage(New Uri(RegReadBG))
-                  BackGroundBorder.Background = brush
-              Else
-                  Se_TextBlock_Alpha.Foreground = Brushes.Silver
-                  Setting_slider_Alpha.IsEnabled = False
-              End If
-             */
             //控件计数
             //int sum = 0;
             //foreach (Control vControl in WrapPanel_Right.Children)
@@ -193,6 +188,7 @@ namespace 饥荒百科全书CSharp
             //}
         }
 
+        #region "背景"
         public void SetBackground()
         {
             var OFD = new OpenFileDialog();
@@ -235,10 +231,38 @@ namespace 饥荒百科全书CSharp
             Settings.Default.SettingBackground = "";
             Settings.Default.Save();
         }
+        #endregion
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             SetBackground();
         }
+
+        private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3538303333323236382C2274696D655374616D70223A313437303132323238337D0A");
+        }
+
+        private void RightPanelVisibility(string obj, bool Visi = true)
+        {
+            var cv = new ControlVisibility();
+            if (obj == "Initialize")
+            {
+                foreach (UIElement vControl in RightGrid.Children)
+                {
+                    cv.ControlVisibilityCollapsed(true, vControl);
+                }
+            }
+            else
+            {
+                //switch (obj)
+                //{
+                //    case "Welcome":
+                //        cv.ControlVisibilityCollapsed(true, RightGrid_Welcome, ScrollViewer_Left, UI_Splitter, ScrollViewer_Right);
+                //        break;
+                //}
+            }
+        }
+
     }
 }
