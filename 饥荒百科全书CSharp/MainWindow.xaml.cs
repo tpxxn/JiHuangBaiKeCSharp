@@ -17,7 +17,6 @@ using System.Windows.Navigation;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
 using 饥荒百科全书CSharp.Properties;
-using static 饥荒百科全书CSharp.Class.ControlVisibility;
 
 namespace 饥荒百科全书CSharp
 {
@@ -52,7 +51,7 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region "最小化、最大化、关闭按钮"
+        #region "右上角按钮"
         private void UI_btn_minimized_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
@@ -87,6 +86,137 @@ namespace 饥荒百科全书CSharp
         private void UI_btn_close_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            SetBackground();
+        }
+
+        #endregion
+
+        #region "主页面链接"
+        private void W_button_official_website_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://www.jihuangbaike.com");
+        }
+
+        private void W_button_Mods_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://steamcommunity.com/sharedfiles/filedetails/?id=635215011");
+        }
+
+        private void W_button_DSNews_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://store.steampowered.com/news/?appids=219740");
+        }
+
+        private void W_button_DSTNewS_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://store.steampowered.com/news/?appids=322330");
+        }
+
+        private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3538303333323236382C2274696D655374616D70223A313437303132323238337D0A");
+        }
+        #endregion
+
+        #region "背景"
+        public void SetBackground()
+        {
+            var OFD = new OpenFileDialog();
+            OFD.FileName = ""; //默认文件名
+            OFD.DefaultExt = ".png"; // 默认文件扩展名
+            OFD.Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png"; //文件扩展名过滤器
+
+            bool? result = OFD.ShowDialog(); //显示打开文件对话框
+
+            UI_BackGroundBorder.Visibility = Visibility.Visible;
+            try
+            {
+                string PictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\"; //设置文件夹位置
+                if ((Directory.Exists(PictruePath)) == false) //若文件夹不存在
+                {
+                    Directory.CreateDirectory(PictruePath);
+                }
+                var filename = Path.GetFileName(OFD.FileName); //设置文件名
+                try
+                {
+                    File.Copy(OFD.FileName, PictruePath + filename, true);
+                }
+                catch (Exception) { }
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(PictruePath + filename));
+                UI_BackGroundBorder.Background = brush;
+                Settings.Default.SettingBackground = PictruePath + filename;
+                Settings.Default.Save();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("没有选择正确的图片");
+            }
+        }
+
+        private void ClearBackground()
+        {
+            UI_BackGroundBorder.Visibility = Visibility.Collapsed;
+            Settings.Default.SettingBackground = "";
+            Settings.Default.Save();
+        }
+        #endregion
+
+        #region "右侧面板Visibility属性设置"
+        private void RightPanelVisibilityInitialize()
+        {
+            var cv = new ControlVisibility();
+            foreach (UIElement vControl in RightGrid.Children)
+            {
+                cv.ControlVisibilityCollapsed(true, vControl);
+            }
+        }
+
+        private void RightPanelVisibility(string obj)
+        {
+            var cv = new ControlVisibility();
+            RightPanelVisibilityInitialize();
+            switch (obj)
+            {
+                case "Welcome":
+                    cv.ControlVisibilityCollapsed(false, RightGrid_Welcome);
+                    break;
+                case "Setting":
+                    cv.ControlVisibilityCollapsed(false, RightGrid_Setting);
+                    break;
+                default:
+                    cv.ControlVisibilityCollapsed(false, UI_Splitter);
+                    switch (obj)
+                    {
+                        case "Character":
+                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Character, ScrollViewer_Right_Character);
+                            break;
+                        case "Food":
+                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Food, ScrollViewer_Right_Food);
+                            break;
+                        case "Science":
+                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Science, ScrollViewer_Right_Science);
+                            break;
+                        case "Cooking_Simulator":
+                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Cooking_Simulator, ScrollViewer_Right_Cooking_Simulator);
+                            break;
+                        case "Animal":
+                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Animal, ScrollViewer_Right_Animal);
+                            break;
+                        case "Natural":
+                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Natural, ScrollViewer_Right_Natural);
+                            break;
+                        case "Goods":
+                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
+                            break;
+                    }
+                    break;
+            }
         }
         #endregion
 
@@ -151,7 +281,7 @@ namespace 饥荒百科全书CSharp
 
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Initialize");
+            RightPanelVisibility("Welcome");///右侧面板Visibility属性初始化
             ///测试
             //test.TextP = "23242342343434";
             //test.ImageP = "F_honeycomb";
@@ -186,82 +316,6 @@ namespace 饥荒百科全书CSharp
             //        sum += 1;
             //    }
             //}
-        }
-
-        #region "背景"
-        public void SetBackground()
-        {
-            var OFD = new OpenFileDialog();
-            OFD.FileName = ""; //默认文件名
-            OFD.DefaultExt = ".png"; // 默认文件扩展名
-            OFD.Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png"; //文件扩展名过滤器
-
-            bool? result = OFD.ShowDialog(); //显示打开文件对话框
-
-            UI_BackGroundBorder.Visibility = Visibility.Visible;
-            try
-            {
-                string PictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\"; //设置文件夹位置
-                if ((Directory.Exists(PictruePath)) == false) //若文件夹不存在
-                {
-                    Directory.CreateDirectory(PictruePath);
-                }
-                var filename = Path.GetFileName(OFD.FileName); //设置文件名
-                try
-                {
-                    File.Copy(OFD.FileName, PictruePath + filename, true);
-                }
-                catch (Exception) { }
-                var brush = new ImageBrush();
-                brush.ImageSource = new BitmapImage(new Uri(PictruePath + filename));
-                UI_BackGroundBorder.Background = brush;
-                Settings.Default.SettingBackground = PictruePath + filename;
-                Settings.Default.Save();
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("没有选择正确的图片");
-            }
-        }
-
-        private void ClearBackground()
-        {
-            UI_BackGroundBorder.Visibility = Visibility.Collapsed;
-            Settings.Default.SettingBackground = "";
-            Settings.Default.Save();
-        }
-        #endregion
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            SetBackground();
-        }
-
-        private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3538303333323236382C2274696D655374616D70223A313437303132323238337D0A");
-        }
-
-        private void RightPanelVisibility(string obj, bool Visi = true)
-        {
-            var cv = new ControlVisibility();
-            if (obj == "Initialize")
-            {
-                foreach (UIElement vControl in RightGrid.Children)
-                {
-                    cv.ControlVisibilityCollapsed(true, vControl);
-                }
-            }
-            else
-            {
-                //switch (obj)
-                //{
-                //    case "Welcome":
-                //        cv.ControlVisibilityCollapsed(true, RightGrid_Welcome, ScrollViewer_Left, UI_Splitter, ScrollViewer_Right);
-                //        break;
-                //}
-            }
         }
 
     }
