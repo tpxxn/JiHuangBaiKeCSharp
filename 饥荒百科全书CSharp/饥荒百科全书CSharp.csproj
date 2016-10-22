@@ -81,7 +81,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
     <Page Include="Dictionary\CursorDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\SliderDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +117,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\ButtonWithText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -703,15 +714,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\C_wx78.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\close_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\close_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\close_3.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\CP_CrockPot.png" />
@@ -1932,15 +1934,6 @@
     <Resource Include="Resources\Loading.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Minimized_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Minimized_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Minimized_3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\N_algae.png" />
   </ItemGroup>
   <ItemGroup>
@@ -3000,9 +2993,6 @@
     <Resource Include="Resources\N_x_marks_the_spot.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\P_NULL.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\PercentageBar_Blue.png" />
   </ItemGroup>
   <ItemGroup>
@@ -3031,9 +3021,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\PercentageBarBackground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\QRCode.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\QRCode_Qun.png" />
@@ -3894,12 +3881,6 @@
     <Resource Include="Resources\Setting_Shortcut.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Setting_Skin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Setting_Skin_Clear.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\T_air_unfreshener.png" />
   </ItemGroup>
   <ItemGroup>
@@ -4131,24 +4112,6 @@
     <Resource Include="Resources\HamburgerMenu_13.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Maximized_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Maximized_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Maximized_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Normal_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Normal_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Normal_3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Cursor_alternate.cur" />
   </ItemGroup>
   <ItemGroup>
@@ -4200,6 +4163,57 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_close_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_close_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_close_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Maximized_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Maximized_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Maximized_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Minimized_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Minimized_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Minimized_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Normal_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Normal_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_Normal_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_bg_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_bg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_bg_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Setting_Skin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Setting_Skin_Clear.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

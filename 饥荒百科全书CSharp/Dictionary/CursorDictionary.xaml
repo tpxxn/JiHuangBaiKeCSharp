@@ -1,20 +1,20 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:饥荒百科全书CSharp">
-    <Cursor x:Key="Cursor_pointer">../Resources/Cursor_pointer.cur</Cursor>
-    <Cursor x:Key="Cursor_help">../Resources/Cursor_help.cur</Cursor>
-    <Cursor x:Key="Cursor_workOrbusy">../Resources/Cursor_workOrbusy.ani</Cursor>
-    <Cursor x:Key="Cursor_cross">../Resources/Cursor_cross.cur</Cursor>
-    <Cursor x:Key="Cursor_text">../Resources/Cursor_text.cur</Cursor>
-    <Cursor x:Key="Cursor_hand">../Resources/Cursor_hand.cur</Cursor>
-    <Cursor x:Key="Cursor_unavailiable">../Resources/Cursor_unavailiable.cur</Cursor>
-    <Cursor x:Key="Cursor_vert">../Resources/Cursor_vert.cur</Cursor>
-    <Cursor x:Key="Cursor_horz">../Resources/Cursor_horz.cur</Cursor>
-    <Cursor x:Key="Cursor_dgn1">../Resources/Cursor_dgn1.cur</Cursor>
-    <Cursor x:Key="Cursor_dgn2">../Resources/Cursor_dgn2.cur</Cursor>
-    <Cursor x:Key="Cursor_move">../Resources/Cursor_move.cur</Cursor>
-    <Cursor x:Key="Cursor_alternate">../Resources/Cursor_alternate.cur</Cursor>
-    <Cursor x:Key="Cursor_link">../Resources/Cursor_link.ani</Cursor>
+    <Cursor x:Key="Cursor_pointer">/Resources/Cursor_pointer.cur</Cursor>
+    <Cursor x:Key="Cursor_help">/Resources/Cursor_help.cur</Cursor>
+    <Cursor x:Key="Cursor_workOrbusy">/Resources/Cursor_workOrbusy.ani</Cursor>
+    <Cursor x:Key="Cursor_cross">/Resources/Cursor_cross.cur</Cursor>
+    <Cursor x:Key="Cursor_text">/Resources/Cursor_text.cur</Cursor>
+    <Cursor x:Key="Cursor_hand">/Resources/Cursor_hand.cur</Cursor>
+    <Cursor x:Key="Cursor_unavailiable">/Resources/Cursor_unavailiable.cur</Cursor>
+    <Cursor x:Key="Cursor_vert">/Resources/Cursor_vert.cur</Cursor>
+    <Cursor x:Key="Cursor_horz">/Resources/Cursor_horz.cur</Cursor>
+    <Cursor x:Key="Cursor_dgn1">/Resources/Cursor_dgn1.cur</Cursor>
+    <Cursor x:Key="Cursor_dgn2">/Resources/Cursor_dgn2.cur</Cursor>
+    <Cursor x:Key="Cursor_move">/Resources/Cursor_move.cur</Cursor>
+    <Cursor x:Key="Cursor_alternate">/Resources/Cursor_alternate.cur</Cursor>
+    <Cursor x:Key="Cursor_link">/Resources/Cursor_link.ani</Cursor>
     <!-->
     //UI_btn_maximized.Cursor = ((TextBlock)Resources["Cursor_link"]).Cursor;
     <TextBlock x:Key="Cursor_help" Cursor="../Resources/Cursor_help.cur"/>

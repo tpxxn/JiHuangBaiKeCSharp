@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 using System.Windows.Controls;
+using System.Threading;
+using System.Reflection;
 
 namespace 饥荒百科全书CSharp.Class
 {
@@ -25,16 +27,19 @@ namespace 饥荒百科全书CSharp.Class
             void App_Startup(object sender, StartupEventArgs e)
             {
                 Debug.WriteLine("App_Startup");
-                MainWindow mainWindow = new MainWindow();
+                SplashScreen splashWindow = new SplashScreen();
                 //MainWindow = mainWindow;
-                mainWindow.InitializeComponent();
-                mainWindow.Show();
+                splashWindow.InitializeComponent();
+                splashWindow.Show();
             }
         }
 
         /// <summary>
         /// Entry point class to handle single instance of the application
         /// </summary>
+        private static Semaphore singleInstanceWatcher;
+        private static bool createdNew;
+
         public static class EntryPoint
         {
             [STAThread]
@@ -42,9 +47,23 @@ namespace 饥荒百科全书CSharp.Class
             {
                 Console.WriteLine("Main");
                 Console.ReadLine();
-                App_Run app = new App_Run();
-                app.Run();
+                // 确保不存在程序的其他实例
+                singleInstanceWatcher = new Semaphore(
+                    0, // Initial count.
+                    1, // Maximum count.
+                    Assembly.GetExecutingAssembly().GetName().Name, out createdNew);
+                if (createdNew)
+                {
+                    App_Run app = new App_Run();
+                    app.Run();
+                }
+                else
+                {
+                    MessageBox.Show("程序已在运行中");
+                    Environment.Exit(-2);
+                }
             }
         }
+       
     }
 }

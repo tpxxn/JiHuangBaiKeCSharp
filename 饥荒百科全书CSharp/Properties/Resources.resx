@@ -598,15 +598,6 @@
   <data name="B_SwitchRight_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\B_SwitchRight_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="CP_CrockPot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CP_CrockPot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1924,33 +1915,6 @@
   <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Loading.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Maximized_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maximized_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maximized_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maximized_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maximized_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maximized_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minimized_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minimized_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minimized_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minimized_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minimized_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minimized_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Normal_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Normal_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Normal_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Normal_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Normal_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Normal_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="N_algae" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\N_algae.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -3039,12 +3003,6 @@
   </data>
   <data name="PercentageBar_Yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PercentageBar_Yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="P_NULL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\P_NULL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="QRCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QRCode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QRCode_Qun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QRCode_Qun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -4161,5 +4119,65 @@
   </data>
   <data name="Cursor_workOrbusy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cursor_workOrbusy.ani;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_close_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_close_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_close_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_close_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_close_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_close_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Maximized_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Maximized_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Maximized_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Maximized_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Maximized_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Maximized_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Minimized_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Minimized_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Minimized_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Minimized_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Minimized_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Minimized_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Normal_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Normal_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Normal_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Normal_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_Normal_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Normal_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_bg_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_bg_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_bg_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_bg_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_bg_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_bg_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DS00001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DST00001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ROG00001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SW00001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TGP00001" xml:space="preserve">
+    <value />
   </data>
 </root>

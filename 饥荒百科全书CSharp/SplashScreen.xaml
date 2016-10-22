@@ -1,0 +1,13 @@
+﻿<Window x:Class="饥荒百科全书CSharp.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:饥荒百科全书CSharp"
+        mc:Ignorable="d"
+        Opacity="1.0" WindowStyle="None" Width="216" Height="184" AllowsTransparency="True" Title="饥荒百科全书" Background="Transparent" Icon="/Resources/DST.ico" WindowStartupLocation="CenterScreen" Topmost="True">
+    
+    <Canvas x:Name="SplashWindowCanvas" Width="216" Height="184" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="Height">
+        <Image x:Name="LoadingPicture" Source="Resources/Loading.png" Height="184" Width="216" Stretch="Fill"/>
+    </Canvas>
+</Window>
