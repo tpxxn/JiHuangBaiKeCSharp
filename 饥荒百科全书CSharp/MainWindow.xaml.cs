@@ -11,9 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
 using 饥荒百科全书CSharp.Properties;
@@ -35,7 +33,52 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         public MainWindow()
         {
+            var Reg = new RegeditReadWrite();
+            string bg = Reg.RegReadString("Background");
+            double bgAlpha = Reg.RegRead("BGAlpha");
+            double bgPanelAlpha = Reg.RegRead("BGPanelAlpha");
+            double MWH = Reg.RegRead("MainWindowHeight");
+            double MWW = Reg.RegRead("MainWindowWidth");
+
             InitializeComponent();
+
+            //右侧面板Visibility属性初始化
+            RightPanelVisibility("Welcome");
+            //初始化版本
+            UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            //设置背景
+            if (bg != "")
+            {
+                try
+                {
+                    var brush = new ImageBrush();
+                    brush.ImageSource = new BitmapImage(new Uri(bg));
+                    UI_BackGroundBorder.Background = brush;
+                }
+                catch
+                {
+                    UI_BackGroundBorder.Visibility = Visibility.Collapsed;
+                }
+            }
+            //设置背景透明度
+            if (bgAlpha == 0)
+            {
+                bgAlpha = 101;
+            }
+            Se_BG_Alpha.Value = bgAlpha - 1;
+            Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
+            UI_BackGroundBorder.Opacity = (bgAlpha - 1) / 100;
+            //设置高度和宽度
+            if (MWH == 0)
+            {
+                MWH = 660;
+            }
+            if (MWW == 0)
+            {
+                MWW = 1000;
+            }
+            Width = MWW;
+            Height = MWH;
         }
 
         /// <summary>
@@ -51,32 +94,22 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+            //最大化
             if (WindowState == WindowState.Maximized)
             {
                 WindowState = WindowState.Normal;
                 UI_btn_maximized_Click(null, null);
             }
+            //设置版本号位置
             UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
-            //UpdateLayout();
-            //var animation = new AnimationClass();
+            //左侧面板高度
             LeftCanvas.Height = mainWindow.ActualHeight - 2;
             LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
-
-            //MainGrid.Height = mainWindow.ActualHeight - 2;
-            //UI_BackGroundBorder.Width = mainWindow.ActualWidth - 51;
-            //UI_BackGroundBorder.Height = ActualHeight;
+            //Splitter高度
             UI_Splitter.Height = ActualHeight - 52;
-            //WrapPanel_Right.Width = MainGrid.ActualWidth - 200;
-            //if (LeftMenuState == 0)
-            //{
-            //    animation.Animation(MainGrid, mainWindow.ActualWidth - 51, mainWindow.ActualWidth - 51, WidthProperty, 0.001);
-            //    animation.Animation(MainGrid, mainWindow.ActualWidth - 51, mainWindow.ActualWidth - 51, WidthProperty, 0.001);
-            //}
-            //else
-            //{
-            //    animation.Animation(UI_BackGroundBorder, mainWindow.ActualWidth - 151, mainWindow.ActualWidth - 151, WidthProperty, 0.001);
-            //    animation.Animation(UI_BackGroundBorder, mainWindow.ActualWidth - 151, mainWindow.ActualWidth - 151, WidthProperty, 0.001);
-            //}
+            var Reg = new RegeditReadWrite();
+            Reg.RegWrite("MainWindowHeight", ActualHeight);
+            Reg.RegWrite("MainWindowWidth", ActualWidth);
         }
 
         /// <summary>
@@ -88,47 +121,17 @@ namespace 饥荒百科全书CSharp
             //test.TextP = "23242342343434";
             //test.ImageP = "F_honeycomb";
             //test.TextWidthP = true;
-
-            //右侧面板Visibility属性初始化
-            RightPanelVisibility("Welcome");
-            
-            //初始化版本
-            UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-
-            //设置背景
-            string bg = Settings.Default.SettingBackground;
-            if (bg != "")
-            {
-                try
-                {
-                    var brush = new ImageBrush();
-                    brush.ImageSource = new BitmapImage(new Uri(bg));
-                    UI_BackGroundBorder.Background = brush;
-                }
-                catch
-                {
-                    UI_BackGroundBorder.Visibility = Visibility.Collapsed;
-                }
-            }
-
-            //设置背景透明度
-            double bgPanelAlpha = Settings.Default.SettingBgAlpha;
-            //MessageBox.Show(bgPanelAlpha.ToString());
-            Se_BG_Alpha.Value = bgPanelAlpha;
-            UI_BackGroundBorder.Opacity = bgPanelAlpha / 100;
         }
 
         #region "右上角按钮"
-
         #region "皮肤菜单"
         /// <summary>
         /// 皮肤菜单
         /// </summary>
         private void UI_btn_bg_Click(object sender, RoutedEventArgs e)
-        { 
+        {
             UI_pop_bg.IsOpen = true;
         }
-
         /// <summary>
         /// 设置背景
         /// </summary>
@@ -136,7 +139,6 @@ namespace 饥荒百科全书CSharp
         {
             SetBackground();
         }
-
         /// <summary>
         /// 清除背景
         /// </summary>
@@ -144,8 +146,6 @@ namespace 饥荒百科全书CSharp
         {
             ClearBackground();
         }
-
-
         /// <summary>
         /// 设置面板透明度
         /// </summary>
@@ -153,19 +153,17 @@ namespace 饥荒百科全书CSharp
         {
 
         }
-
         /// <summary>
         /// 设置背景透明度
         /// </summary>
         private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             UI_BackGroundBorder.Opacity = Se_BG_Alpha.Value / 100;
-            Settings.Default.SettingBgAlpha = Se_BG_Alpha.Value;
-            Settings.Default.Save();
+            Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
+            var Reg = new RegeditReadWrite();
+            Reg.RegWrite("BGAlpha", Se_BG_Alpha.Value + 1);
         }
-
         #endregion
-
         /// <summary>
         /// 最小化按钮
         /// </summary>
@@ -173,9 +171,7 @@ namespace 饥荒百科全书CSharp
         {
             WindowState = WindowState.Minimized;
         }
-
         Rect rcnormal;//窗口位置
-
         /// <summary>
         /// 最大化按钮
         /// </summary>
@@ -191,7 +187,6 @@ namespace 饥荒百科全书CSharp
             Height = rc.Height;
             //WindowState = WindowState.Maximized;
         }
-
         /// <summary>
         /// 还原按钮
         /// </summary>
@@ -205,7 +200,6 @@ namespace 饥荒百科全书CSharp
             Height = rcnormal.Height;
             //WindowState = WindowState.Normal;
         }
-
         /// <summary>
         /// 关闭按钮
         /// </summary>
@@ -213,7 +207,6 @@ namespace 饥荒百科全书CSharp
         {
             Environment.Exit(0);
         }
-
         #endregion
 
         #region "主页面链接"
@@ -224,7 +217,6 @@ namespace 饥荒百科全书CSharp
         {
             Process.Start("http://www.jihuangbaike.com");
         }
-
         /// <summary>
         /// Mod
         /// </summary>
@@ -232,7 +224,6 @@ namespace 饥荒百科全书CSharp
         {
             Process.Start("http://steamcommunity.com/sharedfiles/filedetails/?id=635215011");
         }
-
         /// <summary>
         /// DS新闻
         /// </summary>
@@ -240,7 +231,6 @@ namespace 饥荒百科全书CSharp
         {
             Process.Start("http://store.steampowered.com/news/?appids=219740");
         }
-
         /// <summary>
         /// DST新闻
         /// </summary>
@@ -248,7 +238,6 @@ namespace 饥荒百科全书CSharp
         {
             Process.Start("http://store.steampowered.com/news/?appids=322330");
         }
-
         /// <summary>
         /// 群二维码
         /// </summary>
@@ -288,8 +277,8 @@ namespace 饥荒百科全书CSharp
                 var brush = new ImageBrush();
                 brush.ImageSource = new BitmapImage(new Uri(PictruePath + filename));
                 UI_BackGroundBorder.Background = brush;
-                Settings.Default.SettingBackground = PictruePath + filename;
-                Settings.Default.Save();
+                var Reg = new RegeditReadWrite();
+                Reg.RegWrite("Background", PictruePath + filename);
             }
             catch (Exception)
             {
@@ -297,21 +286,19 @@ namespace 饥荒百科全书CSharp
                 MessageBox.Show("没有选择正确的图片");
             }
         }
-
         /// <summary>
         /// 清除背景
         /// </summary>
         private void ClearBackground()
         {
             UI_BackGroundBorder.Visibility = Visibility.Collapsed;
-            Settings.Default.SettingBackground = "";
-            Settings.Default.Save();
+            var Reg = new RegeditReadWrite();
+            Reg.RegWrite("Background", "");
         }
         #endregion
 
         #region "模拟SplitView按钮"
         public static byte LeftMenuState = 0;//左侧菜单状态，0为关闭，1为打开
-
         /// <summary>
         /// 左侧菜单按钮
         /// </summary>
@@ -358,7 +345,6 @@ namespace 饥荒百科全书CSharp
                 cv.ControlVisibilityCollapsed(true, vControl);
             }
         }
-
         /// <summary>
         /// 右侧面板可视化设置
         /// </summary>
@@ -404,7 +390,6 @@ namespace 饥荒百科全书CSharp
                     break;
             }
         }
-
         #endregion
 
     }

@@ -22,41 +22,5 @@ namespace 饥荒百科全书CSharp.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SettingBackground {
-            get {
-                return ((string)(this["SettingBackground"]));
-            }
-            set {
-                this["SettingBackground"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public double SettingBgAlpha {
-            get {
-                return ((double)(this["SettingBgAlpha"]));
-            }
-            set {
-                this["SettingBgAlpha"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public double SettingPanelAlpha {
-            get {
-                return ((double)(this["SettingPanelAlpha"]));
-            }
-            set {
-                this["SettingPanelAlpha"] = value;
-            }
-        }
     }
 }

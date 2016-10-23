@@ -59,7 +59,7 @@ namespace 饥荒百科全书CSharp.Class
                 }
                 else
                 {
-                    MessageBox.Show("程序已在运行中");
+                    MessageBox.Show("请不要重复运行(ノ｀Д)ノ");
                     Environment.Exit(-2);
                 }
             }

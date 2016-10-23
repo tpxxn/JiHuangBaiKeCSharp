@@ -62,9 +62,9 @@
                                 <TextBlock TextWrapping="Wrap" Text="清除背景" Canvas.Left="40" Canvas.Top="12" Height="16" Width="130" TextAlignment="Center"/>
                             </Canvas>
                         </Button>
-                        <TextBlock TextWrapping="Wrap" Text="面板不透明度" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="Se_Panel_Alpha_Text" TextWrapping="Wrap" Text="面板不透明度：100%" Margin="0,10,0,0"/>
                         <Slider x:Name="Se_Panel_Alpha" ValueChanged="Se_Panel_Alpha_ValueChanged" Style="{DynamicResource SliderStyle}"/>
-                        <TextBlock TextWrapping="Wrap" Text="背景不透明度" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="Se_BG_Alpha_Text" TextWrapping="Wrap" Text="背景不透明度：100%" Margin="0,10,0,0"/>
                         <Slider x:Name="Se_BG_Alpha" ValueChanged="Se_BG_Alpha_ValueChanged" Style="{DynamicResource SliderStyle}" Maximum="100" SmallChange="1" LargeChange="10" Value="100"/>
                     </StackPanel>
                 </Border>

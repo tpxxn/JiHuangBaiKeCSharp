@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
 namespace 饥荒百科全书CSharp
 {
-    public partial class AnimationClass
+    public class AnimationClass
     {
         public void Animation(UIElement obj, double from, double to, DependencyProperty property, double time=0.1)
         {

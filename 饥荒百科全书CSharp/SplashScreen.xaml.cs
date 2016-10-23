@@ -24,7 +24,6 @@ namespace 饥荒百科全书CSharp
         public SplashScreen()
         {
             InitializeComponent();
-
             splashTimer.Interval = 1;
             splashTimer.Tick += new EventHandler(splashStop);
             splashTimer.Start();
@@ -33,7 +32,7 @@ namespace 饥荒百科全书CSharp
         void splashStop(object sender, EventArgs e)
         {
             splashTimer.Enabled = false;
-            var MainWindowShow = new MainWindow();
+            MainWindow MainWindowShow = new MainWindow();
             MainWindowShow.InitializeComponent();
             MainWindowShow.Show();
             Close();
