@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="饥荒百科全书" Icon="Resources/DST.ico" 
         Height="660" Width="1000" 
-        MinWidth="800" MinHeight="660" 
+        MinWidth="900" MinHeight="660" 
         MouseLeftButtonDown="Window_MouseLeftButtonDown" 
         WindowStartupLocation="CenterScreen" 
         SizeChanged="mainWindow_SizeChanged" 
@@ -31,7 +31,7 @@
     </Window.Resources>
 
     <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FF2B2B2B">
-        <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="#FFCDEEEB">
+        <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
@@ -48,56 +48,61 @@
             <Button x:Name="UI_btn_minimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Grid.Column="2" Margin="0,-10,60,0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" />
             <Button x:Name="UI_btn_bg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Grid.Column="1" Margin="0,-10,85,0" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
             <Popup x:Name="UI_pop_bg" PopupAnimation="Fade" Width="200" Height="200" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False">
-                <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White">
+                <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
                     <StackPanel Margin="10">
-                        <Button x:Name="Se_button_Background" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40">
+                        <Button x:Name="Se_button_Background" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
                             <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
                                 <Image Height="40" Width="40" Source="/Resources/Setting_Skin.png" Margin="0,0,0,0"/>
-                                <TextBlock TextWrapping="Wrap" Text="选择背景" Canvas.Left="40" Canvas.Top="12" Height="16" Width="130" TextAlignment="Center"/>
+                                <TextBlock TextWrapping="Wrap" Text="选择背景" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="130" TextAlignment="Center"/>
                             </Canvas>
                         </Button>
-                        <Button x:Name="Se_button_Background_Clear" Click="Se_button_Background_Clear_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40">
+                        <Button x:Name="Se_button_Background_Clear" Click="Se_button_Background_Clear_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
                             <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
                                 <Image Height="40" Width="40" Source="Resources/Setting_Skin_Clear.png" Margin="0,0,0,0"/>
-                                <TextBlock TextWrapping="Wrap" Text="清除背景" Canvas.Left="40" Canvas.Top="12" Height="16" Width="130" TextAlignment="Center"/>
+                                <TextBlock TextWrapping="Wrap" Text="清除背景" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="130" TextAlignment="Center"/>
                             </Canvas>
                         </Button>
-                        <TextBlock x:Name="Se_Panel_Alpha_Text" TextWrapping="Wrap" Text="面板不透明度：100%" Margin="0,10,0,0"/>
-                        <Slider x:Name="Se_Panel_Alpha" ValueChanged="Se_Panel_Alpha_ValueChanged" Style="{DynamicResource SliderStyle}"/>
                         <TextBlock x:Name="Se_BG_Alpha_Text" TextWrapping="Wrap" Text="背景不透明度：100%" Margin="0,10,0,0"/>
-                        <Slider x:Name="Se_BG_Alpha" ValueChanged="Se_BG_Alpha_ValueChanged" Style="{DynamicResource SliderStyle}" Maximum="100" SmallChange="1" LargeChange="10" Value="100"/>
+                        <Slider x:Name="Se_BG_Alpha" ValueChanged="Se_BG_Alpha_ValueChanged" Style="{DynamicResource SliderStyle}" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Cursor="{DynamicResource Cursor_link}"/>
+                        <TextBlock x:Name="Se_Panel_Alpha_Text" TextWrapping="Wrap" Text="面板不透明度：100%" Margin="0,10,0,0"/>
+                        <Slider x:Name="Se_Panel_Alpha" ValueChanged="Se_Panel_Alpha_ValueChanged" Style="{DynamicResource SliderStyle}" Maximum="100" SmallChange="1" LargeChange="10" Cursor="{DynamicResource Cursor_link}" />
                     </StackPanel>
                 </Border>
             </Popup>
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1">
+            <Button x:Name="UI_btn_setting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Grid.Column="1" Margin="0,-10,110,0" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_setting_Style}" Focusable="False" />
+            <Popup x:Name="UI_pop_setting" PopupAnimation="Fade" Width="200" Height="200" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Grid.ColumnSpan="2" Margin="0,0,798,458" Grid.RowSpan="2">
+                <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
+                    <StackPanel Margin="10">
+                        <Button x:Name="Se_button_Background1" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
+                            <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
+                                <Image Height="40" Width="40" Source="Resources/Setting_Skin.png" Margin="0,0,0,0"/>
+                                <TextBlock TextWrapping="Wrap" Text="选择背景" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="130" TextAlignment="Center"/>
+                            </Canvas>
+                        </Button>
+                        <Button x:Name="Se_button_Background_Clear1" Click="Se_button_Background_Clear_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
+                            <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
+                                <Image Height="40" Width="40" Source="Resources/Setting_Skin_Clear.png" Margin="0,0,0,0"/>
+                                <TextBlock TextWrapping="Wrap" Text="清除背景" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="130" TextAlignment="Center"/>
+                            </Canvas>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Popup>
+            <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="0,10,140,0" Grid.Column="1">
+                <ComboBoxItem Content="DS" IsSelected="True"/>
+                <ComboBoxItem Content="RoG"/>
+                <ComboBoxItem Content="SW"/>
+                <ComboBoxItem Content="DST"/>
+                <ComboBoxItem Content="Tencent"/>
+            </ComboBox>
+            <TextBlock x:Name="UI_gameversion_" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15"/>
+            <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,12,351,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Focusable="False" Click="UI_search_clear_Click" Visibility="Collapsed"/>
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="SLWidth" Width="200" MinWidth="200" MaxWidth="280"/>
                     <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="RightGrid_Welcome" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                    <TextBlock x:Name="textBlock" Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,50,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
-                    <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
-                    <TextBlock Text="单机版：v189297" VerticalAlignment="Top" Margin="0,121.599,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
-                    <TextBlock Text="联机版：v191480" VerticalAlignment="Top" Margin="0,160.465,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
-                    <TextBlock Text="部分资料来源于wikia" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,225,50,0" Foreground="Black" FontSize="33.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
-                    <TextBlock Text="作者: tpxxn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,210" Foreground="Black" FontSize="40" FontWeight="Bold" d:IsLocked="True"/>
-                    <Button x:Name="W_button_QRCode_Qun" Width="150" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Margin="0,0,37,37" Height="150" VerticalAlignment="Bottom" Click="W_button_QRCode_Qun_Click" Cursor="{DynamicResource Cursor_link}">
-                        <Image Source="/Resources/QRCode_Qun.png" Width="150" Height="150"/>
-                    </Button>
-                    <Button x:Name="W_button_official_website" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,110.48" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_official_website_Click" Cursor="{DynamicResource Cursor_link}">
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="百科官网" VerticalAlignment="Top" TextDecorations="Underline"/>
-                    </Button>
-                    <Button x:Name="W_button_Mods" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,86.24" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_Mods_Click" Cursor="{DynamicResource Cursor_link}">
-                        <TextBlock TextWrapping="Wrap" Text="推荐Mod" VerticalAlignment="Top" TextDecorations="Underline" HorizontalAlignment="Left"/>
-                    </Button>
-                    <Button x:Name="W_button_DSNews" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,62" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_DSNews_Click" Cursor="{DynamicResource Cursor_link}">
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒单机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
-                    </Button>
-                    <Button x:Name="W_button_DSTNewS" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,37" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_DSTNewS_Click" Cursor="{DynamicResource Cursor_link}">
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒联机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
-                    </Button>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16" d:IsLocked="True"/>
-                </Grid>
                 <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" Visibility="Collapsed"/>
                 <ScrollViewer x:Name="ScrollViewer_Left_Character" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left" Height="760" Background="#88DE9191"/>
@@ -219,6 +224,30 @@
                     </WrapPanel>
                 </ScrollViewer>
                 <Grid x:Name="RightGrid_Setting" Grid.ColumnSpan="2" Visibility="Collapsed"/>
+            </Grid>
+            <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1">
+                <TextBlock x:Name="textBlock" Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,50,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
+                <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock Text="单机版：v189297" VerticalAlignment="Top" Margin="0,121.599,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock Text="联机版：v191480" VerticalAlignment="Top" Margin="0,160.465,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock Text="部分资料来源于wikia" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,225,50,0" Foreground="Black" FontSize="33.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
+                <TextBlock Text="作者: tpxxn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,210" Foreground="Black" FontSize="40" FontWeight="Bold" d:IsLocked="True"/>
+                <Button x:Name="W_button_QRCode_Qun" Width="150" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Margin="0,0,37,37" Height="150" VerticalAlignment="Bottom" Click="W_button_QRCode_Qun_Click" Cursor="{DynamicResource Cursor_link}">
+                    <Image Source="/Resources/QRCode_Qun.png" Width="150" Height="150"/>
+                </Button>
+                <Button x:Name="W_button_official_website" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,110.48" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_official_website_Click" Cursor="{DynamicResource Cursor_link}">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="百科官网" VerticalAlignment="Top" TextDecorations="Underline"/>
+                </Button>
+                <Button x:Name="W_button_Mods" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,86.24" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_Mods_Click" Cursor="{DynamicResource Cursor_link}">
+                    <TextBlock TextWrapping="Wrap" Text="推荐Mod" VerticalAlignment="Top" TextDecorations="Underline" HorizontalAlignment="Left"/>
+                </Button>
+                <Button x:Name="W_button_DSNews" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,62" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_DSNews_Click" Cursor="{DynamicResource Cursor_link}">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒单机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
+                </Button>
+                <Button x:Name="W_button_DSTNewS" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,37" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_DSTNewS_Click" Cursor="{DynamicResource Cursor_link}">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒联机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: DS-饥荒单机 | RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机 | Tencent-TGP版和QQ游戏大厅版" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16" d:IsLocked="True"/>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">

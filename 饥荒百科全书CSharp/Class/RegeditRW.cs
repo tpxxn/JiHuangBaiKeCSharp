@@ -5,22 +5,37 @@ using System.Text;
 using Microsoft.Win32;
 using System.Windows.Forms;
 
-namespace 饥荒百科全书CSharp
+namespace 饥荒百科全书CSharp.Class
 {
-    public class RegeditReadWrite
+    static class RegeditRW
     {
-        public void RegWrite(string ValueName, double Value)
+        /// <summary>
+        /// 写入注册表(double值)
+        /// </summary>
+        /// <param name="ValueName">注册表值</param>
+        /// <param name="Value">值</param>
+        public static void RegWrite(string ValueName, double Value)
         {
             Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", ValueName, Value, RegistryValueKind.DWord);
         }
 
-        public void RegWrite(string ValueName, string Value)
+        /// <summary>
+        /// 写入注册表(string值)
+        /// </summary>
+        /// <param name="ValueName">注册表值</param>
+        /// <param name="Value">值</param>
+        public static void RegWrite(string ValueName, string Value)
         {
             Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", ValueName, Value);
 
         }
 
-        public double RegRead(string ValueName)
+        /// <summary>
+        /// 读取注册表(double值)
+        /// </summary>
+        /// <param name="ValueName">注册表值</param>
+        /// <returns>值</returns>
+        public static double RegRead(string ValueName)
         {
             double GetValue = 0;
             string GetValueTemp = "";
@@ -39,7 +54,12 @@ namespace 饥荒百科全书CSharp
             return GetValue;
         }
 
-        public string RegReadString(string ValueName)
+        /// <summary>
+        /// 读取注册表(string值)
+        /// </summary>
+        /// <param name="ValueName">注册表值</param>
+        /// <returns>值</returns>
+        public static string RegReadString(string ValueName)
         {
             string GetValue = "";
             string GetValueTemp = "";

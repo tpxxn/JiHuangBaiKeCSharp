@@ -7,9 +7,14 @@ using System.Windows.Controls;
 
 namespace 饥荒百科全书CSharp.Class
 {
-    class ControlVisibility
+    static class Visi
     {
-        public void ControlVisibilityCollapsed(bool Visi, params UIElement[] obj)
+        /// <summary>
+        /// 控件可视性设置
+        /// </summary>
+        /// <param name="Visi">是否隐藏</param>
+        /// <param name="obj">控件Name</param>
+        public static void VisiCol(bool Visi, params UIElement[] obj)
         {
 
             foreach (UIElement i in obj)

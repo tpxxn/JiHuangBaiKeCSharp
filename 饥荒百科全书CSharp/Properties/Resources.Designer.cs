@@ -1723,6 +1723,36 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap btn_dlc_1 {
+            get {
+                object obj = ResourceManager.GetObject("btn_dlc_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_dlc_2 {
+            get {
+                object obj = ResourceManager.GetObject("btn_dlc_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_dlc_3 {
+            get {
+                object obj = ResourceManager.GetObject("btn_dlc_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap btn_Maximized_1 {
             get {
                 object obj = ResourceManager.GetObject("btn_Maximized_1", resourceCulture);
@@ -2233,9 +2263,29 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap DLC_DS {
+            get {
+                object obj = ResourceManager.GetObject("DLC_DS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap DLC_DST {
             get {
                 object obj = ResourceManager.GetObject("DLC_DST", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap DLC_DST_TX {
+            get {
+                object obj = ResourceManager.GetObject("DLC_DST_TX", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

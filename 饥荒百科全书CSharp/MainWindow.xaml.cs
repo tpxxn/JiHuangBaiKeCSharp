@@ -33,12 +33,11 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         public MainWindow()
         {
-            var Reg = new RegeditReadWrite();
-            string bg = Reg.RegReadString("Background");
-            double bgAlpha = Reg.RegRead("BGAlpha");
-            double bgPanelAlpha = Reg.RegRead("BGPanelAlpha");
-            double MWH = Reg.RegRead("MainWindowHeight");
-            double MWW = Reg.RegRead("MainWindowWidth");
+            string bg = RegeditRW.RegReadString("Background");
+            double bgAlpha = RegeditRW.RegRead("BGAlpha");
+            double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
+            double MWH = RegeditRW.RegRead("MainWindowHeight");
+            double MWW = RegeditRW.RegRead("MainWindowWidth");
 
             InitializeComponent();
 
@@ -47,8 +46,14 @@ namespace 饥荒百科全书CSharp
             //初始化版本
             UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             //设置背景
-            if (bg != "")
+            if (bg == "")
             {
+                Se_BG_Alpha_Text.Foreground = Brushes.Silver;
+                Se_BG_Alpha.IsEnabled = false;
+            }
+            else
+            {
+                Se_BG_Alpha_Text.Foreground = Brushes.Black;
                 try
                 {
                     var brush = new ImageBrush();
@@ -57,7 +62,7 @@ namespace 饥荒百科全书CSharp
                 }
                 catch
                 {
-                    UI_BackGroundBorder.Visibility = Visibility.Collapsed;
+                    Visi.VisiCol(true, UI_BackGroundBorder);
                 }
             }
             //设置背景透明度
@@ -68,6 +73,14 @@ namespace 饥荒百科全书CSharp
             Se_BG_Alpha.Value = bgAlpha - 1;
             Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
             UI_BackGroundBorder.Opacity = (bgAlpha - 1) / 100;
+            //设置面板透明度
+            if (bgPanelAlpha == 0)
+            {
+                bgPanelAlpha = 61;
+            }
+            Se_Panel_Alpha.Value = bgPanelAlpha - 1;
+            Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
+            RightGrid.Background.Opacity = (bgPanelAlpha - 1) / 100;
             //设置高度和宽度
             if (MWH == 0)
             {
@@ -79,6 +92,8 @@ namespace 饥荒百科全书CSharp
             }
             Width = MWW;
             Height = MWH;
+            //设置搜索框的最大字符数
+            UI_search.MaxLength = 10;
         }
 
         /// <summary>
@@ -107,9 +122,8 @@ namespace 饥荒百科全书CSharp
             LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
             //Splitter高度
             UI_Splitter.Height = ActualHeight - 52;
-            var Reg = new RegeditReadWrite();
-            Reg.RegWrite("MainWindowHeight", ActualHeight);
-            Reg.RegWrite("MainWindowWidth", ActualWidth);
+            RegeditRW.RegWrite("MainWindowHeight", ActualHeight);
+            RegeditRW.RegWrite("MainWindowWidth", ActualWidth);
         }
 
         /// <summary>
@@ -124,6 +138,32 @@ namespace 饥荒百科全书CSharp
         }
 
         #region "右上角按钮"
+        #region "搜索框清除按钮显示/隐藏"
+        private void UI_search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (UI_search.Text != "")
+            {
+                Visi.VisiCol(false, UI_search_clear);
+            }
+            else
+            {
+                Visi.VisiCol(true, UI_search_clear);
+            }
+        }
+
+        private void UI_search_clear_Click(object sender, RoutedEventArgs e)
+        {
+            UI_search.Text = "";
+            Visi.VisiCol(true, UI_search_clear);
+        }
+        #endregion
+        /// <summary>
+        /// 设置
+        /// </summary>
+        private void UI_btn_setting_Click(object sender, RoutedEventArgs e)
+        {
+            UI_pop_setting.IsOpen = true;
+        }
         #region "皮肤菜单"
         /// <summary>
         /// 皮肤菜单
@@ -151,7 +191,9 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            RightGrid.Background.Opacity = Se_Panel_Alpha.Value / 100;
+            Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
+            RegeditRW.RegWrite("BGPanelAlpha", Se_Panel_Alpha.Value + 1);
         }
         /// <summary>
         /// 设置背景透明度
@@ -160,8 +202,7 @@ namespace 饥荒百科全书CSharp
         {
             UI_BackGroundBorder.Opacity = Se_BG_Alpha.Value / 100;
             Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
-            var Reg = new RegeditReadWrite();
-            Reg.RegWrite("BGAlpha", Se_BG_Alpha.Value + 1);
+            RegeditRW.RegWrite("BGAlpha", Se_BG_Alpha.Value + 1);
         }
         #endregion
         /// <summary>
@@ -177,8 +218,8 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void UI_btn_maximized_Click(object sender, RoutedEventArgs e)
         {
-            UI_btn_maximized.Visibility = Visibility.Collapsed;
-            UI_btn_normal.Visibility = Visibility.Visible;
+            Visi.VisiCol(true, UI_btn_maximized);
+            Visi.VisiCol(false, UI_btn_normal);
             rcnormal = new Rect(Left, Top, Width, Height);//保存下当前位置与大小
             Left = 0;
             Top = 0;
@@ -192,8 +233,8 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void UI_btn_normal_Click(object sender, RoutedEventArgs e)
         {
-            UI_btn_normal.Visibility = Visibility.Collapsed;
-            UI_btn_maximized.Visibility = Visibility.Visible;
+            Visi.VisiCol(false, UI_btn_maximized);
+            Visi.VisiCol(true, UI_btn_normal);
             Left = rcnormal.Left;
             Top = rcnormal.Top;
             Width = rcnormal.Width;
@@ -260,7 +301,7 @@ namespace 饥荒百科全书CSharp
 
             bool? result = OFD.ShowDialog(); //显示打开文件对话框
 
-            UI_BackGroundBorder.Visibility = Visibility.Visible;
+            Visi.VisiCol(false, UI_BackGroundBorder);
             try
             {
                 string PictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\"; //设置文件夹位置
@@ -277,8 +318,9 @@ namespace 饥荒百科全书CSharp
                 var brush = new ImageBrush();
                 brush.ImageSource = new BitmapImage(new Uri(PictruePath + filename));
                 UI_BackGroundBorder.Background = brush;
-                var Reg = new RegeditReadWrite();
-                Reg.RegWrite("Background", PictruePath + filename);
+                Se_BG_Alpha_Text.Foreground = Brushes.Black;
+                Se_BG_Alpha.IsEnabled = true;
+                RegeditRW.RegWrite("Background", PictruePath + filename);
             }
             catch (Exception)
             {
@@ -291,9 +333,10 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void ClearBackground()
         {
-            UI_BackGroundBorder.Visibility = Visibility.Collapsed;
-            var Reg = new RegeditReadWrite();
-            Reg.RegWrite("Background", "");
+            Visi.VisiCol(true, UI_BackGroundBorder);
+            Se_BG_Alpha_Text.Foreground = Brushes.Silver;
+            Se_BG_Alpha.IsEnabled = false;
+            RegeditRW.RegWrite("Background", "");
         }
         #endregion
 
@@ -304,15 +347,14 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void Sidebar_Menu_Click(object sender, RoutedEventArgs e)
         {
-            var animation = new AnimationClass();
             var MainWindowWidth = mainWindow.ActualWidth;
             double MainGridWidth = MainGrid.ActualWidth;
             if (LeftMenuState == 0)
             {
-                UI_Version.Visibility = Visibility.Visible;
-                animation.Animation(LCWidth, 50, 150, WidthProperty);
-                animation.Animation(LeftCanvas, 50, 150, WidthProperty);
-                animation.Animation(LeftWrapPanel, 50, 150, WidthProperty);
+                Visi.VisiCol(false, UI_Version);
+                AnimationClass.Animation(LCWidth, 50, 150, WidthProperty);
+                AnimationClass.Animation(LeftCanvas, 50, 150, WidthProperty);
+                AnimationClass.Animation(LeftWrapPanel, 50, 150, WidthProperty);
                 LCWidth.Width = new GridLength(150);
                 LeftCanvas.Width = 150;
                 LeftWrapPanel.Width = 150;
@@ -320,10 +362,10 @@ namespace 饥荒百科全书CSharp
             }
             else
             {
-                UI_Version.Visibility = Visibility.Collapsed;
-                animation.Animation(LCWidth, 150, 50, WidthProperty);
-                animation.Animation(LeftCanvas, 150, 50, WidthProperty);
-                animation.Animation(LeftWrapPanel, 150, 50, WidthProperty);
+                Visi.VisiCol(true, UI_Version);
+                AnimationClass.Animation(LCWidth, 150, 50, WidthProperty);
+                AnimationClass.Animation(LeftCanvas, 150, 50, WidthProperty);
+                AnimationClass.Animation(LeftWrapPanel, 150, 50, WidthProperty);
                 LCWidth.Width = new GridLength(50);
                 LeftCanvas.Width = 50;
                 LeftWrapPanel.Width = 50;
@@ -339,10 +381,9 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void RightPanelVisibilityInitialize()
         {
-            var cv = new ControlVisibility();
             foreach (UIElement vControl in RightGrid.Children)
             {
-                cv.ControlVisibilityCollapsed(true, vControl);
+                Visi.VisiCol(true, vControl);
             }
         }
         /// <summary>
@@ -351,40 +392,42 @@ namespace 饥荒百科全书CSharp
         /// <param name="obj">右侧面板</param>
         private void RightPanelVisibility(string obj)
         {
-            var cv = new ControlVisibility();
             RightPanelVisibilityInitialize();
             switch (obj)
             {
                 case "Welcome":
-                    cv.ControlVisibilityCollapsed(false, RightGrid_Welcome);
+                    Visi.VisiCol(false, RightGrid_Welcome);
+                    Visi.VisiCol(true, RightGrid);
                     break;
                 case "Setting":
-                    cv.ControlVisibilityCollapsed(false, RightGrid_Setting);
+                    Visi.VisiCol(false, RightGrid_Setting);
+                    Visi.VisiCol(true, RightGrid);
                     break;
                 default:
-                    cv.ControlVisibilityCollapsed(false, UI_Splitter);
+                    Visi.VisiCol(false, UI_Splitter);
+                    Visi.VisiCol(false, RightGrid);
                     switch (obj)
                     {
                         case "Character":
-                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Character, ScrollViewer_Right_Character);
+                            Visi.VisiCol(false, ScrollViewer_Left_Character, ScrollViewer_Right_Character);
                             break;
                         case "Food":
-                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Food, ScrollViewer_Right_Food);
+                            Visi.VisiCol(false, ScrollViewer_Left_Food, ScrollViewer_Right_Food);
                             break;
                         case "Science":
-                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Science, ScrollViewer_Right_Science);
+                            Visi.VisiCol(false, ScrollViewer_Left_Science, ScrollViewer_Right_Science);
                             break;
                         case "Cooking_Simulator":
-                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Cooking_Simulator, ScrollViewer_Right_Cooking_Simulator);
+                            Visi.VisiCol(false, ScrollViewer_Left_Cooking_Simulator, ScrollViewer_Right_Cooking_Simulator);
                             break;
                         case "Animal":
-                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Animal, ScrollViewer_Right_Animal);
+                            Visi.VisiCol(false, ScrollViewer_Left_Animal, ScrollViewer_Right_Animal);
                             break;
                         case "Natural":
-                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Natural, ScrollViewer_Right_Natural);
+                            Visi.VisiCol(false, ScrollViewer_Left_Natural, ScrollViewer_Right_Natural);
                             break;
                         case "Goods":
-                            cv.ControlVisibilityCollapsed(false, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
+                            Visi.VisiCol(false, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
                             break;
                     }
                     break;

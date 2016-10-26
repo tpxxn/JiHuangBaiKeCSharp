@@ -81,7 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class\RegeditReadWrite.cs" />
+    <Compile Include="Class\RegeditRW.cs" />
     <Compile Include="SplashScreen.xaml.cs">
       <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
@@ -107,7 +107,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\AppRun.cs" />
-    <Compile Include="Class\ControlVisibility.cs" />
+    <Compile Include="Class\Visi.cs" />
     <Compile Include="Class\ResourceShortName.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -724,12 +724,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DLC_DST.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\DLC_ROG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\DLC_SW.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\F_bacon_and_eggs.png" />
@@ -4215,6 +4209,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Setting_Skin_Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_dlc_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_dlc_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btn_dlc_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_DS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_DST_TX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_ROG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_SW.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

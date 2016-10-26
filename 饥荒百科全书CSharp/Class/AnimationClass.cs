@@ -3,11 +3,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
-namespace 饥荒百科全书CSharp
+namespace 饥荒百科全书CSharp.Class
 {
-    public class AnimationClass
+    static class AnimationClass
     {
-        public void Animation(UIElement obj, double from, double to, DependencyProperty property, double time=0.1)
+
+        public static void Animation(UIElement obj, double from, double to, DependencyProperty property, double time=0.1)
         {
             var widthAnimation = new DoubleAnimation()
             {
@@ -18,7 +19,7 @@ namespace 饥荒百科全书CSharp
             obj.BeginAnimation(property, widthAnimation);
         }
 
-        public void Animation(ColumnDefinition obj, double from, double to, DependencyProperty property, double time = 0.1)
+        public static void Animation(ColumnDefinition obj, double from, double to, DependencyProperty property, double time = 0.1)
         {
             var widthAnimation = new DoubleAnimation()
             {

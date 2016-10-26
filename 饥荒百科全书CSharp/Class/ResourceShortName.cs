@@ -6,31 +6,38 @@ using System.Windows.Media.Imaging;
 
 namespace 饥荒百科全书CSharp.Class
 {
-    class ResourceShortName
+    static class ResourceShortName
     {
-        public partial class SNClass
+        /// <summary>
+        /// 资源文件短名
+        /// </summary>
+        /// <param name="R_URL">资源文件短路径</param>
+        /// <returns>资源文件路径</returns>
+        public static string ShortName(string R_URL)
         {
-            public string ShortName(string R_URL)
-            {
-                R_URL = "../Resources/" + R_URL + ".png";
-                return R_URL;
-            }
+            R_URL = "../Resources/" + R_URL + ".png";
+            return R_URL;
+        }
 
-            public BitmapImage PictureShortName(string source = "")
+        /// <summary>
+        /// 图片短名
+        /// </summary>
+        /// <param name="source">资源文件路径</param>
+        /// <returns>BitmapImage类</returns>
+        public static BitmapImage PictureShortName(string source = "")
+        {
+            var Picture = new BitmapImage();
+            Picture.BeginInit();
+            if (source == "")
             {
-                var Picture = new BitmapImage();
-                Picture.BeginInit();
-                if (source == "")
-                {
-                    Picture.UriSource = new Uri("{x:Null}", UriKind.Relative);
-                }
-                else
-                {
-                    Picture.UriSource = new Uri(source, UriKind.Relative);
-                }
-                Picture.EndInit();
-                return Picture;
+                Picture.UriSource = new Uri("{x:Null}", UriKind.Relative);
             }
+            else
+            {
+                Picture.UriSource = new Uri(source, UriKind.Relative);
+            }
+            Picture.EndInit();
+            return Picture;
         }
     }
 }
