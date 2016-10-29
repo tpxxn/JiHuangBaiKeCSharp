@@ -1,0 +1,24 @@
+﻿<Window x:Class="饥荒百科全书CSharp.DownloadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:饥荒百科全书CSharp"
+        mc:Ignorable="d"
+        Title="DownloadWindow" Height="134.167" Width="265.5" AllowsTransparency="True" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen" Cursor="{DynamicResource Cursor_pointer}" ShowInTaskbar="False" >
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary/CursorDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <TextBlock x:Name="DownloadSpeed" HorizontalAlignment="Left" TextWrapping="Wrap" Text="速度" VerticalAlignment="Top" Margin="10,36,0,0"/>
+        <ProgressBar x:Name="DownloadProgressBar" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="225" Margin="10,58,0,0"/>
+        <TextBlock x:Name="Downloaded" HorizontalAlignment="Left" TextWrapping="Wrap" Text="下载进度" VerticalAlignment="Top" Margin="10,90,0,0"/>
+
+    </Grid>
+</Window>

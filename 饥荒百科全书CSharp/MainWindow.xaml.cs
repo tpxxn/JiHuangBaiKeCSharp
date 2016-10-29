@@ -1,14 +1,17 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -294,7 +297,7 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         public void SetBackground()
         {
-            var OFD = new OpenFileDialog();
+            var OFD = new Microsoft.Win32.OpenFileDialog();
             OFD.FileName = ""; //默认文件名
             OFD.DefaultExt = ".png"; // 默认文件扩展名
             OFD.Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png"; //文件扩展名过滤器
@@ -325,7 +328,7 @@ namespace 饥荒百科全书CSharp
             catch (Exception)
             {
 
-                MessageBox.Show("没有选择正确的图片");
+                System.Windows.MessageBox.Show("没有选择正确的图片");
             }
         }
         /// <summary>
@@ -434,6 +437,12 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
-
+        public static Update update = new Update();
+        private Timer UpdateTimer = new Timer();
+        
+        private void Se_button_Update_Click(object sender, RoutedEventArgs e)
+        {
+            update.UpdateNow();
+        }
     }
 }

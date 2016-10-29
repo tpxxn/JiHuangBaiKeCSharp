@@ -3,6 +3,8 @@
                     xmlns:local="clr-namespace:饥荒百科全书CSharp.Dictionary"
                     xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" 
                     xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <!--#region Brush-->
     <Style x:Key="FocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -55,6 +57,8 @@
     <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Button.Background" Color="Transparent"/>
     <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Button.Border" Color="Transparent"/>
     <SolidColorBrush x:Key="ComboBox.Static.Glyph" Color="#FF606060"/>
+    <!--#endregion-->
+    <!--#region ToggleButton样式-->
     <Style x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="IsTabStop" Value="false"/>
@@ -69,6 +73,12 @@
                         </Border>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="false">
+                            <Setter Property="Background" TargetName="templateRoot" Value="{x:Null}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="false">
+                            <Setter Property="Visibility" TargetName="splitBorder" Value="Collapsed"/>
+                        </Trigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
@@ -149,6 +159,8 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
+    <!--#region ComboBox控件模板-->
     <ControlTemplate x:Key="ComboBoxTemplate" TargetType="{x:Type ComboBox}">
         <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
             <Grid.ColumnDefinitions>
@@ -193,6 +205,8 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <!--#endregion-->
+    <!--#region TextBox样式-->
     <SolidColorBrush x:Key="TextBox.Static.Background" Color="#FFFFFFFF"/>
     <Style x:Key="ComboBoxEditableTextBox" TargetType="{x:Type TextBox}">
         <Setter Property="OverridesDefaultStyle" Value="true"/>
@@ -210,6 +224,8 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
+    <!--#region ComboBox控件模板-->
     <ControlTemplate x:Key="ComboBoxEditableTemplate" TargetType="{x:Type ComboBox}">
         <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
             <Grid.ColumnDefinitions>
@@ -262,6 +278,8 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <!--#endregion-->
+    <!--#region ComboBox样式-->
     <Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Background" Value="{StaticResource ComboBox.Static.Background}"/>
@@ -283,7 +301,6 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
-
+    <!--#endregion-->
 
 </ResourceDictionary>
