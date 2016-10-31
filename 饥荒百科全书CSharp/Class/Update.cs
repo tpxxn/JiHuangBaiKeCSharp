@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -28,35 +29,59 @@ namespace 饥荒百科全书CSharp.Class
         private string NewVersionDownloadURL = null;
         ///新版本文件名
         private string NewVersionFileName = null;
-        ////主窗体
-        //public MainWindow form;
-        ///通知内容
-        private string nnidtext = null;
+        ///MD5
+        private string MD5Value = null;
         ///设置文件夹位置
         static string CurrentPath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
         static string UpdatePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\";
         static string UpdateXmlPath = UpdatePath + "update.xml";
         #endregion
 
-        /// <summary>
-        /// 开始更新
-        /// </summary>
-        public void UpdateNow()
+        #region "成员属性"
+        public bool download;
+        public string downloadSpeed;
+        public double downloadProgress;
+        public string downloaded;
+        public bool downloadcompleted;
+
+        public bool Download
         {
-            NowVersion();
+            get { return download; }
+            set { download = value; }
         }
+        public string DownloadSpeed
+        {
+            get { return downloadSpeed; }
+            set { downloadSpeed = value; }
+        }
+        public double DownloadProgress
+        {
+            get { return downloadProgress; }
+            set { downloadProgress = value; }
+        }
+        public string Downloaded
+        {
+            get { return downloaded; }
+            set { downloaded = value; }
+        }
+        public bool Downloadcompleted
+        {
+            get { return downloadcompleted; }
+            set { downloadcompleted = value; }
+        }
+        #endregion
 
         /// <summary>
-        /// 获取本地版本号
+        /// 开始更新，获取本地版本号
         /// </summary>
-        private void NowVersion()
+        public void UpdateNow()
         {
             LocalVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             DownloadCheckUpdateXml();
         }
 
         /// <summary>
-        /// 从服务器上获取最新的版本号
+        /// 从服务器上获取最新的版本号(下载XML文件)
         /// </summary>
         private void DownloadCheckUpdateXml()
         {
@@ -73,14 +98,12 @@ namespace 饥荒百科全书CSharp.Class
             }
             catch
             {
-                nnidtext = "检查更新失败";
-                MessageBox.Show(nnidtext);
-                Environment.Exit(0);
+                MessageBox.Show("获取版本号信息文件失败");
             }
         }
 
         /// <summary>
-        /// 读取从服务器获取的最新版本号
+        /// 读取从服务器获取的最新版本号(读取XML文件)
         /// </summary>
         private void LatestVersion()
         {
@@ -104,91 +127,99 @@ namespace 饥荒百科全书CSharp.Class
                             {
                                 NewVersionDownloadURL = xml.InnerText;
                             }
-                            if (xml.Name == "FileName")
+                            if (xml.Name == "MD5")
                             {
-                                NewVersionFileName = xml.InnerText;
+                                MD5Value = xml.InnerText;
                             }
                         }
-                        DownloadInstall();
+                        int slashPlace = NewVersionDownloadURL.LastIndexOf('/');
+                        NewVersionFileName = NewVersionDownloadURL.Replace(".zip", "").Replace("_"," ").Substring(slashPlace + 1);
+                        DownloadNewvirsion();
                     }
                 }
             }
             else if (!File.Exists(UpdateXmlPath))
             {
-                nnidtext = "检查更新失败";
+                MessageBox.Show("获取版本号信息失败");
                 Environment.Exit(0);
             }
         }
 
         /// <summary>
-        /// 下载安装包
+        /// 下载新版本
         /// </summary>
-        private void DownloadInstall()
+        private void DownloadNewvirsion()
         {
             if (LocalVersion == NewVersion)
             {
-                nnidtext = "恭喜你，已经更新到最新版本";
+                MessageBox.Show("恭喜你，已经更新到最新版本");
             }
             else if (LocalVersion != NewVersion && File.Exists(UpdateXmlPath))
             {
-                nnidtext = "发现新版本，即将下载新版本";
-                client.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-                client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
-                stopwatch.Start();
-                // 开始异步下载  
-                Uri newVersionDownloadURL = new Uri(NewVersionDownloadURL);
-                client.DownloadFileAsync(newVersionDownloadURL, CurrentPath + NewVersionFileName);
-                DownloadWindow downloadWindow = new DownloadWindow();
-                downloadWindow.ShowDialog();
-                //for (int i = 1; i < 3; i++)
-                //{
-                //    if (File.Exists(CurrentPath + NewVersionFileName))
-                //    {
-                //        InstallandDelete();//这里调用安装的类
-                //        break;
-                //    }
-                //    else if (!File.Exists(CurrentPath + NewVersionFileName))
-                //    {
-                //        //如果一次没有下载成功，则检查三次
-                //        client.DownloadFileAsync(newVersionDownloadURL, CurrentPath + NewVersionFileName);
-                //        nnidtext = "下载失败，请检查您的网络连接是否正常";
-                //        Environment.Exit(0);
-                //    }
-                //}    
+                if (MessageBox.Show("检测到新版本，是否下载？", "检查更新", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+                    //检测并删除已经下载但未完成的文件
+                    if (File.Exists(CurrentPath + NewVersionFileName + ".zip"))
+                    {
+                        if (GetMD5HashFromFile(CurrentPath + NewVersionFileName + ".zip") == MD5Value)
+                        {
+                            MessageBox.Show("检测到文件已下载，开始解压！");
+                            Downloadcompleted = true;
+                            //解压并运行
+                            CompressionRun();
+                        }
+                        else
+                        {
+                            File.Delete(CurrentPath + NewVersionFileName + ".zip");
+                            DownloadNewversion_();
+                        }
+                    }
+                    else
+                    {
+                        DownloadNewversion_();
+                    }
+                }
             }
         }
 
-        public string downloadSpeed;
-        public double downloadProgress;
-        public string downloaded;
+        /// <summary>
+        /// 下载
+        /// </summary>
+        private void DownloadNewversion_()
+        {
+            DownloadWindow DW = new DownloadWindow();
+            DW.Show();
+            Download = true;
+            //添加下载完成/下载进度事件
+            client.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+            client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+            //
+            stopwatch.Start();
+            // 开始异步下载  
+            Uri newVersionDownloadURL = new Uri(NewVersionDownloadURL);
+            client.DownloadFileAsync(newVersionDownloadURL, CurrentPath + NewVersionFileName + ".zip");
+        }
+        
+        /// <summary>
+        /// 取消下载
+        /// </summary>
+        public void DownloadCancel()
+        {
+            client.CancelAsync();
+        }
 
-        public string DownloadSpeed
-        {
-            get { return downloadSpeed; }
-            set { downloadSpeed = value; }
-        }
-        public double DownloadProgress
-        {
-            get { return downloadProgress; }
-            set { downloadProgress = value; }
-        }
-        public string Downloaded
-        {
-            get { return downloaded; }
-            set { downloaded = value; }
-        }
-
-        //显示下载进度
+        /// <summary>
+        /// 显示下载进度
+        /// </summary>
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-
             try
             {
                 // 显示下载速度
                 DownloadSpeed = (Convert.ToDouble(e.BytesReceived) / 1024 / stopwatch.Elapsed.TotalSeconds).ToString("0.00") + " kb/s";
                 // 进度条  
                 DownloadProgress = e.ProgressPercentage;
-                // 当前比例  
+                // 当前比例
                 //labelPerc.Content = e.ProgressPercentage.ToString() + "%";
                 // 下载了多少 还剩余多少  
                 Downloaded = (Convert.ToDouble(e.BytesReceived) / 1024 / 1024).ToString("0.00") + " Mb" + "  /  " + (Convert.ToDouble(e.TotalBytesToReceive) / 1024 / 1024).ToString("0.00") + " Mb";
@@ -199,77 +230,82 @@ namespace 饥荒百科全书CSharp.Class
             }
         }
 
-        // The event that will trigger when the WebClient is completed  
+        /// <summary>
+        /// 下载完成/中断操作
+        /// </summary>
         private void Completed(object sender, AsyncCompletedEventArgs e)
         {
             stopwatch.Reset();
             if (e.Cancelled == true)
             {
-                MessageBox.Show("下载未完成!");
+                MessageBox.Show("下载未完成!", "下载中断");
             }
             else
             {
                 MessageBox.Show("下载完毕!");
-                if (File.Exists(CurrentPath + NewVersionFileName))
+                if (GetMD5HashFromFile(CurrentPath + NewVersionFileName + ".zip") == MD5Value)
                 {
-                    InstallandDelete();//这里调用安装的类
+                    MessageBox.Show("MD5校验正确！");
+                    Downloadcompleted = true;
+                    CompressionRun();
+                }
+                else
+                {
+                    MessageBox.Show("MD5校验错误！");
                 }
             }
-
         }
 
         /// <summary>
-        /// 安装及删除
+        /// 解压并运行
         /// </summary>
-        private void InstallandDelete()
+        private void CompressionRun()
         {
-            ////安装前关闭正在运行的程序
-            //KillProgram();
-            //启动安装程序
-            Process.Start(NewVersionFileName);
+            //解压
+            string zipPath = CurrentPath + NewVersionFileName + ".zip";
+
+            if (!File.Exists(CurrentPath + NewVersionFileName + ".exe"))
+            {
+                using (ZipArchive archive = ZipFile.Open(zipPath, ZipArchiveMode.Update))
+                {
+                    archive.ExtractToDirectory(CurrentPath);
+                }
+            }
+            //删除下载的压缩文件
+            File.Delete(zipPath);
+            //注册表写入需要删除的旧版本文件路径
+            RegeditRW.RegWrite("OldVersionPath", System.Windows.Forms.Application.ExecutablePath);
+            //运行
+            Process.Start(CurrentPath + NewVersionFileName + ".exe");
             Environment.Exit(0);
-            //JudgeInstall();
         }
 
-        #region "其他"
-        ///// <summary>
-        ///// 判断安装进程是否存在
-        ///// </summary>
-        //public void JudgeInstall()
-        //{
-        //    Process[] processList = Process.GetProcesses();
-        //    foreach (Process process in processList)
-        //    {
-        //        if (process.ProcessName == "NewCloudTranslator2_2_1_210_Setup.exe")
-        //        {
-        //            process.Kill();
-        //            File.Delete(@"Update\NewCloudTranslator2_2_1_210_Setup.exe");
-        //            File.Delete(@"Update\NewcloudTranslator221210.XML");
-        //        }
-        //        else
-        //        {
-        //            File.Delete(@"Update\NewCloudTranslator2_2_1_210_Setup.exe");
-        //            File.Delete(@"Update\NewcloudTranslator221210.XML");
-        //            return;
-        //        }
-        //    }
-        //}
+        /// <summary>
+        /// 计算文件的MD5校验
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public static string GetMD5HashFromFile(string fileName)
+        {
+            try
+            {
+                FileStream file = new FileStream(fileName, FileMode.Open);
+                System.Security.Cryptography.MD5 md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+                byte[] retVal = md5.ComputeHash(file);
+                file.Close();
 
-        ///// <summary>
-        ///// 结束程序
-        ///// </summary>
-        //public void KillProgram()
-        //{
-        //    Process[] processList = Process.GetProcesses();
-        //    foreach (Process process in processList)
-        //    {
-        //        //如果程序启动了，则杀死
-        //        if (process.ProcessName == "新云翻译器.exe")
-        //        {
-        //            process.Kill();
-        //        }
-        //    }
-        //}
-        #endregion
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < retVal.Length; i++)
+                {
+                    sb.Append(retVal[i].ToString("x2"));
+                }
+                //MessageBox.Show(sb.ToString());
+                return sb.ToString().ToUpper();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("获取MD5值失败,错误：" + ex.Message);
+            }
+        }
     }
 }

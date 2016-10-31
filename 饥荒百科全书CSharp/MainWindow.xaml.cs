@@ -31,22 +31,57 @@ namespace 饥荒百科全书CSharp
 {
     public partial class MainWindow : Window
     {
-        /// <summary>
-        /// 初始化
-        /// </summary>
+
+        //检查更新实例
+        public static Update update = new Update();
+
+        #region "窗口可视化属性"
+        Timer VisiTimer = new Timer();
+
+        public static bool mWVisivility;
+        public static bool MWVisivility
+        {
+            get
+            {
+                return mWVisivility;
+            }
+            set
+            {
+                mWVisivility = value;
+            }
+        }
+
+        void VisiTimerEvent(object sender, EventArgs e)
+        {
+            if (MWVisivility == true)
+            {
+                Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Visibility = Visibility.Collapsed;
+            }
+        }
+        #endregion
+
+        //初始化
         public MainWindow()
         {
+            MWVisivility = true;
+            VisiTimer.Enabled = true;
+            VisiTimer.Interval = 200;
+            VisiTimer.Tick += new EventHandler(VisiTimerEvent);
+            VisiTimer.Start();
             string bg = RegeditRW.RegReadString("Background");
             double bgAlpha = RegeditRW.RegRead("BGAlpha");
             double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
             double MWH = RegeditRW.RegRead("MainWindowHeight");
             double MWW = RegeditRW.RegRead("MainWindowWidth");
-
+            //初始化
             InitializeComponent();
-
             //右侧面板Visibility属性初始化
             RightPanelVisibility("Welcome");
-            //初始化版本
+            //版本初始化
             UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             //设置背景
             if (bg == "")
@@ -99,17 +134,13 @@ namespace 饥荒百科全书CSharp
             UI_search.MaxLength = 10;
         }
 
-        /// <summary>
-        /// 拖动窗口
-        /// </summary>
+        //拖动窗口
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
 
-        /// <summary>
-        /// 窗口尺寸改变
-        /// </summary>
+        //窗口尺寸改变
         private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             //最大化
@@ -119,7 +150,7 @@ namespace 饥荒百科全书CSharp
                 UI_btn_maximized_Click(null, null);
             }
             //设置版本号位置
-            UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
+             UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
             //左侧面板高度
             LeftCanvas.Height = mainWindow.ActualHeight - 2;
             LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
@@ -129,11 +160,24 @@ namespace 饥荒百科全书CSharp
             RegeditRW.RegWrite("MainWindowWidth", ActualWidth);
         }
 
-        /// <summary>
-        /// 窗口加载
-        /// </summary>
+        //窗口加载
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            #region "删除旧版本文件"
+            string oldVersionPath = RegeditRW.RegReadString("OldVersionPath");
+            if (oldVersionPath != System.Windows.Forms.Application.ExecutablePath && oldVersionPath != "")
+            {
+                try
+                {
+                    File.Delete(oldVersionPath);
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show("删除旧版本错误，请手动删除：" + ex);
+                }
+            }
+            RegeditRW.RegWrite("OldVersionPath", "");
+            #endregion
             //测试
             //test.TextP = "23242342343434";
             //test.ImageP = "F_honeycomb";
@@ -142,6 +186,7 @@ namespace 饥荒百科全书CSharp
 
         #region "右上角按钮"
         #region "搜索框清除按钮显示/隐藏"
+        //设置清除按钮可见性
         private void UI_search_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (UI_search.Text != "")
@@ -153,54 +198,52 @@ namespace 饥荒百科全书CSharp
                 Visi.VisiCol(true, UI_search_clear);
             }
         }
-
+        //清除按钮
         private void UI_search_clear_Click(object sender, RoutedEventArgs e)
         {
             UI_search.Text = "";
             Visi.VisiCol(true, UI_search_clear);
         }
         #endregion
-        /// <summary>
-        /// 设置
-        /// </summary>
+
+        #region "设置菜单"
+        //设置
         private void UI_btn_setting_Click(object sender, RoutedEventArgs e)
         {
             UI_pop_setting.IsOpen = true;
         }
+        //检查更新
+        private void Se_button_Update_Click(object sender, RoutedEventArgs e)
+        {
+            update.UpdateNow();
+            MWVisivility = false;
+        }
+        #endregion
+
         #region "皮肤菜单"
-        /// <summary>
-        /// 皮肤菜单
-        /// </summary>
+        //皮肤菜单
         private void UI_btn_bg_Click(object sender, RoutedEventArgs e)
         {
             UI_pop_bg.IsOpen = true;
         }
-        /// <summary>
-        /// 设置背景
-        /// </summary>
+        //设置背景
         private void Se_button_Background_Click(object sender, RoutedEventArgs e)
         {
             SetBackground();
         }
-        /// <summary>
-        /// 清除背景
-        /// </summary>
+        //清除背景
         private void Se_button_Background_Clear_Click(object sender, RoutedEventArgs e)
         {
             ClearBackground();
         }
-        /// <summary>
-        /// 设置面板透明度
-        /// </summary>
+        //设置面板透明度
         private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             RightGrid.Background.Opacity = Se_Panel_Alpha.Value / 100;
             Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
             RegeditRW.RegWrite("BGPanelAlpha", Se_Panel_Alpha.Value + 1);
         }
-        /// <summary>
-        /// 设置背景透明度
-        /// </summary>
+        //设置背景透明度
         private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             UI_BackGroundBorder.Opacity = Se_BG_Alpha.Value / 100;
@@ -208,17 +251,15 @@ namespace 饥荒百科全书CSharp
             RegeditRW.RegWrite("BGAlpha", Se_BG_Alpha.Value + 1);
         }
         #endregion
-        /// <summary>
-        /// 最小化按钮
-        /// </summary>
+
+        #region "最小化/最大化/关闭按钮"
+        //最小化按钮
         private void UI_btn_minimized_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
         Rect rcnormal;//窗口位置
-        /// <summary>
-        /// 最大化按钮
-        /// </summary>
+        //最大化按钮
         private void UI_btn_maximized_Click(object sender, RoutedEventArgs e)
         {
             Visi.VisiCol(true, UI_btn_maximized);
@@ -231,9 +272,7 @@ namespace 饥荒百科全书CSharp
             Height = rc.Height;
             //WindowState = WindowState.Maximized;
         }
-        /// <summary>
-        /// 还原按钮
-        /// </summary>
+        //还原按钮
         private void UI_btn_normal_Click(object sender, RoutedEventArgs e)
         {
             Visi.VisiCol(false, UI_btn_maximized);
@@ -244,47 +283,36 @@ namespace 饥荒百科全书CSharp
             Height = rcnormal.Height;
             //WindowState = WindowState.Normal;
         }
-        /// <summary>
-        /// 关闭按钮
-        /// </summary>
+        //关闭按钮
         private void UI_btn_close_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
         }
         #endregion
+        #endregion
 
         #region "主页面链接"
-        /// <summary>
-        /// 官网
-        /// </summary>
+        //官网
         private void W_button_official_website_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://www.jihuangbaike.com");
         }
-        /// <summary>
-        /// Mod
-        /// </summary>
+        //Mod
         private void W_button_Mods_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://steamcommunity.com/sharedfiles/filedetails/?id=635215011");
         }
-        /// <summary>
-        /// DS新闻
-        /// </summary>
+        //DS新闻
         private void W_button_DSNews_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://store.steampowered.com/news/?appids=219740");
         }
-        /// <summary>
-        /// DST新闻
-        /// </summary>
+        //DST新闻
         private void W_button_DSTNewS_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://store.steampowered.com/news/?appids=322330");
         }
-        /// <summary>
-        /// 群二维码
-        /// </summary>
+        //群二维码
         private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3538303333323236382C2274696D655374616D70223A313437303132323238337D0A");
@@ -292,9 +320,7 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "设置/清除背景"
-        /// <summary>
-        /// 设置背景
-        /// </summary>
+        //设置背景
         public void SetBackground()
         {
             var OFD = new Microsoft.Win32.OpenFileDialog();
@@ -331,9 +357,7 @@ namespace 饥荒百科全书CSharp
                 System.Windows.MessageBox.Show("没有选择正确的图片");
             }
         }
-        /// <summary>
-        /// 清除背景
-        /// </summary>
+        //清除背景
         private void ClearBackground()
         {
             Visi.VisiCol(true, UI_BackGroundBorder);
@@ -344,10 +368,9 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "模拟SplitView按钮"
-        public static byte LeftMenuState = 0;//左侧菜单状态，0为关闭，1为打开
-        /// <summary>
-        /// 左侧菜单按钮
-        /// </summary>
+        //左侧菜单状态，0为关闭，1为打开
+        public static byte LeftMenuState = 0;
+        //左侧菜单按钮
         private void Sidebar_Menu_Click(object sender, RoutedEventArgs e)
         {
             var MainWindowWidth = mainWindow.ActualWidth;
@@ -379,9 +402,7 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "右侧面板Visibility属性设置"
-        /// <summary>
-        /// 右侧面板初始化
-        /// </summary>
+        //右侧面板初始化
         private void RightPanelVisibilityInitialize()
         {
             foreach (UIElement vControl in RightGrid.Children)
@@ -437,12 +458,6 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
-        public static Update update = new Update();
-        private Timer UpdateTimer = new Timer();
-        
-        private void Se_button_Update_Click(object sender, RoutedEventArgs e)
-        {
-            update.UpdateNow();
-        }
+
     }
 }
