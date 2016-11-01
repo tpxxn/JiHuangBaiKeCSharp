@@ -48,7 +48,7 @@
             <Button x:Name="UI_btn_normal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Grid.Column="2" Margin="0,-10,35,0" Visibility="Collapsed" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_normal_Style}" Focusable="False" />
             <Button x:Name="UI_btn_minimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Grid.Column="2" Margin="0,-10,60,0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" />
             <Button x:Name="UI_btn_bg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Grid.Column="1" Margin="0,-10,85,0" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
-            <Popup x:Name="UI_pop_bg" PopupAnimation="Fade" Width="200" Height="200" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False">
+            <Popup x:Name="UI_pop_bg" PopupAnimation="Fade" Width="200" Height="200" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10">
                 <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
                     <StackPanel Margin="10">
                         <Button x:Name="Se_button_Background" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
@@ -71,7 +71,7 @@
                 </Border>
             </Popup>
             <Button x:Name="UI_btn_setting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Grid.Column="1" Margin="0,-10,110,0" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_setting_Style}" Focusable="False" />
-            <Popup x:Name="UI_pop_setting" PopupAnimation="Fade" Width="200" Height="200" PlacementTarget="{Binding ElementName=UI_btn_setting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Grid.ColumnSpan="2" Margin="0,0,798,458" Grid.RowSpan="2">
+            <Popup x:Name="UI_pop_setting" PopupAnimation="Fade" Width="200" Height="200" PlacementTarget="{Binding ElementName=UI_btn_setting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Grid.ColumnSpan="2" Margin="0,0,798,458" Grid.RowSpan="2" VerticalOffset="10">
                 <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
                     <StackPanel Margin="10">
                         <Button x:Name="Se_button_Update" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}" Click="Se_button_Update_Click">
@@ -83,7 +83,7 @@
                     </StackPanel>
                 </Border>
             </Popup>
-            <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Margin="0,3,140,0" Cursor="{DynamicResource Cursor_link}" Grid.Column="1" Style="{DynamicResource ComboBoxStyle}" Focusable="False">
+            <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Cursor="{DynamicResource Cursor_link}" Grid.Column="1" Style="{DynamicResource ComboBoxStyle}" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged">
                 <ComboBoxItem Cursor="{DynamicResource Cursor_link}" IsSelected="True" Focusable="False">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/DLC_DS.PNG" Width="30" Height="30" />
@@ -115,15 +115,16 @@
                     </StackPanel>
                 </ComboBoxItem>
             </ComboBox>
-            <TextBlock x:Name="UI_gameversion_TextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,245,0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="0,10,330,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15"/>
-            <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,12,331,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False"/>
+            <!--<TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.Column="1"/>-->
+            <TextBlock x:Name="UI_gameversion_TextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15"/>
+            <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,12,351,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False"/>
             <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="SLWidth" Width="200" MinWidth="200" MaxWidth="280"/>
                     <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" Visibility="Collapsed"/>
+                <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" />
                 <ScrollViewer x:Name="ScrollViewer_Left_Character" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
@@ -243,7 +244,6 @@
                         <Slider x:Name="slider6" Width="116"/>
                     </WrapPanel>
                 </ScrollViewer>
-                <Grid x:Name="RightGrid_Setting" Grid.ColumnSpan="2" Visibility="Collapsed"/>
             </Grid>
             <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1">
                 <TextBlock x:Name="textBlock" Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,50,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
@@ -269,6 +269,7 @@
                 </Button>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: DS-饥荒单机 | RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机 | Tencent-TGP版和QQ游戏大厅版" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16" d:IsLocked="True"/>
             </Grid>
+            <Grid x:Name="RightGrid_Setting" Grid.ColumnSpan="2" Visibility="Collapsed" Margin="0,0,50,50" Grid.RowSpan="2"/>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
                     <Button x:Name="Sidebar_Menu" Width="50" Height="50" Click="Sidebar_Menu_Click" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" />

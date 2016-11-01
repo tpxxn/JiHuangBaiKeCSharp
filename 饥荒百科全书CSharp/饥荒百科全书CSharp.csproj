@@ -86,8 +86,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\RegeditRW.cs" />
     <Compile Include="Class\Update.cs" />
+    <Compile Include="Class\UpdatePan.cs" />
     <Compile Include="DownloadWindow.xaml.cs">
       <DependentUpon>DownloadWindow.xaml</DependentUpon>
     </Compile>
@@ -118,7 +120,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Class\AnimationClass.cs" />
+    <Compile Include="Class\Animation.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -4250,6 +4252,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Setting_Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XML\DSXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XML\TencentXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XML\DSTXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XML\RoGXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XML\SWXml.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

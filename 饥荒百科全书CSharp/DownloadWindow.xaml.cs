@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +25,8 @@ namespace 饥荒百科全书CSharp
         public DownloadWindow()
         {
             InitializeComponent();
-            UpdateTimer.Enabled = true;
-            UpdateTimer.Interval = 200;
-            UpdateTimer.Tick += new EventHandler(Update);
-            UpdateTimer.Start();
+            DownloadVersion.Text = "新版本 " + MainWindow.updatePan.NewVersion + " 下载地址";
+            DownloadURL_TextBlock.Text = MainWindow.updatePan.DownloadURL;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -35,30 +34,15 @@ namespace 饥荒百科全书CSharp
             DragMove();
         }
 
-        Timer UpdateTimer = new Timer();
-        
-        void Update(object sender, EventArgs e)
-        {
-            if (MainWindow.update.Downloadcompleted == false)
-            {
-                DownloadSpeed.Text = MainWindow.update.DownloadSpeed;
-                DownloadProgressBar.Value = MainWindow.update.DownloadProgress;
-                Downloaded.Text = MainWindow.update.Downloaded;
-            }
-            else
-            {
-                UpdateTimer.Enabled = false;
-            }
-        }
-
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
-            if (System.Windows.MessageBox.Show("取消更新？", "检查更新", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
-            {
-                MainWindow.update.DownloadCancel();
                 MainWindow.MWVisivility = true;
                 Close();
-            }
+        }
+
+        private void DownloadURL_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(MainWindow.updatePan.DownloadURL);
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,12 +14,12 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
-using 饥荒百科全书CSharp.Properties;
-//控件计数
+//控件计数例子
 //int sum = 0;
 //foreach (Control vControl in WrapPanel_Right.Children)
 //{
@@ -31,9 +32,8 @@ namespace 饥荒百科全书CSharp
 {
     public partial class MainWindow : Window
     {
-
         //检查更新实例
-        public static Update update = new Update();
+        public static UpdatePan updatePan = new UpdatePan();
 
         #region "窗口可视化属性"
         Timer VisiTimer = new Timer();
@@ -63,7 +63,6 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
-
         //初始化
         public MainWindow()
         {
@@ -75,10 +74,12 @@ namespace 饥荒百科全书CSharp
             string bg = RegeditRW.RegReadString("Background");
             double bgAlpha = RegeditRW.RegRead("BGAlpha");
             double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
-            double MWH = RegeditRW.RegRead("MainWindowHeight");
-            double MWW = RegeditRW.RegRead("MainWindowWidth");
+            double mainWindowHeight = RegeditRW.RegRead("MainWindowHeight");
+            double mainWindowWidth = RegeditRW.RegRead("MainWindowWidth");
+            double gameVersion = RegeditRW.RegRead("GameVersion");
             //初始化
             InitializeComponent();
+
             //右侧面板Visibility属性初始化
             RightPanelVisibility("Welcome");
             //版本初始化
@@ -120,20 +121,22 @@ namespace 饥荒百科全书CSharp
             Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
             RightGrid.Background.Opacity = (bgPanelAlpha - 1) / 100;
             //设置高度和宽度
-            if (MWH == 0)
+            if (mainWindowHeight == 0)
             {
-                MWH = 660;
+                mainWindowHeight = 660;
             }
-            if (MWW == 0)
+            if (mainWindowWidth == 0)
             {
-                MWW = 1000;
+                mainWindowWidth = 1000;
             }
-            Width = MWW;
-            Height = MWH;
+            Width = mainWindowWidth;
+            Height = mainWindowHeight;
+            //设置游戏版本
+            UI_gameversion.SelectedIndex = (int)gameVersion;
             //设置搜索框的最大字符数
             UI_search.MaxLength = 10;
         }
-
+        
         //拖动窗口
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -163,6 +166,7 @@ namespace 饥荒百科全书CSharp
         //窗口加载
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            new KeyboardHandler(this);
             #region "删除旧版本文件"
             string oldVersionPath = RegeditRW.RegReadString("OldVersionPath");
             if (oldVersionPath != System.Windows.Forms.Application.ExecutablePath && oldVersionPath != "")
@@ -206,6 +210,14 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
+        #region "游戏版本"
+        //游戏版本选择
+        private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
+        }
+        #endregion
+
         #region "设置菜单"
         //设置
         private void UI_btn_setting_Click(object sender, RoutedEventArgs e)
@@ -215,7 +227,7 @@ namespace 饥荒百科全书CSharp
         //检查更新
         private void Se_button_Update_Click(object sender, RoutedEventArgs e)
         {
-            update.UpdateNow();
+            updatePan.UpdateNow();
             MWVisivility = false;
         }
         #endregion
@@ -286,6 +298,7 @@ namespace 饥荒百科全书CSharp
         //关闭按钮
         private void UI_btn_close_Click(object sender, RoutedEventArgs e)
         {
+
             Environment.Exit(0);
         }
         #endregion
@@ -378,9 +391,9 @@ namespace 饥荒百科全书CSharp
             if (LeftMenuState == 0)
             {
                 Visi.VisiCol(false, UI_Version);
-                AnimationClass.Animation(LCWidth, 50, 150, WidthProperty);
-                AnimationClass.Animation(LeftCanvas, 50, 150, WidthProperty);
-                AnimationClass.Animation(LeftWrapPanel, 50, 150, WidthProperty);
+                Animation.Anim(LCWidth, 50, 150, WidthProperty);
+                Animation.Anim(LeftCanvas, 50, 150, WidthProperty);
+                Animation.Anim(LeftWrapPanel, 50, 150, WidthProperty);
                 LCWidth.Width = new GridLength(150);
                 LeftCanvas.Width = 150;
                 LeftWrapPanel.Width = 150;
@@ -389,9 +402,9 @@ namespace 饥荒百科全书CSharp
             else
             {
                 Visi.VisiCol(true, UI_Version);
-                AnimationClass.Animation(LCWidth, 150, 50, WidthProperty);
-                AnimationClass.Animation(LeftCanvas, 150, 50, WidthProperty);
-                AnimationClass.Animation(LeftWrapPanel, 150, 50, WidthProperty);
+                Animation.Anim(LCWidth, 150, 50, WidthProperty);
+                Animation.Anim(LeftCanvas, 150, 50, WidthProperty);
+                Animation.Anim(LeftWrapPanel, 150, 50, WidthProperty);
                 LCWidth.Width = new GridLength(50);
                 LeftCanvas.Width = 50;
                 LeftWrapPanel.Width = 50;
@@ -419,16 +432,22 @@ namespace 饥荒百科全书CSharp
             RightPanelVisibilityInitialize();
             switch (obj)
             {
+                //欢迎界面
                 case "Welcome":
                     Visi.VisiCol(false, RightGrid_Welcome);
                     Visi.VisiCol(true, RightGrid);
                     break;
+                //设置界面
                 case "Setting":
                     Visi.VisiCol(false, RightGrid_Setting);
                     Visi.VisiCol(true, RightGrid);
                     break;
+                //内容界面
                 default:
-                    Visi.VisiCol(false, UI_Splitter);
+                    //隐藏欢迎/设置界面
+                    Visi.VisiCol(true, RightGrid_Welcome);
+                    Visi.VisiCol(true, RightGrid_Setting);
+                    //显示分割器/右侧内容Grid容器
                     Visi.VisiCol(false, RightGrid);
                     switch (obj)
                     {

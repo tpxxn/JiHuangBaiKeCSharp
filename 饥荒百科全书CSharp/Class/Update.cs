@@ -201,14 +201,6 @@ namespace 饥荒百科全书CSharp.Class
         }
         
         /// <summary>
-        /// 取消下载
-        /// </summary>
-        public void DownloadCancel()
-        {
-            client.CancelAsync();
-        }
-
-        /// <summary>
         /// 显示下载进度
         /// </summary>
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -254,6 +246,14 @@ namespace 饥荒百科全书CSharp.Class
                     MessageBox.Show("MD5校验错误！");
                 }
             }
+        }
+
+        /// <summary>
+        /// 取消下载
+        /// </summary>
+        public void DownloadCancel()
+        {
+            client.CancelAsync();
         }
 
         /// <summary>
