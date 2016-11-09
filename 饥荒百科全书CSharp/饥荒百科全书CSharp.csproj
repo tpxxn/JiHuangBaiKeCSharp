@@ -171,6 +171,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="VK值.xlsx" />
     <Resource Include="Resources\Cursor_link.ani" />
     <Resource Include="Resources\Cursor_workOrbusy.ani" />
   </ItemGroup>

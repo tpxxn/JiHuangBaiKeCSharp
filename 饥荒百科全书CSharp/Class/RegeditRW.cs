@@ -45,7 +45,7 @@ namespace 饥荒百科全书CSharp.Class
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.ToString());
+                //MessageBox.Show(e.ToString());
             }
             if (GetValueTemp != "")
             {

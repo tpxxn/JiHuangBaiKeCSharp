@@ -12,8 +12,7 @@ namespace 饥荒百科全书CSharp.Class
 {
     public class KeyboardHandler : IDisposable
     {
-        //virtual-key, refer to: http://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
-        public const int WM_HOTKEY = 0x0312;
+        //VK值: http://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
         public enum KeyModifiers
         {
             None = 0,
@@ -22,8 +21,9 @@ namespace 饥荒百科全书CSharp.Class
             Shift = 4,
             WindowsKey = 8
         }
+        public const int WM_HOTKEY = 0x0312;
         public const int VK_Ctrl = 0x11;
-        public const int VK_A = 0x41;
+        public const int VK_B = 0x42;
 
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -49,13 +49,13 @@ namespace 饥荒百科全书CSharp.Class
         {
             if (msg.message == WM_HOTKEY)
             {
-                System.Windows.Forms.MessageBox.Show("A hot key ws preesed");
+                MainWindow.MWVisivility = !MainWindow.MWVisivility;
             }
         }
 
         private void SetupHotKey(IntPtr handle)
         {
-            RegisterHotKey(handle, GetType().GetHashCode(), KeyModifiers.Ctrl, VK_A);
+            RegisterHotKey(handle, GetType().GetHashCode(),(KeyModifiers)3, VK_B);
         }
 
         public void Dispose()

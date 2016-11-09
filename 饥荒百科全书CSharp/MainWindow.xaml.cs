@@ -66,7 +66,7 @@ namespace 饥荒百科全书CSharp
         //初始化
         public MainWindow()
         {
-            MWVisivility = true;
+            
             VisiTimer.Enabled = true;
             VisiTimer.Interval = 200;
             VisiTimer.Tick += new EventHandler(VisiTimerEvent);
@@ -80,6 +80,7 @@ namespace 饥荒百科全书CSharp
             //初始化
             InitializeComponent();
 
+            MWVisivility = true;
             //右侧面板Visibility属性初始化
             RightPanelVisibility("Welcome");
             //版本初始化
@@ -153,7 +154,7 @@ namespace 饥荒百科全书CSharp
                 UI_btn_maximized_Click(null, null);
             }
             //设置版本号位置
-             UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
+            UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
             //左侧面板高度
             LeftCanvas.Height = mainWindow.ActualHeight - 2;
             LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
@@ -248,19 +249,19 @@ namespace 饥荒百科全书CSharp
         {
             ClearBackground();
         }
-        //设置面板透明度
-        private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            RightGrid.Background.Opacity = Se_Panel_Alpha.Value / 100;
-            Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
-            RegeditRW.RegWrite("BGPanelAlpha", Se_Panel_Alpha.Value + 1);
-        }
         //设置背景透明度
         private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             UI_BackGroundBorder.Opacity = Se_BG_Alpha.Value / 100;
             Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
             RegeditRW.RegWrite("BGAlpha", Se_BG_Alpha.Value + 1);
+        }
+        //设置面板透明度
+        private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            RightGrid.Background.Opacity = Se_Panel_Alpha.Value / 100;
+            Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
+            RegeditRW.RegWrite("BGPanelAlpha", Se_Panel_Alpha.Value + 1);
         }
         #endregion
 
@@ -383,7 +384,7 @@ namespace 饥荒百科全书CSharp
         #region "模拟SplitView按钮"
         //左侧菜单状态，0为关闭，1为打开
         public static byte LeftMenuState = 0;
-        //左侧菜单按钮
+        //左侧菜单开关
         private void Sidebar_Menu_Click(object sender, RoutedEventArgs e)
         {
             var MainWindowWidth = mainWindow.ActualWidth;
@@ -412,6 +413,50 @@ namespace 饥荒百科全书CSharp
             }
 
         }
+        //左侧菜单按钮
+        private void Sidebar_Welcome_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Welcome");
+        }
+
+        private void Sidebar_Character_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Character");
+        }
+
+        private void Sidebar_Food_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Food");
+        }
+        private void Sidebar_Science_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Science");
+        }
+
+        private void Sidebar_Cooking_Simulator_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Cooking_Simulator");
+        }
+
+        private void Sidebar_Animal_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Animal");
+        }
+
+        private void Sidebar_Natural_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Natural");
+        }
+
+        private void Sidebar_Goods_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Goods");
+        }
+
+        private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("Setting");
+        }
         #endregion
 
         #region "右侧面板Visibility属性设置"
@@ -423,10 +468,18 @@ namespace 饥荒百科全书CSharp
                 Visi.VisiCol(true, vControl);
             }
         }
-        /// <summary>
-        /// 右侧面板可视化设置
-        /// </summary>
-        /// <param name="obj">右侧面板</param>
+        /// <summary>右侧面板可视化设置</summary>
+        /// obj可选值：
+        /// 主页：Welcome
+        /// 人物：Character
+        /// 食物：Food
+        /// 科技：Science
+        /// 模拟：Cooking_Simulator
+        /// 生物：Animal
+        /// 自然：Natural
+        /// 物品：Goods
+        /// 设置：Setting
+        /// <param name="obj">右侧面板名称</param>
         private void RightPanelVisibility(string obj)
         {
             RightPanelVisibilityInitialize();
@@ -435,11 +488,13 @@ namespace 饥荒百科全书CSharp
                 //欢迎界面
                 case "Welcome":
                     Visi.VisiCol(false, RightGrid_Welcome);
+                    Visi.VisiCol(true, RightGrid_Setting);
                     Visi.VisiCol(true, RightGrid);
                     break;
                 //设置界面
                 case "Setting":
                     Visi.VisiCol(false, RightGrid_Setting);
+                    Visi.VisiCol(true, RightGrid_Welcome);
                     Visi.VisiCol(true, RightGrid);
                     break;
                 //内容界面
@@ -447,6 +502,13 @@ namespace 饥荒百科全书CSharp
                     //隐藏欢迎/设置界面
                     Visi.VisiCol(true, RightGrid_Welcome);
                     Visi.VisiCol(true, RightGrid_Setting);
+                    Visi.VisiCol(true, ScrollViewer_Left_Character, ScrollViewer_Right_Character);
+                    Visi.VisiCol(true, ScrollViewer_Left_Food, ScrollViewer_Right_Food);
+                    Visi.VisiCol(true, ScrollViewer_Left_Science, ScrollViewer_Right_Science);
+                    Visi.VisiCol(true, ScrollViewer_Left_Cooking_Simulator, ScrollViewer_Right_Cooking_Simulator);
+                    Visi.VisiCol(true, ScrollViewer_Left_Animal, ScrollViewer_Right_Animal);
+                    Visi.VisiCol(true, ScrollViewer_Left_Natural, ScrollViewer_Right_Natural);
+                    Visi.VisiCol(true, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
                     //显示分割器/右侧内容Grid容器
                     Visi.VisiCol(false, RightGrid);
                     switch (obj)
@@ -478,5 +540,96 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
+        #region "设置"
+        //老板键
+        private void Se_BossKey_Key_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            byte PressAlt = 0; //Alt
+            byte PressCtrl = 0; //Ctrl
+            byte PressShift = 0; //Shift
+            int ControlKeys = 0; //Alt + Ctrl + Shift的值
+            string PreString = ""; //前面的值
+            string MainKey = ""; //主值
+
+            //string temp = Se_BossKey_Key.Text;
+            //if (e.Key == Key.Back)
+            //{
+            //    e.Handled = true;
+            //}
+            //if (e.Key == Key.Space)
+            //{
+            //    e.Handled = true;
+            //}
+
+            //if ((System.Windows.Forms.Control.ModifierKeys & Keys.Space) == Keys.Space)
+            //    System.Windows.Forms.MessageBox.Show("");
+            
+            //字母 || F1-F12 || 小键盘区的数字 || 空格
+            if ((e.Key >= Key.A && e.Key <= Key.Z) || (e.Key >= Key.F1 && e.Key <= Key.F12) || (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9) || (e.Key == Key.Space))
+            {
+                e.Handled = true;
+                MainKey = e.Key.ToString();
+            }
+            //字母区上面的数字
+            if (e.Key >= Key.D0 && e.Key <= Key.D9)
+            {
+                e.Handled = true;
+                MainKey = e.Key.ToString().Replace("D", "");
+            }
+            //Alt Ctrl Shift键判断
+            if ((System.Windows.Forms.Control.ModifierKeys & Keys.Alt) == Keys.Alt)
+                PressAlt = 1;
+            else
+                PressAlt = 0;
+
+            if ((System.Windows.Forms.Control.ModifierKeys & Keys.Control) == Keys.Control)
+                PressCtrl = 2;
+            else
+                PressCtrl = 0;
+
+            if ((System.Windows.Forms.Control.ModifierKeys & Keys.Shift) == Keys.Shift)
+                PressShift = 4;
+            else
+                PressShift = 0;
+
+            ControlKeys = PressAlt + PressCtrl + PressShift;
+            switch (ControlKeys)
+            {
+                case 1:
+                    PreString = "Alt + ";
+                    break;
+                case 2:
+                    PreString = "Ctrl + ";
+                    break;
+                case 3:
+                    PreString = "Ctrl + Alt + ";
+                    break;
+                case 4:
+                    PreString = "Shift + ";
+                    break;
+                case 5:
+                    PreString = "Alt + Shift + ";
+                    break;
+                case 6:
+                    PreString = "Ctrl + Shift + ";
+                    break;
+                case 7:
+                    PreString = "Ctrl + Alt + Shift + ";
+                    break;
+                default:
+                    PreString = "";
+                    break;
+            }
+            //输出值
+            if (MainKey != "")
+            {
+                Se_BossKey_Key.Text = PreString + MainKey;
+            }
+            else
+            {
+                Se_BossKey_Key.Text = "Ctrl + Alt + B";
+            }
+        }
+        #endregion
     }
 }
