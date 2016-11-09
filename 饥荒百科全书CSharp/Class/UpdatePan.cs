@@ -51,7 +51,7 @@ namespace 饥荒百科全书CSharp.Class
         public void UpdateNow()
         {
             LocalVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            DownloadUpdateXml();
+            DownloadUpdateXml();//从服务器上获取最新的版本号(下载XML文件)
         }
 
         //从服务器上获取最新的版本号(下载XML文件)
@@ -66,7 +66,7 @@ namespace 饥荒百科全书CSharp.Class
                 }
                 //第一个参数是文件的地址,第二个参数是文件保存的路径文件名
                 client.DownloadFile("http://www.jihuangbaike.com/update.xml", UpdateXmlPath);
-                LatestVersion();
+                LatestVersion();//读取从服务器获取的最新版本号(读取XML文件)
             }
             catch
             {
@@ -98,7 +98,7 @@ namespace 饥荒百科全书CSharp.Class
                                 DownloadURL = xml.InnerText;
                             }
                         }
-                        GetNewVersion();
+                        GetNewVersion();//获取新版本
                     }
                 }
             }
@@ -109,7 +109,7 @@ namespace 饥荒百科全书CSharp.Class
             }
         }
 
-        //下载新版本
+        //获取新版本
         private void GetNewVersion()
         {
             if (LocalVersion == NewVersion)

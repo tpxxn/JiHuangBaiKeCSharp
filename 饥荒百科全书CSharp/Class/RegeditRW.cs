@@ -43,7 +43,8 @@ namespace 饥荒百科全书CSharp.Class
             {
                 GetValueTemp = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", ValueName, 0).ToString();
             }
-            catch (Exception e)
+            catch 
+            //(Exception e)
             {
                 //MessageBox.Show(e.ToString());
             }

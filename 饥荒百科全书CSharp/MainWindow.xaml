@@ -206,7 +206,7 @@
             </Grid>
             <Grid x:Name="RightGrid_Setting" Grid.Column="1" Grid.Row="1">
                 <TextBlock x:Name="Se_BossKey_Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
-                <TextBox x:Name="Se_BossKey_Key" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Ctrl + Alt + B" VerticalAlignment="Top" Width="241" Margin="127,138,0,0" KeyDown="Se_BossKey_Key_KeyDown"/>
+                <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">

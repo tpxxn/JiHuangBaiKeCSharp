@@ -229,6 +229,7 @@ namespace 饥荒百科全书CSharp
         private void Se_button_Update_Click(object sender, RoutedEventArgs e)
         {
             updatePan.UpdateNow();
+            UI_pop_setting.IsOpen = false;
             MWVisivility = false;
         }
         #endregion
@@ -542,7 +543,7 @@ namespace 饥荒百科全书CSharp
 
         #region "设置"
         //老板键
-        private void Se_BossKey_Key_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void Se_BossKey_Key_KeyDown(Object sender, System.Windows.Input.KeyEventArgs e)
         {
             byte PressAlt = 0; //Alt
             byte PressCtrl = 0; //Ctrl
@@ -551,20 +552,7 @@ namespace 饥荒百科全书CSharp
             string PreString = ""; //前面的值
             string MainKey = ""; //主值
 
-            //string temp = Se_BossKey_Key.Text;
-            //if (e.Key == Key.Back)
-            //{
-            //    e.Handled = true;
-            //}
-            //if (e.Key == Key.Space)
-            //{
-            //    e.Handled = true;
-            //}
-
-            //if ((System.Windows.Forms.Control.ModifierKeys & Keys.Space) == Keys.Space)
-            //    System.Windows.Forms.MessageBox.Show("");
-            
-            //字母 || F1-F12 || 小键盘区的数字 || 空格
+            //字母 || F1-F12 || 小键盘区的数字 || 空格?
             if ((e.Key >= Key.A && e.Key <= Key.Z) || (e.Key >= Key.F1 && e.Key <= Key.F12) || (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9) || (e.Key == Key.Space))
             {
                 e.Handled = true;
@@ -623,11 +611,11 @@ namespace 饥荒百科全书CSharp
             //输出值
             if (MainKey != "")
             {
-                Se_BossKey_Key.Text = PreString + MainKey;
+                Se_BossKey_Key.Content = PreString + MainKey;
             }
             else
             {
-                Se_BossKey_Key.Text = "Ctrl + Alt + B";
+                Se_BossKey_Key.Content = "Ctrl + Alt + B";
             }
         }
         #endregion

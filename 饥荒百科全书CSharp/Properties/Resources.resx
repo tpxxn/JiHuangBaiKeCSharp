@@ -4079,46 +4079,46 @@
     <value>..\Resources\Yarrctopus_arrow_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cursor_alternate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_alternate.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_alternate.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_cross.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_cross.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_dgn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_dgn1.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_dgn1.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_dgn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_dgn2.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_dgn2.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_hand.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_hand.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_help.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_help.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_horz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_horz.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_horz.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_link" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_link.ani;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_link.ani;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_move" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_move.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_move.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_pointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_pointer.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_pointer.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_text.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_text.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_unavailiable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_unavailiable.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_unavailiable.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_vert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_vert.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_vert.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cursor_workOrbusy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cursor_workOrbusy.ani;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Cursor\Cursor_workOrbusy.ani;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btn_close_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_close_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
