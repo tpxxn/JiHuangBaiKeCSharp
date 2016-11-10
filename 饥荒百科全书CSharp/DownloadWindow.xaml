@@ -8,7 +8,7 @@
         Title="下载更新" Height="100" Width="300" WindowStartupLocation="CenterScreen" 
         Cursor="{DynamicResource Cursor_pointer}" 
         WindowStyle="None" 
-        AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="Resources/DST.ico" >
+        AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="Resources/DST.ico" Unloaded="Window_Unloaded" >
 
     <Window.Resources>
         <ResourceDictionary>

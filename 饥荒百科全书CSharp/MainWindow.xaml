@@ -120,16 +120,16 @@
                 <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15"/>
                 <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False"/>
             </Grid>
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF" d:IsHidden="True">
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition x:Name="SLWidth" Width="200" MinWidth="200" MaxWidth="280"/>
+                    <ColumnDefinition x:Name="SLWidth" Width="240" MinWidth="200" MaxWidth="280"/>
                     <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" />
+                <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" Visibility="Collapsed" />
                 <ScrollViewer x:Name="ScrollViewer_Left_Character" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Character" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Character" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Right" Height="800" Background="#88409A9E">
                         <uc:ButtonWithText x:Name="test" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         <uc:ButtonWithText x:Name="test_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" />
@@ -146,37 +146,37 @@
                 <ScrollViewer x:Name="ScrollViewer_Left_Food" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left1" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Food" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Food" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0">
                     <WrapPanel x:Name="WrapPanel_Right1" Height="800" Background="#88409A9E"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Left_Science" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left2" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Science" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Science" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0">
                     <WrapPanel x:Name="WrapPanel_Right2" Height="800" Background="#88409A9E"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Left_Cooking_Simulator" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left3" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Cooking_Simulator" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Cooking_Simulator" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0">
                     <WrapPanel x:Name="WrapPanel_Right3" Height="800" Background="#88409A9E"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Left_Animal" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left4" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Animal" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Animal" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0">
                     <WrapPanel x:Name="WrapPanel_Right4" Height="800" Background="#88409A9E"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Left_Natural" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left5" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Natural" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Natural" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0">
                     <WrapPanel x:Name="WrapPanel_Right5" Height="800" Background="#88409A9E"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Left_Goods" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
                     <WrapPanel x:Name="WrapPanel_Left6" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Goods" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Goods" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0">
                     <WrapPanel x:Name="WrapPanel_Right6" Height="800" Background="#88409A9E"/>
                 </ScrollViewer>
             </Grid>
@@ -204,7 +204,7 @@
                 </Button>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: DS-饥荒单机 | RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机 | Tencent-TGP版和QQ游戏大厅版" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16" d:IsLocked="True"/>
             </Grid>
-            <Grid x:Name="RightGrid_Setting" Grid.Column="1" Grid.Row="1">
+            <Grid x:Name="RightGrid_Setting" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                 <TextBlock x:Name="Se_BossKey_Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
                 <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
             </Grid>

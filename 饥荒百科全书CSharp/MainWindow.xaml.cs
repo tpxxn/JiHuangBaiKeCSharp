@@ -469,18 +469,18 @@ namespace 饥荒百科全书CSharp
                 Visi.VisiCol(true, vControl);
             }
         }
-        /// <summary>右侧面板可视化设置</summary>
-        /// obj可选值：
-        /// 主页：Welcome
-        /// 人物：Character
-        /// 食物：Food
-        /// 科技：Science
-        /// 模拟：Cooking_Simulator
-        /// 生物：Animal
-        /// 自然：Natural
-        /// 物品：Goods
-        /// 设置：Setting
-        /// <param name="obj">右侧面板名称</param>
+
+        // 右侧面板可视化设置
+        // obj可选值：
+        // 主页：Welcome
+        // 人物：Character
+        // 食物：Food
+        // 科技：Science
+        // 模拟：Cooking_Simulator
+        // 生物：Animal
+        // 自然：Natural
+        // 物品：Goods
+        // 设置：Setting
         private void RightPanelVisibility(string obj)
         {
             RightPanelVisibilityInitialize();
@@ -503,15 +503,9 @@ namespace 饥荒百科全书CSharp
                     //隐藏欢迎/设置界面
                     Visi.VisiCol(true, RightGrid_Welcome);
                     Visi.VisiCol(true, RightGrid_Setting);
-                    Visi.VisiCol(true, ScrollViewer_Left_Character, ScrollViewer_Right_Character);
-                    Visi.VisiCol(true, ScrollViewer_Left_Food, ScrollViewer_Right_Food);
-                    Visi.VisiCol(true, ScrollViewer_Left_Science, ScrollViewer_Right_Science);
-                    Visi.VisiCol(true, ScrollViewer_Left_Cooking_Simulator, ScrollViewer_Right_Cooking_Simulator);
-                    Visi.VisiCol(true, ScrollViewer_Left_Animal, ScrollViewer_Right_Animal);
-                    Visi.VisiCol(true, ScrollViewer_Left_Natural, ScrollViewer_Right_Natural);
-                    Visi.VisiCol(true, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
-                    //显示分割器/右侧内容Grid容器
+                    //显示右侧内容Grid容器/分割器
                     Visi.VisiCol(false, RightGrid);
+                    Visi.VisiCol(false, UI_Splitter); 
                     switch (obj)
                     {
                         case "Character":

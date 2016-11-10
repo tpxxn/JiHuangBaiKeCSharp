@@ -36,13 +36,17 @@ namespace 饥荒百科全书CSharp
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
-                MainWindow.MWVisivility = true;
-                Close();
+            Close();
         }
 
         private void DownloadURL_Click(object sender, RoutedEventArgs e)
         {
             Process.Start(MainWindow.updatePan.DownloadURL);
+        }
+
+        private void Window_Unloaded(Object sender, RoutedEventArgs e)
+        {
+            MainWindow.MWVisivility = true;
         }
     }
 }

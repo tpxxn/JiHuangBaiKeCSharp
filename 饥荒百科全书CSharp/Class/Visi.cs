@@ -16,7 +16,6 @@ namespace 饥荒百科全书CSharp.Class
         /// <param name="obj">控件Name</param>
         public static void VisiCol(bool Visi, params UIElement[] obj)
         {
-
             foreach (UIElement i in obj)
             {
                 if (Visi == false)

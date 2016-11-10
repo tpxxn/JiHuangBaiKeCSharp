@@ -51,7 +51,7 @@
                             <RowDefinition Height="0.00001*"/>
                             <RowDefinition MaxHeight="{DynamicResource {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
                         </Grid.RowDefinitions>
-                        <Track x:Name="PART_Track" IsDirectionReversed="true" IsEnabled="{TemplateBinding IsMouseOver}" Grid.Row="1">
+                        <Track Cursor="{DynamicResource Cursor_link}" x:Name="PART_Track" IsDirectionReversed="true" IsEnabled="{TemplateBinding IsMouseOver}" Grid.Row="1">
                             <Track.Thumb>
                                 <Thumb Style="{StaticResource ScrollBarThumbVertical}"/>
                             </Track.Thumb>

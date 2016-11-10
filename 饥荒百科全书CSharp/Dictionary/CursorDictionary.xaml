@@ -15,21 +15,5 @@
     <Cursor x:Key="Cursor_move">/Resources/Cursor/Cursor_move.cur</Cursor>
     <Cursor x:Key="Cursor_alternate">/Resources/Cursor/Cursor_alternate.cur</Cursor>
     <Cursor x:Key="Cursor_link">/Resources/Cursor/Cursor_link.ani</Cursor>
-    <!-->
-    //UI_btn_maximized.Cursor = ((TextBlock)Resources["Cursor_link"]).Cursor;
-    <TextBlock x:Key="Cursor_help" Cursor="../Resources/Cursor_help.cur"/>
-    <TextBlock x:Key="Cursor_workOrbusy" Cursor="../Resources/Cursor_workOrbusy.ani"/>
-    <TextBlock x:Key="Cursor_cross" Cursor="../Resources/Cursor_cross.cur"/>
-    <TextBlock x:Key="Cursor_text" Cursor="../Resources/Cursor_text.cur"/>
-    <TextBlock x:Key="Cursor_hand" Cursor="../Resources/Cursor_hand.cur"/>
-    <TextBlock x:Key="Cursor_unavailiable" Cursor="../Resources/Cursor_unavailiable.cur"/>
-    <TextBlock x:Key="Cursor_vert" Cursor="../Resources/Cursor_vert.cur"/>
-    <TextBlock x:Key="Cursor_horz" Cursor="../Resources/Cursor_horz.cur"/>
-    <TextBlock x:Key="Cursor_dgn1" Cursor="../Resources/Cursor_dgn1.cur"/>
-    <TextBlock x:Key="Cursor_dgn2" Cursor="../Resources/Cursor_dgn2.cur"/>
-    <TextBlock x:Key="Cursor_move" Cursor="../Resources/Cursor_move.cur"/>
-    <TextBlock x:Key="Cursor_alternate" Cursor="../Resources/Cursor_alternate.cur"/>
-    <TextBlock x:Key="Cursor_link" Cursor="../Resources/Cursor_link.ani"/>
-    <-->
 
 </ResourceDictionary>
