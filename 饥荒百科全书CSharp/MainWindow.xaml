@@ -9,7 +9,7 @@
         Title="饥荒百科全书" Icon="Resources/DST.ico" 
         Height="660" Width="1000" 
         MinWidth="900" MinHeight="660" 
-        MouseLeftButtonDown="Window_MouseLeftButtonDown" 
+        MouseLeftButtonDown="mainWindow_MouseLeftButtonDown" 
         WindowStartupLocation="CenterScreen" 
         SizeChanged="mainWindow_SizeChanged" 
         Loaded="mainWindow_Loaded" 
@@ -17,7 +17,7 @@
         Cursor="{DynamicResource Cursor_pointer}" 
         WindowStyle="None" 
         AllowsTransparency="True" 
-        ResizeMode="CanResizeWithGrip">
+        ResizeMode="CanResizeWithGrip" MouseLeftButtonUp="mainWindow_MouseLeftButtonUp">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -30,7 +30,6 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-
     <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FF2B2B2B">
         <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="White">
             <Grid.RowDefinitions>
@@ -41,6 +40,7 @@
                 <ColumnDefinition x:Name="LCWidth" Width="50" MinWidth="50" MaxWidth="150"/>
                 <ColumnDefinition x:Name="RWidth" Width="*" />
             </Grid.ColumnDefinitions>
+
             <Border x:Name="UI_BackGroundBorder" BorderThickness="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1" d:IsLocked="True"/>
             <Grid x:Name="UIGrid" Grid.Column="1">
                 <TextBlock x:Name="UI_Title" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" />
@@ -81,6 +81,7 @@
                                     <TextBlock TextWrapping="Wrap" Text="检查更新" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="130" TextAlignment="Center"/>
                                 </Canvas>
                             </Button>
+                            <CheckBox x:Name="Se_checkBox_Topmost" Content="永远置顶" Margin="0,10,0,0" Click="Se_checkBox_Topmost_Click" />
                         </StackPanel>
                     </Border>
                 </Popup>

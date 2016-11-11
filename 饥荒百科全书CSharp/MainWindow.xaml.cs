@@ -32,6 +32,9 @@ namespace 饥荒百科全书CSharp
 {
     public partial class MainWindow : Window
     {
+        //引用光标资源字典
+        ResourceDictionary cursorDictionary = new ResourceDictionary();
+        
         //检查更新实例 update(网盘)
         public static UpdatePan updatePan = new UpdatePan();
 
@@ -63,6 +66,7 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
+
         //初始化
         public MainWindow()
         {
@@ -79,7 +83,9 @@ namespace 饥荒百科全书CSharp
             double gameVersion = RegeditRW.RegRead("GameVersion");
             //初始化
             InitializeComponent();
-
+            //设置光标资源字典路径
+            cursorDictionary.Source = new Uri("Dictionary/CursorDictionary.xaml", UriKind.Relative);
+            //显示窗口
             MWVisivility = true;
             //右侧面板Visibility属性初始化
             RightPanelVisibility("Welcome");
@@ -137,12 +143,18 @@ namespace 饥荒百科全书CSharp
             //设置搜索框的最大字符数
             UI_search.MaxLength = 10;
         }
-        
-        //拖动窗口
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+        #region "拖动窗口"
+        private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
             DragMove();
         }
+        private void mainWindow_MouseLeftButtonUp(Object sender, MouseButtonEventArgs e)
+        {
+            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
+        }
+        #endregion
 
         //窗口尺寸改变
         private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -231,6 +243,18 @@ namespace 饥荒百科全书CSharp
             updatePan.UpdateNow();
             UI_pop_setting.IsOpen = false;
             MWVisivility = false;
+        }
+        //窗口置顶
+        private void Se_checkBox_Topmost_Click(object sender, RoutedEventArgs e)
+        {
+            if (Se_checkBox_Topmost.IsChecked == true)
+            {
+                mainWindow.Topmost = true;
+            }
+            else
+            {
+                mainWindow.Topmost = false;
+            }
         }
         #endregion
 
@@ -611,5 +635,7 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
+
+        
     }
 }

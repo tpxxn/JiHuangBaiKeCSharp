@@ -11,69 +11,39 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
                     <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
-                        <AdornerDecorator>
-                            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
-                        </AdornerDecorator>
+                        <Grid>
+                            <AdornerDecorator>
+                                <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
+                            </AdornerDecorator>
+                            <ResizeGrip Cursor="Cross" x:Name="WindowResizeGrip" HorizontalAlignment="Right" IsTabStop="False" Visibility="Visible" VerticalAlignment="Bottom" Margin="0,0,2,2">
+                                <ResizeGrip.Template>
+                                    <ControlTemplate TargetType="{x:Type ResizeGrip}">
+                                        <Grid Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                            <Path Data="M9,0L11,0 11,11 0,11 0,9 3,9 3,6 6,6 6,3 9,3z" HorizontalAlignment="Right" Margin="0,0,2,2" VerticalAlignment="Bottom">
+                                                <Path.Fill>
+                                                    <DrawingBrush TileMode="Tile" Viewbox="0,0,3,3" Viewport="0,0,3,3" ViewportUnits="Absolute" ViewboxUnits="Absolute">
+                                                        <DrawingBrush.Drawing>
+                                                            <DrawingGroup>
+                                                                <GeometryDrawing Geometry="M0,0L2,0 2,2 0,2z">
+                                                                    <GeometryDrawing.Brush>
+                                                                        <LinearGradientBrush EndPoint="1,0.75" StartPoint="0,0.25">
+                                                                            <GradientStop Color="#FF2B2B2B" Offset="0.3"/>
+                                                                            <GradientStop Color="#FFBBC5D7" Offset="0.75"/>
+                                                                            <GradientStop Color="#FF6D83A9" Offset="1"/>
+                                                                        </LinearGradientBrush>
+                                                                    </GeometryDrawing.Brush>
+                                                                </GeometryDrawing>
+                                                            </DrawingGroup>
+                                                        </DrawingBrush.Drawing>
+                                                    </DrawingBrush>
+                                                </Path.Fill>
+                                            </Path>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ResizeGrip.Template>
+                            </ResizeGrip>
+                        </Grid>
                     </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Style.Triggers>
-            <Trigger Property="ResizeMode" Value="CanResizeWithGrip">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Window}">
-                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
-                                <Grid>
-                                    <AdornerDecorator>
-                                        <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
-                                    </AdornerDecorator>
-                                    <ResizeGrip x:Name="WindowResizeGrip" HorizontalAlignment="Right" IsTabStop="False" Visibility="Visible" VerticalAlignment="Bottom" Margin="0,0,2,2" Style="{DynamicResource ResizeGripStyle}"/>
-                                </Grid>
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <MultiTrigger>
-                                    <MultiTrigger.Conditions>
-                                        <Condition Property="ResizeMode" Value="CanResizeWithGrip"/>
-                                        <Condition Property="WindowState" Value="Normal"/>
-                                    </MultiTrigger.Conditions>
-                                    <Setter Property="Visibility" TargetName="WindowResizeGrip" Value="Visible"/>
-                                </MultiTrigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-    <Style x:Key="ResizeGripStyle" TargetType="{x:Type ResizeGrip}">
-        <Setter Property="MinWidth" Value="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>
-        <Setter Property="MinHeight" Value="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"/>
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ResizeGrip}">
-                    <Grid Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                        <Path Data="M9,0L11,0 11,11 0,11 0,9 3,9 3,6 6,6 6,3 9,3z" HorizontalAlignment="Right" Margin="0,0,2,2" VerticalAlignment="Bottom">
-                            <Path.Fill>
-                                <DrawingBrush TileMode="Tile" Viewbox="0,0,3,3" Viewport="0,0,3,3" ViewportUnits="Absolute" ViewboxUnits="Absolute">
-                                    <DrawingBrush.Drawing>
-                                        <DrawingGroup>
-                                            <GeometryDrawing Geometry="M0,0L2,0 2,2 0,2z">
-                                                <GeometryDrawing.Brush>
-                                                    <LinearGradientBrush EndPoint="1,0.75" StartPoint="0,0.25">
-                                                        <GradientStop Color="#FF2B2B2B" Offset="0.3"/>
-                                                        <GradientStop Color="#FFBBC5D7" Offset="0.75"/>
-                                                        <GradientStop Color="#FF6D83A9" Offset="1"/>
-                                                    </LinearGradientBrush>
-                                                </GeometryDrawing.Brush>
-                                            </GeometryDrawing>
-                                        </DrawingGroup>
-                                    </DrawingBrush.Drawing>
-                                </DrawingBrush>
-                            </Path.Fill>
-                        </Path>
-                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
