@@ -9,7 +9,7 @@
     <Grid>
         <Button Width="64" Background="{x:Null}" BorderBrush="{x:Null}" Height="80">
             <StackPanel Height="80" Width="64" Margin="-2,-2,0,0" >
-                <Image x:Name="UCImage" Source="../Resources/F_dragoon_heart.png" Width="48" Height="48" />
+                <Image x:Name="UCImage" Source="../Resources/GameResources/Food/F_dragoon_heart.png" Width="48" Height="48" />
                 <TextBlock x:Name="UCTextBlock" Text="龙人心龙人" HorizontalAlignment="Center" Margin="0,8.5,0,0" Background="#FFD69E9E" TextWrapping="Wrap"/>
             </StackPanel>
         </Button>

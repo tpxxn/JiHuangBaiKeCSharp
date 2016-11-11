@@ -41,13 +41,13 @@
                 <ColumnDefinition x:Name="LCWidth" Width="50" MinWidth="50" MaxWidth="150"/>
                 <ColumnDefinition x:Name="RWidth" Width="*" />
             </Grid.ColumnDefinitions>
-            <Border x:Name="UI_BackGroundBorder" BorderThickness="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <Border x:Name="UI_BackGroundBorder" BorderThickness="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1" d:IsLocked="True"/>
             <Grid x:Name="UIGrid" Grid.Column="1">
-                <TextBlock x:Name="UI_Title" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button x:Name="UI_btn_close" Width="20" ToolTip="退出" Click="UI_btn_close_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,10,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Focusable="False" />
-                <Button x:Name="UI_btn_maximized" Width="20" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_maximized_Style}" Focusable="False" />
-                <Button x:Name="UI_btn_normal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_normal_Style}" Focusable="False" />
-                <Button x:Name="UI_btn_minimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" />
+                <TextBlock x:Name="UI_Title" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" />
+                <Button x:Name="UI_btn_close" Width="20" ToolTip="退出" Click="UI_btn_close_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,10,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UI_btn_maximized" Width="20" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_maximized_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UI_btn_normal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_normal_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UI_btn_minimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UI_btn_bg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
                 <Popup x:Name="UI_pop_bg" PopupAnimation="Fade" Width="200" Height="200" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
                     <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
@@ -84,7 +84,7 @@
                         </StackPanel>
                     </Border>
                 </Popup>
-                <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource ComboBoxStyle}" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged">
+                <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource ComboBoxStyle}" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" d:IsLocked="True">
                     <ComboBoxItem Cursor="{DynamicResource Cursor_link}" IsSelected="True" Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DS.PNG" Width="30" Height="30" />
@@ -116,20 +116,20 @@
                         </StackPanel>
                     </ComboBoxItem>
                 </ComboBox>
-                <TextBlock x:Name="UI_gameversion_TextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15"/>
-                <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False"/>
+                <TextBlock x:Name="UI_gameversion_TextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" HorizontalAlignment="Right" VerticalAlignment="Top" d:IsLocked="True"/>
+                <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" d:IsLocked="True"/>
+                <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
             <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition x:Name="SLWidth" Width="240" MinWidth="200" MaxWidth="280"/>
+                    <ColumnDefinition x:Name="SLWidth" Width="240" MinWidth="240" MaxWidth="300"/>
                     <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" Visibility="Collapsed" />
-                <ScrollViewer x:Name="ScrollViewer_Left_Character" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed">
+                <GridSplitter x:Name="UI_Splitter" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" />
+                <ScrollViewer x:Name="ScrollViewer_Left_Character" Template="{DynamicResource MyScrollViewer}">
                     <WrapPanel x:Name="WrapPanel_Left" Height="760" Background="#88DE9191"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_Character" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Visibility="Collapsed">
+                <ScrollViewer x:Name="ScrollViewer_Right_Character" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0">
                     <WrapPanel x:Name="WrapPanel_Right" Height="800" Background="#88409A9E">
                         <uc:ButtonWithText x:Name="test" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         <uc:ButtonWithText x:Name="test_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" />

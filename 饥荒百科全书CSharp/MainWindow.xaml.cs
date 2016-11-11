@@ -32,7 +32,7 @@ namespace 饥荒百科全书CSharp
 {
     public partial class MainWindow : Window
     {
-        //检查更新实例
+        //检查更新实例 update(网盘)
         public static UpdatePan updatePan = new UpdatePan();
 
         #region "窗口可视化属性"
@@ -489,14 +489,12 @@ namespace 饥荒百科全书CSharp
                 //欢迎界面
                 case "Welcome":
                     Visi.VisiCol(false, RightGrid_Welcome);
-                    Visi.VisiCol(true, RightGrid_Setting);
-                    Visi.VisiCol(true, RightGrid);
+                    Visi.VisiCol(true, RightGrid_Setting, RightGrid);
                     break;
                 //设置界面
                 case "Setting":
                     Visi.VisiCol(false, RightGrid_Setting);
-                    Visi.VisiCol(true, RightGrid_Welcome);
-                    Visi.VisiCol(true, RightGrid);
+                    Visi.VisiCol(true, RightGrid_Welcome, RightGrid);
                     break;
                 //内容界面
                 default:

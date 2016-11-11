@@ -11,12 +11,13 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// 资源文件短名
         /// </summary>
-        /// <param name="R_URL">资源文件短路径</param>
+        /// <param name="RUrl">资源文件第一层目录</param>
+        /// <param name="RUrlSecond">资源文件第二层目录</param>
         /// <returns>资源文件路径</returns>
-        public static string ShortName(string R_URL)
+        public static string ShortName(string RUrl, string RUrlSecond = "")
         {
-            R_URL = "../Resources/" + R_URL + ".png";
-            return R_URL;
+            RUrl = "../Resources/" + RUrlSecond + RUrl + ".png";
+            return RUrl;
         }
 
         /// <summary>
