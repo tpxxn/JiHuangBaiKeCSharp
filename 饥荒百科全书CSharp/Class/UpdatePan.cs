@@ -24,7 +24,7 @@ namespace 饥荒百科全书CSharp.Class
         //当前版本
         private string LocalVersion = null;
         //XML文件下载地址
-        private static string UpdatePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\";
+        private static string UpdatePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKeCSharp\Update\";
         private static string UpdateXmlPath = UpdatePath + "update.xml";
         #endregion
 

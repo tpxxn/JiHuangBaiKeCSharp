@@ -316,7 +316,7 @@ namespace 饥荒百科全书CSharp
             Visi.VisiCol(false, UI_BackGroundBorder);
             try
             {
-                string PictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\"; //设置文件夹位置
+                string PictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKeCSharp\Background\"; //设置文件夹位置
                 if ((Directory.Exists(PictruePath)) == false) //若文件夹不存在
                 {
                     Directory.CreateDirectory(PictruePath);
