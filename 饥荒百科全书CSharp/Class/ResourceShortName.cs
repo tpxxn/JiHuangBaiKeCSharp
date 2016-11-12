@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Windows.Media.Imaging;
 
 namespace 饥荒百科全书CSharp.Class
@@ -17,7 +18,7 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>资源文件路径</returns>
         public static string ShortName(string RUrl, string RUrlSecond = "" ,string ExtensionName = "png")
         {
-            RUrl = "../Resources/" + RUrlSecond + "/" + RUrl + "." +ExtensionName;
+            RUrl = "Resources/" + RUrlSecond + RUrl + "." +ExtensionName;
             return RUrl;
         }
 

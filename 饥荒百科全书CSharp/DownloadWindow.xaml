@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:饥荒百科全书CSharp"
         mc:Ignorable="d"
-        Title="下载更新" Height="100" Width="300" WindowStartupLocation="CenterScreen" 
+        Title="饥荒百科全书 - 下载更新" Height="100" Width="300" WindowStartupLocation="CenterScreen" 
         Cursor="{DynamicResource Cursor_pointer}" 
         WindowStyle="None" 
-        AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="Resources/DST.ico" Unloaded="Window_Unloaded" >
+        AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="Resources/DST.ico" Unloaded="Window_Unloaded" Topmost="True" >
 
     <Window.Resources>
         <ResourceDictionary>

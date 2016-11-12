@@ -12920,6 +12920,26 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap Setting_Top_F {
+            get {
+                object obj = ResourceManager.GetObject("Setting_Top_F", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Setting_Top_T {
+            get {
+                object obj = ResourceManager.GetObject("Setting_Top_T", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap Setting_Update {
             get {
                 object obj = ResourceManager.GetObject("Setting_Update", resourceCulture);

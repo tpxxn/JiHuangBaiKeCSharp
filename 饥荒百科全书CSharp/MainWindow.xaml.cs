@@ -34,7 +34,7 @@ namespace 饥荒百科全书CSharp
     {
         //引用光标资源字典
         ResourceDictionary cursorDictionary = new ResourceDictionary();
-        
+
         //检查更新实例 update(网盘)
         public static UpdatePan updatePan = new UpdatePan();
 
@@ -70,19 +70,27 @@ namespace 饥荒百科全书CSharp
         //初始化
         public MainWindow()
         {
-            
+            //读取注册表(必须在初始化之前读取)
+            ////背景图片
+            string bg = RegeditRW.RegReadString("Background");
+            ////透明度
+            double bgAlpha = RegeditRW.RegRead("BGAlpha");
+            double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
+            double windowAlpha = RegeditRW.RegRead("WindowAlpha");
+            ////窗口大小
+            double mainWindowHeight = RegeditRW.RegRead("MainWindowHeight");
+            double mainWindowWidth = RegeditRW.RegRead("MainWindowWidth");
+            ////游戏版本
+            double gameVersion = RegeditRW.RegRead("GameVersion");
+            //设置菜单
+            double winTopmost = RegeditRW.RegRead("Topmost");
+            //初始化
+            InitializeComponent();
+            //窗口可视化计时器
             VisiTimer.Enabled = true;
             VisiTimer.Interval = 200;
             VisiTimer.Tick += new EventHandler(VisiTimerEvent);
             VisiTimer.Start();
-            string bg = RegeditRW.RegReadString("Background");
-            double bgAlpha = RegeditRW.RegRead("BGAlpha");
-            double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
-            double mainWindowHeight = RegeditRW.RegRead("MainWindowHeight");
-            double mainWindowWidth = RegeditRW.RegRead("MainWindowWidth");
-            double gameVersion = RegeditRW.RegRead("GameVersion");
-            //初始化
-            InitializeComponent();
             //设置光标资源字典路径
             cursorDictionary.Source = new Uri("Dictionary/CursorDictionary.xaml", UriKind.Relative);
             //显示窗口
@@ -91,6 +99,11 @@ namespace 饥荒百科全书CSharp
             RightPanelVisibility("Welcome");
             //版本初始化
             UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            //窗口置顶
+            if (winTopmost == 1)
+            {
+                Se_button_Topmost_Click(null, null);
+            }
             //设置背景
             if (bg == "")
             {
@@ -127,6 +140,14 @@ namespace 饥荒百科全书CSharp
             Se_Panel_Alpha.Value = bgPanelAlpha - 1;
             Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
             RightGrid.Background.Opacity = (bgPanelAlpha - 1) / 100;
+            //设置窗口透明度
+            if (windowAlpha == 0)
+            {
+                windowAlpha = 101;
+            }
+            Se_Window_Alpha.Value = windowAlpha - 1;
+            Se_Window_Alpha_Text.Text = "窗口不透明度：" + (int)Se_Window_Alpha.Value + "%";
+            Opacity = (windowAlpha - 1) / 100;
             //设置高度和宽度
             if (mainWindowHeight == 0)
             {
@@ -146,7 +167,7 @@ namespace 饥荒百科全书CSharp
 
         #region "拖动窗口"
         private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
+        {   
             Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
             DragMove();
         }
@@ -245,15 +266,21 @@ namespace 饥荒百科全书CSharp
             MWVisivility = false;
         }
         //窗口置顶
-        private void Se_checkBox_Topmost_Click(object sender, RoutedEventArgs e)
+        private void Se_button_Topmost_Click(Object sender, RoutedEventArgs e)
         {
-            if (Se_checkBox_Topmost.IsChecked == true)
+            if (Topmost == false)
             {
-                mainWindow.Topmost = true;
+                Topmost = true;
+                Se_image_Topmost.Source = ResourceShortName.PictureShortName(ResourceShortName.ShortName("Setting_Top_T"));
+                Se_textblock_Topmost.Text = "永远置顶";
+                RegeditRW.RegWrite("Topmost", 1);
             }
             else
             {
-                mainWindow.Topmost = false;
+                Topmost = false;
+                Se_image_Topmost.Source = ResourceShortName.PictureShortName(ResourceShortName.ShortName("Setting_Top_F"));
+                Se_textblock_Topmost.Text = "永不置顶";
+                RegeditRW.RegWrite("Topmost", 0);
             }
         }
         #endregion
@@ -274,89 +301,6 @@ namespace 饥荒百科全书CSharp
         {
             ClearBackground();
         }
-        //设置背景透明度
-        private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            UI_BackGroundBorder.Opacity = Se_BG_Alpha.Value / 100;
-            Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
-            RegeditRW.RegWrite("BGAlpha", Se_BG_Alpha.Value + 1);
-        }
-        //设置面板透明度
-        private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            RightGrid.Background.Opacity = Se_Panel_Alpha.Value / 100;
-            Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
-            RegeditRW.RegWrite("BGPanelAlpha", Se_Panel_Alpha.Value + 1);
-        }
-        #endregion
-
-        #region "最小化/最大化/关闭按钮"
-        //最小化按钮
-        private void UI_btn_minimized_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized;
-        }
-        Rect rcnormal;//窗口位置
-        //最大化按钮
-        private void UI_btn_maximized_Click(object sender, RoutedEventArgs e)
-        {
-            Visi.VisiCol(true, UI_btn_maximized);
-            Visi.VisiCol(false, UI_btn_normal);
-            rcnormal = new Rect(Left, Top, Width, Height);//保存下当前位置与大小
-            Left = 0;
-            Top = 0;
-            Rect rc = SystemParameters.WorkArea;
-            Width = rc.Width;
-            Height = rc.Height;
-            //WindowState = WindowState.Maximized;
-        }
-        //还原按钮
-        private void UI_btn_normal_Click(object sender, RoutedEventArgs e)
-        {
-            Visi.VisiCol(false, UI_btn_maximized);
-            Visi.VisiCol(true, UI_btn_normal);
-            Left = rcnormal.Left;
-            Top = rcnormal.Top;
-            Width = rcnormal.Width;
-            Height = rcnormal.Height;
-            //WindowState = WindowState.Normal;
-        }
-        //关闭按钮
-        private void UI_btn_close_Click(object sender, RoutedEventArgs e)
-        {
-
-            Environment.Exit(0);
-        }
-        #endregion
-        #endregion
-
-        #region "主页面链接"
-        //官网
-        private void W_button_official_website_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("http://www.jihuangbaike.com");
-        }
-        //Mod
-        private void W_button_Mods_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("http://steamcommunity.com/sharedfiles/filedetails/?id=635215011");
-        }
-        //DS新闻
-        private void W_button_DSNews_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("http://store.steampowered.com/news/?appids=219740");
-        }
-        //DST新闻
-        private void W_button_DSTNewS_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("http://store.steampowered.com/news/?appids=322330");
-        }
-        //群二维码
-        private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3538303333323236382C2274696D655374616D70223A313437303132323238337D0A");
-        }
-        #endregion
 
         #region "设置/清除背景"
         //设置背景
@@ -404,6 +348,69 @@ namespace 饥荒百科全书CSharp
             Se_BG_Alpha.IsEnabled = false;
             RegeditRW.RegWrite("Background", "");
         }
+        #endregion
+
+        //设置背景透明度
+        private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            UI_BackGroundBorder.Opacity = Se_BG_Alpha.Value / 100;
+            Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
+            RegeditRW.RegWrite("BGAlpha", Se_BG_Alpha.Value + 1);
+        }
+        //设置面板透明度
+        private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            RightGrid.Background.Opacity = Se_Panel_Alpha.Value / 100;
+            Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
+            RegeditRW.RegWrite("BGPanelAlpha", Se_Panel_Alpha.Value + 1);
+        }
+        //设置窗口透明度
+        private void Se_Window_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Opacity = Se_Window_Alpha.Value / 100;
+            Se_Window_Alpha_Text.Text = "窗口不透明度：" + (int)Se_Window_Alpha.Value + "%";
+            RegeditRW.RegWrite("WindowAlpha", Se_Window_Alpha.Value + 1);
+        }
+        #endregion
+
+        #region "最小化/最大化/关闭按钮"
+        //最小化按钮
+        private void UI_btn_minimized_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+        Rect rcnormal;//窗口位置
+        //最大化按钮
+        private void UI_btn_maximized_Click(object sender, RoutedEventArgs e)
+        {
+            Visi.VisiCol(true, UI_btn_maximized);
+            Visi.VisiCol(false, UI_btn_normal);
+            rcnormal = new Rect(Left, Top, Width, Height);//保存下当前位置与大小
+            Left = 0;
+            Top = 0;
+            Rect rc = SystemParameters.WorkArea;
+            Width = rc.Width;
+            Height = rc.Height;
+            //WindowState = WindowState.Maximized;
+        }
+        //还原按钮
+        private void UI_btn_normal_Click(object sender, RoutedEventArgs e)
+        {
+            Visi.VisiCol(false, UI_btn_maximized);
+            Visi.VisiCol(true, UI_btn_normal);
+            Left = rcnormal.Left;
+            Top = rcnormal.Top;
+            Width = rcnormal.Width;
+            Height = rcnormal.Height;
+            //WindowState = WindowState.Normal;
+        }
+        //关闭按钮
+        private void UI_btn_close_Click(object sender, RoutedEventArgs e)
+        {
+
+            Environment.Exit(0);
+        }
+        #endregion
         #endregion
 
         #region "模拟SplitView按钮"
@@ -557,7 +564,35 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region "设置"
+        #region "主页面板"
+        //官网
+        private void W_button_official_website_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://www.jihuangbaike.com");
+        }
+        //Mod
+        private void W_button_Mods_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://steamcommunity.com/sharedfiles/filedetails/?id=635215011");
+        }
+        //DS新闻
+        private void W_button_DSNews_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://store.steampowered.com/news/?appids=219740");
+        }
+        //DST新闻
+        private void W_button_DSTNewS_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://store.steampowered.com/news/?appids=322330");
+        }
+        //群二维码
+        private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3538303333323236382C2274696D655374616D70223A313437303132323238337D0A");
+        }
+        #endregion
+
+        #region "设置面板"
         //老板键
         private void Se_BossKey_Key_KeyDown(Object sender, System.Windows.Input.KeyEventArgs e)
         {
@@ -636,6 +671,5 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        
     }
 }

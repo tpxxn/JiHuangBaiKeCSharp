@@ -35,6 +35,7 @@ namespace 饥荒百科全书CSharp
             MainWindow MainWindowShow = new MainWindow();
             MainWindowShow.InitializeComponent();
             MainWindowShow.Show();
+            MainWindowShow.Activate();
             Close();
         }
 

@@ -28,7 +28,6 @@ namespace 饥荒百科全书CSharp.Class
             {
                 Debug.WriteLine("App_Startup");
                 SplashScreen splashWindow = new SplashScreen();
-                //MainWindow = mainWindow;
                 splashWindow.InitializeComponent();
                 splashWindow.Show();
             }
