@@ -7,7 +7,7 @@ using System.Windows.Media.Imaging;
 
 namespace 饥荒百科全书CSharp.Class
 {
-    static class ResourceShortName
+    static class RSN
     {
         /// <summary>
         /// 资源文件短名

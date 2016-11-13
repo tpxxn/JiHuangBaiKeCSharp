@@ -91,7 +91,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
         static void OnImageChanged(object sender, DependencyPropertyChangedEventArgs args)
         {
             ButtonWithText source = (ButtonWithText)sender;
-            source.UCImage.Source = ResourceShortName.PictureShortName(ResourceShortName.ShortName((string)args.NewValue));
+            source.UCImage.Source = RSN.PictureShortName(RSN.ShortName((string)args.NewValue));
         }
         #endregion
 

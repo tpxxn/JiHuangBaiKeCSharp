@@ -1,4 +1,13 @@
-﻿using Microsoft.Win32;
+﻿//控件计数例子
+//int sum = 0;
+//foreach (Control vControl in WrapPanel_Right.Children)
+//{
+//    if (vControl is ButtonWithText)
+//    {
+//        sum += 1;
+//    }
+//}
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,15 +28,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
-//控件计数例子
-//int sum = 0;
-//foreach (Control vControl in WrapPanel_Right.Children)
-//{
-//    if (vControl is ButtonWithText)
-//    {
-//        sum += 1;
-//    }
-//}
+
 namespace 饥荒百科全书CSharp
 {
     public partial class MainWindow : Window
@@ -67,12 +68,29 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        //初始化
+        #region "窗口是否初始化属性"
+        public static bool mWInit = false;
+        public static bool MWInit
+        {
+            get
+            {
+                return mWInit;
+            }
+            set
+            {
+                mWInit = value;
+            }
+        }
+        #endregion
+
+        #region "窗口相关"
+        //MainWindow构造函数
         public MainWindow()
         {
             //读取注册表(必须在初始化之前读取)
             ////背景图片
             string bg = RegeditRW.RegReadString("Background");
+            double bgStretch = RegeditRW.RegRead("BackgroundStretch");
             ////透明度
             double bgAlpha = RegeditRW.RegRead("BGAlpha");
             double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
@@ -80,12 +98,15 @@ namespace 饥荒百科全书CSharp
             ////窗口大小
             double mainWindowHeight = RegeditRW.RegRead("MainWindowHeight");
             double mainWindowWidth = RegeditRW.RegRead("MainWindowWidth");
-            ////游戏版本
-            double gameVersion = RegeditRW.RegRead("GameVersion");
             //设置菜单
             double winTopmost = RegeditRW.RegRead("Topmost");
+            ////游戏版本
+            double gameVersion = RegeditRW.RegRead("GameVersion");
             //初始化
             InitializeComponent();
+            MWInit = true;
+            //版本初始化
+            UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             //窗口可视化计时器
             VisiTimer.Enabled = true;
             VisiTimer.Interval = 200;
@@ -97,8 +118,7 @@ namespace 饥荒百科全书CSharp
             MWVisivility = true;
             //右侧面板Visibility属性初始化
             RightPanelVisibility("Welcome");
-            //版本初始化
-            UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            
             //窗口置顶
             if (winTopmost == 1)
             {
@@ -124,6 +144,12 @@ namespace 饥荒百科全书CSharp
                     Visi.VisiCol(true, UI_BackGroundBorder);
                 }
             }
+            //设置背景拉伸方式
+            if (bgStretch == 0)
+            {
+                bgStretch = 2; 
+            }
+            Se_ComboBox_Background_Stretch.SelectedIndex = (int)bgStretch - 1;
             //设置背景透明度
             if (bgAlpha == 0)
             {
@@ -165,39 +191,7 @@ namespace 饥荒百科全书CSharp
             UI_search.MaxLength = 10;
         }
 
-        #region "拖动窗口"
-        private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {   
-            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
-            DragMove();
-        }
-        private void mainWindow_MouseLeftButtonUp(Object sender, MouseButtonEventArgs e)
-        {
-            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
-        }
-        #endregion
-
-        //窗口尺寸改变
-        private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            //最大化
-            if (WindowState == WindowState.Maximized)
-            {
-                WindowState = WindowState.Normal;
-                UI_btn_maximized_Click(null, null);
-            }
-            //设置版本号位置
-            UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
-            //左侧面板高度
-            LeftCanvas.Height = mainWindow.ActualHeight - 2;
-            LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
-            //Splitter高度
-            UI_Splitter.Height = ActualHeight - 52;
-            RegeditRW.RegWrite("MainWindowHeight", ActualHeight);
-            RegeditRW.RegWrite("MainWindowWidth", ActualWidth);
-        }
-
-        //窗口加载
+        //MainWindow窗口加载
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             new KeyboardHandler(this);
@@ -221,6 +215,38 @@ namespace 饥荒百科全书CSharp
             //test.ImageP = "F_honeycomb";
             //test.TextWidthP = true;
         }
+
+        //拖动窗口
+        private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {   
+            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
+            DragMove();
+        }
+        private void mainWindow_MouseLeftButtonUp(Object sender, MouseButtonEventArgs e)
+        {
+            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
+        }
+
+        //窗口尺寸改变
+        private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            //最大化
+            if (WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+                UI_btn_maximized_Click(null, null);
+            }
+            //设置版本号位置
+            UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
+            //左侧面板高度
+            LeftCanvas.Height = mainWindow.ActualHeight - 2;
+            LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
+            //Splitter高度
+            UI_Splitter.Height = ActualHeight - 52;
+            RegeditRW.RegWrite("MainWindowHeight", ActualHeight);
+            RegeditRW.RegWrite("MainWindowWidth", ActualWidth);
+        }
+        #endregion
 
         #region "右上角按钮"
         #region "搜索框清除按钮显示/隐藏"
@@ -248,7 +274,7 @@ namespace 饥荒百科全书CSharp
         //游戏版本选择
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
+                RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
         }
         #endregion
 
@@ -271,14 +297,14 @@ namespace 饥荒百科全书CSharp
             if (Topmost == false)
             {
                 Topmost = true;
-                Se_image_Topmost.Source = ResourceShortName.PictureShortName(ResourceShortName.ShortName("Setting_Top_T"));
+                Se_image_Topmost.Source = RSN.PictureShortName(RSN.ShortName("Setting_Top_T"));
                 Se_textblock_Topmost.Text = "永远置顶";
                 RegeditRW.RegWrite("Topmost", 1);
             }
             else
             {
                 Topmost = false;
-                Se_image_Topmost.Source = ResourceShortName.PictureShortName(ResourceShortName.ShortName("Setting_Top_F"));
+                Se_image_Topmost.Source = RSN.PictureShortName(RSN.ShortName("Setting_Top_F"));
                 Se_textblock_Topmost.Text = "永不置顶";
                 RegeditRW.RegWrite("Topmost", 0);
             }
@@ -291,19 +317,8 @@ namespace 饥荒百科全书CSharp
         {
             UI_pop_bg.IsOpen = true;
         }
-        //设置背景
-        private void Se_button_Background_Click(object sender, RoutedEventArgs e)
-        {
-            SetBackground();
-        }
-        //清除背景
-        private void Se_button_Background_Clear_Click(object sender, RoutedEventArgs e)
-        {
-            ClearBackground();
-        }
-
-        #region "设置/清除背景"
-        //设置背景
+        
+        //设置背景方法
         public void SetBackground()
         {
             var OFD = new Microsoft.Win32.OpenFileDialog();
@@ -336,11 +351,10 @@ namespace 饥荒百科全书CSharp
             }
             catch (Exception)
             {
-
                 System.Windows.MessageBox.Show("没有选择正确的图片");
             }
         }
-        //清除背景
+        //清除背景方法
         private void ClearBackground()
         {
             Visi.VisiCol(true, UI_BackGroundBorder);
@@ -348,8 +362,46 @@ namespace 饥荒百科全书CSharp
             Se_BG_Alpha.IsEnabled = false;
             RegeditRW.RegWrite("Background", "");
         }
-        #endregion
 
+        //设置背景
+        private void Se_button_Background_Click(object sender, RoutedEventArgs e)
+        {
+            SetBackground();
+        }
+        //清除背景
+        private void Se_button_Background_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearBackground();
+        }
+        //设置背景拉伸方式
+        private void Se_ComboBox_Background_Stretch_SelectionChanged(Object sender, SelectionChangedEventArgs e)
+        {
+            string bg = RegeditRW.RegReadString("Background");
+            if (MWInit == true)
+            {
+                if (bg == "")
+                {
+                    Se_BG_Alpha_Text.Foreground = Brushes.Silver;
+                    Se_BG_Alpha.IsEnabled = false;
+                }
+                else
+                {
+                    Se_BG_Alpha_Text.Foreground = Brushes.Black;
+                    try
+                    {
+                        var brush = new ImageBrush();
+                        brush.ImageSource = new BitmapImage(new Uri(bg));
+                        brush.Stretch = (Stretch)Se_ComboBox_Background_Stretch.SelectedIndex;
+                        UI_BackGroundBorder.Background = brush;
+                        RegeditRW.RegWrite("BackgroundStretch", Se_ComboBox_Background_Stretch.SelectedIndex + 1);
+                    }
+                    catch
+                    {
+                        Visi.VisiCol(true, UI_BackGroundBorder);
+                    }
+                }
+            }
+        }
         //设置背景透明度
         private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
