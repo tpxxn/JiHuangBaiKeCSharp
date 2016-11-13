@@ -18,7 +18,7 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>资源文件路径</returns>
         public static string ShortName(string RUrl, string RUrlSecond = "" ,string ExtensionName = "png")
         {
-            RUrl = "Resources/" + RUrlSecond + RUrl + "." +ExtensionName;
+            RUrl = "../Resources/" + RUrlSecond + RUrl + "." +ExtensionName;
             return RUrl;
         }
 

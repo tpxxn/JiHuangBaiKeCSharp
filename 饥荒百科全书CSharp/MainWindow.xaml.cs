@@ -83,7 +83,7 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region "窗口相关"
+        #region "MainWindow"
         //MainWindow构造函数
         public MainWindow()
         {
@@ -210,13 +210,24 @@ namespace 饥荒百科全书CSharp
             }
             RegeditRW.RegWrite("OldVersionPath", "");
             #endregion
-            //测试
-            //test.TextP = "23242342343434";
-            //test.ImageP = "F_honeycomb";
-            //test.TextWidthP = true;
+            ButtonWithText test = new ButtonWithText();
+            test.UCImage.Source = RSN.PictureShortName(RSN.ShortName("F_banana_pop", "GameResources/Food/"));
+            test.UCTextBlock.Text = "香蕉冰淇淋";
+            test.UCButton.Click += test_click;
+            ButtonWithText test1 = new ButtonWithText();
+            test1.UCImage.Source = RSN.PictureShortName(RSN.ShortName("F_blue_cap", "GameResources/Food/"));
+            test1.UCTextBlock.Text = "蓝蘑菇";
+            test1.UCButton.Click += test_click;
+            WrapPanel_Right_Character.Children.Clear();
+            WrapPanel_Right_Character.Children.Add(test);
+            WrapPanel_Right_Character.Children.Add(test1);
         }
-
-        //拖动窗口
+        //测试
+        private void test_click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("测试！");
+        }
+        //MainWindow拖动窗口
         private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {   
             Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
@@ -227,7 +238,7 @@ namespace 饥荒百科全书CSharp
             Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
         }
 
-        //窗口尺寸改变
+        //MainWindow窗口尺寸改变
         private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             //最大化

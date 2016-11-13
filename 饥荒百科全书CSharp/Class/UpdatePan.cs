@@ -87,6 +87,7 @@ namespace 饥荒百科全书CSharp.Class
                 {
                     if (node.Name == "Soft")
                     {
+                        //MessageBox.Show(node.Attributes["Name"].Value);
                         foreach (XmlNode xml in node)
                         {
                             if (xml.Name == "Verson")
