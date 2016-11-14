@@ -2311,15 +2311,6 @@ namespace 饥荒百科全书CSharp.Properties {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
-        /// </summary>
-        internal static string DS00001 {
-            get {
-                return ResourceManager.GetString("DS00001", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Icon DST {
@@ -2330,11 +2321,52 @@ namespace 饥荒百科全书CSharp.Properties {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;DST&gt;
+        ///  &lt;Character&gt;
+        ///  &lt;/Character&gt;
+        ///  &lt;Food&gt;
+        ///  &lt;/Food&gt;
+        ///  &lt;Science&gt;
+        ///  &lt;/Science&gt;
+        ///  &lt;Cooking_Simulator&gt;
+        ///  &lt;/Cooking_Simulator&gt;
+        ///  &lt;Animal&gt;
+        ///  &lt;/Animal&gt;
+        ///  &lt;Natural&gt;
+        ///  &lt;/Natural&gt;
+        ///  &lt;Goods&gt;
+        ///  &lt;/Goods&gt;
+        ///&lt;/DST&gt; 的本地化字符串。
         /// </summary>
-        internal static string DST00001 {
+        internal static string DSTXml {
             get {
-                return ResourceManager.GetString("DST00001", resourceCulture);
+                return ResourceManager.GetString("DSTXml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;DS&gt;
+        ///  &lt;Character&gt;
+        ///  &lt;/Character&gt;
+        ///  &lt;Food&gt;
+        ///  &lt;/Food&gt;
+        ///  &lt;Science&gt;
+        ///  &lt;/Science&gt;
+        ///  &lt;Cooking_Simulator&gt;
+        ///  &lt;/Cooking_Simulator&gt;
+        ///  &lt;Animal&gt;
+        ///  &lt;/Animal&gt;
+        ///  &lt;Natural&gt;
+        ///  &lt;/Natural&gt;
+        ///  &lt;Goods&gt;
+        ///  &lt;/Goods&gt;
+        ///&lt;/DS&gt; 的本地化字符串。
+        /// </summary>
+        internal static string DSXML {
+            get {
+                return ResourceManager.GetString("DSXML", resourceCulture);
             }
         }
         
@@ -10039,11 +10071,27 @@ namespace 饥荒百科全书CSharp.Properties {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;RoG&gt;
+        ///  &lt;Character&gt;
+        ///  &lt;/Character&gt;
+        ///  &lt;Food&gt;
+        ///  &lt;/Food&gt;
+        ///  &lt;Science&gt;
+        ///  &lt;/Science&gt;
+        ///  &lt;Cooking_Simulator&gt;
+        ///  &lt;/Cooking_Simulator&gt;
+        ///  &lt;Animal&gt;
+        ///  &lt;/Animal&gt;
+        ///  &lt;Natural&gt;
+        ///  &lt;/Natural&gt;
+        ///  &lt;Goods&gt;
+        ///  &lt;/Goods&gt;
+        ///&lt;/RoG&gt; 的本地化字符串。
         /// </summary>
-        internal static string ROG00001 {
+        internal static string RoGXml {
             get {
-                return ResourceManager.GetString("ROG00001", resourceCulture);
+                return ResourceManager.GetString("RoGXml", resourceCulture);
             }
         }
         
@@ -12948,11 +12996,24 @@ namespace 饥荒百科全书CSharp.Properties {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;SW&gt;
+        ///  &lt;CharacterNode&gt;
+        ///    &lt;Character&gt;
+        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
+        ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
+        ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
+        ///      &lt;Descriptions_1&gt;*能长出一把华丽的胡子&lt;/Descriptions_1&gt;
+        ///      &lt;Health&gt;150&lt;/Health&gt;
+        ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
+        ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
+        ///      &lt;Damage&gt;1X&lt;/Damage&gt;
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
-        internal static string SW00001 {
+        internal static string SWXml {
             get {
-                return ResourceManager.GetString("SW00001", resourceCulture);
+                return ResourceManager.GetString("SWXml", resourceCulture);
             }
         }
         
@@ -13367,6 +13428,31 @@ namespace 饥荒百科全书CSharp.Properties {
         }
         
         /// <summary>
+        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Tencent&gt;
+        ///  &lt;Character&gt;
+        ///  &lt;/Character&gt;
+        ///  &lt;Food&gt;
+        ///  &lt;/Food&gt;
+        ///  &lt;Science&gt;
+        ///  &lt;/Science&gt;
+        ///  &lt;Cooking_Simulator&gt;
+        ///  &lt;/Cooking_Simulator&gt;
+        ///  &lt;Animal&gt;
+        ///  &lt;/Animal&gt;
+        ///  &lt;Natural&gt;
+        ///  &lt;/Natural&gt;
+        ///  &lt;Goods&gt;
+        ///  &lt;/Goods&gt;
+        ///&lt;/Tencent&gt; 的本地化字符串。
+        /// </summary>
+        internal static string TencentXml {
+            get {
+                return ResourceManager.GetString("TencentXml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Texture_ashy_turf {
@@ -13643,15 +13729,6 @@ namespace 饥荒百科全书CSharp.Properties {
             get {
                 object obj = ResourceManager.GetObject("Texture_wooden_flooring", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似  的本地化字符串。
-        /// </summary>
-        internal static string TGP00001 {
-            get {
-                return ResourceManager.GetString("TGP00001", resourceCulture);
             }
         }
         

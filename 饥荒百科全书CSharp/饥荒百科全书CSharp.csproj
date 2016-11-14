@@ -94,8 +94,8 @@
       <DependentUpon>DownloadWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen.xaml.cs">
@@ -4257,25 +4257,25 @@
     <Resource Include="Resources\Setting_Update.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="XML\DSXml.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="XML\TencentXml.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="XML\DSTXml.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="XML\RoGXml.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="XML\SWXml.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Setting_Top_F.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Setting_Top_T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\XML\DSTXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\XML\DSXML.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\XML\RoGXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\XML\SWXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\XML\TencentXml.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

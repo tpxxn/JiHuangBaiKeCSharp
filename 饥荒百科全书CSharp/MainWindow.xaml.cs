@@ -15,6 +15,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
@@ -26,6 +27,7 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Xml;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
 
@@ -187,8 +189,6 @@ namespace 饥荒百科全书CSharp
             Height = mainWindowHeight;
             //设置游戏版本
             UI_gameversion.SelectedIndex = (int)gameVersion;
-            //设置搜索框的最大字符数
-            UI_search.MaxLength = 10;
         }
 
         //MainWindow窗口加载
@@ -221,6 +221,69 @@ namespace 饥荒百科全书CSharp
             WrapPanel_Right_Character.Children.Clear();
             WrapPanel_Right_Character.Children.Add(test);
             WrapPanel_Right_Character.Children.Add(test1);
+
+            XmlDocument doc = new XmlDocument();
+            //Assembly _assembly = Assembly.GetExecutingAssembly();
+            //string resourceName = _namespace + ".a.xml";//根据资源名称从Assembly中获取此资源的
+            //Stream stream = _assembly.GetManifestResourceStream(resourceName);
+            //加载要读取的XML
+            doc.Load(Properties.Resources.SWXml);
+
+            //XmlNode list = doc.SelectSingleNode("SW");
+            //foreach (XmlNode node in list)
+            //{
+            //    if (node.Name == "soft")
+            //    {
+            //        //messagebox.show(node.attributes["name"].value);
+            //        foreach (XmlNode xml in node)
+            //        {
+            //            if (xml.Name == "verson")
+            //            {
+            //                newversion = xml.InnerText;
+            //            }
+            //            if (xml.Name == "download")
+            //            {
+            //                downloadurl = xml.InnerText;
+            //            }
+            //        }
+            //    }
+            //}
+
+            //Assembly asm = Assembly.GetExecutingAssembly();//读取嵌入式资源
+            //Stream sm = asm.GetManifestResourceStream("Properties.Resources.SWXml");
+            //XmlTextReader reader = new XmlTextReader(sm);
+            //string key = "";
+            //try
+            //{
+            //    while (reader.Read())
+            //    {
+            //        if (reader.NodeType == XmlNodeType.Element)
+            //        {
+            //            if (reader.Name == "Picture")
+            //            {
+            //                key = reader.ReadElementString().Trim();
+            //                System.Windows.Forms.MessageBox.Show(key);
+            //            }
+            //            if (reader.Name == "Name")
+            //            {
+            //                //_downKey = Convert.ToInt32(reader.ReadElementString().Trim());
+            //                key = reader.ReadElementString().Trim();
+            //                System.Windows.Forms.MessageBox.Show(key);
+            //            }
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    System.Windows.Forms.MessageBox.Show(ex.Message);
+            //}
+            //finally
+            //{
+            //    if (reader != null)
+            //    {
+            //        reader.Close();
+            //    }
+            //}
         }
         //测试
         private void test_click(object sender, RoutedEventArgs e)
