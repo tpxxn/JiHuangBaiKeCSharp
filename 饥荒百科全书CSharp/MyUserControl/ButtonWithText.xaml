@@ -15,14 +15,14 @@
     </UserControl.Resources>
     
     <Grid>
-        <Button x:Name="UCButton" Width="64" Background="{x:Null}" BorderBrush="{x:Null}" Height="80" Cursor="{DynamicResource Cursor_link}">
-            <Grid Height="80" Width="64" Margin="-2,-2,0,0" >
+        <Button x:Name="UCButton" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{DynamicResource Cursor_link}">
+            <Grid x:Name="ButtonGrid"  Height="80" Width="64" Margin="-2,-2,0,0" >
                 <Grid.RowDefinitions>
                     <RowDefinition x:Name="GridPictureHeight" Height="Auto"/>
                     <RowDefinition x:Name="GridTextHeight" Height="*"/>
                 </Grid.RowDefinitions>
                 <Image x:Name="UCImage" Height="48"/>
-                <TextBlock x:Name="UCTextBlock" Text="" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Grid.Row="1" VerticalAlignment="Center"/>
+                <TextBlock x:Name="UCTextBlock" TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Button>
 

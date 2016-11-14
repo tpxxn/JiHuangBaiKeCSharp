@@ -210,80 +210,83 @@ namespace 饥荒百科全书CSharp
             }
             RegeditRW.RegWrite("OldVersionPath", "");
             #endregion
-            ButtonWithText test = new ButtonWithText();
-            test.UCImage.Source = RSN.PictureShortName(RSN.ShortName("F_banana_pop", "GameResources/Food/"));
-            test.UCTextBlock.Text = "香蕉冰淇淋";
-            test.UCButton.Click += test_click;
-            ButtonWithText test1 = new ButtonWithText();
-            test1.UCImage.Source = RSN.PictureShortName(RSN.ShortName("F_blue_cap", "GameResources/Food/"));
-            test1.UCTextBlock.Text = "蓝蘑菇";
-            test1.UCButton.Click += test_click;
-            WrapPanel_Right_Character.Children.Clear();
-            WrapPanel_Right_Character.Children.Add(test);
-            WrapPanel_Right_Character.Children.Add(test1);
-
             XmlDocument doc = new XmlDocument();
-            //Assembly _assembly = Assembly.GetExecutingAssembly();
-            //string resourceName = _namespace + ".a.xml";//根据资源名称从Assembly中获取此资源的
-            //Stream stream = _assembly.GetManifestResourceStream(resourceName);
+            
             //加载要读取的XML
-            doc.Load(Properties.Resources.SWXml);
+            Assembly asm = Assembly.GetEntryAssembly();//读取嵌入式资源
+            Stream sm = asm.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.SWXml.xml");
+            doc.Load(sm);
 
-            //XmlNode list = doc.SelectSingleNode("SW");
-            //foreach (XmlNode node in list)
-            //{
-            //    if (node.Name == "soft")
-            //    {
-            //        //messagebox.show(node.attributes["name"].value);
-            //        foreach (XmlNode xml in node)
-            //        {
-            //            if (xml.Name == "verson")
-            //            {
-            //                newversion = xml.InnerText;
-            //            }
-            //            if (xml.Name == "download")
-            //            {
-            //                downloadurl = xml.InnerText;
-            //            }
-            //        }
-            //    }
-            //}
-
-            //Assembly asm = Assembly.GetExecutingAssembly();//读取嵌入式资源
-            //Stream sm = asm.GetManifestResourceStream("Properties.Resources.SWXml");
-            //XmlTextReader reader = new XmlTextReader(sm);
-            //string key = "";
-            //try
-            //{
-            //    while (reader.Read())
-            //    {
-            //        if (reader.NodeType == XmlNodeType.Element)
-            //        {
-            //            if (reader.Name == "Picture")
-            //            {
-            //                key = reader.ReadElementString().Trim();
-            //                System.Windows.Forms.MessageBox.Show(key);
-            //            }
-            //            if (reader.Name == "Name")
-            //            {
-            //                //_downKey = Convert.ToInt32(reader.ReadElementString().Trim());
-            //                key = reader.ReadElementString().Trim();
-            //                System.Windows.Forms.MessageBox.Show(key);
-            //            }
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    System.Windows.Forms.MessageBox.Show(ex.Message);
-            //}
-            //finally
-            //{
-            //    if (reader != null)
-            //    {
-            //        reader.Close();
-            //    }
-            //}
+            XmlNode list = doc.SelectSingleNode("SW");
+            string pic = "";
+            string name = "";
+            WrapPanel_Right_Character.Children.Clear();
+            foreach (XmlNode Node in list)
+            {
+                #region "人物"
+                if (Node.Name == "CharacterNode")
+                {
+                    //messagebox.show(node.attributes["name"].value);
+                    foreach (XmlNode childNode in Node)
+                    {
+                        if (childNode.Name == "Character")
+                        {
+                            foreach (XmlNode Character in childNode)
+                            {
+                                if (Character.Name == "Picture")
+                                {
+                                    pic = Character.InnerText;
+                                }
+                                if (Character.Name == "Name")
+                                {
+                                    name = Character.InnerText;
+                                }
+                            }
+                            ButtonWithText BWT = new ButtonWithText();
+                            BWT.Width = 140;
+                            BWT.Height = 205;
+                            BWT.ButtonGrid.Width = 140;
+                            BWT.ButtonGrid.Height = 190;
+                            BWT.GridPictureHeight.Height = new GridLength(160);
+                            BWT.UCImage.Height = 160;
+                            BWT.UCImage.Width = 140;
+                            BWT.UCImage.Source = RSN.PictureShortName(pic);
+                            BWT.UCTextBlock.FontSize = 20;
+                            BWT.UCTextBlock.Text = name;
+                            BWT.UCButton.Click += test_click;
+                            WrapPanel_Right_Character.Children.Add(BWT);
+                        }
+                    }
+                }
+                #endregion
+                #region "食物"
+                if (Node.Name == "FoodNode")
+                {
+                    foreach (XmlNode childNode in Node)
+                    {
+                        if (childNode.Name == "Food")
+                        {
+                            foreach (XmlNode Food in childNode)
+                            {
+                                if (Food.Name == "Picture")
+                                {
+                                    pic = Food.InnerText;
+                                }
+                                if (Food.Name == "Name")
+                                {
+                                    name = Food.InnerText;
+                                }
+                            }
+                            ButtonWithText BWT = new ButtonWithText();
+                            BWT.UCImage.Source = RSN.PictureShortName(pic);
+                            BWT.UCTextBlock.Text = name;
+                            BWT.UCButton.Click += test_click;
+                            WrapPanel_Right_Food.Children.Add(BWT);
+                        }
+                    }
+                }
+                #endregion
+            }
         }
         //测试
         private void test_click(object sender, RoutedEventArgs e)

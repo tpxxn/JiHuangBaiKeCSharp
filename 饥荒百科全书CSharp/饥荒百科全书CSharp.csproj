@@ -4263,19 +4263,19 @@
     <Resource Include="Resources\Setting_Top_T.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\XML\DSTXml.xml" />
+    <EmbeddedResource Include="Resources\XML\DSTXml.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\XML\DSXML.xml" />
+    <EmbeddedResource Include="Resources\XML\DSXML.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\XML\RoGXml.xml" />
+    <EmbeddedResource Include="Resources\XML\RoGXml.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\XML\SWXml.xml" />
+    <EmbeddedResource Include="Resources\XML\SWXml.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\XML\TencentXml.xml" />
+    <EmbeddedResource Include="Resources\XML\TencentXml.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -222,12 +222,22 @@
       <Picture>../Resources/GameResources/Character/C_woodie_1.png</Picture>
       <Name>海獭伍迪</Name>
       <EnName>Woodie</EnName>
-      <Health>100</Health><!--树木值-->
+      <LogMeter>100</LogMeter>
       <Damage>51</Damage>
       <Introduce>伍迪树木值下降到25就会变身。锋利的牙齿能快速啃咬树木、矿石等。啃咬生物拥有狼牙棒一般的威力。变身后树木值取代原来的状态，随时间减少，受到伤害也会减少。海獭伍迪对严寒免疫且能在黑暗中视物，树木值为0后的第二天或者树木值吃到100会在原地变回人类，生命饥饿精神都降为极低。</Introduce>
     </Character>
   </CharacterNode>
   <FoodNode>
+    <Food>
+      <Picture>../Resources/GameResources/Food/F_bacon_and_eggs.png</Picture>
+      <Name>培根煎蛋</Name>
+      <EnName>Bacon and Eggs</EnName>
+    </Food>
+    <Food>
+      <Picture>../Resources/GameResources/Food/F_meatballs.png</Picture>
+      <Name>肉丸</Name>
+      <EnName>Meatballs</EnName>
+    </Food>
   </FoodNode>
   <ScienceNode>
   </ScienceNode>
