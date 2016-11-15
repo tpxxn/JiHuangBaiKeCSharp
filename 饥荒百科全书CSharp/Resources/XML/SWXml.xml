@@ -10,7 +10,7 @@
       <Health>150</Health>
       <Hunger>150</Hunger>
       <Sanity>200</Sanity>
-      <Damage>1X</Damage>
+      <Damage>1</Damage>
       <Introduce>威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。</Introduce>
     </Character>
     <Character>
@@ -24,7 +24,7 @@
       <Health>150</Health>
       <Hunger>150</Hunger>
       <Sanity>120</Sanity>
-      <Damage>1X</Damage>
+      <Damage>1</Damage>
       <Introduce>薇洛 (纵火者) 完全免疫火焰伤害(单机版免疫，联机版受到一半伤害)，当靠近火焰时能略微补充一下精神。开局自带打火机(联机版与单机版不同，打火机有使用时限)，可以照明黑暗，也能用来纵火，非常有用的一个小道具；还附带一个伯尼(仅联机版)，精神低的时候放在地上可以吸引暗影怪的攻击仇恨。薇洛精神较低时可能会乱放火，这将非常容易引来森林大火，或者让自己辛苦种植的作物付之一炬。</Introduce>
     </Character>
     <Character>
@@ -37,7 +37,7 @@
       <Health>200</Health>
       <Hunger>200</Hunger>
       <Sanity>200</Sanity>
-      <Damage>1X</Damage>
+      <Damage>1</Damage>
       <Introduce>沃尔夫冈 (大力士) 拥有强大的攻击力和生命值，战斗时精神惩罚会更大。属性处于浮动值，主要来源于他的饱食度，毕竟人是铁饭是钢，一顿不吃饿得慌。把饱食度维持在220 ~ 300时能保持健硕的身材，但是饿的更快。饥饿在 300~221时，处于饱食状态，生命为300~200，伤害为2.0X~1.25X；饥饿在 220~101时，处于一般状态，生命为200，伤害为1.0X；饥饿在 100~0时，处于饥饿状态，生命为200~150，伤害为0.75X~0.5X。</Introduce>
     </Character>
     <Character>
@@ -93,6 +93,7 @@
       <Health>150</Health>
       <Hunger>150</Hunger>
       <Sanity>200</Sanity>
+      <LogMeter>100</LogMeter>
       <Damage>1</Damage>
       <Introduce>伍迪 (伐木者) 开局自带露西斧，无限耐久，可以快速伐木。这把斧头是有灵性的，可是会说话的哦。伍迪伐木多了会变身成一只海獭！伍迪身上的装备也会全部掉出来，变身前露西斧会给予提示。另外每当月圆之夜也会变身。</Introduce>
     </Character>
@@ -216,7 +217,7 @@
       <DamageDay>10</DamageDay>
       <DamageDusk>20</DamageDusk>
       <DamageNight>40</DamageNight>
-      <Introduce>当温蒂的鲜花头饰已经展开并且浮空，代表已经充能完毕。丢在地上并且杀死生物，阿比盖尔将会在头饰处重生并与温蒂协同作战。她的移动速度比其他幽灵要快很多，杀蝴蝶很好用。她不会伤害温蒂，直到她死亡为止都不会离开，死亡后头饰会掉落出来。她在白天攻击力只有10点，黄昏20点，晚上达到最强40点。</Introduce>
+      <Introduce>当温蒂的鲜花头饰已经展开并且浮空，代表已经充能完毕。丢在地上并且杀死生物，阿比盖尔将会在头饰处重生并与温蒂协同作战。她的移动速度比其他幽灵要快很多，杀蝴蝶很好用。她不会伤害温蒂，直到她死亡为止都不会离开，死亡后头饰会掉落出来。</Introduce>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_woodie_1.png</Picture>
@@ -232,6 +233,12 @@
       <Picture>../Resources/GameResources/Food/F_bacon_and_eggs.png</Picture>
       <Name>培根煎蛋</Name>
       <EnName>Bacon and Eggs</EnName>
+      <Health>20</Health>
+      <Hunger>75</Hunger>
+      <Sanity>5</Sanity>
+      <Perish>20</Perish>
+      <Cooktime>40</Cooktime>
+      <Priority>10</Priority>
     </Food>
     <Food>
       <Picture>../Resources/GameResources/Food/F_meatballs.png</Picture>

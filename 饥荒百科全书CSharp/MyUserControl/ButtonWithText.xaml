@@ -15,7 +15,7 @@
     </UserControl.Resources>
     
     <Grid>
-        <Button x:Name="UCButton" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{DynamicResource Cursor_link}">
+        <Button x:Name="UCButton" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{DynamicResource Cursor_link}" Focusable="False">
             <Grid x:Name="ButtonGrid"  Height="80" Width="64" Margin="-2,-2,0,0" >
                 <Grid.RowDefinitions>
                     <RowDefinition x:Name="GridPictureHeight" Height="Auto"/>

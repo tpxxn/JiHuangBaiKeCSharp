@@ -35,6 +35,17 @@ namespace 饥荒百科全书CSharp
 {
     public partial class MainWindow : Window
     {
+        //颜色常量
+        public const string PBCGreen = "5EB660";  //绿色
+        public const string PBCKhaki = "EDB660";  //卡其布色/土黄色
+        public const string PBCBlue = "337AB8";   //蓝色
+        public const string PBCCyan = "15E3EA";   //青色
+        public const string PBCOrange = "F6A60B"; //橙色
+        public const string PBCPink = "F085D3";   //粉色
+        public const string PBCYellow = "EEE815"; //黄色
+        public const string PBCRed = "D8524F";    //红色
+        public const string PBCPurple = "A285F0"; //紫色
+
         //引用光标资源字典
         ResourceDictionary cursorDictionary = new ResourceDictionary();
 
@@ -120,7 +131,7 @@ namespace 饥荒百科全书CSharp
             MWVisivility = true;
             //右侧面板Visibility属性初始化
             RightPanelVisibility("Welcome");
-            
+
             //窗口置顶
             if (winTopmost == 1)
             {
@@ -149,7 +160,7 @@ namespace 饥荒百科全书CSharp
             //设置背景拉伸方式
             if (bgStretch == 0)
             {
-                bgStretch = 2; 
+                bgStretch = 2;
             }
             Se_ComboBox_Background_Stretch.SelectedIndex = (int)bgStretch - 1;
             //设置背景透明度
@@ -211,15 +222,14 @@ namespace 饥荒百科全书CSharp
             RegeditRW.RegWrite("OldVersionPath", "");
             #endregion
             XmlDocument doc = new XmlDocument();
-            
+
             //加载要读取的XML
-            Assembly asm = Assembly.GetEntryAssembly();//读取嵌入式资源
-            Stream sm = asm.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.SWXml.xml");
-            doc.Load(sm);
+            Assembly assembly = Assembly.GetEntryAssembly();//读取嵌入式资源
+            Stream stream = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.SWXml.xml");
+            doc.Load(stream);
 
             XmlNode list = doc.SelectSingleNode("SW");
-            string pic = "";
-            string name = "";
+
             WrapPanel_Right_Character.Children.Clear();
             foreach (XmlNode Node in list)
             {
@@ -231,29 +241,105 @@ namespace 饥荒百科全书CSharp
                     {
                         if (childNode.Name == "Character")
                         {
+                            string Picture = "";
+                            string Name = "";
+                            string EnName = "";
+                            string Motto = "";
+                            string Descriptions_1 = "";
+                            string Descriptions_2 = "";
+                            string Descriptions_3 = "";
+                            string Health = "";
+                            string Hunger = "";
+                            string Sanity = "";
+                            string LogMeter = "";
+                            string Damage = "";
+                            string DamageDay = "";
+                            string DamageDusk = "";
+                            string DamageNight = "";
+                            string Introduce = "";
                             foreach (XmlNode Character in childNode)
                             {
                                 if (Character.Name == "Picture")
                                 {
-                                    pic = Character.InnerText;
+                                    Picture = Character.InnerText;
                                 }
                                 if (Character.Name == "Name")
                                 {
-                                    name = Character.InnerText;
+                                    Name = Character.InnerText;
+                                }
+                                if (Character.Name == "EnName")
+                                {
+                                    EnName = Character.InnerText;
+                                }
+                                if (Character.Name == "Motto")
+                                {
+                                    Motto = Character.InnerText;
+                                }
+                                if (Character.Name == "Descriptions_1")
+                                {
+                                    Descriptions_1 = Character.InnerText;
+                                }
+                                if (Character.Name == "Descriptions_2")
+                                {
+                                    Descriptions_2 = Character.InnerText;
+                                }
+                                if (Character.Name == "Descriptions_3")
+                                {
+                                    Descriptions_3 = Character.InnerText;
+                                }
+                                if (Character.Name == "Health")
+                                {
+                                    Health = Character.InnerText;
+                                }
+                                if (Character.Name == "Hunger")
+                                {
+                                    Hunger = Character.InnerText;
+                                }
+                                if (Character.Name == "Sanity")
+                                {
+                                    Sanity = Character.InnerText;
+                                }
+                                if (Character.Name == "LogMeter")
+                                {
+                                    LogMeter = Character.InnerText;
+                                }
+                                if (Character.Name == "Damage")
+                                {
+                                    Damage = Character.InnerText;
+                                }
+                                if (Character.Name == "DamageDay")
+                                {
+                                    DamageDay = Character.InnerText;
+                                }
+                                if (Character.Name == "DamageDusk")
+                                {
+                                    DamageDusk = Character.InnerText;
+                                }
+                                if (Character.Name == "DamageNight")
+                                {
+                                    DamageNight = Character.InnerText;
+                                }
+                                if (Character.Name == "Introduce")
+                                {
+                                    Introduce = Character.InnerText;
                                 }
                             }
                             ButtonWithText BWT = new ButtonWithText();
-                            BWT.Width = 140;
                             BWT.Height = 205;
-                            BWT.ButtonGrid.Width = 140;
+                            BWT.Width = 140;
                             BWT.ButtonGrid.Height = 190;
+                            BWT.ButtonGrid.Width = 140;
                             BWT.GridPictureHeight.Height = new GridLength(160);
                             BWT.UCImage.Height = 160;
                             BWT.UCImage.Width = 140;
-                            BWT.UCImage.Source = RSN.PictureShortName(pic);
+                            BWT.UCImage.Source = RSN.PictureShortName(Picture);
                             BWT.UCTextBlock.FontSize = 20;
-                            BWT.UCTextBlock.Text = name;
-                            BWT.UCButton.Click += test_click;
+                            BWT.UCTextBlock.Text = Name;
+                            string[] BWTTag = { Picture, Name, EnName, Motto, Descriptions_1, Descriptions_2, Descriptions_3, Health, Hunger, Sanity, LogMeter, Damage, DamageDay, DamageDusk, DamageNight, Introduce };
+
+                            object obj = BWTTag;
+                            BWT.UCButton.Tag = obj;
+                            BWT.UCButton.Click += Character_Click;
                             WrapPanel_Right_Character.Children.Add(BWT);
                         }
                     }
@@ -266,21 +352,25 @@ namespace 饥荒百科全书CSharp
                     {
                         if (childNode.Name == "Food")
                         {
+                            string Picture = "";
+                            string Name = "";
+                            string EnName = "";
+                            string Introduce = "";
                             foreach (XmlNode Food in childNode)
                             {
                                 if (Food.Name == "Picture")
                                 {
-                                    pic = Food.InnerText;
+                                    Picture = Food.InnerText;
                                 }
                                 if (Food.Name == "Name")
                                 {
-                                    name = Food.InnerText;
+                                    Name = Food.InnerText;
                                 }
                             }
                             ButtonWithText BWT = new ButtonWithText();
-                            BWT.UCImage.Source = RSN.PictureShortName(pic);
-                            BWT.UCTextBlock.Text = name;
-                            BWT.UCButton.Click += test_click;
+                            BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                            BWT.UCTextBlock.Text = Name;
+                            //BWT.UCButton.Click += test_click;
                             WrapPanel_Right_Food.Children.Add(BWT);
                         }
                     }
@@ -288,18 +378,310 @@ namespace 饥荒百科全书CSharp
                 #endregion
             }
         }
-        //测试
-        private void test_click(object sender, RoutedEventArgs e)
+
+        //WrapPanel_Left_Character创建控件事件
+        private void Character_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("测试！");
+            System.Windows.Controls.Button button = (System.Windows.Controls.Button)sender;
+            string[] BWTTag = (string[])button.Tag;//获取参数
+            WrapPanel_Left_Character.Children.Clear();//清空WrapPanel_Left_Character
+            #region "图片"
+            Grid gPicture = new Grid();
+            gPicture.Height = 180;
+            Image iPicture = new Image();
+            iPicture.Height = 160;
+            iPicture.Width = 140;
+            iPicture.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            iPicture.Source = RSN.PictureShortName(BWTTag[0]);
+            Thickness tPicture = new Thickness();
+            tPicture.Top = 20;
+            iPicture.Margin = tPicture;
+            gPicture.Children.Add(iPicture);
+            WrapPanel_Left_Character.Children.Add(gPicture);
+            #endregion
+            #region "中文名"
+            Grid gName = new Grid();
+            gName.Height = 38.6;
+            TextBlock tbName = new TextBlock();
+            tbName.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            tbName.Text = BWTTag[1];
+            tbName.FontSize = 26.667;
+            Thickness TName = new Thickness();
+            TName.Top = 5;
+            tbName.Margin = TName;
+            gName.Children.Add(tbName);
+            WrapPanel_Left_Character.Children.Add(gName);
+            #endregion
+            #region "英文名"
+            Grid gEnName = new Grid();
+            gEnName.Height = 33.6;
+            TextBlock tbEnName = new TextBlock();
+            tbEnName.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            tbEnName.Text = BWTTag[2];
+            tbEnName.FontSize = 26.667;
+            Thickness TEnName = new Thickness();
+            TEnName.Top = -5;
+            tbEnName.Margin = TEnName;
+            gEnName.Children.Add(tbEnName);
+            WrapPanel_Left_Character.Children.Add(gEnName);
+            #endregion
+            #region "座右铭"
+            if (BWTTag[3] != "")
+            {
+                Grid gMotto = new Grid();
+                gMotto.Height = 25;
+                TextBlock tbMotto = new TextBlock();
+                tbMotto.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                tbMotto.Text = BWTTag[3];
+                tbMotto.FontSize = 16;
+                Thickness TMotto = new Thickness();
+                TMotto.Top = 5;
+                tbMotto.Margin = TMotto;
+                gMotto.Children.Add(tbMotto);
+                WrapPanel_Left_Character.Children.Add(gMotto);
+            }
+            #endregion
+            #region "描述_1"
+            if (BWTTag[4] != "")
+            {
+                Grid gDescriptions_1 = new Grid();
+                gDescriptions_1.Height = 27.6;
+                TextBlock tbDescriptions_1 = new TextBlock();
+                tbDescriptions_1.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                tbDescriptions_1.Text = BWTTag[4];
+                tbDescriptions_1.FontSize = 14;
+                Thickness TDescriptions_1 = new Thickness();
+                TDescriptions_1.Top = 10;
+                TDescriptions_1.Left = 25;
+                tbDescriptions_1.Margin = TDescriptions_1;
+                gDescriptions_1.Children.Add(tbDescriptions_1);
+                WrapPanel_Left_Character.Children.Add(gDescriptions_1);
+            }
+            #endregion
+            #region "描述_2"
+            if (BWTTag[5] != "")
+            {
+                Grid gDescriptions_2 = new Grid();
+                gDescriptions_2.Height = 17.6;
+                TextBlock tbDescriptions_2 = new TextBlock();
+                tbDescriptions_2.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                tbDescriptions_2.Text = BWTTag[5];
+                tbDescriptions_2.FontSize = 14;
+                Thickness TDescriptions_2 = new Thickness();
+                TDescriptions_2.Left = 25;
+                tbDescriptions_2.Margin = TDescriptions_2;
+                gDescriptions_2.Children.Add(tbDescriptions_2);
+                WrapPanel_Left_Character.Children.Add(gDescriptions_2);
+            }
+            #endregion
+            #region "描述_3"
+            if (BWTTag[6] != "")
+            {
+                Grid gDescriptions_3 = new Grid();
+                gDescriptions_3.Height = 17.6;
+                TextBlock tbDescriptions_3 = new TextBlock();
+                tbDescriptions_3.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                tbDescriptions_3.Text = BWTTag[6];
+                tbDescriptions_3.FontSize = 14;
+                Thickness TDescriptions_3 = new Thickness();
+                TDescriptions_3.Left = 25;
+                tbDescriptions_3.Margin = TDescriptions_3;
+                gDescriptions_3.Children.Add(tbDescriptions_3);
+                WrapPanel_Left_Character.Children.Add(gDescriptions_3);
+            }
+            #endregion
+            #region "生命"
+            if (BWTTag[7] != "")
+            {
+                Grid gHealth = new Grid();
+                gHealth.Height = 40;
+                PropertyBar pbHealth = new PropertyBar();
+                pbHealth.UCTextBlockName.Width = 57;
+                pbHealth.UCTextBlockName.Text = "生命";
+                pbHealth.UCProgressBar.Value = Convert.ToDouble(BWTTag[7]) / 3;
+                pbHealth.UCProgressBar.Foreground = BC.brushConverter(PBCGreen);
+                pbHealth.UCTextBlockValue.Width = 32;
+                pbHealth.UCTextBlockValue.Text = BWTTag[7];
+                Thickness THealth = new Thickness();
+                THealth.Top = 25;
+                pbHealth.Margin = THealth;
+                gHealth.Children.Add(pbHealth);
+                WrapPanel_Left_Character.Children.Add(gHealth);
+            }
+            #endregion
+            #region "饥饿"
+            if (BWTTag[8] != "")
+            {
+                Grid gHunger = new Grid();
+                gHunger.Height = 25;
+                PropertyBar pbHunger = new PropertyBar();
+                pbHunger.UCTextBlockName.Width = 57;
+                pbHunger.UCTextBlockName.Text = "饥饿";
+                pbHunger.UCProgressBar.Value = Convert.ToDouble(BWTTag[8]) / 3;
+                pbHunger.UCProgressBar.Foreground = BC.brushConverter(PBCOrange);
+                pbHunger.UCTextBlockValue.Width = 32;
+                pbHunger.UCTextBlockValue.Text = BWTTag[8];
+                Thickness THunger = new Thickness();
+                THunger.Top = 10;
+                pbHunger.Margin = THunger;
+                gHunger.Children.Add(pbHunger);
+                WrapPanel_Left_Character.Children.Add(gHunger);
+            }
+            #endregion
+            #region "精神"
+            if (BWTTag[9] != "")
+            {
+                Grid gSanity = new Grid();
+                gSanity.Height = 25;
+                PropertyBar pbSanity = new PropertyBar();
+                pbSanity.UCTextBlockName.Width = 57;
+                pbSanity.UCTextBlockName.Text = "精神";
+                pbSanity.UCProgressBar.Value = Convert.ToDouble(BWTTag[9]) / 2.5;
+                pbSanity.UCProgressBar.Foreground = BC.brushConverter(PBCRed);
+                pbSanity.UCTextBlockValue.Width = 32;
+                pbSanity.UCTextBlockValue.Text = BWTTag[9];
+                Thickness TSanity = new Thickness();
+                TSanity.Top = 10;
+                pbSanity.Margin = TSanity;
+                gSanity.Children.Add(pbSanity);
+                WrapPanel_Left_Character.Children.Add(gSanity);
+            }
+            #endregion
+            #region "树木值"
+            if (BWTTag[10] != "")
+            {
+                Grid gDamage = new Grid();
+                gDamage.Height = 25;
+                PropertyBar pbDamage = new PropertyBar();
+                pbDamage.UCTextBlockName.Width = 57;
+                pbDamage.UCTextBlockName.Text = "树木值";
+                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[10]);
+                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCPink);
+                pbDamage.UCTextBlockValue.Width = 32;
+                pbDamage.UCTextBlockValue.Text = BWTTag[10];
+                Thickness TDamage = new Thickness();
+                TDamage.Top = 10;
+                pbDamage.Margin = TDamage;
+                gDamage.Children.Add(pbDamage);
+                WrapPanel_Left_Character.Children.Add(gDamage);
+            }
+            #endregion
+            #region "伤害"
+            if (BWTTag[11] != "")
+            {
+                Grid gDamage = new Grid();
+                gDamage.Height = 25;
+                PropertyBar pbDamage = new PropertyBar();
+                pbDamage.UCTextBlockName.Width = 57;
+                pbDamage.UCTextBlockName.Text = "伤害";
+                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[11]) * 50;
+                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                pbDamage.UCTextBlockValue.Width = 32;
+                if (BWTTag[1] != "海獭伍迪")
+                {
+                    pbDamage.UCTextBlockValue.Text = BWTTag[11] + "X";
+                }
+                else
+                {
+                    pbDamage.UCTextBlockValue.Text = BWTTag[11];
+                }
+                Thickness TDamage = new Thickness();
+                TDamage.Top = 10;
+                pbDamage.Margin = TDamage;
+                gDamage.Children.Add(pbDamage);
+                WrapPanel_Left_Character.Children.Add(gDamage);
+            }
+            #endregion
+            #region "伤害(白天)"
+            if (BWTTag[12] != "")
+            {
+                Grid gDamage = new Grid();
+                gDamage.Height = 25;
+                PropertyBar pbDamage = new PropertyBar();
+                pbDamage.UCTextBlockName.Width = 57;
+                pbDamage.UCTextBlockName.Text = "伤害(白天)";
+                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[12]) * 2.5;
+                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                pbDamage.UCTextBlockValue.Width = 32;
+                pbDamage.UCTextBlockValue.Text = BWTTag[12];
+                Thickness TDamage = new Thickness();
+                TDamage.Top = 10;
+                pbDamage.Margin = TDamage;
+                gDamage.Children.Add(pbDamage);
+                WrapPanel_Left_Character.Children.Add(gDamage);
+            }
+            #endregion
+            #region "伤害(黄昏)"
+            if (BWTTag[13] != "")
+            {
+                Grid gDamage = new Grid();
+                gDamage.Height = 25;
+                PropertyBar pbDamage = new PropertyBar();
+                pbDamage.UCTextBlockName.Width = 57;
+                pbDamage.UCTextBlockName.Text = "伤害(黄昏)";
+                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[13]) * 2.5;
+                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                pbDamage.UCTextBlockValue.Width = 32;
+                pbDamage.UCTextBlockValue.Text = BWTTag[13];
+                Thickness TDamage = new Thickness();
+                TDamage.Top = 10;
+                pbDamage.Margin = TDamage;
+                gDamage.Children.Add(pbDamage);
+                WrapPanel_Left_Character.Children.Add(gDamage);
+            }
+            #endregion
+            #region "伤害(夜晚)"
+            if (BWTTag[14] != "")
+            {
+                Grid gDamage = new Grid();
+                gDamage.Height = 25;
+                PropertyBar pbDamage = new PropertyBar();
+                pbDamage.UCTextBlockName.Width = 57;
+                pbDamage.UCTextBlockName.Text = "伤害(夜晚)";
+                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[14]) * 2.5;
+                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                pbDamage.UCTextBlockValue.Width = 32;
+                pbDamage.UCTextBlockValue.Text = BWTTag[14];
+                Thickness TDamage = new Thickness();
+                TDamage.Top = 10;
+                pbDamage.Margin = TDamage;
+                gDamage.Children.Add(pbDamage);
+                WrapPanel_Left_Character.Children.Add(gDamage);
+            }
+            #endregion
+            #region "介绍"
+            Grid gIntroduce = new Grid();
+            TextBlock tbIntroduce = new TextBlock();
+            tbIntroduce.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+            tbIntroduce.TextWrapping = TextWrapping.Wrap;
+            tbIntroduce.Text = BWTTag[15];
+            tbIntroduce.FontSize = 13;
+            Thickness TIntroduce = new Thickness();
+            TIntroduce.Top = 20;
+            TIntroduce.Left = 15;
+            tbIntroduce.Margin = TIntroduce;
+            gIntroduce.Children.Add(tbIntroduce);
+            WrapPanel_Left_Character.Children.Add(gIntroduce);
+            #endregion
+            WrapPanel_Left_Character_SizeChanged(null, null);//调整位置
         }
+
+        //WrapPanel_Left_Character内Grid.Width设置为WrapPanel_Left_Character.ActualWidth
+        private void WrapPanel_Left_Character_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            foreach (Grid grid in WrapPanel_Left_Character.Children)
+            {
+                grid.Width = (int)WrapPanel_Left_Character.ActualWidth;
+            }
+        }
+
         //MainWindow拖动窗口
         private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {   
+        {
             Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
             DragMove();
         }
-        private void mainWindow_MouseLeftButtonUp(Object sender, MouseButtonEventArgs e)
+        private void mainWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
         }
@@ -351,7 +733,7 @@ namespace 饥荒百科全书CSharp
         //游戏版本选择
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-                RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
+            RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
         }
         #endregion
 
@@ -394,7 +776,7 @@ namespace 饥荒百科全书CSharp
         {
             UI_pop_bg.IsOpen = true;
         }
-        
+
         //设置背景方法
         public void SetBackground()
         {
@@ -618,7 +1000,6 @@ namespace 饥荒百科全书CSharp
         {
             RightPanelVisibility("Setting");
         }
-        #endregion
 
         #region "右侧面板Visibility属性设置"
         //右侧面板初始化
@@ -663,34 +1044,50 @@ namespace 饥荒百科全书CSharp
                     Visi.VisiCol(true, RightGrid_Setting);
                     //显示右侧内容Grid容器/分割器
                     Visi.VisiCol(false, RightGrid);
-                    Visi.VisiCol(false, UI_Splitter); 
+                    Visi.VisiCol(false, UI_Splitter);
                     switch (obj)
                     {
                         case "Character":
                             Visi.VisiCol(false, ScrollViewer_Left_Character, ScrollViewer_Right_Character);
+                            SLWidth.MinWidth = 320;
+                            SLWidth.Width = new GridLength(320);
                             break;
                         case "Food":
                             Visi.VisiCol(false, ScrollViewer_Left_Food, ScrollViewer_Right_Food);
+                            SLWidth.MinWidth = 220;
+                            SLWidth.Width = new GridLength(220);
                             break;
                         case "Science":
                             Visi.VisiCol(false, ScrollViewer_Left_Science, ScrollViewer_Right_Science);
+                            SLWidth.MinWidth = 220;
+                            SLWidth.Width = new GridLength(220);
                             break;
                         case "Cooking_Simulator":
                             Visi.VisiCol(false, ScrollViewer_Left_Cooking_Simulator, ScrollViewer_Right_Cooking_Simulator);
+                            SLWidth.MinWidth = 220;
+                            SLWidth.Width = new GridLength(220);
                             break;
                         case "Animal":
                             Visi.VisiCol(false, ScrollViewer_Left_Animal, ScrollViewer_Right_Animal);
+                            SLWidth.MinWidth = 220;
+                            SLWidth.Width = new GridLength(220);
                             break;
                         case "Natural":
                             Visi.VisiCol(false, ScrollViewer_Left_Natural, ScrollViewer_Right_Natural);
+                            SLWidth.MinWidth = 220;
+                            SLWidth.Width = new GridLength(220);
                             break;
                         case "Goods":
                             Visi.VisiCol(false, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
+                            SLWidth.MinWidth = 220;
+                            SLWidth.Width = new GridLength(220);
                             break;
                     }
                     break;
             }
         }
+        #endregion
+
         #endregion
 
         #region "主页面板"
@@ -799,6 +1196,5 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
-
     }
 }

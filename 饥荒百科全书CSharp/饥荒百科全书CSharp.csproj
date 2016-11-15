@@ -86,12 +86,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\brushConverter.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\RegeditRW.cs" />
     <Compile Include="Class\Update.cs" />
     <Compile Include="Class\UpdatePan.cs" />
     <Compile Include="DownloadWindow.xaml.cs">
       <DependentUpon>DownloadWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\PropertyBar.xaml.cs">
+      <DependentUpon>PropertyBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -146,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\ButtonWithText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\PropertyBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -4272,7 +4280,9 @@
     <EmbeddedResource Include="Resources\XML\RoGXml.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\XML\SWXml.xml" />
+    <EmbeddedResource Include="Resources\XML\SWXml.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\XML\TencentXml.xml" />

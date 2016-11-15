@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RoG>
-  <Character>
-  </Character>
-  <Food>
-  </Food>
-  <Science>
-  </Science>
-  <Cooking_Simulator>
-  </Cooking_Simulator>
-  <Animal>
-  </Animal>
-  <Natural>
-  </Natural>
-  <Goods>
-  </Goods>
+  <CharacterNode>
+  </CharacterNode>
+  <FoodNode>
+  </FoodNode>
+  <ScienceNode>
+  </ScienceNode>
+  <Cooking_SimulatorNode>
+  </Cooking_SimulatorNode>
+  <AnimalNode>
+  </AnimalNode>
+  <NaturalNode>
+  </NaturalNode>
+  <GoodsNode>
+  </GoodsNode>
 </RoG>
