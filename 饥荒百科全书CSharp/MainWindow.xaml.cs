@@ -7,6 +7,22 @@
 //        sum += 1;
 //    }
 //}
+
+//#region "删除旧版本文件"
+//string oldVersionPath = RegeditRW.RegReadString("OldVersionPath");
+//if (oldVersionPath != System.Windows.Forms.Application.ExecutablePath && oldVersionPath != "")
+//{
+//    try
+//    {
+//        File.Delete(oldVersionPath);
+//    }
+//    catch (Exception ex)
+//    {
+//        System.Windows.Forms.MessageBox.Show("删除旧版本错误，请手动删除：" + ex);
+//    }
+//}
+//RegeditRW.RegWrite("OldVersionPath", "");
+//#endregion
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -205,32 +221,58 @@ namespace 饥荒百科全书CSharp
         //MainWindow窗口加载
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            new KeyboardHandler(this);
-            #region "删除旧版本文件"
-            string oldVersionPath = RegeditRW.RegReadString("OldVersionPath");
-            if (oldVersionPath != System.Windows.Forms.Application.ExecutablePath && oldVersionPath != "")
-            {
-                try
-                {
-                    File.Delete(oldVersionPath);
-                }
-                catch (Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show("删除旧版本错误，请手动删除：" + ex);
-                }
-            }
-            RegeditRW.RegWrite("OldVersionPath", "");
-            #endregion
+            new KeyboardHandler(this);//加载快捷键
+            LoadGameVersionXml();//加载游戏版本Xml文件
+        }
+        //加载游戏版本Xml文件
+        private void LoadGameVersionXml()
+        {
             XmlDocument doc = new XmlDocument();
-
-            //加载要读取的XML
-            Assembly assembly = Assembly.GetEntryAssembly();//读取嵌入式资源
-            Stream stream = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.SWXml.xml");
-            doc.Load(stream);
-
-            XmlNode list = doc.SelectSingleNode("SW");
-
-            WrapPanel_Right_Character.Children.Clear();
+            Assembly assembly = Assembly.GetEntryAssembly();
+            switch (UI_gameversion.SelectedIndex)
+            {
+                case 0:
+                    Stream streamDS = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.DSXml.xml");
+                    doc.Load(streamDS);
+                    XmlNode listDS = doc.SelectSingleNode("DS");
+                    HandleXml(listDS);
+                    break;
+                case 1:
+                    Stream streamRoG = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.RoGXml.xml");
+                    doc.Load(streamRoG);
+                    XmlNode listRoG = doc.SelectSingleNode("RoG");
+                    HandleXml(listRoG);
+                    break;
+                case 2:
+                    Stream streamSW = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.SWXml.xml");
+                    doc.Load(streamSW);
+                    XmlNode listSW = doc.SelectSingleNode("SW");
+                    HandleXml(listSW);
+                    break;
+                case 3:
+                    Stream streamDST = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.DSTXml.xml");
+                    doc.Load(streamDST);
+                    XmlNode listDST = doc.SelectSingleNode("DST");
+                    HandleXml(listDST);
+                    break;
+                case 4:
+                    Stream streamTencent = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.TencentXml.xml");
+                    doc.Load(streamTencent);
+                    XmlNode listTencent = doc.SelectSingleNode("Tencent");
+                    HandleXml(listTencent);
+                    break;
+            }
+        }
+        private void HandleXml(XmlNode list)
+        {
+            if (WrapPanel_Left_Character != null)
+            {
+                WrapPanel_Left_Character.Children.Clear();
+            }
+            if (WrapPanel_Right_Character != null)
+            {
+                WrapPanel_Right_Character.Children.Clear();
+            }
             foreach (XmlNode Node in list)
             {
                 #region "人物"
@@ -259,69 +301,56 @@ namespace 饥荒百科全书CSharp
                             string Introduce = "";
                             foreach (XmlNode Character in childNode)
                             {
-                                if (Character.Name == "Picture")
+                                switch (Character.Name)
                                 {
-                                    Picture = Character.InnerText;
-                                }
-                                if (Character.Name == "Name")
-                                {
-                                    Name = Character.InnerText;
-                                }
-                                if (Character.Name == "EnName")
-                                {
-                                    EnName = Character.InnerText;
-                                }
-                                if (Character.Name == "Motto")
-                                {
-                                    Motto = Character.InnerText;
-                                }
-                                if (Character.Name == "Descriptions_1")
-                                {
-                                    Descriptions_1 = Character.InnerText;
-                                }
-                                if (Character.Name == "Descriptions_2")
-                                {
-                                    Descriptions_2 = Character.InnerText;
-                                }
-                                if (Character.Name == "Descriptions_3")
-                                {
-                                    Descriptions_3 = Character.InnerText;
-                                }
-                                if (Character.Name == "Health")
-                                {
-                                    Health = Character.InnerText;
-                                }
-                                if (Character.Name == "Hunger")
-                                {
-                                    Hunger = Character.InnerText;
-                                }
-                                if (Character.Name == "Sanity")
-                                {
-                                    Sanity = Character.InnerText;
-                                }
-                                if (Character.Name == "LogMeter")
-                                {
-                                    LogMeter = Character.InnerText;
-                                }
-                                if (Character.Name == "Damage")
-                                {
-                                    Damage = Character.InnerText;
-                                }
-                                if (Character.Name == "DamageDay")
-                                {
-                                    DamageDay = Character.InnerText;
-                                }
-                                if (Character.Name == "DamageDusk")
-                                {
-                                    DamageDusk = Character.InnerText;
-                                }
-                                if (Character.Name == "DamageNight")
-                                {
-                                    DamageNight = Character.InnerText;
-                                }
-                                if (Character.Name == "Introduce")
-                                {
-                                    Introduce = Character.InnerText;
+                                    case "Picture":
+                                        Picture = Character.InnerText;
+                                        break;
+                                    case "Name":
+                                        Name = Character.InnerText;
+                                        break;
+                                    case "EnName":
+                                        EnName = Character.InnerText;
+                                        break;
+                                    case "Motto":
+                                        Motto = Character.InnerText;
+                                        break;
+                                    case "Descriptions_1":
+                                        Descriptions_1 = Character.InnerText;
+                                        break;
+                                    case "Descriptions_2":
+                                        Descriptions_2 = Character.InnerText;
+                                        break;
+                                    case "Descriptions_3":
+                                        Descriptions_3 = Character.InnerText;
+                                        break;
+                                    case "Health":
+                                        Health = Character.InnerText;
+                                        break;
+                                    case "Hunger":
+                                        Hunger = Character.InnerText;
+                                        break;
+                                    case "Sanity":
+                                        Sanity = Character.InnerText;
+                                        break;
+                                    case "LogMeter":
+                                        LogMeter = Character.InnerText;
+                                        break;
+                                    case "Damage":
+                                        Damage = Character.InnerText;
+                                        break;
+                                    case "DamageDay":
+                                        DamageDay = Character.InnerText;
+                                        break;
+                                    case "DamageDusk":
+                                        DamageDusk = Character.InnerText;
+                                        break;
+                                    case "DamageNight":
+                                        DamageNight = Character.InnerText;
+                                        break;
+                                    case "Introduce":
+                                        Introduce = Character.InnerText;
+                                        break;
                                 }
                             }
                             ButtonWithText BWT = new ButtonWithText();
@@ -336,8 +365,11 @@ namespace 饥荒百科全书CSharp
                             BWT.UCTextBlock.FontSize = 20;
                             BWT.UCTextBlock.Text = Name;
                             string[] BWTTag = { Picture, Name, EnName, Motto, Descriptions_1, Descriptions_2, Descriptions_3, Health, Hunger, Sanity, LogMeter, Damage, DamageDay, DamageDusk, DamageNight, Introduce };
-
                             object obj = BWTTag;
+                            if (Name == "威尔逊")
+                            {
+                                Character_Click_Handle(BWTTag);
+                            }
                             BWT.UCButton.Tag = obj;
                             BWT.UCButton.Click += Character_Click;
                             WrapPanel_Right_Character.Children.Add(BWT);
@@ -378,12 +410,16 @@ namespace 饥荒百科全书CSharp
                 #endregion
             }
         }
-
-        //WrapPanel_Left_Character创建控件事件
+        //Character面板Click事件
         private void Character_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.Button button = (System.Windows.Controls.Button)sender;
             string[] BWTTag = (string[])button.Tag;//获取参数
+            Character_Click_Handle(BWTTag);
+        }
+        //WrapPanel_Left_Character控件创建事件
+        private void Character_Click_Handle(string[] BWTTag)
+        {
             WrapPanel_Left_Character.Children.Clear();//清空WrapPanel_Left_Character
             #region "图片"
             Grid gPicture = new Grid();
@@ -665,7 +701,6 @@ namespace 饥荒百科全书CSharp
             #endregion
             WrapPanel_Left_Character_SizeChanged(null, null);//调整位置
         }
-
         //WrapPanel_Left_Character内Grid.Width设置为WrapPanel_Left_Character.ActualWidth
         private void WrapPanel_Left_Character_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -734,6 +769,7 @@ namespace 饥荒百科全书CSharp
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
+            LoadGameVersionXml();
         }
         #endregion
 
@@ -925,6 +961,7 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "模拟SplitView按钮"
+        #region "左侧菜单按钮"
         //左侧菜单状态，0为关闭，1为打开
         public static byte LeftMenuState = 0;
         //左侧菜单开关
@@ -961,12 +998,10 @@ namespace 饥荒百科全书CSharp
         {
             RightPanelVisibility("Welcome");
         }
-
         private void Sidebar_Character_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Character");
         }
-
         private void Sidebar_Food_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Food");
@@ -975,31 +1010,27 @@ namespace 饥荒百科全书CSharp
         {
             RightPanelVisibility("Science");
         }
-
         private void Sidebar_Cooking_Simulator_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Cooking_Simulator");
         }
-
         private void Sidebar_Animal_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Animal");
         }
-
         private void Sidebar_Natural_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Natural");
         }
-
         private void Sidebar_Goods_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Goods");
         }
-
         private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Setting");
         }
+        #endregion
 
         #region "右侧面板Visibility属性设置"
         //右侧面板初始化

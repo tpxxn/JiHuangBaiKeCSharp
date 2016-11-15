@@ -26,6 +26,7 @@
                 <ResourceDictionary Source="Dictionary/CursorDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/ComboBoxDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/CheckBoxDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/GridSplitter.xaml" />
                 <ResourceDictionary Source="Dictionary/ScrollViewerDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/SliderDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
@@ -172,7 +173,7 @@
                     <ColumnDefinition x:Name="SLWidth" Width="320" MinWidth="320" MaxWidth="400"/>
                     <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <GridSplitter x:Name="UI_Splitter" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF1A348F" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" />
+                <GridSplitter x:Name="UI_Splitter" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" Style="{DynamicResource GridSplitterStyle}" />
                 <ScrollViewer x:Name="ScrollViewer_Left_Character" Template="{DynamicResource MyScrollViewer}" Focusable="False">
                     <WrapPanel x:Name="WrapPanel_Left_Character" Focusable="False" SizeChanged="WrapPanel_Left_Character_SizeChanged"/>
                 </ScrollViewer>

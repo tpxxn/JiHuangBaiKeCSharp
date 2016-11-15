@@ -12,6 +12,7 @@
       <Sanity>200</Sanity>
       <Damage>1</Damage>
       <Introduce>威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。</Introduce>
+      <Console>wilson</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_willow.png</Picture>
@@ -26,6 +27,7 @@
       <Sanity>120</Sanity>
       <Damage>1</Damage>
       <Introduce>薇洛 (纵火者) 完全免疫火焰伤害(单机版免疫，联机版受到一半伤害)，当靠近火焰时能略微补充一下精神。开局自带打火机(联机版与单机版不同，打火机有使用时限)，可以照明黑暗，也能用来纵火，非常有用的一个小道具；还附带一个伯尼(仅联机版)，精神低的时候放在地上可以吸引暗影怪的攻击仇恨。薇洛精神较低时可能会乱放火，这将非常容易引来森林大火，或者让自己辛苦种植的作物付之一炬。</Introduce>
+      <Console>willow</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wolfgang.png</Picture>
@@ -39,6 +41,7 @@
       <Sanity>200</Sanity>
       <Damage>1</Damage>
       <Introduce>沃尔夫冈 (大力士) 拥有强大的攻击力和生命值，战斗时精神惩罚会更大。属性处于浮动值，主要来源于他的饱食度，毕竟人是铁饭是钢，一顿不吃饿得慌。把饱食度维持在220 ~ 300时能保持健硕的身材，但是饿的更快。饥饿在 300~221时，处于饱食状态，生命为300~200，伤害为2.0X~1.25X；饥饿在 220~101时，处于一般状态，生命为200，伤害为1.0X；饥饿在 100~0时，处于饥饿状态，生命为200~150，伤害为0.75X~0.5X。</Introduce>
+      <Console>wolfgang</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wendy.png</Picture>
@@ -53,6 +56,7 @@
       <Sanity>200</Sanity>
       <Damage>0.75</Damage>
       <Introduce>温蒂 (丧失亲人者) 长得非常可爱，当然这对孤岛生存毫无帮助，攻击比其他角色伤害要低，不过夜晚或者在怪物附近受到的精神惩罚只有75%。温蒂开局会携带一个鲜花头饰，使温蒂拥有唤醒她妹妹阿比盖尔灵魂的能力，死后掉落头饰需要经过一段时间充能即可再次用于召唤(将花放在地上然后杀死一只生物)。</Introduce>
+      <Console>wendy</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wx78.png</Picture>
@@ -67,6 +71,7 @@
       <Sanity>100</Sanity>
       <Damage>1</Damage>
       <Introduce>WX-78(无感情的机器人) 特有的机械胃能让他不受食物鲜度的惩罚，食用齿轮能让他恢复60点生命、75点饥饿与50点精神，并提高属性上限(15个到达顶值400/200/300)。下雨时请装备雨伞不然会持续受到伤害(雨水值>0时)，被闪电劈中减少精神但恢复生命，同时点燃周围的可燃物，用闪电充能后会让身体发光并增加少许移动速度。联机版初始三维150/150/150。</Introduce>
+      <Console>wx78</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wickerbottom.png</Picture>
@@ -81,6 +86,7 @@
       <Sanity>250</Sanity>
       <Damage>1</Damage>
       <Introduce>维克波顿(图书管理员) 丰富的学识能让你提高科技水平，她的精神值很高，但患有失眠的她无法在晚上入眠，她还有挑食症，讨厌吃不新鲜的食物。但是她是可以制作书籍并且用其施展魔法的强力角色。</Introduce>
+      <Console>wickerbottom</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_woodie.png</Picture>
@@ -96,6 +102,7 @@
       <LogMeter>100</LogMeter>
       <Damage>1</Damage>
       <Introduce>伍迪 (伐木者) 开局自带露西斧，无限耐久，可以快速伐木。这把斧头是有灵性的，可是会说话的哦。伍迪伐木多了会变身成一只海獭！伍迪身上的装备也会全部掉出来，变身前露西斧会给予提示。另外每当月圆之夜也会变身。</Introduce>
+      <Console>woodie</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wes.png</Picture>
@@ -110,6 +117,7 @@
       <Sanity>150</Sanity>
       <Damage>0.75</Damage>
       <Introduce>韦斯 (沉默者) 是一位默剧演员。他的属性和他的长相一样滑稽，真是低得不行。在游戏中生存比较困难，饥饿速度也比一般角色要稍微快一些。出生自带技能吹气球。每次吹气球都会减少5点精神，怪物击破气球后周围的气球也会一起爆炸，带有极低的伤害。</Introduce>
+      <Console>wes</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wathgrithr.png</Picture>
@@ -124,6 +132,7 @@
       <Sanity>120</Sanity>
       <Damage>1.25</Damage>
       <Introduce>威戈芙德 (表演艺术家) 是一位勇敢的女战士，出生自带战斗头盔、战斗长矛和4块大肉，以保证食物的充足。她的攻击具有神奇的力量，每次攻击能够从敌人身上吸取生命(单机版只有杀死有攻击性的生物才会回复生命)，并且受到的伤害减少25%。然而只能吃肉食的特性让其生存具有一定的挑战。联机版里她能够制作战斗头盔和战斗长矛给其他玩家使用，打触手和BOSS都是不可或缺的强力装备。</Introduce>
+      <Console>wathgrithr</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_webber.png</Picture>
@@ -138,6 +147,7 @@
       <Sanity>100</Sanity>
       <Damage>1</Damage>
       <Introduce>维伯 (未被消化者) 与其他角色不同，出生自带一个蜘蛛卵和两个怪兽肉。吃怪兽肉和怪兽千层饼不会有血量和精神惩罚。得小心别靠近猪人和兔人，它们会主动攻击你。相反的可以用怪兽肉收买蜘蛛作为你的帮手。他会长出毛绒绒的小胡子，具有一定的保温功能，还可以刮下少量蜘蛛网。</Introduce>
+      <Console>webber</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_waxwell.png</Picture>
@@ -152,6 +162,7 @@
       <Sanity>200</Sanity>
       <Damage>1</Damage>
       <Introduce>麦克斯韦 (暗影操控者) 开局自带暗影秘典和六个噩梦燃料。他的的生命甚至低至75！但是高达200的精神却可以帮助他制作各种傀儡，可以工作，也可以杀敌，然而会降低精神上限。他的精神值恢复得很快，使得玩家能更加自如地操纵暗影装备。如果傀儡死亡，之前消耗的精神上限也将返还。单机版开局自带暗影秘典、暗夜剑、夜魔盔甲、紫宝石和两个噩梦燃料，阅读暗影秘典召唤的是暗影麦克斯韦而不是分工的傀儡。</Introduce>
+      <Console>waxwell</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_walani.png</Picture>
@@ -166,6 +177,7 @@
       <Sanity>200</Sanity>
       <Damage>1</Damage>
       <Introduce>拉瓦尼 (不被扰动者) 开局自带冲浪板，这让她能够开心地在水上冲浪，一副高冷的表情也是深的某些玩家的喜爱。常年混迹海浪之上让她获得了独一无二的速干能力。当她遇上浪花时，会增加一点精神并且加速，她的湿度下降速度要快20%，并且精神的变化也慢10%，但是饥饿速度要快10%。带上你的冲浪板弄潮去吧！</Introduce>
+      <Console>walani</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_warly.png</Picture>
@@ -180,6 +192,7 @@
       <Sanity>200</Sanity>
       <Damage>1</Damage>
       <Introduce>沃利 (厨师) 自带便携式烹饪锅，这个锅可不止便携的特性，它还可以烹饪四种专属美食！其中新鲜水果薄饼更是大补之物。食用食材原料只能获得70%三围，晒干的80%，篝火上烤熟的90%，而用烹煮锅做出来的食物会额外增加33%的三围(负面效果降低33%)。天资聪慧的他还可以制作带有冰箱大部分功能的厨师袋，这大概是为了弥补他飞快下降的饥饿吧(比正常角色多33%)。</Introduce>
+      <Console>warly</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wilbur.png</Picture>
@@ -194,6 +207,7 @@
       <Sanity>150</Sanity>
       <Damage>1</Damage>
       <Introduce>威尔伯 (猴中之王) 灵活的手脚让他能够跑的更快，然而速度快也是需要代价的，那就是饿得慌！跑起来提高33%的速度但是饥饿速度也增加33%，这意味着同样的距离他的饥饿消耗和其他角色一样。据说他有特殊的投便技巧，一个便便扔过去砸得你脸都绿了(10点攻击力)！</Introduce>
+      <Console>wilbur</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_woodlegs.png</Picture>
@@ -208,6 +222,7 @@
       <Sanity>120</Sanity>
       <Damage>1</Damage>
       <Introduce>伍德莱格 (海盗船长) 自带幸运帽、望远镜和足矣制作他的宠物——海腿号的材料。作为亲近大海的海盗，在陆地上每分钟失去4.8的精神。海腿号的航行速度为6，不需要也不能再装推进装置，并且拥有无限的火炮(每炮造成50点伤害)。拥有幸运帽的他也会更频繁地发现宝藏，不想下船的话一炮轰过去！</Introduce>
+      <Console>woodlegs</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wendy_1.png</Picture>
@@ -218,6 +233,7 @@
       <DamageDusk>20</DamageDusk>
       <DamageNight>40</DamageNight>
       <Introduce>当温蒂的鲜花头饰已经展开并且浮空，代表已经充能完毕。丢在地上并且杀死生物，阿比盖尔将会在头饰处重生并与温蒂协同作战。她的移动速度比其他幽灵要快很多，杀蝴蝶很好用。她不会伤害温蒂，直到她死亡为止都不会离开，死亡后头饰会掉落出来。</Introduce>
+      <Console>abigail</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_woodie_1.png</Picture>
@@ -226,6 +242,7 @@
       <LogMeter>100</LogMeter>
       <Damage>51</Damage>
       <Introduce>伍迪树木值下降到25就会变身。锋利的牙齿能快速啃咬树木、矿石等。啃咬生物拥有狼牙棒一般的威力。变身后树木值取代原来的状态，随时间减少，受到伤害也会减少。海獭伍迪对严寒免疫且能在黑暗中视物，树木值为0后的第二天或者树木值吃到100会在原地变回人类，生命饥饿精神都降为极低。</Introduce>
+      <Console>N/A</Console>
     </Character>
   </CharacterNode>
   <FoodNode>
