@@ -1262,24 +1262,29 @@ namespace 饥荒百科全书CSharp
         //获取字体函数
         private List<string> rF()
         {
-            List<string> arrStrNames = new List<string>();
-            InstalledFontCollection MyFont = new InstalledFontCollection();
-            System.Drawing.FontFamily[] fontFamilys = MyFont.Families;
+            List<string> Font = new List<string>();
+            InstalledFontCollection IFCFont = new InstalledFontCollection();
+            System.Drawing.FontFamily[] fontFamilys = IFCFont.Families;
             if (fontFamilys == null || fontFamilys.Length < 1)
             {
                 return null;
             }
             foreach (System.Drawing.FontFamily item in fontFamilys)
             {
-                arrStrNames.Add(item.Name);
+                Font.Add(item.Name);
             }
-            return arrStrNames;
+            return Font;
         }
 
         private void Se_ComboBox_Font_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
-            mainWindow.FontFamily = new FontFamily(Se_ComboBox_Font.SelectedItem.ToString());
-            System.Windows.Forms.MessageBox.Show(Se_ComboBox_Font.SelectedItem.ToString());
+            List<string> Ls = new List<string>();
+            foreach(TextBlock TB in Se_ComboBox_Font.Items)
+            {
+                Ls.Add(TB.Text);
+            }
+            mainWindow.FontFamily = new FontFamily(Ls[Se_ComboBox_Font.SelectedIndex]);
+            System.Windows.Forms.MessageBox.Show(Ls[Se_ComboBox_Font.SelectedIndex]);
         }
     }
 }
