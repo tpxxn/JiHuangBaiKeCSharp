@@ -25,9 +25,11 @@
 //#endregion
 using Microsoft.Win32;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -217,12 +219,24 @@ namespace 饥荒百科全书CSharp
             //设置游戏版本
             UI_gameversion.SelectedIndex = (int)gameVersion;
         }
-
         //MainWindow窗口加载
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             new KeyboardHandler(this);//加载快捷键
             LoadGameVersionXml();//加载游戏版本Xml文件
+            //Se_ComboBox_Font.ItemsSource = rF();//加载字体
+            foreach (string str in rF())
+            {
+                TextBlock TB = new TextBlock();
+                TB.Text = str;
+                TB.FontFamily = new FontFamily(str);
+                Se_ComboBox_Font.Items.Add(TB);
+            }
+
+            //for (int index = 0; index < Se_ComboBox_Font.Items.Count; index++)
+            //{
+            //    Se_ComboBox_Font.Items[index].ToString();
+            //}
         }
         //加载游戏版本Xml文件
         private void LoadGameVersionXml()
@@ -372,7 +386,11 @@ namespace 饥荒百科全书CSharp
                             }
                             BWT.UCButton.Tag = obj;
                             BWT.UCButton.Click += Character_Click;
-                            WrapPanel_Right_Character.Children.Add(BWT);
+                            try
+                            {
+                                WrapPanel_Right_Character.Children.Add(BWT);
+                            }
+                            catch { }
                         }
                     }
                 }
@@ -420,286 +438,290 @@ namespace 饥荒百科全书CSharp
         //WrapPanel_Left_Character控件创建事件
         private void Character_Click_Handle(string[] BWTTag)
         {
-            WrapPanel_Left_Character.Children.Clear();//清空WrapPanel_Left_Character
-            #region "图片"
-            Grid gPicture = new Grid();
-            gPicture.Height = 180;
-            Image iPicture = new Image();
-            iPicture.Height = 160;
-            iPicture.Width = 140;
-            iPicture.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-            iPicture.Source = RSN.PictureShortName(BWTTag[0]);
-            Thickness tPicture = new Thickness();
-            tPicture.Top = 20;
-            iPicture.Margin = tPicture;
-            gPicture.Children.Add(iPicture);
-            WrapPanel_Left_Character.Children.Add(gPicture);
-            #endregion
-            #region "中文名"
-            Grid gName = new Grid();
-            gName.Height = 38.6;
-            TextBlock tbName = new TextBlock();
-            tbName.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-            tbName.Text = BWTTag[1];
-            tbName.FontSize = 26.667;
-            Thickness TName = new Thickness();
-            TName.Top = 5;
-            tbName.Margin = TName;
-            gName.Children.Add(tbName);
-            WrapPanel_Left_Character.Children.Add(gName);
-            #endregion
-            #region "英文名"
-            Grid gEnName = new Grid();
-            gEnName.Height = 33.6;
-            TextBlock tbEnName = new TextBlock();
-            tbEnName.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-            tbEnName.Text = BWTTag[2];
-            tbEnName.FontSize = 26.667;
-            Thickness TEnName = new Thickness();
-            TEnName.Top = -5;
-            tbEnName.Margin = TEnName;
-            gEnName.Children.Add(tbEnName);
-            WrapPanel_Left_Character.Children.Add(gEnName);
-            #endregion
-            #region "座右铭"
-            if (BWTTag[3] != "")
+            try
             {
-                Grid gMotto = new Grid();
-                gMotto.Height = 25;
-                TextBlock tbMotto = new TextBlock();
-                tbMotto.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-                tbMotto.Text = BWTTag[3];
-                tbMotto.FontSize = 16;
-                Thickness TMotto = new Thickness();
-                TMotto.Top = 5;
-                tbMotto.Margin = TMotto;
-                gMotto.Children.Add(tbMotto);
-                WrapPanel_Left_Character.Children.Add(gMotto);
-            }
-            #endregion
-            #region "描述_1"
-            if (BWTTag[4] != "")
-            {
-                Grid gDescriptions_1 = new Grid();
-                gDescriptions_1.Height = 27.6;
-                TextBlock tbDescriptions_1 = new TextBlock();
-                tbDescriptions_1.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                tbDescriptions_1.Text = BWTTag[4];
-                tbDescriptions_1.FontSize = 14;
-                Thickness TDescriptions_1 = new Thickness();
-                TDescriptions_1.Top = 10;
-                TDescriptions_1.Left = 25;
-                tbDescriptions_1.Margin = TDescriptions_1;
-                gDescriptions_1.Children.Add(tbDescriptions_1);
-                WrapPanel_Left_Character.Children.Add(gDescriptions_1);
-            }
-            #endregion
-            #region "描述_2"
-            if (BWTTag[5] != "")
-            {
-                Grid gDescriptions_2 = new Grid();
-                gDescriptions_2.Height = 17.6;
-                TextBlock tbDescriptions_2 = new TextBlock();
-                tbDescriptions_2.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                tbDescriptions_2.Text = BWTTag[5];
-                tbDescriptions_2.FontSize = 14;
-                Thickness TDescriptions_2 = new Thickness();
-                TDescriptions_2.Left = 25;
-                tbDescriptions_2.Margin = TDescriptions_2;
-                gDescriptions_2.Children.Add(tbDescriptions_2);
-                WrapPanel_Left_Character.Children.Add(gDescriptions_2);
-            }
-            #endregion
-            #region "描述_3"
-            if (BWTTag[6] != "")
-            {
-                Grid gDescriptions_3 = new Grid();
-                gDescriptions_3.Height = 17.6;
-                TextBlock tbDescriptions_3 = new TextBlock();
-                tbDescriptions_3.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                tbDescriptions_3.Text = BWTTag[6];
-                tbDescriptions_3.FontSize = 14;
-                Thickness TDescriptions_3 = new Thickness();
-                TDescriptions_3.Left = 25;
-                tbDescriptions_3.Margin = TDescriptions_3;
-                gDescriptions_3.Children.Add(tbDescriptions_3);
-                WrapPanel_Left_Character.Children.Add(gDescriptions_3);
-            }
-            #endregion
-            #region "生命"
-            if (BWTTag[7] != "")
-            {
-                Grid gHealth = new Grid();
-                gHealth.Height = 40;
-                PropertyBar pbHealth = new PropertyBar();
-                pbHealth.UCTextBlockName.Width = 57;
-                pbHealth.UCTextBlockName.Text = "生命";
-                pbHealth.UCProgressBar.Value = Convert.ToDouble(BWTTag[7]) / 3;
-                pbHealth.UCProgressBar.Foreground = BC.brushConverter(PBCGreen);
-                pbHealth.UCTextBlockValue.Width = 32;
-                pbHealth.UCTextBlockValue.Text = BWTTag[7];
-                Thickness THealth = new Thickness();
-                THealth.Top = 25;
-                pbHealth.Margin = THealth;
-                gHealth.Children.Add(pbHealth);
-                WrapPanel_Left_Character.Children.Add(gHealth);
-            }
-            #endregion
-            #region "饥饿"
-            if (BWTTag[8] != "")
-            {
-                Grid gHunger = new Grid();
-                gHunger.Height = 25;
-                PropertyBar pbHunger = new PropertyBar();
-                pbHunger.UCTextBlockName.Width = 57;
-                pbHunger.UCTextBlockName.Text = "饥饿";
-                pbHunger.UCProgressBar.Value = Convert.ToDouble(BWTTag[8]) / 3;
-                pbHunger.UCProgressBar.Foreground = BC.brushConverter(PBCOrange);
-                pbHunger.UCTextBlockValue.Width = 32;
-                pbHunger.UCTextBlockValue.Text = BWTTag[8];
-                Thickness THunger = new Thickness();
-                THunger.Top = 10;
-                pbHunger.Margin = THunger;
-                gHunger.Children.Add(pbHunger);
-                WrapPanel_Left_Character.Children.Add(gHunger);
-            }
-            #endregion
-            #region "精神"
-            if (BWTTag[9] != "")
-            {
-                Grid gSanity = new Grid();
-                gSanity.Height = 25;
-                PropertyBar pbSanity = new PropertyBar();
-                pbSanity.UCTextBlockName.Width = 57;
-                pbSanity.UCTextBlockName.Text = "精神";
-                pbSanity.UCProgressBar.Value = Convert.ToDouble(BWTTag[9]) / 2.5;
-                pbSanity.UCProgressBar.Foreground = BC.brushConverter(PBCRed);
-                pbSanity.UCTextBlockValue.Width = 32;
-                pbSanity.UCTextBlockValue.Text = BWTTag[9];
-                Thickness TSanity = new Thickness();
-                TSanity.Top = 10;
-                pbSanity.Margin = TSanity;
-                gSanity.Children.Add(pbSanity);
-                WrapPanel_Left_Character.Children.Add(gSanity);
-            }
-            #endregion
-            #region "树木值"
-            if (BWTTag[10] != "")
-            {
-                Grid gDamage = new Grid();
-                gDamage.Height = 25;
-                PropertyBar pbDamage = new PropertyBar();
-                pbDamage.UCTextBlockName.Width = 57;
-                pbDamage.UCTextBlockName.Text = "树木值";
-                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[10]);
-                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCPink);
-                pbDamage.UCTextBlockValue.Width = 32;
-                pbDamage.UCTextBlockValue.Text = BWTTag[10];
-                Thickness TDamage = new Thickness();
-                TDamage.Top = 10;
-                pbDamage.Margin = TDamage;
-                gDamage.Children.Add(pbDamage);
-                WrapPanel_Left_Character.Children.Add(gDamage);
-            }
-            #endregion
-            #region "伤害"
-            if (BWTTag[11] != "")
-            {
-                Grid gDamage = new Grid();
-                gDamage.Height = 25;
-                PropertyBar pbDamage = new PropertyBar();
-                pbDamage.UCTextBlockName.Width = 57;
-                pbDamage.UCTextBlockName.Text = "伤害";
-                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[11]) * 50;
-                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
-                pbDamage.UCTextBlockValue.Width = 32;
-                if (BWTTag[1] != "海獭伍迪")
+                WrapPanel_Left_Character.Children.Clear();//清空WrapPanel_Left_Character
+                #region "图片"
+                Grid gPicture = new Grid();
+                gPicture.Height = 180;
+                Image iPicture = new Image();
+                iPicture.Height = 160;
+                iPicture.Width = 140;
+                iPicture.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                iPicture.Source = RSN.PictureShortName(BWTTag[0]);
+                Thickness tPicture = new Thickness();
+                tPicture.Top = 20;
+                iPicture.Margin = tPicture;
+                gPicture.Children.Add(iPicture);
+                WrapPanel_Left_Character.Children.Add(gPicture);
+                #endregion
+                #region "中文名"
+                Grid gName = new Grid();
+                gName.Height = 38.6;
+                TextBlock tbName = new TextBlock();
+                tbName.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                tbName.Text = BWTTag[1];
+                tbName.FontSize = 26.667;
+                Thickness TName = new Thickness();
+                TName.Top = 5;
+                tbName.Margin = TName;
+                gName.Children.Add(tbName);
+                WrapPanel_Left_Character.Children.Add(gName);
+                #endregion
+                #region "英文名"
+                Grid gEnName = new Grid();
+                gEnName.Height = 33.6;
+                TextBlock tbEnName = new TextBlock();
+                tbEnName.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                tbEnName.Text = BWTTag[2];
+                tbEnName.FontSize = 26.667;
+                Thickness TEnName = new Thickness();
+                TEnName.Top = -5;
+                tbEnName.Margin = TEnName;
+                gEnName.Children.Add(tbEnName);
+                WrapPanel_Left_Character.Children.Add(gEnName);
+                #endregion
+                #region "座右铭"
+                if (BWTTag[3] != "")
                 {
-                    pbDamage.UCTextBlockValue.Text = BWTTag[11] + "X";
+                    Grid gMotto = new Grid();
+                    gMotto.Height = 25;
+                    TextBlock tbMotto = new TextBlock();
+                    tbMotto.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                    tbMotto.Text = BWTTag[3];
+                    tbMotto.FontSize = 16;
+                    Thickness TMotto = new Thickness();
+                    TMotto.Top = 5;
+                    tbMotto.Margin = TMotto;
+                    gMotto.Children.Add(tbMotto);
+                    WrapPanel_Left_Character.Children.Add(gMotto);
                 }
-                else
+                #endregion
+                #region "描述_1"
+                if (BWTTag[4] != "")
                 {
-                    pbDamage.UCTextBlockValue.Text = BWTTag[11];
+                    Grid gDescriptions_1 = new Grid();
+                    gDescriptions_1.Height = 27.6;
+                    TextBlock tbDescriptions_1 = new TextBlock();
+                    tbDescriptions_1.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                    tbDescriptions_1.Text = BWTTag[4];
+                    tbDescriptions_1.FontSize = 14;
+                    Thickness TDescriptions_1 = new Thickness();
+                    TDescriptions_1.Top = 10;
+                    TDescriptions_1.Left = 25;
+                    tbDescriptions_1.Margin = TDescriptions_1;
+                    gDescriptions_1.Children.Add(tbDescriptions_1);
+                    WrapPanel_Left_Character.Children.Add(gDescriptions_1);
                 }
-                Thickness TDamage = new Thickness();
-                TDamage.Top = 10;
-                pbDamage.Margin = TDamage;
-                gDamage.Children.Add(pbDamage);
-                WrapPanel_Left_Character.Children.Add(gDamage);
+                #endregion
+                #region "描述_2"
+                if (BWTTag[5] != "")
+                {
+                    Grid gDescriptions_2 = new Grid();
+                    gDescriptions_2.Height = 17.6;
+                    TextBlock tbDescriptions_2 = new TextBlock();
+                    tbDescriptions_2.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                    tbDescriptions_2.Text = BWTTag[5];
+                    tbDescriptions_2.FontSize = 14;
+                    Thickness TDescriptions_2 = new Thickness();
+                    TDescriptions_2.Left = 25;
+                    tbDescriptions_2.Margin = TDescriptions_2;
+                    gDescriptions_2.Children.Add(tbDescriptions_2);
+                    WrapPanel_Left_Character.Children.Add(gDescriptions_2);
+                }
+                #endregion
+                #region "描述_3"
+                if (BWTTag[6] != "")
+                {
+                    Grid gDescriptions_3 = new Grid();
+                    gDescriptions_3.Height = 17.6;
+                    TextBlock tbDescriptions_3 = new TextBlock();
+                    tbDescriptions_3.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                    tbDescriptions_3.Text = BWTTag[6];
+                    tbDescriptions_3.FontSize = 14;
+                    Thickness TDescriptions_3 = new Thickness();
+                    TDescriptions_3.Left = 25;
+                    tbDescriptions_3.Margin = TDescriptions_3;
+                    gDescriptions_3.Children.Add(tbDescriptions_3);
+                    WrapPanel_Left_Character.Children.Add(gDescriptions_3);
+                }
+                #endregion
+                #region "生命"
+                if (BWTTag[7] != "")
+                {
+                    Grid gHealth = new Grid();
+                    gHealth.Height = 40;
+                    PropertyBar pbHealth = new PropertyBar();
+                    pbHealth.UCTextBlockName.Width = 57;
+                    pbHealth.UCTextBlockName.Text = "生命";
+                    pbHealth.UCProgressBar.Value = Convert.ToDouble(BWTTag[7]) / 3;
+                    pbHealth.UCProgressBar.Foreground = BC.brushConverter(PBCGreen);
+                    pbHealth.UCTextBlockValue.Width = 32;
+                    pbHealth.UCTextBlockValue.Text = BWTTag[7];
+                    Thickness THealth = new Thickness();
+                    THealth.Top = 25;
+                    pbHealth.Margin = THealth;
+                    gHealth.Children.Add(pbHealth);
+                    WrapPanel_Left_Character.Children.Add(gHealth);
+                }
+                #endregion
+                #region "饥饿"
+                if (BWTTag[8] != "")
+                {
+                    Grid gHunger = new Grid();
+                    gHunger.Height = 25;
+                    PropertyBar pbHunger = new PropertyBar();
+                    pbHunger.UCTextBlockName.Width = 57;
+                    pbHunger.UCTextBlockName.Text = "饥饿";
+                    pbHunger.UCProgressBar.Value = Convert.ToDouble(BWTTag[8]) / 3;
+                    pbHunger.UCProgressBar.Foreground = BC.brushConverter(PBCOrange);
+                    pbHunger.UCTextBlockValue.Width = 32;
+                    pbHunger.UCTextBlockValue.Text = BWTTag[8];
+                    Thickness THunger = new Thickness();
+                    THunger.Top = 10;
+                    pbHunger.Margin = THunger;
+                    gHunger.Children.Add(pbHunger);
+                    WrapPanel_Left_Character.Children.Add(gHunger);
+                }
+                #endregion
+                #region "精神"
+                if (BWTTag[9] != "")
+                {
+                    Grid gSanity = new Grid();
+                    gSanity.Height = 25;
+                    PropertyBar pbSanity = new PropertyBar();
+                    pbSanity.UCTextBlockName.Width = 57;
+                    pbSanity.UCTextBlockName.Text = "精神";
+                    pbSanity.UCProgressBar.Value = Convert.ToDouble(BWTTag[9]) / 2.5;
+                    pbSanity.UCProgressBar.Foreground = BC.brushConverter(PBCRed);
+                    pbSanity.UCTextBlockValue.Width = 32;
+                    pbSanity.UCTextBlockValue.Text = BWTTag[9];
+                    Thickness TSanity = new Thickness();
+                    TSanity.Top = 10;
+                    pbSanity.Margin = TSanity;
+                    gSanity.Children.Add(pbSanity);
+                    WrapPanel_Left_Character.Children.Add(gSanity);
+                }
+                #endregion
+                #region "树木值"
+                if (BWTTag[10] != "")
+                {
+                    Grid gDamage = new Grid();
+                    gDamage.Height = 25;
+                    PropertyBar pbDamage = new PropertyBar();
+                    pbDamage.UCTextBlockName.Width = 57;
+                    pbDamage.UCTextBlockName.Text = "树木值";
+                    pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[10]);
+                    pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCPink);
+                    pbDamage.UCTextBlockValue.Width = 32;
+                    pbDamage.UCTextBlockValue.Text = BWTTag[10];
+                    Thickness TDamage = new Thickness();
+                    TDamage.Top = 10;
+                    pbDamage.Margin = TDamage;
+                    gDamage.Children.Add(pbDamage);
+                    WrapPanel_Left_Character.Children.Add(gDamage);
+                }
+                #endregion
+                #region "伤害"
+                if (BWTTag[11] != "")
+                {
+                    Grid gDamage = new Grid();
+                    gDamage.Height = 25;
+                    PropertyBar pbDamage = new PropertyBar();
+                    pbDamage.UCTextBlockName.Width = 57;
+                    pbDamage.UCTextBlockName.Text = "伤害";
+                    pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[11]) * 50;
+                    pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                    pbDamage.UCTextBlockValue.Width = 32;
+                    if (BWTTag[1] != "海獭伍迪")
+                    {
+                        pbDamage.UCTextBlockValue.Text = BWTTag[11] + "X";
+                    }
+                    else
+                    {
+                        pbDamage.UCTextBlockValue.Text = BWTTag[11];
+                    }
+                    Thickness TDamage = new Thickness();
+                    TDamage.Top = 10;
+                    pbDamage.Margin = TDamage;
+                    gDamage.Children.Add(pbDamage);
+                    WrapPanel_Left_Character.Children.Add(gDamage);
+                }
+                #endregion
+                #region "伤害(白天)"
+                if (BWTTag[12] != "")
+                {
+                    Grid gDamage = new Grid();
+                    gDamage.Height = 25;
+                    PropertyBar pbDamage = new PropertyBar();
+                    pbDamage.UCTextBlockName.Width = 57;
+                    pbDamage.UCTextBlockName.Text = "伤害(白天)";
+                    pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[12]) * 2.5;
+                    pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                    pbDamage.UCTextBlockValue.Width = 32;
+                    pbDamage.UCTextBlockValue.Text = BWTTag[12];
+                    Thickness TDamage = new Thickness();
+                    TDamage.Top = 10;
+                    pbDamage.Margin = TDamage;
+                    gDamage.Children.Add(pbDamage);
+                    WrapPanel_Left_Character.Children.Add(gDamage);
+                }
+                #endregion
+                #region "伤害(黄昏)"
+                if (BWTTag[13] != "")
+                {
+                    Grid gDamage = new Grid();
+                    gDamage.Height = 25;
+                    PropertyBar pbDamage = new PropertyBar();
+                    pbDamage.UCTextBlockName.Width = 57;
+                    pbDamage.UCTextBlockName.Text = "伤害(黄昏)";
+                    pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[13]) * 2.5;
+                    pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                    pbDamage.UCTextBlockValue.Width = 32;
+                    pbDamage.UCTextBlockValue.Text = BWTTag[13];
+                    Thickness TDamage = new Thickness();
+                    TDamage.Top = 10;
+                    pbDamage.Margin = TDamage;
+                    gDamage.Children.Add(pbDamage);
+                    WrapPanel_Left_Character.Children.Add(gDamage);
+                }
+                #endregion
+                #region "伤害(夜晚)"
+                if (BWTTag[14] != "")
+                {
+                    Grid gDamage = new Grid();
+                    gDamage.Height = 25;
+                    PropertyBar pbDamage = new PropertyBar();
+                    pbDamage.UCTextBlockName.Width = 57;
+                    pbDamage.UCTextBlockName.Text = "伤害(夜晚)";
+                    pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[14]) * 2.5;
+                    pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                    pbDamage.UCTextBlockValue.Width = 32;
+                    pbDamage.UCTextBlockValue.Text = BWTTag[14];
+                    Thickness TDamage = new Thickness();
+                    TDamage.Top = 10;
+                    pbDamage.Margin = TDamage;
+                    gDamage.Children.Add(pbDamage);
+                    WrapPanel_Left_Character.Children.Add(gDamage);
+                }
+                #endregion
+                #region "介绍"
+                Grid gIntroduce = new Grid();
+                TextBlock tbIntroduce = new TextBlock();
+                tbIntroduce.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                tbIntroduce.TextWrapping = TextWrapping.Wrap;
+                tbIntroduce.Text = BWTTag[15];
+                tbIntroduce.FontSize = 13;
+                Thickness TIntroduce = new Thickness();
+                TIntroduce.Top = 20;
+                TIntroduce.Left = 15;
+                tbIntroduce.Margin = TIntroduce;
+                gIntroduce.Children.Add(tbIntroduce);
+                WrapPanel_Left_Character.Children.Add(gIntroduce);
+                #endregion
+                WrapPanel_Left_Character_SizeChanged(null, null);//调整位置
             }
-            #endregion
-            #region "伤害(白天)"
-            if (BWTTag[12] != "")
-            {
-                Grid gDamage = new Grid();
-                gDamage.Height = 25;
-                PropertyBar pbDamage = new PropertyBar();
-                pbDamage.UCTextBlockName.Width = 57;
-                pbDamage.UCTextBlockName.Text = "伤害(白天)";
-                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[12]) * 2.5;
-                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
-                pbDamage.UCTextBlockValue.Width = 32;
-                pbDamage.UCTextBlockValue.Text = BWTTag[12];
-                Thickness TDamage = new Thickness();
-                TDamage.Top = 10;
-                pbDamage.Margin = TDamage;
-                gDamage.Children.Add(pbDamage);
-                WrapPanel_Left_Character.Children.Add(gDamage);
-            }
-            #endregion
-            #region "伤害(黄昏)"
-            if (BWTTag[13] != "")
-            {
-                Grid gDamage = new Grid();
-                gDamage.Height = 25;
-                PropertyBar pbDamage = new PropertyBar();
-                pbDamage.UCTextBlockName.Width = 57;
-                pbDamage.UCTextBlockName.Text = "伤害(黄昏)";
-                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[13]) * 2.5;
-                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
-                pbDamage.UCTextBlockValue.Width = 32;
-                pbDamage.UCTextBlockValue.Text = BWTTag[13];
-                Thickness TDamage = new Thickness();
-                TDamage.Top = 10;
-                pbDamage.Margin = TDamage;
-                gDamage.Children.Add(pbDamage);
-                WrapPanel_Left_Character.Children.Add(gDamage);
-            }
-            #endregion
-            #region "伤害(夜晚)"
-            if (BWTTag[14] != "")
-            {
-                Grid gDamage = new Grid();
-                gDamage.Height = 25;
-                PropertyBar pbDamage = new PropertyBar();
-                pbDamage.UCTextBlockName.Width = 57;
-                pbDamage.UCTextBlockName.Text = "伤害(夜晚)";
-                pbDamage.UCProgressBar.Value = Convert.ToDouble(BWTTag[14]) * 2.5;
-                pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
-                pbDamage.UCTextBlockValue.Width = 32;
-                pbDamage.UCTextBlockValue.Text = BWTTag[14];
-                Thickness TDamage = new Thickness();
-                TDamage.Top = 10;
-                pbDamage.Margin = TDamage;
-                gDamage.Children.Add(pbDamage);
-                WrapPanel_Left_Character.Children.Add(gDamage);
-            }
-            #endregion
-            #region "介绍"
-            Grid gIntroduce = new Grid();
-            TextBlock tbIntroduce = new TextBlock();
-            tbIntroduce.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-            tbIntroduce.TextWrapping = TextWrapping.Wrap;
-            tbIntroduce.Text = BWTTag[15];
-            tbIntroduce.FontSize = 13;
-            Thickness TIntroduce = new Thickness();
-            TIntroduce.Top = 20;
-            TIntroduce.Left = 15;
-            tbIntroduce.Margin = TIntroduce;
-            gIntroduce.Children.Add(tbIntroduce);
-            WrapPanel_Left_Character.Children.Add(gIntroduce);
-            #endregion
-            WrapPanel_Left_Character_SizeChanged(null, null);//调整位置
+            catch { }
         }
         //WrapPanel_Left_Character内Grid.Width设置为WrapPanel_Left_Character.ActualWidth
         private void WrapPanel_Left_Character_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -713,8 +735,17 @@ namespace 饥荒百科全书CSharp
         //MainWindow拖动窗口
         private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
-            DragMove();
+            Point position = e.GetPosition(UIGrid);
+
+            // 如果鼠标位置在标题栏内，允许拖动  
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                if (position.X >= 0 && position.X < UIGrid.ActualWidth && position.Y >= 0 && position.Y < UIGrid.ActualHeight)
+                {
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
+                    DragMove();
+                }
+            }
         }
         private void mainWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -1227,5 +1258,28 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
+
+        //获取字体函数
+        private List<string> rF()
+        {
+            List<string> arrStrNames = new List<string>();
+            InstalledFontCollection MyFont = new InstalledFontCollection();
+            System.Drawing.FontFamily[] fontFamilys = MyFont.Families;
+            if (fontFamilys == null || fontFamilys.Length < 1)
+            {
+                return null;
+            }
+            foreach (System.Drawing.FontFamily item in fontFamilys)
+            {
+                arrStrNames.Add(item.Name);
+            }
+            return arrStrNames;
+        }
+
+        private void Se_ComboBox_Font_SelectionChanged(Object sender, SelectionChangedEventArgs e)
+        {
+            mainWindow.FontFamily = new FontFamily(Se_ComboBox_Font.SelectedItem.ToString());
+            System.Windows.Forms.MessageBox.Show(Se_ComboBox_Font.SelectedItem.ToString());
+        }
     }
 }

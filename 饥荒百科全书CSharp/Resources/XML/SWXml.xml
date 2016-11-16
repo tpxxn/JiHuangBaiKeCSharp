@@ -26,7 +26,7 @@
       <Hunger>150</Hunger>
       <Sanity>120</Sanity>
       <Damage>1</Damage>
-      <Introduce>薇洛 (纵火者) 完全免疫火焰伤害(单机版免疫，联机版受到一半伤害)，当靠近火焰时能略微补充一下精神。开局自带打火机(联机版与单机版不同，打火机有使用时限)，可以照明黑暗，也能用来纵火，非常有用的一个小道具；还附带一个伯尼(仅联机版)，精神低的时候放在地上可以吸引暗影怪的攻击仇恨。薇洛精神较低时可能会乱放火，这将非常容易引来森林大火，或者让自己辛苦种植的作物付之一炬。</Introduce>
+      <Introduce>薇洛 (纵火者) 完全免疫火焰伤害，当靠近火焰时能略微补充一下精神。开局自带打火机，可以照明黑暗，也能用来纵火，非常有用的一个小道具。薇洛精神较低时可能会乱放火，这将非常容易引来森林大火，或者让自己辛苦种植的作物付之一炬。</Introduce>
       <Console>willow</Console>
     </Character>
     <Character>
@@ -70,7 +70,7 @@
       <Hunger>100</Hunger>
       <Sanity>100</Sanity>
       <Damage>1</Damage>
-      <Introduce>WX-78(无感情的机器人) 特有的机械胃能让他不受食物鲜度的惩罚，食用齿轮能让他恢复60点生命、75点饥饿与50点精神，并提高属性上限(15个到达顶值400/200/300)。下雨时请装备雨伞不然会持续受到伤害(雨水值>0时)，被闪电劈中减少精神但恢复生命，同时点燃周围的可燃物，用闪电充能后会让身体发光并增加少许移动速度。联机版初始三维150/150/150。</Introduce>
+      <Introduce>WX-78(无感情的机器人) 特有的机械胃能让他不受食物鲜度的惩罚，食用齿轮能让他恢复60点生命、75点饥饿与50点精神，并提高属性上限(15个到达顶值400/200/300)。下雨时请装备雨伞不然会持续受到伤害(雨水值>0时)，被闪电劈中减少精神但恢复生命，同时点燃周围的可燃物，用闪电充能后会让身体发光并增加少许移动速度。</Introduce>
       <Console>wx78</Console>
     </Character>
     <Character>
@@ -120,6 +120,21 @@
       <Console>wes</Console>
     </Character>
     <Character>
+      <Picture>../Resources/GameResources/Character/C_waxwell.png</Picture>
+      <Name>麦克斯韦</Name>
+      <EnName>Maxwell</EnName>
+      <Motto>自由才适合我。</Motto>
+      <Descriptions_1>*衣着整洁，但很脆弱</Descriptions_1>
+      <Descriptions_2>*可以把他的精神分成很多部分</Descriptions_2>
+      <Descriptions_3>*和黑暗很熟</Descriptions_3>
+      <Health>75</Health>
+      <Hunger>150</Hunger>
+      <Sanity>200</Sanity>
+      <Damage>1</Damage>
+      <Introduce>麦克斯韦 (暗影操控者) 开局自带暗影秘典、暗夜剑、夜魔盔甲、紫宝石和两个噩梦燃料。他的的生命甚至低至75！但是高达200的精神却可以帮助他制作暗影麦克斯韦，然而会降低精神上限。他的精神值恢复得很快，使得玩家能更加自如地操纵暗影装备。如果暗影麦克斯韦死亡，之前消耗的精神上限也将返还。</Introduce>
+      <Console>waxwell</Console>
+    </Character>
+    <Character>
       <Picture>../Resources/GameResources/Character/C_wathgrithr.png</Picture>
       <Name>威戈芙瑞德</Name>
       <EnName>Wigfrid</EnName>
@@ -131,7 +146,7 @@
       <Hunger>120</Hunger>
       <Sanity>120</Sanity>
       <Damage>1.25</Damage>
-      <Introduce>威戈芙德 (表演艺术家) 是一位勇敢的女战士，出生自带战斗头盔、战斗长矛和4块大肉，以保证食物的充足。她的攻击具有神奇的力量，每次攻击能够从敌人身上吸取生命(单机版只有杀死有攻击性的生物才会回复生命)，并且受到的伤害减少25%。然而只能吃肉食的特性让其生存具有一定的挑战。联机版里她能够制作战斗头盔和战斗长矛给其他玩家使用，打触手和BOSS都是不可或缺的强力装备。</Introduce>
+      <Introduce>威戈芙德 (表演艺术家) 是一位勇敢的女战士，出生自带战斗头盔、战斗长矛和4块大肉，以保证食物的充足。她的攻击具有神奇的力量，杀死有攻击性的生物会回复生命，并且受到的伤害减少25%。然而只能吃肉食的特性让其生存具有一定的挑战。</Introduce>
       <Console>wathgrithr</Console>
     </Character>
     <Character>
@@ -148,21 +163,6 @@
       <Damage>1</Damage>
       <Introduce>维伯 (未被消化者) 与其他角色不同，出生自带一个蜘蛛卵和两个怪兽肉。吃怪兽肉和怪兽千层饼不会有血量和精神惩罚。得小心别靠近猪人和兔人，它们会主动攻击你。相反的可以用怪兽肉收买蜘蛛作为你的帮手。他会长出毛绒绒的小胡子，具有一定的保温功能，还可以刮下少量蜘蛛网。</Introduce>
       <Console>webber</Console>
-    </Character>
-    <Character>
-      <Picture>../Resources/GameResources/Character/C_waxwell.png</Picture>
-      <Name>麦克斯韦</Name>
-      <EnName>Maxwell</EnName>
-      <Motto>自由才适合我。</Motto>
-      <Descriptions_1>*衣着整洁，但很脆弱</Descriptions_1>
-      <Descriptions_2>*可以把他的精神分成很多部分</Descriptions_2>
-      <Descriptions_3>*和黑暗很熟</Descriptions_3>
-      <Health>75</Health>
-      <Hunger>150</Hunger>
-      <Sanity>200</Sanity>
-      <Damage>1</Damage>
-      <Introduce>麦克斯韦 (暗影操控者) 开局自带暗影秘典和六个噩梦燃料。他的的生命甚至低至75！但是高达200的精神却可以帮助他制作各种傀儡，可以工作，也可以杀敌，然而会降低精神上限。他的精神值恢复得很快，使得玩家能更加自如地操纵暗影装备。如果傀儡死亡，之前消耗的精神上限也将返还。单机版开局自带暗影秘典、暗夜剑、夜魔盔甲、紫宝石和两个噩梦燃料，阅读暗影秘典召唤的是暗影麦克斯韦而不是分工的傀儡。</Introduce>
-      <Console>waxwell</Console>
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_walani.png</Picture>
