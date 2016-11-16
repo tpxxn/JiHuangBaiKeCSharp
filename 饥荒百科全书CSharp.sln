@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.25807.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "饥荒百科全书CSharp", "饥荒百科全书CSharp\饥荒百科全书CSharp.csproj", "{1F513118-3E69-4C5D-BE7F-2DCCAF211FCC}"
 EndProject

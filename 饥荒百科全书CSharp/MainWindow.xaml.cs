@@ -224,19 +224,15 @@ namespace 饥荒百科全书CSharp
         {
             new KeyboardHandler(this);//加载快捷键
             LoadGameVersionXml();//加载游戏版本Xml文件
-            //Se_ComboBox_Font.ItemsSource = rF();//加载字体
-            foreach (string str in rF())
+            foreach (string str in rF())//加载字体
             {
                 TextBlock TB = new TextBlock();
                 TB.Text = str;
                 TB.FontFamily = new FontFamily(str);
+
                 Se_ComboBox_Font.Items.Add(TB);
             }
-
-            //for (int index = 0; index < Se_ComboBox_Font.Items.Count; index++)
-            //{
-            //    Se_ComboBox_Font.Items[index].ToString();
-            //}
+                
         }
         //加载游戏版本Xml文件
         private void LoadGameVersionXml()
@@ -888,6 +884,22 @@ namespace 饥荒百科全书CSharp
             Se_BG_Alpha.IsEnabled = false;
             RegeditRW.RegWrite("Background", "");
         }
+        //获取字体函数
+        private List<string> rF()
+        {
+            List<string> Font = new List<string>();
+            InstalledFontCollection IFCFont = new InstalledFontCollection();
+            System.Drawing.FontFamily[] fontFamilys = IFCFont.Families;
+            if (fontFamilys == null || fontFamilys.Length < 1)
+            {
+                return null;
+            }
+            foreach (System.Drawing.FontFamily item in fontFamilys)
+            {
+                Font.Add(item.Name);
+            }
+            return Font;
+        }
 
         //设置背景
         private void Se_button_Background_Click(object sender, RoutedEventArgs e)
@@ -927,6 +939,16 @@ namespace 饥荒百科全书CSharp
                     }
                 }
             }
+        }
+        //修改字体
+        private void Se_ComboBox_Font_SelectionChanged(Object sender, SelectionChangedEventArgs e)
+        {
+            List<string> Ls = new List<string>();
+            foreach (TextBlock TB in Se_ComboBox_Font.Items)
+            {
+                Ls.Add(TB.Text);
+            }
+            mainWindow.FontFamily = new FontFamily(Ls[Se_ComboBox_Font.SelectedIndex]);
         }
         //设置背景透明度
         private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -1258,33 +1280,6 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
-
-        //获取字体函数
-        private List<string> rF()
-        {
-            List<string> Font = new List<string>();
-            InstalledFontCollection IFCFont = new InstalledFontCollection();
-            System.Drawing.FontFamily[] fontFamilys = IFCFont.Families;
-            if (fontFamilys == null || fontFamilys.Length < 1)
-            {
-                return null;
-            }
-            foreach (System.Drawing.FontFamily item in fontFamilys)
-            {
-                Font.Add(item.Name);
-            }
-            return Font;
-        }
-
-        private void Se_ComboBox_Font_SelectionChanged(Object sender, SelectionChangedEventArgs e)
-        {
-            List<string> Ls = new List<string>();
-            foreach(TextBlock TB in Se_ComboBox_Font.Items)
-            {
-                Ls.Add(TB.Text);
-            }
-            mainWindow.FontFamily = new FontFamily(Ls[Se_ComboBox_Font.SelectedIndex]);
-            System.Windows.Forms.MessageBox.Show(Ls[Se_ComboBox_Font.SelectedIndex]);
-        }
+        
     }
 }

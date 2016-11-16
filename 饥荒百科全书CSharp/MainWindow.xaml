@@ -51,7 +51,7 @@
                 <Button x:Name="UI_btn_minimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UI_btn_bg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
                 <Popup x:Name="UI_pop_bg" PopupAnimation="Fade" Width="200" Height="295" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
-                    <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
+                    <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White" Cursor="{DynamicResource Cursor_pointer}">
                         <StackPanel Margin="10">
                             <Button x:Name="Se_button_Background" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
                                 <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
@@ -66,22 +66,22 @@
                                 </Canvas>
                             </Button>
                             <TextBlock x:Name="Se_Text_Background_Stretch" TextWrapping="Wrap" Text="图片填充：" Margin="0,10,0,0" Width="60" HorizontalAlignment="Left"/>
-                            <ComboBox x:Name="Se_ComboBox_Background_Stretch" HorizontalAlignment="Right" Width="110" Margin="0,-19,0,0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource ComboBoxStyle}" Focusable="False" SelectionChanged="Se_ComboBox_Background_Stretch_SelectionChanged" SelectedIndex="1">
-                                <ComboBoxItem Cursor="{DynamicResource Cursor_link}" Focusable="False">
+                            <ComboBox x:Name="Se_ComboBox_Background_Stretch" HorizontalAlignment="Right" Width="110" Margin="0,-19,0,0" Focusable="False" SelectionChanged="Se_ComboBox_Background_Stretch_SelectionChanged" SelectedIndex="1" Style="{DynamicResource ComboBoxStyle}" IsReadOnly="True">
+                                <ComboBoxItem Focusable="False">
                                     <TextBlock Text="无" VerticalAlignment="Center" Margin="0,0,0,0"/>
                                 </ComboBoxItem>
-                                <ComboBoxItem Cursor="{DynamicResource Cursor_link}" IsSelected="True" Focusable="False">
+                                <ComboBoxItem IsSelected="True" Focusable="False">
                                     <TextBlock Text="拉伸" VerticalAlignment="Center" Margin="0,0,0,0" />
                                 </ComboBoxItem>
-                                <ComboBoxItem Cursor="{DynamicResource Cursor_link}" Focusable="False">
+                                <ComboBoxItem Focusable="False">
                                     <TextBlock Text="平铺" VerticalAlignment="Center" Margin="0,0,0,0" />
                                 </ComboBoxItem>
-                                <ComboBoxItem Cursor="{DynamicResource Cursor_link}" Focusable="False">
+                                <ComboBoxItem Focusable="False">
                                     <TextBlock Text="平铺(充满窗口)" VerticalAlignment="Center" Margin="0,0,0,0" />
                                 </ComboBoxItem>
                             </ComboBox>
                             <TextBlock x:Name="Se_Text_Font" TextWrapping="Wrap" Text="字体：" Margin="0,10,0,0" HorizontalAlignment="Left"/>
-                            <ComboBox x:Name="Se_ComboBox_Font" HorizontalAlignment="Right" Width="134" Margin="0,-19,0,0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource ComboBoxStyle}" Focusable="False" SelectionChanged="Se_ComboBox_Font_SelectionChanged" SelectedIndex="1"/>
+                            <ComboBox x:Name="Se_ComboBox_Font" HorizontalAlignment="Right" Width="134" Margin="0,-19,0,0" Focusable="False" SelectionChanged="Se_ComboBox_Font_SelectionChanged" SelectedIndex="1" Style="{DynamicResource ComboBoxStyle}" IsReadOnly="True"/>
                             <TextBlock x:Name="Se_BG_Alpha_Text" TextWrapping="Wrap" Text="背景不透明度：100%" Margin="0,10,0,0"/>
                             <Slider x:Name="Se_BG_Alpha" ValueChanged="Se_BG_Alpha_ValueChanged" Style="{DynamicResource SliderStyle}" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Cursor="{DynamicResource Cursor_link}"/>
                             <TextBlock x:Name="Se_Panel_Alpha_Text" TextWrapping="Wrap" Text="面板不透明度：100%" Margin="0,10,0,0"/>
@@ -110,32 +110,32 @@
                         </StackPanel>
                     </Border>
                 </Popup>
-                <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource ComboBoxStyle}" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged">
-                    <ComboBoxItem Cursor="{DynamicResource Cursor_link}" IsSelected="True" Focusable="False">
+                <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{DynamicResource ComboBoxStyle}">
+                    <ComboBoxItem IsSelected="True" Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DS.PNG" Width="30" Height="30" />
                             <TextBlock Text="DS" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem Cursor="{DynamicResource Cursor_link}" Focusable="False">
+                    <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_ROG.PNG" Width="30" Height="30" />
                             <TextBlock Text="RoG" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem Cursor="{DynamicResource Cursor_link}" Focusable="False">
+                    <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_SW.PNG" Width="30" Height="30" />
                             <TextBlock Text="SW" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem Cursor="{DynamicResource Cursor_link}" Focusable="False">
+                    <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DST.PNG" Width="30" Height="30" />
                             <TextBlock Text="DST" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem Cursor="{DynamicResource Cursor_link}" Focusable="False">
+                    <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DST_TX.PNG" Width="30" Height="30" />
                             <TextBlock Text="Tencent" VerticalAlignment="Center" Margin="10,0,0,0" />
