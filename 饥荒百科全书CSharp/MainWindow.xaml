@@ -110,34 +110,34 @@
                         </StackPanel>
                     </Border>
                 </Popup>
-                <ComboBox x:Name="UI_gameversion" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{DynamicResource ComboBoxStyle}">
+                <ComboBox x:Name="UI_gameversion" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{DynamicResource ComboBoxStyle}" HorizontalAlignment="Right">
                     <ComboBoxItem IsSelected="True" Focusable="False">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/DLC_DS.PNG" Width="30" Height="30" />
+                            <Image Source="/Resources/DLC_DS.PNG" Width="32" Height="32" />
                             <TextBlock Text="DS" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/DLC_ROG.PNG" Width="30" Height="30" />
+                            <Image Source="/Resources/DLC_ROG.PNG" Width="32" Height="32" />
                             <TextBlock Text="RoG" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/DLC_SW.PNG" Width="30" Height="30" />
+                            <Image Source="/Resources/DLC_SW.PNG" Width="32" Height="32" />
                             <TextBlock Text="SW" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/DLC_DST.PNG" Width="30" Height="30" />
+                            <Image Source="/Resources/DLC_DST.PNG" Width="32" Height="32"  />
                             <TextBlock Text="DST" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/DLC_DST_TX.PNG" Width="30" Height="30" />
+                            <Image Source="/Resources/DLC_DST_TX.PNG" Width="32" Height="32" />
                             <TextBlock Text="Tencent" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>

@@ -2323,21 +2323,18 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;DST&gt;
-        ///  &lt;Character&gt;
-        ///  &lt;/Character&gt;
-        ///  &lt;Food&gt;
-        ///  &lt;/Food&gt;
-        ///  &lt;Science&gt;
-        ///  &lt;/Science&gt;
-        ///  &lt;Cooking_Simulator&gt;
-        ///  &lt;/Cooking_Simulator&gt;
-        ///  &lt;Animal&gt;
-        ///  &lt;/Animal&gt;
-        ///  &lt;Natural&gt;
-        ///  &lt;/Natural&gt;
-        ///  &lt;Goods&gt;
-        ///  &lt;/Goods&gt;
-        ///&lt;/DST&gt; 的本地化字符串。
+        ///  &lt;CharacterNode&gt;
+        ///    &lt;Character&gt;
+        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
+        ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
+        ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
+        ///      &lt;Descriptions_1&gt;*能长出一把华丽的胡子&lt;/Descriptions_1&gt;
+        ///      &lt;Health&gt;150&lt;/Health&gt;
+        ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
+        ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
+        ///      &lt;Damage&gt;1&lt;/Damage&gt;
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string DSTXml {
             get {
@@ -2348,21 +2345,18 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;DS&gt;
-        ///  &lt;Character&gt;
-        ///  &lt;/Character&gt;
-        ///  &lt;Food&gt;
-        ///  &lt;/Food&gt;
-        ///  &lt;Science&gt;
-        ///  &lt;/Science&gt;
-        ///  &lt;Cooking_Simulator&gt;
-        ///  &lt;/Cooking_Simulator&gt;
-        ///  &lt;Animal&gt;
-        ///  &lt;/Animal&gt;
-        ///  &lt;Natural&gt;
-        ///  &lt;/Natural&gt;
-        ///  &lt;Goods&gt;
-        ///  &lt;/Goods&gt;
-        ///&lt;/DS&gt; 的本地化字符串。
+        ///  &lt;CharacterNode&gt;
+        ///    &lt;Character&gt;
+        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
+        ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
+        ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
+        ///      &lt;Descriptions_1&gt;*能长出一把华丽的胡子&lt;/Descriptions_1&gt;
+        ///      &lt;Health&gt;150&lt;/Health&gt;
+        ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
+        ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
+        ///      &lt;Damage&gt;1&lt;/Damage&gt;
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string DSXML {
             get {
@@ -10073,21 +10067,18 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;RoG&gt;
-        ///  &lt;Character&gt;
-        ///  &lt;/Character&gt;
-        ///  &lt;Food&gt;
-        ///  &lt;/Food&gt;
-        ///  &lt;Science&gt;
-        ///  &lt;/Science&gt;
-        ///  &lt;Cooking_Simulator&gt;
-        ///  &lt;/Cooking_Simulator&gt;
-        ///  &lt;Animal&gt;
-        ///  &lt;/Animal&gt;
-        ///  &lt;Natural&gt;
-        ///  &lt;/Natural&gt;
-        ///  &lt;Goods&gt;
-        ///  &lt;/Goods&gt;
-        ///&lt;/RoG&gt; 的本地化字符串。
+        ///  &lt;CharacterNode&gt;
+        ///    &lt;Character&gt;
+        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
+        ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
+        ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
+        ///      &lt;Descriptions_1&gt;*能长出一把华丽的胡子&lt;/Descriptions_1&gt;
+        ///      &lt;Health&gt;150&lt;/Health&gt;
+        ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
+        ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
+        ///      &lt;Damage&gt;1&lt;/Damage&gt;
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string RoGXml {
             get {
@@ -13008,8 +12999,8 @@ namespace 饥荒百科全书CSharp.Properties {
         ///      &lt;Health&gt;150&lt;/Health&gt;
         ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
         ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
-        ///      &lt;Damage&gt;1X&lt;/Damage&gt;
-        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      &lt;Damage&gt;1&lt;/Damage&gt;
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string SWXml {
             get {
@@ -13430,21 +13421,18 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;Tencent&gt;
-        ///  &lt;Character&gt;
-        ///  &lt;/Character&gt;
-        ///  &lt;Food&gt;
-        ///  &lt;/Food&gt;
-        ///  &lt;Science&gt;
-        ///  &lt;/Science&gt;
-        ///  &lt;Cooking_Simulator&gt;
-        ///  &lt;/Cooking_Simulator&gt;
-        ///  &lt;Animal&gt;
-        ///  &lt;/Animal&gt;
-        ///  &lt;Natural&gt;
-        ///  &lt;/Natural&gt;
-        ///  &lt;Goods&gt;
-        ///  &lt;/Goods&gt;
-        ///&lt;/Tencent&gt; 的本地化字符串。
+        ///  &lt;CharacterNode&gt;
+        ///    &lt;Character&gt;
+        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
+        ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
+        ///      &lt;Motto&gt;&quot;我将用我的脑子征服这个世界！&quot;&lt;/Motto&gt;
+        ///      &lt;Descriptions_1&gt;*会长出华丽的胡须&lt;/Descriptions_1&gt;
+        ///      &lt;Health&gt;150&lt;/Health&gt;
+        ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
+        ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
+        ///      &lt;Damage&gt;1&lt;/Damage&gt;
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string TencentXml {
             get {
