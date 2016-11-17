@@ -114,6 +114,7 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
+        public static bool loadFont = false;
         #region "MainWindow"
         //MainWindow构造函数
         public MainWindow()
@@ -129,6 +130,8 @@ namespace 饥荒百科全书CSharp
             ////窗口大小
             double mainWindowHeight = RegeditRW.RegRead("MainWindowHeight");
             double mainWindowWidth = RegeditRW.RegRead("MainWindowWidth");
+            //字体
+            string mainWindowFont = RegeditRW.RegReadString("MainWindowFont");
             //设置菜单
             double winTopmost = RegeditRW.RegRead("Topmost");
             ////游戏版本
@@ -136,6 +139,12 @@ namespace 饥荒百科全书CSharp
             //初始化
             InitializeComponent();
             MWInit = true;
+            if (mainWindowFont =="")
+            {
+                RegeditRW.RegWrite("MainWindowFont", "微软雅黑");
+                mainWindowFont = "微软雅黑";
+            }
+            mainWindow.FontFamily = new FontFamily(mainWindowFont);
             //版本初始化
             UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             //窗口可视化计时器
@@ -206,14 +215,6 @@ namespace 饥荒百科全书CSharp
             Se_Window_Alpha_Text.Text = "窗口不透明度：" + (int)Se_Window_Alpha.Value + "%";
             Opacity = (windowAlpha - 1) / 100;
             //设置高度和宽度
-            if (mainWindowHeight == 0)
-            {
-                mainWindowHeight = 660;
-            }
-            if (mainWindowWidth == 0)
-            {
-                mainWindowWidth = 1000;
-            }
             Width = mainWindowWidth;
             Height = mainWindowHeight;
             //设置游戏版本
@@ -224,15 +225,22 @@ namespace 饥荒百科全书CSharp
         {
             new KeyboardHandler(this);//加载快捷键
             LoadGameVersionXml();//加载游戏版本Xml文件
+
             foreach (string str in rF())//加载字体
             {
                 TextBlock TB = new TextBlock();
                 TB.Text = str;
                 TB.FontFamily = new FontFamily(str);
-
                 Se_ComboBox_Font.Items.Add(TB);
             }
-                
+            string mainWindowFont = RegeditRW.RegReadString("MainWindowFont");
+            List<string> Ls = new List<string>();
+            foreach (TextBlock TB in Se_ComboBox_Font.Items)
+            {
+                Ls.Add(TB.Text);
+            }
+            Se_ComboBox_Font.SelectedIndex = Ls.IndexOf(mainWindowFont);
+            loadFont = true;
         }
         //加载游戏版本Xml文件
         private void LoadGameVersionXml()
@@ -943,12 +951,16 @@ namespace 饥荒百科全书CSharp
         //修改字体
         private void Se_ComboBox_Font_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
-            List<string> Ls = new List<string>();
-            foreach (TextBlock TB in Se_ComboBox_Font.Items)
+            if (loadFont == true)
             {
-                Ls.Add(TB.Text);
+                List<string> Ls = new List<string>();
+                foreach (TextBlock TB in Se_ComboBox_Font.Items)
+                {
+                    Ls.Add(TB.Text);
+                }
+                mainWindow.FontFamily = new FontFamily(Ls[Se_ComboBox_Font.SelectedIndex]);
+                RegeditRW.RegWrite("MainWindowFont", Ls[Se_ComboBox_Font.SelectedIndex]);
             }
-            mainWindow.FontFamily = new FontFamily(Ls[Se_ComboBox_Font.SelectedIndex]);
         }
         //设置背景透明度
         private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
