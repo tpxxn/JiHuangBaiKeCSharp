@@ -7,18 +7,16 @@
         xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
         mc:Ignorable="d"
         Title="饥荒百科全书" Icon="Resources/DST.ico" 
-        Height="660" Width="900" 
-        MinWidth="900" MinHeight="660" 
+        Height="660" Width="954" 
+        MinWidth="954" MinHeight="660" 
         MouseLeftButtonDown="mainWindow_MouseLeftButtonDown" 
         MouseLeftButtonUp="mainWindow_MouseLeftButtonUp"
         WindowStartupLocation="CenterScreen" 
         SizeChanged="mainWindow_SizeChanged" 
         Loaded="mainWindow_Loaded" 
-        Style="{DynamicResource WindowStyle}" 
         Cursor="{DynamicResource Cursor_pointer}" 
         WindowStyle="None" 
-        AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip" >
+        AllowsTransparency="True">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -36,26 +34,20 @@
 
     <Grid x:Name="ResizeGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="2"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="3"/>
             <RowDefinition/>
-            <RowDefinition Height="2"/>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2"/>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="3"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="2"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="1"/>
         </Grid.ColumnDefinitions>
-        <Border x:Name="ResizeTopLeft" BorderThickness="0" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Background="#FF2B2B2B" />
-        <!--<Rectangle x:Name="ResizeTopLeft" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Fill="#FF2B2B2B" StrokeThickness="0"/>-->
-        <Border x:Name="ResizeTop" BorderThickness="0" Grid.Row="0" Grid.Column="1" MouseMove="ResizePressed" MouseDown="ResizePressed" Background="#FF2B2B2B" />
-        <!--<Rectangle x:Name="ResizeTop" Fill="#FF2B2B2B" Grid.Row="0" Grid.Column="1" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>-->
-        <Rectangle x:Name="ResizeTopRight" Fill="#FF2B2B2B" Grid.Row="0" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
-        <Rectangle x:Name="ResizeLeft" Fill="#FF2B2B2B" Grid.Row="1" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
-        <Rectangle x:Name="ResizeRight" Fill="#FF2B2B2B" Grid.Row="1" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
-        <Rectangle x:Name="ResizeBottomLeft" Fill="#FF2B2B2B" Grid.Row="3" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
-        <Rectangle x:Name="ResizeBottom" Fill="#FF2B2B2B" Grid.Row="3" Grid.Column="1" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
-        <Rectangle x:Name="ResizeBottomRight" Fill="#FF2B2B2B" Grid.Row="3" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
-        <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="White" Grid.Row="1">
+        <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="White" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
@@ -246,7 +238,7 @@
                 <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
-                <WrapPanel x:Name="LeftWrapPanel" Width="50" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
+                <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
                     <Button x:Name="Sidebar_Menu" Width="50" Height="50" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
                     <RadioButton x:Name="Sidebar_Welcome" Content="RadioButton" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
                     <RadioButton x:Name="Sidebar_Character" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
@@ -258,8 +250,17 @@
                     <RadioButton x:Name="Sidebar_Goods" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
                     <RadioButton x:Name="Sidebar_Setting" Content="RadioButton" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
                 </WrapPanel>
-                <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="0,0,0,10" Visibility="Collapsed"/>
+                <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Canvas>
         </Grid>
+        <Border x:Name="mainBorder" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="5" BorderBrush="#FF2B2B2B"/>
+        <Border x:Name="ResizeTopLeft" BorderThickness="0" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
+        <Border x:Name="ResizeTop" BorderThickness="0" Grid.Row="0" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Background="#00000000" />
+        <Border x:Name="ResizeTopRight" BorderThickness="0" Grid.Row="0" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
+        <Border x:Name="ResizeLeft" BorderThickness="0" Grid.Row="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.ColumnSpan="2" Background="#00000000" />
+        <Border x:Name="ResizeRight" BorderThickness="0" Grid.Row="2" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.ColumnSpan="2" Background="#00000000" />
+        <Border x:Name="ResizeBottomLeft" BorderThickness="0" Grid.Row="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
+        <Border x:Name="ResizeBottom" BorderThickness="0" Grid.Row="3" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Background="#00000000" />
+        <Border x:Name="ResizeBottomRight" BorderThickness="0" Grid.Row="3" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
     </Grid>
 </Window>

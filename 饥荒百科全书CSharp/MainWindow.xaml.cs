@@ -52,7 +52,7 @@ using 饥荒百科全书CSharp.MyUserControl;
 namespace 饥荒百科全书CSharp
 {
     /// <summary>
-    /// 窗口缩放
+    /// MainWindow窗口缩放类
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -71,17 +71,6 @@ namespace 饥荒百科全书CSharp
             BottomLeft = 7,
             BottomRight = 8,
         }
-        //(System.Windows.Input.Cursor)cursorDictionary["Cursor_vert"]
-        private Dictionary<ResizeDirection, System.Windows.Input.Cursor> cursors = new Dictionary<ResizeDirection, System.Windows.Input.Cursor>{
-            { ResizeDirection.Top, System.Windows.Input.Cursors.SizeNS},
-            {ResizeDirection.Bottom, System.Windows.Input.Cursors.SizeNS},
-            {ResizeDirection.Left, System.Windows.Input.Cursors.SizeWE},
-            {ResizeDirection.Right, System.Windows.Input.Cursors.SizeWE},
-            {ResizeDirection.TopLeft, System.Windows.Input.Cursors.SizeNWSE},
-            {ResizeDirection.BottomRight, System.Windows.Input.Cursors.SizeNWSE},
-            {ResizeDirection.TopRight, System.Windows.Input.Cursors.SizeNESW},
-            {ResizeDirection.BottomLeft, System.Windows.Input.Cursors.SizeNESW}
-            };
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
@@ -101,8 +90,33 @@ namespace 饥荒百科全书CSharp
             FrameworkElement element = sender as FrameworkElement;
             ResizeDirection direction = (ResizeDirection)Enum.Parse(typeof(ResizeDirection), element.Name.Replace("Resize", ""));
 
-            Cursor = cursors[direction];
-
+            switch (direction)
+            {
+                case ResizeDirection.Left:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_horz"];
+                    break;
+                case ResizeDirection.Right:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_horz"];
+                    break;
+                case ResizeDirection.Top:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_vert"];
+                    break;
+                case ResizeDirection.Bottom:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_vert"];
+                    break;
+                case ResizeDirection.TopLeft:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn1"];
+                    break;
+                case ResizeDirection.BottomRight:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn1"];
+                    break;
+                case ResizeDirection.TopRight:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn2"];
+                    break;
+                case ResizeDirection.BottomLeft:
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn2"];
+                    break;
+            }
             if (e.LeftButton == MouseButtonState.Pressed)
                 ResizeWindow(direction);
         }
@@ -113,6 +127,9 @@ namespace 饥荒百科全书CSharp
         }
     }
 
+    /// <summary>
+    /// MainWindow主类
+    /// </summary>
     public partial class MainWindow : Window
     {
         
@@ -833,8 +850,8 @@ namespace 饥荒百科全书CSharp
             //设置版本号位置
             UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
             //左侧面板高度
-            LeftCanvas.Height = mainWindow.ActualHeight - 4;
-            LeftWrapPanel.Height = mainWindow.ActualHeight - 4;
+            LeftCanvas.Height = mainWindow.ActualHeight - 2;
+            LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
             //Splitter高度
             UI_Splitter.Height = ActualHeight - 52;
             RegeditRW.RegWrite("MainWindowHeight", ActualHeight);
