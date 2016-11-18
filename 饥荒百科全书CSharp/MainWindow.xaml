@@ -10,6 +10,7 @@
         Height="660" Width="900" 
         MinWidth="900" MinHeight="660" 
         MouseLeftButtonDown="mainWindow_MouseLeftButtonDown" 
+        MouseLeftButtonUp="mainWindow_MouseLeftButtonUp"
         WindowStartupLocation="CenterScreen" 
         SizeChanged="mainWindow_SizeChanged" 
         Loaded="mainWindow_Loaded" 
@@ -17,7 +18,7 @@
         Cursor="{DynamicResource Cursor_pointer}" 
         WindowStyle="None" 
         AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip" MouseLeftButtonUp="mainWindow_MouseLeftButtonUp">
+        ResizeMode="CanResizeWithGrip" >
 
     <Window.Resources>
         <ResourceDictionary>
@@ -32,8 +33,29 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FF2B2B2B">
-        <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="White">
+
+    <Grid x:Name="ResizeGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2"/>
+            <RowDefinition/>
+            <RowDefinition Height="2"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="ResizeTopLeft" BorderThickness="0" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Background="#FF2B2B2B" />
+        <!--<Rectangle x:Name="ResizeTopLeft" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Fill="#FF2B2B2B" StrokeThickness="0"/>-->
+        <Border x:Name="ResizeTop" BorderThickness="0" Grid.Row="0" Grid.Column="1" MouseMove="ResizePressed" MouseDown="ResizePressed" Background="#FF2B2B2B" />
+        <!--<Rectangle x:Name="ResizeTop" Fill="#FF2B2B2B" Grid.Row="0" Grid.Column="1" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>-->
+        <Rectangle x:Name="ResizeTopRight" Fill="#FF2B2B2B" Grid.Row="0" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
+        <Rectangle x:Name="ResizeLeft" Fill="#FF2B2B2B" Grid.Row="1" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
+        <Rectangle x:Name="ResizeRight" Fill="#FF2B2B2B" Grid.Row="1" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
+        <Rectangle x:Name="ResizeBottomLeft" Fill="#FF2B2B2B" Grid.Row="3" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
+        <Rectangle x:Name="ResizeBottom" Fill="#FF2B2B2B" Grid.Row="3" Grid.Column="1" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
+        <Rectangle x:Name="ResizeBottomRight" Fill="#FF2B2B2B" Grid.Row="3" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" StrokeThickness="0"/>
+        <Grid x:Name="MainGrid" Grid.Column="1" Canvas.Right="0" Background="White" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
@@ -239,5 +261,5 @@
                 <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="0,0,0,10" Visibility="Collapsed"/>
             </Canvas>
         </Grid>
-    </Border>
+    </Grid>
 </Window>

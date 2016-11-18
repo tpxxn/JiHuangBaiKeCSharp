@@ -51,9 +51,72 @@ using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp
 {
+    /// <summary>
+    /// 窗口缩放
+    /// </summary>
     public partial class MainWindow : Window
     {
-        //颜色常量
+        //引用光标资源字典
+        static ResourceDictionary cursorDictionary = new ResourceDictionary();
+        private const int WM_SYSCOMMAND = 0x112;
+        private HwndSource _HwndSource;
+        private enum ResizeDirection
+        {
+            Left = 1,
+            Right = 2,
+            Top = 3,
+            TopLeft = 4,
+            TopRight = 5,
+            Bottom = 6,
+            BottomLeft = 7,
+            BottomRight = 8,
+        }
+        //(System.Windows.Input.Cursor)cursorDictionary["Cursor_vert"]
+        private Dictionary<ResizeDirection, System.Windows.Input.Cursor> cursors = new Dictionary<ResizeDirection, System.Windows.Input.Cursor>{
+            { ResizeDirection.Top, System.Windows.Input.Cursors.SizeNS},
+            {ResizeDirection.Bottom, System.Windows.Input.Cursors.SizeNS},
+            {ResizeDirection.Left, System.Windows.Input.Cursors.SizeWE},
+            {ResizeDirection.Right, System.Windows.Input.Cursors.SizeWE},
+            {ResizeDirection.TopLeft, System.Windows.Input.Cursors.SizeNWSE},
+            {ResizeDirection.BottomRight, System.Windows.Input.Cursors.SizeNWSE},
+            {ResizeDirection.TopRight, System.Windows.Input.Cursors.SizeNESW},
+            {ResizeDirection.BottomLeft, System.Windows.Input.Cursors.SizeNESW}
+            };
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+        void Window_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (Mouse.LeftButton != MouseButtonState.Pressed)
+            {
+                FrameworkElement element = e.OriginalSource as FrameworkElement;
+                if (element != null && !element.Name.Contains("Resize"))
+                {
+                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
+                }
+            }
+        }
+        private void ResizePressed(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            FrameworkElement element = sender as FrameworkElement;
+            ResizeDirection direction = (ResizeDirection)Enum.Parse(typeof(ResizeDirection), element.Name.Replace("Resize", ""));
+
+            Cursor = cursors[direction];
+
+            if (e.LeftButton == MouseButtonState.Pressed)
+                ResizeWindow(direction);
+        }
+
+        private void ResizeWindow(ResizeDirection direction)
+        {
+            SendMessage(_HwndSource.Handle, WM_SYSCOMMAND, (IntPtr)(61440 + direction), IntPtr.Zero);
+        }
+    }
+
+    public partial class MainWindow : Window
+    {
+        
+        #region "颜色常量"
         public const string PBCGreen = "5EB660";  //绿色
         public const string PBCKhaki = "EDB660";  //卡其布色/土黄色
         public const string PBCBlue = "337AB8";   //蓝色
@@ -63,9 +126,7 @@ namespace 饥荒百科全书CSharp
         public const string PBCYellow = "EEE815"; //黄色
         public const string PBCRed = "D8524F";    //红色
         public const string PBCPurple = "A285F0"; //紫色
-
-        //引用光标资源字典
-        ResourceDictionary cursorDictionary = new ResourceDictionary();
+        #endregion
 
         //检查更新实例 update(网盘)
         public static UpdatePan updatePan = new UpdatePan();
@@ -138,8 +199,13 @@ namespace 饥荒百科全书CSharp
             double gameVersion = RegeditRW.RegRead("GameVersion");
             //初始化
             InitializeComponent();
+            //窗口缩放
+            SourceInitialized += delegate (object sender, EventArgs e){ _HwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource;};
+            MouseMove += new System.Windows.Input.MouseEventHandler(Window_MouseMove);
+            //mainWindow初始化标志
             MWInit = true;
-            if (mainWindowFont =="")
+            //设置字体
+            if (mainWindowFont == "")
             {
                 RegeditRW.RegWrite("MainWindowFont", "微软雅黑");
                 mainWindowFont = "微软雅黑";
@@ -740,7 +806,6 @@ namespace 饥荒百科全书CSharp
         private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Point position = e.GetPosition(UIGrid);
-
             // 如果鼠标位置在标题栏内，允许拖动  
             if (e.LeftButton == MouseButtonState.Pressed)
             {
@@ -768,8 +833,8 @@ namespace 饥荒百科全书CSharp
             //设置版本号位置
             UI_Version.Margin = new Thickness(10, mainWindow.ActualHeight - 35, 0, 0);
             //左侧面板高度
-            LeftCanvas.Height = mainWindow.ActualHeight - 2;
-            LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
+            LeftCanvas.Height = mainWindow.ActualHeight - 4;
+            LeftWrapPanel.Height = mainWindow.ActualHeight - 4;
             //Splitter高度
             UI_Splitter.Height = ActualHeight - 52;
             RegeditRW.RegWrite("MainWindowHeight", ActualHeight);
@@ -1292,6 +1357,6 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
-        
+
     }
 }
