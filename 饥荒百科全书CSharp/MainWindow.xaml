@@ -160,31 +160,31 @@
                 <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10" d:IsLocked="True"/>
                 <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
-            <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1" d:IsHidden="True">
-                <TextBlock Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,50,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
-                <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
-                <TextBlock Text="单机版：v189297" VerticalAlignment="Top" Margin="0,121.599,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
-                <TextBlock Text="联机版：v191480" VerticalAlignment="Top" Margin="0,160.465,50,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>
-                <TextBlock Text="部分资料来源于wikia" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,225,50,0" Foreground="Black" FontSize="33.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
-                <TextBlock Text="作者: tpxxn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,210" Foreground="Black" FontSize="40" FontWeight="Bold" d:IsLocked="True"/>
+            <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1">
+                <TextBlock Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,40,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
+                <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
+                <TextBlock Text="单机版：v189297" VerticalAlignment="Top" Margin="0,121.599,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
+                <TextBlock Text="联机版：v191480" VerticalAlignment="Top" Margin="0,160.465,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
+                <TextBlock Text="部分资料来源于wikia" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,225,40,0" Foreground="Black" FontSize="33.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
+                <TextBlock Text="作者: tpxxn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,210" Foreground="Black" FontSize="40" FontWeight="Bold" d:IsLocked="True"/>
                 <Button x:Name="W_button_QRCode_Qun" Focusable="False" Width="150" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Margin="0,0,37,37" Height="150" VerticalAlignment="Bottom" Click="W_button_QRCode_Qun_Click" Cursor="{DynamicResource Cursor_link}" d:IsLocked="True">
                     <Image Source="/Resources/QRCode_Qun.png" Width="150" Height="150"/>
                 </Button>
-                <Button x:Name="W_button_official_website" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,110.48" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_official_website_Click" Cursor="{DynamicResource Cursor_link}" d:IsLocked="True">
+                <Button x:Name="W_button_official_website" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,110.48" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_official_website_Click" Cursor="{DynamicResource Cursor_link}">
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="百科官网" VerticalAlignment="Top" TextDecorations="Underline"/>
                 </Button>
-                <Button x:Name="W_button_Mods" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,86.24" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_Mods_Click" Cursor="{DynamicResource Cursor_link}" d:IsLocked="True">
+                <Button x:Name="W_button_Mods" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,86.24" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_Mods_Click" Cursor="{DynamicResource Cursor_link}">
                     <TextBlock TextWrapping="Wrap" Text="推荐Mod" VerticalAlignment="Top" TextDecorations="Underline" HorizontalAlignment="Left"/>
                 </Button>
-                <Button x:Name="W_button_DSNews" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,62" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_DSNews_Click" Cursor="{DynamicResource Cursor_link}" d:IsLocked="True">
+                <Button x:Name="W_button_DSNews" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,62" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_DSNews_Click" Cursor="{DynamicResource Cursor_link}">
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒单机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
                 </Button>
-                <Button x:Name="W_button_DSTNewS" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,37" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_DSTNewS_Click" Cursor="{DynamicResource Cursor_link}" d:IsLocked="True">
+                <Button x:Name="W_button_DSTNewS" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,37" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_DSTNewS_Click" Cursor="{DynamicResource Cursor_link}">
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒联机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
                 </Button>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: DS-饥荒单机 | RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机 | Tencent-TGP版和QQ游戏大厅版" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16" d:IsLocked="True"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: DS-饥荒单机 | RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机 | Tencent-TGP版和QQ游戏大厅版" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16"/>
             </Grid>
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF">
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF" d:IsHidden="True">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="SLWidth" Width="320" MinWidth="320" MaxWidth="400"/>
                     <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>

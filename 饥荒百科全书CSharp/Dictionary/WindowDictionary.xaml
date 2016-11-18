@@ -2,53 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:饥荒百科全书CSharp"
                     xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl">
-    
-    <!--#region MainWindow窗口-->
-    <Style x:Key="WindowStyle" TargetType="{x:Type Window}">
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
-        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Window}">
-                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
-                        <Grid>
-                            <AdornerDecorator>
-                                <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
-                            </AdornerDecorator>
-                            <ResizeGrip Cursor="Cross" x:Name="WindowResizeGrip" HorizontalAlignment="Right" IsTabStop="False" Visibility="Visible" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                                <ResizeGrip.Template>
-                                    <ControlTemplate TargetType="{x:Type ResizeGrip}">
-                                        <Grid Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                                            <Path Data="M9,0L11,0 11,11 0,11 0,9 3,9 3,6 6,6 6,3 9,3z" HorizontalAlignment="Right" Margin="0,0,2,2" VerticalAlignment="Bottom">
-                                                <Path.Fill>
-                                                    <DrawingBrush TileMode="Tile" Viewbox="0,0,3,3" Viewport="0,0,3,3" ViewportUnits="Absolute" ViewboxUnits="Absolute">
-                                                        <DrawingBrush.Drawing>
-                                                            <DrawingGroup>
-                                                                <GeometryDrawing Geometry="M0,0L2,0 2,2 0,2z">
-                                                                    <GeometryDrawing.Brush>
-                                                                        <LinearGradientBrush EndPoint="1,0.75" StartPoint="0,0.25">
-                                                                            <GradientStop Color="#FF2B2B2B" Offset="0.3"/>
-                                                                            <GradientStop Color="#FFBBC5D7" Offset="0.75"/>
-                                                                            <GradientStop Color="#FF6D83A9" Offset="1"/>
-                                                                        </LinearGradientBrush>
-                                                                    </GeometryDrawing.Brush>
-                                                                </GeometryDrawing>
-                                                            </DrawingGroup>
-                                                        </DrawingBrush.Drawing>
-                                                    </DrawingBrush>
-                                                </Path.Fill>
-                                            </Path>
-                                        </Grid>
-                                    </ControlTemplate>
-                                </ResizeGrip.Template>
-                            </ResizeGrip>
-                        </Grid>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--#endregion-->
 
     <!--#region 右上角按钮样式-->
     <Style x:Key="UI_btn_close_Style" TargetType="{x:Type Button}">
