@@ -250,7 +250,7 @@ namespace 饥荒百科全书CSharp
             }
             catch (Exception)
             {
-                System.Windows.MessageBox.Show("没有选择正确的图片");
+                MessageBox.Show("没有选择正确的图片");
             }
         }
         //清除背景方法

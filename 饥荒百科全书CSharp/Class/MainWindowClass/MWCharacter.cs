@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using 饥荒百科全书CSharp.Class;
@@ -167,6 +168,28 @@ namespace 饥荒百科全书CSharp
                     gHunger.Children.Add(pbHunger);
                     WrapPanel_Left_Character.Children.Add(gHunger);
                 }
+                if (BWTTag[1] == "沃尔夫冈")
+                {
+                    Grid gWolfgang = new Grid();
+                    gWolfgang.Height = 16;
+                    Slider WolfgangSlider = new Slider();
+                    WolfgangSlider.Style = (Style)FindResource("SliderStyle");
+                    WolfgangSlider.Focusable = false;
+                    WolfgangSlider.IsSelectionRangeEnabled = true;
+                    WolfgangSlider.Value = 200;
+                    WolfgangSlider.Maximum = 300;
+                    WolfgangSlider.Minimum = 0;
+                    WolfgangSlider.SmallChange = 1;
+                    WolfgangSlider.LargeChange = 10;
+                    WolfgangSlider.ValueChanged += WolfgangSlider_ValueChanged;
+                    Thickness TSlider = new Thickness();
+                    TSlider.Top = 0;
+                    TSlider.Left = 72;
+                    TSlider.Right = 37;
+                    WolfgangSlider.Margin = TSlider;
+                    gWolfgang.Children.Add(WolfgangSlider);
+                    WrapPanel_Left_Character.Children.Add(gWolfgang);
+                }
                 #endregion
                 #region "精神  BWTTag[9]"
                 if (BWTTag[9] != "")
@@ -303,9 +326,64 @@ namespace 饥荒百科全书CSharp
                 gIntroduce.Children.Add(tbIntroduce);
                 WrapPanel_Left_Character.Children.Add(gIntroduce);
                 #endregion
+                #region "底部填充"
+                Grid gButtonFill = new Grid();
+                gButtonFill.Height = 20;
+                WrapPanel_Left_Character.Children.Add(gButtonFill);
+                #endregion
                 WrapPanel_Left_Character_SizeChanged(null, null);//调整位置
             }
             catch { }
+        }
+
+        //沃尔夫冈根据饥饿变化调整属性值
+        private void WolfgangSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            List<Grid> grid = new List<Grid>();
+            List<PropertyBar> propertyBar = new List<PropertyBar>();
+            foreach (UIElement element in WrapPanel_Left_Character.Children)
+            {
+                if (element.GetType() == typeof(Grid))
+                {
+                    grid.Add((Grid)element);
+                }
+            }
+            foreach (Grid element in grid)
+            {
+                foreach (UIElement pb in element.Children)
+                {
+                    if (pb.GetType() == typeof(PropertyBar))
+                    {
+                        propertyBar.Add((PropertyBar)pb);
+                    }
+                }
+            }
+            Slider s = (Slider)sender;
+            int value = (int)(s.Value);
+            double dvalue = s.Value;
+            propertyBar[1].UCProgressBar.Value = value / 3;
+            propertyBar[1].UCTextBlockValue.Text = value.ToString();
+            if (value > 220 && value <= 300)
+            {
+                propertyBar[0].UCProgressBar.Value = ((int)(1.25 * value - 75)) / 3;
+                propertyBar[0].UCTextBlockValue.Text = ((int)(1.25 * value - 75)).ToString();
+                propertyBar[3].UCProgressBar.Value = 0.46875 * value - 40.625;
+                propertyBar[3].UCTextBlockValue.Text = (Math.Round((0.009375 * value - 0.8125), 2)).ToString() + "X";
+            }
+            else if (value > 100 && value <= 220)
+            {
+                propertyBar[0].UCProgressBar.Value = 200 / 3;
+                propertyBar[0].UCTextBlockValue.Text = "200";
+                propertyBar[3].UCProgressBar.Value = 50;
+                propertyBar[3].UCTextBlockValue.Text = "1X";
+            }
+            else if (value >= 0 && value <= 100)
+            {
+                propertyBar[0].UCProgressBar.Value = ((int)(0.5 * value + 150)) / 3;
+                propertyBar[0].UCTextBlockValue.Text = ((int)(0.5 * value + 150)).ToString();
+                propertyBar[3].UCProgressBar.Value = 0.125 * value + 25;
+                propertyBar[3].UCTextBlockValue.Text = (Math.Round((0.0025 * value + 0.5), 2)).ToString() + "X";
+            }
         }
 
         //WrapPanel_Left_Character内Grid.Width设置为WrapPanel_Left_Character.ActualWidth

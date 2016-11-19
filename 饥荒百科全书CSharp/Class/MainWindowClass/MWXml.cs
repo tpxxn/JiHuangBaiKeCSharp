@@ -20,31 +20,31 @@ namespace 饥荒百科全书CSharp
             switch (UI_gameversion.SelectedIndex)
             {
                 case 0:
-                    Stream streamDS = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.DSXml.xml");
+                    Stream streamDS = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.DSXml.xml");
                     doc.Load(streamDS);
                     XmlNode listDS = doc.SelectSingleNode("DS");
                     HandleXml(listDS);
                     break;
                 case 1:
-                    Stream streamRoG = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.RoGXml.xml");
+                    Stream streamRoG = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.RoGXml.xml");
                     doc.Load(streamRoG);
                     XmlNode listRoG = doc.SelectSingleNode("RoG");
                     HandleXml(listRoG);
                     break;
                 case 2:
-                    Stream streamSW = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.SWXml.xml");
+                    Stream streamSW = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.SWXml.xml");
                     doc.Load(streamSW);
                     XmlNode listSW = doc.SelectSingleNode("SW");
                     HandleXml(listSW);
                     break;
                 case 3:
-                    Stream streamDST = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.DSTXml.xml");
+                    Stream streamDST = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.DSTXml.xml");
                     doc.Load(streamDST);
                     XmlNode listDST = doc.SelectSingleNode("DST");
                     HandleXml(listDST);
                     break;
                 case 4:
-                    Stream streamTencent = assembly.GetManifestResourceStream("饥荒百科全书CSharp.Resources.XML.TencentXml.xml");
+                    Stream streamTencent = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.TencentXml.xml");
                     doc.Load(streamTencent);
                     XmlNode listTencent = doc.SelectSingleNode("Tencent");
                     HandleXml(listTencent);

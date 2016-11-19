@@ -59,6 +59,7 @@
     <StartupObject>饥荒百科全书CSharp.Class.AppRun.EntryPoint</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
@@ -4278,21 +4279,23 @@
     <Resource Include="Resources\Setting_Top_T.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\XML\DSTXml.xml" />
+    <EmbeddedResource Include="XML\DSTXml.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\XML\DSXml.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\XML\RoGXml.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\XML\SWXml.xml">
+    <EmbeddedResource Include="XML\DSXml.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\XML\TencentXml.xml" />
+    <EmbeddedResource Include="XML\RoGXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XML\SWXml.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XML\TencentXml.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
