@@ -13,6 +13,9 @@ using 饥荒百科全书CSharp.Class;
 
 namespace 饥荒百科全书CSharp
 {
+    /// <summary>
+    /// MainWindow窗口控制类
+    /// </summary>
     public partial class MainWindow : Window
     {
         #region "窗口尺寸/拖动窗口"
@@ -34,18 +37,18 @@ namespace 饥荒百科全书CSharp
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
-        void Window_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+        void Window_MouseMove(object sender, MouseEventArgs e)
         {
             if (Mouse.LeftButton != MouseButtonState.Pressed)
             {
                 FrameworkElement element = e.OriginalSource as FrameworkElement;
                 if (element != null && !element.Name.Contains("Resize"))
                 {
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_pointer"];
                 }
             }
         }
-        private void ResizePressed(object sender, System.Windows.Input.MouseEventArgs e)
+        private void ResizePressed(object sender, MouseEventArgs e)
         {
             FrameworkElement element = sender as FrameworkElement;
             ResizeDirection direction = (ResizeDirection)Enum.Parse(typeof(ResizeDirection), element.Name.Replace("Resize", ""));
@@ -53,28 +56,28 @@ namespace 饥荒百科全书CSharp
             switch (direction)
             {
                 case ResizeDirection.Left:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_horz"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_horz"];
                     break;
                 case ResizeDirection.Right:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_horz"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_horz"];
                     break;
                 case ResizeDirection.Top:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_vert"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_vert"];
                     break;
                 case ResizeDirection.Bottom:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_vert"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_vert"];
                     break;
                 case ResizeDirection.TopLeft:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn1"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_dgn1"];
                     break;
                 case ResizeDirection.BottomRight:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn1"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_dgn1"];
                     break;
                 case ResizeDirection.TopRight:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn2"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_dgn2"];
                     break;
                 case ResizeDirection.BottomLeft:
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_dgn2"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_dgn2"];
                     break;
             }
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -112,14 +115,14 @@ namespace 饥荒百科全书CSharp
             {
                 if (inUIGrid || inWelcome || inSetting)
                 {
-                    Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_move"];
+                    Cursor = (Cursor)cursorDictionary["Cursor_move"];
                     DragMove();
                 }
             }
         }
         private void mainWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Cursor = (System.Windows.Input.Cursor)cursorDictionary["Cursor_pointer"];
+            Cursor = (Cursor)cursorDictionary["Cursor_pointer"];
         }
 
         //MainWindow窗口尺寸改变
