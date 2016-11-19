@@ -88,6 +88,7 @@
     </ApplicationDefinition>
     <Compile Include="Class\brushConverter.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
+    <Compile Include="Class\MainWindowClass\MWUIFramework.cs" />
     <Compile Include="Class\RegeditRW.cs" />
     <Compile Include="Class\Update.cs" />
     <Compile Include="Class\UpdatePan.cs" />
