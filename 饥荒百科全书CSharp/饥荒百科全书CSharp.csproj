@@ -3026,36 +3026,6 @@
     <Resource Include="Resources\GameResources\Natural\N_x_marks_the_spot.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Blue.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Cyan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Green.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Khaki.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Orange.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Pink.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Purple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBar_Yellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\PercentageBarBackground.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\QRCode_Qun.png" />
   </ItemGroup>
   <ItemGroup>
