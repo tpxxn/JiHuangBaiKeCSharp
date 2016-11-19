@@ -253,14 +253,14 @@
                 <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Canvas>
         </Grid>
-        <Border x:Name="mainBorder" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="5" BorderBrush="#FF2B2B2B" d:IsHidden="True"/>
-        <Border x:Name="ResizeTopLeft" BorderThickness="0" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
-        <Border x:Name="ResizeTop" BorderThickness="0" Grid.Row="0" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Background="#00000000" />
-        <Border x:Name="ResizeTopRight" BorderThickness="0" Grid.Row="0" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
-        <Border x:Name="ResizeLeft" BorderThickness="0" Grid.Row="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.ColumnSpan="2" Background="#00000000" />
-        <Border x:Name="ResizeRight" BorderThickness="0" Grid.Row="2" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.ColumnSpan="2" Background="#00000000" />
-        <Border x:Name="ResizeBottomLeft" BorderThickness="0" Grid.Row="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
-        <Border x:Name="ResizeBottom" BorderThickness="0" Grid.Row="3" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Background="#00000000" />
-        <Border x:Name="ResizeBottomRight" BorderThickness="0" Grid.Row="3" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" />
+        <Border x:Name="mainBorder" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="5" BorderBrush="#FF2B2B2B" d:IsHidden="True" d:IsLocked="True"/>
+        <Border x:Name="ResizeTopLeft" BorderThickness="0" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />
+        <Border x:Name="ResizeTop" BorderThickness="0" Grid.Row="0" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Background="#00000000" d:IsLocked="True" />
+        <Border x:Name="ResizeTopRight" BorderThickness="0" Grid.Row="0" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />
+        <Border x:Name="ResizeLeft" BorderThickness="0" Grid.Row="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />
+        <Border x:Name="ResizeRight" BorderThickness="0" Grid.Row="2" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />
+        <Border x:Name="ResizeBottomLeft" BorderThickness="0" Grid.Row="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />
+        <Border x:Name="ResizeBottom" BorderThickness="0" Grid.Row="3" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Background="#00000000" d:IsLocked="True" />
+        <Border x:Name="ResizeBottomRight" BorderThickness="0" Grid.Row="3" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />
     </Grid>
 </Window>

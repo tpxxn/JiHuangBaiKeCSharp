@@ -136,7 +136,7 @@ namespace 饥荒百科全书CSharp
             //mainWindow初始化标志
             MWInit = true;
             //设置字体
-            if (mainWindowFont == "")
+            if (mainWindowFont == "" || mainWindowFont == null)
             {
                 RegeditRW.RegWrite("MainWindowFont", "微软雅黑");
                 mainWindowFont = "微软雅黑";

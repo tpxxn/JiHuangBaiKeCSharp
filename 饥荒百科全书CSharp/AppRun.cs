@@ -44,25 +44,35 @@ namespace 饥荒百科全书CSharp.Class
             [STAThread]
             public static void Main(string[] args)
             {
-                Console.WriteLine("Main");
-                Console.ReadLine();
-                // 确保不存在程序的其他实例
-                singleInstanceWatcher = new Semaphore(
-                    0, // Initial count.
-                    1, // Maximum count.
-                    Assembly.GetExecutingAssembly().GetName().Name, out createdNew);
-                if (createdNew)
+                if (args.Length == 0)
                 {
-                    App_Run app = new App_Run();
-                    app.Run();
-                }
-                else
+                    //Console.WriteLine("Main");
+                    //Console.ReadLine();
+                    // 确保不存在程序的其他实例
+                    singleInstanceWatcher = new Semaphore(
+                        0, // Initial count.
+                        1, // Maximum count.
+                        Assembly.GetExecutingAssembly().GetName().Name, out createdNew);
+                    if (createdNew)
+                    {
+                        App_Run app = new App_Run();
+                        app.Run();
+                    }
+                    else
+                    {
+                        MessageBox.Show("请不要重复运行(ノ｀Д)ノ");
+                        Environment.Exit(-2);
+                    }
+                }else
                 {
-                    MessageBox.Show("请不要重复运行(ノ｀Д)ノ");
-                    Environment.Exit(-2);
+                    if (args[0].ToString() == "-clear")
+                    {
+                        //MessageBox.Show("清除设置");
+                        Environment.Exit(0);
+                    }
                 }
             }
         }
-       
+
     }
 }

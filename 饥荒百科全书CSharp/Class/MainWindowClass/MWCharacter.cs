@@ -166,29 +166,30 @@ namespace 饥荒百科全书CSharp
                     THunger.Top = 10;
                     pbHunger.Margin = THunger;
                     gHunger.Children.Add(pbHunger);
+                    if (BWTTag[1] == "沃尔夫冈")
+                    {
+                        //Grid gWolfgang = new Grid();
+                        //gWolfgang.Height = 16;
+                        Slider WolfgangSlider = new Slider();
+                        WolfgangSlider.Style = (Style)FindResource("SliderStyle");
+                        WolfgangSlider.Focusable = false;
+                        WolfgangSlider.IsSelectionRangeEnabled = true;
+                        WolfgangSlider.Value = 200;
+                        WolfgangSlider.Maximum = 300;
+                        WolfgangSlider.Minimum = 0;
+                        WolfgangSlider.SmallChange = 1;
+                        WolfgangSlider.LargeChange = 10;
+                        WolfgangSlider.ValueChanged += WolfgangSlider_ValueChanged;
+                        Thickness TSlider = new Thickness();
+                        TSlider.Top = 10;
+                        TSlider.Left = 72;
+                        TSlider.Right = 37;
+                        WolfgangSlider.Margin = TSlider;
+                        gHunger.Children.Add(WolfgangSlider);
+                        //gWolfgang.Children.Add(WolfgangSlider);
+                        //WrapPanel_Left_Character.Children.Add(gWolfgang);
+                    }
                     WrapPanel_Left_Character.Children.Add(gHunger);
-                }
-                if (BWTTag[1] == "沃尔夫冈")
-                {
-                    Grid gWolfgang = new Grid();
-                    gWolfgang.Height = 16;
-                    Slider WolfgangSlider = new Slider();
-                    WolfgangSlider.Style = (Style)FindResource("SliderStyle");
-                    WolfgangSlider.Focusable = false;
-                    WolfgangSlider.IsSelectionRangeEnabled = true;
-                    WolfgangSlider.Value = 200;
-                    WolfgangSlider.Maximum = 300;
-                    WolfgangSlider.Minimum = 0;
-                    WolfgangSlider.SmallChange = 1;
-                    WolfgangSlider.LargeChange = 10;
-                    WolfgangSlider.ValueChanged += WolfgangSlider_ValueChanged;
-                    Thickness TSlider = new Thickness();
-                    TSlider.Top = 0;
-                    TSlider.Left = 72;
-                    TSlider.Right = 37;
-                    WolfgangSlider.Margin = TSlider;
-                    gWolfgang.Children.Add(WolfgangSlider);
-                    WrapPanel_Left_Character.Children.Add(gWolfgang);
                 }
                 #endregion
                 #region "精神  BWTTag[9]"
