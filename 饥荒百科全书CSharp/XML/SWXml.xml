@@ -136,7 +136,7 @@
     </Character>
     <Character>
       <Picture>../Resources/GameResources/Character/C_wathgrithr.png</Picture>
-      <Name>威戈芙瑞德</Name>
+      <Name>维格弗里德</Name>
       <EnName>Wigfrid</EnName>
       <Motto>对我来说，这个世界就是一个舞台！</Motto>
       <Descriptions_1>*擅长战斗</Descriptions_1>
@@ -146,7 +146,7 @@
       <Hunger>120</Hunger>
       <Sanity>120</Sanity>
       <Damage>1.25</Damage>
-      <Introduce>威戈芙德 (表演艺术家) 是一位勇敢的女战士，出生自带战斗头盔、战斗长矛和4块大肉，以保证食物的充足。她的攻击具有神奇的力量，杀死有攻击性的生物会回复生命，并且受到的伤害减少25%。然而只能吃肉食的特性让其生存具有一定的挑战。</Introduce>
+      <Introduce>维格弗里德 (表演艺术家) 是一位勇敢的女战士，出生自带战斗头盔、战斗长矛和4块大肉，以保证食物的充足。她的攻击具有神奇的力量，杀死有攻击性的生物会回复生命，并且受到的伤害减少25%。然而只能吃肉食的特性让其生存具有一定的挑战。</Introduce>
       <Console>wathgrithr</Console>
     </Character>
     <Character>

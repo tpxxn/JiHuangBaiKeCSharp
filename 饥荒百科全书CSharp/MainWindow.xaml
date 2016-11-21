@@ -21,13 +21,15 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/CursorDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/ComboBoxDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/CheckBoxDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/ComboBoxDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/CursorDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/ExpanderAnimationStyle.xaml" />
+                <ResourceDictionary Source="Dictionary/ExpanderDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/GridSplitter.xaml" />
                 <ResourceDictionary Source="Dictionary/ScrollViewerDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/SliderDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -64,7 +66,7 @@
                 <Button x:Name="UI_btn_normal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_normal_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UI_btn_minimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UI_btn_bg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
-                <Popup x:Name="UI_pop_bg" PopupAnimation="Fade" Width="200" Height="300" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
+                <Popup x:Name="UI_pop_bg" PopupAnimation="Fade" Width="200" PlacementTarget="{Binding ElementName=UI_btn_bg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
                     <Border BorderThickness="5" BorderBrush="#FF1566B8" Background="White" Cursor="{DynamicResource Cursor_pointer}">
                         <StackPanel Margin="10">
                             <Button x:Name="Se_button_Background" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
@@ -161,6 +163,25 @@
                 <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
             <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1">
+                <Expander Margin="0" Style="{DynamicResource ExpanderStyle}" VerticalAlignment="Top">
+                    <Expander.Header>
+                        <Canvas Width="90" Height="32">
+                            <Image Source="Resources/GameResources/Science/S_ico_light.png" Width="32" Height="32" />
+                            <TextBlock Text="照明" Padding="0,8.4,0,0" Width="58" Height="32" Canvas.Left="32" />
+                        </Canvas>
+                    </Expander.Header>
+                    <StackPanel>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                        <Button Content="Button"/>
+                    </StackPanel>
+                </Expander>
                 <TextBlock Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,40,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
                 <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
                 <TextBlock Text="单机版：v189297" VerticalAlignment="Top" Margin="0,121.599,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
@@ -237,7 +258,7 @@
                 <TextBlock x:Name="Se_BossKey_Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
                 <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
             </Grid>
-            <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
+            <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left" d:IsLocked="True">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
                     <Button x:Name="Sidebar_Menu" Width="50" Height="50" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
                     <RadioButton x:Name="Sidebar_Welcome" Content="RadioButton" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
