@@ -23,5 +23,15 @@ namespace 饥荒百科全书CSharp.Class
             }
             return grid;
         }
+
+        public static TextBlock TextBlockInit(double height = 0)
+        {
+            TextBlock textBlock = new TextBlock();
+            if (height != 0)
+            {
+                textBlock.Height = height;
+            }
+            return textBlock;
+        }
     }
 }

@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using 饥荒百科全书CSharp.Class;
 
 namespace 饥荒百科全书CSharp.MyUserControl
 {
     /// <summary>
-    /// ExpanderStackpanel.xaml 的交互逻辑
+    /// ExpanderStackpanel 带Stackpanel的Expander
     /// </summary>
     public partial class ExpanderStackpanel : UserControl
     {
-        public ExpanderStackpanel()
+        public ExpanderStackpanel(string textblockText = "", string imageSource = "")
         {
             InitializeComponent();
+            UCTextBlock.Text = textblockText;
+            if (imageSource != "")
+            {
+                Thickness T = new Thickness();
+                T.Left = 32;
+                UCTextBlock.Margin = T;
+                UCImage.Visibility = Visibility.Visible;
+                UCImage.Source = RSN.PictureShortName(RSN.ShortName(imageSource));
+            }
         }
     }
 }

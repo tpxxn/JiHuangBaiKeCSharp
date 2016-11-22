@@ -246,22 +246,70 @@
     </Character>
   </CharacterNode>
   <FoodNode>
-    <Food>
-      <Picture>../Resources/GameResources/Food/F_bacon_and_eggs.png</Picture>
-      <Name>培根煎蛋</Name>
-      <EnName>Bacon and Eggs</EnName>
-      <Health>20</Health>
-      <Hunger>75</Hunger>
-      <Sanity>5</Sanity>
-      <Perish>20</Perish>
-      <Cooktime>40</Cooktime>
-      <Priority>10</Priority>
-    </Food>
-    <Food>
-      <Picture>../Resources/GameResources/Food/F_meatballs.png</Picture>
-      <Name>肉丸</Name>
-      <EnName>Meatballs</EnName>
-    </Food>
+    <FoodRecipe>
+      <Food>
+        <Picture>../Resources/GameResources/Food/F_bacon_and_eggs.png</Picture>
+        <Name>培根煎蛋</Name>
+        <EnName>Bacon and Eggs</EnName>
+        <Health>20</Health>
+        <Hunger>75</Hunger>
+        <Sanity>5</Sanity>
+        <Perish>20</Perish>
+        <Cooktime>40</Cooktime>
+        <Priority>10</Priority>
+        <NeedPicture_1>../Resources/GameResources/Food/FC_Meats.png</NeedPicture_1>
+        <Need_1>×1.5</Need_1>
+        <NeedPicture_or></NeedPicture_or>
+        <Need_or></Need_or>
+        <NeedPicture_2>../Resources/GameResources/Food/FC_Eggs.png</NeedPicture_2>
+        <Need_2>×2</Need_2>
+        <NeedPicture_3></NeedPicture_3>
+        <Need_3></Need_3>
+
+        <Recommend_11></Recommend_11>
+        <Recommend_12></Recommend_12>
+        <Recommend_13></Recommend_13>
+        <Recommend_14></Recommend_14>
+        <Recommend_21></Recommend_21>
+        <Recommend_22></Recommend_22>
+        <Recommend_23></Recommend_23>
+        <Recommend_24></Recommend_24>
+        <Introduce>恢复能力比较中庸，其中蛋比较难找，如果有多的蛋还是做饺子比较划算。</Introduce>
+        <Console>wilson</Console>
+      </Food>
+      <Food>
+        <Picture>../Resources/GameResources/Food/F_meatballs.png</Picture>
+        <Name>肉丸</Name>
+        <EnName>Meatballs</EnName>
+      </Food>
+      <Food>
+        <Picture>../Resources/GameResources/Food/F_meatballs.png</Picture>
+        <Name>肉汤</Name>
+        <EnName>Meaty Stew</EnName>
+      </Food>
+    </FoodRecipe>
+    <FoodMeats>
+      <Food>
+        <Picture>../Resources/GameResources/Food/F_meat.png</Picture>
+        <Name>肉</Name>
+        <EnName>Meat</EnName>
+      </Food>
+      <Food>
+        <Picture>../Resources/GameResources/Food/F_cooked_meat.png</Picture>
+        <Name>熟肉</Name>
+        <EnName>Cooked Meat</EnName>
+      </Food>
+    </FoodMeats>
+    <FoodVegetables>
+    </FoodVegetables>
+    <FoodFruit>
+    </FoodFruit>
+    <FoodEggs>
+    </FoodEggs>
+    <FoodOthers>
+    </FoodOthers>
+    <FoodNoFC>
+    </FoodNoFC>
   </FoodNode>
   <ScienceNode>
   </ScienceNode>

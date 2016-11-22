@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿//messagebox.show(node.attributes["name"].value);
+
+using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Xml;
@@ -8,11 +10,11 @@ using 饥荒百科全书CSharp.MyUserControl;
 namespace 饥荒百科全书CSharp
 {
     /// <summary>
-    /// MainWindowXml处理
+    /// MainWindowXML处理
     /// </summary>
     public partial class MainWindow : Window
     {
-        //加载游戏版本Xml文件
+        //加载游戏版本XML文件
         private void LoadGameVersionXml()
         {
             XmlDocument doc = new XmlDocument();
@@ -52,6 +54,7 @@ namespace 饥荒百科全书CSharp
             }
         }
 
+        //处理XML
         private void HandleXml(XmlNode list)
         {
             if (WrapPanel_Left_Character != null)
@@ -62,12 +65,19 @@ namespace 饥荒百科全书CSharp
             {
                 WrapPanel_Right_Character.Children.Clear();
             }
+            if (WrapPanel_Left_Food != null)
+            {
+                WrapPanel_Left_Food.Children.Clear();
+            }
+            if (WrapPanel_Right_Food != null)
+            {
+                WrapPanel_Right_Food.Children.Clear();
+            }
             foreach (XmlNode Node in list)
             {
                 #region "人物"
                 if (Node.Name == "CharacterNode")
                 {
-                    //messagebox.show(node.attributes["name"].value);
                     foreach (XmlNode childNode in Node)
                     {
                         if (childNode.Name == "Character")
@@ -175,27 +185,68 @@ namespace 饥荒百科全书CSharp
                 {
                     foreach (XmlNode childNode in Node)
                     {
-                        if (childNode.Name == "Food")
+                        switch (childNode.Name)
                         {
-                            string Picture = "";
-                            string Name = "";
-                            string EnName = "";
-                            string Introduce = "";
-                            foreach (XmlNode Food in childNode)
-                            {
-                                if (Food.Name == "Picture")
+                            case "FoodRecipe":
+                                ExpanderStackpanel ESRecipe = new ExpanderStackpanel("食谱");
+                                ESRecipe.Width = 500;
+                                WrapPanel_Right_Food.Children.Add(ESRecipe);
+                                foreach (XmlNode Level2childNode in childNode)
                                 {
-                                    Picture = Food.InnerText;
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string EnName = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            if (Food.Name == "Picture")
+                                            {
+                                                Picture = Food.InnerText;
+                                            }
+                                            if (Food.Name == "Name")
+                                            {
+                                                Name = Food.InnerText;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        ESRecipe.UCStackPanel.Children.Add(BWT);
+                                    }
                                 }
-                                if (Food.Name == "Name")
+                                break;
+                            case "FoodMeats":
+                                ExpanderStackpanel ESMeast = new ExpanderStackpanel("肉类");
+                                ESMeast.Width = 500;
+                                WrapPanel_Right_Food.Children.Add(ESMeast);
+                                foreach (XmlNode Level2childNode in childNode)
                                 {
-                                    Name = Food.InnerText;
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string EnName = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            if (Food.Name == "Picture")
+                                            {
+                                                Picture = Food.InnerText;
+                                            }
+                                            if (Food.Name == "Name")
+                                            {
+                                                Name = Food.InnerText;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        ESMeast.UCStackPanel.Children.Add(BWT);
+                                    }
                                 }
-                            }
-                            ButtonWithText BWT = new ButtonWithText();
-                            BWT.UCImage.Source = RSN.PictureShortName(Picture);
-                            BWT.UCTextBlock.Text = Name;
-                            WrapPanel_Right_Food.Children.Add(BWT);
+                                break;
                         }
                     }
                 }
