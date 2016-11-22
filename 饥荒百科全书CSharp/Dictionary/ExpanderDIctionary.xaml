@@ -224,6 +224,7 @@
         <Setter Property="VerticalContentAlignment" Value="Stretch"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsExpanded" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Expander}">
@@ -263,9 +264,9 @@
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <!--<EventTrigger RoutedEvent="FrameworkElement.Loaded">
                             <BeginStoryboard Storyboard="{StaticResource ExpandSiteHide}" />
-                        </EventTrigger>
+                        </EventTrigger>-->
                         <EventTrigger RoutedEvent="Expander.Expanded">
                             <BeginStoryboard Storyboard="{StaticResource ExpandSiteShow}" />
                         </EventTrigger>

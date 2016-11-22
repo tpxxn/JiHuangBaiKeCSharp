@@ -10,6 +10,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
+using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp
 {

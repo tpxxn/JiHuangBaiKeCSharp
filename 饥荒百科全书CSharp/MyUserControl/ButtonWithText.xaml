@@ -13,18 +13,16 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    
-    <Grid>
-        <Button x:Name="UCButton" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{DynamicResource Cursor_link}" Focusable="False">
-            <Grid x:Name="ButtonGrid"  Height="80" Width="64" Margin="-2,-2,0,0" >
-                <Grid.RowDefinitions>
-                    <RowDefinition x:Name="GridPictureHeight" Height="Auto"/>
-                    <RowDefinition x:Name="GridTextHeight" Height="*"/>
-                </Grid.RowDefinitions>
-                <Image x:Name="UCImage" Height="48"/>
-                <TextBlock x:Name="UCTextBlock" TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Grid>
-        </Button>
 
-    </Grid>
+    <Button x:Name="UCButton" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{DynamicResource Cursor_link}" Focusable="False">
+        <Grid x:Name="ButtonGrid"  Height="80" Width="64" Margin="-2,-2,0,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="GridPictureHeight" Height="Auto"/>
+                <RowDefinition x:Name="GridTextHeight" Height="*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="UCImage" Height="48"/>
+            <TextBlock x:Name="UCTextBlock" TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </Button>
+
 </UserControl>

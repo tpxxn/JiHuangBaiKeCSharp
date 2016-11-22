@@ -98,6 +98,9 @@
     <Compile Include="DownloadWindow.xaml.cs">
       <DependentUpon>DownloadWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\ExpanderStackpanel.xaml.cs">
+      <DependentUpon>ExpanderStackpanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\PropertyBar.xaml.cs">
       <DependentUpon>PropertyBar.xaml</DependentUpon>
     </Compile>
@@ -122,10 +125,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dictionary\ExpanderDictionary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dictionary\ExpanderAnimationStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,6 +165,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MyUserControl\ButtonWithText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\ExpanderStackpanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

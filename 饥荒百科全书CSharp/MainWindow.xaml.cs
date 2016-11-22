@@ -236,7 +236,7 @@ namespace 饥荒百科全书CSharp
             }
             Se_ComboBox_Font.SelectedIndex = Ls.IndexOf(mainWindowFont);
             loadFont = true;
-            LoadGameVersionXml();//加载游戏版本Xml文件            
+            LoadGameVersionXml();//加载游戏版本Xml文件
         }
         #endregion
 
