@@ -4278,7 +4278,7 @@
     <Resource Include="Resources\GameResources\Food\F_twigs.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="XML\SWXml.xml" />
+    <EmbeddedResource Include="XML\SWXml.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
