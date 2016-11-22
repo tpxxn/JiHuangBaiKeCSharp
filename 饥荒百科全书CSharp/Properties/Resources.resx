@@ -1240,6 +1240,9 @@
   <data name="F_turkey_dinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Food\F_turkey_dinner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="F_twigs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Food\F_twigs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="F_unagi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Food\F_unagi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -103,7 +103,7 @@ namespace 饥荒百科全书CSharp
                                 switch (Character.Name)
                                 {
                                     case "Picture":
-                                        Picture = Character.InnerText;
+                                        Picture = RSN.ShortName(Character.InnerText, "GameResources/Character/");
                                         break;
                                     case "Name":
                                         Name = Character.InnerText;
@@ -187,9 +187,9 @@ namespace 饥荒百科全书CSharp
                     {
                         switch (childNode.Name)
                         {
+                            #region "食谱"
                             case "FoodRecipe":
                                 ExpanderStackpanel ESRecipe = new ExpanderStackpanel("食谱");
-                                ESRecipe.Width = 500;
                                 WrapPanel_Right_Food.Children.Add(ESRecipe);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
@@ -198,28 +198,132 @@ namespace 饥荒百科全书CSharp
                                         string Picture = "";
                                         string Name = "";
                                         string EnName = "";
+                                        string PortableCrockPot = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Cooktime = "";
+                                        string Priority = "";
+                                        string NeedPicture_1 = "";
+                                        string Need_1 = "";
+                                        string NeedPicture_or = "";
+                                        string Need_or = "";
+                                        string NeedPicture_2 = "";
+                                        string Need_2 = "";
+                                        string NeedPicture_3 = "";
+                                        string Need_3 = "";
+                                        string Restrictions_1 = "";
+                                        string Restrictions_2 = "";
+                                        string Restrictions_3 = "";
+                                        string Restrictions_4 = "";
+                                        string Restrictions_5 = "";
+                                        string Recommend_1 = "";
+                                        string Recommend_2 = "";
+                                        string Recommend_3 = "";
+                                        string Recommend_4 = "";
                                         string Introduce = "";
                                         foreach (XmlNode Food in Level2childNode)
                                         {
-                                            if (Food.Name == "Picture")
+                                            switch (Food.Name)
                                             {
-                                                Picture = Food.InnerText;
-                                            }
-                                            if (Food.Name == "Name")
-                                            {
-                                                Name = Food.InnerText;
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "EnName":
+                                                    EnName = Food.InnerText;
+                                                    break;
+                                                case "PortableCrockPot":
+                                                    PortableCrockPot = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Cooktime":
+                                                    Cooktime = Food.InnerText;
+                                                    break;
+                                                case "Priority":
+                                                    Priority = Food.InnerText;
+                                                    break;
+                                                case "NeedPicture_1":
+                                                    NeedPicture_1 = Food.InnerText;
+                                                    break;
+                                                case "Need_1":
+                                                    Need_1 = Food.InnerText;
+                                                    break;
+                                                case "NeedPicture_or":
+                                                    NeedPicture_or = Food.InnerText;
+                                                    break;
+                                                case "Need_or":
+                                                    Need_or = Food.InnerText;
+                                                    break;
+                                                case "NeedPicture_2":
+                                                    NeedPicture_2 = Food.InnerText;
+                                                    break;
+                                                case "Need_2":
+                                                    Need_2 = Food.InnerText;
+                                                    break;
+                                                case "NeedPicture_3":
+                                                    NeedPicture_3 = Food.InnerText;
+                                                    break;
+                                                case "Need_3":
+                                                    Need_3 = Food.InnerText;
+                                                    break;
+                                                case "Restrictions_1":
+                                                    Restrictions_1 = Food.InnerText;
+                                                    break;
+                                                case "Restrictions_2":
+                                                    Restrictions_2 = Food.InnerText;
+                                                    break;
+                                                case "Restrictions_3":
+                                                    Restrictions_3 = Food.InnerText;
+                                                    break;
+                                                case "Restrictions_4":
+                                                    Restrictions_4 = Food.InnerText;
+                                                    break;
+                                                case "Restrictions_5":
+                                                    Restrictions_5 = Food.InnerText;
+                                                    break;
+                                                case "Recommend_1":
+                                                    Recommend_1 = Food.InnerText;
+                                                    break;
+                                                case "Recommend_2":
+                                                    Recommend_2 = Food.InnerText;
+                                                    break;
+                                                case "Recommend_3":
+                                                    Recommend_3 = Food.InnerText;
+                                                    break;
+                                                case "Recommend_4":
+                                                    Recommend_4 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
                                             }
                                         }
                                         ButtonWithText BWT = new ButtonWithText();
                                         BWT.UCImage.Source = RSN.PictureShortName(Picture);
                                         BWT.UCTextBlock.Text = Name;
-                                        ESRecipe.UCStackPanel.Children.Add(BWT);
+                                        ESRecipe.UCWrapPanel.Children.Add(BWT);
                                     }
                                 }
                                 break;
+                            #endregion
+                            #region "肉类"
                             case "FoodMeats":
                                 ExpanderStackpanel ESMeast = new ExpanderStackpanel("肉类");
-                                ESMeast.Width = 500;
                                 WrapPanel_Right_Food.Children.Add(ESMeast);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
@@ -233,7 +337,7 @@ namespace 饥荒百科全书CSharp
                                         {
                                             if (Food.Name == "Picture")
                                             {
-                                                Picture = Food.InnerText;
+                                                Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
                                             }
                                             if (Food.Name == "Name")
                                             {
@@ -243,10 +347,42 @@ namespace 饥荒百科全书CSharp
                                         ButtonWithText BWT = new ButtonWithText();
                                         BWT.UCImage.Source = RSN.PictureShortName(Picture);
                                         BWT.UCTextBlock.Text = Name;
-                                        ESMeast.UCStackPanel.Children.Add(BWT);
+                                        ESMeast.UCWrapPanel.Children.Add(BWT);
                                     }
                                 }
                                 break;
+                            #endregion
+                            #region "蔬菜"
+                            case "FoodVegetables":
+                                ExpanderStackpanel ESVegetables = new ExpanderStackpanel("蔬菜");
+                                WrapPanel_Right_Food.Children.Add(ESVegetables);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string EnName = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            if (Food.Name == "Picture")
+                                            {
+                                                Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                            }
+                                            if (Food.Name == "Name")
+                                            {
+                                                Name = Food.InnerText;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        ESVegetables.UCWrapPanel.Children.Add(BWT);
+                                    }
+                                }
+                                break;
+                                #endregion
                         }
                     }
                 }

@@ -16,14 +16,14 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Expander x:Name="UCExpander" Margin="0" Style="{DynamicResource ExpanderStyle}" VerticalAlignment="Top">
+    <Expander x:Name="UCExpander" Style="{DynamicResource ExpanderStyle}" VerticalAlignment="Top">
         <Expander.Header>
             <Canvas Width="90" Height="32">
                 <Image x:Name="UCImage" Width="32" Height="32" Visibility="Collapsed" />
                 <TextBlock x:Name="UCTextBlock" Padding="0,3.2,0,0" Width="58" Height="32" FontSize="20" />
             </Canvas>
         </Expander.Header>
-        <StackPanel x:Name="UCStackPanel" Orientation="Horizontal"/>
+        <WrapPanel x:Name="UCWrapPanel" />
     </Expander>
 
 </UserControl>

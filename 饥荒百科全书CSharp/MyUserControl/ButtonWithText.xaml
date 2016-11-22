@@ -21,7 +21,7 @@
                 <RowDefinition x:Name="GridTextHeight" Height="*"/>
             </Grid.RowDefinitions>
             <Image x:Name="UCImage" Height="48"/>
-            <TextBlock x:Name="UCTextBlock" TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="UCTextBlock" TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
         </Grid>
     </Button>
 

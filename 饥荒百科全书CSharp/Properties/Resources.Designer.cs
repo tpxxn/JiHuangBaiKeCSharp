@@ -2325,7 +2325,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///&lt;DST&gt;
         ///  &lt;CharacterNode&gt;
         ///    &lt;Character&gt;
-        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Picture&gt;C_wilson&lt;/Picture&gt;
         ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
         ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
         ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
@@ -2334,7 +2334,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
         ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
         ///      &lt;Damage&gt;1&lt;/Damage&gt;
-        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。&lt;/Int [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string DSTXml {
             get {
@@ -2347,7 +2347,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///&lt;DS&gt;
         ///  &lt;CharacterNode&gt;
         ///    &lt;Character&gt;
-        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Picture&gt;C_wilson&lt;/Picture&gt;
         ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
         ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
         ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
@@ -2356,7 +2356,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
         ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
         ///      &lt;Damage&gt;1&lt;/Damage&gt;
-        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。&lt;/Intr [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string DSXML {
             get {
@@ -4090,6 +4090,16 @@ namespace 饥荒百科全书CSharp.Properties {
         internal static System.Drawing.Bitmap F_turkey_dinner {
             get {
                 object obj = ResourceManager.GetObject("F_turkey_dinner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap F_twigs {
+            get {
+                object obj = ResourceManager.GetObject("F_twigs", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -9969,7 +9979,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///&lt;RoG&gt;
         ///  &lt;CharacterNode&gt;
         ///    &lt;Character&gt;
-        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Picture&gt;C_wilson&lt;/Picture&gt;
         ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
         ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
         ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
@@ -9978,7 +9988,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
         ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
         ///      &lt;Damage&gt;1&lt;/Damage&gt;
-        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。&lt;/Int [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string RoGXml {
             get {
@@ -12891,7 +12901,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///&lt;SW&gt;
         ///  &lt;CharacterNode&gt;
         ///    &lt;Character&gt;
-        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Picture&gt;C_wilson&lt;/Picture&gt;
         ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
         ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
         ///      &lt;Motto&gt;&quot;我会用我的智慧征服世界！&quot;&lt;/Motto&gt;
@@ -12900,7 +12910,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
         ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
         ///      &lt;Damage&gt;1&lt;/Damage&gt;
-        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。&lt;/Intr [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string SWXml {
             get {
@@ -13323,7 +13333,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///&lt;Tencent&gt;
         ///  &lt;CharacterNode&gt;
         ///    &lt;Character&gt;
-        ///      &lt;Picture&gt;../Resources/GameResources/Character/C_wilson.png&lt;/Picture&gt;
+        ///      &lt;Picture&gt;C_wilson&lt;/Picture&gt;
         ///      &lt;Name&gt;威尔逊&lt;/Name&gt;
         ///      &lt;EnName&gt;Wilson&lt;/EnName&gt;
         ///      &lt;Motto&gt;&quot;我将用我的脑子征服这个世界！&quot;&lt;/Motto&gt;
@@ -13332,7 +13342,7 @@ namespace 饥荒百科全书CSharp.Properties {
         ///      &lt;Hunger&gt;150&lt;/Hunger&gt;
         ///      &lt;Sanity&gt;200&lt;/Sanity&gt;
         ///      &lt;Damage&gt;1&lt;/Damage&gt;
-        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。&lt; [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string TencentXml {
             get {

@@ -2,7 +2,7 @@
 <SW>
   <CharacterNode>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wilson.png</Picture>
+      <Picture>C_wilson</Picture>
       <Name>威尔逊</Name>
       <EnName>Wilson</EnName>
       <Motto>"我会用我的智慧征服世界！"</Motto>
@@ -15,7 +15,7 @@
       <Console>wilson</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_willow.png</Picture>
+      <Picture>C_willow</Picture>
       <Name>薇洛</Name>
       <EnName>Willow</EnName>
       <Motto>"一切都沐浴在美丽的火焰之中。"</Motto>
@@ -30,7 +30,7 @@
       <Console>willow</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wolfgang.png</Picture>
+      <Picture>C_wolfgang</Picture>
       <Name>沃尔夫冈</Name>
       <EnName>Wolfgang</EnName>
       <Motto>"我是强大的！没有人比我更强！"</Motto>
@@ -44,7 +44,7 @@
       <Console>wolfgang</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wendy.png</Picture>
+      <Picture>C_wendy</Picture>
       <Name>温蒂</Name>
       <EnName>Wendy</EnName>
       <Motto>"阿比盖尔？快回来！我还要和你玩呢。"</Motto>
@@ -59,7 +59,7 @@
       <Console>wendy</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wx78.png</Picture>
+      <Picture>C_wx78</Picture>
       <Name>WX-78</Name>
       <EnName>WX-78</EnName>
       <Motto>"情感模块未响应"</Motto>
@@ -74,7 +74,7 @@
       <Console>wx78</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wickerbottom.png</Picture>
+      <Picture>C_wickerbottom</Picture>
       <Name>维克波顿</Name>
       <EnName>Wickerbottom</EnName>
       <Motto>"嘘！不许说话！"</Motto>
@@ -89,7 +89,7 @@
       <Console>wickerbottom</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_woodie.png</Picture>
+      <Picture>C_woodie</Picture>
       <Name>伍迪</Name>
       <EnName>Woodie</EnName>
       <Motto>"这树看上去不错，不是么？但不会太久。"</Motto>
@@ -105,7 +105,7 @@
       <Console>woodie</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wes.png</Picture>
+      <Picture>C_wes</Picture>
       <Name>韦斯</Name>
       <EnName>Wes</EnName>
       <Motto>......</Motto>
@@ -120,7 +120,7 @@
       <Console>wes</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_waxwell.png</Picture>
+      <Picture>C_waxwell</Picture>
       <Name>麦克斯韦</Name>
       <EnName>Maxwell</EnName>
       <Motto>自由才适合我。</Motto>
@@ -135,7 +135,7 @@
       <Console>waxwell</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wathgrithr.png</Picture>
+      <Picture>C_wathgrithr</Picture>
       <Name>维格弗里德</Name>
       <EnName>Wigfrid</EnName>
       <Motto>对我来说，这个世界就是一个舞台！</Motto>
@@ -150,7 +150,7 @@
       <Console>wathgrithr</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_webber.png</Picture>
+      <Picture>C_webber</Picture>
       <Name>维伯</Name>
       <EnName>Webber</EnName>
       <Motto>我们永远在一起，从不会孤单一人！</Motto>
@@ -165,7 +165,7 @@
       <Console>webber</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_walani.png</Picture>
+      <Picture>C_walani</Picture>
       <Name>瓦拉尼</Name>
       <EnName>Walani</EnName>
       <Motto>如果我没起床原谅我，我不想起。</Motto>
@@ -180,7 +180,7 @@
       <Console>walani</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_warly.png</Picture>
+      <Picture>C_warly</Picture>
       <Name>沃利</Name>
       <EnName>Warly</EnName>
       <Motto>饿着肚子做什么都不值！</Motto>
@@ -195,7 +195,7 @@
       <Console>warly</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wilbur.png</Picture>
+      <Picture>C_wilbur</Picture>
       <Name>威尔伯</Name>
       <EnName>Wilbur</EnName>
       <Motto>Ooo ooa oah ah!</Motto>
@@ -210,7 +210,7 @@
       <Console>wilbur</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_woodlegs.png</Picture>
+      <Picture>C_woodlegs</Picture>
       <Name>伍德莱格</Name>
       <EnName>Woodlegs</EnName>
       <Motto>你们不介意坏血病嘛，呀啊呀啊呀啊！</Motto>
@@ -225,7 +225,7 @@
       <Console>woodlegs</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_wendy_1.png</Picture>
+      <Picture>C_wendy_1</Picture>
       <Name>阿比盖尔</Name>
       <EnName>Abigail</EnName>
       <Health>600</Health>
@@ -236,7 +236,7 @@
       <Console>abigail</Console>
     </Character>
     <Character>
-      <Picture>../Resources/GameResources/Character/C_woodie_1.png</Picture>
+      <Picture>C_woodie_1</Picture>
       <Name>海獭伍迪</Name>
       <EnName>Woodie</EnName>
       <LogMeter>100</LogMeter>
@@ -248,7 +248,7 @@
   <FoodNode>
     <FoodRecipe>
       <Food>
-        <Picture>../Resources/GameResources/Food/F_bacon_and_eggs.png</Picture>
+        <Picture>F_bacon_and_eggs</Picture>
         <Name>培根煎蛋</Name>
         <EnName>Bacon and Eggs</EnName>
         <Health>20</Health>
@@ -257,45 +257,40 @@
         <Perish>20</Perish>
         <Cooktime>40</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1>../Resources/GameResources/Food/FC_Meats.png</NeedPicture_1>
+        <NeedPicture_1>FC_Meats</NeedPicture_1>
         <Need_1>×1.5</Need_1>
         <NeedPicture_or></NeedPicture_or>
         <Need_or></Need_or>
-        <NeedPicture_2>../Resources/GameResources/Food/FC_Eggs.png</NeedPicture_2>
-        <Need_2>×2</Need_2>
+        <NeedPicture_2></NeedPicture_2>
+        <Need_2>×</Need_2>
         <NeedPicture_3></NeedPicture_3>
         <Need_3></Need_3>
-
-        <Recommend_11></Recommend_11>
-        <Recommend_12></Recommend_12>
-        <Recommend_13></Recommend_13>
-        <Recommend_14></Recommend_14>
-        <Recommend_21></Recommend_21>
-        <Recommend_22></Recommend_22>
-        <Recommend_23></Recommend_23>
-        <Recommend_24></Recommend_24>
+        <Recommend_1></Recommend_1>
+        <Recommend_2></Recommend_2>
+        <Recommend_3></Recommend_3>
+        <Recommend_4></Recommend_4>
         <Introduce>恢复能力比较中庸，其中蛋比较难找，如果有多的蛋还是做饺子比较划算。</Introduce>
-        <Console>wilson</Console>
+        <Console>baconeggs</Console>
       </Food>
       <Food>
-        <Picture>../Resources/GameResources/Food/F_meatballs.png</Picture>
+        <Picture>F_meatballs</Picture>
         <Name>肉丸</Name>
         <EnName>Meatballs</EnName>
       </Food>
       <Food>
-        <Picture>../Resources/GameResources/Food/F_meatballs.png</Picture>
+        <Picture>F_meatballs</Picture>
         <Name>肉汤</Name>
         <EnName>Meaty Stew</EnName>
       </Food>
     </FoodRecipe>
     <FoodMeats>
       <Food>
-        <Picture>../Resources/GameResources/Food/F_meat.png</Picture>
+        <Picture>F_meat</Picture>
         <Name>肉</Name>
         <EnName>Meat</EnName>
       </Food>
       <Food>
-        <Picture>../Resources/GameResources/Food/F_cooked_meat.png</Picture>
+        <Picture>F_cooked_meat</Picture>
         <Name>熟肉</Name>
         <EnName>Cooked Meat</EnName>
       </Food>
