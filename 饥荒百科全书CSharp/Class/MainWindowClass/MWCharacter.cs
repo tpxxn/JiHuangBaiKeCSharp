@@ -26,36 +26,33 @@ namespace 饥荒百科全书CSharp
             try
             {
                 WrapPanel_Left_Character.Children.Clear();//清空WrapPanel_Left_Character
+                Grid GI = new Grid();
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Character.Children.Add(GI);
                 #region "图片 BWTTag[0]"
-                Grid gPicture = new Grid();
-                gPicture.Height = 180;
+                Grid gPicture = PG.GridInit(180);
                 Image iPicture = new Image();
                 iPicture.Height = 160;
                 iPicture.Width = 140;
                 iPicture.HorizontalAlignment = HorizontalAlignment.Center;
                 iPicture.Source = RSN.PictureShortName(BWTTag[0]);
-                Thickness tPicture = new Thickness();
-                tPicture.Top = 20;
-                iPicture.Margin = tPicture;
                 gPicture.Children.Add(iPicture);
                 WrapPanel_Left_Character.Children.Add(gPicture);
                 #endregion
+                GI = PG.GridInterval(5);
+                WrapPanel_Left_Character.Children.Add(GI);
                 #region "中文名  BWTTag[1]"
-                Grid gName = new Grid();
-                gName.Height = 38.6;
+                Grid gName = PG.GridInit();
+                //gName.Height = 38.6;
                 TextBlock tbName = new TextBlock();
                 tbName.HorizontalAlignment = HorizontalAlignment.Center;
                 tbName.Text = BWTTag[1];
                 tbName.FontSize = 26.667;
-                Thickness TName = new Thickness();
-                TName.Top = 5;
-                tbName.Margin = TName;
                 gName.Children.Add(tbName);
                 WrapPanel_Left_Character.Children.Add(gName);
                 #endregion
                 #region "英文名  BWTTag[2]"
-                Grid gEnName = new Grid();
-                gEnName.Height = 33.6;
+                Grid gEnName = PG.GridInit();
                 TextBlock tbEnName = new TextBlock();
                 tbEnName.HorizontalAlignment = HorizontalAlignment.Center;
                 tbEnName.Text = BWTTag[2];
@@ -69,15 +66,13 @@ namespace 饥荒百科全书CSharp
                 #region "座右铭  BWTTag[3]"
                 if (BWTTag[3] != "")
                 {
-                    Grid gMotto = new Grid();
-                    gMotto.Height = 25;
+                    GI = PG.GridInterval(5);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gMotto = PG.GridInit(20);
                     TextBlock tbMotto = new TextBlock();
                     tbMotto.HorizontalAlignment = HorizontalAlignment.Center;
                     tbMotto.Text = BWTTag[3];
                     tbMotto.FontSize = 16;
-                    Thickness TMotto = new Thickness();
-                    TMotto.Top = 5;
-                    tbMotto.Margin = TMotto;
                     gMotto.Children.Add(tbMotto);
                     WrapPanel_Left_Character.Children.Add(gMotto);
                 }
@@ -85,14 +80,14 @@ namespace 饥荒百科全书CSharp
                 #region "描述_1  BWTTag[4]"
                 if (BWTTag[4] != "")
                 {
-                    Grid gDescriptions_1 = new Grid();
-                    gDescriptions_1.Height = 27.6;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gDescriptions_1 = PG.GridInit();
                     TextBlock tbDescriptions_1 = new TextBlock();
                     tbDescriptions_1.HorizontalAlignment = HorizontalAlignment.Left;
                     tbDescriptions_1.Text = BWTTag[4];
                     tbDescriptions_1.FontSize = 14;
                     Thickness TDescriptions_1 = new Thickness();
-                    TDescriptions_1.Top = 10;
                     TDescriptions_1.Left = 25;
                     tbDescriptions_1.Margin = TDescriptions_1;
                     gDescriptions_1.Children.Add(tbDescriptions_1);
@@ -102,8 +97,7 @@ namespace 饥荒百科全书CSharp
                 #region "描述_2  BWTTag[5]"
                 if (BWTTag[5] != "")
                 {
-                    Grid gDescriptions_2 = new Grid();
-                    gDescriptions_2.Height = 17.6;
+                    Grid gDescriptions_2 = PG.GridInit();
                     TextBlock tbDescriptions_2 = new TextBlock();
                     tbDescriptions_2.HorizontalAlignment = HorizontalAlignment.Left;
                     tbDescriptions_2.Text = BWTTag[5];
@@ -118,8 +112,7 @@ namespace 饥荒百科全书CSharp
                 #region "描述_3  BWTTag[6]"
                 if (BWTTag[6] != "")
                 {
-                    Grid gDescriptions_3 = new Grid();
-                    gDescriptions_3.Height = 17.6;
+                    Grid gDescriptions_3 = PG.GridInit();
                     TextBlock tbDescriptions_3 = new TextBlock();
                     tbDescriptions_3.HorizontalAlignment = HorizontalAlignment.Left;
                     tbDescriptions_3.Text = BWTTag[6];
@@ -134,8 +127,9 @@ namespace 饥荒百科全书CSharp
                 #region "生命  BWTTag[7]"
                 if (BWTTag[7] != "")
                 {
-                    Grid gHealth = new Grid();
-                    gHealth.Height = 40;
+                    GI = PG.GridInterval(25);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gHealth = PG.GridInit(15);
                     PropertyBar pbHealth = new PropertyBar();
                     pbHealth.UCTextBlockName.Width = 57;
                     pbHealth.UCTextBlockName.Text = "生命";
@@ -143,9 +137,6 @@ namespace 饥荒百科全书CSharp
                     pbHealth.UCProgressBar.Foreground = BC.brushConverter(PBCGreen);
                     pbHealth.UCTextBlockValue.Width = 32;
                     pbHealth.UCTextBlockValue.Text = BWTTag[7];
-                    Thickness THealth = new Thickness();
-                    THealth.Top = 25;
-                    pbHealth.Margin = THealth;
                     gHealth.Children.Add(pbHealth);
                     WrapPanel_Left_Character.Children.Add(gHealth);
                 }
@@ -153,8 +144,9 @@ namespace 饥荒百科全书CSharp
                 #region "饥饿  BWTTag[8]"
                 if (BWTTag[8] != "")
                 {
-                    Grid gHunger = new Grid();
-                    gHunger.Height = 25;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gHunger = PG.GridInit(15);
                     PropertyBar pbHunger = new PropertyBar();
                     pbHunger.UCTextBlockName.Width = 57;
                     pbHunger.UCTextBlockName.Text = "饥饿";
@@ -162,14 +154,9 @@ namespace 饥荒百科全书CSharp
                     pbHunger.UCProgressBar.Foreground = BC.brushConverter(PBCOrange);
                     pbHunger.UCTextBlockValue.Width = 32;
                     pbHunger.UCTextBlockValue.Text = BWTTag[8];
-                    Thickness THunger = new Thickness();
-                    THunger.Top = 10;
-                    pbHunger.Margin = THunger;
                     gHunger.Children.Add(pbHunger);
                     if (BWTTag[1] == "沃尔夫冈")
                     {
-                        //Grid gWolfgang = new Grid();
-                        //gWolfgang.Height = 16;
                         Slider WolfgangSlider = new Slider();
                         WolfgangSlider.Style = (Style)FindResource("SliderStyle");
                         WolfgangSlider.Focusable = false;
@@ -181,13 +168,10 @@ namespace 饥荒百科全书CSharp
                         WolfgangSlider.LargeChange = 10;
                         WolfgangSlider.ValueChanged += WolfgangSlider_ValueChanged;
                         Thickness TSlider = new Thickness();
-                        TSlider.Top = 10;
                         TSlider.Left = 72;
                         TSlider.Right = 37;
                         WolfgangSlider.Margin = TSlider;
                         gHunger.Children.Add(WolfgangSlider);
-                        //gWolfgang.Children.Add(WolfgangSlider);
-                        //WrapPanel_Left_Character.Children.Add(gWolfgang);
                     }
                     WrapPanel_Left_Character.Children.Add(gHunger);
                 }
@@ -195,8 +179,9 @@ namespace 饥荒百科全书CSharp
                 #region "精神  BWTTag[9]"
                 if (BWTTag[9] != "")
                 {
-                    Grid gSanity = new Grid();
-                    gSanity.Height = 25;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gSanity = PG.GridInit(15);
                     PropertyBar pbSanity = new PropertyBar();
                     pbSanity.UCTextBlockName.Width = 57;
                     pbSanity.UCTextBlockName.Text = "精神";
@@ -204,9 +189,6 @@ namespace 饥荒百科全书CSharp
                     pbSanity.UCProgressBar.Foreground = BC.brushConverter(PBCRed);
                     pbSanity.UCTextBlockValue.Width = 32;
                     pbSanity.UCTextBlockValue.Text = BWTTag[9];
-                    Thickness TSanity = new Thickness();
-                    TSanity.Top = 10;
-                    pbSanity.Margin = TSanity;
                     gSanity.Children.Add(pbSanity);
                     WrapPanel_Left_Character.Children.Add(gSanity);
                 }
@@ -214,8 +196,9 @@ namespace 饥荒百科全书CSharp
                 #region "树木值  BWTTag[10]"
                 if (BWTTag[10] != "")
                 {
-                    Grid gDamage = new Grid();
-                    gDamage.Height = 25;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gDamage = PG.GridInit(15);
                     PropertyBar pbDamage = new PropertyBar();
                     pbDamage.UCTextBlockName.Width = 57;
                     pbDamage.UCTextBlockName.Text = "树木值";
@@ -223,9 +206,6 @@ namespace 饥荒百科全书CSharp
                     pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCPink);
                     pbDamage.UCTextBlockValue.Width = 32;
                     pbDamage.UCTextBlockValue.Text = BWTTag[10];
-                    Thickness TDamage = new Thickness();
-                    TDamage.Top = 10;
-                    pbDamage.Margin = TDamage;
                     gDamage.Children.Add(pbDamage);
                     WrapPanel_Left_Character.Children.Add(gDamage);
                 }
@@ -233,8 +213,9 @@ namespace 饥荒百科全书CSharp
                 #region "伤害  BWTTag[11]"
                 if (BWTTag[11] != "")
                 {
-                    Grid gDamage = new Grid();
-                    gDamage.Height = 25;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gDamage = PG.GridInit(15);
                     PropertyBar pbDamage = new PropertyBar();
                     pbDamage.UCTextBlockName.Width = 57;
                     pbDamage.UCTextBlockName.Text = "伤害";
@@ -249,9 +230,6 @@ namespace 饥荒百科全书CSharp
                     {
                         pbDamage.UCTextBlockValue.Text = BWTTag[11];
                     }
-                    Thickness TDamage = new Thickness();
-                    TDamage.Top = 10;
-                    pbDamage.Margin = TDamage;
                     gDamage.Children.Add(pbDamage);
                     WrapPanel_Left_Character.Children.Add(gDamage);
                 }
@@ -259,8 +237,9 @@ namespace 饥荒百科全书CSharp
                 #region "伤害(白天)  BWTTag[12]"
                 if (BWTTag[12] != "")
                 {
-                    Grid gDamage = new Grid();
-                    gDamage.Height = 25;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gDamage = PG.GridInit(15);
                     PropertyBar pbDamage = new PropertyBar();
                     pbDamage.UCTextBlockName.Width = 57;
                     pbDamage.UCTextBlockName.Text = "伤害(白天)";
@@ -268,9 +247,6 @@ namespace 饥荒百科全书CSharp
                     pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
                     pbDamage.UCTextBlockValue.Width = 32;
                     pbDamage.UCTextBlockValue.Text = BWTTag[12];
-                    Thickness TDamage = new Thickness();
-                    TDamage.Top = 10;
-                    pbDamage.Margin = TDamage;
                     gDamage.Children.Add(pbDamage);
                     WrapPanel_Left_Character.Children.Add(gDamage);
                 }
@@ -278,8 +254,9 @@ namespace 饥荒百科全书CSharp
                 #region "伤害(黄昏)  BWTTag[13]"
                 if (BWTTag[13] != "")
                 {
-                    Grid gDamage = new Grid();
-                    gDamage.Height = 25;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gDamage = PG.GridInit(15);
                     PropertyBar pbDamage = new PropertyBar();
                     pbDamage.UCTextBlockName.Width = 57;
                     pbDamage.UCTextBlockName.Text = "伤害(黄昏)";
@@ -287,9 +264,6 @@ namespace 饥荒百科全书CSharp
                     pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
                     pbDamage.UCTextBlockValue.Width = 32;
                     pbDamage.UCTextBlockValue.Text = BWTTag[13];
-                    Thickness TDamage = new Thickness();
-                    TDamage.Top = 10;
-                    pbDamage.Margin = TDamage;
                     gDamage.Children.Add(pbDamage);
                     WrapPanel_Left_Character.Children.Add(gDamage);
                 }
@@ -297,8 +271,9 @@ namespace 饥荒百科全书CSharp
                 #region "伤害(夜晚)  BWTTag[14]"
                 if (BWTTag[14] != "")
                 {
-                    Grid gDamage = new Grid();
-                    gDamage.Height = 25;
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Character.Children.Add(GI);
+                    Grid gDamage = PG.GridInit(15);
                     PropertyBar pbDamage = new PropertyBar();
                     pbDamage.UCTextBlockName.Width = 57;
                     pbDamage.UCTextBlockName.Text = "伤害(夜晚)";
@@ -306,32 +281,27 @@ namespace 饥荒百科全书CSharp
                     pbDamage.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
                     pbDamage.UCTextBlockValue.Width = 32;
                     pbDamage.UCTextBlockValue.Text = BWTTag[14];
-                    Thickness TDamage = new Thickness();
-                    TDamage.Top = 10;
-                    pbDamage.Margin = TDamage;
                     gDamage.Children.Add(pbDamage);
                     WrapPanel_Left_Character.Children.Add(gDamage);
                 }
                 #endregion
                 #region "介绍  BWTTag[15]"
-                Grid gIntroduce = new Grid();
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Character.Children.Add(GI);
+                Grid gIntroduce = PG.GridInit();
                 TextBlock tbIntroduce = new TextBlock();
                 tbIntroduce.HorizontalAlignment = HorizontalAlignment.Left;
                 tbIntroduce.TextWrapping = TextWrapping.Wrap;
                 tbIntroduce.Text = BWTTag[15];
                 tbIntroduce.FontSize = 13;
                 Thickness TIntroduce = new Thickness();
-                TIntroduce.Top = 20;
                 TIntroduce.Left = 15;
                 tbIntroduce.Margin = TIntroduce;
                 gIntroduce.Children.Add(tbIntroduce);
                 WrapPanel_Left_Character.Children.Add(gIntroduce);
                 #endregion
-                #region "底部填充"
-                Grid gButtonFill = new Grid();
-                gButtonFill.Height = 20;
-                WrapPanel_Left_Character.Children.Add(gButtonFill);
-                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Character.Children.Add(GI);
                 WrapPanel_Left_Character_SizeChanged(null, null);//调整位置
             }
             catch { }
