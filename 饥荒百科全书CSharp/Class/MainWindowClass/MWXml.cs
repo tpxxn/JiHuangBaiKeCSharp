@@ -189,7 +189,7 @@ namespace 饥荒百科全书CSharp
                         {
                             #region "食谱"
                             case "FoodRecipe":
-                                ExpanderStackpanel ESRecipe = new ExpanderStackpanel("食谱");
+                                ExpanderStackpanel ESRecipe = new ExpanderStackpanel("食谱", "../Resources/CP_CrockPot.png");
                                 WrapPanel_Right_Food.Children.Add(ESRecipe);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
@@ -323,7 +323,7 @@ namespace 饥荒百科全书CSharp
                             #endregion
                             #region "肉类"
                             case "FoodMeats":
-                                ExpanderStackpanel ESMeast = new ExpanderStackpanel("肉类");
+                                ExpanderStackpanel ESMeast = new ExpanderStackpanel("肉类", "../Resources/GameResources/Food/FC_Meats.png");
                                 WrapPanel_Right_Food.Children.Add(ESMeast);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
@@ -354,7 +354,7 @@ namespace 饥荒百科全书CSharp
                             #endregion
                             #region "蔬菜"
                             case "FoodVegetables":
-                                ExpanderStackpanel ESVegetables = new ExpanderStackpanel("蔬菜");
+                                ExpanderStackpanel ESVegetables = new ExpanderStackpanel("蔬菜", "../Resources/GameResources/Food/FC_Vegetables.png");
                                 WrapPanel_Right_Food.Children.Add(ESVegetables);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {

@@ -11,7 +11,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
     {
         public ExpanderStackpanel(string textblockText = "", string imageSource = "")
         {
-            InitializeComponent();
+            InitializeComponent(); 
             UCTextBlock.Text = textblockText;
             if (imageSource != "")
             {
@@ -19,7 +19,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
                 T.Left = 32;
                 UCTextBlock.Margin = T;
                 UCImage.Visibility = Visibility.Visible;
-                UCImage.Source = RSN.PictureShortName(RSN.ShortName(imageSource));
+                UCImage.Source = RSN.PictureShortName(imageSource);
             }
         }
     }

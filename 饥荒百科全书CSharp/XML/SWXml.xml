@@ -308,19 +308,9 @@
         <Perish>10</Perish>
         <Cooktime>15</Cooktime>
         <Priority>0</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Meats</NeedPicture_1>
+        <Need_1>×3</Need_1>
+        <Restrictions_1 pre="无">F_twigs</Restrictions_1>
         <Recommend_1>F_monster_meat</Recommend_1>
         <Recommend_2>F_meat</Recommend_2>
         <Recommend_3>F_meat</Recommend_3>
@@ -338,25 +328,38 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>1</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_butterfly_wing</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Vegetables</NeedPicture_2>
+        <Need_2>×0.5</Need_2>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
         <Recommend_1>F_butterfly_wing</Recommend_1>
         <Recommend_2>F_carrot</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
         <Recommend_4>F_twigs</Recommend_4>
         <Introduce>俗称蝴蝶排。食材简单，回血不少。</Introduce>
         <Console>butterflymuffin</Console>
+      </Food>
+      <Food>
+        <Picture>F_froggle_bunwich</Picture>
+        <Name>青蛙圆面包三明治</Name>
+        <EnName>Froggle Bunwich</EnName>
+        <Health>20</Health>
+        <Hunger>37.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Cooktime>10</Cooktime>
+        <Priority>1</Priority>
+        <NeedPicture_1>F_frog_legs</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Vegetables</NeedPicture_2>
+        <Need_2>×0.5</Need_2>
+        <Recommend_1>F_frog_legs</Recommend_1>
+        <Recommend_2>F_carrot</Recommend_2>
+        <Recommend_3>F_twigs</Recommend_3>
+        <Recommend_4>F_twigs</Recommend_4>
+        <Introduce>俗称青蛙排。在青蛙雨过后如果不知道青蛙腿怎么用做做这个也不错。</Introduce>
+        <Console>frogglebunwich</Console>
       </Food>
       <Food>
         <Picture>F_dragonpie</Picture>
@@ -368,19 +371,9 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>1</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_dragon_fruit</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
         <Recommend_1>F_dragon_fruit</Recommend_1>
         <Recommend_2>F_twigs</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -398,19 +391,10 @@
         <Perish>6</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fishes</NeedPicture_1>
+        <Need_1>×0.5</Need_1>
+        <NeedPicture_2>F_corn</NeedPicture_2>
+        <Need_2>×1</Need_2>
         <Recommend_1>F_fish</Recommend_1>
         <Recommend_2>F_corn</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -428,19 +412,11 @@
         <Perish>10</Perish>
         <Cooktime>40</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fishes</NeedPicture_1>
+        <Need_1>×0.5</Need_1>
+        <NeedPicture_2>F_twigs</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <Restrictions_1 pre="最多 1">F_twigs</Restrictions_1>
         <Recommend_1>F_fish</Recommend_1>
         <Recommend_2>F_twigs</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
@@ -458,55 +434,17 @@
         <Perish>15</Perish>
         <Cooktime>10</Cooktime>
         <Priority>0</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fruit</NeedPicture_1>
+        <Need_1>×0.5</Need_1>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
+        <Restrictions_2 pre="无">FC_Vegetables</Restrictions_2>
+        <Restrictions_3 pre="无">F_twigs</Restrictions_3>
         <Recommend_1>F_berries</Recommend_1>
         <Recommend_2>F_berries</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
         <Recommend_4>F_berries</Recommend_4>
         <Introduce>大概是不小心丢了四个浆果在锅里...还是放一点肉做肉丸子比较好。</Introduce>
         <Console>jammypreserves</Console>
-      </Food>
-      <Food>
-        <Picture>F_froggle_bunwich</Picture>
-        <Name>青蛙圆面包三明治</Name>
-        <EnName>Froggle Bunwich</EnName>
-        <Health>20</Health>
-        <Hunger>37.5</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>10</Perish>
-        <Cooktime>10</Cooktime>
-        <Priority>1</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
-        <Recommend_1>F_frog_legs</Recommend_1>
-        <Recommend_2>F_carrot</Recommend_2>
-        <Recommend_3>F_twigs</Recommend_3>
-        <Recommend_4>F_twigs</Recommend_4>
-        <Introduce>俗称青蛙排。在青蛙雨过后如果不知道青蛙腿怎么用做做这个也不错。</Introduce>
-        <Console>frogglebunwich</Console>
       </Food>
       <Food>
         <Picture>F_fruit_medley</Picture>
@@ -518,19 +456,10 @@
         <Perish>6</Perish>
         <Cooktime>10</Cooktime>
         <Priority>0</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fruit</NeedPicture_1>
+        <Need_1>×3</Need_1>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
+        <Restrictions_2 pre="无">FC_Vegetables</Restrictions_2>
         <Recommend_1>F_banana</Recommend_1>
         <Recommend_2>F_banana</Recommend_2>
         <Recommend_3>F_banana</Recommend_3>
@@ -548,19 +477,12 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>2</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_honey</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Meats</NeedPicture_2>
+        <Need_2>×0.5</Need_2>
+        <Restrictions_1 pre="无">F_twigs</Restrictions_1>
+        <Restrictions_2 pre="最多 2">FC_Meats</Restrictions_2>
         <Recommend_1>F_honey</Recommend_1>
         <Recommend_2>F_morsel</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
@@ -578,19 +500,11 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>2</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_honey</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Meats</NeedPicture_2>
+        <Need_2>×2</Need_2>
+        <Restrictions_1 pre="无">F_twigs</Restrictions_1>
         <Recommend_1>F_honey</Recommend_1>
         <Recommend_2>F_morsel</Recommend_2>
         <Recommend_3>F_monster_meat</Recommend_3>
@@ -608,19 +522,12 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>5</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_twigs</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Meats</NeedPicture_2>
+        <Need_2>×0.5</Need_2>
+        <Restrictions_1 pre="最多 1">F_twigs</Restrictions_1>
+        <Restrictions_2 pre="最多 1">FC_Monster_Meats</Restrictions_2>
         <Recommend_1>F_twigs</Recommend_1>
         <Recommend_2>F_morsel</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
@@ -638,19 +545,8 @@
         <Perish>6</Perish>
         <Cooktime>60</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_mandrake</NeedPicture_1>
+        <Need_1>×1</Need_1>
         <Recommend_1>F_mandrake</Recommend_1>
         <Recommend_2>F_twigs</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -668,19 +564,13 @@
         <Perish>6</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Monster_Meats</NeedPicture_1>
+        <Need_1>或</Need_1>
+        <NeedPicture_or>F_durian</NeedPicture_or>
+        <Need_or>或</Need_or>
+        <NeedPicture_2>FC_Jellyfish</NeedPicture_2>
+        <Need_2>×2</Need_2>
+        <Restrictions_1 pre="无">F_twigs</Restrictions_1>
         <Recommend_1>F_monster_meat</Recommend_1>
         <Recommend_2>F_monster_meat</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
@@ -698,19 +588,13 @@
         <Perish>20</Perish>
         <Cooktime>20</Cooktime>
         <Priority>5</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Eggs</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Meats</NeedPicture_2>
+        <Need_2>×0.5</Need_2>
+        <NeedPicture_3>FC_Vegetables</NeedPicture_3>
+        <Need_3>×0.5</Need_3>
+        <Restrictions_1 pre="无">F_twigs</Restrictions_1>
         <Recommend_1>F_egg</Recommend_1>
         <Recommend_2>F_morsel</Recommend_2>
         <Recommend_3>F_cooked_green_cap</Recommend_3>
@@ -728,19 +612,12 @@
         <Perish>18750</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_corn</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_honey</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>F_twigs</NeedPicture_3>
+        <Need_3>×1</Need_3>
         <Recommend_1>F_corn</Recommend_1>
         <Recommend_2>F_honey</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -758,19 +635,10 @@
         <Perish>10</Perish>
         <Cooktime>40</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_pumpkin</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Sweetener</NeedPicture_2>
+        <Need_2>×2</Need_2>
         <Recommend_1>F_pumpkin</Recommend_1>
         <Recommend_2>F_honey</Recommend_2>
         <Recommend_3>F_honey</Recommend_3>
@@ -788,19 +656,10 @@
         <Perish>15</Perish>
         <Cooktime>20</Cooktime>
         <Priority>0</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Vegetables</NeedPicture_1>
+        <Need_1>×0.5</Need_1>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
+        <Restrictions_2 pre="无">F_twigs</Restrictions_2>
         <Recommend_1>F_carrot</Recommend_1>
         <Recommend_2>F_berries</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
@@ -818,19 +677,10 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>1</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Vegetables</NeedPicture_1>
+        <Need_1>×0.5</Need_1>
+        <NeedPicture_2>F_eggplant</NeedPicture_2>
+        <Need_2>×1</Need_2>
         <Recommend_1>F_eggplant</Recommend_1>
         <Recommend_2>F_carrot</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -848,19 +698,9 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Sweetener</NeedPicture_1>
+        <Need_1>×3</Need_1>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
         <Recommend_1>F_honey</Recommend_1>
         <Recommend_2>F_honey</Recommend_2>
         <Recommend_3>F_honey</Recommend_3>
@@ -878,19 +718,14 @@
         <Perish>6</Perish>
         <Cooktime>60</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fruit</NeedPicture_1>
+        <Need_1>或</Need_1>
+        <NeedPicture_or>FC_Vegetables</NeedPicture_or>
+        <Need_or>×0.5</Need_or>
+        <NeedPicture_2>F_drumstick</NeedPicture_2>
+        <Need_2>×2</Need_2>
+        <NeedPicture_3>FC_Meats</NeedPicture_3>
+        <Need_3>×0.5</Need_3>
         <Recommend_1>F_drumstick</Recommend_1>
         <Recommend_2>F_drumstick</Recommend_2>
         <Recommend_3>F_morsel</Recommend_3>
@@ -908,19 +743,10 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>20</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_eel</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_lichen</NeedPicture_2>
+        <Need_2>×1</Need_2>
         <Recommend_1>F_eel</Recommend_1>
         <Recommend_2>F_lichen</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -938,19 +764,12 @@
         <Perish>6</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_butter</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Eggs</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>F_berries</NeedPicture_3>
+        <Need_3>×1</Need_3>
         <Recommend_1>F_butter</Recommend_1>
         <Recommend_2>F_egg</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
@@ -968,19 +787,15 @@
         <Perish>6</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_cactus_flower</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>FC_Vegetables</NeedPicture_2>
+        <Need_2>×2</Need_2>
+        <Restrictions_1 pre="无">FC_Fruit</Restrictions_1>
+        <Restrictions_2 pre="无">FC_Meats</Restrictions_2>
+        <Restrictions_3 pre="无">FC_Eggs</Restrictions_3>
+        <Restrictions_4 pre="无">FC_Sweetener</Restrictions_4>
+        <Restrictions_5 pre="无">F_twigs</Restrictions_5>
         <Recommend_1>F_cactus_flower</Recommend_1>
         <Recommend_2>F_eggplant</Recommend_2>
         <Recommend_3>F_pumpkin</Recommend_3>
@@ -998,19 +813,11 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_cactus_flesh</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_moleworm</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <Restrictions_1 pre="无">FC_Fruit</Restrictions_1>
         <Recommend_1>F_cactus_flesh</Recommend_1>
         <Recommend_2>F_cactus_flesh</Recommend_2>
         <Recommend_3>F_cactus_flesh</Recommend_3>
@@ -1028,19 +835,16 @@
         <Perish>3</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Dairy_product</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_ice</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>FC_Sweetener</NeedPicture_3>
+        <Need_3>×1</Need_3>
+        <Restrictions_1 pre="无">FC_Vegetables</Restrictions_1>
+        <Restrictions_2 pre="无">FC_Meats</Restrictions_2>
+        <Restrictions_3 pre="无">FC_Eggs</Restrictions_3>
+        <Restrictions_4 pre="无">F_twigs</Restrictions_4>
         <Recommend_1>F_electric_milk</Recommend_1>
         <Recommend_2>F_ice</Recommend_2>
         <Recommend_3>F_honey</Recommend_3>
@@ -1058,19 +862,15 @@
         <Perish>3</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_watermelon</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_ice</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>F_twigs</NeedPicture_3>
+        <Need_3>×1</Need_3>
+        <Restrictions_1 pre="无">FC_Vegetables</Restrictions_1>
+        <Restrictions_2 pre="无">FC_Meats</Restrictions_2>
+        <Restrictions_3 pre="无">FC_Eggs</Restrictions_3>
         <Recommend_1>F_watermelon</Recommend_1>
         <Recommend_2>F_ice</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -1088,19 +888,10 @@
         <Perish>10</Perish>
         <Cooktime>40</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Meats</NeedPicture_1>
+        <Need_1>×1.5</Need_1>
+        <NeedPicture_2>FC_Vegetables</NeedPicture_2>
+        <Need_2>×1.5</Need_2>
         <Recommend_1>F_meat</Recommend_1>
         <Recommend_2>F_morsel</Recommend_2>
         <Recommend_3>F_eggplant</Recommend_3>
@@ -1118,19 +909,16 @@
         <Perish>15</Perish>
         <Cooktime>10</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_roasted_birchnut</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_berries</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>FC_Fruit</NeedPicture_3>
+        <Need_3>×0.5</Need_3>
+        <Restrictions_1 pre="无">FC_Vegetables</Restrictions_1>
+        <Restrictions_2 pre="无">FC_Meats</Restrictions_2>
+        <Restrictions_3 pre="无">FC_Eggs</Restrictions_3>
+        <Restrictions_4 pre="无">FC_Dairy_product</Restrictions_4>
         <Recommend_1>F_roasted_birchnut</Recommend_1>
         <Recommend_2>F_berries</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
@@ -1148,19 +936,14 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>20</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_banana</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_ice</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>F_twigs</NeedPicture_3>
+        <Need_3>×1</Need_3>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
+        <Restrictions_2 pre="无">FC_Fishes</Restrictions_2>
         <Recommend_1>F_banana</Recommend_1>
         <Recommend_2>F_ice</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -1178,19 +961,10 @@
         <Perish>10</Perish>
         <Cooktime>20</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_limpets</NeedPicture_1>
+        <Need_1>×3</Need_1>
+        <NeedPicture_2>F_ice</NeedPicture_2>
+        <Need_2>×1</Need_2>
         <Recommend_1>F_limpets</Recommend_1>
         <Recommend_2>F_limpets</Recommend_2>
         <Recommend_3>F_limpets</Recommend_3>
@@ -1208,19 +982,11 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>20</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_seaweed</NeedPicture_1>
+        <Need_1>×2</Need_1>
+        <NeedPicture_2>FC_Fishes</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <Restrictions_1 pre="最多 2">F_seaweed</Restrictions_1>
         <Recommend_1>F_seaweed</Recommend_1>
         <Recommend_2>F_seaweed</Recommend_2>
         <Recommend_3>F_limpets</Recommend_3>
@@ -1238,19 +1004,10 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>20</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fishes</NeedPicture_1>
+        <Need_1>×2</Need_1>
+        <NeedPicture_2>F_ice</NeedPicture_2>
+        <Need_2>×1</Need_2>
         <Recommend_1>F_tropical_fish</Recommend_1>
         <Recommend_2>F_tropical_fish</Recommend_2>
         <Recommend_3>F_tropical_fish</Recommend_3>
@@ -1268,19 +1025,11 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_roasted_coffee_beans</NeedPicture_1>
+        <Need_1>×3</Need_1>
+        <Restrictions_1 pre="仅">FC_Dairy_product</Restrictions_1>
+        <Restrictions_2 pre="仅">FC_Sweetener</Restrictions_2>
+        <Restrictions_3 pre="仅">F_roasted_coffee_beans</Restrictions_3>
         <Recommend_1>F_roasted_coffee_beans</Recommend_1>
         <Recommend_2>F_roasted_coffee_beans</Recommend_2>
         <Recommend_3>F_roasted_coffee_beans</Recommend_3>
@@ -1299,19 +1048,12 @@
         <Perish>10</Perish>
         <Cooktime>20</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fruit</NeedPicture_1>
+        <Need_1>×2</Need_1>
+        <NeedPicture_2>F_butter</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>F_honey</NeedPicture_3>
+        <Need_3>×1</Need_3>
         <Recommend_1>F_banana</Recommend_1>
         <Recommend_2>F_banana</Recommend_2>
         <Recommend_3>F_butter</Recommend_3>
@@ -1329,19 +1071,12 @@
         <Perish>3</Perish>
         <Cooktime>10</Cooktime>
         <Priority>20</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_jellyfish</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_ice</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>F_twigs</NeedPicture_3>
+        <Need_3>×1</Need_3>
         <Recommend_1>F_jellyfish</Recommend_1>
         <Recommend_2>F_ice</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -1359,19 +1094,10 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_wobster</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_ice</NeedPicture_2>
+        <Need_2>×1</Need_2>
         <Recommend_1>F_wobster</Recommend_1>
         <Recommend_2>F_ice</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -1389,19 +1115,12 @@
         <Perish>15</Perish>
         <Cooktime>20</Cooktime>
         <Priority>25</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_wobster</NeedPicture_1>
+        <Need_1>×1</Need_1>
+        <NeedPicture_2>F_butter</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
+        <Restrictions_2 pre="无">F_ice</Restrictions_2>
         <Recommend_1>F_wobster</Recommend_1>
         <Recommend_2>F_butter</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -1420,19 +1139,14 @@
         <Perish>10</Perish>
         <Cooktime>20</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Monster_Meats</NeedPicture_1>
+        <Need_1>或</Need_1>
+        <NeedPicture_or>F_durian</NeedPicture_or>
+        <Need_or>×2</Need_or>
+        <NeedPicture_2>FC_Eggs</NeedPicture_2>
+        <Need_2>×1</Need_2>
+        <NeedPicture_3>FC_Vegetables</NeedPicture_3>
+        <Need_3>×0.5</Need_3>
         <Recommend_1>F_monster_meat</Recommend_1>
         <Recommend_2>F_monster_meat</Recommend_2>
         <Recommend_3>F_egg</Recommend_3>
@@ -1451,19 +1165,10 @@
         <Perish>10</Perish>
         <Cooktime>20</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_mussel</NeedPicture_1>
+        <Need_1>×2</Need_1>
+        <NeedPicture_2>FC_Vegetables</NeedPicture_2>
+        <Need_2>×2</Need_2>
         <Recommend_1>F_mussel</Recommend_1>
         <Recommend_2>F_mussel</Recommend_2>
         <Recommend_3>F_sweet_potato</Recommend_3>
@@ -1481,19 +1186,8 @@
         <Perish>10</Perish>
         <Cooktime>20</Cooktime>
         <Priority>10</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Fishes</NeedPicture_1>
+        <Need_1>×2.5</Need_1>
         <Recommend_1>F_tropical_fish</Recommend_1>
         <Recommend_2>F_tropical_fish</Recommend_2>
         <Recommend_3>F_tropical_fish</Recommend_3>
@@ -1511,19 +1205,8 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>20</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_shark_fin</NeedPicture_1>
+        <Need_1>×1</Need_1>
         <Recommend_1>F_shark_fin</Recommend_1>
         <Recommend_2>F_twigs</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
@@ -1541,19 +1224,11 @@
         <Perish>10</Perish>
         <Cooktime>10</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>FC_Meats</NeedPicture_1>
+        <Need_1>×2.5</Need_1>
+        <NeedPicture_2>FC_Fishes</NeedPicture_2>
+        <Need_2>×1.5</Need_2>
+        <Restrictions_1 pre="无">F_ice</Restrictions_1>
         <Recommend_1>F_meat</Recommend_1>
         <Recommend_2>F_morsel</Recommend_2>
         <Recommend_3>F_tropical_fish</Recommend_3>
@@ -1572,19 +1247,10 @@
         <Perish>10</Perish>
         <Cooktime>20</Cooktime>
         <Priority>30</Priority>
-        <NeedPicture_1></NeedPicture_1>
-        <Need_1>×</Need_1>
-        <NeedPicture_or></NeedPicture_or>
-        <Need_or></Need_or>
-        <NeedPicture_2></NeedPicture_2>
-        <Need_2>×</Need_2>
-        <NeedPicture_3></NeedPicture_3>
-        <Need_3>×</Need_3>
-        <Restrictions_1></Restrictions_1>
-        <Restrictions_2></Restrictions_2>
-        <Restrictions_3></Restrictions_3>
-        <Restrictions_4></Restrictions_4>
-        <Restrictions_5></Restrictions_5>
+        <NeedPicture_1>F_sweet_potato</NeedPicture_1>
+        <Need_1>×2</Need_1>
+        <NeedPicture_2>FC_Eggs</NeedPicture_2>
+        <Need_2>×2</Need_2>
         <Recommend_1>F_sweet_potato</Recommend_1>
         <Recommend_2>F_sweet_potato</Recommend_2>
         <Recommend_3>F_egg</Recommend_3>
@@ -1612,14 +1278,756 @@
         <Picture>F_meat</Picture>
         <Name>肉</Name>
         <EnName>Meat</EnName>
+        <Health>1</Health>
+        <Hunger>25</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>狩猎猪人、牛、高脚鸟等较大生物获得。</Introduce>
+        <Console>meat</Console>
       </Food>
       <Food>
         <Picture>F_cooked_meat</Picture>
         <Name>熟肉</Name>
         <EnName>Cooked Meat</EnName>
+        <Health>3</Health>
+        <Hunger>25</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把肉放在篝火上烤制。</Introduce>
+        <Console>cookedmeat</Console>
+      </Food>
+      <Food>
+        <Picture>F_jerky</Picture>
+        <Name>肉干</Name>
+        <EnName>Jerky</EnName>
+        <Health>20</Health>
+        <Hunger>25</Hunger>
+        <Sanity>15</Sanity>
+        <Perish>20</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把肉挂在晒肉架上风干制成。</Introduce>
+        <Console>meat_dried</Console>
+      </Food>
+      <Food>
+        <Picture>F_monster_meat</Picture>
+        <Name>怪兽肉</Name>
+        <EnName>Monster Jerky</EnName>
+        <Health>-20</Health>
+        <Hunger>18.75</Hunger>
+        <Sanity>-15</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Monster_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>狩猎蜘蛛、狗、触手、小偷等怪物获得。</Introduce>
+        <Console>monstermeat</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_monster_meat</Picture>
+        <Name>熟怪兽肉</Name>
+        <EnName>Cooked Monster Meat</EnName>
+        <Health>-3</Health>
+        <Hunger>18.75</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>15</Perish>
+        <Attribute>FC_Monster_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把怪兽肉放在篝火上烤制。</Introduce>
+        <Console>cookedmonstermeat</Console>
+      </Food>
+      <Food>
+        <Picture>F_monster_jerky</Picture>
+        <Name>怪兽肉干</Name>
+        <EnName>Monster Jerky</EnName>
+        <Health>-3</Health>
+        <Hunger>18.75</Hunger>
+        <Sanity>-5</Sanity>
+        <Perish>20</Perish>
+        <Attribute>FC_Monster_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把怪兽肉挂在晒肉架上风干制成。</Introduce>
+        <Console>monstermeat_dried</Console>
+      </Food>
+      <Food>
+        <Picture>F_morsel</Picture>
+        <Name>小肉块</Name>
+        <EnName>Morsel</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>狩猎鸟、小兔、小牛等小型生物获得。</Introduce>
+        <Console>smallmeat</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_morsel</Picture>
+        <Name>熟肉块</Name>
+        <EnName>Cooked Morsel</EnName>
+        <Health>3</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把小块肉放在篝火上烤制。</Introduce>
+        <Console>cookedsmallmeat</Console>
+      </Food>
+      <Food>
+        <Picture>F_small_jerky</Picture>
+        <Name>小块肉干</Name>
+        <EnName>Small Jerky</EnName>
+        <Health>8</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>10</Sanity>
+        <Perish>20</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把小肉块、鸡腿、鱼、青蛙腿挂在晒肉架上风干制成。</Introduce>
+        <Console>smallmeat_dried</Console>
+      </Food>
+      <Food>
+        <Picture>F_drumstick</Picture>
+        <Name>鸡腿</Name>
+        <EnName>Drumstick</EnName>
+        <Health>0</Health>
+        <Hunger>12.4</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>狩猎火鸡、渡渡鸟和莫斯林获得。</Introduce>
+        <Console>drumstick</Console>
+      </Food>
+      <Food>
+        <Picture>F_fried_drumstick</Picture>
+        <Name>炸鸡腿</Name>
+        <EnName>Fried Drumstick</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把鸡腿放在篝火上烤制。</Introduce>
+        <Console>drumstick_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_frog_legs</Picture>
+        <Name>青蛙腿</Name>
+        <EnName>Frog Legs</EnName>
+        <Health>0</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>狩猎青蛙和鱼人获得。</Introduce>
+        <Console>froglegs</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_frog_legs</Picture>
+        <Name>熟青蛙腿</Name>
+        <EnName>Cooked Frog Legs</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把青蛙放在篝火上烤制。</Introduce>
+        <Console>froglegs_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_fish</Picture>
+        <Name>鱼</Name>
+        <EnName>Fish</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>3</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>蓝色池塘垂钓或者猎杀鱼人掉落。</Introduce>
+        <Console>fish</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_fish</Picture>
+        <Name>熟鱼</Name>
+        <EnName>Cooked Fish</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>把鱼放在篝火上烤制。</Introduce>
+        <Console>fish_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_eel</Picture>
+        <Name>鳗鱼</Name>
+        <EnName>Eel</EnName>
+        <Health>3</Health>
+        <Hunger>10</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>绿色池塘垂钓获得。</Introduce>
+        <Console>eel</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_eel</Picture>
+        <Name>煮熟的鳗鱼</Name>
+        <EnName>Cooked Eel</EnName>
+        <Health>8</Health>
+        <Hunger>13</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>把鳗鱼放在篝火上烤制。</Introduce>
+        <Console>eel_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_moleworm</Picture>
+        <Name>鼹鼠</Name>
+        <EnName>Moleworm</EnName>
+        <Health>0</Health>
+        <Hunger>0</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>2</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>用锤子把鼹鼠敲晕获得，不可食用。</Introduce>
+        <Console>mole</Console>
+      </Food>
+      <Food>
+        <Picture>F_limpets</Picture>
+        <Name>帽贝</Name>
+        <EnName>Limpets</EnName>
+        <Health>0</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Fishes</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>从帽贝岩上或船的残骸上获得。</Introduce>
+        <Console>limpets</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_limpets</Picture>
+        <Name>熟帽贝</Name>
+        <EnName>Cooked Limpets</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Fishes</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把帽贝放在篝火上烤制。</Introduce>
+        <Console>limpets_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_tropical_fish</Picture>
+        <Name>热带鱼</Name>
+        <EnName>Tropical Fish</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>3</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>浅滩或水坑钓鱼、狩猎鱼人或渔人获得。</Introduce>
+        <Console>tropical_fish</Console>
+      </Food>
+      <Food>
+        <Picture>F_fish_morsel</Picture>
+        <Name>小块鱼肉</Name>
+        <EnName>Fish Morsel</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>3</Perish>
+        <Attribute>FC_Fishes</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>狩猎兔蟹和宽吻海豚获得。</Introduce>
+        <Console>fish_raw_small</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_fish_morsel</Picture>
+        <Name>熟小块鱼肉</Name>
+        <EnName>Cooked Fish Morsel</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Fishes</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把热带鱼或小块鱼肉放在篝火上烤制。</Introduce>
+        <Console>fish_raw_small_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_jellyfish</Picture>
+        <Name>水母</Name>
+        <EnName>Jellyfish</EnName>
+        <Health>0</Health>
+        <Hunger>0</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>2</Perish>
+        <Attribute>FC_Monster_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>狩猎水母获得，不可食用。</Introduce>
+        <Console>jellyfish</Console>
+      </Food>
+      <Food>
+        <Picture>F_dead_jellyfish</Picture>
+        <Name>死水母</Name>
+        <EnName>Dead Jellyfish</EnName>
+        <Health>10</Health>
+        <Hunger>10</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Monster_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>水母过两天变成死水母。</Introduce>
+        <Console>jellyfish_dead</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_jellyfish</Picture>
+        <Name>熟水母</Name>
+        <EnName>Cooked Jellyfish</EnName>
+        <Health>10</Health>
+        <Hunger>18.75</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Monster_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>把水母或死水母放在篝火上烤制。</Introduce>
+        <Console>jellyfish_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_dried_jellyfish</Picture>
+        <Name>水母干</Name>
+        <EnName>Dried Jellyfish</EnName>
+        <Health>10</Health>
+        <Hunger>18.75</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>20</Perish>
+        <Attribute>FC_Monster_Meats</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>把水母挂在晒肉架上风干制成。</Introduce>
+        <Console>jellyjerky</Console>
+      </Food>
+      <Food>
+        <Picture>F_mussel</Picture>
+        <Name>贻贝</Name>
+        <EnName>Mussel</EnName>
+        <Health>0</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>-15</Sanity>
+        <Perish>3</Perish>
+        <Attribute>FC_Fishes</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>用采贝器插在青口贝上过几天即可收获。</Introduce>
+        <Console>mussel</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_mussel</Picture>
+        <Name>烤贻贝</Name>
+        <EnName>Cooked Mussel</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Fishes</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把贻贝放在篝火上烤制。</Introduce>
+        <Console>mussel_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_dead_dogfish</Picture>
+        <Name>死狗鱼</Name>
+        <EnName>Dead Dogfish</EnName>
+        <Health>1</Health>
+        <Hunger>25</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>狩猎狗鱼获得。</Introduce>
+        <Console>fish_med</Console>
+      </Food>
+      <Food>
+        <Picture>F_wobster</Picture>
+        <Name>龙虾</Name>
+        <EnName>Wobster</EnName>
+        <Health>0</Health>
+        <Hunger>0</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>2</Perish>
+        <Attribute>FC_Fishes</Attribute>
+        <AttributeValue>×2</AttributeValue>
+        <Introduce>狩猎龙虾获得，不可食用。</Introduce>
+        <Console>lobster</Console>
+      </Food>
+      <Food>
+        <Picture>F_raw_fish</Picture>
+        <Name>生鱼片</Name>
+        <EnName>Raw Fish</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>3</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>狩猎白鲸、蓝鲸、猫纹鲨鱼获得。</Introduce>
+        <Console>fish_raw</Console>
+      </Food>
+      <Food>
+        <Picture>F_fish_steak</Picture>
+        <Name>鱼排</Name>
+        <EnName>Fish Steak</EnName>
+        <Health>20</Health>
+        <Hunger>25</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>把生鱼片、死狗鱼、死旗鱼放在篝火上烤制。</Introduce>
+        <Console>fish_med_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_shark_fin</Picture>
+        <Name>鱼翅</Name>
+        <EnName>Shark Fin</EnName>
+        <Health>20</Health>
+        <Hunger>25</Hunger>
+        <Sanity>-15</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Meats</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Attribute_2>FC_Fishes</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
+        <Introduce>狩猎海狗获得。</Introduce>
+        <Console>shark_fin</Console>
       </Food>
     </FoodMeats>
     <FoodVegetables>
+      <Food>
+        <Picture>F_blue_cap</Picture>
+        <Name>蓝蘑菇</Name>
+        <EnName>Blue Cap</EnName>
+        <Health>20</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>-15</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>晚上在野外采摘。</Introduce>
+        <Console>blue_cap</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_blue_cap</Picture>
+        <Name>烤蓝蘑菇</Name>
+        <EnName>Cooked Blue Cap</EnName>
+        <Health>-3</Health>
+        <Hunger>0</Hunger>
+        <Sanity>10</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把蓝蘑菇放在篝火上烤制。</Introduce>
+        <Console>blue_cap_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_green_cap</Picture>
+        <Name>绿蘑菇</Name>
+        <EnName>Green Cap</EnName>
+        <Health>0</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>-50</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>黄昏在野外采摘。</Introduce>
+        <Console>green_cap</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_green_cap</Picture>
+        <Name>烤绿蘑菇</Name>
+        <EnName>Cooked Green Cap</EnName>
+        <Health>-1</Health>
+        <Hunger>0</Hunger>
+        <Sanity>15</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把绿蘑菇放在篝火上烤制。</Introduce>
+        <Console>green_cap_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_red_cap</Picture>
+        <Name>红蘑菇</Name>
+        <EnName>Red Cap</EnName>
+        <Health>-20</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>白天在野外采摘。</Introduce>
+        <Console>red_cap</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_red_cap</Picture>
+        <Name>烤红蘑菇</Name>
+        <EnName>Cooked Red Cap</EnName>
+        <Health>1</Health>
+        <Hunger>0</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把红蘑菇放在篝火上烤制。</Introduce>
+        <Console>red_cap_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_eggplant</Picture>
+        <Name>茄子</Name>
+        <EnName>Eggplant</EnName>
+        <Health>8</Health>
+        <Hunger>25</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>农场种植。</Introduce>
+        <Console>eggplant</Console>
+      </Food>
+      <Food>
+        <Picture>F_braised_eggplant</Picture>
+        <Name>红烧茄子</Name>
+        <EnName>Braised Eggplant</EnName>
+        <Health>20</Health>
+        <Hunger>25</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把茄子放在篝火上烤制。</Introduce>
+        <Console>eggplant_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_carrot</Picture>
+        <Name>胡萝卜</Name>
+        <EnName>Carrot</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>野外采摘或农场种植。</Introduce>
+        <Console>carrot</Console>
+      </Food>
+      <Food>
+        <Picture>F_roasted_carrot</Picture>
+        <Name>烤胡萝卜</Name>
+        <EnName>Roasted Carrot</EnName>
+        <Health>3</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把胡萝卜放在篝火上烤制。</Introduce>
+        <Console>carrot_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_corn</Picture>
+        <Name>玉米</Name>
+        <EnName>Corn</EnName>
+        <Health>3</Health>
+        <Hunger>25</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>农场种植。</Introduce>
+        <Console>corn</Console>
+      </Food>
+      <Food>
+        <Picture>F_popcorn</Picture>
+        <Name>爆米花</Name>
+        <EnName>Popcorn</EnName>
+        <Health>3</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>15</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把玉米放在篝火上烤制。</Introduce>
+        <Console>corn_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_pumpkin</Picture>
+        <Name>南瓜</Name>
+        <EnName>Pumpkin</EnName>
+        <Health>3</Health>
+        <Hunger>37.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>农场种植。</Introduce>
+        <Console>pumpkin</Console>
+      </Food>
+      <Food>
+        <Picture>F_hot_pumpkin</Picture>
+        <Name>热南瓜</Name>
+        <EnName>Hot Pumpkin</EnName>
+        <Health>8</Health>
+        <Hunger>37.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把南瓜放在篝火上烤制。</Introduce>
+        <Console>pumpkin_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_cactus_flesh</Picture>
+        <Name>仙人掌肉</Name>
+        <EnName>Cactus Flesh</EnName>
+        <Health>-3</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>-5</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>沙漠采摘。</Introduce>
+        <Console>cactus_meat</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_cactus_flesh</Picture>
+        <Name>煮好的仙人掌肉</Name>
+        <EnName>Cooked Cactus Flesh</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>15</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把仙人掌放在篝火上烤制。</Introduce>
+        <Console>cactus_meat_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_cactus_flower</Picture>
+        <Name>仙人掌花</Name>
+        <EnName>Cactus Flower</EnName>
+        <Health>8</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>5</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>夏天在沙漠采摘。</Introduce>
+        <Console>cactus_flower</Console>
+      </Food>
+      <Food>
+        <Picture>F_sweet_potato</Picture>
+        <Name>甘薯</Name>
+        <EnName>Sweet Potato</EnName>
+        <Health>1</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>野外采摘或农场种植。</Introduce>
+        <Console>sweet_potato</Console>
+      </Food>
+      <Food>
+        <Picture>F_cooked_sweet_potato</Picture>
+        <Name>烤甘薯</Name>
+        <EnName>Cooked Sweet Potato</EnName>
+        <Health>3</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>把甘薯放在篝火上烤制。</Introduce>
+        <Console>sweet_potato_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_seaweed</Picture>
+        <Name>海藻</Name>
+        <EnName>Seaweed</EnName>
+        <Health>1</Health>
+        <Hunger>9.375</Hunger>
+        <Sanity>-10</Sanity>
+        <Perish>6</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>海上采摘。</Introduce>
+        <Console>seaweed</Console>
+      </Food>
+      <Food>
+        <Picture>F_roasted_seaweed</Picture>
+        <Name>烤海藻</Name>
+        <EnName>Roasted Seaweed</EnName>
+        <Health>3</Health>
+        <Hunger>9.375</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>10</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把海藻放在篝火上烤制。</Introduce>
+        <Console>seaweed_cooked</Console>
+      </Food>
+      <Food>
+        <Picture>F_dried_seaweed</Picture>
+        <Name>晾干的海藻</Name>
+        <EnName>Dried Seaweed</EnName>
+        <Health>3</Health>
+        <Hunger>12.5</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>20</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×0.5</AttributeValue>
+        <Introduce>把海藻挂在晒肉架上风干制成。</Introduce>
+        <Console>seaweed_dried</Console>
+      </Food>
     </FoodVegetables>
     <FoodFruit>
     </FoodFruit>
