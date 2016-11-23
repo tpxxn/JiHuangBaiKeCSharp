@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
 
@@ -213,9 +215,34 @@ namespace 饥荒百科全书CSharp
                 #endregion
                 GI = PG.GridInterval(20);
                 WrapPanel_Left_Food.Children.Add(GI);
-                #region "推荐食谱 BWTTag[28-31]"
-                StackPanel sRecommend = new StackPanel();
+                #region "烹饪需求  BWTTag[10-17]"
+                WrapPanel_Left_Food.Children.Add(PG.GridTag("烹饪需求："));
 
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "填充限制  BWTTag[18-27]"
+                WrapPanel_Left_Food.Children.Add(PG.GridTag("填充限制："));
+
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "推荐食谱 BWTTag[28-31]"
+                WrapPanel_Left_Food.Children.Add(PG.GridTag("推荐食谱："));
+
+                Grid gRecommendContent = PG.GridInit(35);
+                WrapPanel sRecommendContent = new WrapPanel();
+                sRecommendContent.HorizontalAlignment = HorizontalAlignment.Center;
+                ButtonWithPicture bRecommed1 = new ButtonWithPicture(BWTTag[28], "GameResources/Food/");
+                ButtonWithPicture bRecommed2 = new ButtonWithPicture(BWTTag[29], "GameResources/Food/");
+                ButtonWithPicture bRecommed3 = new ButtonWithPicture(BWTTag[30], "GameResources/Food/");
+                ButtonWithPicture bRecommed4 = new ButtonWithPicture(BWTTag[31], "GameResources/Food/");
+                sRecommendContent.Children.Add(bRecommed1);
+                sRecommendContent.Children.Add(bRecommed2);
+                sRecommendContent.Children.Add(bRecommed3);
+                sRecommendContent.Children.Add(bRecommed4);
+                gRecommendContent.Children.Add(sRecommendContent);
+                WrapPanel_Left_Food.Children.Add(gRecommendContent);
                 #endregion
                 GI = PG.GridInterval(20);
                 WrapPanel_Left_Food.Children.Add(GI);
@@ -250,9 +277,9 @@ namespace 饥荒百科全书CSharp
                 {
                     ((Grid)uielement).Width = LeftFoodWidth;
                 }
-                if (uielement.GetType().ToString() == "System.Windows.Controls.StackPanel")
+                if (uielement.GetType().ToString() == "System.Windows.Controls.WrapPanel")
                 {
-                    ((StackPanel)uielement).Width = LeftFoodWidth;
+                    ((WrapPanel)uielement).Width = LeftFoodWidth;
                 }
             }
         }

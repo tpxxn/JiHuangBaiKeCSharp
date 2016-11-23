@@ -99,6 +99,9 @@
     <Compile Include="DownloadWindow.xaml.cs">
       <DependentUpon>DownloadWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\ButtonWithPicture.xaml.cs">
+      <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\ExpanderStackpanel.xaml.cs">
       <DependentUpon>ExpanderStackpanel.xaml</DependentUpon>
     </Compile>
@@ -165,6 +168,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MyUserControl\ButtonWithPicture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MyUserControl\ButtonWithText.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -4278,7 +4285,9 @@
     <Resource Include="Resources\GameResources\Food\F_twigs.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="XML\SWXml.xml" />
+    <EmbeddedResource Include="XML\SWXml.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -126,6 +126,23 @@ namespace 饥荒百科全书CSharp
             Cursor = (Cursor)cursorDictionary["Cursor_pointer"];
         }
 
+        //双击标题栏最大化
+        private void mainWindow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Point position_UIGrid = e.GetPosition(UIGrid);
+            if ((position_UIGrid.X >= 0 && position_UIGrid.X < UIGrid.ActualWidth && position_UIGrid.Y >= 0 && position_UIGrid.Y < UIGrid.ActualHeight))
+            {
+                if (UI_btn_maximized.Visibility == Visibility.Collapsed)
+                {
+                    UI_btn_normal_Click(null, null);
+                }
+                else
+                {
+                    UI_btn_maximized_Click(null, null);
+                }
+            }
+        }
+
         //MainWindow窗口尺寸改变
         private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
