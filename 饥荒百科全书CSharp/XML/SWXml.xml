@@ -265,7 +265,7 @@
         <Need_2>×2</Need_2>
         <NeedPicture_3></NeedPicture_3>
         <Need_3></Need_3>
-        <Restrictions_1>FC_Vegetables</Restrictions_1>
+        <Restrictions_1 pre="无">FC_Vegetables</Restrictions_1>
         <Restrictions_2></Restrictions_2>
         <Restrictions_3></Restrictions_3>
         <Restrictions_4></Restrictions_4>

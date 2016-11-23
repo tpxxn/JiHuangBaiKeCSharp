@@ -86,6 +86,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\ArrayDelRepeatData.cs" />
     <Compile Include="Class\brushConverter.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\MainWindowClass\MWFood.cs" />

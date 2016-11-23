@@ -9,7 +9,7 @@ namespace 饥荒百科全书CSharp.Class
         public static Grid GridInterval(double height)
         {
             Grid grid = new Grid();
-            grid.Background = Brushes.DarkOliveGreen;
+            //grid.Background = Brushes.DarkOliveGreen;
             grid.Height = height;
             return grid;
         }
@@ -17,7 +17,7 @@ namespace 饥荒百科全书CSharp.Class
         public static Grid GridInit(double height = 0)
         {
             Grid grid = new Grid();
-            grid.Background = Brushes.DarkOrange;
+            //grid.Background = Brushes.DarkOrange;
             if (height != 0)
             {
                 grid.Height = height;

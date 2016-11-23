@@ -26,6 +26,57 @@ namespace 饥荒百科全书CSharp
         private void Food_Click_Handle(string[] BWTTag)
         {
             //string[] BWTTag = { Picture, Name, EnName, PortableCrockPot, Health, Hunger, Sanity, Perish, Cooktime, Priority, NeedPicture_1, Need_1, NeedPicture_or, Need_or, NeedPicture_2, Need_2, NeedPicture_3, Need_3, Restrictions_1, RestrictionsAttributes_1, Restrictions_2, RestrictionsAttributes_2, Restrictions_3, RestrictionsAttributes_3, Restrictions_4, RestrictionsAttributes_4, Restrictions_5, RestrictionsAttributes_5, Recommend_1, Recommend_2, Recommend_3, Recommend_4, Introduce };
+            List<string> Restrictions_1 = new List<string>();
+            List<string> Restrictions_2 = new List<string>();
+            string[] preRes = new string[5] { BWTTag[18], BWTTag[20], BWTTag[22], BWTTag[24], BWTTag[26] };
+            string[] preResAtt = new string[5] { BWTTag[19], BWTTag[21], BWTTag[23], BWTTag[25], BWTTag[27] };
+            string[] RestrictionsAttributes = new string[2];
+            RestrictionsAttributes = ADRD.DelRepeatData(preResAtt);
+            if (preResAtt[0] == RestrictionsAttributes[0] && preRes[0] != "")
+            {
+                Restrictions_1.Add(preRes[0]);
+            }
+            if (preResAtt[1] == RestrictionsAttributes[0] && preRes[1] != "")
+            {
+                Restrictions_1.Add(preRes[1]);
+            }
+            if (preResAtt[1] == RestrictionsAttributes[1] && preRes[1] != "")
+            {
+                Restrictions_2.Add(preRes[1]);
+            }
+            if (preResAtt[2] == RestrictionsAttributes[0] && preRes[2] != "")
+            {
+                Restrictions_1.Add(preRes[2]);
+            }
+            if (preResAtt[2] == RestrictionsAttributes[1] && preRes[2] != "")
+            {
+                Restrictions_2.Add(preRes[2]);
+            }
+            if (preResAtt[3] == RestrictionsAttributes[0] && preRes[3] != "")
+            {
+                Restrictions_1.Add(preRes[3]);
+            }
+            if (preResAtt[3] == RestrictionsAttributes[1] && preRes[3] != "")
+            {
+                Restrictions_2.Add(preRes[3]);
+            }
+            if (preResAtt[4] == RestrictionsAttributes[0] && preRes[4] != "")
+            {
+                Restrictions_1.Add(preRes[4]);
+            }
+            if (preResAtt[4] == RestrictionsAttributes[1] && preRes[4] != "")
+            {
+                Restrictions_2.Add(preRes[4]);
+            }
+            //foreach(string str in Restrictions_1)
+            //{
+            //    MessageBox.Show("Restrictions_1：" + str);
+            //}
+            //foreach (string str in Restrictions_2)
+            //{
+            //    MessageBox.Show("Restrictions_2：" + str);
+            //}
+            const string ResourceDir = "GameResources/Food/";
             try
             {
                 WrapPanel_Left_Food.Children.Clear();//清空WrapPanel_Left_Food
@@ -215,35 +266,116 @@ namespace 饥荒百科全书CSharp
                 #endregion
                 GI = PG.GridInterval(20);
                 WrapPanel_Left_Food.Children.Add(GI);
-                #region "烹饪需求  BWTTag[10-17]"
-                WrapPanel_Left_Food.Children.Add(PG.GridTag("烹饪需求："));
+                if (BWTTag[1] != "湿腻焦糊")
+                {
+                    #region "烹饪需求  BWTTag[10-17]"
+                    WrapPanel_Left_Food.Children.Add(PG.GridTag("烹饪需求："));
 
-                #endregion
-                GI = PG.GridInterval(20);
-                WrapPanel_Left_Food.Children.Add(GI);
-                #region "填充限制  BWTTag[18-27]"
-                WrapPanel_Left_Food.Children.Add(PG.GridTag("填充限制："));
+                    StackPanel sNeed = new StackPanel();
+                    sNeed.HorizontalAlignment = HorizontalAlignment.Center;
+                    WrapPanel wNeed_1 = new WrapPanel();
+                    WrapPanel wNeed_2 = new WrapPanel();
+                    WrapPanel wNeed_3 = new WrapPanel();
+                    if (BWTTag[10] != "")
+                    {
+                        ButtonWithPicture bwpNeed_1 = new ButtonWithPicture(BWTTag[10], ResourceDir);
+                        wNeed_1.Children.Add(bwpNeed_1);
+                        TextBlock tbNeed_1 = new TextBlock();
+                        tbNeed_1.Text = BWTTag[11];
+                        tbNeed_1.Padding = new Thickness(0, 7, 0, 0);
+                        wNeed_1.Children.Add(tbNeed_1);
+                        sNeed.Children.Add(wNeed_1);
+                    }
+                    if (BWTTag[12] != "")
+                    {
+                        ButtonWithPicture bwpNeed_or = new ButtonWithPicture(BWTTag[12], ResourceDir);
+                        wNeed_1.Children.Add(bwpNeed_or);
+                        TextBlock tbNeed_or = new TextBlock();
+                        tbNeed_or.Text = BWTTag[13];
+                        tbNeed_or.Padding = new Thickness(0, 7, 0, 0);
+                        wNeed_1.Children.Add(tbNeed_or);
+                    }
+                    if (BWTTag[14] != "")
+                    {
+                        ButtonWithPicture bwpNeed_or = new ButtonWithPicture(BWTTag[14], ResourceDir);
+                        wNeed_2.Children.Add(bwpNeed_or);
+                        TextBlock tbNeed_2 = new TextBlock();
+                        tbNeed_2.Text = BWTTag[15];
+                        tbNeed_2.Padding = new Thickness(0, 7, 0, 0);
+                        wNeed_2.Children.Add(tbNeed_2);
+                        sNeed.Children.Add(wNeed_2);
+                    }
+                    if (BWTTag[16] != "")
+                    {
+                        ButtonWithPicture bwpNeed_or = new ButtonWithPicture(BWTTag[16], ResourceDir);
+                        wNeed_3.Children.Add(bwpNeed_or);
+                        TextBlock tbNeed_3 = new TextBlock();
+                        tbNeed_3.Text = BWTTag[17];
+                        tbNeed_3.Padding = new Thickness(0, 7, 0, 0);
+                        wNeed_3.Children.Add(tbNeed_3);
+                        sNeed.Children.Add(wNeed_3);
+                    }
+                    WrapPanel_Left_Food.Children.Add(sNeed);
+                    #endregion
+                    #region "填充限制  BWTTag[18-27]"
+                    if (BWTTag[18] != "")
+                    {
+                        GI = PG.GridInterval(20);
+                        WrapPanel_Left_Food.Children.Add(GI);
+                        WrapPanel_Left_Food.Children.Add(PG.GridTag("填充限制："));
 
-                #endregion
-                GI = PG.GridInterval(20);
-                WrapPanel_Left_Food.Children.Add(GI);
-                #region "推荐食谱 BWTTag[28-31]"
-                WrapPanel_Left_Food.Children.Add(PG.GridTag("推荐食谱："));
-
-                Grid gRecommendContent = PG.GridInit(35);
-                WrapPanel sRecommendContent = new WrapPanel();
-                sRecommendContent.HorizontalAlignment = HorizontalAlignment.Center;
-                ButtonWithPicture bRecommed1 = new ButtonWithPicture(BWTTag[28], "GameResources/Food/");
-                ButtonWithPicture bRecommed2 = new ButtonWithPicture(BWTTag[29], "GameResources/Food/");
-                ButtonWithPicture bRecommed3 = new ButtonWithPicture(BWTTag[30], "GameResources/Food/");
-                ButtonWithPicture bRecommed4 = new ButtonWithPicture(BWTTag[31], "GameResources/Food/");
-                sRecommendContent.Children.Add(bRecommed1);
-                sRecommendContent.Children.Add(bRecommed2);
-                sRecommendContent.Children.Add(bRecommed3);
-                sRecommendContent.Children.Add(bRecommed4);
-                gRecommendContent.Children.Add(sRecommendContent);
-                WrapPanel_Left_Food.Children.Add(gRecommendContent);
-                #endregion
+                        StackPanel sRestrictions = new StackPanel();
+                        sRestrictions.HorizontalAlignment = HorizontalAlignment.Center;
+                        WrapPanel wRestrictions_1 = new WrapPanel();
+                        WrapPanel wRestrictions_2 = new WrapPanel();
+                        if(Restrictions_1.Count != 0)
+                        {
+                            TextBlock tbRestrictions_1 = new TextBlock();
+                            tbRestrictions_1.Text = RestrictionsAttributes[0];
+                            tbRestrictions_1.Padding = new Thickness(0, 7, 0, 0);
+                            wRestrictions_1.Children.Add(tbRestrictions_1);
+                            foreach (string str in Restrictions_1)
+                            {
+                                ButtonWithPicture bwp = new ButtonWithPicture(str, ResourceDir);
+                                wRestrictions_1.Children.Add(bwp);
+                            }
+                            sRestrictions.Children.Add(wRestrictions_1);
+                        }
+                        if (Restrictions_2.Count != 0)
+                        {
+                            TextBlock tbRestrictions_2 = new TextBlock();
+                            tbRestrictions_2.Text = RestrictionsAttributes[1];
+                            tbRestrictions_2.Padding = new Thickness(0, 7, 0, 0);
+                            wRestrictions_2.Children.Add(tbRestrictions_2);
+                            foreach (string str in Restrictions_2)
+                            {
+                                ButtonWithPicture bwp = new ButtonWithPicture(str, ResourceDir);
+                                wRestrictions_2.Children.Add(bwp);
+                            }
+                            sRestrictions.Children.Add(wRestrictions_2);
+                        }
+                        WrapPanel_Left_Food.Children.Add(sRestrictions);
+                    }
+                    #endregion
+                    GI = PG.GridInterval(20);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    #region "推荐食谱 BWTTag[28-31]"
+                    WrapPanel_Left_Food.Children.Add(PG.GridTag("推荐食谱："));
+                    Grid gRecommendContent = PG.GridInit(35);
+                    WrapPanel sRecommendContent = new WrapPanel();
+                    sRecommendContent.HorizontalAlignment = HorizontalAlignment.Center;
+                    ButtonWithPicture bwpRecommed_1 = new ButtonWithPicture(BWTTag[28], ResourceDir);
+                    ButtonWithPicture bwpRecommed_2 = new ButtonWithPicture(BWTTag[29], ResourceDir);
+                    ButtonWithPicture bwpRecommed_3 = new ButtonWithPicture(BWTTag[30], ResourceDir);
+                    ButtonWithPicture bwpRecommed_4 = new ButtonWithPicture(BWTTag[31], ResourceDir);
+                    sRecommendContent.Children.Add(bwpRecommed_1);
+                    sRecommendContent.Children.Add(bwpRecommed_2);
+                    sRecommendContent.Children.Add(bwpRecommed_3);
+                    sRecommendContent.Children.Add(bwpRecommed_4);
+                    gRecommendContent.Children.Add(sRecommendContent);
+                    WrapPanel_Left_Food.Children.Add(gRecommendContent);
+                    #endregion
+                }
                 GI = PG.GridInterval(20);
                 WrapPanel_Left_Food.Children.Add(GI);
                 #region "介绍  BWTTag[32]"
