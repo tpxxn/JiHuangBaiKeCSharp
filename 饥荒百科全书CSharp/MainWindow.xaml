@@ -198,10 +198,10 @@
                     <WrapPanel x:Name="WrapPanel_Right_Character" Focusable="False"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Left_Food" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
-                    <WrapPanel x:Name="WrapPanel_Left_Food" Focusable="False"/>
+                    <WrapPanel x:Name="WrapPanel_Left_Food" Focusable="False" SizeChanged="WrapPanel_Left_Food_SizeChanged"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Right_Food" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanel_Right_Food" Focusable="False" SizeChanged="WrapPanel_Right_Food_SizeChanged"/>
+                    <WrapPanel x:Name="WrapPanel_Right_Food" Focusable="False" SizeChanged="WrapPanel_Right_Food_SizeChanged" Orientation="Vertical"/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="ScrollViewer_Left_Science" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
                     <WrapPanel x:Name="WrapPanel_Left_Science" Focusable="False" Background="#88DE9191"/>

@@ -43,7 +43,6 @@ namespace 饥荒百科全书CSharp
                 WrapPanel_Left_Character.Children.Add(GI);
                 #region "中文名  BWTTag[1]"
                 Grid gName = PG.GridInit();
-                //gName.Height = 38.6;
                 TextBlock tbName = new TextBlock();
                 tbName.HorizontalAlignment = HorizontalAlignment.Center;
                 tbName.Text = BWTTag[1];

@@ -27,6 +27,7 @@ namespace 饥荒百科全书CSharp.Class
         public static TextBlock TextBlockInit(double height = 0)
         {
             TextBlock textBlock = new TextBlock();
+            //textBlock.Background = Brushes.Aqua;
             if (height != 0)
             {
                 textBlock.Height = height;

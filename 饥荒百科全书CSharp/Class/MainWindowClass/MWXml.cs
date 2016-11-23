@@ -1,6 +1,4 @@
-﻿//messagebox.show(node.attributes["name"].value);
-
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Xml;
@@ -214,10 +212,15 @@ namespace 饥荒百科全书CSharp
                                         string NeedPicture_3 = "";
                                         string Need_3 = "";
                                         string Restrictions_1 = "";
+                                        string RestrictionsAttributes_1 = "";
                                         string Restrictions_2 = "";
+                                        string RestrictionsAttributes_2= "";
                                         string Restrictions_3 = "";
+                                        string RestrictionsAttributes_3 = "";
                                         string Restrictions_4 = "";
+                                        string RestrictionsAttributes_4 = "";
                                         string Restrictions_5 = "";
+                                        string RestrictionsAttributes_5 = "";
                                         string Recommend_1 = "";
                                         string Recommend_2 = "";
                                         string Recommend_3 = "";
@@ -283,18 +286,38 @@ namespace 饥荒百科全书CSharp
                                                     break;
                                                 case "Restrictions_1":
                                                     Restrictions_1 = Food.InnerText;
+                                                    if (Food.Attributes["pre"] != null)
+                                                    {
+                                                        RestrictionsAttributes_1 = Food.Attributes["pre"].Value;
+                                                    }
                                                     break;
                                                 case "Restrictions_2":
                                                     Restrictions_2 = Food.InnerText;
+                                                    if (Food.Attributes["pre"] != null)
+                                                    {
+                                                        RestrictionsAttributes_2 = Food.Attributes["pre"].Value;
+                                                    }
                                                     break;
                                                 case "Restrictions_3":
                                                     Restrictions_3 = Food.InnerText;
+                                                    if (Food.Attributes["pre"] != null)
+                                                    {
+                                                        RestrictionsAttributes_3 = Food.Attributes["pre"].Value;
+                                                    }
                                                     break;
                                                 case "Restrictions_4":
                                                     Restrictions_4 = Food.InnerText;
+                                                    if (Food.Attributes["pre"] != null)
+                                                    {
+                                                        RestrictionsAttributes_4 = Food.Attributes["pre"].Value;
+                                                    }
                                                     break;
                                                 case "Restrictions_5":
                                                     Restrictions_5 = Food.InnerText;
+                                                    if (Food.Attributes["pre"] != null)
+                                                    {
+                                                        RestrictionsAttributes_5 = Food.Attributes["pre"].Value;
+                                                    }
                                                     break;
                                                 case "Recommend_1":
                                                     Recommend_1 = Food.InnerText;
@@ -316,7 +339,19 @@ namespace 饥荒百科全书CSharp
                                         ButtonWithText BWT = new ButtonWithText();
                                         BWT.UCImage.Source = RSN.PictureShortName(Picture);
                                         BWT.UCTextBlock.Text = Name;
-                                        ESRecipe.UCWrapPanel.Children.Add(BWT);
+                                        string[] BWTTag = { Picture, Name, EnName, PortableCrockPot, Health, Hunger, Sanity, Perish, Cooktime, Priority, NeedPicture_1, Need_1, NeedPicture_or, Need_or, NeedPicture_2, Need_2, NeedPicture_3, Need_3, Restrictions_1, RestrictionsAttributes_1, Restrictions_2, RestrictionsAttributes_2, Restrictions_3, RestrictionsAttributes_3, Restrictions_4, RestrictionsAttributes_4, Restrictions_5, RestrictionsAttributes_5, Recommend_1, Recommend_2, Recommend_3, Recommend_4, Introduce };
+                                        object obj = BWTTag;
+                                        if (Name == "培根煎蛋")
+                                        {
+                                            Food_Click_Handle(BWTTag);
+                                        }
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += Food_Click;
+                                        try
+                                        {
+                                            ESRecipe.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
                                     }
                                 }
                                 break;
