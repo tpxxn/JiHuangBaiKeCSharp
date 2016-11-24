@@ -214,7 +214,7 @@ namespace 饥荒百科全书CSharp
                                         string Restrictions_1 = "";
                                         string RestrictionsAttributes_1 = "";
                                         string Restrictions_2 = "";
-                                        string RestrictionsAttributes_2= "";
+                                        string RestrictionsAttributes_2 = "";
                                         string Restrictions_3 = "";
                                         string RestrictionsAttributes_3 = "";
                                         string Restrictions_4 = "";
@@ -343,10 +343,10 @@ namespace 饥荒百科全书CSharp
                                         object obj = BWTTag;
                                         if (Name == "培根煎蛋")
                                         {
-                                            Food_Click_Handle(BWTTag);
+                                            Food_Recipe_Click_Handle(BWTTag);
                                         }
                                         BWT.UCButton.Tag = obj;
-                                        BWT.UCButton.Click += Food_Click;
+                                        BWT.UCButton.Click += Food_Recipe_Click;
                                         try
                                         {
                                             ESRecipe.UCWrapPanel.Children.Add(BWT);
@@ -367,22 +367,69 @@ namespace 饥荒百科全书CSharp
                                         string Picture = "";
                                         string Name = "";
                                         string EnName = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
                                         string Introduce = "";
                                         foreach (XmlNode Food in Level2childNode)
                                         {
-                                            if (Food.Name == "Picture")
+                                            switch (Food.Name)
                                             {
-                                                Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
-                                            }
-                                            if (Food.Name == "Name")
-                                            {
-                                                Name = Food.InnerText;
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "EnName":
+                                                    EnName = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
                                             }
                                         }
                                         ButtonWithText BWT = new ButtonWithText();
                                         BWT.UCImage.Source = RSN.PictureShortName(Picture);
                                         BWT.UCTextBlock.Text = Name;
-                                        ESMeast.UCWrapPanel.Children.Add(BWT);
+                                        string[] BWTTag = { Picture, Name, EnName, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += Food_Click;
+                                        try
+                                        {
+                                            ESMeast.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
                                     }
                                 }
                                 break;
@@ -398,22 +445,369 @@ namespace 饥荒百科全书CSharp
                                         string Picture = "";
                                         string Name = "";
                                         string EnName = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
                                         string Introduce = "";
                                         foreach (XmlNode Food in Level2childNode)
                                         {
-                                            if (Food.Name == "Picture")
+                                            switch (Food.Name)
                                             {
-                                                Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
-                                            }
-                                            if (Food.Name == "Name")
-                                            {
-                                                Name = Food.InnerText;
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "EnName":
+                                                    EnName = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
                                             }
                                         }
                                         ButtonWithText BWT = new ButtonWithText();
                                         BWT.UCImage.Source = RSN.PictureShortName(Picture);
                                         BWT.UCTextBlock.Text = Name;
-                                        ESVegetables.UCWrapPanel.Children.Add(BWT);
+                                        string[] BWTTag = { Picture, Name, EnName, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += Food_Click;
+                                        try
+                                        {
+                                            ESVegetables.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                break;
+                            #endregion
+                            #region "水果"
+                            case "FoodFruit":
+                                ExpanderStackpanel ESFruit = new ExpanderStackpanel("水果", "../Resources/GameResources/Food/FC_Fruit.png");
+                                WrapPanel_Right_Food.Children.Add(ESFruit);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string EnName = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "EnName":
+                                                    EnName = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, EnName, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += Food_Click;
+                                        try
+                                        {
+                                            ESFruit.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                break;
+                            #endregion
+                            #region "蛋类"
+                            case "FoodEggs":
+                                ExpanderStackpanel ESEggs = new ExpanderStackpanel("蛋类", "../Resources/GameResources/Food/FC_Eggs.png");
+                                WrapPanel_Right_Food.Children.Add(ESEggs);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string EnName = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "EnName":
+                                                    EnName = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, EnName, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += Food_Click;
+                                        try
+                                        {
+                                            ESEggs.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                break;
+                            #endregion
+                            #region "其他"
+                            case "FoodOthers":
+                                ExpanderStackpanel ESOthers = new ExpanderStackpanel("其他", "../Resources/GameResources/Food/F_butterfly_wing.png");
+                                WrapPanel_Right_Food.Children.Add(ESOthers);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string EnName = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "EnName":
+                                                    EnName = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, EnName, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += Food_Click;
+                                        try
+                                        {
+                                            ESOthers.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                break;
+                            #endregion
+                            #region "非食材"
+                            case "FoodNoFC":
+                                ExpanderStackpanel ESNoFC = new ExpanderStackpanel("非食材", "../Resources/GameResources/Food/F_petals.png");
+                                WrapPanel_Right_Food.Children.Add(ESNoFC);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string EnName = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "EnName":
+                                                    EnName = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, EnName, Health, Hunger, Sanity, Perish, Attribute, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += Food_NoFC_Click;
+                                        try
+                                        {
+                                            ESNoFC.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
                                     }
                                 }
                                 break;

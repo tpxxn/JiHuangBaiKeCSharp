@@ -57,8 +57,8 @@ namespace 饥荒百科全书CSharp.Class
                 {
                     Directory.CreateDirectory(UpdatePath);
                 }
-                //第一个参数是文件的地址,第二个参数是文件保存的路径文件名
-                client.DownloadFile("http://www.jihuangbaike.com/update.xml", UpdateXmlPath);
+                //第一个参数是下载地址,第二个参数是文件保存的路径文件名
+                client.DownloadFile("http://www.jihuangbaike.com/update/update.xml", UpdateXmlPath);
                 LatestVersion();//读取从服务器获取的最新版本号(读取XML文件)
             }
             catch
@@ -80,7 +80,6 @@ namespace 饥荒百科全书CSharp.Class
                 {
                     if (node.Name == "Soft")
                     {
-                        //MessageBox.Show(node.Attributes["Name"].Value);
                         foreach (XmlNode xml in node)
                         {
                             if (xml.Name == "Verson")

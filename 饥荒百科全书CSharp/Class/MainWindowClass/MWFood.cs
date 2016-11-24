@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
 
@@ -14,18 +12,17 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Food面板Click事件
-        private void Food_Click(object sender, RoutedEventArgs e)
+        //Food面板Click事件(食谱)
+        private void Food_Recipe_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             string[] BWTTag = (string[])button.Tag;//获取参数
-            Food_Click_Handle(BWTTag);
+            Food_Recipe_Click_Handle(BWTTag);
         }
 
-        //WrapPanel_Left_Food控件创建事件
-        private void Food_Click_Handle(string[] BWTTag)
+        //WrapPanel_Left_Food控件创建事件(食谱)
+        private void Food_Recipe_Click_Handle(string[] BWTTag)
         {
-            //string[] BWTTag = { Picture, Name, EnName, PortableCrockPot, Health, Hunger, Sanity, Perish, Cooktime, Priority, NeedPicture_1, Need_1, NeedPicture_or, Need_or, NeedPicture_2, Need_2, NeedPicture_3, Need_3, Restrictions_1, RestrictionsAttributes_1, Restrictions_2, RestrictionsAttributes_2, Restrictions_3, RestrictionsAttributes_3, Restrictions_4, RestrictionsAttributes_4, Restrictions_5, RestrictionsAttributes_5, Recommend_1, Recommend_2, Recommend_3, Recommend_4, Introduce };
             List<string> Restrictions_1 = new List<string>();
             List<string> Restrictions_2 = new List<string>();
             string[] preRes = new string[5] { BWTTag[18], BWTTag[20], BWTTag[22], BWTTag[24], BWTTag[26] };
@@ -68,14 +65,6 @@ namespace 饥荒百科全书CSharp
             {
                 Restrictions_2.Add(preRes[4]);
             }
-            //foreach(string str in Restrictions_1)
-            //{
-            //    MessageBox.Show("Restrictions_1：" + str);
-            //}
-            //foreach (string str in Restrictions_2)
-            //{
-            //    MessageBox.Show("Restrictions_2：" + str);
-            //}
             const string ResourceDir = "GameResources/Food/";
             try
             {
@@ -270,7 +259,6 @@ namespace 饥荒百科全书CSharp
                 {
                     #region "烹饪需求  BWTTag[10-17]"
                     WrapPanel_Left_Food.Children.Add(PG.GridTag("烹饪需求："));
-
                     StackPanel sNeed = new StackPanel();
                     sNeed.HorizontalAlignment = HorizontalAlignment.Center;
                     WrapPanel wNeed_1 = new WrapPanel();
@@ -297,18 +285,26 @@ namespace 饥荒百科全书CSharp
                     }
                     if (BWTTag[14] != "")
                     {
-                        ButtonWithPicture bwpNeed_or = new ButtonWithPicture(BWTTag[14], ResourceDir);
-                        wNeed_2.Children.Add(bwpNeed_or);
+                        ButtonWithPicture bwpNeed_2 = new ButtonWithPicture(BWTTag[14], ResourceDir);
                         TextBlock tbNeed_2 = new TextBlock();
                         tbNeed_2.Text = BWTTag[15];
                         tbNeed_2.Padding = new Thickness(0, 7, 0, 0);
-                        wNeed_2.Children.Add(tbNeed_2);
-                        sNeed.Children.Add(wNeed_2);
+                        if (BWTTag[2] != "Monster Lasagna")
+                        {
+                            wNeed_2.Children.Add(bwpNeed_2);
+                            wNeed_2.Children.Add(tbNeed_2);
+                            sNeed.Children.Add(wNeed_2);
+                        }
+                        else
+                        {
+                            wNeed_1.Children.Add(bwpNeed_2);
+                            wNeed_1.Children.Add(tbNeed_2);
+                        }
                     }
                     if (BWTTag[16] != "")
                     {
-                        ButtonWithPicture bwpNeed_or = new ButtonWithPicture(BWTTag[16], ResourceDir);
-                        wNeed_3.Children.Add(bwpNeed_or);
+                        ButtonWithPicture bwpNeed_3 = new ButtonWithPicture(BWTTag[16], ResourceDir);
+                        wNeed_3.Children.Add(bwpNeed_3);
                         TextBlock tbNeed_3 = new TextBlock();
                         tbNeed_3.Text = BWTTag[17];
                         tbNeed_3.Padding = new Thickness(0, 7, 0, 0);
@@ -323,7 +319,6 @@ namespace 饥荒百科全书CSharp
                         GI = PG.GridInterval(20);
                         WrapPanel_Left_Food.Children.Add(GI);
                         WrapPanel_Left_Food.Children.Add(PG.GridTag("填充限制："));
-
                         StackPanel sRestrictions = new StackPanel();
                         sRestrictions.HorizontalAlignment = HorizontalAlignment.Center;
                         WrapPanel wRestrictions_1 = new WrapPanel();
@@ -393,7 +388,378 @@ namespace 饥荒百科全书CSharp
                 #endregion
                 GI = PG.GridInterval(20);
                 WrapPanel_Left_Food.Children.Add(GI);
-                
+            }
+            catch { }
+            WrapPanel_Left_Food_SizeChanged(null, null);//调整位置
+        }
+
+        //Food面板Click事件(食材)
+        private void Food_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            string[] BWTTag = (string[])button.Tag;//获取参数
+            Food_Click_Handle(BWTTag);
+        }
+
+        //WrapPanel_Left_Food控件创建事件(食材)
+        private void Food_Click_Handle(string[] BWTTag)
+        {
+            const string ResourceDir = "GameResources/Food/";
+            try
+            {
+                WrapPanel_Left_Food.Children.Clear();//清空WrapPanel_Left_Food
+                Grid GI = new Grid();
+                GI = PG.GridInterval(10);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "图片 BWTTag[0]"
+                Grid gPicture = PG.GridInit(64);
+                Image iPicture = new Image();
+                iPicture.Height = 64;
+                iPicture.Width = 64;
+                iPicture.HorizontalAlignment = HorizontalAlignment.Center;
+                iPicture.Source = RSN.PictureShortName(BWTTag[0]);
+                gPicture.Children.Add(iPicture);
+                WrapPanel_Left_Food.Children.Add(gPicture);
+                #endregion
+                GI = PG.GridInterval(5);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "中文名  BWTTag[1]"
+                Grid gName = PG.GridInit();
+                TextBlock tbName = new TextBlock();
+                tbName.HorizontalAlignment = HorizontalAlignment.Center;
+                tbName.Text = BWTTag[1];
+                tbName.FontSize = 16;
+                gName.Children.Add(tbName);
+                WrapPanel_Left_Food.Children.Add(gName);
+                #endregion
+                #region "英文名  BWTTag[2]"
+                Grid gEnName = PG.GridInit();
+                TextBlock tbEnName = new TextBlock();
+                tbEnName.HorizontalAlignment = HorizontalAlignment.Center;
+                tbEnName.Text = BWTTag[2];
+                tbEnName.FontSize = 16;
+                Thickness TEnName = new Thickness();
+                TEnName.Top = -5;
+                tbEnName.Margin = TEnName;
+                gEnName.Children.Add(tbEnName);
+                WrapPanel_Left_Food.Children.Add(gEnName);
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "生命  BWTTag[3]"
+                if (BWTTag[3] != "")
+                {
+                    double propertyHealth = Convert.ToDouble(BWTTag[3]);
+                    Grid gHealth = PG.GridInit(15);
+                    PropertyBar pbHealth;
+                    if (propertyHealth < 0)
+                        pbHealth = new PropertyBar(true);
+                    else
+                        pbHealth = new PropertyBar();
+                    pbHealth.UCTextBlockName.Width = 30;
+                    pbHealth.UCTextBlockName.Text = "生命";
+                    pbHealth.UCProgressBar.Value = Math.Abs(propertyHealth);
+                    pbHealth.UCProgressBar.Foreground = BC.brushConverter(PBCGreen);
+                    pbHealth.UCTextBlockValue.Width = 39;
+                    pbHealth.UCTextBlockValue.Text = BWTTag[3];
+                    gHealth.Children.Add(pbHealth);
+                    WrapPanel_Left_Food.Children.Add(gHealth);
+                }
+                #endregion
+                #region "饥饿  BWTTag[4]"
+                if (BWTTag[4] != "")
+                {
+                    double propertyHunger = Convert.ToDouble(BWTTag[4]);
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    Grid gHunger = PG.GridInit(15);
+                    PropertyBar pbHunger;
+                    if (propertyHunger < 0)
+                        pbHunger = new PropertyBar(true);
+                    else
+                        pbHunger = new PropertyBar();
+                    pbHunger.UCTextBlockName.Width = 30;
+                    pbHunger.UCTextBlockName.Text = "饥饿";
+                    pbHunger.UCProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
+                    pbHunger.UCProgressBar.Foreground = BC.brushConverter(PBCOrange);
+                    pbHunger.UCTextBlockValue.Width = 39;
+                    pbHunger.UCTextBlockValue.Text = BWTTag[4];
+                    gHunger.Children.Add(pbHunger);
+                    WrapPanel_Left_Food.Children.Add(gHunger);
+                }
+                #endregion
+                #region "精神  BWTTag[5]"
+                if (BWTTag[5] != "")
+                {
+                    double propertySanity = Convert.ToDouble(BWTTag[5]);
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    Grid gSanity = PG.GridInit(15);
+                    PropertyBar pbSanity;
+                    if (propertySanity < 0)
+                        pbSanity = new PropertyBar(true);
+                    else
+                        pbSanity = new PropertyBar();
+                    pbSanity.UCTextBlockName.Width = 30;
+                    pbSanity.UCTextBlockName.Text = "精神";
+                    pbSanity.UCProgressBar.Value = Math.Abs(propertySanity) / 0.5;
+                    pbSanity.UCProgressBar.Foreground = BC.brushConverter(PBCRed);
+                    pbSanity.UCTextBlockValue.Width = 39;
+                    pbSanity.UCTextBlockValue.Text = BWTTag[5];
+                    gSanity.Children.Add(pbSanity);
+                    WrapPanel_Left_Food.Children.Add(gSanity);
+                }
+                #endregion
+                #region "保鲜  BWTTag[6]"
+                if (BWTTag[6] != "")
+                {
+                    double propertyPerish = Convert.ToDouble(BWTTag[6]);
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    Grid gPerish = PG.GridInit(15);
+                    PropertyBar pbPerish;
+                    if (propertyPerish < 0)
+                        pbPerish = new PropertyBar(true);
+                    else
+                        pbPerish = new PropertyBar();
+                    pbPerish.UCTextBlockName.Width = 30;
+                    pbPerish.UCTextBlockName.Text = "保鲜";
+                    pbPerish.UCProgressBar.Value = Math.Abs(propertyPerish) / 0.4;
+                    pbPerish.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                    pbPerish.UCTextBlockValue.Width = 39;
+                    if (propertyPerish == 1000)
+                        pbPerish.UCTextBlockValue.Text = "∞";
+                    else
+                        pbPerish.UCTextBlockValue.Text = BWTTag[6];
+                    gPerish.Children.Add(pbPerish);
+                    WrapPanel_Left_Food.Children.Add(gPerish);
+                }
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "食物属性  BWTTag[7-10]"
+                WrapPanel_Left_Food.Children.Add(PG.GridTag("食物属性："));
+                StackPanel sAttribute = new StackPanel();
+                sAttribute.HorizontalAlignment = HorizontalAlignment.Center;
+                WrapPanel wAttribute = new WrapPanel();
+                if (BWTTag[7] != "")
+                {
+                    ButtonWithPicture bwpAttribute_1 = new ButtonWithPicture(BWTTag[7], ResourceDir);
+                    wAttribute.Children.Add(bwpAttribute_1); 
+                    TextBlock tbAttribute_1 = new TextBlock();
+                    tbAttribute_1.Text = BWTTag[8];
+                    tbAttribute_1.Padding = new Thickness(0, 7, 0, 0);
+                    wAttribute.Children.Add(tbAttribute_1);
+                }
+                else if (BWTTag[2]== "Roasted Birchnut")
+                {
+                    TextBlock tbAttribute_1 = new TextBlock();
+                    tbAttribute_1.Text = "填充物×1";
+                    tbAttribute_1.Padding = new Thickness(0, 7, 0, 0);
+                    wAttribute.Children.Add(tbAttribute_1);
+                }
+                if (BWTTag[9] != "")
+                {
+                    ButtonWithPicture bwpAttribute_2 = new ButtonWithPicture(BWTTag[9], ResourceDir);
+                    wAttribute.Children.Add(bwpAttribute_2);
+                    TextBlock tbAttribute_2 = new TextBlock();
+                    tbAttribute_2.Text = BWTTag[10];
+                    tbAttribute_2.Padding = new Thickness(0, 7, 0, 0);
+                    wAttribute.Children.Add(tbAttribute_2);
+                }
+                sAttribute.Children.Add(wAttribute);
+                WrapPanel_Left_Food.Children.Add(sAttribute);
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "介绍  BWTTag[11]"
+                Grid gIntroduce = PG.GridInit();
+                TextBlock tbIntroduce = new TextBlock();
+                tbIntroduce.HorizontalAlignment = HorizontalAlignment.Left;
+                tbIntroduce.TextWrapping = TextWrapping.Wrap;
+                tbIntroduce.Text = BWTTag[11];
+                tbIntroduce.FontSize = 13;
+                Thickness TIntroduce = new Thickness();
+                TIntroduce.Left = 15;
+                tbIntroduce.Margin = TIntroduce;
+                gIntroduce.Children.Add(tbIntroduce);
+                WrapPanel_Left_Food.Children.Add(gIntroduce);
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+            }
+            catch { }
+            WrapPanel_Left_Food_SizeChanged(null, null);//调整位置
+        }
+
+        //Food面板Click事件(食材)
+        private void Food_NoFC_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            string[] BWTTag = (string[])button.Tag;//获取参数
+            Food_NoFC_Click_Handle(BWTTag);
+        }
+
+        //WrapPanel_Left_Food控件创建事件(食材)
+        private void Food_NoFC_Click_Handle(string[] BWTTag)
+        {
+            const string ResourceDir = "GameResources/Food/";
+            try
+            {
+                WrapPanel_Left_Food.Children.Clear();//清空WrapPanel_Left_Food
+                Grid GI = new Grid();
+                GI = PG.GridInterval(10);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "图片 BWTTag[0]"
+                Grid gPicture = PG.GridInit(64);
+                Image iPicture = new Image();
+                iPicture.Height = 64;
+                iPicture.Width = 64;
+                iPicture.HorizontalAlignment = HorizontalAlignment.Center;
+                iPicture.Source = RSN.PictureShortName(BWTTag[0]);
+                gPicture.Children.Add(iPicture);
+                WrapPanel_Left_Food.Children.Add(gPicture);
+                #endregion
+                GI = PG.GridInterval(5);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "中文名  BWTTag[1]"
+                Grid gName = PG.GridInit();
+                TextBlock tbName = new TextBlock();
+                tbName.HorizontalAlignment = HorizontalAlignment.Center;
+                tbName.Text = BWTTag[1];
+                tbName.FontSize = 16;
+                gName.Children.Add(tbName);
+                WrapPanel_Left_Food.Children.Add(gName);
+                #endregion
+                #region "英文名  BWTTag[2]"
+                Grid gEnName = PG.GridInit();
+                TextBlock tbEnName = new TextBlock();
+                tbEnName.HorizontalAlignment = HorizontalAlignment.Center;
+                tbEnName.Text = BWTTag[2];
+                tbEnName.FontSize = 16;
+                Thickness TEnName = new Thickness();
+                TEnName.Top = -5;
+                tbEnName.Margin = TEnName;
+                gEnName.Children.Add(tbEnName);
+                WrapPanel_Left_Food.Children.Add(gEnName);
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "生命  BWTTag[3]"
+                if (BWTTag[3] != "")
+                {
+                    double propertyHealth = Convert.ToDouble(BWTTag[3]);
+                    Grid gHealth = PG.GridInit(15);
+                    PropertyBar pbHealth;
+                    if (propertyHealth < 0)
+                        pbHealth = new PropertyBar(true);
+                    else
+                        pbHealth = new PropertyBar();
+                    pbHealth.UCTextBlockName.Width = 30;
+                    pbHealth.UCTextBlockName.Text = "生命";
+                    pbHealth.UCProgressBar.Value = Math.Abs(propertyHealth);
+                    pbHealth.UCProgressBar.Foreground = BC.brushConverter(PBCGreen);
+                    pbHealth.UCTextBlockValue.Width = 39;
+                    pbHealth.UCTextBlockValue.Text = BWTTag[3];
+                    gHealth.Children.Add(pbHealth);
+                    WrapPanel_Left_Food.Children.Add(gHealth);
+                }
+                #endregion
+                #region "饥饿  BWTTag[4]"
+                if (BWTTag[4] != "")
+                {
+                    double propertyHunger = Convert.ToDouble(BWTTag[4]);
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    Grid gHunger = PG.GridInit(15);
+                    PropertyBar pbHunger;
+                    if (propertyHunger < 0)
+                        pbHunger = new PropertyBar(true);
+                    else
+                        pbHunger = new PropertyBar();
+                    pbHunger.UCTextBlockName.Width = 30;
+                    pbHunger.UCTextBlockName.Text = "饥饿";
+                    pbHunger.UCProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
+                    pbHunger.UCProgressBar.Foreground = BC.brushConverter(PBCOrange);
+                    pbHunger.UCTextBlockValue.Width = 39;
+                    pbHunger.UCTextBlockValue.Text = BWTTag[4];
+                    gHunger.Children.Add(pbHunger);
+                    WrapPanel_Left_Food.Children.Add(gHunger);
+                }
+                #endregion
+                #region "精神  BWTTag[5]"
+                if (BWTTag[5] != "")
+                {
+                    double propertySanity = Convert.ToDouble(BWTTag[5]);
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    Grid gSanity = PG.GridInit(15);
+                    PropertyBar pbSanity;
+                    if (propertySanity < 0)
+                        pbSanity = new PropertyBar(true);
+                    else
+                        pbSanity = new PropertyBar();
+                    pbSanity.UCTextBlockName.Width = 30;
+                    pbSanity.UCTextBlockName.Text = "精神";
+                    pbSanity.UCProgressBar.Value = Math.Abs(propertySanity) / 0.5;
+                    pbSanity.UCProgressBar.Foreground = BC.brushConverter(PBCRed);
+                    pbSanity.UCTextBlockValue.Width = 39;
+                    pbSanity.UCTextBlockValue.Text = BWTTag[5];
+                    gSanity.Children.Add(pbSanity);
+                    WrapPanel_Left_Food.Children.Add(gSanity);
+                }
+                #endregion
+                #region "保鲜  BWTTag[6]"
+                if (BWTTag[6] != "")
+                {
+                    double propertyPerish = Convert.ToDouble(BWTTag[6]);
+                    GI = PG.GridInterval(10);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    Grid gPerish = PG.GridInit(15);
+                    PropertyBar pbPerish;
+                    if (propertyPerish < 0)
+                        pbPerish = new PropertyBar(true);
+                    else
+                        pbPerish = new PropertyBar();
+                    pbPerish.UCTextBlockName.Width = 30;
+                    pbPerish.UCTextBlockName.Text = "保鲜";
+                    pbPerish.UCProgressBar.Value = Math.Abs(propertyPerish) / 0.4;
+                    pbPerish.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
+                    pbPerish.UCTextBlockValue.Width = 39;
+                    if (propertyPerish == 1000)
+                        pbPerish.UCTextBlockValue.Text = "∞";
+                    else
+                        pbPerish.UCTextBlockValue.Text = BWTTag[6];
+                    gPerish.Children.Add(pbPerish);
+                    WrapPanel_Left_Food.Children.Add(gPerish);
+                }
+                #endregion
+                #region "食物属性  BWTTag[7]"
+                if (BWTTag[7] != "")
+                {
+                    GI = PG.GridInterval(20);
+                    WrapPanel_Left_Food.Children.Add(GI);
+                    string FoodAttribute = "食物属性：" + BWTTag[7];
+                    WrapPanel_Left_Food.Children.Add(PG.GridTag(FoodAttribute));
+                }
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
+                #region "介绍  BWTTag[8]"
+                Grid gIntroduce = PG.GridInit();
+                TextBlock tbIntroduce = new TextBlock();
+                tbIntroduce.HorizontalAlignment = HorizontalAlignment.Left;
+                tbIntroduce.TextWrapping = TextWrapping.Wrap;
+                tbIntroduce.Text = BWTTag[8];
+                tbIntroduce.FontSize = 13;
+                Thickness TIntroduce = new Thickness();
+                TIntroduce.Left = 15;
+                tbIntroduce.Margin = TIntroduce;
+                gIntroduce.Children.Add(tbIntroduce);
+                WrapPanel_Left_Food.Children.Add(gIntroduce);
+                #endregion
+                GI = PG.GridInterval(20);
+                WrapPanel_Left_Food.Children.Add(GI);
             }
             catch { }
             WrapPanel_Left_Food_SizeChanged(null, null);//调整位置

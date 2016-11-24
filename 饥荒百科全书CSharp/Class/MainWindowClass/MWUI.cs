@@ -204,12 +204,12 @@ namespace 饥荒百科全书CSharp
         //检查更新
         private void Se_button_Update_Click(object sender, RoutedEventArgs e)
         {
-            updatePan.UpdateNow();
             UI_pop_setting.IsOpen = false;
             MWVisivility = false;
+            updatePan.UpdateNow();
         }
         //窗口置顶
-        private void Se_button_Topmost_Click(Object sender, RoutedEventArgs e)
+        private void Se_button_Topmost_Click(object sender, RoutedEventArgs e)
         {
             if (Topmost == false)
             {

@@ -39,6 +39,7 @@ namespace 饥荒百科全书CSharp.Class
         public static Grid GridTag(string TagString, double ThicknessLeft = 10)
         {
             Grid gTag = GridInit();
+            gTag.Background = BC.brushConverter("B2ECED","55");
             TextBlock tb = new TextBlock();
             tb.Text = TagString;
             Thickness TTag = new Thickness();
