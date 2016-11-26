@@ -670,7 +670,7 @@ namespace 饥荒百科全书CSharp
                             #endregion
                             #region "其他"
                             case "FoodOthers":
-                                ExpanderStackpanel ESOthers = new ExpanderStackpanel("其他", "../Resources/GameResources/Food/F_butterfly_wing.png");
+                                ExpanderStackpanel ESOthers = new ExpanderStackpanel("其他", "../Resources/GameResources/Food/F_twigs.png");
                                 WrapPanel_Right_Food.Children.Add(ESOthers);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {

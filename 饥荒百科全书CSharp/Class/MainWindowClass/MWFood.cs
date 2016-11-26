@@ -204,7 +204,10 @@ namespace 饥荒百科全书CSharp
                     pbPerish.UCProgressBar.Value = Math.Abs(propertyPerish) / 0.2;
                     pbPerish.UCProgressBar.Foreground = BC.brushConverter(PBCBlue);
                     pbPerish.UCTextBlockValue.Width = 37;
-                    pbPerish.UCTextBlockValue.Text = BWTTag[7];
+                    if (propertyPerish == 1000)
+                        pbPerish.UCTextBlockValue.Text = "∞";
+                    else
+                        pbPerish.UCTextBlockValue.Text = BWTTag[7];
                     gPerish.Children.Add(pbPerish);
                     WrapPanel_Left_Food.Children.Add(gPerish);
                 }
@@ -603,7 +606,6 @@ namespace 饥荒百科全书CSharp
         //WrapPanel_Left_Food控件创建事件(食材)
         private void Food_NoFC_Click_Handle(string[] BWTTag)
         {
-            const string ResourceDir = "GameResources/Food/";
             try
             {
                 WrapPanel_Left_Food.Children.Clear();//清空WrapPanel_Left_Food

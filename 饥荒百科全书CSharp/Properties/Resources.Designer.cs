@@ -2358,9 +2358,9 @@ namespace 饥荒百科全书CSharp.Properties {
         ///      &lt;Damage&gt;1&lt;/Damage&gt;
         ///      &lt;Introduce&gt;威尔逊 (绅士科学家) 是一位绅士，同时也是科学家，将他传送到荒岛的机器就是他亲手制作的。威尔逊与其他角色不同的地方在于他会长胡子，一位帅哥长时间不刮胡子也能变成野人的模样。胡子能在冬天为主角保暖，同时也是制作肉块雕像必不可少的材料。&lt;/Intr [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
-        internal static string DSXML {
+        internal static string DSXml {
             get {
-                return ResourceManager.GetString("DSXML", resourceCulture);
+                return ResourceManager.GetString("DSXml", resourceCulture);
             }
         }
         
@@ -3387,6 +3387,16 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap F_jellybeans {
+            get {
+                object obj = ResourceManager.GetObject("F_jellybeans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap F_jellyfish {
             get {
                 object obj = ResourceManager.GetObject("F_jellyfish", resourceCulture);
@@ -3890,6 +3900,16 @@ namespace 饥荒百科全书CSharp.Properties {
         internal static System.Drawing.Bitmap F_rotten_egg {
             get {
                 object obj = ResourceManager.GetObject("F_rotten_egg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap F_royal_jelly {
+            get {
+                object obj = ResourceManager.GetObject("F_royal_jelly", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

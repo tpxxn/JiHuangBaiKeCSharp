@@ -1024,6 +1024,9 @@
   <data name="F_ice_cream" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Food\F_ice_cream.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="F_jellybeans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Food\F_jellybeans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="F_jellyfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Food\F_jellyfish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1179,6 +1182,9 @@
   </data>
   <data name="F_rotten_egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Food\F_rotten_egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F_royal_jelly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Food\F_royal_jelly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="F_seafood_gumbo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Food\F_seafood_gumbo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -4162,8 +4168,8 @@
   <data name="DSTXml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\XML\DSTXml.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="DSXML" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\XML\DSXML.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="DSXml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\XML\DSXml.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="RoGXml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\XML\RoGXml.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

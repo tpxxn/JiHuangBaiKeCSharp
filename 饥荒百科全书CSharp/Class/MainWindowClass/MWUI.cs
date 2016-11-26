@@ -190,8 +190,11 @@ namespace 饥荒百科全书CSharp
         //游戏版本选择
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
-            LoadGameVersionXml();
+            if (MWInit == true)
+            {
+                LoadGameVersionXml();
+                RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
+            }
         }
         #endregion
 

@@ -315,12 +315,12 @@
         <Recommend_2>F_meat</Recommend_2>
         <Recommend_3>F_meat</Recommend_3>
         <Recommend_4>F_berries</Recommend_4>
-        <Introduce>回复大量饥饿。需要不少肉。要注意很多人物饥饿在120以下，能吃肉丸还是吃肉丸吧。(仅单机版)食用后15秒增加40温度。</Introduce>
+        <Introduce>回复大量饥饿。需要不少肉。要注意很多人物饥饿在120以下，能吃肉丸还是吃肉丸吧。食用后15秒增加40温度。</Introduce>
         <Console>bonestew</Console>
       </Food>
       <Food>
         <Picture>F_butter_muffin</Picture>
-        <Name>奶油松饼</Name>
+        <Name>黄油松饼</Name>
         <EnName>Butter Muffin</EnName>
         <Health>20</Health>
         <Hunger>37.5</Hunger>
@@ -328,12 +328,12 @@
         <Perish>15</Perish>
         <Cooktime>40</Cooktime>
         <Priority>1</Priority>
-        <NeedPicture_1>F_butterfly_wing</NeedPicture_1>
+        <NeedPicture_1>F_butterfly_wing_sw</NeedPicture_1>
         <Need_1>×1</Need_1>
         <NeedPicture_2>FC_Vegetables</NeedPicture_2>
         <Need_2>×0.5</Need_2>
         <Restrictions_1 pre="无">FC_Meats</Restrictions_1>
-        <Recommend_1>F_butterfly_wing</Recommend_1>
+        <Recommend_1>F_butterfly_wing_sw</Recommend_1>
         <Recommend_2>F_carrot</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
         <Recommend_4>F_twigs</Recommend_4>
@@ -342,7 +342,7 @@
       </Food>
       <Food>
         <Picture>F_froggle_bunwich</Picture>
-        <Name>青蛙圆面包三明治</Name>
+        <Name>蛙腿三明治</Name>
         <EnName>Froggle Bunwich</EnName>
         <Health>20</Health>
         <Hunger>37.5</Hunger>
@@ -448,7 +448,7 @@
       </Food>
       <Food>
         <Picture>F_fruit_medley</Picture>
-        <Name>水果拼盘</Name>
+        <Name>水果沙拉</Name>
         <EnName>Fruit Medley</EnName>
         <Health>20</Health>
         <Hunger>25</Hunger>
@@ -463,7 +463,7 @@
         <Recommend_1>F_banana</Recommend_1>
         <Recommend_2>F_banana</Recommend_2>
         <Recommend_3>F_banana</Recommend_3>
-        <Recommend_4>F_banana</Recommend_4>
+        <Recommend_4>F_twigs</Recommend_4>
         <Introduce>要求的水果量和回复能力不成正比，还不如直接吃水果。食用后5秒降低40温度。</Introduce>
         <Console>fruitmedley</Console>
       </Food>
@@ -506,7 +506,7 @@
         <Need_2>×2</Need_2>
         <Restrictions_1 pre="无">F_twigs</Restrictions_1>
         <Recommend_1>F_honey</Recommend_1>
-        <Recommend_2>F_morsel</Recommend_2>
+        <Recommend_2>F_meat</Recommend_2>
         <Recommend_3>F_monster_meat</Recommend_3>
         <Recommend_4>F_berries</Recommend_4>
         <Introduce>材料好找，回复能力不错，下洞穴可以多带点。食用后10秒增加40温度。</Introduce>
@@ -532,7 +532,7 @@
         <Recommend_2>F_morsel</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
         <Recommend_4>F_berries</Recommend_4>
-        <Introduce>在肉系料理中加入树枝很有可能做成的东西。回复量感人。(仅联机版)食用后15秒增加40温度。</Introduce>
+        <Introduce>在肉系料理中加入树枝很有可能做成的东西。回复量感人。</Introduce>
         <Console>kabobs</Console>
       </Food>
       <Food>
@@ -710,7 +710,7 @@
       </Food>
       <Food>
         <Picture>F_turkey_dinner</Picture>
-        <Name>火鸡正餐</Name>
+        <Name>火鸡大餐</Name>
         <EnName>Turkey Dinner</EnName>
         <Health>20</Health>
         <Hunger>75</Hunger>
@@ -735,7 +735,7 @@
       </Food>
       <Food>
         <Picture>F_unagi</Picture>
-        <Name>鳗鱼</Name>
+        <Name>鳗鱼寿司卷</Name>
         <EnName>Unagi</EnName>
         <Health>20</Health>
         <Hunger>18.75</Hunger>
@@ -751,7 +751,7 @@
         <Recommend_2>F_lichen</Recommend_2>
         <Recommend_3>F_twigs</Recommend_3>
         <Recommend_4>F_twigs</Recommend_4>
-        <Introduce>食材需要到洞穴二层(联机版洞穴一层)钓鱼获得，而且食材需求和回复能力与炸鱼条相比实在是小巫见大巫。</Introduce>
+        <Introduce>食材需要到洞穴二层钓鱼获得，而且食材需求和回复能力与炸鱼条相比实在是小巫见大巫。</Introduce>
         <Console>unagi</Console>
       </Food>
       <Food>
@@ -828,7 +828,7 @@
       <Food>
         <Picture>F_ice_cream</Picture>
         <Name>冰淇淋</Name>
-        <EnName>Ice Creams</EnName>
+        <EnName>Ice Cream</EnName>
         <Health>0</Health>
         <Hunger>25</Hunger>
         <Sanity>50</Sanity>
@@ -854,7 +854,7 @@
       </Food>
       <Food>
         <Picture>F_melonsicle</Picture>
-        <Name>西瓜冰</Name>
+        <Name>冰镇西瓜</Name>
         <EnName>Melonsicle</EnName>
         <Health>3</Health>
         <Hunger>12.5</Hunger>
@@ -928,7 +928,7 @@
       </Food>
       <Food>
         <Picture>F_banana_pop</Picture>
-        <Name>香蕉冰淇淋</Name>
+        <Name>冰镇香蕉</Name>
         <EnName>Banana Pop</EnName>
         <Health>20</Health>
         <Hunger>12.5</Hunger>
@@ -953,7 +953,7 @@
       </Food>
       <Food>
         <Picture>F_bisque</Picture>
-        <Name>汤</Name>
+        <Name>帽贝汤</Name>
         <EnName>Bisque</EnName>
         <Health>60</Health>
         <Hunger>18.75</Hunger>
@@ -974,7 +974,7 @@
       </Food>
       <Food>
         <Picture>F_california_roll</Picture>
-        <Name>加州卷</Name>
+        <Name>加州寿司卷</Name>
         <EnName>California Roll</EnName>
         <Health>20</Health>
         <Hunger>37.5</Hunger>
@@ -996,7 +996,7 @@
       </Food>
       <Food>
         <Picture>F_ceviche</Picture>
-        <Name>橘汁腌鱼</Name>
+        <Name>酸橘汁腌鱼</Name>
         <EnName>Ceviche</EnName>
         <Health>20</Health>
         <Hunger>25</Hunger>
@@ -1039,7 +1039,7 @@
       </Food>
       <Food>
         <Picture>F_fresh_fruit_crepes</Picture>
-        <Name>新鲜水果薄饼</Name>
+        <Name>鲜果薄饼</Name>
         <EnName>Fresh Fruit Crepes</EnName>
         <PortableCrockPot>true</PortableCrockPot>
         <Health>60</Health>
@@ -1063,7 +1063,7 @@
       </Food>
       <Food>
         <Picture>F_jelly-O_pop</Picture>
-        <Name>果冻冰淇淋</Name>
+        <Name>冰镇果冻</Name>
         <EnName>Jelly-O Pop</EnName>
         <Health>20</Health>
         <Hunger>12.5</Hunger>
@@ -1107,7 +1107,7 @@
       </Food>
       <Food>
         <Picture>F_lobster_dinner</Picture>
-        <Name>龙虾正餐</Name>
+        <Name>龙虾大餐</Name>
         <EnName>Wobster Dinner</EnName>
         <Health>60</Health>
         <Hunger>37.5</Hunger>
@@ -1156,7 +1156,7 @@
       </Food>
       <Food>
         <Picture>F_mussel_bouillabaise</Picture>
-        <Name>贝类淡菜汤</Name>
+        <Name>浓味黔贝汤</Name>
         <EnName>Mussel Bouillabaise</EnName>
         <PortableCrockPot>true</PortableCrockPot>
         <Health>20</Health>
@@ -1178,7 +1178,7 @@
       </Food>
       <Food>
         <Picture>F_seafood_gumbo</Picture>
-        <Name>海鲜汤</Name>
+        <Name>海鲜浓汤</Name>
         <EnName>Seafood Gumbo</EnName>
         <Health>40</Health>
         <Hunger>37.5</Hunger>
@@ -1197,7 +1197,7 @@
       </Food>
       <Food>
         <Picture>F_shark_fin_soup</Picture>
-        <Name>鱼翅汤</Name>
+        <Name>鲨鱼鳍汤</Name>
         <EnName>Shark Fin Soup</EnName>
         <Health>40</Health>
         <Hunger>12.5</Hunger>
@@ -1229,10 +1229,10 @@
         <NeedPicture_2>FC_Fishes</NeedPicture_2>
         <Need_2>×1.5</Need_2>
         <Restrictions_1 pre="无">F_ice</Restrictions_1>
-        <Recommend_1>F_meat</Recommend_1>
-        <Recommend_2>F_morsel</Recommend_2>
+        <Recommend_1>F_monster_meat</Recommend_1>
+        <Recommend_2>F_monster_meat</Recommend_2>
         <Recommend_3>F_tropical_fish</Recommend_3>
-        <Recommend_4>F_tropical_fish</Recommend_4>
+        <Recommend_4>F_jellyfish</Recommend_4>
         <Introduce>船难版性价比最高回复料理！和亚克章鱼可以交换到船灯。</Introduce>
         <Console>surfnturf</Console>
       </Food>
@@ -1289,7 +1289,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_meat</Picture>
-        <Name>熟肉</Name>
+        <Name>烤肉</Name>
         <EnName>Cooked Meat</EnName>
         <Health>3</Health>
         <Hunger>25</Hunger>
@@ -1328,7 +1328,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_monster_meat</Picture>
-        <Name>熟怪兽肉</Name>
+        <Name>烤怪兽肉</Name>
         <EnName>Cooked Monster Meat</EnName>
         <Health>-3</Health>
         <Hunger>18.75</Hunger>
@@ -1367,7 +1367,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_morsel</Picture>
-        <Name>熟肉块</Name>
+        <Name>烤小块肉</Name>
         <EnName>Cooked Morsel</EnName>
         <Health>3</Health>
         <Hunger>12.5</Hunger>
@@ -1432,7 +1432,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_frog_legs</Picture>
-        <Name>熟青蛙腿</Name>
+        <Name>烤青蛙腿</Name>
         <EnName>Cooked Frog Legs</EnName>
         <Health>1</Health>
         <Hunger>12.5</Hunger>
@@ -1460,7 +1460,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_fish</Picture>
-        <Name>熟鱼</Name>
+        <Name>烤鱼</Name>
         <EnName>Cooked Fish</EnName>
         <Health>1</Health>
         <Hunger>12.5</Hunger>
@@ -1490,7 +1490,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_eel</Picture>
-        <Name>煮熟的鳗鱼</Name>
+        <Name>烤鳗鱼</Name>
         <EnName>Cooked Eel</EnName>
         <Health>8</Health>
         <Hunger>13</Hunger>
@@ -1502,19 +1502,6 @@
         <AttributeValue_2>×1</AttributeValue_2>
         <Introduce>把鳗鱼放在篝火上烤制。</Introduce>
         <Console>eel_cooked</Console>
-      </Food>
-      <Food>
-        <Picture>F_moleworm</Picture>
-        <Name>鼹鼠</Name>
-        <EnName>Moleworm</EnName>
-        <Health>0</Health>
-        <Hunger>0</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>2</Perish>
-        <Attribute>FC_Meats</Attribute>
-        <AttributeValue>×0.5</AttributeValue>
-        <Introduce>用锤子把鼹鼠敲晕获得，不可食用。</Introduce>
-        <Console>mole</Console>
       </Food>
       <Food>
         <Picture>F_limpets</Picture>
@@ -1531,7 +1518,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_limpets</Picture>
-        <Name>熟帽贝</Name>
+        <Name>烤帽贝</Name>
         <EnName>Cooked Limpets</EnName>
         <Health>1</Health>
         <Hunger>12.5</Hunger>
@@ -1570,7 +1557,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_fish_morsel</Picture>
-        <Name>熟小块鱼肉</Name>
+        <Name>烤小块鱼肉</Name>
         <EnName>Cooked Fish Morsel</EnName>
         <Health>1</Health>
         <Hunger>12.5</Hunger>
@@ -1598,7 +1585,7 @@
       </Food>
       <Food>
         <Picture>F_dead_jellyfish</Picture>
-        <Name>死水母</Name>
+        <Name>死亡的水母</Name>
         <EnName>Dead Jellyfish</EnName>
         <Health>10</Health>
         <Hunger>10</Hunger>
@@ -1613,7 +1600,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_jellyfish</Picture>
-        <Name>熟水母</Name>
+        <Name>烤水母</Name>
         <EnName>Cooked Jellyfish</EnName>
         <Health>10</Health>
         <Hunger>18.75</Hunger>
@@ -1669,7 +1656,7 @@
       </Food>
       <Food>
         <Picture>F_dead_dogfish</Picture>
-        <Name>死狗鱼</Name>
+        <Name>死亡的狗鱼</Name>
         <EnName>Dead Dogfish</EnName>
         <Health>1</Health>
         <Hunger>25</Hunger>
@@ -1697,7 +1684,7 @@
       </Food>
       <Food>
         <Picture>F_raw_fish</Picture>
-        <Name>生鱼片</Name>
+        <Name>生鱼肉</Name>
         <EnName>Raw Fish</EnName>
         <Health>1</Health>
         <Hunger>12.5</Hunger>
@@ -1727,7 +1714,7 @@
       </Food>
       <Food>
         <Picture>F_shark_fin</Picture>
-        <Name>鱼翅</Name>
+        <Name>鲨鱼鳍</Name>
         <EnName>Shark Fin</EnName>
         <Health>20</Health>
         <Hunger>25</Hunger>
@@ -1925,45 +1912,6 @@
         <Console>pumpkin_cooked</Console>
       </Food>
       <Food>
-        <Picture>F_cactus_flesh</Picture>
-        <Name>仙人掌肉</Name>
-        <EnName>Cactus Flesh</EnName>
-        <Health>-3</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>-5</Sanity>
-        <Perish>10</Perish>
-        <Attribute>FC_Vegetables</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>沙漠采摘。</Introduce>
-        <Console>cactus_meat</Console>
-      </Food>
-      <Food>
-        <Picture>F_cooked_cactus_flesh</Picture>
-        <Name>煮好的仙人掌肉</Name>
-        <EnName>Cooked Cactus Flesh</EnName>
-        <Health>1</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>15</Sanity>
-        <Perish>10</Perish>
-        <Attribute>FC_Vegetables</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>把仙人掌放在篝火上烤制。</Introduce>
-        <Console>cactus_meat_cooked</Console>
-      </Food>
-      <Food>
-        <Picture>F_cactus_flower</Picture>
-        <Name>仙人掌花</Name>
-        <EnName>Cactus Flower</EnName>
-        <Health>8</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>5</Sanity>
-        <Perish>10</Perish>
-        <Attribute>FC_Vegetables</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>夏天在沙漠采摘。</Introduce>
-        <Console>cactus_flower</Console>
-      </Food>
-      <Food>
         <Picture>F_sweet_potato</Picture>
         <Name>甘薯</Name>
         <EnName>Sweet Potato</EnName>
@@ -2031,32 +1979,6 @@
     </FoodVegetables>
     <FoodFruit>
       <Food>
-        <Picture>F_juicy_berries</Picture>
-        <Name>蜜汁浆果</Name>
-        <EnName>Juicy Berries</EnName>
-        <Health>1</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>2</Perish>
-        <Attribute>FC_Fruit</Attribute>
-        <AttributeValue>×0.5</AttributeValue>
-        <Introduce>蜜汁浆果丛采摘。</Introduce>
-        <Console>berries_juicy</Console>
-      </Food>
-      <Food>
-        <Picture>F_roasted_juicy_berries</Picture>
-        <Name>烤蜜汁浆果</Name>
-        <EnName>Roasted Juicy Berries</EnName>
-        <Health>3</Health>
-        <Hunger>18.75</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>1</Perish>
-        <Attribute>FC_Fruit</Attribute>
-        <AttributeValue>×0.5</AttributeValue>
-        <Introduce>把蜜汁浆果放在篝火上烤制。</Introduce>
-        <Console>berries_juicy_cooked</Console>
-      </Food>
-      <Food>
         <Picture>F_berries</Picture>
         <Name>浆果</Name>
         <EnName>Berries</EnName>
@@ -2092,12 +2014,12 @@
         <Perish>10</Perish>
         <Attribute>FC_Fruit</Attribute>
         <AttributeValue>×1</AttributeValue>
-        <Introduce>洞穴香蕉树、丛林树(船难)采摘或狩猎猴子获得。</Introduce>
+        <Introduce>丛林树采摘或狩猎猴子获得。</Introduce>
         <Console>cave_banana</Console>
       </Food>
       <Food>
         <Picture>F_cooked_banana</Picture>
-        <Name>熟香蕉</Name>
+        <Name>烤香蕉</Name>
         <EnName>Cooked Banana</EnName>
         <Health>3</Health>
         <Hunger>12.5</Hunger>
@@ -2179,7 +2101,7 @@
       </Food>
       <Food>
         <Picture>F_sliced_pomegranate</Picture>
-        <Name>石榴片</Name>
+        <Name>切片石榴</Name>
         <EnName>Sliced Pomegranate</EnName>
         <Health>20</Health>
         <Hunger>12.5</Hunger>
@@ -2218,7 +2140,7 @@
       </Food>
       <Food>
         <Picture>F_halved_coconut</Picture>
-        <Name>半个椰子</Name>
+        <Name>切半椰子</Name>
         <EnName>Halved Coconut</EnName>
         <Health>1</Health>
         <Hunger>4.6875</Hunger>
@@ -2337,7 +2259,7 @@
       </Food>
       <Food>
         <Picture>F_fried_doydoy_egg</Picture>
-        <Name>渡渡鸟煎蛋</Name>
+        <Name>煎渡渡鸟蛋</Name>
         <EnName>Fried DoyDoy Egg</EnName>
         <Health>0</Health>
         <Hunger>37.5</Hunger>
@@ -2351,14 +2273,14 @@
     </FoodEggs>
     <FoodOthers>
       <Food>
-        <Picture>F_butterfly_wing</Picture>
+        <Picture>F_butterfly_wing_sw</Picture>
         <Name>蝴蝶翅膀</Name>
         <EnName>Butterfly Wing</EnName>
         <Health>8</Health>
         <Hunger>9.375</Hunger>
         <Sanity>0</Sanity>
         <Perish>6</Perish>
-        <Attribute>F_butterfly_wing</Attribute>
+        <Attribute>F_butterfly_wing_sw</Attribute>
         <AttributeValue>×1</AttributeValue>
         <Introduce>猎杀蝴蝶获得。</Introduce>
         <Console>butterflywings</Console>
@@ -2403,19 +2325,6 @@
         <Console>honeycomb</Console>
       </Food>
       <Food>
-        <Picture>F_lichen</Picture>
-        <Name>苔藓</Name>
-        <EnName>Lichen</EnName>
-        <Health>3</Health>
-        <Hunger>12</Hunger>
-        <Sanity>-5</Sanity>
-        <Perish>2</Perish>
-        <Attribute>FC_Vegetables</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>洞穴采摘。</Introduce>
-        <Console>cutlichen</Console>
-      </Food>
-      <Food>
         <Picture>F_mandrake</Picture>
         <Name>曼德拉草</Name>
         <EnName>Mandrake</EnName>
@@ -2427,19 +2336,6 @@
         <AttributeValue>×1</AttributeValue>
         <Introduce>白天在草原(曼德拉平原)或洞穴拔起曼德拉草获得。</Introduce>
         <Console>mandrake</Console>
-      </Food>
-      <Food>
-        <Picture>F_electric_milk</Picture>
-        <Name>电羊奶</Name>
-        <EnName>Electric Milk</EnName>
-        <Health>3</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>5</Sanity>
-        <Perish>6</Perish>
-        <Attribute>FC_Dairy_product</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>猎杀带电的伏特山羊获得。</Introduce>
-        <Console>goatmilk</Console>
       </Food>
       <Food>
         <Picture>F_ice</Picture>
@@ -2455,19 +2351,6 @@
         <Console>ice</Console>
       </Food>
       <Food>
-        <Picture>F_roasted_birchnut</Picture>
-        <Name>烤坚果</Name>
-        <EnName>Roasted Birchnut</EnName>
-        <Health>1</Health>
-        <Hunger>9.375</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>6</Perish>
-        <Attribute></Attribute>
-        <AttributeValue>填充物×1</AttributeValue>
-        <Introduce>把坚果放在篝火上烤制。</Introduce>
-        <Console>acorn_cooked</Console>
-      </Food>
-      <Food>
         <Picture>F_twigs</Picture>
         <Name>树枝</Name>
         <EnName>Twigs</EnName>
@@ -2479,19 +2362,6 @@
         <AttributeValue>×1</AttributeValue>
         <Introduce>砍伐多枝的树、红树林或采集树苗获得。</Introduce>
         <Console>twigs</Console>
-      </Food>
-      <Food>
-        <Picture>F_butterfly_wing_sw</Picture>
-        <Name>蝴蝶翅膀(船难)</Name>
-        <EnName>Butterfly Wing(SW)</EnName>
-        <Health>8</Health>
-        <Hunger>9.375</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>6</Perish>
-        <Attribute>F_butterfly_wing</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>猎杀蝴蝶获得。</Introduce>
-        <Console>butterflywings</Console>
       </Food>
     </FoodOthers>
     <FoodNoFC>
@@ -2532,66 +2402,6 @@
         <Console>rottenegg</Console>
       </Food>
       <Food>
-        <Picture>F_batilisk_wing</Picture>
-        <Name>黑蝙蝠翅膀</Name>
-        <EnName>Batilisk Wing</EnName>
-        <Health>3</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>-10</Sanity>
-        <Perish>6</Perish>
-        <Attribute>荤</Attribute>
-        <Introduce>狩猎蝙蝠获得。</Introduce>
-        <Console>batwing</Console>
-      </Food>
-      <Food>
-        <Picture>F_cooked_batilisk_wing</Picture>
-        <Name>煮熟的黑蝙蝠翅膀</Name>
-        <EnName>Cooked Batilisk Wing</EnName>
-        <Health>8</Health>
-        <Hunger>18.75</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>10</Perish>
-        <Attribute>荤</Attribute>
-        <Introduce>把黑蝙蝠翅膀放在篝火上烤制。</Introduce>
-        <Console>batwing_cooked</Console>
-      </Food>
-      <Food>
-        <Picture>F_koalefant_trunk</Picture>
-        <Name>红色象鼻</Name>
-        <EnName>Koalefant Trunk</EnName>
-        <Health>30</Health>
-        <Hunger>37.5</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>6</Perish>
-        <Attribute>荤</Attribute>
-        <Introduce>猎杀非冬季考拉象获得。</Introduce>
-        <Console>trunk_summer</Console>
-      </Food>
-      <Food>
-        <Picture>F_winter_koalefant_trunk</Picture>
-        <Name>蓝色象鼻</Name>
-        <EnName>Winter Koalefant Trunk</EnName>
-        <Health>30</Health>
-        <Hunger>37.5</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>6</Perish>
-        <Attribute>荤</Attribute>
-        <Introduce>猎杀冬季冬考拉象获得。</Introduce>
-        <Console>trunk_winter</Console>
-      </Food>
-      <Food>
-        <Picture>F_koalefant_trunk_steak</Picture>
-        <Name>烤熟象鼻</Name>
-        <EnName>Koalefant Trunk Steak</EnName>
-        <Health>40</Health>
-        <Hunger>75</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>15</Perish>
-        <Attribute>荤</Attribute>
-        <Introduce>把红色象鼻或蓝色象鼻放在篝火上烤制。</Introduce>
-        <Console>trunk_cooked</Console>
-      </Food>
-      <Food>
         <Picture>F_leafy_meat</Picture>
         <Name>多叶的肉</Name>
         <EnName>Leafy Meat</EnName>
@@ -2605,7 +2415,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_leafy_meat</Picture>
-        <Name>煮熟的多叶的肉</Name>
+        <Name>烤多叶的肉</Name>
         <EnName>Cooked Leafy Meat</EnName>
         <Health>1</Health>
         <Hunger>18.75</Hunger>
@@ -2617,7 +2427,7 @@
       </Food>
       <Food>
         <Picture>F_cooked_mandrake</Picture>
-        <Name>熟曼德拉草</Name>
+        <Name>烤曼德拉草</Name>
         <EnName>Cooked Mandrake</EnName>
         <Health>100</Health>
         <Hunger>150</Hunger>
@@ -2626,30 +2436,6 @@
         <Attribute>素</Attribute>
         <Introduce>把曼德拉草放在篝火上烤制。</Introduce>
         <Console>cookedmandrake</Console>
-      </Food>
-      <Food>
-        <Picture>F_deerclops_eyeball</Picture>
-        <Name>巨鹿眼球</Name>
-        <EnName>Deerclops Eyeball</EnName>
-        <Health>60</Health>
-        <Hunger>75</Hunger>
-        <Sanity>-15</Sanity>
-        <Perish>1000</Perish>
-        <Attribute>荤</Attribute>
-        <Introduce>击杀独眼巨鹿获得。</Introduce>
-        <Console>deerclops_eyeball</Console>
-      </Food>
-      <Food>
-        <Picture>F_foliage</Picture>
-        <Name>蕨叶</Name>
-        <EnName>Foliage</EnName>
-        <Health>1</Health>
-        <Hunger>0</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>6</Perish>
-        <Attribute>素</Attribute>
-        <Introduce>洞穴采摘蕨类植物获得。</Introduce>
-        <Console>foliage</Console>
       </Food>
       <Food>
         <Picture>F_gears</Picture>
@@ -2663,68 +2449,8 @@
         <Console>gears</Console>
       </Food>
       <Food>
-        <Picture>F_glommer's_goop</Picture>
-        <Name>格洛姆粘液</Name>
-        <EnName>Glommer's Goop</EnName>
-        <Health>40</Health>
-        <Hunger>9.375</Hunger>
-        <Sanity>-50</Sanity>
-        <Perish>1000</Perish>
-        <Attribute>素</Attribute>
-        <Introduce>格罗姆每过一段时间会生成一个，被击杀也会掉落。</Introduce>
-        <Console>glommerfuel</Console>
-      </Food>
-      <Food>
-        <Picture>F_phlegm</Picture>
-        <Name>痰</Name>
-        <EnName>Phlegm</EnName>
-        <Health>0</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>-15</Sanity>
-        <Perish>1000</Perish>
-        <Attribute>素</Attribute>
-        <Introduce>击杀钢羊获得。</Introduce>
-        <Console>phlegm</Console>
-      </Food>
-      <Food>
-        <Picture>F_glow_berry</Picture>
-        <Name>发光浆果</Name>
-        <EnName>Glow Berry</EnName>
-        <Health>10</Health>
-        <Hunger>25</Hunger>
-        <Sanity>-15</Sanity>
-        <Perish>10</Perish>
-        <Attribute>素</Attribute>
-        <Introduce>猎杀深渊蠕虫获得，放在地上有小范围照明效果，食用有较大范围照明效果。</Introduce>
-        <Console>wormlight</Console>
-      </Food>
-      <Food>
-        <Picture>F_lesser_glow_berry</Picture>
-        <Name>小发光浆果</Name>
-        <EnName>Lesser Glow Berry</EnName>
-        <Health>3</Health>
-        <Hunger>12.5</Hunger>
-        <Sanity>-10</Sanity>
-        <Perish>10</Perish>
-        <Attribute>素</Attribute>
-        <Introduce>奇怪的植物采摘，放在地上有小范围照明效果，食用有较大范围照明效果。</Introduce>
-        <Console>wormlight_lesser</Console>
-      </Food>
-      <Food>
-        <Picture>F_guardian's_horn</Picture>
-        <Name>守卫者的角</Name>
-        <EnName>Guardian's Horn</EnName>
-        <Health>60</Health>
-        <Hunger>75</Hunger>
-        <Sanity>-15</Sanity>
-        <Perish>1000</Perish>
-        <Attribute>荤</Attribute>
-        <Introduce>狩猎远古守护者获得。</Introduce>
-        <Console>minotaurhorn</Console>
-      </Food>
-      <Food>
         <Picture>F_hatching_tallbird_egg</Picture>
-        <Name>孵化的高脚鸟蛋</Name>
+        <Name>孵化中的高脚鸟蛋</Name>
         <EnName>Hatching Tallbird Egg</EnName>
         <Health>3</Health>
         <Hunger>25</Hunger>
@@ -2735,18 +2461,6 @@
         <Console>tallbirdegg_cracked</Console>
       </Food>
       <Food>
-        <Picture>F_light_bulb</Picture>
-        <Name>荧光果</Name>
-        <EnName>Light Bulb</EnName>
-        <Health>1</Health>
-        <Hunger>0</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>6</Perish>
-        <Attribute>素</Attribute>
-        <Introduce>荧光草采摘，放在地上或带在身上有小范围照明效果。</Introduce>
-        <Console>lightbulb</Console>
-      </Food>
-      <Food>
         <Picture>F_seeds</Picture>
         <Name>种子</Name>
         <EnName>Seeds</EnName>
@@ -2755,11 +2469,11 @@
         <Sanity>0</Sanity>
         <Perish>40</Perish>
         <Attribute>素</Attribute>
-        <Introduce>种子或所有农作物喂食被囚禁的鸟有几率获得(联机版里给被囚禁的鸟喂食种子不会获得种子，而是有几率获得鸟屎)。</Introduce>
+        <Introduce>种子或所有农作物喂食被囚禁的鸟有几率获得。</Introduce>
         <Console>seeds</Console>
       </Food>
       <Food>
-        <Picture>F_petals</Picture>
+        <Picture>F_toasted_seeds</Picture>
         <Name>烤种子</Name>
         <EnName>Petals</EnName>
         <Health>1</Health>
@@ -2783,7 +2497,7 @@
         <Console>carrot_seeds</Console>
       </Food>
       <Food>
-        <Picture>F_petals</Picture>
+        <Picture>F_corn_seeds</Picture>
         <Name>玉米种子</Name>
         <EnName>Corn Seeds</EnName>
         <Health>0.5</Health>
@@ -2880,7 +2594,7 @@
       </Food>
       <Food>
         <Picture>F_dead_swordfish</Picture>
-        <Name>死旗鱼</Name>
+        <Name>死亡的旗鱼</Name>
         <EnName>Dead Swordfish</EnName>
         <Health>1</Health>
         <Hunger>25</Hunger>
@@ -2892,7 +2606,7 @@
       </Food>
       <Food>
         <Picture>F_blubber</Picture>
-        <Name>鲸油</Name>
+        <Name>鲸脂</Name>
         <EnName>Blubber</EnName>
         <Health>10</Health>
         <Hunger>10</Hunger>
@@ -2904,19 +2618,19 @@
       </Food>
       <Food>
         <Picture>F_brainy_matter</Picture>
-        <Name>聪明豆</Name>
+        <Name>智慧果</Name>
         <EnName>Brainy Matter</EnName>
         <Health>-10</Health>
         <Hunger>10</Hunger>
         <Sanity>50</Sanity>
         <Perish>1</Perish>
         <Attribute>素</Attribute>
-        <Introduce>聪明芽采摘。</Introduce>
+        <Introduce>智慧树采摘。</Introduce>
         <Console>coral_brain</Console>
       </Food>
       <Food>
         <Picture>F_dead_wobster</Picture>
-        <Name>死龙虾</Name>
+        <Name>死亡的龙虾</Name>
         <EnName>Dead Wobster</EnName>
         <Health>1</Health>
         <Hunger>12.5</Hunger>
@@ -2986,7 +2700,7 @@
       </Food>
       <Food>
         <Picture>F_spoiled_fish</Picture>
-        <Name>变质的鱼</Name>
+        <Name>腐烂的鱼</Name>
         <EnName>Spoiled Fish</EnName>
         <Health>0</Health>
         <Hunger>0</Hunger>

@@ -4280,7 +4280,9 @@
     <EmbeddedResource Include="XML\RoGXml.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="XML\TencentXml.xml" />
+    <EmbeddedResource Include="XML\TencentXml.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GameResources\Food\F_twigs.png" />
@@ -4289,6 +4291,12 @@
     <EmbeddedResource Include="XML\SWXml.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Food\F_jellybeans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Food\F_royal_jelly.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
