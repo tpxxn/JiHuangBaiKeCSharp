@@ -870,7 +870,7 @@
         <Picture>F_jellybeans</Picture>
         <Name>糖豆</Name>
         <EnName>Jellybeans</EnName>
-        <Health>305</Health>
+        <Health>122</Health>
         <Hunger>0</Hunger>
         <Sanity>5</Sanity>
         <Perish>1000</Perish>
@@ -884,7 +884,7 @@
         <Recommend_2>F_berries</Recommend_2>
         <Recommend_3>F_berries</Recommend_3>
         <Recommend_4>F_berries</Recommend_4>
-        <Introduce>一次性可以做出三个糖豆，食用后立即回复5点生命和5点精神，之后每2秒回复5点生命持续2分钟，总共回复305点生命。</Introduce>
+        <Introduce>一次性可以做出三个糖豆，食用后立即回复2点生命和5点精神，之后每2秒回复2点生命持续2分钟，总共回复122点生命。</Introduce>
         <Console>jellybean</Console>
       </Food>
       <Food>

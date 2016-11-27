@@ -29,5 +29,16 @@ namespace 饥荒百科全书CSharp.Class
             };
             obj.BeginAnimation(property, widthAnimation);
         }
+
+        public static void Scroll(ScrollViewer obj, double from, double to, DependencyProperty property, double time = 0.1)
+        {
+            var ScrollAnimation = new DoubleAnimation()
+            {
+                From = from,
+                To = to,
+                Duration = TimeSpan.FromSeconds(time),
+            };
+            obj.BeginAnimation(property, ScrollAnimation);
+        }
     }
 }
