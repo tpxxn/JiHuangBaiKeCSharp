@@ -750,8 +750,10 @@
         <Hunger>18.75</Hunger>
         <Sanity>-15</Sanity>
         <Perish>6</Perish>
-        <Attribute>FC_Monster_Meats</Attribute>
+        <Attribute>FC_Meats</Attribute>
         <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Monster_Meats</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
         <Introduce>狩猎蜘蛛、狗、触手、小偷等怪物获得。</Introduce>
         <Console>monstermeat</Console>
       </Food>
@@ -763,8 +765,10 @@
         <Hunger>18.75</Hunger>
         <Sanity>-10</Sanity>
         <Perish>15</Perish>
-        <Attribute>FC_Monster_Meats</Attribute>
+        <Attribute>FC_Meats</Attribute>
         <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Monster_Meats</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
         <Introduce>把怪兽肉放在篝火上烤制。</Introduce>
         <Console>cookedmonstermeat</Console>
       </Food>
@@ -776,8 +780,10 @@
         <Hunger>18.75</Hunger>
         <Sanity>-5</Sanity>
         <Perish>20</Perish>
-        <Attribute>FC_Monster_Meats</Attribute>
+        <Attribute>FC_Meats</Attribute>
         <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Monster_Meats</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
         <Introduce>把怪兽肉挂在晒肉架上风干制成。</Introduce>
         <Console>monstermeat_dried</Console>
       </Food>
@@ -1219,8 +1225,8 @@
         <Perish>10</Perish>
         <Attribute>FC_Fruit</Attribute>
         <AttributeValue>×1</AttributeValue>
-        <Attribute>FC_Monster_Meats</Attribute>
-        <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Monster_Meats</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
         <Introduce>农场种植。</Introduce>
         <Console>durian</Console>
       </Food>
@@ -1234,8 +1240,8 @@
         <Perish>6</Perish>
         <Attribute>FC_Fruit</Attribute>
         <AttributeValue>×1</AttributeValue>
-        <Attribute>FC_Monster_Meats</Attribute>
-        <AttributeValue>×1</AttributeValue>
+        <Attribute_2>FC_Monster_Meats</Attribute_2>
+        <AttributeValue_2>×1</AttributeValue_2>
         <Introduce>把榴莲放在篝火上烤制。</Introduce>
         <Console>durian_cooked</Console>
       </Food>
