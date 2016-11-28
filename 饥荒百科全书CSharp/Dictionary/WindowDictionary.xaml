@@ -118,13 +118,13 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_01.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Menu_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source"  Value="/Resources/HamburgerMenu/HamburgerMenu_02.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source"  Value="/Resources/HamburgerMenu/HamburgerMenu_Menu_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_03.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Menu_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -136,16 +136,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_11.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Welcome_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_12.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Welcome_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_13.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Welcome_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_13.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Welcome_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -157,16 +157,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_41.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Character_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_42.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Character_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_43.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Character_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_43.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Character_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -178,16 +178,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_21.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Food_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_22.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Food_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_23.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Food_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_23.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Food_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -198,16 +198,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_51.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Cooking_Simulator_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_52.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Cooking_Simulator_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_53.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Cooking_Simulator_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_53.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Cooking_Simulator_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -219,16 +219,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_31.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Science_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_32.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Science_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Science_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_33.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Science_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -240,16 +240,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_61.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Animal_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_62.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Animal_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_63.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Animal_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_63.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Animal_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -261,16 +261,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_71.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Natural_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_72.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Natural_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_73.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Natural_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_73.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Natural_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -282,16 +282,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_81.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Goods_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_82.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Goods_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_83.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Goods_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_83.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Goods_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -303,16 +303,37 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_121.png" />
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Setting_1.png" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_122.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Setting_2.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_123.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Setting_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_123.png" TargetName="btnbg_minimized" />
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Setting_3.png" TargetName="btnbg_minimized" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Sidebar_DedicatedServer_Style" TargetType="{x:Type RadioButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_DedicatedServer_1.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_DedicatedServer_2.png" TargetName="btnbg_minimized" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_DedicatedServer_3.png" TargetName="btnbg_minimized" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_DedicatedServer_3.png" TargetName="btnbg_minimized" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

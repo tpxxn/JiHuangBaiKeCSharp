@@ -1903,87 +1903,6 @@
     <Resource Include="Resources\GameResources\Goods\G_yellow_mosquito_sack.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_21.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_22.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_23.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_31.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_33.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_41.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_42.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_43.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_51.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_52.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_53.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_61.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_62.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_63.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_71.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_72.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_73.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_81.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_82.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_83.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_91.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_92.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_93.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_121.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_122.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_123.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Loading.png" />
   </ItemGroup>
   <ItemGroup>
@@ -4117,24 +4036,6 @@
     <Resource Include="Resources\DST.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_03.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_13.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Cursor\Cursor_alternate.cur" />
   </ItemGroup>
   <ItemGroup>
@@ -4297,6 +4198,114 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GameResources\Food\F_royal_jelly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Animal_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Animal_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Animal_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Character_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Character_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Character_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Cooking_Simulator_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Cooking_Simulator_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Cooking_Simulator_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Food_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Food_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Food_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Goods_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Goods_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Goods_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Menu_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Menu_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Menu_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Natural_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Natural_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Natural_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Science_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Science_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Science_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Setting_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Setting_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Setting_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Strategy_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Strategy_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Strategy_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Welcome_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Welcome_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_Welcome_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

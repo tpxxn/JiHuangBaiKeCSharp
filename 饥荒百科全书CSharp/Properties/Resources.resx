@@ -1819,105 +1819,6 @@
   <data name="G_yellow_mosquito_sack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_yellow_mosquito_sack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HamburgerMenu_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_121" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_122" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_122.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_123" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_123.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_42" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_43" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_52" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_52.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_53" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_53.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_61" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_62" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_63" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_63.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_71" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_71.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_73" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_73.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_81" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_81.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_82" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_82.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_83" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_83.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_91" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_92" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_92.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HamburgerMenu_93" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HamburgerMenu\HamburgerMenu_93.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Loading.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -4179,5 +4080,113 @@
   </data>
   <data name="TencentXml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\XML\TencentXml.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="HamburgerMenu_Animal_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Animal_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Animal_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Animal_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Animal_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Animal_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Character_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Character_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Character_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Character_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Character_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Character_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Cooking_Simulator_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Cooking_Simulator_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Cooking_Simulator_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Cooking_Simulator_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Cooking_Simulator_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Cooking_Simulator_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Food_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Food_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Food_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Food_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Food_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Food_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Goods_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Goods_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Goods_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Goods_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Goods_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Goods_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Menu_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Menu_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Menu_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Menu_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Menu_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Menu_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Natural_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Natural_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Natural_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Natural_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Natural_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Natural_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Science_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Science_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Science_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Science_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Science_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Science_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Setting_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Setting_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Setting_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Setting_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Setting_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Setting_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Strategy_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Strategy_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Strategy_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Strategy_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Strategy_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Strategy_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Welcome_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Welcome_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Welcome_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Welcome_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_Welcome_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_Welcome_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_DedicatedServer_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_DedicatedServer_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HamburgerMenu_DedicatedServer_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

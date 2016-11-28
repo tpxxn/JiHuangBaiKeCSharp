@@ -233,12 +233,18 @@
                 <ScrollViewer x:Name="ScrollViewer_Right_Goods" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
                     <WrapPanel x:Name="WrapPanel_Right_Goods" Focusable="False" Background="#88409A9E"/>
                 </ScrollViewer>
+                <ScrollViewer x:Name="ScrollViewer_Left_DedicatedServer" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
+                    <WrapPanel x:Name="WrapPanel_Left_DedicatedServer" Focusable="False" Background="#88DE9191"/>
+                </ScrollViewer>
+                <ScrollViewer x:Name="ScrollViewer_Right_DedicatedServer" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
+                    <WrapPanel x:Name="WrapPanel_Right_DedicatedServer" Focusable="False" Background="#88409A9E"/>
+                </ScrollViewer>
             </Grid>
             <Grid x:Name="RightGrid_Setting" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                 <TextBlock x:Name="Se_BossKey_Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
                 <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
             </Grid>
-            <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left" d:IsLocked="True">
+            <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
                     <Button x:Name="Sidebar_Menu" Width="50" Height="50" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
                     <RadioButton x:Name="Sidebar_Welcome" Content="RadioButton" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
@@ -249,6 +255,7 @@
                     <RadioButton x:Name="Sidebar_Animal" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
                     <RadioButton x:Name="Sidebar_Natural" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
                     <RadioButton x:Name="Sidebar_Goods" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
+                    <RadioButton x:Name="Sidebar_DedicatedServer" Content="RadioButton" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
                     <RadioButton x:Name="Sidebar_Setting" Content="RadioButton" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
                 </WrapPanel>
                 <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top"/>

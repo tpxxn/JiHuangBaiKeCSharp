@@ -481,6 +481,10 @@ namespace 饥荒百科全书CSharp
         {
             RightPanelVisibility("Goods");
         }
+        private void Sidebar_DedicatedServer_Click(object sender, RoutedEventArgs e)
+        {
+            RightPanelVisibility("DedicatedServer");
+        }
         private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
         {
             RightPanelVisibility("Setting");
@@ -565,6 +569,11 @@ namespace 饥荒百科全书CSharp
                             break;
                         case "Goods":
                             Visi.VisiCol(false, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
+                            SLWidth.MinWidth = 220;
+                            SLWidth.Width = new GridLength(220);
+                            break;
+                        case "DedicatedServer":
+                            Visi.VisiCol(false, ScrollViewer_Left_DedicatedServer, ScrollViewer_Right_DedicatedServer);
                             SLWidth.MinWidth = 220;
                             SLWidth.Width = new GridLength(220);
                             break;

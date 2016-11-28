@@ -6117,9 +6117,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_01 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Animal_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_01", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Animal_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6127,9 +6127,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_02 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Animal_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_02", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Animal_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6137,9 +6137,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_03 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Animal_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_03", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Animal_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6147,9 +6147,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_11 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Character_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_11", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Character_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6157,9 +6157,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_12 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Character_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_12", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Character_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6167,9 +6167,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_121 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Character_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_121", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Character_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6177,9 +6177,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_122 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Cooking_Simulator_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_122", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Cooking_Simulator_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6187,9 +6187,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_123 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Cooking_Simulator_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_123", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Cooking_Simulator_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6197,9 +6197,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_13 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Cooking_Simulator_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_13", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Cooking_Simulator_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6207,9 +6207,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_21 {
+        internal static System.Drawing.Bitmap HamburgerMenu_DedicatedServer_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_21", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_DedicatedServer_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6217,9 +6217,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_22 {
+        internal static System.Drawing.Bitmap HamburgerMenu_DedicatedServer_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_22", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_DedicatedServer_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6227,9 +6227,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_23 {
+        internal static System.Drawing.Bitmap HamburgerMenu_DedicatedServer_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_23", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_DedicatedServer_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6237,9 +6237,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_31 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Food_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_31", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Food_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6247,9 +6247,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_32 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Food_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_32", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Food_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6257,9 +6257,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_33 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Food_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_33", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Food_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6267,9 +6267,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_41 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Goods_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_41", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Goods_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6277,9 +6277,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_42 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Goods_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_42", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Goods_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6287,9 +6287,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_43 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Goods_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_43", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Goods_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6297,9 +6297,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_51 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Menu_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_51", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Menu_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6307,9 +6307,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_52 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Menu_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_52", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Menu_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6317,9 +6317,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_53 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Menu_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_53", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Menu_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6327,9 +6327,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_61 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Natural_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_61", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Natural_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6337,9 +6337,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_62 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Natural_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_62", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Natural_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6347,9 +6347,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_63 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Natural_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_63", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Natural_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6357,9 +6357,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_71 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Science_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_71", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Science_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6367,9 +6367,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_72 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Science_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_72", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Science_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6377,9 +6377,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_73 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Science_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_73", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Science_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6387,9 +6387,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_81 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Setting_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_81", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Setting_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6397,9 +6397,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_82 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Setting_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_82", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Setting_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6407,9 +6407,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_83 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Setting_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_83", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Setting_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6417,9 +6417,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_91 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Strategy_1 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_91", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Strategy_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6427,9 +6427,9 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_92 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Strategy_2 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_92", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Strategy_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6437,9 +6437,39 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HamburgerMenu_93 {
+        internal static System.Drawing.Bitmap HamburgerMenu_Strategy_3 {
             get {
-                object obj = ResourceManager.GetObject("HamburgerMenu_93", resourceCulture);
+                object obj = ResourceManager.GetObject("HamburgerMenu_Strategy_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap HamburgerMenu_Welcome_1 {
+            get {
+                object obj = ResourceManager.GetObject("HamburgerMenu_Welcome_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap HamburgerMenu_Welcome_2 {
+            get {
+                object obj = ResourceManager.GetObject("HamburgerMenu_Welcome_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap HamburgerMenu_Welcome_3 {
+            get {
+                object obj = ResourceManager.GetObject("HamburgerMenu_Welcome_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
