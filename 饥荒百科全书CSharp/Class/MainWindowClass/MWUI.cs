@@ -19,6 +19,19 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region "颜色常量"
+        public const string PBCGreen = "5EB660";  //绿色
+        public const string PBCKhaki = "EDB660";  //卡其布色/土黄色
+        public const string PBCBlue = "337AB8";   //蓝色
+        public const string PBCCyan = "15E3EA";   //青色
+        public const string PBCOrange = "F6A60B"; //橙色
+        public const string PBCPink = "F085D3";   //粉色
+        public const string PBCYellow = "EEE815"; //黄色
+        public const string PBCRed = "D8524F";    //红色
+        public const string PBCPurple = "A285F0"; //紫色
+        public const string PBCBorderCyan = "B2ECED"; //紫色
+        #endregion
+
         #region "窗口尺寸/拖动窗口"
         //引用光标资源字典
         static ResourceDictionary cursorDictionary = new ResourceDictionary();

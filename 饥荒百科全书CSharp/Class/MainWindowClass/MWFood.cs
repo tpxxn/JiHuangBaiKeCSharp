@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Threading;
 using 饥荒百科全书CSharp.Class;
@@ -21,7 +22,6 @@ namespace 饥荒百科全书CSharp
             string[] BWTTag = (string[])button.Tag;//获取参数
             Food_Recipe_Click_Handle(BWTTag);
         }
-
         //WrapPanel_Left_Food控件创建事件(食谱)
         private void Food_Recipe_Click_Handle(string[] BWTTag)
         {
@@ -434,7 +434,6 @@ namespace 饥荒百科全书CSharp
             WrapPanel_Left_Food_SizeChanged(null, null);//调整位置
         }
 
-
         //Food面板Click事件(食材)
         private void Food_Click(object sender, RoutedEventArgs e)
         {
@@ -442,7 +441,6 @@ namespace 饥荒百科全书CSharp
             string[] BWTTag = (string[])button.Tag;//获取参数
             Food_Click_Handle(BWTTag);
         }
-
         //WrapPanel_Left_Food控件创建事件(食材)
         private void Food_Click_Handle(string[] BWTTag)
         {
@@ -638,16 +636,14 @@ namespace 饥荒百科全书CSharp
             WrapPanel_Left_Food_SizeChanged(null, null);//调整位置
         }
 
-
-        //Food面板Click事件(食材)
+        //Food面板Click事件(非食材)
         private void Food_NoFC_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             string[] BWTTag = (string[])button.Tag;//获取参数
             Food_NoFC_Click_Handle(BWTTag);
         }
-
-        //WrapPanel_Left_Food控件创建事件(食材)
+        //WrapPanel_Left_Food控件创建事件(非食材)
         private void Food_NoFC_Click_Handle(string[] BWTTag)
         {
             try
@@ -811,22 +807,27 @@ namespace 饥荒百科全书CSharp
             WrapPanel_Left_Food_SizeChanged(null, null);//调整位置
         }
 
-
         //跳转按钮事件
         private void Food_Jump_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            string BWTTag = (string)button.Tag;//获取参数
-            Food_Jump_Click_Handle(BWTTag);
+            string BWTTag = (string)button.Tag;
+            Food_Jump_Click_Handle(sender, BWTTag);
         }
-        private void Food_Jump_Click_Handle(string BWTTag)
+        //引用光标资源字典
+        static ResourceDictionary scrolllViewerDictionary = new ResourceDictionary();
+        private void Food_Jump_Click_Handle(object sender, string BWTTag)
         {
             //获取前缀(F_或FC)
             string prefix = BWTTag.Substring(0, 2);
-
+            
             if (prefix == "FC")
             {
-                MessageBox.Show("FC");
+                
+
+
+                pop_FoodAttribute.PlacementTarget = (Button)sender;
+                pop_FoodAttribute.IsOpen = true;
             }
             else
             {
@@ -836,9 +837,9 @@ namespace 饥荒百科全书CSharp
                     foreach (UIElement buttonWithText in ((ExpanderStackpanel)expanderStackpanel).UCWrapPanel.Children)
                     {
                         string[] RightButtonTag = (string[])(((ButtonWithText)buttonWithText).UCButton.Tag);
-                        string RightButton0 = RightButtonTag[0];
-                        RightButton0 = RightButton0.Substring(RightButton0.LastIndexOf('/') + 1, RightButton0.Length - RightButton0.LastIndexOf('/') - 5);
-                        if (BWTTag == RightButton0)
+                        string RightButtonTag0 = RightButtonTag[0];
+                        RightButtonTag0 = RightButtonTag0.Substring(RightButtonTag0.LastIndexOf('/') + 1, RightButtonTag0.Length - RightButtonTag0.LastIndexOf('/') - 5);
+                        if (BWTTag == RightButtonTag0)
                         {
                             Food_Click(((ButtonWithText)buttonWithText).UCButton, null);
                             Point point = ((ButtonWithText)buttonWithText).TransformToVisual(WrapPanel_Right_Food).Transform(new Point(0, 0));
@@ -865,7 +866,6 @@ namespace 饥荒百科全书CSharp
                 }
             }
         }
-
         //WrapPanel_Right_Food内Expander.Width设置为WrapPanel_Right_Food.ActualWidth
         private void WrapPanel_Right_Food_SizeChanged(object sender, SizeChangedEventArgs e)
         {

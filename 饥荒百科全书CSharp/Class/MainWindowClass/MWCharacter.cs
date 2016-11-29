@@ -19,7 +19,6 @@ namespace 饥荒百科全书CSharp
             string[] BWTTag = (string[])button.Tag;//获取参数
             Character_Click_Handle(BWTTag);
         }
-
         //WrapPanel_Left_Character控件创建事件
         private void Character_Click_Handle(string[] BWTTag)
         {
@@ -56,9 +55,7 @@ namespace 饥荒百科全书CSharp
                 tbEnName.HorizontalAlignment = HorizontalAlignment.Center;
                 tbEnName.Text = BWTTag[2];
                 tbEnName.FontSize = 26.667;
-                Thickness TEnName = new Thickness();
-                TEnName.Top = -5;
-                tbEnName.Margin = TEnName;
+                tbEnName.Margin = new Thickness(-5, 0, 0, 0);
                 gEnName.Children.Add(tbEnName);
                 WrapPanel_Left_Character.Children.Add(gEnName);
                 #endregion
@@ -86,9 +83,7 @@ namespace 饥荒百科全书CSharp
                     tbDescriptions_1.HorizontalAlignment = HorizontalAlignment.Left;
                     tbDescriptions_1.Text = BWTTag[4];
                     tbDescriptions_1.FontSize = 14;
-                    Thickness TDescriptions_1 = new Thickness();
-                    TDescriptions_1.Left = 25;
-                    tbDescriptions_1.Margin = TDescriptions_1;
+                    tbDescriptions_1.Margin = new Thickness(25, 0, 0, 0);
                     gDescriptions_1.Children.Add(tbDescriptions_1);
                     WrapPanel_Left_Character.Children.Add(gDescriptions_1);
                 }
@@ -101,9 +96,7 @@ namespace 饥荒百科全书CSharp
                     tbDescriptions_2.HorizontalAlignment = HorizontalAlignment.Left;
                     tbDescriptions_2.Text = BWTTag[5];
                     tbDescriptions_2.FontSize = 14;
-                    Thickness TDescriptions_2 = new Thickness();
-                    TDescriptions_2.Left = 25;
-                    tbDescriptions_2.Margin = TDescriptions_2;
+                    tbDescriptions_2.Margin = new Thickness(25, 0, 0, 0);
                     gDescriptions_2.Children.Add(tbDescriptions_2);
                     WrapPanel_Left_Character.Children.Add(gDescriptions_2);
                 }
@@ -116,9 +109,7 @@ namespace 饥荒百科全书CSharp
                     tbDescriptions_3.HorizontalAlignment = HorizontalAlignment.Left;
                     tbDescriptions_3.Text = BWTTag[6];
                     tbDescriptions_3.FontSize = 14;
-                    Thickness TDescriptions_3 = new Thickness();
-                    TDescriptions_3.Left = 25;
-                    tbDescriptions_3.Margin = TDescriptions_3;
+                    tbDescriptions_3.Margin = new Thickness(25, 0, 0, 0);
                     gDescriptions_3.Children.Add(tbDescriptions_3);
                     WrapPanel_Left_Character.Children.Add(gDescriptions_3);
                 }
@@ -293,9 +284,7 @@ namespace 饥荒百科全书CSharp
                 tbIntroduce.TextWrapping = TextWrapping.Wrap;
                 tbIntroduce.Text = BWTTag[15];
                 tbIntroduce.FontSize = 13;
-                Thickness TIntroduce = new Thickness();
-                TIntroduce.Left = 15;
-                tbIntroduce.Margin = TIntroduce;
+                tbIntroduce.Margin = new Thickness(15, 0, 0, 0);
                 gIntroduce.Children.Add(tbIntroduce);
                 WrapPanel_Left_Character.Children.Add(gIntroduce);
                 #endregion
