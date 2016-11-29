@@ -985,6 +985,7 @@ namespace 饥荒百科全书CSharp
                     WrapPanel_FoodAttribute.Children.Add(ESJellyfish);
                 }
                 pop_FoodAttribute.PlacementTarget = (Button)sender;
+                pop_FoodAttribute.UpdateLayout();
                 pop_FoodAttribute.IsOpen = true;
                 Point point;
                 switch (BWTTag)
