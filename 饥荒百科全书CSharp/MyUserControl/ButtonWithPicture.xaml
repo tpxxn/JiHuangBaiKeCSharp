@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:饥荒百科全书CSharp.MyUserControl"
              mc:Ignorable="d" 
              d:DesignHeight="35" d:DesignWidth="35">
+    
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
