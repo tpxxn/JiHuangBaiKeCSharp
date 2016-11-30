@@ -4189,4 +4189,13 @@
   <data name="HamburgerMenu_DedicatedServer_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="D_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_leftpanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_leftpanel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mainpanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mainpanel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

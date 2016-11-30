@@ -533,17 +533,23 @@ namespace 饥荒百科全书CSharp
                 //欢迎界面
                 case "Welcome":
                     Visi.VisiCol(false, RightGrid_Welcome);
-                    Visi.VisiCol(true, RightGrid_Setting, RightGrid);
+                    Visi.VisiCol(true, RightGrid_Setting, RightGrid, RightGrid_Dedicated_Server);
                     break;
                 //设置界面
                 case "Setting":
                     Visi.VisiCol(false, RightGrid_Setting);
-                    Visi.VisiCol(true, RightGrid_Welcome, RightGrid);
+                    Visi.VisiCol(true, RightGrid_Welcome, RightGrid, RightGrid_Dedicated_Server);
+                    break;
+                //服务器界面
+                case "DedicatedServer":
+                    Visi.VisiCol(false, RightGrid_Dedicated_Server);
+                    Visi.VisiCol(true, RightGrid_Welcome, RightGrid, RightGrid_Setting);
                     break;
                 //内容界面
                 default:
                     //隐藏欢迎/设置界面
                     Visi.VisiCol(true, RightGrid_Welcome);
+                    Visi.VisiCol(true, RightGrid_Dedicated_Server);
                     Visi.VisiCol(true, RightGrid_Setting);
                     //显示右侧内容Grid容器/分割器
                     Visi.VisiCol(false, RightGrid);
@@ -582,11 +588,6 @@ namespace 饥荒百科全书CSharp
                             break;
                         case "Goods":
                             Visi.VisiCol(false, ScrollViewer_Left_Goods, ScrollViewer_Right_Goods);
-                            SLWidth.MinWidth = 220;
-                            SLWidth.Width = new GridLength(220);
-                            break;
-                        case "DedicatedServer":
-                            Visi.VisiCol(false, ScrollViewer_Left_DedicatedServer, ScrollViewer_Right_DedicatedServer);
                             SLWidth.MinWidth = 220;
                             SLWidth.Width = new GridLength(220);
                             break;

@@ -4307,6 +4307,16 @@
   <ItemGroup>
     <Resource Include="Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DedicatedServer\D_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DedicatedServer\D_leftpanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DedicatedServer\D_mainpanel.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
