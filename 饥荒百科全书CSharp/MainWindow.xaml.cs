@@ -99,23 +99,24 @@ namespace 饥荒百科全书CSharp
         //MainWindow构造函数
         public MainWindow()
         {
-            //读取注册表(必须在初始化之前读取)
-            ////背景图片
+            #region "读取注册表(必须在初始化之前读取)"
+            //背景图片
             string bg = RegeditRW.RegReadString("Background");
             double bgStretch = RegeditRW.RegRead("BackgroundStretch");
-            ////透明度
+            //透明度
             double bgAlpha = RegeditRW.RegRead("BGAlpha");
             double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
             double windowAlpha = RegeditRW.RegRead("WindowAlpha");
-            ////窗口大小
+            //窗口大小
             double mainWindowHeight = RegeditRW.RegRead("MainWindowHeight");
             double mainWindowWidth = RegeditRW.RegRead("MainWindowWidth");
             //字体
             string mainWindowFont = RegeditRW.RegReadString("MainWindowFont");
             //设置菜单
             double winTopmost = RegeditRW.RegRead("Topmost");
-            ////游戏版本
+            //游戏版本
             double gameVersion = RegeditRW.RegRead("GameVersion");
+            #endregion
             //初始化
             InitializeComponent();
             //窗口缩放
@@ -123,6 +124,7 @@ namespace 饥荒百科全书CSharp
             MouseMove += new System.Windows.Input.MouseEventHandler(Window_MouseMove);
             //mainWindow初始化标志
             MWInit = true;
+            #region "读取设置"
             //设置字体
             if (mainWindowFont == "" || mainWindowFont == null)
             {
@@ -204,6 +206,7 @@ namespace 饥荒百科全书CSharp
             Height = mainWindowHeight;
             //设置游戏版本
             UI_gameversion.SelectedIndex = (int)gameVersion;
+            #endregion
         }
         //MainWindow窗口加载
         private void mainWindow_Loaded(object sender, RoutedEventArgs e)

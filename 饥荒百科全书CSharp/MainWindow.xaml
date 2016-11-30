@@ -200,7 +200,7 @@
                 <ScrollViewer x:Name="ScrollViewer_Left_Food" Template="{DynamicResource MyScrollViewer}" Focusable="False">
                     <StackPanel x:Name="WrapPanel_Left_Food" Focusable="False" SizeChanged="WrapPanel_Left_Food_SizeChanged"/>
                 </ScrollViewer>
-                <Popup x:Name="pop_FoodAttribute" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=UI_btn_setting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Popup x:Name="pop_FoodAttribute" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=UI_btn_setting}" Placement="Right" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
                         <ScrollViewer x:Name="ScrollViewer_FoodAttribute" Template="{DynamicResource MyScrollViewer}" Focusable="False" Height="350">
                             <WrapPanel x:Name="WrapPanel_FoodAttribute" Width="185"/>

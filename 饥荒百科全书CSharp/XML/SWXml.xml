@@ -2169,7 +2169,7 @@
         <Perish>10</Perish>
         <Attribute>FC_Fruit</Attribute>
         <AttributeValue>×1</AttributeValue>
-        <Introduce>把半个椰子放在篝火上烤制。</Introduce>
+        <Introduce>把切半椰子放在篝火上烤制。</Introduce>
         <Console>coconut_cooked</Console>
       </Food>
       <Food>

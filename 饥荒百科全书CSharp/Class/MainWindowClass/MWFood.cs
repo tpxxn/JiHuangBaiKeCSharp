@@ -306,7 +306,17 @@ namespace 饥荒百科全书CSharp
                         TextBlock tbNeed_or = new TextBlock();
                         tbNeed_or.Text = BWTTag[13];
                         tbNeed_or.Padding = new Thickness(0, 8, 0, 0);
-                        wNeed_1.Children.Add(tbNeed_or);
+                        if (BWTTag[2] != "Monster Lasagna")
+                        {
+                            wNeed_1.Children.Add(tbNeed_or);
+                        }
+                        else
+                        {
+                            if (UI_gameversion.SelectedIndex == 2)
+                            {
+                                wNeed_1.Children.Add(tbNeed_or);
+                            }
+                        }
                     }
                     if (BWTTag[14] != "")
                     {
@@ -324,8 +334,11 @@ namespace 饥荒百科全书CSharp
                         }
                         else
                         {
-                            wNeed_1.Children.Add(bwpNeed_2);
-                            wNeed_1.Children.Add(tbNeed_2);
+                            if (UI_gameversion.SelectedIndex == 2)
+                            {
+                                wNeed_1.Children.Add(bwpNeed_2);
+                            }
+                                wNeed_1.Children.Add(tbNeed_2);
                         }
                     }
                     if (BWTTag[16] != "")
@@ -851,7 +864,7 @@ namespace 饥荒百科全书CSharp
                 ESDairyProduct.Width = 185;
                 ExpanderStackpanel ESSweetener = new ExpanderStackpanel("甜味剂类×1", "../Resources/GameResources/Food/FC_Sweetener.png");
                 ESSweetener.Width = 185;
-                ExpanderStackpanel ESJellyfish = new ExpanderStackpanel("水母类×0.5", "../Resources/GameResources/Food/FC_Jellyfish.png");
+                ExpanderStackpanel ESJellyfish = new ExpanderStackpanel("水母类×1", "../Resources/GameResources/Food/FC_Jellyfish.png");
                 ESJellyfish.Width = 185;
 
                 foreach (UIElement expanderStackpanel in WrapPanel_Right_Food.Children)
