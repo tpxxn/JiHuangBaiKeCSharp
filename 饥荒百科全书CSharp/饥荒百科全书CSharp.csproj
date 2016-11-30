@@ -4308,13 +4308,13 @@
     <Resource Include="Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DedicatedServer\D_background.png" />
+    <Resource Include="Resources\DedicatedServer\D_background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DedicatedServer\D_leftpanel.png" />
+    <Resource Include="Resources\DedicatedServer\D_leftpanel.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DedicatedServer\D_mainpanel.png" />
+    <Resource Include="Resources\DedicatedServer\D_mainpanel.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
