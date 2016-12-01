@@ -185,7 +185,7 @@
                 </Button>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: DS-饥荒单机 | RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机 | Tencent-TGP版和QQ游戏大厅版" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16"/>
             </Grid>
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF">
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF" d:IsHidden="True">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="SLWidth" Width="320" MinWidth="320" MaxWidth="400"/>
                     <ColumnDefinition x:Name="SRWidth" Width="*" MinWidth="100"/>
@@ -240,12 +240,6 @@
                 <ScrollViewer x:Name="ScrollViewer_Right_Goods" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
                     <WrapPanel x:Name="WrapPanel_Right_Goods" Focusable="False" Background="#88409A9E"/>
                 </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Left_DedicatedServer" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
-                    <WrapPanel x:Name="WrapPanel_Left_DedicatedServer" Focusable="False" Background="#88DE9191"/>
-                </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewer_Right_DedicatedServer" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanel_Right_DedicatedServer" Focusable="False" Background="#88409A9E"/>
-                </ScrollViewer>
             </Grid>
             <Grid x:Name="RightGrid_Setting" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                 <TextBlock x:Name="Se_BossKey_Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
@@ -253,9 +247,14 @@
             </Grid>
             <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1">
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/DedicatedServer/D_background.png"/>
+                <ListBox x:Name="listBox" Margin="50,50,0,50" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}">
+                    <ListBox.Background>
+                        <ImageBrush ImageSource="Resources/DedicatedServer/D_leftpanel.png"/>
+                    </ListBox.Background>
+                </ListBox>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
-                <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
+                <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658" d:IsLocked="True">
                     <Button x:Name="Sidebar_Menu" Width="50" Height="50" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
                     <RadioButton x:Name="Sidebar_Welcome" Content="RadioButton" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
                     <RadioButton x:Name="Sidebar_Character" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
@@ -268,7 +267,7 @@
                     <RadioButton x:Name="Sidebar_DedicatedServer" Content="RadioButton" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
                     <RadioButton x:Name="Sidebar_Setting" Content="RadioButton" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
                 </WrapPanel>
-                <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True"/>
             </Canvas>
         </Grid>
         <Border x:Name="mainBorder" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="5" BorderBrush="#FF2B2B2B" d:IsHidden="True" d:IsLocked="True"/>
