@@ -29,6 +29,8 @@
                 <ResourceDictionary Source="Dictionary/ScrollViewerDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/SliderDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediListBoxDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelScrollViewerDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -241,17 +243,63 @@
                     <WrapPanel x:Name="WrapPanel_Right_Goods" Focusable="False" Background="#88409A9E"/>
                 </ScrollViewer>
             </Grid>
+            <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1">
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/DedicatedServer/D_background.png"/>
+                <ScrollViewer Margin="50,50,0,50" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource ScrollViewerControlTemplate}">
+                    <ScrollViewer.Background>
+                        <ImageBrush ImageSource="Resources/DedicatedServer/D_leftpanel.png"/>
+                    </ScrollViewer.Background>
+                    <StackPanel HorizontalAlignment="Left" Width="160" VerticalAlignment="Top" Margin="10,0,0,0">
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                        <RadioButton Content="RadioButton"/>
+                    </StackPanel>
+                </ScrollViewer>
+                <TabControl x:Name="tabControl" Margin="255,86,242.8,272.8">
+                    <TabItem Header="TabItem">
+                        <Grid Background="#FFE5E5E5"/>
+                    </TabItem>
+                    <TabItem Header="TabItem">
+                        <Grid Background="#FFE5E5E5"/>
+                    </TabItem>
+                </TabControl>
+            </Grid>
             <Grid x:Name="RightGrid_Setting" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                 <TextBlock x:Name="Se_BossKey_Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
                 <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
-            </Grid>
-            <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1">
-                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/DedicatedServer/D_background.png"/>
-                <ListBox x:Name="listBox" Margin="50,50,0,50" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}">
-                    <ListBox.Background>
-                        <ImageBrush ImageSource="Resources/DedicatedServer/D_leftpanel.png"/>
-                    </ListBox.Background>
-                </ListBox>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658" d:IsLocked="True">
