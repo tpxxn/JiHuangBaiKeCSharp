@@ -29,7 +29,7 @@
                 <ResourceDictionary Source="Dictionary/ScrollViewerDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/SliderDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediListBoxDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelRadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelScrollViewerDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -249,43 +249,22 @@
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="Resources/DedicatedServer/D_leftpanel.png"/>
                     </ScrollViewer.Background>
-                    <StackPanel HorizontalAlignment="Left" Width="160" VerticalAlignment="Top" Margin="10,0,0,0">
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
-                        <RadioButton Content="RadioButton"/>
+                    <StackPanel HorizontalAlignment="Left" Width="160" VerticalAlignment="Top">
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
                     </StackPanel>
                 </ScrollViewer>
                 <TabControl x:Name="tabControl" Margin="255,86,242.8,272.8">

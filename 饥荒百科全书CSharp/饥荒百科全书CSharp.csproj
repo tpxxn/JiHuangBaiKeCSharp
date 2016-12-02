@@ -129,7 +129,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dictionary\DedicatedServer\DediListBoxDictionary.xaml">
+    <Page Include="Dictionary\DedicatedServer\DediLeftPanelRadioButtonDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -4322,9 +4322,6 @@
     <Resource Include="Resources\DedicatedServer\D_leftpanel.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\DedicatedServer\D_mainpanel.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_lp_decrease.png" />
   </ItemGroup>
   <ItemGroup>
@@ -4341,6 +4338,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_lp_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DedicatedServer\D_mainpanel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
