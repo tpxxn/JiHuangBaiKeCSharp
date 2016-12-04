@@ -119,9 +119,7 @@ namespace 饥荒百科全书CSharp
                 tbEnName.HorizontalAlignment = HorizontalAlignment.Center;
                 tbEnName.Text = BWTTag[2];
                 tbEnName.FontSize = 16;
-                Thickness TEnName = new Thickness();
-                TEnName.Top = -5;
-                tbEnName.Margin = TEnName;
+                tbEnName.Margin = new Thickness(0, -2, 0, 0);
                 gEnName.Children.Add(tbEnName);
                 WrapPanel_Left_Food.Children.Add(gEnName);
                 #endregion
@@ -491,9 +489,7 @@ namespace 饥荒百科全书CSharp
                 tbEnName.HorizontalAlignment = HorizontalAlignment.Center;
                 tbEnName.Text = BWTTag[2];
                 tbEnName.FontSize = 16;
-                Thickness TEnName = new Thickness();
-                TEnName.Top = -5;
-                tbEnName.Margin = TEnName;
+                tbEnName.Margin = new Thickness(0, -2, 0, 0);
                 gEnName.Children.Add(tbEnName);
                 WrapPanel_Left_Food.Children.Add(gEnName);
                 #endregion
@@ -692,9 +688,7 @@ namespace 饥荒百科全书CSharp
                 tbEnName.HorizontalAlignment = HorizontalAlignment.Center;
                 tbEnName.Text = BWTTag[2];
                 tbEnName.FontSize = 16;
-                Thickness TEnName = new Thickness();
-                TEnName.Top = -5;
-                tbEnName.Margin = TEnName;
+                tbEnName.Margin = new Thickness(0, -2, 0, 0);
                 gEnName.Children.Add(tbEnName);
                 WrapPanel_Left_Food.Children.Add(gEnName);
                 #endregion

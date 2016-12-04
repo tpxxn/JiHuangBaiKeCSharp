@@ -40,6 +40,7 @@
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Margin" Value="-10,0"/>
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
         <Setter Property="Template">
             <Setter.Value>

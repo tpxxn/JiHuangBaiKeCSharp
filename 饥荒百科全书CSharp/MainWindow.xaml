@@ -31,6 +31,7 @@
                 <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelRadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelScrollViewerDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -245,7 +246,46 @@
             </Grid>
             <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1">
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/DedicatedServer/D_background.png"/>
-                <ScrollViewer Margin="50,50,0,50" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource ScrollViewerControlTemplate}">
+                <Grid Margin="220,20,50,10" ClipToBounds="false" SnapsToDevicePixels="true" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" d:LayoutOverrides="LeftPosition, RightPosition">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Effect>
+                        <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10"/>
+                    </Grid.Effect>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Resources/DedicatedServer/D_mainpanel.png"/>
+                    </Grid.Background>
+                    <Grid ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local" Grid.Row="1" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Content="基本设置" Grid.Column="0" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}" IsChecked="True"/>
+                            <RadioButton Content="编辑世界" Grid.Column="1" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
+                            <RadioButton Content="Mods" Grid.Column="2" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
+                            <RadioButton Content="回档" Grid.Column="3" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
+                            <RadioButton Content="黑名单" Grid.Column="4" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
+                        </Grid>
+                        <Image Grid.Row="1" Source="Resources/DedicatedServer/D_mp_content_bg.png" Stretch="Fill"/>
+                    </Grid>
+                </Grid>
+                <ScrollViewer Margin="50,70,0,70" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource ScrollViewerControlTemplate}" Focusable="False">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="Resources/DedicatedServer/D_leftpanel.png"/>
                     </ScrollViewer.Background>
@@ -257,42 +297,26 @@
                         <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
                         <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
                         <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
                     </StackPanel>
                 </ScrollViewer>
-                <TabControl x:Name="tabControl" Margin="255,86,242.8,272.8">
-                    <TabItem Header="TabItem">
-                        <Grid Background="#FFE5E5E5"/>
-                    </TabItem>
-                    <TabItem Header="TabItem">
-                        <Grid Background="#FFE5E5E5"/>
-                    </TabItem>
-                </TabControl>
             </Grid>
             <Grid x:Name="RightGrid_Setting" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                 <TextBlock x:Name="Se_BossKey_Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
                 <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
-                <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658" d:IsLocked="True">
+                <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
                     <Button x:Name="Sidebar_Menu" Width="50" Height="50" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
-                    <RadioButton x:Name="Sidebar_Welcome" Content="RadioButton" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
-                    <RadioButton x:Name="Sidebar_Character" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
-                    <RadioButton x:Name="Sidebar_Food" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Food_Style}" Focusable="False" Click="Sidebar_Food_Click" />
-                    <RadioButton x:Name="Sidebar_Cooking_Simulator" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Cooking_Simulator_Style}" Focusable="False" Click="Sidebar_Cooking_Simulator_Click" />
-                    <RadioButton x:Name="Sidebar_Science" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Science_Style}" Focusable="False" Click="Sidebar_Science_Click" />
-                    <RadioButton x:Name="Sidebar_Animal" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
-                    <RadioButton x:Name="Sidebar_Natural" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
-                    <RadioButton x:Name="Sidebar_Goods" Content="RadioButton" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
-                    <RadioButton x:Name="Sidebar_DedicatedServer" Content="RadioButton" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
-                    <RadioButton x:Name="Sidebar_Setting" Content="RadioButton" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
+                    <RadioButton x:Name="Sidebar_Welcome" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
+                    <RadioButton x:Name="Sidebar_Character" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
+                    <RadioButton x:Name="Sidebar_Food" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Food_Style}" Focusable="False" Click="Sidebar_Food_Click" />
+                    <RadioButton x:Name="Sidebar_Cooking_Simulator" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Cooking_Simulator_Style}" Focusable="False" Click="Sidebar_Cooking_Simulator_Click" />
+                    <RadioButton x:Name="Sidebar_Science" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Science_Style}" Focusable="False" Click="Sidebar_Science_Click" />
+                    <RadioButton x:Name="Sidebar_Animal" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
+                    <RadioButton x:Name="Sidebar_Natural" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
+                    <RadioButton x:Name="Sidebar_Goods" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
+                    <RadioButton x:Name="Sidebar_DedicatedServer" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
+                    <RadioButton x:Name="Sidebar_Setting" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
                 </WrapPanel>
                 <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True"/>
             </Canvas>
