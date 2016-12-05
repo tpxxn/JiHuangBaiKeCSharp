@@ -2353,9 +2353,79 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap D_mp_btn_1 {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_btn_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_btn_2 {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_btn_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_btn_3 {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_btn_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_btn_light {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_btn_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_btn_tip {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_btn_tip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap D_mp_content_bg {
             get {
                 object obj = ResourceManager.GetObject("D_mp_content_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_createworld {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_createworld", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_createworld_tobeclick {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_createworld_tobeclick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2386,6 +2456,146 @@ namespace 饥荒百科全书CSharp.Properties {
         internal static System.Drawing.Bitmap D_mp_header_bg_tobeselected {
             get {
                 object obj = ResourceManager.GetObject("D_mp_header_bg_tobeselected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_bg {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_maxwell {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_maxwell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_mod {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_mod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_none {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_webber {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_webber", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_wendy {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_wendy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_wes {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_wes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_wickerbottom {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_wickerbottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_wigfrid {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_wigfrid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_willow {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_willow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_wilson {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_wilson", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_wolfgang {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_wolfgang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_woodie {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_woodie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_portraits_wx78 {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_portraits_wx78", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

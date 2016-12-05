@@ -4228,4 +4228,67 @@
   <data name="D_mp_header_bg_tobeselected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DedicatedServer\D_mp_header_bg_tobeselected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="D_mp_btn_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_btn_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_btn_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_btn_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_btn_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_btn_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_btn_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_btn_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_mod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_mod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_maxwell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_maxwell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_webber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_webber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_wendy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_wendy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_wes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_wes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_wickerbottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_wickerbottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_wigfrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_wigfrid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_willow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_willow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_wilson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_wilson.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_wolfgang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_wolfgang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_woodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_woodie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_portraits_wx78" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_portraits_wx78.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_btn_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_btn_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_createworld" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_createworld.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_createworld_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_createworld_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
