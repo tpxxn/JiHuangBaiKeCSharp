@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:饥荒百科全书CSharp"
         xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
-        xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Name="mainWindow" x:Class="饥荒百科全书CSharp.MainWindow"
+        xmlns:ucdedi="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer"
+        xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" xmlns:DedicatedServer="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer" x:Name="mainWindow" x:Class="饥荒百科全书CSharp.MainWindow"
         mc:Ignorable="d"
         Title="饥荒百科全书" Icon="Resources/DST.ico" 
         Height="660" Width="956" 
@@ -288,14 +289,17 @@
                             <RadioButton Content="回档" Grid.Column="3" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
                             <RadioButton Content="黑名单" Grid.Column="4" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
                         </Grid>
-                        <Canvas x:Name="DediMainTopCanvas" Grid.Row="1" Background="#88FFFFFF">
+                        <Canvas x:Name="DediMainTopCanvas" Grid.Row="1" Background="#7FFFFFFF">
                             <Image x:Name="DediMainTop_portraitsBG" Height="70" Width="70" Canvas.Left="15" Canvas.Top="15" Source="Resources/DedicatedServer/D_mp_portraits_bg.png" Stretch="Fill"/>
                             <Image x:Name="DediMainTop_portraits" Height="70" Width="70" Canvas.Left="15.4" Canvas.Top="15.4" Source="Resources/DedicatedServer/D_mp_portraits_none.png" Stretch="Fill"/>
                             <TextBlock x:Name="DediMainTop_WorldName" TextWrapping="Wrap" Text="XXX 的世界" Canvas.Left="90" Canvas.Top="15" FontSize="36" FontWeight="Bold"/>
                             <TextBlock x:Name="DediMainTop_Days" TextWrapping="Wrap" Text="新的世界" Canvas.Left="90" Canvas.Top="65" FontSize="16"/>
+                            <Button x:Name="DediMainTop_Delete" Tag="全部删除" Width="75" Height="75" Canvas.Right="10" Canvas.Top="10" Style="{DynamicResource DediButtonMainPanelStyle}">
+                                <Image Source="Resources/DedicatedServer/D_mp_btn_delete.png"/>
+                            </Button>
                         </Canvas>
                     </Grid>
-                    <Button Content="创建世界" Style="{DynamicResource ButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold"/>
+                    <Button Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold"/>
                 </Grid>
                 <ScrollViewer x:Name="DediLeftScrollViewer" Margin="50,70,0,70" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource ScrollViewerControlTemplate}" Focusable="False">
                     <ScrollViewer.Background>
