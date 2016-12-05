@@ -289,12 +289,12 @@
                             <RadioButton Content="回档" Grid.Column="3" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
                             <RadioButton Content="黑名单" Grid.Column="4" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
                         </Grid>
-                        <Canvas x:Name="DediMainTopCanvas" Grid.Row="1" Background="#7FFFFFFF">
+                        <Canvas x:Name="DediMainTopCanvas" Grid.Row="1">
                             <Image x:Name="DediMainTop_portraitsBG" Height="70" Width="70" Canvas.Left="15" Canvas.Top="15" Source="Resources/DedicatedServer/D_mp_portraits_bg.png" Stretch="Fill"/>
                             <Image x:Name="DediMainTop_portraits" Height="70" Width="70" Canvas.Left="15.4" Canvas.Top="15.4" Source="Resources/DedicatedServer/D_mp_portraits_none.png" Stretch="Fill"/>
                             <TextBlock x:Name="DediMainTop_WorldName" TextWrapping="Wrap" Text="XXX 的世界" Canvas.Left="90" Canvas.Top="15" FontSize="36" FontWeight="Bold"/>
                             <TextBlock x:Name="DediMainTop_Days" TextWrapping="Wrap" Text="新的世界" Canvas.Left="90" Canvas.Top="65" FontSize="16"/>
-                            <Button x:Name="DediMainTop_Delete" Tag="全部删除" Width="75" Height="75" Canvas.Right="10" Canvas.Top="10" Style="{DynamicResource DediButtonMainPanelStyle}">
+                            <Button x:Name="DediMainTop_Delete" Tag="删除" Width="75" Height="75" Canvas.Right="10" Canvas.Top="10" Style="{DynamicResource DediButtonMainPanelStyle}">
                                 <Image Source="Resources/DedicatedServer/D_mp_btn_delete.png"/>
                             </Button>
                         </Canvas>

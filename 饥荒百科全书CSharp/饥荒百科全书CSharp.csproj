@@ -116,6 +116,7 @@
     <Compile Include="SplashScreen.xaml.cs">
       <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverter\DediTooltipPlacementConverter.cs" />
     <Page Include="Dictionary\ComboBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:饥荒百科全书CSharp">
+                    xmlns:local="clr-namespace:饥荒百科全书CSharp" 
+                    xmlns:ValueConverter="clr-namespace:饥荒百科全书CSharp.ValueConverter">
+    <ValueConverter:DediTooltipPlacementConverter x:Key="DediTooltipPlacementConverter"/>
     <Style x:Key="FocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -85,7 +87,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Canvas x:Name="canvas" SnapsToDevicePixels="true">
                         <Canvas.ToolTip>
-                            <ToolTip BorderBrush="{x:Null}" Foreground="{x:Null}" Placement="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <ToolTip BorderBrush="{x:Null}" Foreground="{x:Null}" Placement="Top" HorizontalOffset="{Binding ActualWidth, ConverterParameter=ActualWidth, Converter={StaticResource DediTooltipPlacementConverter}, Mode=Default, RelativeSource={RelativeSource Self}}" >
                                 <ToolTip.Background>
                                     <ImageBrush ImageSource="/Resources/DedicatedServer/D_mp_btn_tip.png" Opacity="0.7"/>
                                 </ToolTip.Background>
