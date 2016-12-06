@@ -4294,4 +4294,28 @@
   <data name="D_mp_btn_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DedicatedServer\D_mp_btn_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="D_buttomborder_h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_buttomborder_h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_buttomborder_v" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_buttomborder_v.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_intention_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_intention_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_intention_bg_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_intention_bg_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_intention_competitive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_intention_competitive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_intention_cooperative" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_intention_cooperative.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_intention_madness" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_intention_madness.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_intention_social" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_intention_social.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

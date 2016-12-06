@@ -162,8 +162,10 @@ namespace 饥荒百科全书CSharp
                 Se_BG_Alpha_Text.Foreground = Brushes.Black;
                 try
                 {
-                    var brush = new ImageBrush();
-                    brush.ImageSource = new BitmapImage(new Uri(bg));
+                    var brush = new ImageBrush()
+                    {
+                        ImageSource = new BitmapImage(new Uri(bg))
+                    };
                     UI_BackGroundBorder.Background = brush;
                 }
                 catch
@@ -209,14 +211,16 @@ namespace 饥荒百科全书CSharp
             #endregion
         }
         //MainWindow窗口加载
-        private void mainWindow_Loaded(object sender, RoutedEventArgs e)
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             new KeyboardHandler(this);//加载快捷键
-            foreach (string str in rF())//加载字体
+            foreach (string str in RF())//加载字体
             {
-                TextBlock TB = new TextBlock();
-                TB.Text = str;
-                TB.FontFamily = new FontFamily(str);
+                TextBlock TB = new TextBlock()
+                {
+                    Text = str,
+                    FontFamily = new FontFamily(str)
+                };
                 Se_ComboBox_Font.Items.Add(TB);
             }
             string mainWindowFont = RegeditRW.RegReadString("MainWindowFont");
@@ -337,6 +341,5 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
-
     }
 }

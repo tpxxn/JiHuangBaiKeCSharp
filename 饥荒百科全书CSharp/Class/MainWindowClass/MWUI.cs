@@ -104,7 +104,7 @@ namespace 饥荒百科全书CSharp
         }
 
         //MainWindow拖动窗口
-        private void mainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Point position_UIGrid = e.GetPosition(UIGrid);
             Point position_RightGrid_Welcome = e.GetPosition(RightGrid_Welcome);
@@ -134,13 +134,13 @@ namespace 饥荒百科全书CSharp
                 }
             }
         }
-        private void mainWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void MainWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Cursor = (Cursor)cursorDictionary["Cursor_pointer"];
         }
 
         //双击标题栏最大化
-        private void mainWindow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void MainWindow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Point position_UIGrid = e.GetPosition(UIGrid);
             if ((position_UIGrid.X >= 0 && position_UIGrid.X < UIGrid.ActualWidth && position_UIGrid.Y >= 0 && position_UIGrid.Y < UIGrid.ActualHeight))
@@ -157,7 +157,7 @@ namespace 饥荒百科全书CSharp
         }
 
         //MainWindow窗口尺寸改变
-        private void mainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             //最大化
             if (WindowState == WindowState.Maximized)
@@ -254,11 +254,12 @@ namespace 饥荒百科全书CSharp
         //设置背景方法
         public void SetBackground()
         {
-            var OFD = new Microsoft.Win32.OpenFileDialog();
-            OFD.FileName = ""; //默认文件名
-            OFD.DefaultExt = ".png"; // 默认文件扩展名
-            OFD.Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png"; //文件扩展名过滤器
-
+            var OFD = new Microsoft.Win32.OpenFileDialog()
+            {
+                FileName = "", //默认文件名
+                DefaultExt = ".png", // 默认文件扩展名
+                Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png" //文件扩展名过滤器
+            };
             bool? result = OFD.ShowDialog(); //显示打开文件对话框
 
             Visi.VisiCol(false, UI_BackGroundBorder);
@@ -275,8 +276,10 @@ namespace 饥荒百科全书CSharp
                     File.Copy(OFD.FileName, PictruePath + filename, true);
                 }
                 catch (Exception) { }
-                var brush = new ImageBrush();
-                brush.ImageSource = new BitmapImage(new Uri(PictruePath + filename));
+                var brush = new ImageBrush()
+                {
+                    ImageSource = new BitmapImage(new Uri(PictruePath + filename))
+                };
                 UI_BackGroundBorder.Background = brush;
                 Se_BG_Alpha_Text.Foreground = Brushes.Black;
                 Se_BG_Alpha.IsEnabled = true;
@@ -296,7 +299,7 @@ namespace 饥荒百科全书CSharp
             RegeditRW.RegWrite("Background", "");
         }
         //获取字体函数
-        private List<string> rF()
+        private List<string> RF()
         {
             List<string> Font = new List<string>();
             InstalledFontCollection IFCFont = new InstalledFontCollection();
@@ -338,9 +341,11 @@ namespace 饥荒百科全书CSharp
                     Se_BG_Alpha_Text.Foreground = Brushes.Black;
                     try
                     {
-                        var brush = new ImageBrush();
-                        brush.ImageSource = new BitmapImage(new Uri(bg));
-                        brush.Stretch = (Stretch)Se_ComboBox_Background_Stretch.SelectedIndex;
+                        var brush = new ImageBrush()
+                        {
+                            ImageSource = new BitmapImage(new Uri(bg)),
+                            Stretch = (Stretch)Se_ComboBox_Background_Stretch.SelectedIndex
+                        };
                         UI_BackGroundBorder.Background = brush;
                         RegeditRW.RegWrite("BackgroundStretch", Se_ComboBox_Background_Stretch.SelectedIndex + 1);
                     }
