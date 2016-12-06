@@ -36,9 +36,10 @@
                 <ResourceDictionary Source="Dictionary/SliderDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelRadioButtonDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelScrollViewerDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediScrollViewerDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -168,7 +169,7 @@
                     </ComboBoxItem>
                 </ComboBox>
                 <TextBlock x:Name="UI_gameversion_TextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" HorizontalAlignment="Right" VerticalAlignment="Top" d:IsLocked="True"/>
-                <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10" d:IsLocked="True"/>
+                <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10"/>
                 <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
             <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1" d:IsHidden="True">
@@ -287,11 +288,11 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <RadioButton Content="基本设置" Grid.Column="0" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}" IsChecked="True"/>
-                            <RadioButton Content="编辑世界" Grid.Column="1" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
-                            <RadioButton Content="Mods" Grid.Column="2" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
-                            <RadioButton Content="回档" Grid.Column="3" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
-                            <RadioButton Content="黑名单" Grid.Column="4" Style="{DynamicResource Dedi_MainPanel_RadioButtonStyle}"/>
+                            <RadioButton Content="基本设置" Grid.Column="0" Style="{DynamicResource DediMainPanelRadioButtonStyle}" IsChecked="True"/>
+                            <RadioButton Content="编辑世界" Grid.Column="1" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
+                            <RadioButton Content="Mods" Grid.Column="2" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
+                            <RadioButton Content="回档" Grid.Column="3" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
+                            <RadioButton Content="黑名单" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
                         </Grid>
                         <Canvas x:Name="DediTop" Grid.Row="1">
                             <Image x:Name="DediMainTop_portraitsBG" Height="70" Width="70" Canvas.Left="15" Canvas.Top="15" Source="Resources/DedicatedServer/D_mp_portraits_bg.png" Stretch="Fill"/>
@@ -317,7 +318,7 @@
                                 <ColumnDefinition Width="12*"/>
                                 <ColumnDefinition Width="10"/>
                             </Grid.ColumnDefinitions>
-                            <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
+                            <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Visibility="Collapsed" d:IsHidden="True">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="60"/>
                                     <RowDefinition Height="120"/>
@@ -332,25 +333,25 @@
                                     <ColumnDefinition Width="1*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.ColumnSpan="6" Content="你的游戏风格是什么？" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Bold" Background="{x:Null}"/>
-                                <Button x:Name="DediIntention_social" Grid.Column="1" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_social_Click" Tag="这是一个闲聊&amp;扯蛋的地方。&#13;轻松的游戏风格，只是为了互相沟通&amp;扯蛋。&#13;还等什么，快进来一起扯蛋吧~~" MouseEnter="DediIntention_social_MouseEnter" MouseLeave="DediIntention_social_MouseLeave">
+                                <Button x:Name="DediIntention_social" Grid.Column="1" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionSelectStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_social_Click" Tag="这是一个闲聊&amp;扯蛋的地方。&#xA;轻松的游戏风格，只是为了互相沟通&amp;扯蛋。&#xA;还等什么，快进来一起扯蛋吧~~" MouseEnter="DediIntention_social_MouseEnter" MouseLeave="DediIntention_social_MouseLeave">
                                     <Canvas>
                                         <TextBlock TextWrapping="Wrap" Text="交际" Canvas.Left="36" Canvas.Top="5" FontSize="18" FontWeight="Bold" />
                                         <Image Height="75" Width="80" Source="Resources/DedicatedServer/D_intention_social.png" Canvas.Left="13" Canvas.Top="25"/>
                                     </Canvas>
                                 </Button>
-                                <Button x:Name="DediIntention_cooperative" Grid.Column="2" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_cooperative_Click" Tag="一个团队生存的世界。在这个世界，我们要一起合作，尽我们可能来驯服这个充满敌意的世界。" MouseEnter="DediIntention_cooperative_MouseEnter" MouseLeave="DediIntention_cooperative_MouseLeave">
+                                <Button x:Name="DediIntention_cooperative" Grid.Column="2" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionSelectStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_cooperative_Click" Tag="一个团队生存的世界。在这个世界，我们要一起合作，尽我们可能来驯服这个充满敌意的世界。" MouseEnter="DediIntention_cooperative_MouseEnter" MouseLeave="DediIntention_cooperative_MouseLeave">
                                     <Canvas>
                                         <TextBlock TextWrapping="Wrap" Text="合作" Canvas.Left="36" Canvas.Top="5" FontSize="18" FontWeight="Bold" />
                                         <Image Height="75" Width="80" Source="Resources/DedicatedServer/D_intention_cooperative.png" Canvas.Left="13" Canvas.Top="25"/>
                                     </Canvas>
                                 </Button>
-                                <Button x:Name="DediIntention_competitive" Grid.Column="3" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_competitive_Click" Tag="这是一个完美的舞台。&#13;展示你的生存能力，战斗能力、建设能力...吧！" MouseEnter="DediIntention_competitive_MouseEnter" MouseLeave="DediIntention_competitive_MouseLeave">
+                                <Button x:Name="DediIntention_competitive" Grid.Column="3" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionSelectStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_competitive_Click" Tag="这是一个完美的舞台。&#xA;展示你的生存能力，战斗能力、建设能力...吧！" MouseEnter="DediIntention_competitive_MouseEnter" MouseLeave="DediIntention_competitive_MouseLeave">
                                     <Canvas>
                                         <TextBlock TextWrapping="Wrap" Text="竞争" Canvas.Left="36" Canvas.Top="5" FontSize="18" FontWeight="Bold" />
                                         <Image Height="75" Width="80" Source="Resources/DedicatedServer/D_intention_competitive.png" Canvas.Left="13" Canvas.Top="25"/>
                                     </Canvas>
                                 </Button>
-                                <Button x:Name="DediIntention_madness" Grid.Column="4" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_madness_Click" Tag="在这里，你将过着茹毛饮血的生活！&#13;是你吃掉粮食还是被粮食吃掉呢？&#13;让我们拭目以待吧！" MouseEnter="DediIntention_madness_MouseEnter" MouseLeave="DediIntention_madness_MouseLeave">
+                                <Button x:Name="DediIntention_madness" Grid.Column="4" Margin="5" Grid.Row="1" Style="{DynamicResource DediButtonIntentionSelectStyle}" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="DediIntention_madness_Click" Tag="在这里，你将过着茹毛饮血的生活！&#xA;是你吃掉粮食还是被粮食吃掉呢？&#xA;让我们拭目以待吧！" MouseEnter="DediIntention_madness_MouseEnter" MouseLeave="DediIntention_madness_MouseLeave">
                                     <Canvas>
                                         <TextBlock TextWrapping="Wrap" Text="疯狂" Canvas.Left="36" Canvas.Top="5" FontSize="18" FontWeight="Bold" />
                                         <Image Height="75" Width="80" Source="Resources/DedicatedServer/D_intention_madness.png" Canvas.Left="13" Canvas.Top="25"/>
@@ -358,6 +359,84 @@
                                 </Button>
                                 <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                             </Grid>
+                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" >
+                                <StackPanel Height="800">
+                                    <Grid Height="31">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="游戏风格" FontWeight="Bold" FontSize="16"/>
+                                                <Button Content="交际" Width="124" Style="{DynamicResource DediButtonIntentionStyle}" Focusable="False" FontWeight="Bold" FontSize="16"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid Height="31">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="名称" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid Height="31">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="描述" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid Height="31">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Grid Margin="10,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <RadioButton Content="公共" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14" IsChecked="True" Grid.Column="1"/>
+                                            <RadioButton Content="仅好友" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14"/>
+                                            <RadioButton Content="仅本地" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14"/>
+                                            <RadioButton Content="Steam群组" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14"/>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid Height="31">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="密码" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid Height="31">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="服务器模式" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                </StackPanel>
+                            </ScrollViewer>
                             <Image x:Name="DediButtomBorder_h1" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5"/>
                             <Image x:Name="DediButtomBorder_h2" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5" Grid.Row="2"/>
                             <Image x:Name="DediButtomBorder_v1" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3"/>
@@ -368,7 +447,7 @@
                     </Grid>
                     <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold"/>
                 </Grid>
-                <ScrollViewer x:Name="DediLeftScrollViewer" Margin="50,70,0,70" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource ScrollViewerControlTemplate}" Focusable="False">
+                <ScrollViewer x:Name="DediLeftScrollViewer" Margin="50,70,0,70" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource DediLeftPanelScrollViewerControlTemplate}" Focusable="False">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="Resources/DedicatedServer/D_leftpanel.png"/>
                     </ScrollViewer.Background>
@@ -401,7 +480,7 @@
                 <Button x:Name="Se_BossKey_Key" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
             </Grid>
             <Canvas x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
-                <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
+                <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658" d:IsLocked="True">
                     <Button x:Name="Sidebar_Menu" Width="50" Height="50" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
                     <RadioButton x:Name="Sidebar_Welcome" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
                     <RadioButton x:Name="Sidebar_Character" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
@@ -417,7 +496,7 @@
                 <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True"/>
             </Canvas>
         </Grid>
-        <Border x:Name="mainBorder" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="5" BorderBrush="#FF2B2B2B" d:IsHidden="True" d:IsLocked="True"/>
+        <Border x:Name="mainBorder" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="5" BorderBrush="#FF2B2B2B" d:IsLocked="True"/>
         <Border x:Name="ResizeTopLeft" BorderThickness="0" Grid.Row="0" Grid.Column="0" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />
         <Border x:Name="ResizeTop" BorderThickness="0" Grid.Row="0" Grid.Column="2" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Background="#00000000" d:IsLocked="True" />
         <Border x:Name="ResizeTopRight" BorderThickness="0" Grid.Row="0" Grid.Column="3" MouseMove="ResizePressed" MouseDown="ResizePressed" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#00000000" d:IsLocked="True" />

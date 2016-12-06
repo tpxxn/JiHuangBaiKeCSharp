@@ -4318,4 +4318,49 @@
   <data name="D_intention_social" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DedicatedServer\D_intention_social.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="D_baseset_intention" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_baseset_intention.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_baseset_intention_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_baseset_intention_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_baseset_radiobutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_baseset_radiobutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_baseset_radiobutton_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_baseset_radiobutton_selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_baseset_textbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_baseset_textbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_baseset_textbox_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_baseset_textbox_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_baseset_textbox_mouseover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_baseset_textbox_mouseover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_border" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_leftarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_leftarrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_leftarrow_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_leftarrow_click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_leftarrow_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_leftarrow_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_rightarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_rightarrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_rightarrow_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_rightarrow_click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_set_rightarrow_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_set_rightarrow_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

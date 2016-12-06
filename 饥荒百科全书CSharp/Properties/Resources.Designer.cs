@@ -2273,6 +2273,76 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap D_baseset_intention {
+            get {
+                object obj = ResourceManager.GetObject("D_baseset_intention", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_baseset_intention_tobeclick {
+            get {
+                object obj = ResourceManager.GetObject("D_baseset_intention_tobeclick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_baseset_radiobutton {
+            get {
+                object obj = ResourceManager.GetObject("D_baseset_radiobutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_baseset_radiobutton_selected {
+            get {
+                object obj = ResourceManager.GetObject("D_baseset_radiobutton_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_baseset_textbox {
+            get {
+                object obj = ResourceManager.GetObject("D_baseset_textbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_baseset_textbox_edit {
+            get {
+                object obj = ResourceManager.GetObject("D_baseset_textbox_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_baseset_textbox_mouseover {
+            get {
+                object obj = ResourceManager.GetObject("D_baseset_textbox_mouseover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap D_buttomborder_h {
             get {
                 object obj = ResourceManager.GetObject("D_buttomborder_h", resourceCulture);
@@ -2686,6 +2756,86 @@ namespace 饥荒百科全书CSharp.Properties {
         internal static System.Drawing.Bitmap D_mp_portraits_wx78 {
             get {
                 object obj = ResourceManager.GetObject("D_mp_portraits_wx78", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_bg {
+            get {
+                object obj = ResourceManager.GetObject("D_set_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_border {
+            get {
+                object obj = ResourceManager.GetObject("D_set_border", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_leftarrow {
+            get {
+                object obj = ResourceManager.GetObject("D_set_leftarrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_leftarrow_click {
+            get {
+                object obj = ResourceManager.GetObject("D_set_leftarrow_click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_leftarrow_tobeclick {
+            get {
+                object obj = ResourceManager.GetObject("D_set_leftarrow_tobeclick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_rightarrow {
+            get {
+                object obj = ResourceManager.GetObject("D_set_rightarrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_rightarrow_click {
+            get {
+                object obj = ResourceManager.GetObject("D_set_rightarrow_click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_set_rightarrow_tobeclick {
+            get {
+                object obj = ResourceManager.GetObject("D_set_rightarrow_tobeclick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
