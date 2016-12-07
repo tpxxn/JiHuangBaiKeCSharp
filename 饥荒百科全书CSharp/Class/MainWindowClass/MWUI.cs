@@ -637,6 +637,7 @@ namespace 饥荒百科全书CSharp
             {
                 Visi.VisiCol(true, vControl);
             }
+            Visi.VisiCol(false, DediButtomBorder_h1, DediButtomBorder_h2, DediButtomBorder_v1, DediButtomBorder_v4);
         }
 
         private void DediButtomPanelVisibility(string obj)
