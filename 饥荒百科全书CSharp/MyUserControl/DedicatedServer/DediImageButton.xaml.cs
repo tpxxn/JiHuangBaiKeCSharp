@@ -30,6 +30,9 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         }
 
         #region 【依赖属性】
+        // 依赖属性 参考网址：http://www.cnblogs.com/luluping/archive/2011/05/06/2039489.html
+        // 没怎么看懂.... http://blog.csdn.net/luxiaoyu_sdc/article/details/6173758
+        // http://blog.csdn.net/rabbitsoft_1987/article/details/18677067
 
         // 1. 创建依赖属性---静态只读
         public static readonly DependencyProperty ImageMouseEnterProperty;
@@ -46,7 +49,7 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
 
             ImageCurrentProperty = DependencyProperty.Register("ImageCurrent", typeof(ImageSource), typeof(DediImageButton), new PropertyMetadata(new BitmapImage(), new PropertyChangedCallback(PropertyChange)));
 
-            TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(DediImageButton), new PropertyMetadata("", new PropertyChangedCallback(PropertyChange))); 
+            TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(DediImageButton), new PropertyMetadata("", new PropertyChangedCallback(PropertyChange)));
 
             // 给当前值附初始值
             // ImageButton3.CurrentImageProperty = ImageButton3.ImageMouseLeaveProperty;
@@ -131,6 +134,7 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         }
         #endregion
 
+        #region
         Thickness 按钮初始位置;
         private void ImageButton_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -167,5 +171,6 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         {
             按钮初始位置 = Margin;
         }
+        #endregion
     }
 }

@@ -175,7 +175,7 @@
                                         <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
                                         <SkewTransform/>
                                         <RotateTransform/>
-                                        <TranslateTransform Y="5"/>
+                                        <TranslateTransform Y="2"/>
                                     </TransformGroup>
                                 </Setter.Value>
                             </Setter>
@@ -191,7 +191,7 @@
                                         <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
                                         <SkewTransform/>
                                         <RotateTransform/>
-                                        <TranslateTransform Y="5"/>
+                                        <TranslateTransform Y="2"/>
                                     </TransformGroup>
                                 </Setter.Value>
                             </Setter>

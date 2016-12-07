@@ -8,6 +8,7 @@
         xmlns:ucdedi="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer"
         xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
         xmlns:DedicatedServer="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer" 
+        xmlns:System="clr-namespace:System;assembly=mscorlib" 
         x:Name="mainWindow" 
         x:Class="饥荒百科全书CSharp.MainWindow"
         mc:Ignorable="d"
@@ -288,11 +289,11 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <RadioButton Content="基本设置" Grid.Column="0" Style="{DynamicResource DediMainPanelRadioButtonStyle}" IsChecked="True"/>
-                            <RadioButton Content="编辑世界" Grid.Column="1" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
-                            <RadioButton Content="Mods" Grid.Column="2" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
-                            <RadioButton Content="回档" Grid.Column="3" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
-                            <RadioButton Content="黑名单" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}"/>
+                            <RadioButton x:Name="DediTitleBaseSet" Content="基本设置" Grid.Column="0" Style="{DynamicResource DediMainPanelRadioButtonStyle}" IsChecked="True" Click="DediTitleBaseSet_Click"/>
+                            <RadioButton x:Name="DediTitleEditWorld" Content="编辑世界" Grid.Column="1" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleEditWorld_Click"/>
+                            <RadioButton x:Name="DediTitleMod" Content="Mods" Grid.Column="2" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleMod_Click"/>
+                            <RadioButton x:Name="DediTitleRollback" Content="回档" Grid.Column="3" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleRollback_Click"/>
+                            <RadioButton x:Name="DediTitleBlacklist" Content="黑名单" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleBlacklist_Click"/>
                         </Grid>
                         <Canvas x:Name="DediTop" Grid.Row="1">
                             <Image x:Name="DediMainTop_portraitsBG" Height="70" Width="70" Canvas.Left="15" Canvas.Top="15" Source="Resources/DedicatedServer/D_mp_portraits_bg.png" Stretch="Fill"/>
@@ -318,7 +319,7 @@
                                 <ColumnDefinition Width="12*"/>
                                 <ColumnDefinition Width="10"/>
                             </Grid.ColumnDefinitions>
-                            <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Visibility="Collapsed" d:IsHidden="True">
+                            <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Visibility="Collapsed">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="60"/>
                                     <RowDefinition Height="120"/>
@@ -359,42 +360,42 @@
                                 </Button>
                                 <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                             </Grid>
-                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" >
-                                <StackPanel Height="800">
-                                    <Grid Height="31">
+                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" >
+                                <StackPanel>
+                                    <Grid x:Name="DediBaseSetIntention" Height="40">
                                         <Grid.Background>
                                             <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
                                         </Grid.Background>
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="游戏风格" FontWeight="Bold" FontSize="16"/>
-                                                <Button Content="交际" Width="124" Style="{DynamicResource DediButtonIntentionStyle}" Focusable="False" FontWeight="Bold" FontSize="16"/>
+                                                <Button x:Name="DediBaseSetIntentionButton" Content="交际" Width="124" Style="{DynamicResource DediButtonIntentionStyle}" Focusable="False" FontWeight="Bold" FontSize="16" Height="27" Click="DediBaseSetIntentionButton_Click"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
-                                    <Grid Height="31">
+                                    <Grid x:Name="DediBaseSetName" Height="40">
                                         <Grid.Background>
                                             <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
                                         </Grid.Background>
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="名称" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                                <TextBox Text="XXX 的世界" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="250"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
-                                    <Grid Height="31">
+                                    <Grid x:Name="DediBaseSetDescription" Height="40">
                                         <Grid.Background>
                                             <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
                                         </Grid.Background>
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="描述" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                                <TextBox Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="250"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
-                                    <Grid Height="31">
+                                    <Grid x:Name="DediBaseSetRange" Height="40">
                                         <Grid.Background>
                                             <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
                                         </Grid.Background>
@@ -407,31 +408,97 @@
                                                 <ColumnDefinition Width="100"/>
                                                 <ColumnDefinition/>
                                             </Grid.ColumnDefinitions>
-                                            <RadioButton Content="公共" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14" IsChecked="True" Grid.Column="1"/>
-                                            <RadioButton Content="仅好友" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14"/>
-                                            <RadioButton Content="仅本地" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14"/>
-                                            <RadioButton Content="Steam群组" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14"/>
+                                            <RadioButton x:Name="DediBaseSetRangePublic" Content="公共" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14" IsChecked="True" Grid.Column="1" Click="DediBaseSetRangePublic_Click"/>
+                                            <RadioButton x:Name="DediBaseSetRangeFriendonly" Content="仅好友" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14" Click="DediBaseSetRangeFriendonly_Click"/>
+                                            <RadioButton x:Name="DediBaseSetRangeLocal" Content="仅本地" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14" Click="DediBaseSetRangeLocal_Click"/>
+                                            <RadioButton x:Name="DediBaseSetRangeSteamgroup" Content="Steam群组" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Style="{DynamicResource DediRadioButtonWorldDomainStyle}" FontSize="14" Click="DediBaseSetRangeSteamgroup_Click"/>
                                         </Grid>
                                     </Grid>
-                                    <Grid Height="31">
+                                    <Grid x:Name="DediBaseSetGroupid" Height="40" Margin="50,0">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="群组ID" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="100"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediBaseSetGrouponly" Height="40" Margin="50,0">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="仅成员" FontWeight="Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                                <DedicatedServer:DediSelectBox x:Name="DediBaseSetGrouponlySelect" Height="35" Width="140"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediBaseSetGroupadmins" Height="40" Margin="50,0">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="自动群组管理员" FontWeight="Bold" FontSize="16"/>
+                                                <DedicatedServer:DediSelectBox x:Name="DediBaseSetGroupadminsSelect" Height="35" Width="140" IsEnabled="True"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediBaseSetGamemode" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="游戏模式" FontWeight="Bold" FontSize="16"/>
+                                                <DedicatedServer:DediSelectBox x:Name="DediBaseSetGamemodeSelect" Height="35" Width="140"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediBaseSetPvp" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="PvP:" FontWeight="Bold" FontSize="16"/>
+                                                <DedicatedServer:DediSelectBox x:Name="DediBaseSetPvpSelect" Height="35" Width="140"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediBaseSetMaxPlayer" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="玩家:" FontWeight="Bold" FontSize="16"/>
+                                                <DedicatedServer:DediSelectBox x:Name="DediBaseSetMaxPlayerSelect" Height="35" Width="140"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediBaseSetPassword" Height="40">
                                         <Grid.Background>
                                             <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
                                         </Grid.Background>
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="密码" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                                <TextBox Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="250"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
-                                    <Grid Height="31">
+                                    <Grid x:Name="DediBaseSetOffline" Height="40">
                                         <Grid.Background>
                                             <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
                                         </Grid.Background>
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="服务器模式" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox TextWrapping="Wrap" Text="TextBox" Style="{DynamicResource DediTextBoxStyle}" Height="23" Width="120"/>
+                                                <DedicatedServer:DediSelectBox x:Name="DediBaseOfflineSelect" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>

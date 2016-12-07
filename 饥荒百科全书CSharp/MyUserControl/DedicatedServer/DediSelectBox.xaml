@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="饥荒百科全书CSharp.MyUserControl.DedicatedServer.DediSelectBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="160">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Dictionary/DedicatedServer/DediSelectBoxDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Viewbox>
+        <Border BorderThickness="1" Height="40" Width="160" Style="{DynamicResource DediSelectBoxBorderStyle}">
+            <Grid Width="150" Height="34">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="UCButtonLeft" Grid.Column="0" Style="{DynamicResource DediSelectBoxLeftButtonStyle}" Click="UCButtonLeft_Click" />
+                <Label x:Name="UCValue" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                <Button x:Name="UCButtonRight" Grid.Column="2" Style="{DynamicResource DediSelectBoxRightButtonStyle}" Click="UCButtonRight_Click"/>
+            </Grid>
+        </Border>
+    </Viewbox>
+</UserControl>

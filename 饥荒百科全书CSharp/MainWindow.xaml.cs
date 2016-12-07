@@ -120,7 +120,7 @@ namespace 饥荒百科全书CSharp
             //初始化
             InitializeComponent();
             //窗口缩放
-            SourceInitialized += delegate (object sender, EventArgs e){ _HwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource;};
+            SourceInitialized += delegate (object sender, EventArgs e) { _HwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource; };
             MouseMove += new System.Windows.Input.MouseEventHandler(Window_MouseMove);
             //mainWindow初始化标志
             MWInit = true;
@@ -232,6 +232,7 @@ namespace 饥荒百科全书CSharp
             Se_ComboBox_Font.SelectedIndex = Ls.IndexOf(mainWindowFont);
             loadFont = true;
             LoadGameVersionXml();//加载游戏版本Xml文件
+            DediButtomPanelInitalize();//服务器面板初始化
         }
         #endregion
 
@@ -341,5 +342,6 @@ namespace 饥荒百科全书CSharp
             }
         }
         #endregion
+
     }
 }

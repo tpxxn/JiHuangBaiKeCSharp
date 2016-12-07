@@ -464,7 +464,6 @@ namespace 饥荒百科全书CSharp
                 LeftWrapPanel.Width = 50;
                 LeftMenuState = 0;
             }
-
         }
         //左侧菜单按钮
         private void Sidebar_Welcome_Click(object sender, RoutedEventArgs e)
@@ -599,6 +598,204 @@ namespace 饥荒百科全书CSharp
                     }
                     break;
             }
+        }
+        #endregion
+        #endregion
+
+        #region "DedicatedServer"
+        #region "主菜单按钮"
+        private void DediTitleBaseSet_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("BaseSet");
+        }
+
+        private void DediTitleEditWorld_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("EditWorld");
+        }
+
+        private void DediTitleMod_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Mod");
+        }
+
+        private void DediTitleRollback_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Rollback");
+        }
+
+        private void DediTitleBlacklist_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Blacklist");
+        }
+        #endregion
+
+        #region "下侧面板Visibility属性设置"
+        private void DediButtomPanelVisibilityInitialize()
+        {
+            foreach (UIElement vControl in DediButtomBG.Children)
+            {
+                Visi.VisiCol(true, vControl);
+            }
+        }
+
+        private void DediButtomPanelVisibility(string obj)
+        {
+            DediButtomPanelVisibilityInitialize();
+            switch (obj)
+            {
+                case "BaseSet":
+                    Visi.VisiCol(false, DediBaseSet);
+                    break;
+                case "EditWorld":
+
+                    break;
+                case "Mod":
+
+                    break;
+                case "Rollback":
+
+                    break;
+                case "Blacklist":
+
+                    break;
+            }
+        }
+        #endregion
+
+        private void DediButtomPanelInitalize()
+        {
+            DediBaseSetRangeInitalize();
+            string[] NoYes = new string[] { "否", "是" };
+            string[] Gamemode = new string[] { "生存", "荒野", "无尽" };
+            string[] MaxPlayer = new string[64];
+            for (int i = 1; i <= 64; i++)
+            {
+                MaxPlayer[i - 1] = i.ToString();
+            }
+            string[] Offline = new string[] { "在线", "离线" };
+            DediBaseSetGrouponlySelect.Init(NoYes);
+            DediBaseSetGroupadminsSelect.Init(NoYes);
+            DediBaseSetGamemodeSelect.Init(Gamemode);
+            DediBaseSetPvpSelect.Init(NoYes);
+            DediBaseSetMaxPlayerSelect.Init(MaxPlayer, 5);
+            DediBaseOfflineSelect.Init(Offline);
+        }
+
+        #region "Intention"
+        private void DediIntention_social_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("social");
+        }
+
+        private void DediIntention_social_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
+        }
+
+        private void DediIntention_social_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_cooperative_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("cooperative");
+        }
+
+        private void DediIntention_cooperative_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
+        }
+
+        private void DediIntention_cooperative_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_competitive_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("competitive");
+        }
+
+        private void DediIntention_competitive_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
+        }
+
+        private void DediIntention_competitive_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_madness_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("madness");
+        }
+
+        private void DediIntention_madness_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
+        }
+
+        private void DediIntention_madness_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_Click(string Intention)
+        {
+            DediButtomPanelVisibilityInitialize();
+            Visi.VisiCol(false, DediBaseSet);
+            switch (Intention)
+            {
+                case "social":
+                    DediBaseSetIntentionButton.Content = "交际";
+                    break;
+                case "cooperative":
+                    DediBaseSetIntentionButton.Content = "合作";
+                    break;
+                case "competitive":
+                    DediBaseSetIntentionButton.Content = "竞争";
+                    break;
+                case "madness":
+                    DediBaseSetIntentionButton.Content = "疯狂";
+                    break;
+            }
+        }
+        #endregion
+
+        #region "BaseSet"
+        private void DediBaseSetIntentionButton_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibilityInitialize();
+            Visi.VisiCol(false, DediIntention);
+        }
+
+
+        private void DediBaseSetRangePublic_Click(object sender, RoutedEventArgs e)
+        {
+            DediBaseSetRangeInitalize();
+        }
+
+        private void DediBaseSetRangeFriendonly_Click(object sender, RoutedEventArgs e)
+        {
+            DediBaseSetRangeInitalize();
+        }
+
+        private void DediBaseSetRangeLocal_Click(object sender, RoutedEventArgs e)
+        {
+            DediBaseSetRangeInitalize();
+        }
+
+        private void DediBaseSetRangeSteamgroup_Click(object sender, RoutedEventArgs e)
+        {
+            Visi.VisiCol(false, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
+        }
+
+        private void DediBaseSetRangeInitalize()
+        {
+            Visi.VisiCol(true, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
         }
         #endregion
         #endregion

@@ -108,6 +108,9 @@
     <Compile Include="MyUserControl\DedicatedServer\DediImageButton.xaml.cs">
       <DependentUpon>DediImageButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
+      <DependentUpon>DediSelectBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\ExpanderStackpanel.xaml.cs">
       <DependentUpon>ExpanderStackpanel.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dictionary\DedicatedServer\DediRightPanelTextBoxDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediSelectBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,6 +211,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\DedicatedServer\DediImageButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\DedicatedServer\DediSelectBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
