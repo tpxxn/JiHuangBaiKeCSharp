@@ -14,12 +14,12 @@
 
 
     <!--ImageButton4的样式 x:Key="ImageButton4Style"-->
-    <Style  TargetType="local:ImageButton4">
+    <Style  TargetType="local:DediImageButton">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
                     <!--ImageButton4控件模板-->
-                    <ControlTemplate  TargetType="local:ImageButton4">
+                    <ControlTemplate  TargetType="local:DediImageButton">
                         <!--image/text-->
                         <!--背景色，透明-->
                         <Grid Background="Transparent">
@@ -73,12 +73,12 @@
 
                                 <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
 
-                                <local:ImageButton4 x:Name="imageButtonLeft"  
+                                <local:DediImageButton x:Name="imageButtonLeft"  
                                                    local:ComboBoxNoItem1.IsLeftEnabled="True"
                                                    Command="local:ComboBoxNoItem1.LeftClickCommand" 
                                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                                     Grid.Column="0" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/Resources/DedicatedServer/D_jiantou2Left_Enter.png" ImageMouseLeave="pack://application:,,,/Resources/DedicatedServer/D_jiantou2Left_Leave.png"/>
-                                <local:ImageButton4 x:Name="imageButtonRight" 
+                                <local:DediImageButton x:Name="imageButtonRight" 
                                                    local:ComboBoxNoItem1.IsLeftEnabled="True"
                                                    Command="local:ComboBoxNoItem1.LeftClickCommand" 
                                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"

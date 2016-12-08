@@ -48,7 +48,7 @@ namespace WpfLearn.UserControls
         private static void IsLeftEnabledChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
            // Debug.WriteLine("IsLeftEnabledChanged");
-            var button = d as ImageButton4;
+            var button = d as DediImageButton;
             if (e.OldValue != e.NewValue && button != null)
             {
                
@@ -96,7 +96,7 @@ namespace WpfLearn.UserControls
             }
 
             // 点击左边按钮
-            if (((ImageButton4)sender).Name=="imageButtonLeft")
+            if (((DediImageButton)sender).Name=="imageButtonLeft")
             {
                 Debug.WriteLine(comboBoxNoItem1.SelectedIndex);
                 // 循环显示
@@ -112,7 +112,7 @@ namespace WpfLearn.UserControls
             }
 
             // 点击右边按钮
-            if (((ImageButton4)sender).Name == "imageButtonRight")
+            if (((DediImageButton)sender).Name == "imageButtonRight")
             {
                 // 循环显示
                 if (comboBoxNoItem1.SelectedIndex == -1 || comboBoxNoItem1.SelectedIndex == comboBoxNoItem1.Items.Count-1)

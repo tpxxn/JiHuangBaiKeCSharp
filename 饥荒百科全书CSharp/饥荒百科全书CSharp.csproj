@@ -120,14 +120,14 @@
     <Compile Include="MyUserControl\ButtonWithPicture.xaml.cs">
       <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\ComboBoxNoItem1.cs" />
+    <Compile Include="MyUserControl\DedicatedServer\ComboBoxNoItem1.cs" />
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\ExpanderStackpanel.xaml.cs">
       <DependentUpon>ExpanderStackpanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\ImageButton4.cs" />
+    <Compile Include="MyUserControl\DedicatedServer\DediImageButton.cs" />
     <Compile Include="MyUserControl\PropertyBar.xaml.cs">
       <DependentUpon>PropertyBar.xaml</DependentUpon>
     </Compile>
@@ -152,7 +152,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dictionary\DedicatedServer\Controls_Themes.xaml">
+    <Page Include="Dictionary\DedicatedServer\DidiRightPanelComboBoxDictionary.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

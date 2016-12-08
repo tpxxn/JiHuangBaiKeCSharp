@@ -42,7 +42,7 @@
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/Controls_Themes.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DidiRightPanelComboBoxDictionary.xaml" />
               
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -514,8 +514,7 @@
                             <Image x:Name="DediButtomBorder_v3" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="4" Visibility="Collapsed"/>
                             <Image x:Name="DediButtomBorder_v4" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="6"/>
                         </Grid>
-                        <UserControls:ImageButton4 x:Name="imageButton4" Content="ImageButton4" HorizontalAlignment="Left" Margin="295,49,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-                        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem1" HorizontalAlignment="Left" Margin="323,37,0,0" Grid.Row="1" VerticalAlignment="Top" Height="38" Width="92"/>
+                        <UserControls:DediImageButton x:Name="imageButton4" Content="ImageButton4" HorizontalAlignment="Left" Margin="295,49,0,0" Grid.Row="1" VerticalAlignment="Top"/>
                     </Grid>
                     <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold"/>
                 </Grid>

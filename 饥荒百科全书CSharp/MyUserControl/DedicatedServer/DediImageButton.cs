@@ -27,7 +27,7 @@ namespace WpfLearn.UserControls
     /// 
     /// 不足的是样式文件中，对图片和文本更多细节的设置没有弄，只是简单地居中
     /// </summary>
-    public class ImageButton4 : Button
+    public class DediImageButton : Button
     {
 
 
@@ -57,18 +57,18 @@ namespace WpfLearn.UserControls
         //private ImageSource imageMouseLeave;
 
         // 2.注册依赖属性 .  运行顺序：静态-》普通
-        static ImageButton4()
+        static DediImageButton()
         {
-            ImageButton4.ImageMouseEnterProperty =
-            DependencyProperty.Register("ImageMouseEnter", typeof(ImageSource), typeof(ImageButton4),
+            DediImageButton.ImageMouseEnterProperty =
+            DependencyProperty.Register("ImageMouseEnter", typeof(ImageSource), typeof(DediImageButton),
                    new PropertyMetadata(new BitmapImage(), new PropertyChangedCallback(PropertyChange)));
             //注意：一个字母写错，搞了2小时。。
-            ImageButton4.ImageMouseLeaveProperty =
-            DependencyProperty.Register("ImageMouseLeave", typeof(ImageSource), typeof(ImageButton4),
+            DediImageButton.ImageMouseLeaveProperty =
+            DependencyProperty.Register("ImageMouseLeave", typeof(ImageSource), typeof(DediImageButton),
                 new PropertyMetadata(new BitmapImage(), new PropertyChangedCallback(PropertyChange)));
 
-            ImageButton4.TextProperty = /*ImageButton4.ImageMouseLeaveProperty;*/
-            DependencyProperty.Register("Text", typeof(string), typeof(ImageButton4),
+            DediImageButton.TextProperty = /*ImageButton4.ImageMouseLeaveProperty;*/
+            DependencyProperty.Register("Text", typeof(string), typeof(DediImageButton),
                     new PropertyMetadata("", new PropertyChangedCallback(PropertyChange)));
 
 
@@ -111,11 +111,11 @@ namespace WpfLearn.UserControls
         {
             get
             {
-                return base.GetValue(ImageButton4.ImageMouseEnterProperty) as ImageSource;
+                return base.GetValue(DediImageButton.ImageMouseEnterProperty) as ImageSource;
             }
             set
             {
-                base.SetValue(ImageButton4.ImageMouseEnterProperty, value);
+                base.SetValue(DediImageButton.ImageMouseEnterProperty, value);
             }
         }
 
@@ -126,11 +126,11 @@ namespace WpfLearn.UserControls
         {
             get
             {
-                return base.GetValue(ImageButton4.ImageMouseLeaveProperty) as ImageSource;
+                return base.GetValue(DediImageButton.ImageMouseLeaveProperty) as ImageSource;
             }
             set
             {
-                base.SetValue(ImageButton4.ImageMouseLeaveProperty, value);
+                base.SetValue(DediImageButton.ImageMouseLeaveProperty, value);
             }
         }
 
@@ -139,11 +139,11 @@ namespace WpfLearn.UserControls
         {
             get
             {
-                return base.GetValue(ImageButton4.TextProperty) as string;
+                return base.GetValue(DediImageButton.TextProperty) as string;
             }
             set
             {
-                base.SetValue(ImageButton4.TextProperty, value);
+                base.SetValue(DediImageButton.TextProperty, value);
             }
         }
 
