@@ -681,6 +681,7 @@ namespace 饥荒百科全书CSharp
             DediBaseSetPvpSelect.ItemsSource=NoYes;
             DediBaseSetMaxPlayerSelect.ItemsSource=MaxPlayer;
             DediBaseOfflineSelect.ItemsSource=Offline;
+            DediBaseIsPause.ItemsSource = NoYes;
         }
 
         #region "Intention"
@@ -767,6 +768,12 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "BaseSet"
+
+        private void DediBaseSetHouseName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DediMainTop_WorldName.Text = DediBaseSetHouseName.Text;
+        }
+
         private void DediBaseSetIntentionButton_Click(object sender, RoutedEventArgs e)
         {
             DediButtomPanelVisibilityInitialize();

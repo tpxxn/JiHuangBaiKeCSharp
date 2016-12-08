@@ -372,7 +372,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="游戏风格" FontWeight="Bold" FontSize="16"/>
-                                                <Button x:Name="DediBaseSetIntentionButton" Content="交际" Width="124" Style="{DynamicResource DediButtonIntentionStyle}" Focusable="False" FontWeight="Bold" FontSize="16" Height="27" Click="DediBaseSetIntentionButton_Click"/>
+                                                <Button x:Name="DediBaseSetIntentionButton" Content="{Binding GameStyleText,Mode=TwoWay}" Width="124" Style="{DynamicResource DediButtonIntentionStyle}" Focusable="False" FontWeight="Bold" FontSize="16" Height="27" Click="DediBaseSetIntentionButton_Click"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -383,7 +383,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="名称" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox Text="{Binding HouseName,Mode=TwoWay}" x:Name="DediBaseSetHouseName" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="250"/>
+                                                <TextBox Text="{Binding HouseName,Mode=TwoWay}" x:Name="DediBaseSetHouseName" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="250" TextChanged="DediBaseSetHouseName_TextChanged"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -502,6 +502,17 @@
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="服务器模式" FontWeight="Bold" FontSize="16"/>
                                                 <DedicatedServerControls:ComboBoxNoItem1  x:Name="DediBaseOfflineSelect" Text="{Binding ServerMode,Mode=TwoWay}" Height="35" Width="140"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediBaseSetIsPause" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="无人时暂停" FontWeight="Bold" FontSize="16"/>
+                                                <DedicatedServerControls:ComboBoxNoItem1  x:Name="DediBaseIsPause" Text="{Binding IsPause,Mode=TwoWay}" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>

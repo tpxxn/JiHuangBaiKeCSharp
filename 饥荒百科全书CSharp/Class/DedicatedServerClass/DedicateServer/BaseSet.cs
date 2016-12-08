@@ -13,7 +13,7 @@ using System.Windows;
 namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 {
     /// <summary>
-    /// 2016.12.1  写 基本设置类
+    /// 2016.12.1  2016.12.8 写 基本设置类
     /// 
     /// 添加字段和属性后，记得在构造函数附一个初始值
     /// </summary>
@@ -305,14 +305,14 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
          
 
             // 其他先全部赋值，防止为空
-            houseName = "qq群：351765204";
-            describe = "qq群：351765204";
-            maxPlayers = 6;
-            secret = "333333";
-            isCave = "否";
-            isConsole = "是";
-            isPause = "是";
-            isPVP = "否";
+            //houseName = "qq群：351765204";
+            //describe = "qq群：351765204";
+            //maxPlayers = 6;
+            //secret = "333333";
+            ////isCave = "否";
+            //isConsole = "是";
+            //isPause = "是";
+            //isPVP = "否";
 
 
             if (File.Exists(clusterIni_FilePath))

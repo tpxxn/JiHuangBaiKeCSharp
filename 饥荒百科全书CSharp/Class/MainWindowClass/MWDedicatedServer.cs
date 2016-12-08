@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -28,6 +29,11 @@ namespace 饥荒百科全书CSharp
 
             // 2.读取【基本设置】
             string clusterIni_FilePath = @"C:\Users\yy\Documents\Klei\DoNotStarveTogether\yyServer\cluster.ini";
+            if (!File.Exists(clusterIni_FilePath))
+            {
+                MessageBox.Show("文件不存在,请在MWDedicatedServer.cs 第31行设置正确路径.以便测试基本设置");
+                return;
+            }
             BaseSet baseSet = new BaseSet(clusterIni_FilePath);
 
             DediBaseSetGamemodeSelect.DataContext = baseSet;
@@ -38,6 +44,8 @@ namespace 饥荒百科全书CSharp
             DediBaseSetDescribe.DataContext = baseSet;
             DediBaseSetSecret.DataContext = baseSet;
             DediBaseOfflineSelect.DataContext = baseSet;
+            DediBaseIsPause.DataContext = baseSet;
+            DediBaseSetIntentionButton.DataContext = baseSet;
         }
     }
 }
