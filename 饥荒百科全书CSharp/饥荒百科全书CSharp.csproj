@@ -61,6 +61,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Effects, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Neo.Lua, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Class\DedicatedServerClass\dll\Neo.Lua.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -89,6 +93,17 @@
     </ApplicationDefinition>
     <Compile Include="Class\ArrayDelRepeatData.cs" />
     <Compile Include="Class\brushConverter.cs" />
+    <Compile Include="Class\DedicatedServerClass\DedicateServer\BaseSet.cs" />
+    <Compile Include="Class\DedicatedServerClass\DedicateServer\Leveldataoverride.cs" />
+    <Compile Include="Class\DedicatedServerClass\DedicateServer\Mod.cs" />
+    <Compile Include="Class\DedicatedServerClass\DedicateServer\Mods.cs" />
+    <Compile Include="Class\DedicatedServerClass\DedicateServer\ModXiJie.cs" />
+    <Compile Include="Class\DedicatedServerClass\Tools\INIhelper.cs" />
+    <Compile Include="Class\DedicatedServerClass\Tools\LuaConfig.cs" />
+    <Compile Include="Class\DedicatedServerClass\Tools\PathAll.cs" />
+    <Compile Include="Class\DedicatedServerClass\Tools\SendMessage.cs" />
+    <Compile Include="Class\DedicatedServerClass\Tools\Tool.cs" />
+    <Compile Include="Class\DedicatedServerClass\基本设置.xaml.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\MainWindowClass\MWDedicatedServer.cs" />
     <Compile Include="Class\MainWindowClass\MWFood.cs" />
@@ -105,12 +120,11 @@
     <Compile Include="MyUserControl\ButtonWithPicture.xaml.cs">
       <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\DedicatedServer\DediImageButton.xaml.cs">
-      <DependentUpon>DediImageButton.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="MyUserControl\DedicatedServer\ComboBoxNoItem1.cs" />
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\DedicatedServer\DediImageButton.cs" />
     <Compile Include="MyUserControl\ExpanderStackpanel.xaml.cs">
       <DependentUpon>ExpanderStackpanel.xaml</DependentUpon>
     </Compile>
@@ -138,6 +152,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dictionary\DedicatedServer\Controls_Themes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Dictionary\DedicatedServer\DediLeftPanelRadioButtonDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +179,10 @@
     <Page Include="Dictionary\DedicatedServer\DediSelectBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\ListBoxWorld1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Dictionary\ExpanderDictionary.xaml">
       <SubType>Designer</SubType>
@@ -207,10 +229,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\ButtonWithText.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MyUserControl\DedicatedServer\DediImageButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -4517,6 +4535,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_set_rightarrow_tobeclick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Class\DedicatedServerClass\dll\Neo.Lua.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DedicatedServer\箭头2右_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\箭头2右_Leave.png" />
+    <Resource Include="Resources\DedicatedServer\箭头2左_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\箭头2左_Leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DedicatedServer\ComboBox背景.png" />
+    <Resource Include="Resources\DedicatedServer\ComboBox背景灰.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
