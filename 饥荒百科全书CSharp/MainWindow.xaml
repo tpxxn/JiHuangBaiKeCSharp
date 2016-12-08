@@ -9,7 +9,7 @@
         xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
         xmlns:DedicatedServer="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer" 
         xmlns:System="clr-namespace:System;assembly=mscorlib" 
-        xmlns:UserControls="clr-namespace:WpfLearn.UserControls" 
+        xmlns:DedicatedServerControls="clr-namespace:WpfLearn.UserControls" 
         x:Name="mainWindow" 
         x:Class="饥荒百科全书CSharp.MainWindow"
         mc:Ignorable="d"
@@ -514,8 +514,7 @@
                             <Image x:Name="DediButtomBorder_v3" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="4" Visibility="Collapsed"/>
                             <Image x:Name="DediButtomBorder_v4" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="6"/>
                         </Grid>
-                        <UserControls:DediImageButton x:Name="imageButton4" Content="ImageButton4" HorizontalAlignment="Left" Margin="295,49,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-                    </Grid>
+                     </Grid>
                     <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold"/>
                 </Grid>
                 <ScrollViewer x:Name="DediLeftScrollViewer" Margin="50,70,0,70" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource DediLeftPanelScrollViewerControlTemplate}" Focusable="False">
