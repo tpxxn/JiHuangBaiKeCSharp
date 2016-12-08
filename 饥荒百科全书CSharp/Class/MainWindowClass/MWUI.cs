@@ -675,12 +675,12 @@ namespace 饥荒百科全书CSharp
                 MaxPlayer[i - 1] = i.ToString();
             }
             string[] Offline = new string[] { "在线", "离线" };
-            DediBaseSetGrouponlySelect.Init(NoYes);
-            DediBaseSetGroupadminsSelect.Init(NoYes);
-            DediBaseSetGamemodeSelect.Init(Gamemode);
-            DediBaseSetPvpSelect.Init(NoYes);
-            DediBaseSetMaxPlayerSelect.Init(MaxPlayer, 5);
-            DediBaseOfflineSelect.Init(Offline);
+            DediBaseSetGrouponlySelect.ItemsSource=NoYes;
+            DediBaseSetGroupadminsSelect.ItemsSource=NoYes;
+            DediBaseSetGamemodeSelect.ItemsSource=Gamemode;
+            DediBaseSetPvpSelect.ItemsSource=NoYes;
+            DediBaseSetMaxPlayerSelect.ItemsSource=MaxPlayer;
+            DediBaseOfflineSelect.ItemsSource=Offline;
         }
 
         #region "Intention"

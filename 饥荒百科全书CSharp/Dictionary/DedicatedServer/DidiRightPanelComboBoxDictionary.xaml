@@ -71,7 +71,7 @@
                                 </Grid.ColumnDefinitions>
                                 <!--标记： 元素3个   包含2个imageButton4  -->
 
-                                <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock x:Name="textBlock" FontWeight="Bold" FontSize="16" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
 
                                 <local:DediImageButton x:Name="imageButtonLeft"  
                                                    local:ComboBoxNoItem1.IsLeftEnabled="True"

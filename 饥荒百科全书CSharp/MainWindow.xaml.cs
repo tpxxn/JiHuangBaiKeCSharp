@@ -233,6 +233,7 @@ namespace 饥荒百科全书CSharp
             loadFont = true;
             LoadGameVersionXml();//加载游戏版本Xml文件
             DediButtomPanelInitalize();//服务器面板初始化
+            InitServer();// 加载服务器文件
         }
         #endregion
 
