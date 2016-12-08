@@ -288,12 +288,14 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <RadioButton x:Name="DediTitleBaseSet" Content="基本设置" Grid.Column="0" Style="{DynamicResource DediMainPanelRadioButtonStyle}" IsChecked="True" Click="DediTitleBaseSet_Click"/>
-                            <RadioButton x:Name="DediTitleEditWorld" Content="编辑世界" Grid.Column="1" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleEditWorld_Click"/>
-                            <RadioButton x:Name="DediTitleMod" Content="Mods" Grid.Column="2" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleMod_Click"/>
-                            <RadioButton x:Name="DediTitleRollback" Content="回档" Grid.Column="3" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleRollback_Click"/>
-                            <RadioButton x:Name="DediTitleBlacklist" Content="黑名单" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleBlacklist_Click"/>
+                            <RadioButton x:Name="DediTitleSetting" Content="设置" Grid.Column="0" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleSetting_Click"/>
+                            <RadioButton x:Name="DediTitleBaseSet" Content="基本设置" Grid.Column="1" Style="{DynamicResource DediMainPanelRadioButtonStyle}" IsChecked="True" Click="DediTitleBaseSet_Click"/>
+                            <RadioButton x:Name="DediTitleEditWorld" Content="编辑世界" Grid.Column="2" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleEditWorld_Click"/>
+                            <RadioButton x:Name="DediTitleMod" Content="Mods" Grid.Column="3" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleMod_Click"/>
+                            <RadioButton x:Name="DediTitleRollback" Content="回档" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleRollback_Click"/>
+                            <RadioButton x:Name="DediTitleBlacklist" Content="黑名单" Grid.Column="5" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleBlacklist_Click"/>
                         </Grid>
                         <Canvas x:Name="DediTop" Grid.Row="1">
                             <Image x:Name="DediMainTop_portraitsBG" Height="70" Width="70" Canvas.Left="15" Canvas.Top="15" Source="Resources/DedicatedServer/D_mp_portraits_bg.png" Stretch="Fill"/>
@@ -319,7 +321,50 @@
                                 <ColumnDefinition Width="12*"/>
                                 <ColumnDefinition Width="10"/>
                             </Grid.ColumnDefinitions>
-                            <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Visibility="Collapsed">
+                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
+                                <StackPanel>
+                                    <Grid x:Name="DediSettingGameVersion" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="游戏版本" FontWeight="Bold" FontSize="16"/>
+                                                <DedicatedServer:DediSelectBox x:Name="DediSettingGameVersionSelect" Height="35" Width="140"/>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediSettingGameDir" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="游戏目录" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox x:Name="DediSettingGameDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="200"/>
+                                                <Button x:Name="DediSettingGameDirSelect" Tag="选择文件夹" Width="30" Height="30" Style="{DynamicResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0">
+                                                    <Image Source="Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                    <Grid x:Name="DediSettingDediDir" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="服务器目录" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox x:Name="DediSettingDediDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="200"/>
+                                                <Button x:Name="DediSettingDediDirSelect" Tag="选择文件夹" Width="30" Height="30" Style="{DynamicResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0">
+                                                    <Image Source="Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="60"/>
                                     <RowDefinition Height="120"/>
@@ -360,7 +405,7 @@
                                 </Button>
                                 <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                             </Grid>
-                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" >
+                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" d:IsHidden="True" >
                                 <StackPanel>
                                     <Grid x:Name="DediBaseSetIntention" Height="40">
                                         <Grid.Background>
