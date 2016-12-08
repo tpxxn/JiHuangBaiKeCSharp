@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
+namespace WpfLearn.UserControls
 {
 
     /// <summary>
@@ -27,7 +27,7 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
     /// 
     /// 不足的是样式文件中，对图片和文本更多细节的设置没有弄，只是简单地居中
     /// </summary>
-    public class DediImageButton : Button
+    public class ImageButton4 : Button
     {
 
 
@@ -57,18 +57,18 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         //private ImageSource imageMouseLeave;
 
         // 2.注册依赖属性 .  运行顺序：静态-》普通
-        static DediImageButton()
+        static ImageButton4()
         {
-            DediImageButton.ImageMouseEnterProperty =
-            DependencyProperty.Register("ImageMouseEnter", typeof(ImageSource), typeof(DediImageButton),
+            ImageButton4.ImageMouseEnterProperty =
+            DependencyProperty.Register("ImageMouseEnter", typeof(ImageSource), typeof(ImageButton4),
                    new PropertyMetadata(new BitmapImage(), new PropertyChangedCallback(PropertyChange)));
             //注意：一个字母写错，搞了2小时。。
-            DediImageButton.ImageMouseLeaveProperty =
-            DependencyProperty.Register("ImageMouseLeave", typeof(ImageSource), typeof(DediImageButton),
+            ImageButton4.ImageMouseLeaveProperty =
+            DependencyProperty.Register("ImageMouseLeave", typeof(ImageSource), typeof(ImageButton4),
                 new PropertyMetadata(new BitmapImage(), new PropertyChangedCallback(PropertyChange)));
 
-            DediImageButton.TextProperty = /*ImageButton4.ImageMouseLeaveProperty;*/
-            DependencyProperty.Register("Text", typeof(string), typeof(DediImageButton),
+            ImageButton4.TextProperty = /*ImageButton4.ImageMouseLeaveProperty;*/
+            DependencyProperty.Register("Text", typeof(string), typeof(ImageButton4),
                     new PropertyMetadata("", new PropertyChangedCallback(PropertyChange)));
 
 
@@ -111,11 +111,11 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         {
             get
             {
-                return base.GetValue(DediImageButton.ImageMouseEnterProperty) as ImageSource;
+                return base.GetValue(ImageButton4.ImageMouseEnterProperty) as ImageSource;
             }
             set
             {
-                base.SetValue(DediImageButton.ImageMouseEnterProperty, value);
+                base.SetValue(ImageButton4.ImageMouseEnterProperty, value);
             }
         }
 
@@ -126,11 +126,11 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         {
             get
             {
-                return base.GetValue(DediImageButton.ImageMouseLeaveProperty) as ImageSource;
+                return base.GetValue(ImageButton4.ImageMouseLeaveProperty) as ImageSource;
             }
             set
             {
-                base.SetValue(DediImageButton.ImageMouseLeaveProperty, value);
+                base.SetValue(ImageButton4.ImageMouseLeaveProperty, value);
             }
         }
 
@@ -139,11 +139,11 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         {
             get
             {
-                return base.GetValue(DediImageButton.TextProperty) as string;
+                return base.GetValue(ImageButton4.TextProperty) as string;
             }
             set
             {
-                base.SetValue(DediImageButton.TextProperty, value);
+                base.SetValue(ImageButton4.TextProperty, value);
             }
         }
 

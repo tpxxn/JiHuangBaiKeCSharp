@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
+namespace WpfLearn.UserControls
 {
     /// <summary>
     /// 
@@ -48,7 +48,7 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         private static void IsLeftEnabledChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
            // Debug.WriteLine("IsLeftEnabledChanged");
-            var button = d as DediImageButton;
+            var button = d as ImageButton4;
             if (e.OldValue != e.NewValue && button != null)
             {
                
@@ -96,7 +96,7 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
             }
 
             // 点击左边按钮
-            if (((DediImageButton)sender).Name=="imageButtonLeft")
+            if (((ImageButton4)sender).Name=="imageButtonLeft")
             {
                 Debug.WriteLine(comboBoxNoItem1.SelectedIndex);
                 // 循环显示
@@ -112,7 +112,7 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
             }
 
             // 点击右边按钮
-            if (((DediImageButton)sender).Name == "imageButtonRight")
+            if (((ImageButton4)sender).Name == "imageButtonRight")
             {
                 // 循环显示
                 if (comboBoxNoItem1.SelectedIndex == -1 || comboBoxNoItem1.SelectedIndex == comboBoxNoItem1.Items.Count-1)

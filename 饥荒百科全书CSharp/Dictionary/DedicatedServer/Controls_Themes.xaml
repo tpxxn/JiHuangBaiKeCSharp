@@ -1,25 +1,25 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer">
+    xmlns:local="clr-namespace:WpfLearn.UserControls">
 
-    <!-- 
+    <!--ImageButton4的样式 和  ComboBoxNoItem1Style样式
         配合UserControls下相应文件一起使用
         放一起因为ComboBoxNoItem1Style 用到了 ImageButton4
         分开引用的方法好像不行，暂时搞不懂。。
     -->
     <!-- comboBox的背景 -->
-    <ImageBrush x:Key="ComboBoxNoItemBackground" ImageSource="pack://application:,,,/Resources/DedicatedServer/ComboBox背景.png" />
-    <ImageBrush x:Key="ComboBoxNoItemBackground_hui" ImageSource="pack://application:,,,/Resources/DedicatedServer/ComboBox背景灰.png" />
+    <ImageBrush x:Key="ComboBoxNoItemBackground" ImageSource="pack://application:,,,/Resources/DedicatedServer/ComboBoxBackground.png" />
+    <ImageBrush x:Key="ComboBoxNoItemBackground_hui" ImageSource="pack://application:,,,/Resources/DedicatedServer/ComboBoxBackground.png" />
 
 
-    <!--ImageButton的样式 x:Key="ImageButton4Style"-->
-    <Style  TargetType="local:DediImageButton">
+    <!--ImageButton4的样式 x:Key="ImageButton4Style"-->
+    <Style  TargetType="local:ImageButton4">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
                     <!--ImageButton4控件模板-->
-                    <ControlTemplate  TargetType="local:DediImageButton">
+                    <ControlTemplate  TargetType="local:ImageButton4">
                         <!--image/text-->
                         <!--背景色，透明-->
                         <Grid Background="Transparent">
@@ -73,16 +73,16 @@
 
                                 <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
 
-                                <local:DediImageButton x:Name="imageButtonLeft"  
+                                <local:ImageButton4 x:Name="imageButtonLeft"  
                                                    local:ComboBoxNoItem1.IsLeftEnabled="True"
                                                    Command="local:ComboBoxNoItem1.LeftClickCommand" 
                                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                    Grid.Column="0" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2左_Enter.png" ImageMouseLeave="pack://application:,,,/Resources/DedicatedServer/箭头2左_Leave.png"/>
-                                <local:DediImageButton x:Name="imageButtonRight" 
+                                                    Grid.Column="0" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/Resources/DedicatedServer/D_jiantou2Left_Enter.png" ImageMouseLeave="pack://application:,,,/Resources/DedicatedServer/D_jiantou2Left_Leave.png"/>
+                                <local:ImageButton4 x:Name="imageButtonRight" 
                                                    local:ComboBoxNoItem1.IsLeftEnabled="True"
                                                    Command="local:ComboBoxNoItem1.LeftClickCommand" 
                                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                   Grid.Column="2" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2右_Enter.png" ImageMouseLeave="pack://application:,,,/Resources/DedicatedServer/箭头2右_Leave.png"/>
+                                                   Grid.Column="2" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/Resources/DedicatedServer/D_jiantou2Right_Enter.png" ImageMouseLeave="pack://application:,,,/Resources/DedicatedServer/D_jiantou2Right_Leave.png"/>
 
                             </Grid>
                         </Border>

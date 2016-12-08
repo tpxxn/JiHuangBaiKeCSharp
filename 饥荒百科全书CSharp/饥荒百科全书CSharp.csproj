@@ -120,14 +120,14 @@
     <Compile Include="MyUserControl\ButtonWithPicture.xaml.cs">
       <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\DedicatedServer\ComboBoxNoItem1.cs" />
+    <Compile Include="MyUserControl\ComboBoxNoItem1.cs" />
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\DedicatedServer\DediImageButton.cs" />
     <Compile Include="MyUserControl\ExpanderStackpanel.xaml.cs">
       <DependentUpon>ExpanderStackpanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\ImageButton4.cs" />
     <Compile Include="MyUserControl\PropertyBar.xaml.cs">
       <DependentUpon>PropertyBar.xaml</DependentUpon>
     </Compile>
@@ -179,10 +179,6 @@
     <Page Include="Dictionary\DedicatedServer\DediSelectBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dictionary\DedicatedServer\ListBoxWorld1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Dictionary\ExpanderDictionary.xaml">
       <SubType>Designer</SubType>
@@ -4542,14 +4538,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\DedicatedServer\箭头2右_Enter.png" />
-    <Resource Include="Resources\DedicatedServer\箭头2右_Leave.png" />
-    <Resource Include="Resources\DedicatedServer\箭头2左_Enter.png" />
-    <Resource Include="Resources\DedicatedServer\箭头2左_Leave.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Right_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Right_Leave.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Left_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Left_Leave.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\DedicatedServer\ComboBox背景.png" />
-    <Resource Include="Resources\DedicatedServer\ComboBox背景灰.png" />
+    <Resource Include="Resources\DedicatedServer\ComboBoxBackground.png" />
+    <Resource Include="Resources\DedicatedServer\ComboBoxBackGroundhui.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
