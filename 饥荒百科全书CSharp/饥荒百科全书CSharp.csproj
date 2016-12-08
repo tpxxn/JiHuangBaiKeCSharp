@@ -103,7 +103,6 @@
     <Compile Include="Class\DedicatedServerClass\Tools\PathAll.cs" />
     <Compile Include="Class\DedicatedServerClass\Tools\SendMessage.cs" />
     <Compile Include="Class\DedicatedServerClass\Tools\Tool.cs" />
-    <Compile Include="Class\DedicatedServerClass\基本设置.xaml.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\MainWindowClass\MWDedicatedServer.cs" />
     <Compile Include="Class\MainWindowClass\MWFood.cs" />
