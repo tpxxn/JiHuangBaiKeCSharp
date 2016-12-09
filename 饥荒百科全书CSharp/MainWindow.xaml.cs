@@ -37,6 +37,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using 饥荒百科全书CSharp.Class;
+using 饥荒百科全书CSharp.Class.DedicatedServerClass.Tools;
 using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp
@@ -342,8 +343,103 @@ namespace 饥荒百科全书CSharp
                 Se_BossKey_Key.Content = "Ctrl + Alt + B";
             }
         }
+
+
         #endregion
 
-  
+        #region "服务器面板"
+
+        // 游戏平台改变,初始化一切
+        private void DediSettingGameVersionSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // 赋值
+           GamePingTai= e.AddedItems[0].ToString();
+            InitServer();
+
+
+        }
+
+        // 选择游戏exe文件
+        private void DediSettingGameDirSelect_Click(object sender, RoutedEventArgs e)
+        {
+
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            // fileDialog.InitialDirectory = "d:\\";
+            fileDialog.Title = "选择游戏exe文件";
+            if (gamePingTai == "TGP")
+            {
+                fileDialog.Filter = "饥荒游戏exe文件(*.exe)|dontstarve_rail.exe";
+            }
+            else
+            {
+                fileDialog.Filter = "饥荒游戏exe文件(*.exe)|dontstarve_steam.exe";
+            }
+            fileDialog.FilterIndex = 1;
+            fileDialog.RestoreDirectory = true;
+
+            if (fileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                String fileName = fileDialog.FileName;
+                if (String.IsNullOrEmpty(fileName) || !fileName.Contains("dontstarve_"))
+                {
+                    System.Windows.MessageBox.Show("文件选择错误,请选择正确文件,以免出错");
+                    return;
+                }
+                pathAll.Client_FilePath = fileName;
+                DediSettingGameDirSelectTextBox.Text = fileName;
+                XmlHelper.WriteClientPath("ServerConfig.xml", fileName, GamePingTai);
+
+            }
+        }
+
+        // 选择服务器文件
+        private void DediSettingDediDirSelect_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            // fileDialog.InitialDirectory = "d:\\";
+            fileDialog.Title = "选择服务器exe文件";
+
+            fileDialog.Filter = "饥荒服务器exe文件(*.exe)|dontstarve_dedicated_server_nullrenderer.exe";
+
+
+            fileDialog.FilterIndex = 1;
+            fileDialog.RestoreDirectory = true;
+
+            if (fileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                String fileName = fileDialog.FileName;
+                if (String.IsNullOrEmpty(fileName) || !fileName.Contains("dontstarve_dedicated_server_nullrenderer"))
+                {
+                    System.Windows.MessageBox.Show("文件选择错误,请选择正确文件,以免出错");
+                    return;
+                }
+                pathAll.Client_FilePath = fileName;
+                DediSettingDediDirSelectTextBox.Text = fileName;
+                XmlHelper.WriteServerPath("ServerConfig.xml", fileName, GamePingTai);
+
+            }
+
+        }
+
+        // 双击打开所在文件夹"客户端"
+        private void DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(pathAll.Client_FilePath) && File.Exists(pathAll.Client_FilePath))
+            {
+                Process.Start(Path.GetDirectoryName(pathAll.Client_FilePath));
+            }
+        }
+        // 双击打开所在文件夹"服务端"
+        private void DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(pathAll.Server_FilePath) && File.Exists(pathAll.Server_FilePath))
+            {
+                Process.Start(Path.GetDirectoryName(pathAll.Server_FilePath));
+            }
+        }
+
+        #endregion
+
+
     }
 }

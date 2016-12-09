@@ -678,8 +678,7 @@ namespace 饥荒百科全书CSharp
             //DediBaseSetRangeInitalize();
 
             string[] GameVersion = new string[] { "Steam", "TGP", "游侠" };
-            DediSettingGameVersionSelect.ItemsSource=GameVersion;
-            DediSettingGameVersionSelect.SelectedIndex = 0;
+            DediSettingGameVersionSelect.ItemsSource=GameVersion;            
             DediButtomPanelVisibilityInitialize();
 
 

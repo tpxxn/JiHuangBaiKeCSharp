@@ -103,6 +103,7 @@
     <Compile Include="Class\DedicatedServerClass\Tools\PathAll.cs" />
     <Compile Include="Class\DedicatedServerClass\Tools\SendMessage.cs" />
     <Compile Include="Class\DedicatedServerClass\Tools\Tool.cs" />
+    <Compile Include="Class\DedicatedServerClass\Tools\XmlHelper.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\MainWindowClass\MWDedicatedServer.cs" />
     <Compile Include="Class\MainWindowClass\MWFood.cs" />
@@ -4532,9 +4533,7 @@
     <Resource Include="Resources\DedicatedServer\D_set_rightarrow_tobeclick.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Class\DedicatedServerClass\dll\Neo.Lua.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Class\DedicatedServerClass\dll\Neo.Lua.dll" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_jiantou2Right_Enter.png" />
@@ -4548,6 +4547,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_mp_btn_dirselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServerConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

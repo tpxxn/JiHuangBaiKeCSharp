@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using 饥荒百科全书CSharp.Class.DedicatedServerClass.Tools;
 
 namespace ServerTools
 
@@ -41,18 +42,7 @@ namespace ServerTools
         /// 地下世界-设置文件-路径
         /// </summary>
         private string cave_config_FilePath;
-        /// <summary>
-        /// 地上世界-选择文件-路径
-        /// </summary>
-        private string overworld_select_FilePath;
-        /// <summary>
-        /// 地下世界-选择文件-路径
-        /// </summary>
-        private string cave_select_FilePath;
-        /// <summary>
-        /// 汉化文件路径
-        /// </summary>
-        private string hanhuaPath;
+ 
         /// <summary>
         /// mod设置-地上世界-文件路径
         /// </summary>
@@ -73,17 +63,16 @@ namespace ServerTools
         /// 服务端mods路径
         /// </summary>
         private string serverMods_DirPath;
+ 
+
+
+
+
+
         /// <summary>
-        /// 世界资源分类路径
+        /// 模板路径
         /// </summary>
-        private string worldFenLei_FilePath;
-
-
-        /// <summary>
-        /// 我的配置文件夹，所有配置都放在这里了
-        /// </summary>
-        private string myConfig_DirPath;
-
+        private string serverMoBanPath;
         /// <summary>
         /// 我的文档
         /// </summary>
@@ -93,10 +82,11 @@ namespace ServerTools
             {
                 return document_DirPath;
             }
-            set {
+            set
+            {
                 document_DirPath = value;
             }
- 
+
         }
 
         /// <summary>
@@ -108,63 +98,14 @@ namespace ServerTools
             {
                 return current_DirPath;
             }
-            set {
-                current_DirPath = value;
-                MyConfig_DirPath = current_DirPath + @"\config";
-                
-            }
-
-  
-        }
-        /// <summary>
-        /// 我的配置文件路径
-        /// </summary>
-        public string MyConfig_DirPath
-        {
-            get
-            {
-                return myConfig_DirPath;
-            }
-
             set
             {
-                myConfig_DirPath = value;
-
-                //地上世界地下世界选项
-                Overworld_select_FilePath = myConfig_DirPath + "\\地上世界选项.lua";
-
-                Cave_select_FilePath = myConfig_DirPath + "\\地下世界选项.lua";
-
-
-                // 汉化
-                HanhuaPath = myConfig_DirPath + "\\汉化.lua";
-
-               
-                // 客户端exe路径,服务端exe路径
-                string[] k = File.ReadAllLines(myConfig_DirPath + "\\客户端路径.lua", Encoding.UTF8);
-                if (k.Length > 0)
-                {
-                 
-                        Client_FilePath = k[0].Trim();
-                   
-
-                }
-
-                string[] f = File.ReadAllLines(myConfig_DirPath + "\\服务器路径.lua", Encoding.UTF8);
-                if (f.Length > 0)
-                {
-                    // 判断文件名对不对
-                    if (f[0].Trim().Contains("dontstarve_dedicated_server_nullrenderer.exe"))
-                    {
-                        Server_FilePath = f[0].Trim();
-                    }
-
-                }
-
-                // 世界资源分类
-                WorldFenLei_FilePath = myConfig_DirPath + "\\世界资源分类.lua";
+                current_DirPath = value;
+                ServerMoBanPath = current_DirPath + @"\Server模板\" + GamePingTai + @"\Server";
 
             }
+
+
         }
 
 
@@ -182,22 +123,21 @@ namespace ServerTools
             set
             {
 
-                if (value==null || value=="")
+                if (value == null || value == "")
                 {
                     client_FilePath = null;
                     ClientMods_DirPath = null;
                     return;
                 }
-               
-                    client_FilePath = value.Trim();
-                
+
+                client_FilePath = value.Trim();
 
                 // 客户端mods路径 
                 if (!String.IsNullOrEmpty(client_FilePath))
                 {
 
                     ClientMods_DirPath = Path.GetDirectoryName(Path.GetDirectoryName(client_FilePath)) + @"\mods";
-
+                    
 
                 }
             }
@@ -225,6 +165,7 @@ namespace ServerTools
                 if (value.Contains("dontstarve_dedicated_server_nullrenderer.exe"))
                 {
                     server_FilePath = value.Trim();
+
                 }
 
                 // 服务端mods路径 
@@ -246,20 +187,21 @@ namespace ServerTools
             {
                 return yyServer_DirPath;
             }
-            set {
+            set
+            {
 
                 yyServer_DirPath = value;
                 if (!String.IsNullOrEmpty(yyServer_DirPath))
                 {
-               Mod_config_overworld_FilePath = yyServer_DirPath + "\\Master\\modoverrides.lua";
-                  Mod_config_cave_FilePath = yyServer_DirPath + "\\Caves\\modoverrides.lua";
-                   Overworld_config_FilePath = yyServer_DirPath + "\\Master\\leveldataoverride.lua";
+                    Mod_config_overworld_FilePath = yyServer_DirPath + "\\Master\\modoverrides.lua";
+                    Mod_config_cave_FilePath = yyServer_DirPath + "\\Caves\\modoverrides.lua";
+                    Overworld_config_FilePath = yyServer_DirPath + "\\Master\\leveldataoverride.lua";
                     Cave_config_FilePath = yyServer_DirPath + "\\Caves\\leveldataoverride.lua";
                 }
 
             }
 
-     
+
         }
 
         /// <summary>
@@ -271,7 +213,8 @@ namespace ServerTools
             {
                 return overworld_config_FilePath;
             }
-            set {
+            set
+            {
 
                 overworld_config_FilePath = value;
             }
@@ -287,58 +230,16 @@ namespace ServerTools
             {
                 return cave_config_FilePath;
             }
-            set {
+            set
+            {
 
                 cave_config_FilePath = value;
             }
+
+        }
  
-        }
 
-        /// <summary>
-        /// 地上世界-选项-路径
-        /// </summary>
-        public string Overworld_select_FilePath
-        {
-            get
-            {
-                return overworld_select_FilePath;
-            }
-            set {
-
-                overworld_select_FilePath = value;
-            }
-
-        }
-
-        /// <summary>
-        /// 地下世界-选项-路径
-        /// </summary>
-        public string Cave_select_FilePath
-        {
-            get
-            {
-                return cave_select_FilePath;
-            }
-            set {
-                cave_select_FilePath = value;
-            }
- 
-        }
-
-        /// <summary>
-        /// 汉化-路径
-        /// </summary>
-        public string HanhuaPath
-        {
-            get
-            {
-                return hanhuaPath;
-            }
-            set {
-                hanhuaPath = value;
-            }
-
-        }
+  
 
         /// <summary>
         /// mod-设置-地上
@@ -349,7 +250,8 @@ namespace ServerTools
             {
                 return mod_config_overworld_FilePath;
             }
-            set {
+            set
+            {
 
                 mod_config_overworld_FilePath = value;
             }
@@ -365,7 +267,8 @@ namespace ServerTools
             {
                 return mod_config_cave_FilePath;
             }
-            set {
+            set
+            {
 
                 mod_config_cave_FilePath = value;
             }
@@ -380,15 +283,14 @@ namespace ServerTools
             {
                 return doNotStarveTogether_DirPath;
             }
-            set {
+            set
+            {
 
                 doNotStarveTogether_DirPath = value;
                 if (!String.IsNullOrEmpty(doNotStarveTogether_DirPath))
                 {
-                    YyServer_DirPath = doNotStarveTogether_DirPath + "\\yyServer";
+                    YyServer_DirPath = doNotStarveTogether_DirPath + @"\Server_" + GamePingTai+"_" + CunDangCao;
                 }
-                
-
 
             }
         }
@@ -420,80 +322,59 @@ namespace ServerTools
             {
                 return serverMods_DirPath;
             }
-            set {
+            set
+            {
 
                 serverMods_DirPath = value;
             }
 
         }
 
-        public string WorldFenLei_FilePath
+ 
+
+        public string GamePingTai { get; set; }
+        public int CunDangCao { get; set; }
+
+        /// <summary>
+        /// 模板路径
+        /// </summary>
+        public string ServerMoBanPath
         {
             get
             {
-                return worldFenLei_FilePath;
+                return serverMoBanPath;
             }
 
             set
             {
-                worldFenLei_FilePath = value;
+                serverMoBanPath = value;
             }
         }
 
-        public PathAll() {
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="GamePingTai">游戏平台</param>
+        /// <param name="CunDangCao">存档槽</param>
+        public PathAll(string GamePingTai, int CunDangCao)
+        {
 
-            //设置这些路径
-            setAllPath();
+            this.GamePingTai = GamePingTai;
+            this.CunDangCao = CunDangCao;
+            setAllPath(GamePingTai, CunDangCao);
 
         }
 
-
-
-        ///// <summary>
-        ///// 设置客户端exe路径
-        ///// </summary>
-        ///// <param name="path"></param>
-        //public void setClient_FilePath(string path) {
-
-
-        //    client_FilePath = path.Trim();
-            
-
-        //    // 客户端mods路径 
-        //    if (!String.IsNullOrEmpty(client_FilePath.Trim()))
-        //    {
-
-        //        clientMods_DirPath = Path.GetDirectoryName(client_FilePath);
-
-        //    }
-        //}
-
-        ///// <summary>
-        ///// 设置服务端exe路径
-        ///// </summary>
-        ///// <param name="path"></param>
-        //public void setServer_FilePath(string path)
-        //{
-
-
-        //    server_FilePath = path.Trim();
-
-
-        //    // 服务端mods路径 
-        //    if (!String.IsNullOrEmpty(server_FilePath.Trim()))
-        //    {
-
-        //        serverMods_DirPath = Path.GetDirectoryName(server_FilePath);
-
-        //    }
-        //}
-
-
         /// <summary>
-        /// 初始化设置所有路径的值
+        /// 设置所有路径
         /// </summary>
-        public void setAllPath()
+        /// <param name="GamePingTai">游戏平台</param>
+        /// <param name="CunDangChao">第几个存档槽,从0开始</param>
+        public void setAllPath(string GamePingTai, int CunDangCao = 0)
         {
+
+            this.GamePingTai = GamePingTai;
+            this.CunDangCao = CunDangCao;
 
             // 我的文档
             Document_DirPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
@@ -501,11 +382,22 @@ namespace ServerTools
             // 当前路径
             Current_DirPath = System.Environment.CurrentDirectory;
 
- 
+
             // DoNotStarveTogether
-            DoNotStarveTogether_DirPath = Document_DirPath + @"\Klei\DoNotStarveTogether";
-       
-  
+            if (GamePingTai.ToLower() == "tgp")
+            {
+                DoNotStarveTogether_DirPath = Document_DirPath + @"\Klei\DoNotStarveTogetherRail";
+
+            }
+            if (GamePingTai.ToLower() == "游侠" || GamePingTai.ToLower() == "steam")
+            {
+                DoNotStarveTogether_DirPath = Document_DirPath + @"\Klei\DoNotStarveTogether";
+            }
+
+            // 客户端服务器路径
+           Client_FilePath=  XmlHelper.ReadClientPath("ServerConfig.xml", GamePingTai);
+           Server_FilePath=   XmlHelper.ReadServerPath("ServerConfig.xml", GamePingTai);
+
         }
 
     }
