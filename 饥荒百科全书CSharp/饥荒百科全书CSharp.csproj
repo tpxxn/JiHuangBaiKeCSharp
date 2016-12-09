@@ -4543,8 +4543,11 @@
     <Resource Include="Resources\DedicatedServer\D_jiantou2Left_Leave.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\DedicatedServer\ComboBoxBackground.png" />
-    <Resource Include="Resources\DedicatedServer\ComboBoxBackGroundhui.png" />
+    <Resource Include="Resources\DedicatedServer\D_ComboBoxBackground.png" />
+    <Resource Include="Resources\DedicatedServer\D_ComboBoxBackGroundhui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DedicatedServer\D_mp_btn_dirselect.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

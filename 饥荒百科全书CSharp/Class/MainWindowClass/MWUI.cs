@@ -604,6 +604,11 @@ namespace 饥荒百科全书CSharp
 
         #region "DedicatedServer"
         #region "主菜单按钮"
+        private void DediTitleSetting_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Setting");
+        }
+
         private void DediTitleBaseSet_Click(object sender, RoutedEventArgs e)
         {
             DediButtomPanelVisibility("BaseSet");
@@ -645,6 +650,10 @@ namespace 饥荒百科全书CSharp
             DediButtomPanelVisibilityInitialize();
             switch (obj)
             {
+                case "Setting":
+                    Visi.VisiCol(false, DediSetting);
+                    break;
+
                 case "BaseSet":
                     Visi.VisiCol(false, DediBaseSet);
                     break;
@@ -666,7 +675,14 @@ namespace 饥荒百科全书CSharp
 
         private void DediButtomPanelInitalize()
         {
-            DediBaseSetRangeInitalize();
+            //DediBaseSetRangeInitalize();
+
+            string[] GameVersion = new string[] { "Steam", "TGP", "游侠" };
+            DediSettingGameVersionSelect.ItemsSource=GameVersion;
+            DediSettingGameVersionSelect.SelectedIndex = 0;
+            DediButtomPanelVisibilityInitialize();
+
+
             string[] NoYes = new string[] { "否", "是" };
             string[] Gamemode = new string[] { "生存", "荒野", "无尽" };
             string[] MaxPlayer = new string[64];
@@ -682,6 +698,8 @@ namespace 饥荒百科全书CSharp
             DediBaseSetMaxPlayerSelect.ItemsSource=MaxPlayer;
             DediBaseOfflineSelect.ItemsSource=Offline;
             DediBaseIsPause.ItemsSource = NoYes;
+            Visi.VisiCol(false, DediBaseSet);
+
         }
 
         #region "Intention"

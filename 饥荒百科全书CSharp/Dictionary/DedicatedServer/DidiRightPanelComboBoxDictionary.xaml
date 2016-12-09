@@ -9,8 +9,8 @@
         分开引用的方法好像不行，暂时搞不懂。。
     -->
     <!-- comboBox的背景 -->
-    <ImageBrush x:Key="ComboBoxNoItemBackground" ImageSource="pack://application:,,,/Resources/DedicatedServer/ComboBoxBackground.png" />
-    <ImageBrush x:Key="ComboBoxNoItemBackground_hui" ImageSource="pack://application:,,,/Resources/DedicatedServer/ComboBoxBackground.png" />
+    <ImageBrush x:Key="ComboBoxNoItemBackground" ImageSource="pack://application:,,,/Resources/DedicatedServer/D_ComboBoxBackground.png" />
+    <ImageBrush x:Key="ComboBoxNoItemBackground_hui" ImageSource="pack://application:,,,/Resources/DedicatedServer/D_ComboBoxBackground.png" />
 
 
     <!--ImageButton4的样式 x:Key="ImageButton4Style"-->
