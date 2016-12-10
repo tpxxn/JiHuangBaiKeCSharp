@@ -127,10 +127,12 @@ namespace ServerTools
                 {
                     client_FilePath = null;
                     ClientMods_DirPath = null;
+                    XmlHelper.WriteClientPath("ServerConfig.xml", "", GamePingTai);
                     return;
                 }
 
                 client_FilePath = value.Trim();
+                XmlHelper.WriteClientPath("ServerConfig.xml", client_FilePath, GamePingTai);
 
                 // 客户端mods路径 
                 if (!String.IsNullOrEmpty(client_FilePath))
@@ -159,12 +161,16 @@ namespace ServerTools
                 {
                     server_FilePath = null;
                     ServerMods_DirPath = null;
+                    XmlHelper.WriteServerPath("ServerConfig.xml", "", GamePingTai);
+
                     return;
                 }
                 // 判断文件名对不对
                 if (value.Contains("dontstarve_dedicated_server_nullrenderer.exe"))
                 {
                     server_FilePath = value.Trim();
+                    XmlHelper.WriteClientPath("ServerConfig.xml", server_FilePath, GamePingTai);
+
 
                 }
 
@@ -333,7 +339,21 @@ namespace ServerTools
  
 
         public string GamePingTai { get; set; }
-        public int CunDangCao { get; set; }
+        private int cunDangCao;
+        public int CunDangCao {
+
+            get
+            {
+                return cunDangCao;
+            }
+
+            set
+            {
+                cunDangCao = value;
+                YyServer_DirPath = doNotStarveTogether_DirPath + @"\Server_" + GamePingTai + "_" + value;
+
+            }
+        }
 
         /// <summary>
         /// 模板路径

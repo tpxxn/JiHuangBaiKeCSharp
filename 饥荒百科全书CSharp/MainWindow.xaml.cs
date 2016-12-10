@@ -353,9 +353,13 @@ namespace 饥荒百科全书CSharp
         private void DediSettingGameVersionSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // 赋值
+            
            GamePingTai= e.AddedItems[0].ToString();
-            InitServer();
-
+            if (e.RemovedItems.Count!=0)
+            {
+                InitServer();
+            }
+         
 
         }
 
@@ -437,6 +441,39 @@ namespace 饥荒百科全书CSharp
                 Process.Start(Path.GetDirectoryName(pathAll.Server_FilePath));
             }
         }
+
+        // 删除当前存档按钮
+        private void DediMainTop_Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+            // 1. radioBox 写 创建世界
+            ((System.Windows.Controls.RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).Content = "创建世界";
+            // 2. 删除当前存档
+            if (Directory.Exists(pathAll.YyServer_DirPath))
+            {
+                Directory.Delete(pathAll.YyServer_DirPath, true);
+            }
+           
+            // 2.1 取消选择,谁都不选
+           ((System.Windows.Controls.RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).IsChecked = false;
+
+            // 2.2 
+         
+            // DediMainBorder.IsEnabled = false;
+            jinyong(false);
+            //// 3. 复制一份新的过来                 
+            //ServerTools.Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
+
+
+            //if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao))
+            //{
+            //    Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao);
+            //}
+            //// 4. 读取新的存档
+            //SetBaseSet();
+
+        }
+
 
         #endregion
 

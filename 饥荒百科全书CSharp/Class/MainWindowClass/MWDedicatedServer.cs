@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -24,6 +25,7 @@ namespace 饥荒百科全书CSharp
         int cunDangCao = 0; // 存档槽
         string gamePingTai;
         PathAll pathAll;
+        private UTF8Encoding utf8NoBom = new UTF8Encoding(false);
 
         public string GamePingTai
         {
@@ -34,13 +36,30 @@ namespace 饥荒百科全书CSharp
 
             set
             {
-                XmlHelper.WriteGamePingTai("ServerConfig.xml",value);
+                XmlHelper.WriteGamePingTai("ServerConfig.xml", value);
                 gamePingTai = value;
-              
+
+
+            }
+        }
+
+        public int CunDangCao
+        {
+            get
+            {
+                return cunDangCao;
+            }
+
+            set
+            {
+                cunDangCao = value;
+                pathAll.CunDangCao = value;
+
             }
         }
         #endregion
 
+        // 游戏平台改变时,或 最开始初始化时
         public void InitServer()
         {
             //-1.游戏平台
@@ -49,18 +68,137 @@ namespace 饥荒百科全书CSharp
             // 0.路径信息
             SetPath();
 
-            // 1.检查存档Server是否存在，不存在从模板中复制一份过去, 存在则遍历存档列表,用于显示
+            // 1.检查存档Server是否存在 
             CheckServer();
 
             // 2.【基本设置】
             SetBaseSet();
-        
+
         }
 
         private void CheckServer()
         {
-            return;
+
+
+            DirectoryInfo dinfo = new DirectoryInfo(pathAll.DoNotStarveTogether_DirPath);
+            DirectoryInfo[] dinfostr = dinfo.GetDirectories();
+
+            List<String> ServerTGPPathList = new List<string>();
+            for (int i = 0; i < dinfostr.Length; i++)
+            {
+                if (dinfostr[i].Name.StartsWith("Server_" + GamePingTai + "_"))
+                {
+                    ServerTGPPathList.Add(dinfostr[i].FullName);
+                }
+            }
+
+            // 清空左边
+            for (int i = 0; i < 20; i++)
+            {
+                ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + i.ToString())).Content = "创建世界";
+                ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + i.ToString())).Tag = i;
+                ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + i.ToString())).Checked += DediRadioButton_Checked;
+            
+            }
+          
+
+            // 等于0
+            if (ServerTGPPathList.Count == 0)
+            {
+                // 复制一份过去                  
+                Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
+
+                // 改名字
+                if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_0"))
+                {
+                    Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_0");
+                }
+            }
+            else
+            {
+                for (int i = 0; i < ServerTGPPathList.Count; i++)
+                {
+                    // 取出序号 
+                    string Num = ServerTGPPathList[i].Substring(ServerTGPPathList[i].LastIndexOf('_') + 1);
+
+                
+                    // 取出存档名称
+                    ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + Num)).Content = getHouseName(int.Parse(Num));
+
+
+                }
+
+            }
+
+            // 禁用
+            jinyong(false);
+            DediSettingGameVersionSelect.IsEnabled = true;
+            // 不选择任何一项
+            ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton"+CunDangCao)).IsChecked = false;
+
+            //// 选择第0个存档
+            //((RadioButton)DediLeftStackPanel.FindName("DediRadioButton0")).IsChecked = true;
+            //CunDangCao = 0;
+
         }
+
+        private string getHouseName(int d_cundangcao)
+        {
+            string clusterIniPath = pathAll.DoNotStarveTogether_DirPath+@"\Server_"+GamePingTai+"_"+ d_cundangcao.ToString() + @"\cluster.ini";
+            if (!File.Exists(clusterIniPath))
+            {
+                return "创建世界";
+            }
+            INIhelper iniTool = new INIhelper(clusterIniPath, utf8NoBom);
+
+            string houseName = iniTool.ReadValue("NETWORK", "cluster_name");
+            return houseName;
+        }
+
+        //点击radioButton 时
+        private void DediRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            // 1.存档槽
+            CunDangCao = (int)((RadioButton)sender).Tag;
+
+            // 1.5 创建世界
+             if(((RadioButton)sender).Content.ToString() == "创建世界")
+            {
+                // 复制一份过去                  
+                Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
+
+                // 改名字
+                if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao))
+                {
+                    Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao);
+
+                }
+                ((RadioButton)sender).Content = getHouseName(CunDangCao);
+
+            }
+            // 1.6 复活
+            jinyong(true);
+
+            // 2.【基本设置】
+            SetBaseSet();
+        }
+
+
+        private void jinyong(bool b) {
+
+            // DediMainBorder.IsEnabled = b;
+            DediTitleBaseSet.IsEnabled = b;
+            DediTitleEditWorld.IsEnabled = b;
+            DediTitleMod.IsEnabled = b;
+            DediTitleRollback.IsEnabled = b;
+            DediTitleBlacklist.IsEnabled = b;
+            DediMainTop_Delete.IsEnabled = b;
+            DediCtrateWorldButton.IsEnabled = b;
+            DediBaseSet.IsEnabled = b;
+
+
+        }
+
 
         private void SetPath()
         {
@@ -73,7 +211,7 @@ namespace 饥荒百科全书CSharp
             else
             {
                 pathAll.Client_FilePath = "";
-                XmlHelper.WriteClientPath("ServerConfig.xml", "", GamePingTai);
+
             }
             DediSettingDediDirSelectTextBox.Text = "";
             if (!String.IsNullOrEmpty(pathAll.Server_FilePath) && File.Exists(pathAll.Server_FilePath))
@@ -83,7 +221,7 @@ namespace 饥荒百科全书CSharp
             else
             {
                 pathAll.Server_FilePath = "";
-                XmlHelper.WriteServerPath("ServerConfig.xml", "", GamePingTai);
+
             }
 
             Debug.WriteLine("路径读取-完");
@@ -91,22 +229,17 @@ namespace 饥荒百科全书CSharp
 
         private void SetPingTai()
         {
-            gamePingTai = ReadGamePingTai();
+            gamePingTai = XmlHelper.ReadGamePingTai("ServerConfig.xml");
             DediSettingGameVersionSelect.Text = gamePingTai;
             Debug.WriteLine("游戏平台-完");
         }
 
-        private string ReadGamePingTai()
-        {
-            return XmlHelper.ReadGamePingTai("ServerConfig.xml");
-        }
-
         private void SetBaseSet()
         {
-            string clusterIni_FilePath = @"C:\Users\yy\Documents\Klei\DoNotStarveTogether\yyServer\cluster.ini";
+            string clusterIni_FilePath = pathAll.YyServer_DirPath + @"\cluster.ini";
             if (!File.Exists(clusterIni_FilePath))
             {
-                MessageBox.Show("文件不存在,请在MWDedicatedServer.cs 第31行设置正确路径.以便测试基本设置");
+                //MessageBox.Show("cluster.ini不存在");
                 return;
             }
             BaseSet baseSet = new BaseSet(clusterIni_FilePath);

@@ -676,7 +676,9 @@ namespace 饥荒百科全书CSharp
         private void DediButtomPanelInitalize()
         {
             //DediBaseSetRangeInitalize();
-
+        
+          
+    
             string[] GameVersion = new string[] { "Steam", "TGP", "游侠" };
             DediSettingGameVersionSelect.ItemsSource=GameVersion;            
             DediButtomPanelVisibilityInitialize();
@@ -789,6 +791,11 @@ namespace 饥荒百科全书CSharp
         private void DediBaseSetHouseName_TextChanged(object sender, TextChangedEventArgs e)
         {
             DediMainTop_WorldName.Text = DediBaseSetHouseName.Text;
+            if (((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).IsChecked==true)
+            {
+                ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).Content = DediBaseSetHouseName.Text;
+
+            }
         }
 
         private void DediBaseSetIntentionButton_Click(object sender, RoutedEventArgs e)

@@ -14,7 +14,7 @@ namespace ServerTools
         /// </summary>
         /// <param name="strFromPath"></param>
         /// <param name="strToPath"></param>
-        public   void CopyDirectory(string strFromPath, string strToPath)
+        public  static  void CopyDirectory(string strFromPath, string strToPath)
         {
             //如果源文件夹不存在，则创建
             if (!Directory.Exists(strFromPath))

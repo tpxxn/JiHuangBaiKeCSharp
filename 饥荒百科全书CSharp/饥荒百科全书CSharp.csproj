@@ -91,8 +91,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class\ArrayDelRepeatData.cs" />
-    <Compile Include="Class\brushConverter.cs" />
+    <Compile Include="Class\ToolsClass\ArrayDelRepeatData.cs" />
+    <Compile Include="Class\ToolsClass\brushConverter.cs" />
     <Compile Include="Class\DedicatedServerClass\DedicateServer\BaseSet.cs" />
     <Compile Include="Class\DedicatedServerClass\DedicateServer\Leveldataoverride.cs" />
     <Compile Include="Class\DedicatedServerClass\DedicateServer\Mod.cs" />
@@ -104,16 +104,16 @@
     <Compile Include="Class\DedicatedServerClass\Tools\SendMessage.cs" />
     <Compile Include="Class\DedicatedServerClass\Tools\Tool.cs" />
     <Compile Include="Class\DedicatedServerClass\Tools\XmlHelper.cs" />
-    <Compile Include="Class\KeyboardHandler.cs" />
+    <Compile Include="Class\ToolsClass\KeyboardHandler.cs" />
     <Compile Include="Class\MainWindowClass\MWDedicatedServer.cs" />
     <Compile Include="Class\MainWindowClass\MWFood.cs" />
-    <Compile Include="Class\PanelGeneration.cs" />
+    <Compile Include="Class\ToolsClass\PanelGeneration.cs" />
     <Compile Include="Class\MainWindowClass\MWXml.cs" />
     <Compile Include="Class\MainWindowClass\MWCharacter.cs" />
     <Compile Include="Class\MainWindowClass\MWUI.cs" />
-    <Compile Include="Class\RegeditRW.cs" />
-    <Compile Include="Class\Update.cs" />
-    <Compile Include="Class\UpdatePan.cs" />
+    <Compile Include="Class\ToolsClass\RegeditRW.cs" />
+    <Compile Include="Class\ToolsClass\Update.cs" />
+    <Compile Include="Class\ToolsClass\UpdatePan.cs" />
     <Compile Include="DownloadWindow.xaml.cs">
       <DependentUpon>DownloadWindow.xaml</DependentUpon>
     </Compile>
@@ -208,14 +208,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Class\Animation.cs" />
+    <Compile Include="Class\ToolsClass\Animation.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppRun.cs" />
-    <Compile Include="Class\Visi.cs" />
-    <Compile Include="Class\ResourceShortName.cs" />
+    <Compile Include="Class\ToolsClass\Visi.cs" />
+    <Compile Include="Class\ToolsClass\ResourceShortName.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -4547,11 +4547,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_mp_btn_dirselect.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ServerConfig.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

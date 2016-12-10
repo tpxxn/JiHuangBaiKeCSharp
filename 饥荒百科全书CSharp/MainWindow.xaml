@@ -43,7 +43,7 @@
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DidiRightPanelComboBoxDictionary.xaml" />
-              
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -305,7 +305,7 @@
                             <Image x:Name="DediMainTop_portraits" Height="70" Width="70" Canvas.Left="15.4" Canvas.Top="15.4" Source="Resources/DedicatedServer/D_mp_portraits_none.png" Stretch="Fill"/>
                             <TextBlock x:Name="DediMainTop_WorldName" TextWrapping="Wrap" Text="XXX 的世界" Canvas.Left="90" Canvas.Top="15" FontSize="36" FontWeight="Bold"/>
                             <TextBlock x:Name="DediMainTop_Days" TextWrapping="Wrap" Text="新的世界" Canvas.Left="90" Canvas.Top="65" FontSize="16" FontWeight="Bold"/>
-                            <Button x:Name="DediMainTop_Delete" Tag="删除" Width="75" Height="75" Canvas.Right="10" Canvas.Top="10" Style="{DynamicResource DediButtonMainPanelStyle}">
+                            <Button x:Name="DediMainTop_Delete" Tag="删除" Width="75" Height="75" Canvas.Right="10" Canvas.Top="10" Style="{DynamicResource DediButtonMainPanelStyle}" Click="DediMainTop_Delete_Click">
                                 <Image Source="Resources/DedicatedServer/D_mp_btn_delete.png"/>
                             </Button>
                         </Canvas>
@@ -324,7 +324,7 @@
                                 <ColumnDefinition Width="12*"/>
                                 <ColumnDefinition Width="10"/>
                             </Grid.ColumnDefinitions>
-                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
+                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" d:IsHidden="True" >
                                 <StackPanel>
                                     <Grid x:Name="DediSettingGameVersion" Height="40">
                                         <Grid.Background>
@@ -333,7 +333,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="游戏平台:" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1 x:Name="DediSettingGameVersionSelect" Height="35" Width="140" SelectionChanged="DediSettingGameVersionSelect_SelectionChanged"/>
+                                                <DedicatedServerControls:ComboBoxNoItem1 x:Name="DediSettingGameVersionSelect" Height="35" Width="140" SelectionChanged="DediSettingGameVersionSelect_SelectionChanged" Background="{x:Null}"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -408,7 +408,7 @@
                                 </Button>
                                 <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                             </Grid>
-                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" d:IsHidden="True" >
+                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" >
                                 <StackPanel>
                                     <Grid x:Name="DediBaseSetIntention" Height="40">
                                         <Grid.Background>
@@ -570,36 +570,35 @@
                             <Image x:Name="DediButtomBorder_v3" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="4" Visibility="Collapsed"/>
                             <Image x:Name="DediButtomBorder_v4" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="6"/>
                         </Grid>
-                     </Grid>
+                    </Grid>
                     <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" />
                 </Grid>
                 <ScrollViewer x:Name="DediLeftScrollViewer" Margin="50,70,0,70" HorizontalAlignment="Left" Width="200" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Template="{DynamicResource DediLeftPanelScrollViewerControlTemplate}" Focusable="False">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="Resources/DedicatedServer/D_leftpanel.png"/>
                     </ScrollViewer.Background>
-                    <StackPanel HorizontalAlignment="Left" Width="160" VerticalAlignment="Top">
-                         
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                        <RadioButton Content="RadioButton" Style="{DynamicResource RadioButtonStyle}"/>
-                    
+                    <StackPanel x:Name="DediLeftStackPanel" HorizontalAlignment="Left" Width="160" VerticalAlignment="Top">
+                        <RadioButton Content="RadioButton" Name="DediRadioButton0"  Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton1" Style="{DynamicResource RadioButtonStyle}"  />
+                        <RadioButton Content="RadioButton" Name="DediRadioButton2" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton3" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton4" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton5" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton6" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton7" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton8" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton9" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton10" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton11" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton12" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton13" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton14" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton15" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton16" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton17" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton18" Style="{DynamicResource RadioButtonStyle}"/>
+                        <RadioButton Content="RadioButton" Name="DediRadioButton19" Style="{DynamicResource RadioButtonStyle}"/>
+
                     </StackPanel>
                 </ScrollViewer>
             </Grid>
