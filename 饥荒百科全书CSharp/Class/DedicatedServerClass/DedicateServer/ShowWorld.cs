@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServerTools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,34 +12,47 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
     /// </summary>
     class ShowWorld
     {
-        private string path;
+        private string picPath;
         private List<string> worldconfigList;
-        private int num;
+ 
         private string worldconfig;
         private string toolTip;
 
-        public ShowWorld(string path, List<string> worldconfigList,string worldconfig,string toolTip) {
+      
+        /// <summary>
+        /// 显示世界每个小项
+        /// </summary>
+        /// <param name="picPath">图片地址</param>
+        /// <param name="worldconfigList">"选项" 例如,[少,默认,多,很多]</param>
+        /// <param name="worldconfig">当前选项显示的值[例如,默认]</param>
+        /// <param name="toolTip">toolTip</param>
+        public ShowWorld(string picPath, List<string> worldconfigList,string worldconfig,string toolTip) {
 
-            this.path = path;
+            this.picPath = picPath;
             this.worldconfigList = worldconfigList;
             this.worldconfig = worldconfig;
-            this.toolTip = toolTip;
-
+            this.toolTip = toolTip;         
         }
 
-        public string Path
+        /// <summary>
+        /// 图片地址
+        /// </summary>
+        public string PicPath
         {
             get
             {
-                return path;
+                return picPath;
             }
 
             set
             {
-                path = value;
+                picPath = value;
             }
         }
 
+        /// <summary>
+        /// "选项" 例如,[少,默认,多,很多]
+        /// </summary>
         public List<string> WorldconfigList
         {
             get
@@ -52,19 +66,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             }
         }
 
-        public int Num
-        {
-            get
-            {
-                return num;
-            }
 
-            set
-            {
-                num = value;
-            }
-        }
-
+        /// <summary>
+        /// 选项中当前显示的值[例如,默认]
+        /// </summary>
         public string Worldconfig
         {
             get
@@ -78,11 +83,16 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             }
         }
 
+        /// <summary>
+        /// toolTip
+        /// </summary>
         public string ToolTip
         {
             get
             {
+             
                 return toolTip;
+                
             }
 
             set

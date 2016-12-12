@@ -43,7 +43,6 @@
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DidiRightPanelComboBoxDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediListBoxWorld.xaml" />
 
                 
             </ResourceDictionary.MergedDictionaries>
@@ -570,7 +569,7 @@
                                     <ColumnDefinition Width="4*"/>
                                     <ColumnDefinition Width="4*"/>
                                 </Grid.ColumnDefinitions>
-                                <ListBox x:Name="DediOverWorldListBox" Grid.Column="1" Style="{DynamicResource ListBoxWorld1}"/>
+                                <Canvas x:Name="DediOverWorld" Grid.Column="1" Margin="0" ScrollViewer.HorizontalScrollBarVisibility="Visible"></Canvas>
                             </Grid>
 
                             <Image x:Name="DediButtomBorder_h1" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5"/>

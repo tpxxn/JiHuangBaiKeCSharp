@@ -8,10 +8,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
- 
+
 using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp
@@ -84,8 +85,30 @@ namespace 饥荒百科全书CSharp
         {
             // 地上世界 类
             Leveldataoverride overWorld = new Leveldataoverride(pathAll.Overworld_config_FilePath,pathAll.Pic_DirPath,false);
-            overWorld.init();
-            DediOverWorldListBox.ItemsSource = overWorld.ShowWorldList;
+
+            // 画控件
+
+           Dictionary<string,ShowWorld> dic =  overWorld.ShowWorldDic;
+
+            //for (int i = 0; i < OverWorldList.Count; i++)
+            //{
+            //    Image image = new Image();
+            //    image.Width = 50;
+            //    image.Height = 50;
+            //    if (File.Exists( OverWorldList[i].Path))
+            //    {
+            //        image.Source = new BitmapImage(new Uri(OverWorldList[i].Path, UriKind.Absolute));
+
+            //    }
+            //    image.SetValue(Canvas.TopProperty,(double)i*60);
+            //    image.SetValue(Canvas.LeftProperty,(double)30);
+            //    DediOverWorld.Children.Add(image);
+            //}
+   
+           
+         
+
+
 
         }
 

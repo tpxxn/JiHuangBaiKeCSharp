@@ -36,12 +36,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// <summary>
         /// 最终的world
         /// </summary>
-        private Dictionary<string, List<string>> world = new Dictionary<string, List<string>>();
+        private Dictionary<string, ShowWorld> showWorldDic = new Dictionary<string, ShowWorld>();
 
-        /// <summary>
-        /// 储存的值和最终的world一样,类的形式
-        /// </summary>
-        private List<ShowWorld> showWorldList = new List<ShowWorld>();
 
         System.Text.UTF8Encoding utf8 = new System.Text.UTF8Encoding(false);
 
@@ -71,19 +67,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             }
         }
 
-        public Dictionary<string, List<string>> World
-        {
-            get
-            {
-                return world;
-            }
-
-            set
-            {
-                world = value;
-                        
-            }
-        }
 
         public bool IsCave
         {
@@ -98,18 +81,31 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             }
         }
 
-        internal List<ShowWorld> ShowWorldList
+        internal Dictionary<string, ShowWorld> ShowWorldDic
         {
             get
             {
-                return showWorldList;
+                return showWorldDic;
             }
 
             set
             {
-                showWorldList = value;
+                showWorldDic = value;
             }
         }
+
+        //internal List<ShowWorld> ShowWorldList
+        //{
+        //    get
+        //    {
+        //        return showWorldList;
+        //    }
+
+        //    set
+        //    {
+        //        showWorldList = value;
+        //    }
+        //}
 
 
 
@@ -214,10 +210,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             // 但是以后如何在里面取值赋值 
 
             // init(worldconfigPath, worldselectPath);
+            init();
         }
 
 
-        public string init()
+        private string init()
         {
             if (String.IsNullOrEmpty(worldconfigPath))
             {
@@ -243,34 +240,28 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// </summary>
         private void setWorld()
         {
-
+            ShowWorldDic.Clear();
             // 遍历configworld
             foreach (KeyValuePair<string, string> item in ConfigWorld)
             {
 
                 // 如果包含，选项中有，则添加选项中的
                 if (SelectConfigWorld.ContainsKey(item.Key))
-                {
-                    //如果
-                    World.Add(item.Key, selectConfigWorld[item.Key]);
+                { 
+                    string picPath = picDirPath + @"\" + item.Key + ".png";
+                    ShowWorldDic[item.Key]= new ShowWorld(picPath, selectConfigWorld[item.Key], item.Value, item.Key);
 
                 }
-                //如果不包含，说明选项中么有，没有配置，就用配置的值临时替代
+                //如果不包含，说明ServerConfig中没有写，没有配置，就用当前的值临时替代
                 else
                 {
 
                     List<string> l = new List<string>();
                     l.Add(item.Value);
-                    World[item.Key] = l;
+                    string picPath = picDirPath + @"\" + item.Key + ".png";
+                    ShowWorldDic[item.Key] = new ShowWorld(picPath,l, item.Value, item.Key);
 
                 }
-            }
-            // 赋给showWorldList
-            foreach (KeyValuePair<string, List<string>> item in world)
-            {
-                string picPath = picDirPath+@"\"+item.Key+".png";
-                ShowWorld showworld = new ShowWorld(picPath, item.Value, ConfigWorld[item.Key],item.Key);
-                ShowWorldList.Add(showworld);
             }
 
         }
