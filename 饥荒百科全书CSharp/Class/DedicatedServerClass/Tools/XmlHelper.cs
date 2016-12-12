@@ -209,13 +209,14 @@ namespace ServerTools
         }
         #endregion
 
+        #region 读取世界选项,世界分类
         /// <summary>
         /// 读取世界选项,返回 x=xx,xx,xx
         /// </summary>
         /// <param name="xmlPath"></param>
         /// <param name="isCave"></param>
         /// <returns></returns>
-        public static List<string> ReadworldSelect(string xmlPath,bool isCave)
+        public static List<string> ReadWorldSelect(string xmlPath,bool isCave)
         {
             List<string> listStr = new List<string>();
             XmlDocument xmldoc = new XmlDocument();
@@ -237,5 +238,34 @@ namespace ServerTools
             }
             return listStr;
         }
+
+        /// <summary>
+        /// 读取世界分类,fenlei="foods","animals","world","monsters","resources"
+        /// </summary>
+        public static Dictionary<string, string> ReadWorldFenLei(string xmlPath,bool isCave) {
+
+            string isCavestr = isCave? "cave" : "master";
+
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(xmlPath);
+            XmlNodeList details = xmldoc.SelectNodes("configuration/fenlei/"+isCavestr+"/details");
+
+            foreach (var item in details)
+            {
+                string key = ((XmlElement)item).GetAttribute("key");
+                string[] value = ((XmlElement)item).GetAttribute("value").Split(',');
+
+                for (int i = 0; i < value.Length; i++)
+                {
+                    dic[value[i]] = key;
+                }
+
+            }
+
+            return dic;
+  
+        }
+        #endregion
     }
 }
