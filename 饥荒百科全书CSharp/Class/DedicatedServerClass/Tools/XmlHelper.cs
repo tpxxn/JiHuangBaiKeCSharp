@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.Tools
+namespace ServerTools
 {
   
 
@@ -207,8 +207,35 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.Tools
 
 
         }
-
         #endregion
 
+        /// <summary>
+        /// 读取世界选项,返回 x=xx,xx,xx
+        /// </summary>
+        /// <param name="xmlPath"></param>
+        /// <param name="isCave"></param>
+        /// <returns></returns>
+        public static List<string> ReadworldSelect(string xmlPath,bool isCave)
+        {
+            List<string> listStr = new List<string>();
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(xmlPath);
+            XmlNodeList details;
+            if (!isCave)
+            {
+                details = xmldoc.SelectNodes("configuration/master/details");
+            }
+            else {
+                details = xmldoc.SelectNodes("configuration/caves/details");
+            }
+
+            foreach (XmlNode item in details)
+            {
+               string key= ((XmlElement)item).GetAttribute("key");
+               string value= ((XmlElement)item).GetAttribute("value");
+                listStr.Add(key.Trim() + "=" + value.Trim());
+            }
+            return listStr;
+        }
     }
 }

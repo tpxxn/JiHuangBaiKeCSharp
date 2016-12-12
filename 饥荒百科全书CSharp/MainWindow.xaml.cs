@@ -23,6 +23,7 @@
 //}
 //RegeditRW.RegWrite("OldVersionPath", "");
 //#endregion
+using ServerTools;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,7 +38,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using 饥荒百科全书CSharp.Class;
-using 饥荒百科全书CSharp.Class.DedicatedServerClass.Tools;
+
 using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp

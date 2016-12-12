@@ -43,7 +43,9 @@
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DidiRightPanelComboBoxDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediListBoxWorld.xaml" />
 
+                
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -408,7 +410,7 @@
                                 </Button>
                                 <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                             </Grid>
-                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" >
+                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" d:IsHidden="True" >
                                 <StackPanel>
                                     <Grid x:Name="DediBaseSetIntention" Height="40">
                                         <Grid.Background>
@@ -563,6 +565,14 @@
                                     </Grid>
                                 </StackPanel>
                             </ScrollViewer>
+                            <Grid x:Name="DediWorldSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                </Grid.ColumnDefinitions>
+                                <ListBox x:Name="DediOverWorldListBox" Grid.Column="1" Style="{DynamicResource ListBoxWorld1}"/>
+                            </Grid>
+
                             <Image x:Name="DediButtomBorder_h1" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5"/>
                             <Image x:Name="DediButtomBorder_h2" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5" Grid.Row="2"/>
                             <Image x:Name="DediButtomBorder_v1" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3"/>

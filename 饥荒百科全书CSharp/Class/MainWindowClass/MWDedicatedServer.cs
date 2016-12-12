@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Threading;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
-using 饥荒百科全书CSharp.Class.DedicatedServerClass.Tools;
+ 
 using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp
@@ -73,6 +73,19 @@ namespace 饥荒百科全书CSharp
 
             // 2.【基本设置】
             SetBaseSet();
+
+            // 3. "世界设置"
+            SetWorldSet();
+
+        }
+
+        // 世界设置
+        private void SetWorldSet()
+        {
+            // 地上世界 类
+            Leveldataoverride overWorld = new Leveldataoverride(pathAll.Overworld_config_FilePath,pathAll.Pic_DirPath,false);
+            overWorld.init();
+            DediOverWorldListBox.ItemsSource = overWorld.ShowWorldList;
 
         }
 
@@ -181,6 +194,9 @@ namespace 饥荒百科全书CSharp
 
             // 2.【基本设置】
             SetBaseSet();
+
+            // 3. "世界设置"
+            SetWorldSet();
         }
 
 

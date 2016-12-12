@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using 饥荒百科全书CSharp.Class.DedicatedServerClass.Tools;
+ 
 
 namespace ServerTools
 
@@ -63,9 +63,9 @@ namespace ServerTools
         /// 服务端mods路径
         /// </summary>
         private string serverMods_DirPath;
- 
 
 
+        private string pic_DirPath;
 
 
 
@@ -371,6 +371,19 @@ namespace ServerTools
             }
         }
 
+        public string Pic_DirPath
+        {
+            get
+            {
+                return pic_DirPath;
+            }
+
+            set
+            {
+                pic_DirPath = value;
+            }
+        }
+
         /// <summary>
         ///
         /// </summary>
@@ -402,6 +415,8 @@ namespace ServerTools
             // 当前路径
             Current_DirPath = System.Environment.CurrentDirectory;
 
+            // 世界图片路径
+             Pic_DirPath= Current_DirPath + "\\世界图片";
 
             // DoNotStarveTogether
             if (GamePingTai.ToLower() == "tgp")

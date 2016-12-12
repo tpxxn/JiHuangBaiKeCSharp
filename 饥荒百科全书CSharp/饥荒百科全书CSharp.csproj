@@ -91,6 +91,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\DedicatedServerClass\DedicateServer\ShowWorld.cs" />
     <Compile Include="Class\ToolsClass\ArrayDelRepeatData.cs" />
     <Compile Include="Class\ToolsClass\brushConverter.cs" />
     <Compile Include="Class\DedicatedServerClass\DedicateServer\BaseSet.cs" />
@@ -179,6 +180,10 @@
     <Page Include="Dictionary\DedicatedServer\DediSelectBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediListBoxWorld.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Dictionary\ExpanderDictionary.xaml">
       <SubType>Designer</SubType>

@@ -17,10 +17,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
         string currentDir = System.Environment.CurrentDirectory;
 
-        //2个路径,世界配置路径，世界选择路径
+        //世界配置路径,是否是地下
         private string worldconfigPath;
-        private string worldselectPath;
-
+        private bool isCave;
+        private string picDirPath;
 
 
         /// <summary>
@@ -38,6 +38,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// </summary>
         private Dictionary<string, List<string>> world = new Dictionary<string, List<string>>();
 
+        /// <summary>
+        /// 储存的值和最终的world一样,类的形式
+        /// </summary>
+        private List<ShowWorld> showWorldList = new List<ShowWorld>();
 
         System.Text.UTF8Encoding utf8 = new System.Text.UTF8Encoding(false);
 
@@ -77,6 +81,33 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             set
             {
                 world = value;
+                        
+            }
+        }
+
+        public bool IsCave
+        {
+            get
+            {
+                return isCave;
+            }
+
+            set
+            {
+                isCave = value;
+            }
+        }
+
+        internal List<ShowWorld> ShowWorldList
+        {
+            get
+            {
+                return showWorldList;
+            }
+
+            set
+            {
+                showWorldList = value;
             }
         }
 
@@ -88,7 +119,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// </summary>
         /// <param name="l">key的值,就是label的值</param>
         /// <param name="n">select中的序号</param>
-        public void setCurrentWorld(List<string> l, List<int> n, string path, bool isCave)
+        public void setCurrentWorld(List<string> l, List<int> n, string path)
         {
 
             // 赋值道currentWorld
@@ -173,16 +204,16 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// </summary>
         /// <param name="worldconfigPath">世界的配置文件</param>
         /// <param name="worldselectPath">世界的选项文件</param>
-        public Leveldataoverride(string worldconfigPath, string worldselectPath)
+        public Leveldataoverride(string worldconfigPath,string picdirpath, bool isCave)
         {
             this.worldconfigPath = worldconfigPath;
-            this.worldselectPath = worldselectPath;
+            this.isCave = isCave;
+            this.picDirPath = picdirpath;
 
             // 初始化，就是，读取地上地下世界，放到 Dictionary<string（世界的key）,List<string>（世界的value）> 类型中，
-            // 但是以后如何在里面取值赋值，就他妈是个问题了，操蛋呀
+            // 但是以后如何在里面取值赋值 
 
             // init(worldconfigPath, worldselectPath);
-
         }
 
 
@@ -192,10 +223,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             {
                 return "世界配置文件路径不对";
             }
-            if (String.IsNullOrEmpty(worldselectPath))
-            {
-                return "世界选项文件路径不对";
-            }
+   
 
             //给【世界配置文件】初始化
             readConfigWorld();
@@ -236,15 +264,14 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                     World[item.Key] = l;
 
                 }
-
-
-
-
             }
-
-
-
-
+            // 赋给showWorldList
+            foreach (KeyValuePair<string, List<string>> item in world)
+            {
+                string picPath = picDirPath+@"\"+item.Key+".png";
+                ShowWorld showworld = new ShowWorld(picPath, item.Value, ConfigWorld[item.Key],item.Key);
+                ShowWorldList.Add(showworld);
+            }
 
         }
 
@@ -258,16 +285,14 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             selectConfigWorld.Clear();
 
             //读取文件,填入到字典
-            StreamReader reader = new StreamReader(worldselectPath, Encoding.UTF8);
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            List<string> listStr= XmlHelper.ReadworldSelect("ServerConfig.xml",IsCave);
+
+            for (int i = 0; i < listStr.Count; i++)
             {
-                string[] a = line.Split('=');
+                string[] a = listStr[i].Split('=');
                 List<string> b = a[1].Split(',').ToList<string>();
                 selectConfigWorld.Add(a[0], b);
             }
-
-            reader.Close();
         }
 
         /// <summary>
