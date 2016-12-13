@@ -27,8 +27,10 @@ namespace WpfLearn.UserControls
         public DediImageButton LeftButton;
         public DediImageButton RightButton;
 
+
         public override void OnApplyTemplate()
         {
+            
             base.OnApplyTemplate();
             LeftButton = GetTemplateChild("PART_LeftButton") as DediImageButton;
             RightButton = GetTemplateChild("PART_RightButton") as DediImageButton;
@@ -37,12 +39,12 @@ namespace WpfLearn.UserControls
             {
                 LeftButton.Click += LeftButton_Click;
                 RightButton.Click += RightButton_Click;
-                this.SelectionChanged += ServerComboBox_SelectionChanged;
+          
             }
-      
-
-         
+            this.SelectionChanged += ServerComboBox_SelectionChanged;
         }
+
+   
 
         private void ServerComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -57,7 +59,7 @@ namespace WpfLearn.UserControls
                 LeftButton.Visibility = Visibility.Collapsed;
                 RightButton.Visibility = Visibility.Collapsed;
             }
-
+      
             if (this.Items.Count > 1)
             {
                 if (this.SelectedIndex == 0)
