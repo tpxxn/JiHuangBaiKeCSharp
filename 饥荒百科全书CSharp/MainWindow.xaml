@@ -334,7 +334,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="游戏平台:" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1 x:Name="DediSettingGameVersionSelect" Height="35" Width="140" SelectionChanged="DediSettingGameVersionSelect_SelectionChanged" Background="{x:Null}"/>
+                                                <DedicatedServerControls:DediComboBox x:Name="DediSettingGameVersionSelect" Height="35" Width="140" SelectionChanged="DediSettingGameVersionSelect_SelectionChanged" Background="{x:Null}"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -409,7 +409,7 @@
                                 </Button>
                                 <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                             </Grid>
-                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" d:IsHidden="True" >
+                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" >
                                 <StackPanel>
                                     <Grid x:Name="DediBaseSetIntention" Height="40">
                                         <Grid.Background>
@@ -481,7 +481,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="仅成员" FontWeight="Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1  x:Name="DediBaseSetGrouponlySelect" Height="35" Width="140"/>
+                                                <DedicatedServerControls:DediComboBox  x:Name="DediBaseSetGrouponlySelect" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -492,7 +492,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="自动群组管理员" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1 x:Name="DediBaseSetGroupadminsSelect" Height="35" Width="140" IsEnabled="True"/>
+                                                <DedicatedServerControls:DediComboBox x:Name="DediBaseSetGroupadminsSelect" Height="35" Width="140" IsEnabled="True"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -503,7 +503,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="游戏模式" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1 Text="{Binding GameModeText,Mode=TwoWay}" x:Name="DediBaseSetGamemodeSelect" Height="35" Width="140"/>
+                                                <DedicatedServerControls:DediComboBox Text="{Binding GameModeText,Mode=TwoWay}" x:Name="DediBaseSetGamemodeSelect" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -514,7 +514,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="PvP:" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1 Text="{Binding IsPVP,Mode=TwoWay}" x:Name="DediBaseSetPvpSelect" Height="35" Width="140"/>
+                                                <DedicatedServerControls:DediComboBox Text="{Binding IsPVP,Mode=TwoWay}" x:Name="DediBaseSetPvpSelect" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -525,7 +525,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="玩家:" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1 Text="{Binding MaxPlayers,Mode=TwoWay}" x:Name="DediBaseSetMaxPlayerSelect" Height="35" Width="140"/>
+                                                <DedicatedServerControls:DediComboBox Text="{Binding MaxPlayers,Mode=TwoWay}" x:Name="DediBaseSetMaxPlayerSelect" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -547,7 +547,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="服务器模式" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1  x:Name="DediBaseOfflineSelect" Text="{Binding ServerMode,Mode=TwoWay}" Height="35" Width="140"/>
+                                                <DedicatedServerControls:DediComboBox  x:Name="DediBaseOfflineSelect" Text="{Binding ServerMode,Mode=TwoWay}" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
@@ -558,13 +558,13 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="无人时暂停" FontWeight="Bold" FontSize="16"/>
-                                                <DedicatedServerControls:ComboBoxNoItem1  x:Name="DediBaseIsPause" Text="{Binding IsPause,Mode=TwoWay}" Height="35" Width="140"/>
+                                                <DedicatedServerControls:DediComboBox  x:Name="DediBaseIsPause" Text="{Binding IsPause,Mode=TwoWay}" Height="35" Width="140"/>
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
                                 </StackPanel>
                             </ScrollViewer>
-                            <Grid x:Name="DediWorldSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
+                            <Grid x:Name="DediWorldSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="4*"/>
                                     <ColumnDefinition Width="4*"/>
