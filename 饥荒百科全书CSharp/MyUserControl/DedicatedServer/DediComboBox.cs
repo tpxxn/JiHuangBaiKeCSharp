@@ -39,9 +39,10 @@ namespace WpfLearn.UserControls
             {
                 LeftButton.Click += LeftButton_Click;
                 RightButton.Click += RightButton_Click;
-          
+                this.SelectionChanged += ServerComboBox_SelectionChanged;
+
             }
-            this.SelectionChanged += ServerComboBox_SelectionChanged;
+            
         }
 
    
