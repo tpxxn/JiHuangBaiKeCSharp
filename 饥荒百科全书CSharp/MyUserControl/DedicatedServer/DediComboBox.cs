@@ -20,7 +20,7 @@ namespace WpfLearn.UserControls
     {
         static DediComboBox()
         {
-            // 使用自定义样式覆盖默认样式
+          
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DediComboBox), new FrameworkPropertyMetadata(typeof(DediComboBox)));
         }
 
@@ -33,10 +33,15 @@ namespace WpfLearn.UserControls
             LeftButton = GetTemplateChild("PART_LeftButton") as DediImageButton;
             RightButton = GetTemplateChild("PART_RightButton") as DediImageButton;
 
-            LeftButton.Click += LeftButton_Click;
-            RightButton.Click += RightButton_Click;
+            if (LeftButton!=null && RightButton != null)
+            {
+                LeftButton.Click += LeftButton_Click;
+                RightButton.Click += RightButton_Click;
+                this.SelectionChanged += ServerComboBox_SelectionChanged;
+            }
+      
 
-            this.SelectionChanged += ServerComboBox_SelectionChanged;
+         
         }
 
         private void ServerComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

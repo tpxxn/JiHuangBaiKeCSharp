@@ -17,7 +17,7 @@ namespace WpfLearn.UserControls
 {
 
     /// <summary>
-    /// 【2016.12.5】，这个版本应该是最接近wpf真正的控件。
+    /// 【2016.12.5】 
     /// 
     /// ImageButton4继承Button，额外添加了3个属性
     /// 

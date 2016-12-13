@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--当前游戏版本[TGP,Steam,游侠]-->
+  <banben>
+    <details value="Steam" />
+  </banben>
+  <!--路径-->
+  <path>
+    <steam>
+      <client path="" />
+      <server path="" />
+    </steam>
+    <tgp>
+      <client path="" />
+      <server path="" />
+    </tgp>
+    <youxia>
+      <client path="" />
+      <server path="" />
+    </youxia>
+  </path>
+  <!--汉化-->
+  <hanhua>
+    <details english="unprepared" chinese="食物" />
+    <details english="banana" chinese="香蕉" />
+    <details english="berrybush" chinese="浆果丛" />
+    <details english="cactus" chinese="仙人掌" />
+    <details english="carrot" chinese="胡萝卜" />
+    <details english="lichen" chinese="苔藓" />
+    <details english="mushroom" chinese="蘑菇" />
+    <details english="misc" chinese="杂项" />
+    <details english="preset" chinese="预设" />
+    <details english="autumn" chinese="秋天长度" />
+    <details english="boons" chinese="彩蛋" />
+    <details english="branching" chinese="岔路地形" />
+    <details english="cavelight" chinese="洞穴光照" />
+    <details english="day" chinese="昼夜长短" />
+    <details english="earthquakes" chinese="地震频率" />
+    <details english="frograin" chinese="青蛙雨" />
+    <details english="lightning" chinese="闪电" />
+    <details english="loop" chinese="环状地形" />
+    <details english="regrowth" chinese="再生速度" />
+    <details english="season_start" chinese="开始季节" />
+    <details english="spring" chinese="春天" />
+    <details english="start_location" chinese="初始环境" />
+    <details english="summer" chinese="夏天" />
+    <details english="task_set" chinese="生物群落" />
+    <details english="touchstone" chinese="复活台" />
+    <details english="weather" chinese="天气" />
+    <details english="wildfires" chinese="自燃" />
+    <details english="winter" chinese="冬天" />
+    <details english="world_size" chinese="地图大小" />
+    <details english="animals" chinese="动物" />
+    <details english="alternatehunt" chinese="足迹" />
+    <details english="angrybees" chinese="杀人蜂巢穴" />
+    <details english="beefalo" chinese="牛" />
+    <details english="beefaloheat" chinese="红屁股牛" />
+    <details english="bees" chinese="蜜蜂巢穴" />
+    <details english="birds" chinese="鸟" />
+    <details english="bunnymen" chinese="兔人" />
+    <details english="butterfly" chinese="蝴蝶" />
+    <details english="buzzard" chinese="秃鹫" />
+    <details english="catcoon" chinese="浣猫" />
+    <details english="frogs" chinese="青蛙" />
+    <details english="foods" chinese="食物" />
+    <details english="hunt" chinese="大象" />
+    <details english="lightninggoat" chinese="电羊" />
+    <details english="moles" chinese="鼹鼠" />
+    <details english="monkey" chinese="猴子" />
+    <details english="penguins" chinese="企鹅" />
+    <details english="perd" chinese="火鸡" />
+    <details english="pigs" chinese="猪人" />
+    <details english="rabbits" chinese="兔子" />
+    <details english="rocky" chinese="石虾" />
+    <details english="slurtles" chinese="蜗牛" />
+    <details english="slurper" chinese="啜食者" />
+    <details english="tallbirds" chinese="高脚鸟" />
+    <details english="monsters" chinese="怪物" />
+    <details english="bats" chinese="蝙蝠" />
+    <details english="bearger" chinese="狂暴熊灌" />
+    <details english="chess" chinese="齿轮马" />
+    <details english="deciduousmonster" chinese="树精" />
+    <details english="deerclops" chinese="巨鹿" />
+    <details english="dragonfly" chinese="龙蝇" />
+    <details english="fissure" chinese="裂缝" />
+    <details english="goosemoose" chinese="魔角驼鸭" />
+    <details english="houndmound" chinese="猎犬丘" />
+    <details english="hounds" chinese="猎狗" />
+    <details english="krampus" chinese="坎普斯" />
+    <details english="liefs" chinese="树人" />
+    <details english="lurepofflinets" chinese="食人花" />
+    <details english="merm" chinese="鱼人" />
+    <details english="spiders" chinese="蜘蛛" />
+    <details english="rentaclles" chinese="出售" />
+    <details english="walrus" chinese="海象巢穴" />
+    <details english="worms" chinese="蠕虫" />
+    <details english="resources" chinese="资源" />
+    <details english="fern" chinese="蕨类植物" />
+    <details english="flint" chinese="燧石" />
+    <details english="flower_cave" chinese="荧光花" />
+    <details english="flowers" chinese="花" />
+    <details english="grass" chinese="干草" />
+    <details english="marshbush" chinese="尖刺灌木" />
+    <details english="meteorshowers" chinese="陨石" />
+    <details english="meteorspawner" chinese="陨石坑" />
+    <details english="mushtree" chinese="蘑菇树" />
+    <details english="reeds" chinese="芦苇" />
+    <details english="rock" chinese="岩石" />
+    <details english="rock_ice" chinese="冰块" />
+    <details english="sapling" chinese="小树枝" />
+    <details english="trees" chinese="树" />
+    <details english="tumbleweed" chinese="风滚草" />
+    <details english="wormlights" chinese="发光浆果" />
+    <details english="default" chinese="默认" />
+    <details english="noseason" chinese="无" />
+    <details english="veryshortseason" chinese="非常短" />
+    <details english="shortseason" chinese="短" />
+    <details english="longseason" chinese="长" />
+    <details english="verylongseason" chinese="非常长" />
+    <details english="random" chinese="随机" />
+    <details english="never" chinese="无" />
+    <details english="rare" chinese="较少" />
+    <details english="often" chinese="较多" />
+    <details english="always" chinese="大量" />
+    <details english="veryslow" chinese="极慢" />
+    <details english="slow" chinese="慢" />
+    <details english="fast" chinese="快" />
+    <details english="veryfast" chinese="极快" />
+    <details english="longday" chinese="长白天" />
+    <details english="longdusk" chinese="长夜晚" />
+    <details english="longnight" chinese="长傍晚" />
+    <details english="noday" chinese="无白天" />
+    <details english="caves" chinese="洞穴" />
+    <details english="plus" chinese="plus" />
+    <details english="darkness" chinese="黑天" />
+    <details english="layout_mode" chinese="载入模式" />
+    <details english="lureplants" chinese="食人花" />
+    <details english="ponds" chinese="池塘" />
+    <details english="tentacles" chinese="触手怪" />
+    <details english="prefabswaps" chinese="资源变化" />
+    <details english="prefabswaps_start" chinese="初始资源多样" />
+    <details english="cave_ponds" chinese="洞穴池塘" />
+    <details english="wormhole_prefab" chinese="虫洞" />
+    <details english="cave_spiders" chinese="洞穴蜘蛛" />
+    <details english="cave_default" chinese="洞穴默认" />
+    <details english="classic" chinese="古典的" />
+    <details english="highly random" chinese="高度随机" />
+    <details english="most" chinese="最多" />
+    <details english="least" chinese="最少" />
+    <details english="small" chinese="小" />
+    <details english="medium" chinese="中" />
+    <details english="huge" chinese="大" />
+    <details english="none" chinese="无" />
+    <details english="few" chinese="少" />
+    <details english="many" chinese="多" />
+    <details english="maximum" chinese="最多" />
+    <details english="autumnorspring" chinese="春或秋" />
+    <details english="winterorsummer" chinese="冬或夏" />
+    <details english="roads" chinese="卵石路" />
+  </hanhua>
+  <!--地上世界选项-->
+  <master>
+    <details key="banana" value="never,rare,default,often,always" />
+    <details key="berrybush" value="never,rare,default,often,always" />
+    <details key="cactus" value="never,rare,default,often,always" />
+    <details key="carrot" value="never,rare,default,often,always" />
+    <details key="lichen" value="never,rare,default,often,always" />
+    <details key="mushroom" value="never,rare,default,often,always" />
+    <details key="autumn" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="boons" value="never,rare,default,often,always" />
+    <details key="branching" value="never,least,default,most" />
+    <details key="cavelight" value="veryslow,slow,default,fast,veryfast" />
+    <details key="day" value="default,longday,longdusk,longnight,noday,nodusk,nonight,onlyday,onlydusk,onlynight" />
+    <details key="earthquakes" value="never,rare,default,often,always" />
+    <details key="frograin" value="never,rare,default,often,always" />
+    <details key="lightning" value="never,rare,default,often,always" />
+    <details key="loop" value="never,default,always" />
+    <details key="regrowth" value="veryslow,slow,default,fast,veryfast" />
+    <details key="season_start" value="default,winter,spring,summer,autumnorspring,winterorsummer,random" />
+    <details key="spring" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="start_location" value="default,plus,darkness" />
+    <details key="summer" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="task_set" value="classic,default" />
+    <details key="touchstone" value="never,rare,default,often,always" />
+    <details key="weather" value="never,rare,default,often,always" />
+    <details key="wildfires" value="never,rare,default,often,always" />
+    <details key="winter" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="world_size" value="small,medium,default,huge" />
+    <details key="alternatehunt" value="never,rare,default,often,always" />
+    <details key="angrybees" value="never,rare,default,often,always" />
+    <details key="beefalo" value="never,rare,default,often,always" />
+    <details key="beefaloheat" value="never,rare,default,often,always" />
+    <details key="bees" value="never,rare,default,often,always" />
+    <details key="birds" value="never,rare,default,often,always" />
+    <details key="bunnymen" value="never,rare,default,often,always" />
+    <details key="butterfly" value="never,rare,default,often,always" />
+    <details key="buzzard" value="never,rare,default,often,always" />
+    <details key="catcoon" value="never,rare,default,often,always" />
+    <details key="frogs" value="never,rare,default,often,always" />
+    <details key="hunt" value="never,rare,default,often,always" />
+    <details key="lightninggoat" value="never,rare,default,often,always" />
+    <details key="moles" value="never,rare,default,often,always" />
+    <details key="monkey" value="never,rare,default,often,always" />
+    <details key="penguins" value="never,rare,default,often,always" />
+    <details key="perd" value="never,rare,default,often,always" />
+    <details key="pigs" value="never,rare,default,often,always" />
+    <details key="rabbits" value="never,rare,default,often,always" />
+    <details key="rocky" value="never,rare,default,often,always" />
+    <details key="slurper" value="never,rare,default,often,always" />
+    <details key="slurtles" value="never,rare,default,often,always" />
+    <details key="tallbirds" value="never,rare,default,often,always" />
+    <details key="bats" value="never,rare,default,often,always" />
+    <details key="bearger" value="never,rare,default,often,always" />
+    <details key="chess" value="never,rare,default,often,always" />
+    <details key="deciduousmonster" value="never,rare,default,often,always" />
+    <details key="deerclops" value="never,rare,default,often,always" />
+    <details key="dragonfly" value="never,rare,default,often,always" />
+    <details key="fissure" value="never,rare,default,often,always" />
+    <details key="goosemoose" value="never,rare,default,often,always" />
+    <details key="houndmound" value="never,rare,default,often,always" />
+    <details key="hounds" value="never,rare,default,often,always" />
+    <details key="krampus" value="never,rare,default,often,always" />
+    <details key="liefs" value="never,rare,default,often,always" />
+    <details key="lurepofflinets" value="never,rare,default,often,always" />
+    <details key="merm" value="never,rare,default,often,always" />
+    <details key="spiders" value="never,rare,default,often,always" />
+    <details key="tentacles" value="never,rare,default,often,always" />
+    <details key="walrus" value="never,rare,default,often,always" />
+    <details key="worms" value="never,rare,default,often,always" />
+    <details key="fern" value="never,rare,default,often,always" />
+    <details key="flint" value="never,rare,default,often,always" />
+    <details key="flower_cave" value="never,rare,default,often,always" />
+    <details key="flowers" value="never,rare,default,often,always" />
+    <details key="grass" value="never,rare,default,often,always" />
+    <details key="marshbush" value="never,rare,default,often,always" />
+    <details key="meteorshowers" value="never,rare,default,often,always" />
+    <details key="meteorspawner" value="never,rare,default,often,always" />
+    <details key="mushtree" value="never,rare,default,often,always" />
+    <details key="reeds" value="never,rare,default,often,always" />
+    <details key="rock" value="never,rare,default,often,always" />
+    <details key="rock_ice" value="never,rare,default,often,always" />
+    <details key="sapling" value="never,rare,default,often,always" />
+    <details key="trees" value="never,rare,default,often,always" />
+    <details key="tumbleweed" value="never,rare,default,often,always" />
+    <details key="wormlights" value="never,rare,default,often,always" />
+    <details key="lureplants" value="never,rare,default,often,always" />
+    <details key="ponds" value="never,rare,default,often,always" />
+    <details key="prefabswaps" value="none,few,medium,many,maximum,default" />
+    <details key="prefabswaps_start" value="classic,default,highly random" />
+    <details key="roads" value="default" />
+    <details key="layout_mode" value="LinkNodesByKeys" />
+    <details key="wormhole_prefab" value="wormhole" />
+    <details key="disease_delay" value="default,random,fast,slow,none" />
+    <details key="petrification" value="default" />
+    <details key="specialevent" value="default" />
+    <details key="wormattacks" value="default" />
+  </master>
+  <!--地下世界选项-->
+  <caves>
+    <details key="banana" value="never,rare,default,often,always" />
+    <details key="berrybush" value="never,rare,default,often,always" />
+    <details key="cactus" value="never,rare,default,often,always" />
+    <details key="carrot" value="never,rare,default,often,always" />
+    <details key="lichen" value="never,rare,default,often,always" />
+    <details key="mushroom" value="never,rare,default,often,always" />
+    <details key="autumn" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="boons" value="never,rare,default,often,always" />
+    <details key="branching" value="never,least,default,most" />
+    <details key="cavelight" value="veryslow,slow,default,fast,veryfast" />
+    <details key="day" value="default,longday,longdusk,longnight,noday,nodusk,nonight,onlyday,onlydusk,onlynight" />
+    <details key="earthquakes" value="never,rare,default,often,always" />
+    <details key="frograin" value="never,rare,default,often,always" />
+    <details key="lightning" value="never,rare,default,often,always" />
+    <details key="loop" value="never,default,always" />
+    <details key="regrowth" value="veryslow,slow,default,fast,veryfast" />
+    <details key="season_start" value="default,winter,spring,summer,autumnorspring,winterorsummer,random" />
+    <details key="spring" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="start_location" value="caves" />
+    <details key="summer" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="task_set" value="cave_default" />
+    <details key="touchstone" value="never,rare,default,often,always" />
+    <details key="weather" value="never,rare,default,often,always" />
+    <details key="wildfires" value="never,rare,default,often,always" />
+    <details key="winter" value="noseason,veryshortseason,shortseason,default,longseason,verylongseason,random" />
+    <details key="world_size" value="small,medium,default,huge" />
+    <details key="alternatehunt" value="never,rare,default,often,always" />
+    <details key="angrybees" value="never,rare,default,often,always" />
+    <details key="beefalo" value="never,rare,default,often,always" />
+    <details key="beefaloheat" value="never,rare,default,often,always" />
+    <details key="bees" value="never,rare,default,often,always" />
+    <details key="birds" value="never,rare,default,often,always" />
+    <details key="bunnymen" value="never,rare,default,often,always" />
+    <details key="butterfly" value="never,rare,default,often,always" />
+    <details key="buzzard" value="never,rare,default,often,always" />
+    <details key="catcoon" value="never,rare,default,often,always" />
+    <details key="frogs" value="never,rare,default,often,always" />
+    <details key="hunt" value="never,rare,default,often,always" />
+    <details key="lightninggoat" value="never,rare,default,often,always" />
+    <details key="moles" value="never,rare,default,often,always" />
+    <details key="monkey" value="never,rare,default,often,always" />
+    <details key="penguins" value="never,rare,default,often,always" />
+    <details key="perd" value="never,rare,default,often,always" />
+    <details key="pigs" value="never,rare,default,often,always" />
+    <details key="rabbits" value="never,rare,default,often,always" />
+    <details key="rocky" value="never,rare,default,often,always" />
+    <details key="slurper" value="never,rare,default,often,always" />
+    <details key="slurtles" value="never,rare,default,often,always" />
+    <details key="tallbirds" value="never,rare,default,often,always" />
+    <details key="bats" value="never,rare,default,often,always" />
+    <details key="bearger" value="never,rare,default,often,always" />
+    <details key="chess" value="never,rare,default,often,always" />
+    <details key="deciduousmonster" value="never,rare,default,often,always" />
+    <details key="deerclops" value="never,rare,default,often,always" />
+    <details key="dragonfly" value="never,rare,default,often,always" />
+    <details key="fissure" value="never,rare,default,often,always" />
+    <details key="goosemoose" value="never,rare,default,often,always" />
+    <details key="houndmound" value="never,rare,default,often,always" />
+    <details key="hounds" value="never,rare,default,often,always" />
+    <details key="krampus" value="never,rare,default,often,always" />
+    <details key="liefs" value="never,rare,default,often,always" />
+    <details key="lurepofflinets" value="never,rare,default,often,always" />
+    <details key="merm" value="never,rare,default,often,always" />
+    <details key="spiders" value="never,rare,default,often,always" />
+    <details key="tentacles" value="never,rare,default,often,always" />
+    <details key="walrus" value="never,rare,default,often,always" />
+    <details key="worms" value="never,rare,default,often,always" />
+    <details key="fern" value="never,rare,default,often,always" />
+    <details key="flint" value="never,rare,default,often,always" />
+    <details key="flower_cave" value="never,rare,default,often,always" />
+    <details key="flowers" value="never,rare,default,often,always" />
+    <details key="grass" value="never,rare,default,often,always" />
+    <details key="marshbush" value="never,rare,default,often,always" />
+    <details key="meteorshowers" value="never,rare,default,often,always" />
+    <details key="meteorspawner" value="never,rare,default,often,always" />
+    <details key="mushtree" value="never,rare,default,often,always" />
+    <details key="reeds" value="never,rare,default,often,always" />
+    <details key="rock" value="never,rare,default,often,always" />
+    <details key="rock_ice" value="never,rare,default,often,always" />
+    <details key="sapling" value="never,rare,default,often,always" />
+    <details key="trees" value="never,rare,default,often,always" />
+    <details key="tumbleweed" value="never,rare,default,often,always" />
+    <details key="wormlights" value="never,rare,default,often,always" />
+    <details key="lureplants" value="never,rare,default,often,always" />
+    <details key="ponds" value="never,rare,,often,always" />
+    <details key="prefabswaps" value="none,few,medium,many,maximum,default" />
+    <details key="prefabswaps_start" value="classic,default,highlyrandom" />
+    <details key="cave_ponds" value="never,rare,default,often,always" />
+    <details key="cave_spiders" value="never,rare,default,often,always" />
+    <details key="roads" value="never" />
+    <details key="layout_mode" value="RestrictNodesByKey" />
+    <details key="wormhole_prefab" value="tentacle_pillar" />
+    <details key="disease_delay" value="default" />
+    <details key="petrification" value="default" />
+    <details key="specialevent" value="default" />
+    <details key="wormattacks" value="default" />
+  </caves>
+  <!--世界分类-->
+  <fenlei>
+    <master>
+      <details key="animals" value="alternatehunt,angrybees,beefalo,beefaloheat,bees,birds,butterfly,buzzard,catcoon,hunt,lightninggoat,moles,penguins,perd,pigs,ponds,rabbits,tallbirds" />
+      <details key="foods" value="berrybush,cactus,carrot,mushroom" />
+      <details key="monsters" value="bearger,chess,deciduousmonster,deerclops,dragonfly,goosemoose,houndmound,hounds,krampus,liefs,lurepofflinets,merm,spiders,tentacles,walrus" />
+      <details key="resources" value="flint,flowers,grass,marshbush,meteorshowers,meteorspawner,reeds,rock,rock_ice,sapling,trees,tumbleweed" />
+      <details key="world" value="autumn,boons,branching,day,disease_delay,frograin,lightning,loop,petrification,prefabswaps_start,regrowth,season_start,specialevent,spring,start_location,summer,task_set,touchstone,weather,wildfires,winter,world_size" />
+    </master>
+    <cave>
+      <details key="animals" value="bunnymen,cave_ponds,monkey,rocky,slurper,slurtles" />
+      <details key="foods" value="banana,berrybush,lichen,mushroom" />
+      <details key="monsters" value="bats,cave_spiders,chess,deciduousmonster,fissure,tentacles,wormattacks,worms" />
+      <details key="resources" value="fern,flint,flower_cave,grass,marshbush,mushtree,reeds,rock,sapling,trees,wormlights" />
+      <details key="world" value="boons,branching,cavelight,disease_delay,earthquakes,loop,petrification,prefabswaps_start,regrowth,start_location,task_set,touchstone,weather,world_size" />
+    </cave>
+  </fenlei>
+</configuration>

@@ -42,9 +42,9 @@
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
                 <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DidiRightPanelComboBoxDictionary.xaml" />
+                <ResourceDictionary Source="Dictionary/DedicatedServer/DediImageButtonDictionary.xaml" />
 
-                
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -409,7 +409,7 @@
                                 </Button>
                                 <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                             </Grid>
-                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" >
+                            <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" d:IsHidden="True" >
                                 <StackPanel>
                                     <Grid x:Name="DediBaseSetIntention" Height="40">
                                         <Grid.Background>
@@ -564,7 +564,7 @@
                                     </Grid>
                                 </StackPanel>
                             </ScrollViewer>
-                            <Grid x:Name="DediWorldSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
+                            <Grid x:Name="DediWorldSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="4*"/>
                                     <ColumnDefinition Width="4*"/>
@@ -579,6 +579,7 @@
                             <Image x:Name="DediButtomBorder_v3" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="4" Visibility="Collapsed"/>
                             <Image x:Name="DediButtomBorder_v4" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="6"/>
                         </Grid>
+                        <DedicatedServerControls:DediComboBoxWithImage x:Name="dediComboBoxWithImage" ImageSource="Resources/DedicatedServer/World/autumn.png" HorizontalAlignment="Left" Margin="209,104,0,0" Grid.Row="2" VerticalAlignment="Top" Height="58" Width="196"/>
                     </Grid>
                     <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" />
                 </Grid>

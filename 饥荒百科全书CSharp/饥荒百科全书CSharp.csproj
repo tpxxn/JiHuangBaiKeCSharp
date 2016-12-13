@@ -121,6 +121,7 @@
     <Compile Include="MyUserControl\ButtonWithPicture.xaml.cs">
       <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\DedicatedServer\DediComboBoxWithImage.cs" />
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
@@ -153,7 +154,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dictionary\DedicatedServer\DidiRightPanelComboBoxDictionary.xaml">
+    <Page Include="Dictionary\DedicatedServer\DediComboBoxDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediComboBoxWithImageDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediImageButtonDictionary.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -4644,6 +4653,11 @@
     <Resource Include="Resources\DedicatedServer\World\wormattacks.png" />
     <Resource Include="Resources\DedicatedServer\World\wormlights.png" />
     <Resource Include="Resources\DedicatedServer\World\worms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServerConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
