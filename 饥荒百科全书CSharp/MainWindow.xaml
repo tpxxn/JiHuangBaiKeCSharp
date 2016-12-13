@@ -569,7 +569,30 @@
                                     <ColumnDefinition Width="4*"/>
                                     <ColumnDefinition Width="4*"/>
                                 </Grid.ColumnDefinitions>
-                                <Canvas x:Name="DediOverWorld" Grid.Column="1" Margin="0" ScrollViewer.HorizontalScrollBarVisibility="Visible"></Canvas>
+                                <ScrollViewer Grid.Column="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}"  >
+                                    <StackPanel>
+                                        <Label Content="地上世界" FontSize="20" FontWeight="Bold"></Label>
+
+                                    <StackPanel x:Name="DediOverWorldWorld" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                                        <Label Content="食物"  FontSize="20" FontWeight="Bold"></Label>
+
+                                    <StackPanel x:Name="DediOverWolrdFoods" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                                        <Label Content="动物" FontSize="20" FontWeight="Bold"></Label>
+
+                                    <StackPanel x:Name="DediOverWorldAnimals" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                                        <Label Content="怪物" FontSize="20" FontWeight="Bold"></Label>
+
+                                    <StackPanel x:Name="DediOverWorldMonsters" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                                        <Label Content="资源" FontSize="20" FontWeight="Bold"></Label>
+
+                                    <StackPanel x:Name="DediOverWorldResources" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                                </StackPanel>
+                                </ScrollViewer>
                             </Grid>
 
                             <Image x:Name="DediButtomBorder_h1" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5"/>
@@ -579,7 +602,6 @@
                             <Image x:Name="DediButtomBorder_v3" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="4" Visibility="Collapsed"/>
                             <Image x:Name="DediButtomBorder_v4" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="6"/>
                         </Grid>
-                        <DedicatedServerControls:DediComboBoxWithImage x:Name="dediComboBoxWithImage" ImageSource="/饥荒百科全书CSharp;component/Resources/DedicatedServer/World/autumn.png" HorizontalAlignment="Left" Margin="158,94,0,0" Grid.Row="2" VerticalAlignment="Top" Height="40" Width="192"/>
                     </Grid>
                     <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" />
                 </Grid>

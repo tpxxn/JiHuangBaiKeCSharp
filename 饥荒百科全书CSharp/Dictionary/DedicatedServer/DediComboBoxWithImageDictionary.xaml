@@ -5,6 +5,9 @@
     <Style TargetType="{x:Type local:DediComboBoxWithImage}">
         <!--<Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="16"/>-->
+        <Setter Property="ToolTip">
+            
+        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:DediComboBoxWithImage}">
@@ -14,15 +17,28 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <Image x:Name="PART_Image" Grid.Column="0" Margin="0" Source="{TemplateBinding ImageSource}"></Image>
+                        <Image x:Name="PART_Image" Grid.Column="0" Margin="0" Source="{TemplateBinding ImageSource}">
+                            <Image.ToolTip>
+                                <ToolTip BorderBrush="{x:Null}" Foreground="{x:Null}" Placement="Top"   >
+                                    <ToolTip.Background>
+                                        <ImageBrush ImageSource="/Resources/DedicatedServer/D_mp_btn_tip.png" Opacity="0.7"/>
+                                    </ToolTip.Background>
+                                    <TextBlock Text="{TemplateBinding ImageToolTip}" Foreground="White" FontSize="15" Margin="10,2" />
+                                </ToolTip>
+                            </Image.ToolTip>
+
+                        </Image>
                         <local:DediComboBox  Grid.Column="1" 
                                              Margin="0"
                                              ItemsSource="{TemplateBinding ItemsSource}"
                                              SelectedIndex="{TemplateBinding SelectedIndex}"
                                              SelectedValue="{TemplateBinding SelectedValue}"
                                              
-                                             />
-                       </Grid>
+                                             >
+           
+
+                        </local:DediComboBox>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

@@ -195,7 +195,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             foreach (KeyValuePair<string, string> item in configWorld)
             {
 
-                string picPath = @"Resources\DedicateServer\World\" + item.Key + ".png";
+                string picPath = @"Resources/DedicatedServer/World/" + item.Key + ".png";
 
                 // 如果包含，选项中有，则添加选项中的
                 if (selectConfigWorld.ContainsKey(item.Key))

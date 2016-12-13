@@ -19,7 +19,7 @@ namespace WpfLearn.UserControls
     public class DediComboBoxWithImage : WpfLearn.UserControls.DediComboBox
     {
 
-        private Image image;
+        public Image image;
         static DediComboBoxWithImage()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DediComboBoxWithImage), new FrameworkPropertyMetadata(typeof(DediComboBoxWithImage)));
@@ -29,6 +29,7 @@ namespace WpfLearn.UserControls
         {
             base.OnApplyTemplate();
             image = GetTemplateChild("PART_Image") as Image;
+           
            
         }
        
@@ -44,7 +45,8 @@ namespace WpfLearn.UserControls
                 //{
                 //    dediComboBoxWithImage.image.Source = (ImageSource)e.NewValue;
                 //}
-            
+           
+                
         }
 
         public ImageSource ImageSource
@@ -52,6 +54,18 @@ namespace WpfLearn.UserControls
             set { SetValue(ImageSourceProperty, value); }
             get { return (ImageSource)GetValue(ImageSourceProperty); }
         }
+
+        
+        // ImageToolTip
+        public static readonly DependencyProperty ImageToolTipProperty = DependencyProperty.Register("ImageToolTip", typeof(string), typeof(DediComboBoxWithImage));
+
+     
+        public string ImageToolTip
+        {
+            set { SetValue(ImageToolTipProperty, value); }
+            get { return (string)GetValue(ImageToolTipProperty); }
+        }
+
 
 
 

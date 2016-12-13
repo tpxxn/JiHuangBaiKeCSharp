@@ -10,6 +10,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using WpfLearn.UserControls;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
 
@@ -26,7 +27,7 @@ namespace 饥荒百科全书CSharp
         int cunDangCao = 0; // 存档槽
         string gamePingTai;
         private UTF8Encoding utf8NoBom = new UTF8Encoding(false);
-
+        Dictionary<string, string> hanhua;
 
         PathAll pathAll;
         BaseSet baseSet;
@@ -77,7 +78,9 @@ namespace 饥荒百科全书CSharp
 
             // 1.检查存档Server是否存在 
             CheckServer();
-            
+
+            // 2.汉化
+            hanhua= XmlHelper.ReadHanhua("ServerConfig.xml");
             // 基本设置等在 点击radioButton后设置
 
         }
@@ -111,7 +114,7 @@ namespace 饥荒百科全书CSharp
             // 3. "世界设置"
             SetOverWorldSet();
             // 3. "世界设置"
-            SetCavesSet();
+           // SetCavesSet();
         }
 
 
@@ -227,10 +230,79 @@ namespace 饥荒百科全书CSharp
 
             #endregion
 
+            #region "显示" 地上
+            // animals
+            foreach (KeyValuePair<string,ShowWorld> item in world)
+            {
+                DediComboBoxWithImage di = new DediComboBoxWithImage();
+                di.ImageSource = new BitmapImage(new Uri("/"+item.Value.PicPath, UriKind.Relative));
+                di.ItemsSource = HanHua(item.Value.WorldconfigList);
+                di.SelectedValue = HanHua(item.Value.Worldconfig);
+                di.ImageToolTip = HanHua(item.Value.ToolTip);
+                di.Tag = item.Key;
+                di.Width = 200;
+                di.Height = 60;
+                DediOverWorldWorld.Children.Add(di);
+             
+            }
 
-            // 画控件
-          
-            //OverWorld.SaveWorld();
+            foreach (KeyValuePair<string, ShowWorld> item in foods)
+            {
+                DediComboBoxWithImage di = new DediComboBoxWithImage();
+                di.ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative));
+                di.ItemsSource = HanHua(item.Value.WorldconfigList);
+                di.SelectedValue = HanHua(item.Value.Worldconfig);
+                di.ImageToolTip = HanHua(item.Value.ToolTip);
+                di.Tag = item.Key;
+                di.Width = 200;
+                di.Height = 60;
+                DediOverWolrdFoods.Children.Add(di);
+
+            }
+
+            foreach (KeyValuePair<string, ShowWorld> item in animals)
+            {
+                DediComboBoxWithImage di = new DediComboBoxWithImage();
+                di.ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative));
+                di.ItemsSource = HanHua(item.Value.WorldconfigList);
+                di.SelectedValue = HanHua(item.Value.Worldconfig);
+                di.ImageToolTip = HanHua(item.Value.ToolTip);
+                di.Tag = item.Key;
+                di.Width = 200;
+                di.Height = 60;
+                DediOverWorldAnimals.Children.Add(di);
+
+            }
+
+            foreach (KeyValuePair<string, ShowWorld> item in monsters)
+            {
+                DediComboBoxWithImage di = new DediComboBoxWithImage();
+                di.ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative));
+                di.ItemsSource = HanHua(item.Value.WorldconfigList);
+                di.SelectedValue = HanHua(item.Value.Worldconfig);
+                di.ImageToolTip = HanHua(item.Value.ToolTip);
+                di.Tag = item.Key;
+                di.Width = 200;
+                di.Height = 60;
+                DediOverWorldMonsters.Children.Add(di);
+
+            }
+
+            foreach (KeyValuePair<string, ShowWorld> item in resources)
+            {
+                DediComboBoxWithImage di = new DediComboBoxWithImage();
+                di.ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative));
+                di.ItemsSource = HanHua(item.Value.WorldconfigList);
+                di.SelectedValue = HanHua(item.Value.Worldconfig);
+                di.ImageToolTip = HanHua(item.Value.ToolTip);
+                di.Tag = item.Key;
+                di.Width = 200;
+                di.Height = 60;
+                DediOverWorldResources.Children.Add(di);
+
+            }
+
+            #endregion
 
         }
         // 设置"地下世界"
@@ -392,6 +464,36 @@ namespace 饥荒百科全书CSharp
 
 
         }
+        // 汉化
+        private string HanHua(string s) {
+
+            if (hanhua.ContainsKey(s))
+            {
+                return hanhua[s];
+            }
+            else
+            {
+                return s;
+            }
+        }
+        private List<string> HanHua(List<string> s) {
+
+            List<string> r = new List<string>();
+            foreach (string item in s)
+            {
+                if (hanhua.ContainsKey(item))
+                {
+                    r.Add(hanhua[item]);
+                }
+                else
+                {
+                    r.Add(item);
+                }
+            }
+            return r;
+
+        }
+
         #endregion
 
     }
