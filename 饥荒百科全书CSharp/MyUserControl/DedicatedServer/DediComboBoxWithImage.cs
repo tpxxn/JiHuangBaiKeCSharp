@@ -39,11 +39,11 @@ namespace WpfLearn.UserControls
         private static void OnImageSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
            
-                DediComboBoxWithImage dediComboBoxWithImage = d as DediComboBoxWithImage;
-                if (dediComboBoxWithImage.image!=null)
-                {
-                    dediComboBoxWithImage.image.Source = (ImageSource)e.NewValue;
-                }
+                //DediComboBoxWithImage dediComboBoxWithImage = d as DediComboBoxWithImage;
+                //if (dediComboBoxWithImage.image!=null)
+                //{
+                //    dediComboBoxWithImage.image.Source = (ImageSource)e.NewValue;
+                //}
             
         }
 

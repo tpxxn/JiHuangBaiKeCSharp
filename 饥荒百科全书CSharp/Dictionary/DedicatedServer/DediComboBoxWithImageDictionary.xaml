@@ -8,13 +8,13 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:DediComboBoxWithImage}">
-                    <Grid>
+                    <Grid x:Name="gird1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="{Binding ElementName=gird1,Path=ActualHeight}"/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <Image x:Name="PART_Image" Grid.Column="0" Margin="0"></Image>
+                        <Image x:Name="PART_Image" Grid.Column="0" Margin="0" Source="{TemplateBinding ImageSource}"></Image>
                         <local:DediComboBox  Grid.Column="1" 
                                              Margin="0"
                                              ItemsSource="{TemplateBinding ItemsSource}"

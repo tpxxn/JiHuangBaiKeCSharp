@@ -579,7 +579,7 @@
                             <Image x:Name="DediButtomBorder_v3" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="4" Visibility="Collapsed"/>
                             <Image x:Name="DediButtomBorder_v4" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="6"/>
                         </Grid>
-                        <DedicatedServerControls:DediComboBoxWithImage x:Name="dediComboBoxWithImage" ImageSource="Resources/DedicatedServer/World/autumn.png" HorizontalAlignment="Left" Margin="209,104,0,0" Grid.Row="2" VerticalAlignment="Top" Height="58" Width="196"/>
+                        <DedicatedServerControls:DediComboBoxWithImage x:Name="dediComboBoxWithImage" ImageSource="/饥荒百科全书CSharp;component/Resources/DedicatedServer/World/autumn.png" HorizontalAlignment="Left" Margin="158,94,0,0" Grid.Row="2" VerticalAlignment="Top" Height="40" Width="192"/>
                     </Grid>
                     <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" />
                 </Grid>
