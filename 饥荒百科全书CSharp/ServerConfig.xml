@@ -8,7 +8,7 @@
   <path>
     <steam>
       <client path="" />
-      <server path="" />
+      <server path="I:\game\Steam\steamapps\common\Don't Starve Together Dedicated Server\bin\dontstarve_dedicated_server_nullrenderer.exe" />
     </steam>
     <tgp>
       <client path="" />
@@ -30,7 +30,7 @@
     <details english="mushroom" chinese="蘑菇" />
     <details english="misc" chinese="杂项" />
     <details english="preset" chinese="预设" />
-    <details english="autumn" chinese="秋天长度" />
+    <details english="autumn" chinese="秋天" />
     <details english="boons" chinese="彩蛋" />
     <details english="branching" chinese="岔路地形" />
     <details english="cavelight" chinese="洞穴光照" />
@@ -139,10 +139,10 @@
     <details english="tentacles" chinese="触手怪" />
     <details english="prefabswaps" chinese="资源变化" />
     <details english="prefabswaps_start" chinese="初始资源多样" />
-    <details english="cave_ponds" chinese="洞穴池塘" />
+    <details english="cave_ponds" chinese="池塘" />
     <details english="wormhole_prefab" chinese="虫洞" />
-    <details english="cave_spiders" chinese="洞穴蜘蛛" />
-    <details english="cave_default" chinese="洞穴默认" />
+    <details english="cave_spiders" chinese="蜘蛛" />
+    <details english="cave_default" chinese="默认" />
     <details english="classic" chinese="古典的" />
     <details english="highly random" chinese="高度随机" />
     <details english="most" chinese="最多" />
@@ -157,6 +157,8 @@
     <details english="autumnorspring" chinese="春或秋" />
     <details english="winterorsummer" chinese="冬或夏" />
     <details english="roads" chinese="卵石路" />
+    <details english="disease_delay" chinese="疾病"/>
+    <details english="specialevent" chinese="特殊事件"/>
   </hanhua>
   <!--地上世界选项-->
   <master>
@@ -250,7 +252,7 @@
     <details key="roads" value="default" />
     <details key="layout_mode" value="LinkNodesByKeys" />
     <details key="wormhole_prefab" value="wormhole" />
-    <details key="disease_delay" value="default,random,fast,slow,none" />
+    <details key="disease_delay" value="none,slow,default,fast,random" />
     <details key="petrification" value="default" />
     <details key="specialevent" value="default" />
     <details key="wormattacks" value="default" />
@@ -349,7 +351,7 @@
     <details key="roads" value="never" />
     <details key="layout_mode" value="RestrictNodesByKey" />
     <details key="wormhole_prefab" value="tentacle_pillar" />
-    <details key="disease_delay" value="default" />
+    <details key="disease_delay" value="none,slow,default,fast,random" />
     <details key="petrification" value="default" />
     <details key="specialevent" value="default" />
     <details key="wormattacks" value="default" />

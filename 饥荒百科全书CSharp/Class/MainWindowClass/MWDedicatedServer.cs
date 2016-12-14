@@ -33,6 +33,7 @@ namespace 饥荒百科全书CSharp
         BaseSet baseSet;
         Leveldataoverride OverWorld;
         Leveldataoverride Caves;
+        Mods mods;
 
         public string GamePingTai
         {
@@ -82,12 +83,29 @@ namespace 饥荒百科全书CSharp
             // 2.汉化
             hanhua = XmlHelper.ReadHanhua("ServerConfig.xml");
 
+            // 3.读取服务器mods文件夹下所有信息.mod多的话,读取时间也多
+            //   此时的mod没有被current覆盖
+            mods = null;
+            if (!string.IsNullOrEmpty(pathAll.ServerMods_DirPath))
+            {
+                mods = new Mods(pathAll.ServerMods_DirPath);
+            }
+          
+
             // 3."基本设置" 等在 点击radioButton后设置
 
         }
         //点击radioButton 时
         private void DediRadioButton_Checked(object sender, RoutedEventArgs e)
         {
+            // 0.保存之前的
+            if (OverWorld!=null && Caves!=null)
+            {
+                OverWorld.SaveWorld();
+                Caves.SaveWorld();
+            }
+ 
+
             // 1.存档槽
             CunDangCao = (int)((RadioButton)sender).Tag;
 
@@ -116,9 +134,36 @@ namespace 饥荒百科全书CSharp
             SetOverWorldSet();
             // 3. "世界设置"
             SetCavesSet();
+            // 4. "Mod"
+            SetModSet();
+
         }
 
+        // 设置 "Mod"
+        private void SetModSet()
+        {   // 设置
+            if (!string.IsNullOrEmpty(pathAll.ServerMods_DirPath))
+            {
+                mods.ReadModsOverrides(pathAll.ServerMods_DirPath, pathAll.YyServer_DirPath + @"\Master\modoverrides.lua");
+            }
+            // 显示
+            DediModList.Children.Clear();
+            if (mods!=null)
+            { 
+                for (int i = 0; i < mods.ListMod.Count; i++)
+                {
+                    DediMod dod = new DediMod();
+                    dod.Width = 300;
+                    dod.Height = 80;
+                    dod.Title.Content = mods.ListMod[i].Name;
+                    dod.EnableLabel.Content= mods.ListMod[i].Configuration_options.Count.ToString();
+                    DediModList.Children.Add(dod);
+                }
+     
 
+            }
+
+        }
         // 设置"路径"
         private void SetPath()
         {
@@ -321,29 +366,34 @@ namespace 饥荒百科全书CSharp
 
         }
 
-        // 地上
+        // 地上 修改,保存在 每次点击radioButton或创建世界时
         private void DiOverWorld_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // 测试 用
+            //// 测试 用
             DediComboBoxWithImage Dedi = (DediComboBoxWithImage)sender;
-            List<string> s = new List<string>();
-            s.Add("tag:" + Dedi.Tag.ToString());
-            s.Add("e.source:" + e.Source.ToString());
-            s.Add(e.AddedItems.Count.ToString());
-            s.Add(e.RemovedItems.Count.ToString());
-            s.Add(Dedi.SelectedIndex.ToString());
-            foreach (var item in s)
-            {
-                Debug.WriteLine(item);
-            }
+            //List<string> s = new List<string>();
+            //s.Add("tag:" + Dedi.Tag.ToString());
+            //s.Add("e.source:" + e.Source.ToString());
+            //s.Add(e.AddedItems.Count.ToString());
+            //s.Add(e.RemovedItems.Count.ToString());
+            //s.Add(Dedi.SelectedIndex.ToString());
+            //foreach (var item in s)
+            //{
+            //    Debug.WriteLine(item);
+            //}
 
             // 此时说明修改
-            if (e.RemovedItems.Count!=0)
+            if (e.RemovedItems.Count!=0 && e.AddedItems[0].ToString() == HanHua(OverWorld.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex]))
             {
                 OverWorld.ShowWorldDic[Dedi.Tag.ToString()].Worldconfig = OverWorld.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex];
+                Debug.WriteLine(Dedi.Tag.ToString() + "选项变为:" + OverWorld.ShowWorldDic[Dedi.Tag.ToString()].Worldconfig);
+                
+                // 保存,这样保存有点卡,换为每次点击radioButton或创建世界时
+                //OverWorld.SaveWorld();
+                //Debug.WriteLine("保存地上世界");
             }
-
-            Debug.WriteLine(OverWorld.ShowWorldDic[Dedi.Tag.ToString()].Worldconfig);
+       
+  
 
         }
 
@@ -422,6 +472,7 @@ namespace 饥荒百科全书CSharp
                 di.Tag = item.Key;
                 di.Width = 200;
                 di.Height = 60;
+                di.SelectionChanged += DiCaves_SelectionChanged;
                 DediCavesWorld.Children.Add(di);
 
             }
@@ -436,6 +487,7 @@ namespace 饥荒百科全书CSharp
                 di.Tag = item.Key;
                 di.Width = 200;
                 di.Height = 60;
+                di.SelectionChanged += DiCaves_SelectionChanged;
                 DediCavesFoods.Children.Add(di);
 
             }
@@ -450,6 +502,7 @@ namespace 饥荒百科全书CSharp
                 di.Tag = item.Key;
                 di.Width = 200;
                 di.Height = 60;
+                di.SelectionChanged += DiCaves_SelectionChanged;
                 DediCavesAnimals.Children.Add(di);
 
             }
@@ -464,6 +517,7 @@ namespace 饥荒百科全书CSharp
                 di.Tag = item.Key;
                 di.Width = 200;
                 di.Height = 60;
+                di.SelectionChanged += DiCaves_SelectionChanged;
                 DediCavesMonsters.Children.Add(di);
 
             }
@@ -478,14 +532,32 @@ namespace 饥荒百科全书CSharp
                 di.Tag = item.Key;
                 di.Width = 200;
                 di.Height = 60;
+                di.SelectionChanged += DiCaves_SelectionChanged;
                 DediCavesResources.Children.Add(di);
 
             }
 
             #endregion
-            // 画控件
+     
 
-            //OverWorld.SaveWorld();
+        }
+
+        private void DiCaves_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //// 测试 用
+            DediComboBoxWithImage Dedi = (DediComboBoxWithImage)sender;
+        
+
+            // 此时说明修改
+            if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == HanHua(Caves.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex]))
+            {
+                Caves.ShowWorldDic[Dedi.Tag.ToString()].Worldconfig = Caves.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex];
+                Debug.WriteLine(Dedi.Tag.ToString() + "选项变为:" + Caves.ShowWorldDic[Dedi.Tag.ToString()].Worldconfig);
+
+                // 保存,这样保存有点卡,换为每次点击radioButton或创建世界时
+                //Caves.SaveWorld();
+                //Debug.WriteLine("保存地上世界");
+            }
 
         }
 

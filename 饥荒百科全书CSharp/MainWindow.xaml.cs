@@ -39,7 +39,7 @@ using System.Windows.Media.Imaging;
 using System.Xml;
 using WpfLearn.UserControls;
 using 饥荒百科全书CSharp.Class;
-
+using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
 using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp
@@ -419,10 +419,18 @@ namespace 饥荒百科全书CSharp
                     System.Windows.MessageBox.Show("文件选择错误,请选择正确文件,以免出错");
                     return;
                 }
-                pathAll.Client_FilePath = fileName;
+                pathAll.Server_FilePath = fileName;
                 DediSettingDediDirSelectTextBox.Text = fileName;
                 XmlHelper.WriteServerPath("ServerConfig.xml", fileName, GamePingTai);
 
+                // 读取mods
+                mods = null;
+                if (!string.IsNullOrEmpty(pathAll.ServerMods_DirPath))
+                {
+                    mods = new Mods(pathAll.ServerMods_DirPath);
+                }
+
+                SetModSet();
             }
 
         }
@@ -476,6 +484,16 @@ namespace 饥荒百科全书CSharp
 
         }
 
+        // 创建世界按钮
+        private void DediCtrateWorldButton_Click(object sender, RoutedEventArgs e)
+        {
+            // 保存
+            if (OverWorld != null && Caves != null)
+            {
+                OverWorld.SaveWorld();
+                Caves.SaveWorld();
+            }
+        }
 
         #endregion
 

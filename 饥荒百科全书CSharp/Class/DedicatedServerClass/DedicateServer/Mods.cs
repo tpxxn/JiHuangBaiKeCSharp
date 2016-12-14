@@ -67,19 +67,12 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// </summary>
         /// <param name="mods_dir_Path">mods路径</param>
         /// <param name="modoverrides_file_Path">mod配置文件路径</param>
-        public Mods(string mods_dir_Path, string modoverrides_file_Path)
+        public Mods(string mods_dir_Path)
         {
 
             // 赋值
             this.Mods_dir_Path = mods_dir_Path;
-            this.Modoverride_file_Path = modoverrides_file_Path;
             ListMod = new List<Mod>();
-
-
-            // 读取mod设置文件，modoverrides.lua
-            LuaConfig luaconfig = new LuaConfig();
-            LuaTable lt = luaconfig.readLua(modoverrides_file_Path, Encoding.UTF8, true);
-
 
             // 遍历modsPath中每一个文件modinfo.lua文件
             DirectoryInfo dinfo = new DirectoryInfo(mods_dir_Path);
@@ -95,10 +88,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 string modinfoPath = strdir[i].FullName + "\\modinfo.lua";
 
                 // 这个mod的配置lt1，可以为空，后面有判断
-                LuaTable lt1 = lt[strdir[i].Name] == null ? null : (LuaTable)lt[strdir[i].Name];
+                //LuaTable lt1 = lt[strdir[i].Name] == null ? null : (LuaTable)lt[strdir[i].Name];
 
                 // 创建mod
-                Mod mod = new Mod(modinfoPath, lt1);
+                Mod mod = new Mod(modinfoPath);
 
                 // 添加
                 ListMod.Add(mod);
@@ -109,6 +102,35 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
         }
 
+      
+
+        public void ReadModsOverrides(string mods_dir_Path,string modoverrides_file_Path) {
+
+            this.Modoverride_file_Path = modoverrides_file_Path;
+            LuaConfig luaconfig = new LuaConfig();
+            LuaTable lt = luaconfig.readLua(modoverrides_file_Path, Encoding.UTF8, true);
+
+            // 遍历modsPath中每一个文件modinfo.lua文件
+            DirectoryInfo dinfo = new DirectoryInfo(mods_dir_Path);
+
+            // 标记：这里要保证mods文件夹下全部都是mod的文件夹，不能有其他的文件夹，不然后面可能会出错
+            DirectoryInfo[] strdir = dinfo.GetDirectories();
+
+
+            // strdir长度为0的时候，没有mod的时候，listmod为null吧？
+           
+            for (int i = 0; i < strdir.Length; i++)
+            {
+                // 这个mod的配置lt1，可以为空，后面有判断
+                LuaTable lt1 = lt[strdir[i].Name] == null ? null : (LuaTable)lt[strdir[i].Name];
+                // 标记..
+                ListMod[i].ReadModoverrides(lt1);
+            }
+ 
+
+        }
+
+ 
         #endregion
 
 

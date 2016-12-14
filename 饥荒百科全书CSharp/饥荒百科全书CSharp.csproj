@@ -122,6 +122,9 @@
       <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediComboBoxWithImage.cs" />
+    <Compile Include="MyUserControl\DedicatedServer\DediMod.xaml.cs">
+      <DependentUpon>DediMod.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
@@ -237,6 +240,10 @@
     <Page Include="MyUserControl\ButtonWithText.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\DedicatedServer\DediMod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MyUserControl\DedicatedServer\DediSelectBox.xaml">
       <SubType>Designer</SubType>

@@ -193,14 +193,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
         #endregion
 
-         
-
+        
         /// <summary>
         /// mod
         /// </summary> 
         /// <param name="modinfoPath">这个modinfo的路径</param>
         /// <param name="thisModConfig">这个mod的细节配置，可能为空，说明没有</param>
-        public Mod(string modinfoPath,LuaTable thisModConfig)
+        public Mod(string modinfoPath )
         {
             #region Mod除了细节的各种信息
             // 路径
@@ -247,10 +246,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             {
                 this.Tyype = modType.客户端;
             }
-            if (thisModConfig!=null)
-            {
-                this.Enabled = (bool)thisModConfig["enabled"];
-            }
+     
 
 
             #endregion
@@ -374,12 +370,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                     current11= listOptions[0].data;
                 }
 
-
-
-
-
-
-
                 // 赋值到mod细节中
                 ModXiJie modxijie = new ModXiJie();
                 modxijie.Current = current11;
@@ -397,19 +387,33 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
             #endregion
 
-            #region 读取modoverrides，赋值到current值中，用current覆盖default
+            //#region 读取modoverrides，赋值到current值中，用current覆盖default
+            //ReadModoverrides(thisModConfig);
+            //#endregion
+
+        }
+
+
+        #region 读取modoverrides，赋值到current值中，用current覆盖default
+
+        public void  ReadModoverrides(LuaTable thisModConfig) {
+
+            if (thisModConfig != null)
+            {
+                this.Enabled = (bool)thisModConfig["enabled"];
+            }
 
             // 如果为空，说明没有开启此mod，返回
             if (thisModConfig == null) { return; }
 
             // 储存enabled
-      
+
             //// enable 为false，说明没有开启mod，返回
 
             //if (this.Enabled == false) { return; }
 
 
-            var  thisMod_configuration_options=  thisModConfig["configuration_options"];
+            var thisMod_configuration_options = thisModConfig["configuration_options"];
             // 如果没有细节配置，还是返回
             if (thisMod_configuration_options == null) { return; }
 
@@ -417,9 +421,9 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             LuaTable lt_thisMod_configuration_options = (LuaTable)thisMod_configuration_options;
 
             // 再转换成字典
-            IDictionary<string, object> d = (IDictionary<string,object>)lt_thisMod_configuration_options.Members;
+            IDictionary<string, object> d = (IDictionary<string, object>)lt_thisMod_configuration_options.Members;
 
-            foreach (KeyValuePair<string,object> item in d)
+            foreach (KeyValuePair<string, object> item in d)
             {
                 //  如果不存在，下一循环
                 if (!Configuration_options.ContainsKey(item.Key))
@@ -428,25 +432,15 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 }
 
                 // 赋值到当前值,【到这里，用当前值覆盖了default，如果没有被覆盖的就是默认值】
-                if (item.Value!=null)
+                if (item.Value != null)
                 {
                     Configuration_options[item.Key].Current = item.Value.ToString();
                 }
-              
+
             }
 
-
-
-      
-
-
-            #endregion
-
         }
-
-
-
-
+            #endregion
 
     }
 }

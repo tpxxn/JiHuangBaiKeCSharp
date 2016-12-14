@@ -661,7 +661,7 @@ namespace 饥荒百科全书CSharp
                     Visi.VisiCol(false, DediWorldSet);
                     break;
                 case "Mod":
-
+                    Visi.VisiCol(false, DediModSet);
                     break;
                 case "Rollback":
 

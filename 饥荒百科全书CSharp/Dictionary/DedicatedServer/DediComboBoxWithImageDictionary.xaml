@@ -30,6 +30,7 @@
                         </Image>
                         <local:DediComboBox  Grid.Column="1" 
                                              Margin="0"
+                                             x:Name="PART_DediComboBox"
                                              ItemsSource="{TemplateBinding ItemsSource}"
                                              SelectedIndex="{TemplateBinding SelectedIndex}"
                                              SelectedValue="{TemplateBinding SelectedValue}"
