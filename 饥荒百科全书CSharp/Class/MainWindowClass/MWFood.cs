@@ -827,36 +827,21 @@ namespace 饥荒百科全书CSharp
             {
                 WrapPanel_FoodAttribute.Children.Clear();
 
-                ExpanderStackpanel ESMeats_p5 = new ExpanderStackpanel("肉类×0.5", "../Resources/GameResources/Food/FC_Meats.png");
-                ESMeats_p5.Width = 185;
-                ExpanderStackpanel ESMeats_1 = new ExpanderStackpanel("肉类×1", "../Resources/GameResources/Food/FC_Meats.png");
-                ESMeats_1.Width = 185;
-                ExpanderStackpanel ESMonsterMeats = new ExpanderStackpanel("怪兽类×1", "../Resources/GameResources/Food/FC_Monster_Meats.png");
-                ESMonsterMeats.Width = 185;
-                ExpanderStackpanel ESFishes_p5 = new ExpanderStackpanel("鱼类×0.5", "../Resources/GameResources/Food/FC_Fishes.png");
-                ESFishes_p5.Width = 185;
-                ExpanderStackpanel ESFishes_1 = new ExpanderStackpanel("鱼类×1", "../Resources/GameResources/Food/FC_Fishes.png");
-                ESFishes_1.Width = 185;
-                ExpanderStackpanel ESFishes_2 = new ExpanderStackpanel("鱼类×2", "../Resources/GameResources/Food/FC_Fishes.png");
-                ESFishes_2.Width = 185;
-                ExpanderStackpanel ESVegetables_p5 = new ExpanderStackpanel("蔬菜类×0.5", "../Resources/GameResources/Food/FC_Vegetables.png");
-                ESVegetables_p5.Width = 185;
-                ExpanderStackpanel ESVegetables_1 = new ExpanderStackpanel("蔬菜类×1", "../Resources/GameResources/Food/FC_Vegetables.png");
-                ESVegetables_1.Width = 185;
-                ExpanderStackpanel ESFruit_p5 = new ExpanderStackpanel("水果类×0.5", "../Resources/GameResources/Food/FC_Fruit.png");
-                ESFruit_p5.Width = 185;
-                ExpanderStackpanel ESFruit_1 = new ExpanderStackpanel("水果类×1", "../Resources/GameResources/Food/FC_Fruit.png");
-                ESFruit_1.Width = 185;
-                ExpanderStackpanel ESEggs_1 = new ExpanderStackpanel("蛋类×1", "../Resources/GameResources/Food/FC_Eggs.png");
-                ESEggs_1.Width = 185;
-                ExpanderStackpanel ESEggs_4 = new ExpanderStackpanel("蛋类×4", "../Resources/GameResources/Food/FC_Eggs.png");
-                ESEggs_4.Width = 185;
-                ExpanderStackpanel ESDairyProduct = new ExpanderStackpanel("乳制品类×1", "../Resources/GameResources/Food/FC_Dairy_product.png");
-                ESDairyProduct.Width = 185;
-                ExpanderStackpanel ESSweetener = new ExpanderStackpanel("甜味剂类×1", "../Resources/GameResources/Food/FC_Sweetener.png");
-                ESSweetener.Width = 185;
-                ExpanderStackpanel ESJellyfish = new ExpanderStackpanel("水母类×1", "../Resources/GameResources/Food/FC_Jellyfish.png");
-                ESJellyfish.Width = 185;
+                ExpanderStackpanel ESMeats_p5 = new ExpanderStackpanel("肉类×0.5", "../Resources/GameResources/Food/FC_Meats.png") { Width = 185 };
+                ExpanderStackpanel ESMeats_1 = new ExpanderStackpanel("肉类×1", "../Resources/GameResources/Food/FC_Meats.png") { Width = 185 };
+                ExpanderStackpanel ESMonsterMeats = new ExpanderStackpanel("怪兽类×1", "../Resources/GameResources/Food/FC_Monster_Meats.png") { Width = 185 };
+                ExpanderStackpanel ESFishes_p5 = new ExpanderStackpanel("鱼类×0.5", "../Resources/GameResources/Food/FC_Fishes.png") { Width = 185 };
+                ExpanderStackpanel ESFishes_1 = new ExpanderStackpanel("鱼类×1", "../Resources/GameResources/Food/FC_Fishes.png") { Width = 185 };
+                ExpanderStackpanel ESFishes_2 = new ExpanderStackpanel("鱼类×2", "../Resources/GameResources/Food/FC_Fishes.png") { Width = 185 };
+                ExpanderStackpanel ESVegetables_p5 = new ExpanderStackpanel("蔬菜类×0.5", "../Resources/GameResources/Food/FC_Vegetables.png") { Width = 185 };
+                ExpanderStackpanel ESVegetables_1 = new ExpanderStackpanel("蔬菜类×1", "../Resources/GameResources/Food/FC_Vegetables.png") { Width = 185 };
+                ExpanderStackpanel ESFruit_p5 = new ExpanderStackpanel("水果类×0.5", "../Resources/GameResources/Food/FC_Fruit.png") { Width = 185 };
+                ExpanderStackpanel ESFruit_1 = new ExpanderStackpanel("水果类×1", "../Resources/GameResources/Food/FC_Fruit.png") { Width = 185 };
+                ExpanderStackpanel ESEggs_1 = new ExpanderStackpanel("蛋类×1", "../Resources/GameResources/Food/FC_Eggs.png") { Width = 185 };
+                ExpanderStackpanel ESEggs_4 = new ExpanderStackpanel("蛋类×4", "../Resources/GameResources/Food/FC_Eggs.png") { Width = 185 };
+                ExpanderStackpanel ESDairyProduct = new ExpanderStackpanel("乳制品类×1", "../Resources/GameResources/Food/FC_Dairy_product.png") { Width = 185 };
+                ExpanderStackpanel ESSweetener = new ExpanderStackpanel("甜味剂类×1", "../Resources/GameResources/Food/FC_Sweetener.png") { Width = 185 };
+                ExpanderStackpanel ESJellyfish = new ExpanderStackpanel("水母类×1", "../Resources/GameResources/Food/FC_Jellyfish.png") { Width = 185 };
 
                 foreach (UIElement expanderStackpanel in WrapPanel_Right_Food.Children)
                 {
@@ -1075,7 +1060,7 @@ namespace 饥荒百科全书CSharp
                 {
                     string[] RightButtonTag = (string[])(((ButtonWithText)buttonWithText).UCButton.Tag);
                     string RightButtonTag0 = RightButtonTag[0];
-                    RightButtonTag0 = RightButtonTag0.Substring(RightButtonTag0.LastIndexOf('/') + 1, RightButtonTag0.Length - RightButtonTag0.LastIndexOf('/') - 5);
+                    RightButtonTag0 = RSN.GetFileName(RightButtonTag0);
                     if (BWTTag == RightButtonTag0)
                     {
                         pop_FoodAttribute.IsOpen = false;

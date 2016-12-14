@@ -17,7 +17,16 @@ namespace 饥荒百科全书CSharp.Class
             RUrl = "../Resources/" + RUrlSecond + RUrl + "." +ExtensionName;
             return RUrl;
         }
-
+        /// <summary>
+        /// 获取扩展名
+        /// </summary>
+        /// <param name="ShortName">长字符串</param>
+        /// <returns>资源文件路径</returns>
+        public static string GetFileName(string ShortName)
+        {
+            ShortName = ShortName.Substring(ShortName.LastIndexOf('/') + 1, ShortName.Length - ShortName.LastIndexOf('/') - 5);
+            return ShortName;
+        }
         /// <summary>
         /// 图片短名
         /// </summary>
@@ -38,5 +47,7 @@ namespace 饥荒百科全书CSharp.Class
             Picture.EndInit();
             return Picture;
         }
+
+
     }
 }

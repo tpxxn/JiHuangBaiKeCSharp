@@ -1353,6 +1353,19 @@
         <Introduce>夏天在沙漠采摘。</Introduce>
         <Console>cactus_flower</Console>
       </Food>
+      <Food>
+        <Picture>F_mandrake</Picture>
+        <Name>曼德拉草</Name>
+        <EnName>Mandrake</EnName>
+        <Health>60</Health>
+        <Hunger>75</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>1000</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>白天在草原(曼德拉平原)或洞穴拔起曼德拉草获得。</Introduce>
+        <Console>mandrake</Console>
+      </Food>
     </FoodVegetables>
     <FoodFruit>
       <Food>
@@ -1635,19 +1648,6 @@
         <AttributeValue>×1</AttributeValue>
         <Introduce>洞穴采摘。</Introduce>
         <Console>cutlichen</Console>
-      </Food>
-      <Food>
-        <Picture>F_mandrake</Picture>
-        <Name>曼德拉草</Name>
-        <EnName>Mandrake</EnName>
-        <Health>60</Health>
-        <Hunger>75</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>1000</Perish>
-        <Attribute>FC_Vegetables</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>白天在草原(曼德拉平原)或洞穴拔起曼德拉草获得。</Introduce>
-        <Console>mandrake</Console>
       </Food>
       <Food>
         <Picture>F_electric_milk</Picture>
@@ -2064,10 +2064,10 @@
       </Food>
     </FoodNoFC>
   </FoodNode>
-  <ScienceNode>
-  </ScienceNode>
   <Cooking_SimulatorNode>
   </Cooking_SimulatorNode>
+  <ScienceNode>
+  </ScienceNode>
   <AnimalNode>
   </AnimalNode>
   <NaturalNode>

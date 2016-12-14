@@ -693,6 +693,7 @@ namespace 饥荒百科全书CSharp
             DediBaseSetMaxPlayerSelect.Init(MaxPlayer, 5);
             DediBaseOfflineSelect.Init(Offline);
             Visi.VisiCol(false, DediBaseSet);
+            DediBaseSetRangeInitalize();
         }
 
         #region "Intention"

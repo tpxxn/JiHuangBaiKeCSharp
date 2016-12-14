@@ -90,6 +90,7 @@
     <Compile Include="Class\ArrayDelRepeatData.cs" />
     <Compile Include="Class\brushConverter.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
+    <Compile Include="Class\MainWindowClass\MWCookingSimulator.cs" />
     <Compile Include="Class\MainWindowClass\MWDedicatedServer.cs" />
     <Compile Include="Class\MainWindowClass\MWFood.cs" />
     <Compile Include="Class\PanelGeneration.cs" />
@@ -154,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dictionary\DedicatedServer\DediSelectBoxDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\SwitchButtonDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -4205,7 +4210,9 @@
     <Resource Include="Resources\Setting_Top_T.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="XML\DSTXml.xml" />
+    <EmbeddedResource Include="XML\DSTXml.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="XML\DSXml.xml">

@@ -55,6 +55,7 @@ namespace 饥荒百科全书CSharp
         //处理XML
         private void HandleXml(XmlNode list)
         {
+            #region 初始化
             if (WrapPanel_Left_Character != null)
             {
                 WrapPanel_Left_Character.Children.Clear();
@@ -71,9 +72,14 @@ namespace 饥荒百科全书CSharp
             {
                 WrapPanel_Right_Food.Children.Clear();
             }
+            if (WrapPanel_Right_Cooking_Simulator != null)
+            {
+                WrapPanel_Right_Cooking_Simulator.Children.Clear();
+            }
+            #endregion
             foreach (XmlNode Node in list)
             {
-                #region "人物"
+                #region 人物
                 if (Node.Name == "CharacterNode")
                 {
                     foreach (XmlNode childNode in Node)
@@ -178,14 +184,14 @@ namespace 饥荒百科全书CSharp
                     }
                 }
                 #endregion
-                #region "食物"
+                #region 食物&模拟
                 if (Node.Name == "FoodNode")
                 {
                     foreach (XmlNode childNode in Node)
                     {
                         switch (childNode.Name)
                         {
-                            #region "食谱"
+                            #region 食谱
                             case "FoodRecipe":
                                 ExpanderStackpanel ESRecipe = new ExpanderStackpanel("食谱", "../Resources/CP_CrockPot.png");
                                 WrapPanel_Right_Food.Children.Add(ESRecipe);
@@ -356,8 +362,9 @@ namespace 饥荒百科全书CSharp
                                 }
                                 break;
                             #endregion
-                            #region "肉类"
+                            #region 肉类
                             case "FoodMeats":
+                                #region 食物
                                 ExpanderStackpanel ESMeast = new ExpanderStackpanel("肉类", "../Resources/GameResources/Food/FC_Meats.png");
                                 WrapPanel_Right_Food.Children.Add(ESMeast);
                                 foreach (XmlNode Level2childNode in childNode)
@@ -432,10 +439,76 @@ namespace 饥荒百科全书CSharp
                                         catch { }
                                     }
                                 }
+                                #endregion
+                                #region 模拟
+                                ExpanderStackpanel ESMeast_CS = new ExpanderStackpanel("肉类", "../Resources/GameResources/Food/FC_Meats.png");
+                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESMeast_CS);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, Health, Hunger, Sanity, Attribute, AttributeValue, Attribute_2, AttributeValue_2 };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += CookingSimulator_Click;
+                                        try
+                                        {
+                                            ESMeast_CS.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                #endregion
                                 break;
                             #endregion
-                            #region "蔬菜"
+                            #region 蔬菜
                             case "FoodVegetables":
+                                #region 食物
                                 ExpanderStackpanel ESVegetables = new ExpanderStackpanel("蔬菜", "../Resources/GameResources/Food/FC_Vegetables.png");
                                 WrapPanel_Right_Food.Children.Add(ESVegetables);
                                 foreach (XmlNode Level2childNode in childNode)
@@ -510,10 +583,84 @@ namespace 饥荒百科全书CSharp
                                         catch { }
                                     }
                                 }
+                                #endregion
+                                #region 模拟
+                                ExpanderStackpanel ESVegetables_CS = new ExpanderStackpanel("蔬菜", "../Resources/GameResources/Food/FC_Vegetables.png");
+                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESVegetables_CS);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += CookingSimulator_Click;
+                                        try
+                                        {
+                                            ESVegetables_CS.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                #endregion
                                 break;
                             #endregion
-                            #region "水果"
+                            #region 水果
                             case "FoodFruit":
+                                #region 食物
                                 ExpanderStackpanel ESFruit = new ExpanderStackpanel("水果", "../Resources/GameResources/Food/FC_Fruit.png");
                                 WrapPanel_Right_Food.Children.Add(ESFruit);
                                 foreach (XmlNode Level2childNode in childNode)
@@ -588,10 +735,84 @@ namespace 饥荒百科全书CSharp
                                         catch { }
                                     }
                                 }
+                                #endregion
+                                #region 模拟
+                                ExpanderStackpanel ESFruit_CS = new ExpanderStackpanel("水果", "../Resources/GameResources/Food/FC_Fruit.png");
+                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESFruit_CS);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += CookingSimulator_Click;
+                                        try
+                                        {
+                                            ESFruit_CS.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                #endregion
                                 break;
                             #endregion
-                            #region "蛋类"
+                            #region 蛋类
                             case "FoodEggs":
+                                #region 食物
                                 ExpanderStackpanel ESEggs = new ExpanderStackpanel("蛋类", "../Resources/GameResources/Food/FC_Eggs.png");
                                 WrapPanel_Right_Food.Children.Add(ESEggs);
                                 foreach (XmlNode Level2childNode in childNode)
@@ -666,10 +887,84 @@ namespace 饥荒百科全书CSharp
                                         catch { }
                                     }
                                 }
+                                #endregion
+                                #region 模拟
+                                ExpanderStackpanel ESEggs_CS = new ExpanderStackpanel("蛋类", "../Resources/GameResources/Food/FC_Eggs.png");
+                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESEggs_CS);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += CookingSimulator_Click;
+                                        try
+                                        {
+                                            ESEggs_CS.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                #endregion
                                 break;
                             #endregion
-                            #region "其他"
+                            #region 其他
                             case "FoodOthers":
+                                #region 食物
                                 ExpanderStackpanel ESOthers = new ExpanderStackpanel("其他", "../Resources/GameResources/Food/F_twigs.png");
                                 WrapPanel_Right_Food.Children.Add(ESOthers);
                                 foreach (XmlNode Level2childNode in childNode)
@@ -744,9 +1039,82 @@ namespace 饥荒百科全书CSharp
                                         catch { }
                                     }
                                 }
+                                #endregion
+                                #region 模拟
+                                ExpanderStackpanel ESOthers_CS = new ExpanderStackpanel("其他", "../Resources/GameResources/Food/F_twigs.png");
+                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESOthers_CS);
+                                foreach (XmlNode Level2childNode in childNode)
+                                {
+                                    if (Level2childNode.Name == "Food")
+                                    {
+                                        string Picture = "";
+                                        string Name = "";
+                                        string Health = "";
+                                        string Hunger = "";
+                                        string Sanity = "";
+                                        string Perish = "";
+                                        string Attribute = "";
+                                        string AttributeValue = "";
+                                        string Attribute_2 = "";
+                                        string AttributeValue_2 = "";
+                                        string Introduce = "";
+                                        foreach (XmlNode Food in Level2childNode)
+                                        {
+                                            switch (Food.Name)
+                                            {
+                                                case "Picture":
+                                                    Picture = RSN.ShortName(Food.InnerText, "GameResources/Food/");
+                                                    break;
+                                                case "Name":
+                                                    Name = Food.InnerText;
+                                                    break;
+                                                case "Health":
+                                                    Health = Food.InnerText;
+                                                    break;
+                                                case "Hunger":
+                                                    Hunger = Food.InnerText;
+                                                    break;
+                                                case "Sanity":
+                                                    Sanity = Food.InnerText;
+                                                    break;
+                                                case "Perish":
+                                                    Perish = Food.InnerText;
+                                                    break;
+                                                case "Attribute":
+                                                    Attribute = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue":
+                                                    AttributeValue = Food.InnerText;
+                                                    break;
+                                                case "Attribute_2":
+                                                    Attribute_2 = Food.InnerText;
+                                                    break;
+                                                case "AttributeValue_2":
+                                                    AttributeValue_2 = Food.InnerText;
+                                                    break;
+                                                case "Introduce":
+                                                    Introduce = Food.InnerText;
+                                                    break;
+                                            }
+                                        }
+                                        ButtonWithText BWT = new ButtonWithText();
+                                        BWT.UCImage.Source = RSN.PictureShortName(Picture);
+                                        BWT.UCTextBlock.Text = Name;
+                                        string[] BWTTag = { Picture, Name, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };
+                                        object obj = BWTTag;
+                                        BWT.UCButton.Tag = obj;
+                                        BWT.UCButton.Click += CookingSimulator_Click;
+                                        try
+                                        {
+                                            ESOthers_CS.UCWrapPanel.Children.Add(BWT);
+                                        }
+                                        catch { }
+                                    }
+                                }
+                                #endregion
                                 break;
                             #endregion
-                            #region "非食材"
+                            #region 非食材
                             case "FoodNoFC":
                                 ExpanderStackpanel ESNoFC = new ExpanderStackpanel("非食材", "../Resources/GameResources/Food/F_petals.png");
                                 WrapPanel_Right_Food.Children.Add(ESNoFC);

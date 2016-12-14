@@ -1984,6 +1984,19 @@
         <Introduce>把海藻挂在晒肉架上风干制成。</Introduce>
         <Console>seaweed_dried</Console>
       </Food>
+      <Food>
+        <Picture>F_mandrake</Picture>
+        <Name>曼德拉草</Name>
+        <EnName>Mandrake</EnName>
+        <Health>60</Health>
+        <Hunger>75</Hunger>
+        <Sanity>0</Sanity>
+        <Perish>1000</Perish>
+        <Attribute>FC_Vegetables</Attribute>
+        <AttributeValue>×1</AttributeValue>
+        <Introduce>白天在草原(曼德拉平原)或洞穴拔起曼德拉草获得。</Introduce>
+        <Console>mandrake</Console>
+      </Food>
     </FoodVegetables>
     <FoodFruit>
       <Food>
@@ -2331,19 +2344,6 @@
         <AttributeValue>×1</AttributeValue>
         <Introduce>拆除蜂巢获得。</Introduce>
         <Console>honeycomb</Console>
-      </Food>
-      <Food>
-        <Picture>F_mandrake</Picture>
-        <Name>曼德拉草</Name>
-        <EnName>Mandrake</EnName>
-        <Health>60</Health>
-        <Hunger>75</Hunger>
-        <Sanity>0</Sanity>
-        <Perish>1000</Perish>
-        <Attribute>FC_Vegetables</Attribute>
-        <AttributeValue>×1</AttributeValue>
-        <Introduce>白天在草原(曼德拉平原)或洞穴拔起曼德拉草获得。</Introduce>
-        <Console>mandrake</Console>
       </Food>
       <Food>
         <Picture>F_ice</Picture>
@@ -2732,10 +2732,10 @@
       </Food>
     </FoodNoFC>
   </FoodNode>
-  <ScienceNode>
-  </ScienceNode>
   <Cooking_SimulatorNode>
   </Cooking_SimulatorNode>
+  <ScienceNode>
+  </ScienceNode>
   <AnimalNode>
   </AnimalNode>
   <NaturalNode>
