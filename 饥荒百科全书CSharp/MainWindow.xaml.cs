@@ -37,6 +37,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
+using WpfLearn.UserControls;
 using 饥荒百科全书CSharp.Class;
 
 using 饥荒百科全书CSharp.MyUserControl;
@@ -354,8 +355,8 @@ namespace 饥荒百科全书CSharp
         private void DediSettingGameVersionSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // 赋值
-            
-           GamePingTai= e.AddedItems[0].ToString();
+
+            GamePingTai = e.AddedItems[0].ToString();
             if (e.RemovedItems.Count!=0)
             {
                 InitServer();

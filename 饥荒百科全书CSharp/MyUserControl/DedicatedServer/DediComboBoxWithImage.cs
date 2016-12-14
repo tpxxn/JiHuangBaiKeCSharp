@@ -19,7 +19,7 @@ namespace WpfLearn.UserControls
     public class DediComboBoxWithImage : WpfLearn.UserControls.DediComboBox
     {
 
-        public Image image;
+        private Image image;
         static DediComboBoxWithImage()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DediComboBoxWithImage), new FrameworkPropertyMetadata(typeof(DediComboBoxWithImage)));

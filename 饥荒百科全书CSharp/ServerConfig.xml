@@ -359,7 +359,7 @@
     <master>
       <details key="animals" value="alternatehunt,angrybees,beefalo,beefaloheat,bees,birds,butterfly,buzzard,catcoon,hunt,lightninggoat,moles,penguins,perd,pigs,ponds,rabbits,tallbirds" />
       <details key="foods" value="berrybush,cactus,carrot,mushroom" />
-      <details key="monsters" value="bearger,chess,deciduousmonster,deerclops,dragonfly,goosemoose,houndmound,hounds,krampus,liefs,lurepofflinets,merm,spiders,tentacles,walrus" />
+      <details key="monsters" value="bearger,chess,deciduousmonster,deerclops,dragonfly,goosemoose,houndmound,hounds,krampus,liefs,lureplants,merm,spiders,tentacles,walrus" />
       <details key="resources" value="flint,flowers,grass,marshbush,meteorshowers,meteorspawner,reeds,rock,rock_ice,sapling,trees,tumbleweed" />
       <details key="world" value="autumn,boons,branching,day,disease_delay,frograin,lightning,loop,petrification,prefabswaps_start,regrowth,season_start,specialevent,spring,start_location,summer,task_set,touchstone,weather,wildfires,winter,world_size" />
     </master>

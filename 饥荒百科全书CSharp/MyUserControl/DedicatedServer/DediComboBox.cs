@@ -39,13 +39,30 @@ namespace WpfLearn.UserControls
             {
                 LeftButton.Click += LeftButton_Click;
                 RightButton.Click += RightButton_Click;
-                this.SelectionChanged += ServerComboBox_SelectionChanged;
+             this.SelectionChanged += ServerComboBox_SelectionChanged;
 
+                if (SelectedIndex==0)
+                {
+                    LeftButton.Visibility = Visibility.Collapsed;
+                }
+                if (Items.Count==1)
+                {
+                    SelectedIndex = 0;
+                    LeftButton.Visibility = Visibility.Collapsed;
+                    RightButton.Visibility = Visibility.Collapsed;
+                }
+                if (SelectedIndex == Items.Count - 1)
+                {
+                    RightButton.Visibility = Visibility.Collapsed;
+                }
             }
-            
+
+           
+
+
         }
 
-   
+
 
         private void ServerComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

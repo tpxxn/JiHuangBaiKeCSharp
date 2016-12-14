@@ -4609,7 +4609,7 @@
     <Resource Include="Resources\DedicatedServer\World\lightning.png" />
     <Resource Include="Resources\DedicatedServer\World\lightninggoat.png" />
     <Resource Include="Resources\DedicatedServer\World\loop.png" />
-    <Resource Include="Resources\DedicatedServer\World\lurepofflinets.png" />
+    <Resource Include="Resources\DedicatedServer\World\lureplants.png" />
     <Resource Include="Resources\DedicatedServer\World\marshbush.png" />
     <Resource Include="Resources\DedicatedServer\World\merm.png" />
     <Resource Include="Resources\DedicatedServer\World\meteorshowers.png" />
