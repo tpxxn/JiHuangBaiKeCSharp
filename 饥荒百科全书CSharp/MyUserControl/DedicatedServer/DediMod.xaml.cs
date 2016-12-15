@@ -25,11 +25,13 @@ namespace WpfLearn.UserControls
             InitializeComponent();
         }
 
+   
+
         //#region
         //// 标题
         //public static readonly DependencyProperty TitleProperty = 
         //    DependencyProperty.Register("Title", typeof(string), typeof(DediMod));
- 
+
         //public string Title
         //{
         //    get
@@ -78,7 +80,7 @@ namespace WpfLearn.UserControls
         //// config
         //public static readonly DependencyProperty IsHasConfigProperty =
         //    DependencyProperty.Register("IsHasConfig", typeof(bool?), typeof(DediMod));
-       
+
         //public bool? IsHasConfig
         //{
         //    get
@@ -93,7 +95,7 @@ namespace WpfLearn.UserControls
         //// EnableImage
         //public static readonly DependencyProperty EnableImageProperty =
         //    DependencyProperty.Register("EnableImage", typeof(ImageSource), typeof(DediMod));
-     
+
         //public ImageSource EnableImage
         //{
         //    get

@@ -4662,6 +4662,8 @@
     <Resource Include="Resources\DedicatedServer\World\worms.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\DedicatedServer\设置1_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\设置1_Leave.png" />
     <Content Include="ServerConfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

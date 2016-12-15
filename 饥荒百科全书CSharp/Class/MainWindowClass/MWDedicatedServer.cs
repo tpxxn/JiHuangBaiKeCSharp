@@ -68,7 +68,7 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region 各种设置
-        // 游戏平台改变时,或 最开始初始化时
+        // 初始化
         public void InitServer()
         {
             //-1.游戏平台
@@ -153,10 +153,33 @@ namespace 饥荒百科全书CSharp
                 for (int i = 0; i < mods.ListMod.Count; i++)
                 {
                     DediMod dod = new DediMod();
-                    dod.Width = 300;
+                    dod.Width = 200;
                     dod.Height = 80;
                     dod.Title.Content = mods.ListMod[i].Name;
-                    dod.EnableLabel.Content= mods.ListMod[i].Configuration_options.Count.ToString();
+                    dod.checkBox.Tag = i;
+                    if (mods.ListMod[i].Configuration_options.Count!=0)
+                    {
+                        dod.config.Source = new BitmapImage(new Uri("/饥荒百科全书CSharp;component/Resources/DedicatedServer/设置1_Leave.png", UriKind.Relative));
+                    }
+                    else
+                    {
+                        dod.config.Source = null;
+                    }
+                    if (mods.ListMod[i].Enabled==false)
+                    {
+                        dod.checkBox.IsChecked= false;
+                        
+                    }
+                    else
+                    {
+                        dod.checkBox.IsChecked = true;  
+                    }
+                    dod.checkBox.Checked += CheckBox_Checked;
+                    dod.checkBox.Unchecked += CheckBox_Unchecked;
+                    dod.MouseLeftButtonDown += Dod_MouseLeftButtonDown;
+                    dod.EnableLabel.Content = mods.ListMod[i].Tyype;
+
+
                     DediModList.Children.Add(dod);
                 }
      
@@ -164,6 +187,35 @@ namespace 饥荒百科全书CSharp
             }
 
         }
+        // 设置 "Mod" "MouseLeftButtonDown"
+        private void Dod_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            int n = (int)(((DediMod)sender).checkBox.Tag);
+           if( mods.ListMod[n].Configuration_options.Count==0)
+            {
+                // 没有细节配置项
+                Debug.WriteLine(n);
+            }
+            else
+            {
+                // 有,显示细节配置项
+                Debug.WriteLine(n);
+
+            }
+        }
+        // 设置 "Mod" "CheckBox_Unchecked"
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
+            mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = false;
+        }
+        // 设置 "Mod" "CheckBox_Checked"
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
+            mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = true;
+        }
+
         // 设置"路径"
         private void SetPath()
         {
@@ -365,8 +417,7 @@ namespace 饥荒百科全书CSharp
             #endregion
 
         }
-
-        // 地上 修改,保存在 每次点击radioButton或创建世界时
+        // 设置"地上世界"
         private void DiOverWorld_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //// 测试 用
@@ -541,7 +592,7 @@ namespace 饥荒百科全书CSharp
      
 
         }
-
+        // 设置"地下世界"
         private void DiCaves_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //// 测试 用

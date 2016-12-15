@@ -48,7 +48,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         public void SaveWorld()
         {
 
-
+            if (!Directory.Exists(pathall.YyServer_DirPath))
+            {
+                return;
+            }
             //   System.Text.UTF8Encoding utf8 = new System.Text.UTF8Encoding(false);
             // 保存到文件
             string savePath;
