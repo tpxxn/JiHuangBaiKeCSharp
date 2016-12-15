@@ -148,7 +148,7 @@ namespace 饥荒百科全书CSharp
             {
                 mods.ReadModsOverrides(pathAll.ServerMods_DirPath, pathAll.YyServer_DirPath + @"\Master\modoverrides.lua");
             }
-            // 显示
+            // 显示 
             DediModList.Children.Clear();
             DediModXiJie.Children.Clear();
             if (mods!=null)
