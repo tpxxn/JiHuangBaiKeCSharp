@@ -325,7 +325,7 @@
                                 <ColumnDefinition Width="12*"/>
                                 <ColumnDefinition Width="10"/>
                             </Grid.ColumnDefinitions>
-                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
+                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" d:IsHidden="True" >
                                 <StackPanel>
                                     <Grid x:Name="DediSettingGameVersion" Height="40">
                                         <Grid.Background>
@@ -619,16 +619,21 @@
                                 </ScrollViewer>
 
                             </Grid>
-                            <Grid x:Name="DediModSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
+                            <Grid x:Name="DediModSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="115*"/>
-                                    <ColumnDefinition Width="172*"/>
-                                    <ColumnDefinition Width="232*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="3*"/>
                                 </Grid.ColumnDefinitions>
                                 <ScrollViewer Grid.Column="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
-                                    <StackPanel x:Name="DediModList">
-                                        
-                                    </StackPanel>
+                                    <StackPanel x:Name="DediModList"/>
+                                </ScrollViewer>
+                                <ScrollViewer Grid.Column="2" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
+                                    <StackPanel x:Name="DediModXiJie" Orientation="Vertical"></StackPanel>
+                                </ScrollViewer>
+                                <ScrollViewer Grid.Column="0" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
+
+                                    <TextBlock x:Name="DediModDescription"  />
                                 </ScrollViewer>
                             </Grid>
                             <Image x:Name="DediButtomBorder_h1" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5"/>

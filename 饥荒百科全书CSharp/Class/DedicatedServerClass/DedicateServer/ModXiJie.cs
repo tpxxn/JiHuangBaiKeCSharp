@@ -61,6 +61,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// </summary>
         private List<Option> options;
 
+        /// <summary>
+        /// 小细节的当前值的翻译
+        /// </summary>
+        private string currentDescription;
         public string Name
         {
             get
@@ -137,6 +141,22 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             {
                 options = value;
             }
+        }
+
+        public string CurrentDescription
+        {
+            get
+            {
+                for (int i = 0; i < options.Count; i++)
+                {
+                    if (options[i].data==current)
+                    {
+                        return options[i].description;
+                    }
+                }
+                return current;
+            }
+ 
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
@@ -15,6 +16,7 @@ using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
 
 using 饥荒百科全书CSharp.MyUserControl;
+using System.Windows.Input;
 
 namespace 饥荒百科全书CSharp
 {
@@ -148,13 +150,14 @@ namespace 饥荒百科全书CSharp
             }
             // 显示
             DediModList.Children.Clear();
+            DediModXiJie.Children.Clear();
             if (mods!=null)
             { 
                 for (int i = 0; i < mods.ListMod.Count; i++)
                 {
                     DediMod dod = new DediMod();
                     dod.Width = 200;
-                    dod.Height = 80;
+                    dod.Height = 60;
                     dod.Title.Content = mods.ListMod[i].Name;
                     dod.checkBox.Tag = i;
                     if (mods.ListMod[i].Configuration_options.Count!=0)
@@ -176,7 +179,7 @@ namespace 饥荒百科全书CSharp
                     }
                     dod.checkBox.Checked += CheckBox_Checked;
                     dod.checkBox.Unchecked += CheckBox_Unchecked;
-                    dod.MouseLeftButtonDown += Dod_MouseLeftButtonDown;
+                    dod.PreviewMouseLeftButtonDown += Dod_MouseLeftButtonDown;
                     dod.EnableLabel.Content = mods.ListMod[i].Tyype;
 
 
@@ -187,20 +190,72 @@ namespace 饥荒百科全书CSharp
             }
 
         }
+
+   
         // 设置 "Mod" "MouseLeftButtonDown"
         private void Dod_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
+            // 左边显示
             int n = (int)(((DediMod)sender).checkBox.Tag);
-           if( mods.ListMod[n].Configuration_options.Count==0)
+            string author = "作者:\r\n" + mods.ListMod[n].Author+"\r\n\r\n";
+            string description = "描述:\r\n" + mods.ListMod[n].Description + "\r\n\r\n";
+            string strName = "Mod名字:\r\n" + mods.ListMod[n].Name + "\r\n\r\n";
+            string version = "版本:\r\n" + mods.ListMod[n].Version + "\r\n\r\n";
+            string fileName = "文件夹:\r\n" + mods.ListMod[n].DirName + "\r\n\r\n";
+            DediModDescription.FontSize = 12;
+            DediModDescription.TextWrapping = TextWrapping.WrapWithOverflow;
+            DediModDescription.Text = strName + author + description + version + fileName;
+
+
+           if ( mods.ListMod[n].Configuration_options.Count==0)
             {
                 // 没有细节配置项
                 Debug.WriteLine(n);
+                DediModXiJie.Children.Clear();
+
+                Label labelModXiJie = new Label();
+                labelModXiJie.Height = 300;
+                labelModXiJie.Width = 300;
+                labelModXiJie.Content = "QQ群: 580332268 \r\n 啦啦啦";
+                labelModXiJie.FontWeight = FontWeights.Bold;
+                labelModXiJie.FontSize = (double)20;
+                DediModXiJie.Children.Add(labelModXiJie);
             }
             else
             {
                 // 有,显示细节配置项
                 Debug.WriteLine(n);
+                DediModXiJie.Children.Clear();
+                foreach (KeyValuePair<string,ModXiJie> item in mods.ListMod[n].Configuration_options)
+                {
+                    // stackPanel
+                    StackPanel stackPanel = new StackPanel();
+                    stackPanel.Height = 25;
+                    stackPanel.Width = 300;
+                    stackPanel.Orientation = Orientation.Horizontal;
+                    Label labelModXiJie = new Label();
+                    labelModXiJie.Height = stackPanel.Height;
+                    labelModXiJie.Width = 150;
+                    labelModXiJie.Content = string.IsNullOrEmpty(item.Value.Label)?item.Value.Name:item.Value.Label;
 
+                    // dediComboBox
+                    DediComboBox dod = new DediComboBox();
+                    dod.Height = stackPanel.Height;
+                    dod.Width = 150;
+                    dod.FontSize = 12;
+                    foreach (Option item1 in item.Value.Options)
+                    {
+                        dod.Items.Add(item1.description);
+                    }
+                    dod.SelectedValue = item.Value.CurrentDescription;
+
+                    // 添加
+                    stackPanel.Children.Add(labelModXiJie);
+                    stackPanel.Children.Add(dod);
+                    DediModXiJie.Children.Add(stackPanel);
+
+                }
+     
             }
         }
         // 设置 "Mod" "CheckBox_Unchecked"

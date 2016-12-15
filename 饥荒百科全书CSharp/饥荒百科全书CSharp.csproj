@@ -4665,7 +4665,7 @@
     <Resource Include="Resources\DedicatedServer\设置1_Enter.png" />
     <Resource Include="Resources\DedicatedServer\设置1_Leave.png" />
     <Content Include="ServerConfig.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
