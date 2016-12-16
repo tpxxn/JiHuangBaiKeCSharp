@@ -18,6 +18,7 @@ namespace 饥荒百科全书CSharp
             Button button = (Button)sender;
             string[] BWTTag = (string[])button.Tag;//获取参数
             Character_Click_Handle(BWTTag);
+           
         }
         //WrapPanel_Left_Character控件创建事件
         private void Character_Click_Handle(string[] BWTTag)

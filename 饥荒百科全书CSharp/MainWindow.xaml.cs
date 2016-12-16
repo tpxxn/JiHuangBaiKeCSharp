@@ -456,6 +456,17 @@ namespace 饥荒百科全书CSharp
         private void DediMainTop_Delete_Click(object sender, RoutedEventArgs e)
         {
 
+            // 0. 关闭服务器
+
+            Process[] ps = Process.GetProcesses();
+            foreach (Process item in ps)
+            {
+                if (item.ProcessName == "dontstarve_dedicated_server_nullrenderer")
+                {
+                    item.Kill();
+                }
+            }
+
             // 1. radioBox 写 创建世界
             ((System.Windows.Controls.RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).Content = "创建世界";
             // 2. 删除当前存档
@@ -487,12 +498,7 @@ namespace 饥荒百科全书CSharp
         // 创建世界按钮
         private void DediCtrateWorldButton_Click(object sender, RoutedEventArgs e)
         {
-            // 保存
-            if (OverWorld != null && Caves != null)
-            {
-                OverWorld.SaveWorld();
-                Caves.SaveWorld();
-            }
+            RunServer();
         }
 
         #endregion

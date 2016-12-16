@@ -6,17 +6,10 @@ using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Threading;
 using WpfLearn.UserControls;
-using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
-
-using 饥荒百科全书CSharp.MyUserControl;
-using System.Windows.Input;
+ 
 
 namespace 饥荒百科全书CSharp
 {
@@ -27,15 +20,15 @@ namespace 饥荒百科全书CSharp
     {
         #region "字段,属性"
         int cunDangCao = 0; // 存档槽
-        string gamePingTai;
-        private UTF8Encoding utf8NoBom = new UTF8Encoding(false);
-        Dictionary<string, string> hanhua;
+        string gamePingTai; // 游戏平台
+        private UTF8Encoding utf8NoBom = new UTF8Encoding(false); // 编码
+        Dictionary<string, string> hanhua;  // 汉化
 
-        PathAll pathAll;
-        BaseSet baseSet;
-        Leveldataoverride OverWorld;
-        Leveldataoverride Caves;
-        Mods mods;
+        PathAll pathAll; // 路径
+        BaseSet baseSet; // 基本设置
+        Leveldataoverride OverWorld; //地上世界
+        Leveldataoverride Caves;     // 地下世界
+        Mods mods;  // mods
 
         public string GamePingTai
         {
@@ -48,7 +41,7 @@ namespace 饥荒百科全书CSharp
             {
                 XmlHelper.WriteGamePingTai("ServerConfig.xml", value);
                 gamePingTai = value;
-
+               
 
             }
         }
@@ -69,7 +62,7 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region 各种设置
+        #region "设置"
         // 初始化
         public void InitServer()
         {
@@ -151,6 +144,7 @@ namespace 饥荒百科全书CSharp
             // 显示 
             DediModList.Children.Clear();
             DediModXiJie.Children.Clear();
+            DediModDescription.Text = "";
             if (mods!=null)
             { 
                 for (int i = 0; i < mods.ListMod.Count; i++)
@@ -189,9 +183,7 @@ namespace 饥荒百科全书CSharp
 
             }
 
-        }
-
-   
+        } 
         // 设置 "Mod" "MouseLeftButtonDown"
         private void Dod_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
@@ -230,7 +222,7 @@ namespace 饥荒百科全书CSharp
                 {
                     // stackPanel
                     StackPanel stackPanel = new StackPanel();
-                    stackPanel.Height = 25;
+                    stackPanel.Height = 40;
                     stackPanel.Width = 300;
                     stackPanel.Orientation = Orientation.Horizontal;
                     Label labelModXiJie = new Label();
@@ -735,7 +727,131 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region 其他
+        #region "打开"
+        // 打开"客户端"
+        private void RunClient() {
+       
+          if (string.IsNullOrEmpty(pathAll.ClientMods_DirPath))
+            {
+                MessageBox.Show("客户端路径没有设置");
+                return;
+            }
+            Process p = new Process();
+            p.StartInfo.Arguments = "";
+            p.StartInfo.WorkingDirectory = Path.GetDirectoryName(pathAll.Client_FilePath); // 目录,这个必须设置
+            p.StartInfo.FileName = pathAll.Client_FilePath;
+            p.Start();
+        }
+        // 打开"服务器"
+        private void RunServer()
+        {
+
+            if (pathAll.Server_FilePath == null || pathAll.Server_FilePath.Trim() == "")
+            {
+                MessageBox.Show("服务器路径不对,请重新设置服务器路径"); return;
+            }
+
+            // 保存世界
+            if (OverWorld != null && Caves != null)
+            {
+                OverWorld.SaveWorld();
+                Caves.SaveWorld();
+            }
+            // 保存Mod
+
+            //p.StartInfo.UseShellExecute = false; // 是否
+            //p.StartInfo.WorkingDirectory = Path.GetDirectoryName(pathAll.Server_FilePath); // 目录,这个必须设置
+            //p.StartInfo.FileName = pathAll.Server_FilePath; ;  // 服务器名字
+
+            //if (radioButton1.Checked)
+            //{
+            //    p.StartInfo.Arguments = "-console -cluster yyServer -shard Master -offline";
+
+            //}
+            //if (radioButton2.Checked)
+            //{
+            //    p.StartInfo.Arguments = "-console -cluster yyServer -shard Master";
+
+            //}
+
+
+            //p.Start();
+
+
+            //// 是否开启洞穴
+            //if (checkBox_cave.Checked)
+            //{
+            //    if (radioButton1.Checked)
+            //    {
+            //        p.StartInfo.Arguments = "-console -cluster yyServer -shard Caves -offline";
+
+            //    }
+
+            //    if (radioButton2.Checked)
+            //    {
+            //        p.StartInfo.Arguments = "-console -cluster yyServer -shard Caves";
+
+            //    }
+
+            //    p.Start();
+            //}
+
+
+        }
+        #endregion
+
+        #region "回档" 等
+        // 发送"消息"
+        private void ssendMessage(string messageStr)
+        {
+            mySendMessage mySendMessage = new mySendMessage();
+
+            // 得到句柄
+            Process[] pstr = Process.GetProcessesByName("dontstarve_dedicated_server_nullrenderer");
+
+            // 根据句柄,发送消息
+            for (int i = 0; i < pstr.Length; i++)
+            {
+                mySendMessage.InputStr(pstr[i].MainWindowHandle, messageStr);
+                mySendMessage.sendEnter(pstr[i].MainWindowHandle);
+            }
+        }
+
+        private void SendMessage(Message m,int n=1)
+        {
+            System.Windows.Forms.MessageBoxButtons messButton = System.Windows.Forms.MessageBoxButtons.OKCancel;
+
+            System.Windows.Forms.DialogResult dr = System.Windows.Forms.MessageBox.Show("命令也会复制到剪贴板", "确认", messButton);
+            if (dr == System.Windows.Forms.DialogResult.OK)//如果点击“确定”按钮
+            {
+
+                string str = "";
+                if (m==Message.复活)
+                {
+                    str = @"for k, v in pairs(AllPlayers) do v: PushEvent('respawnfromghost') end";
+                }
+                if (m==Message.保存)
+                {
+                     str = @"c_save()";
+                }
+                if (m==Message.回档)
+                {
+                     str = @"c_rollback(" + n + ")";
+                }
+                if (m==Message.重生世界)
+                {
+                    str = @"c_regenerateworld()";
+                }
+              
+                ssendMessage(str);
+                System.Windows.Forms.Clipboard.SetDataObject(str);
+            }
+        }
+
+
+        #endregion
+
+        #region "其他"
         // 获取房间名
         private string getHouseName(int d_cundangcao)
         {
@@ -800,4 +916,13 @@ namespace 饥荒百科全书CSharp
         #endregion
 
     }
+    public enum Message
+    {
+        保存,
+        复活,
+        回档,
+        重生世界
+    }
+
+
 }
