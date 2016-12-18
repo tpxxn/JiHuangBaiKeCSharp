@@ -9,7 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using WpfLearn.UserControls;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
- 
+
 
 namespace 饥荒百科全书CSharp
 {
@@ -26,7 +26,7 @@ namespace 饥荒百科全书CSharp
 
         PathAll pathAll; // 路径
         BaseSet baseSet; // 基本设置
-        Leveldataoverride OverWorld; //地上世界
+        Leveldataoverride OverWorld; // 地上世界
         Leveldataoverride Caves;     // 地下世界
         Mods mods;  // mods
 
@@ -41,7 +41,7 @@ namespace 饥荒百科全书CSharp
             {
                 XmlHelper.WriteGamePingTai("ServerConfig.xml", value);
                 gamePingTai = value;
-               
+
 
             }
         }
@@ -85,7 +85,7 @@ namespace 饥荒百科全书CSharp
             {
                 mods = new Mods(pathAll.ServerMods_DirPath);
             }
-          
+
 
             // 3."基本设置" 等在 点击radioButton后设置
 
@@ -94,12 +94,14 @@ namespace 饥荒百科全书CSharp
         private void DediRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             // 0.保存之前的
-            if (OverWorld!=null && Caves!=null)
+            if (OverWorld != null & Caves != null & mods != null)
             {
                 OverWorld.SaveWorld();
                 Caves.SaveWorld();
+                mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Master\modoverrides.lua", utf8NoBom);
+                mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Caves\modoverrides.lua", utf8NoBom);
             }
- 
+
 
             // 1.存档槽
             CunDangCao = (int)((RadioButton)sender).Tag;
@@ -139,22 +141,33 @@ namespace 饥荒百科全书CSharp
         {   // 设置
             if (!string.IsNullOrEmpty(pathAll.ServerMods_DirPath))
             {
+                // 清空
+                foreach (Mod item in mods.ListMod)
+                {
+                    item.Enabled = false;
+                }
+                // 重新读取
                 mods.ReadModsOverrides(pathAll.ServerMods_DirPath, pathAll.YyServer_DirPath + @"\Master\modoverrides.lua");
             }
             // 显示 
             DediModList.Children.Clear();
             DediModXiJie.Children.Clear();
             DediModDescription.Text = "";
-            if (mods!=null)
-            { 
+            if (mods != null)
+            {
                 for (int i = 0; i < mods.ListMod.Count; i++)
                 {
+                    // 屏蔽 客户端MOD
+                    if (mods.ListMod[i].Tyype == modType.客户端)
+                    {
+                        continue;
+                    }
                     DediMod dod = new DediMod();
                     dod.Width = 200;
                     dod.Height = 60;
                     dod.Title.Content = mods.ListMod[i].Name;
                     dod.checkBox.Tag = i;
-                    if (mods.ListMod[i].Configuration_options.Count!=0)
+                    if (mods.ListMod[i].Configuration_options.Count != 0)
                     {
                         dod.config.Source = new BitmapImage(new Uri("/饥荒百科全书CSharp;component/Resources/DedicatedServer/设置1_Leave.png", UriKind.Relative));
                     }
@@ -162,14 +175,14 @@ namespace 饥荒百科全书CSharp
                     {
                         dod.config.Source = null;
                     }
-                    if (mods.ListMod[i].Enabled==false)
+                    if (mods.ListMod[i].Enabled == false)
                     {
-                        dod.checkBox.IsChecked= false;
-                        
+                        dod.checkBox.IsChecked = false;
+
                     }
                     else
                     {
-                        dod.checkBox.IsChecked = true;  
+                        dod.checkBox.IsChecked = true;
                     }
                     dod.checkBox.Checked += CheckBox_Checked;
                     dod.checkBox.Unchecked += CheckBox_Unchecked;
@@ -179,17 +192,17 @@ namespace 饥荒百科全书CSharp
 
                     DediModList.Children.Add(dod);
                 }
-     
+
 
             }
 
-        } 
+        }
         // 设置 "Mod" "MouseLeftButtonDown"
         private void Dod_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             // 左边显示
             int n = (int)(((DediMod)sender).checkBox.Tag);
-            string author = "作者:\r\n" + mods.ListMod[n].Author+"\r\n\r\n";
+            string author = "作者:\r\n" + mods.ListMod[n].Author + "\r\n\r\n";
             string description = "描述:\r\n" + mods.ListMod[n].Description + "\r\n\r\n";
             string strName = "Mod名字:\r\n" + mods.ListMod[n].Name + "\r\n\r\n";
             string version = "版本:\r\n" + mods.ListMod[n].Version + "\r\n\r\n";
@@ -199,7 +212,7 @@ namespace 饥荒百科全书CSharp
             DediModDescription.Text = strName + author + description + version + fileName;
 
 
-           if ( mods.ListMod[n].Configuration_options.Count==0)
+            if (mods.ListMod[n].Configuration_options.Count == 0)
             {
                 // 没有细节配置项
                 Debug.WriteLine(n);
@@ -218,7 +231,7 @@ namespace 饥荒百科全书CSharp
                 // 有,显示细节配置项
                 Debug.WriteLine(n);
                 DediModXiJie.Children.Clear();
-                foreach (KeyValuePair<string,ModXiJie> item in mods.ListMod[n].Configuration_options)
+                foreach (KeyValuePair<string, ModXiJie> item in mods.ListMod[n].Configuration_options)
                 {
                     // stackPanel
                     StackPanel stackPanel = new StackPanel();
@@ -228,27 +241,44 @@ namespace 饥荒百科全书CSharp
                     Label labelModXiJie = new Label();
                     labelModXiJie.Height = stackPanel.Height;
                     labelModXiJie.Width = 150;
-                    labelModXiJie.Content = string.IsNullOrEmpty(item.Value.Label)?item.Value.Name:item.Value.Label;
+                    labelModXiJie.Content = string.IsNullOrEmpty(item.Value.Label) ? item.Value.Name : item.Value.Label;
 
                     // dediComboBox
                     DediComboBox dod = new DediComboBox();
                     dod.Height = stackPanel.Height;
                     dod.Width = 150;
                     dod.FontSize = 12;
+                    dod.Tag = n.ToString() + "$" + item.Key; // 把当前选择mod的第n个,放到tag里
                     foreach (Option item1 in item.Value.Options)
                     {
                         dod.Items.Add(item1.description);
                     }
                     dod.SelectedValue = item.Value.CurrentDescription;
-
+                    dod.SelectionChanged += Dod_SelectionChanged;
                     // 添加
                     stackPanel.Children.Add(labelModXiJie);
                     stackPanel.Children.Add(dod);
                     DediModXiJie.Children.Add(stackPanel);
 
                 }
-     
+
             }
+        }
+        // 设置 "Mod" "SelectionChanged"
+        private void Dod_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Debug.WriteLine(((DediComboBox)sender).Tag);
+            string[] str = ((DediComboBox)sender).Tag.ToString().Split('$');
+            if (str.Length != 0)
+            {
+                int n = int.Parse(str[0]);
+                string name = str[1];
+                // 好复杂
+                mods.ListMod[n].Configuration_options[name].Current =
+                    mods.ListMod[n].Configuration_options[name].Options[((DediComboBox)sender).SelectedIndex].data;
+
+            }
+
         }
         // 设置 "Mod" "CheckBox_Unchecked"
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
@@ -318,7 +348,7 @@ namespace 饥荒百科全书CSharp
             DediBaseOfflineSelect.DataContext = baseSet;
             DediBaseIsPause.DataContext = baseSet;
             DediBaseSetIntentionButton.DataContext = baseSet;
-
+            DediBaseIsCave.DataContext = baseSet;
             Debug.WriteLine("基本设置-完");
         }
         // 设置"地上世界"
@@ -481,17 +511,17 @@ namespace 饥荒百科全书CSharp
             //}
 
             // 此时说明修改
-            if (e.RemovedItems.Count!=0 && e.AddedItems[0].ToString() == HanHua(OverWorld.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex]))
+            if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == HanHua(OverWorld.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex]))
             {
                 OverWorld.ShowWorldDic[Dedi.Tag.ToString()].Worldconfig = OverWorld.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex];
                 Debug.WriteLine(Dedi.Tag.ToString() + "选项变为:" + OverWorld.ShowWorldDic[Dedi.Tag.ToString()].Worldconfig);
-                
+
                 // 保存,这样保存有点卡,换为每次点击radioButton或创建世界时
                 //OverWorld.SaveWorld();
                 //Debug.WriteLine("保存地上世界");
             }
-       
-  
+
+
 
         }
 
@@ -636,7 +666,7 @@ namespace 饥荒百科全书CSharp
             }
 
             #endregion
-     
+
 
         }
         // 设置"地下世界"
@@ -644,7 +674,7 @@ namespace 饥荒百科全书CSharp
         {
             //// 测试 用
             DediComboBoxWithImage Dedi = (DediComboBoxWithImage)sender;
-        
+
 
             // 此时说明修改
             if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == HanHua(Caves.ShowWorldDic[Dedi.Tag.ToString()].WorldconfigList[Dedi.SelectedIndex]))
@@ -663,7 +693,10 @@ namespace 饥荒百科全书CSharp
         private void CheckServer()
         {
 
-
+            if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath))
+            {
+                Directory.CreateDirectory(pathAll.DoNotStarveTogether_DirPath);
+            }
             DirectoryInfo dinfo = new DirectoryInfo(pathAll.DoNotStarveTogether_DirPath);
             DirectoryInfo[] dinfostr = dinfo.GetDirectories();
 
@@ -729,9 +762,10 @@ namespace 饥荒百科全书CSharp
 
         #region "打开"
         // 打开"客户端"
-        private void RunClient() {
-       
-          if (string.IsNullOrEmpty(pathAll.ClientMods_DirPath))
+        private void RunClient()
+        {
+
+            if (string.IsNullOrEmpty(pathAll.ClientMods_DirPath))
             {
                 MessageBox.Show("客户端路径没有设置");
                 return;
@@ -752,49 +786,63 @@ namespace 饥荒百科全书CSharp
             }
 
             // 保存世界
-            if (OverWorld != null && Caves != null)
+            if (OverWorld != null && Caves != null && mods != null)
             {
                 OverWorld.SaveWorld();
                 Caves.SaveWorld();
+                mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Master\modoverrides.lua", utf8NoBom);
+                mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Caves\modoverrides.lua", utf8NoBom);
             }
-            // 保存Mod
+            // 如果是游侠,强行设置为 离线,局域网
+            if (GamePingTai == "游侠")
+            {
+                INIhelper ini1 = new INIhelper(pathAll.YyServer_DirPath + @"\cluster.ini", utf8NoBom);
+                ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
+                ini1.write("NETWORK", "lan_only_cluster", "true", utf8NoBom);
 
-            //p.StartInfo.UseShellExecute = false; // 是否
-            //p.StartInfo.WorkingDirectory = Path.GetDirectoryName(pathAll.Server_FilePath); // 目录,这个必须设置
-            //p.StartInfo.FileName = pathAll.Server_FilePath; ;  // 服务器名字
+            }
+            if (GamePingTai == "TGP")
+            {
+                INIhelper ini1 = new INIhelper(pathAll.YyServer_DirPath + @"\cluster.ini", utf8NoBom);
+                //ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
+                ini1.write("NETWORK", "lan_only_cluster", "false", utf8NoBom);
+            }
+            if (GamePingTai == "Steam")
+            {
+                INIhelper ini1 = new INIhelper(pathAll.YyServer_DirPath + @"\cluster.ini", utf8NoBom);
+                //ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
+                ini1.write("NETWORK", "lan_only_cluster", "false", utf8NoBom);
+            }
 
-            //if (radioButton1.Checked)
-            //{
-            //    p.StartInfo.Arguments = "-console -cluster yyServer -shard Master -offline";
+            // 打开服务器
+            Process p = new Process();
+            if (GamePingTai != "TGP")
+            {
 
-            //}
-            //if (radioButton2.Checked)
-            //{
-            //    p.StartInfo.Arguments = "-console -cluster yyServer -shard Master";
+                p.StartInfo.UseShellExecute = false; // 是否
+                p.StartInfo.WorkingDirectory = Path.GetDirectoryName(pathAll.Server_FilePath); // 目录,这个必须设置
+                p.StartInfo.FileName = pathAll.Server_FilePath; ;  // 服务器名字
 
-            //}
+                p.StartInfo.Arguments = "-console -cluster Server_" + GamePingTai + "_" + CunDangCao.ToString() + " -shard Master";
+                p.Start();
+            }
+            // 打开服务器
+            if (GamePingTai == "TGP")
+            {
+                MessageBox.Show("保存完毕! 请通过TGP启动,存档文件名为" + GamePingTai + "_" + CunDangCao.ToString());
+            }
 
+            if (GamePingTai != "TGP")
+            {
 
-            //p.Start();
+                // 是否开启洞穴
+                if (DediBaseIsCave.Text == "是")
+                {
+                    p.StartInfo.Arguments = "-console -cluster Server_" + GamePingTai + "_" + CunDangCao.ToString() + " -shard Caves";
+                    p.Start();
+                }
+            }
 
-
-            //// 是否开启洞穴
-            //if (checkBox_cave.Checked)
-            //{
-            //    if (radioButton1.Checked)
-            //    {
-            //        p.StartInfo.Arguments = "-console -cluster yyServer -shard Caves -offline";
-
-            //    }
-
-            //    if (radioButton2.Checked)
-            //    {
-            //        p.StartInfo.Arguments = "-console -cluster yyServer -shard Caves";
-
-            //    }
-
-            //    p.Start();
-            //}
 
 
         }
@@ -816,39 +864,64 @@ namespace 饥荒百科全书CSharp
                 mySendMessage.sendEnter(pstr[i].MainWindowHandle);
             }
         }
-
-        private void SendMessage(Message m,int n=1)
+        // 发送"消息"
+        private void SendMessage(Message m, int n = 1)
         {
             System.Windows.Forms.MessageBoxButtons messButton = System.Windows.Forms.MessageBoxButtons.OKCancel;
 
-            System.Windows.Forms.DialogResult dr = System.Windows.Forms.MessageBox.Show("命令也会复制到剪贴板", "确认", messButton);
+            System.Windows.Forms.DialogResult dr = System.Windows.Forms.MessageBox.Show("命令也会复制到剪贴板,如果没成功请手动粘贴到黑窗口,[TGP版]可能不成功", "确认", messButton);
             if (dr == System.Windows.Forms.DialogResult.OK)//如果点击“确定”按钮
             {
 
                 string str = "";
-                if (m==Message.复活)
+                if (m == Message.复活)
                 {
                     str = @"for k, v in pairs(AllPlayers) do v: PushEvent('respawnfromghost') end";
                 }
-                if (m==Message.保存)
+                if (m == Message.保存)
                 {
-                     str = @"c_save()";
+                    str = @"c_save()";
                 }
-                if (m==Message.回档)
+                if (m == Message.回档)
                 {
-                     str = @"c_rollback(" + n + ")";
+                    str = @"c_rollback(" + n + ")";
                 }
-                if (m==Message.重生世界)
+                if (m == Message.重置世界)
                 {
                     str = @"c_regenerateworld()";
                 }
-              
+
                 ssendMessage(str);
                 System.Windows.Forms.Clipboard.SetDataObject(str);
             }
         }
 
+        // 按钮
+        private void DediButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Content.ToString() == "回档")
+            {
+                SendMessage(Message.回档);
+            }
+            if (b.Content.ToString() == "重置世界")
+            {
+                SendMessage(Message.重置世界);
+            }
+            if (b.Content.ToString() == "保存")
+            {
+                SendMessage(Message.保存);
+            }
+            if (b.Content.ToString() == "复活")
+            {
+                SendMessage(Message.复活);
+            }
+            //if (GamePingTai=="TGP")
+            //{
+            //    MessageBox.Show("命令已经复制到剪贴板,请开启黑窗口的快速编辑模式,粘贴到黑窗口中");
+            //}
 
+        }
         #endregion
 
         #region "其他"
@@ -921,7 +994,7 @@ namespace 饥荒百科全书CSharp
         保存,
         复活,
         回档,
-        重生世界
+        重置世界
     }
 
 

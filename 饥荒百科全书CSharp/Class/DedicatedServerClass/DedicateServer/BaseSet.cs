@@ -392,8 +392,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
             // 读取服务器模式 offline_cluster=true
             string yx_serverMode = iniTool.ReadValue("NETWORK", "offline_cluster");
-            if (yx_serverMode == "true") { ServerMode = "在线"; };
-            if (yx_serverMode == "false") { ServerMode = "离线"; };
+            if (yx_serverMode == "true") { ServerMode = "离线"; };
+            if (yx_serverMode == "false") { ServerMode = "在线"; };
 
             isFileToProperty = false;
 
@@ -459,8 +459,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 }
                 if (propertyName=="ServerMode")
                 {
-                    if (ServerMode == "离线") { ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom); };
-                    if (ServerMode == "在线") { ini1.write("NETWORK", "offline_cluster", "true", utf8NoBom); };
+                    if (ServerMode == "离线") { ini1.write("NETWORK", "offline_cluster", "true", utf8NoBom); };
+                    if (ServerMode == "在线") { ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom); };
 
                 }
             }

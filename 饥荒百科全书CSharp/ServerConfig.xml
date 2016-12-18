@@ -159,6 +159,7 @@
     <details english="roads" chinese="卵石路" />
     <details english="disease_delay" chinese="疾病"/>
     <details english="specialevent" chinese="特殊事件"/>
+    <details english="petrification" chinese="石化树"/>
   </hanhua>
   <!--地上世界选项-->
   <master>
@@ -253,9 +254,9 @@
     <details key="layout_mode" value="LinkNodesByKeys" />
     <details key="wormhole_prefab" value="wormhole" />
     <details key="disease_delay" value="none,slow,default,fast,random" />
-    <details key="petrification" value="default" />
-    <details key="specialevent" value="default" />
-    <details key="wormattacks" value="default" />
+    <details key="petrification" value="none,few,default,many,max" />
+    <details key="specialevent" value="none,default,hallowed_nights,winters_feast" />
+    <details key="wormattacks" value="never,rare,default,often,always" />
   </master>
   <!--地下世界选项-->
   <caves>
@@ -352,9 +353,9 @@
     <details key="layout_mode" value="RestrictNodesByKey" />
     <details key="wormhole_prefab" value="tentacle_pillar" />
     <details key="disease_delay" value="none,slow,default,fast,random" />
-    <details key="petrification" value="default" />
-    <details key="specialevent" value="default" />
-    <details key="wormattacks" value="default" />
+    <details key="petrification" value="none,few,default,many,max" />
+    <details key="specialevent" value="none,default,hallowed_nights,winters_feast" />
+    <details key="wormattacks" value="never,rare,default,often,always" />
   </caves>
   <!--世界分类-->
   <fenlei>

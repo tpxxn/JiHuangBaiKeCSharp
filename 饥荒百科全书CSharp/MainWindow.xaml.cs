@@ -357,6 +357,17 @@ namespace 饥荒百科全书CSharp
             // 赋值
 
             GamePingTai = e.AddedItems[0].ToString();
+            if (GamePingTai=="TGP")
+            {
+                DediCtrateOpenGame.Visibility = Visibility.Collapsed;
+                DediCtrateWorldButton.Content = "保存世界";
+            }
+            else
+            {
+                DediCtrateOpenGame.Visibility = Visibility.Visible;
+                DediCtrateWorldButton.Content = "创建世界";
+            }
+
             if (e.RemovedItems.Count!=0)
             {
                 InitServer();
@@ -500,6 +511,12 @@ namespace 饥荒百科全书CSharp
         {
             RunServer();
         }
+        // 打开游戏
+        private void DediOpenGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            RunClient();
+        }
+
 
         #endregion
 

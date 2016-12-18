@@ -664,7 +664,7 @@ namespace 饥荒百科全书CSharp
                     Visi.VisiCol(false, DediModSet);
                     break;
                 case "Rollback":
-
+                    Visi.VisiCol(false, DediModRollBack);
                     break;
                 case "Blacklist":
 
@@ -692,13 +692,12 @@ namespace 饥荒百科全书CSharp
                 MaxPlayer[i - 1] = i.ToString();
             }
             string[] Offline = new string[] { "在线", "离线" };
-            DediBaseSetGrouponlySelect.ItemsSource=NoYes;
-            DediBaseSetGroupadminsSelect.ItemsSource=NoYes;
             DediBaseSetGamemodeSelect.ItemsSource=Gamemode;
             DediBaseSetPvpSelect.ItemsSource=NoYes;
             DediBaseSetMaxPlayerSelect.ItemsSource=MaxPlayer;
             DediBaseOfflineSelect.ItemsSource=Offline;
             DediBaseIsPause.ItemsSource = NoYes;
+            DediBaseIsCave.ItemsSource = NoYes;
             Visi.VisiCol(false, DediBaseSet);
 
         }
@@ -803,32 +802,7 @@ namespace 饥荒百科全书CSharp
             DediButtomPanelVisibilityInitialize();
             Visi.VisiCol(false, DediIntention);
         }
-
-
-        private void DediBaseSetRangePublic_Click(object sender, RoutedEventArgs e)
-        {
-            DediBaseSetRangeInitalize();
-        }
-
-        private void DediBaseSetRangeFriendonly_Click(object sender, RoutedEventArgs e)
-        {
-            DediBaseSetRangeInitalize();
-        }
-
-        private void DediBaseSetRangeLocal_Click(object sender, RoutedEventArgs e)
-        {
-            DediBaseSetRangeInitalize();
-        }
-
-        private void DediBaseSetRangeSteamgroup_Click(object sender, RoutedEventArgs e)
-        {
-            Visi.VisiCol(false, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
-        }
-
-        private void DediBaseSetRangeInitalize()
-        {
-            Visi.VisiCol(true, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
-        }
+   
         #endregion
         #endregion
     }

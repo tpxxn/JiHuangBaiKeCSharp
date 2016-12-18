@@ -50,7 +50,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\DST.ico</ApplicationIcon>
@@ -63,7 +63,7 @@
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Neo.Lua, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Class\DedicatedServerClass\dll\Neo.Lua.dll</HintPath>
+      <HintPath>.\Neo.Lua.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
@@ -4556,7 +4556,9 @@
     <Resource Include="Resources\DedicatedServer\D_set_rightarrow_tobeclick.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Class\DedicatedServerClass\dll\Neo.Lua.dll" />
+    <EmbeddedResource Include="Neo.Lua.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_jiantou2Right_Enter.png" />
@@ -4668,8 +4670,10 @@
     <Resource Include="Resources\DedicatedServer\设置1_Leave.png" />
     <Content Include="ServerConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
