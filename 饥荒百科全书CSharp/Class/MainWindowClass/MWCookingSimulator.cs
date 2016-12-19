@@ -21,6 +21,7 @@ namespace 饥荒百科全书CSharp
             Button_CS_Food_3_Click(null, null);
             Button_CS_Food_4_Click(null, null);
             Image_CS_Food_Result.Source = null;
+            TextBlock_CS_FoodName.Text = "";
             CrockPotList.Clear();
             CrockPotListIndex = -1;
             CrockPotMaxPriority = -128;
@@ -542,267 +543,126 @@ namespace 饥荒百科全书CSharp
                 if (ComboBox_CS_crockpot.SelectedIndex == 1)
                 {
                     if (CS_FT_Fruit >= 2 && CS_FT_Butter >= 1 && CS_FT_Honey >= 1)
-                        CS_CrockPotListAddFood("新鲜水果薄饼", 30);
+                        CS_CrockPotListAddFood("F_fresh_fruit_crepes", 30);
                     if (CS_FT_MonsterFoods >= 2 && CS_FT_Eggs >= 1 && CS_FT_Vegetables >= 0.5)
-                        CS_CrockPotListAddFood("怪物鞑靼", 30);
+                        CS_CrockPotListAddFood("F_monster_tartare", 30);
                     if (CS_FT_Mussel >= 2 && CS_FT_Vegetables >= 2)
-                        CS_CrockPotListAddFood("贝类淡菜汤", 30);
+                        CS_CrockPotListAddFood("F_mussel_bouillabaise", 30);
                     if (CS_FT_SweetPotato >= 2 && CS_FT_Eggs >= 2)
-                        CS_CrockPotListAddFood("薯蛋奶酥", 30);
+                        CS_CrockPotListAddFood("F_sweet_potato_souffle", 30);
                 }
                 if (CS_FT_Wobster >= 1 && CS_FT_Ice >= 1)
-                    CS_CrockPotListAddFood("龙虾浓汤", 30);
+                    CS_CrockPotListAddFood("F_lobster_bisque", 30);
                 if (CS_FT_Limpets >= 3 && CS_FT_Ice >= 1)
-                    CS_CrockPotListAddFood("汤", 30);
+                    CS_CrockPotListAddFood("F_bisque", 30);
                 if (CS_FT_RoastedCoffeeBeans >= 3 && (CS_FT_RoastedCoffeeBeans == 4 || CS_FT_Sweetener == 1 || CS_FT_DairyProduct == 1))
-                    CS_CrockPotListAddFood("咖啡", 30);
+                    CS_CrockPotListAddFood("F_coffee", 30);
                 if (CS_FT_Meats >= 2.5 && CS_FT_Fishes >= 1.5 && CS_FT_Ice == 0)
-                    CS_CrockPotListAddFood("海鲜牛排", 30);
+                    CS_CrockPotListAddFood("F_surf_'n'_turf", 30);
                 if (CS_FT_Wobster >= 1 && CS_FT_Butter >= 1 && CS_FT_Meats == 0 && CS_FT_Ice == 0)
-                    CS_CrockPotListAddFood("龙虾正餐", 25);
+                    CS_CrockPotListAddFood("F_lobster_dinner", 25);
                 if (CS_FT_Banana >= 1 && CS_FT_Ice >= 1 && CS_FT_Twigs >= 1 && CS_FT_Meats == 0 && CS_FT_Fishes == 0)
-                    CS_CrockPotListAddFood("香蕉冰淇淋", 20);
+                    CS_CrockPotListAddFood("F_banana_pop", 20);
                 if (CS_FT_Fishes >= 1 && CS_FT_Seaweed == 2)
-                    CS_CrockPotListAddFood("加州卷", 20);
+                    CS_CrockPotListAddFood("F_california_roll", 20);
                 if (CS_FT_Jellyfish >= 1 && CS_FT_Ice >= 1 && CS_FT_Twigs >= 1)
-                    CS_CrockPotListAddFood("果冻冰淇淋", 20);
+                    CS_CrockPotListAddFood("F_jelly-O_pop", 20);
                 if (CS_FT_Fishes >= 2 && CS_FT_Ice >= 1)
-                    CS_CrockPotListAddFood("橘汁腌鱼", 20);
+                    CS_CrockPotListAddFood("F_ceviche", 20);
                 if (CS_FT_SharkFin >= 1)
-                    CS_CrockPotListAddFood("鱼翅汤", 20);
+                    CS_CrockPotListAddFood("F_shark_fin_soup", 20);
                 if (CS_FT_Fishes >= 2.5)
-                    CS_CrockPotListAddFood("海鲜汤", 10);
+                    CS_CrockPotListAddFood("F_seafood_gumbo", 10);
             }
             //------------------------其他------------------------
             if (CS_FT_RoyalJelly >= 1 && CS_FT_Twigs == 0 && CS_FT_MonsterFoods == 0)
-                CS_CrockPotListAddFood("糖豆", 12);
+                CS_CrockPotListAddFood("F_jellybeans", 12);
             if (CS_FT_CactusFlesh >= 1 && CS_FT_Moleworm >= 1 && CS_FT_Fruit == 0)
-                CS_CrockPotListAddFood("鼹鼠鳄梨酱", 10);
+                CS_CrockPotListAddFood("F_guacamole", 10);
             if (CS_FT_CactusFlower >= 1 && CS_FT_Vegetables >= 2 && CS_FT_Fruit == 0 && CS_FT_Meats == 0 && CS_FT_Eggs == 0 && CS_FT_Sweetener == 0 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("花瓣沙拉", 10);
+                CS_CrockPotListAddFood("F_flower_salad", 10);
             if (CS_FT_DairyProduct >= 1 && CS_FT_Ice >= 1 && CS_FT_Sweetener >= 1 && CS_FT_Meats == 0 && CS_FT_Eggs == 0 && CS_FT_Vegetables == 0 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("冰淇淋", 10);
+                CS_CrockPotListAddFood("F_ice_cream", 10);
             if (CS_FT_Watermelon >= 1 && CS_FT_Ice >= 1 && CS_FT_Twigs >= 1 && CS_FT_Meats == 0 && CS_FT_Eggs == 0 && CS_FT_Vegetables == 0)
-                CS_CrockPotListAddFood("西瓜冰", 10);
+                CS_CrockPotListAddFood("F_melonsicle", 10);
             if (CS_FT_RoastedBirchnut >= 1 && CS_FT_Berries >= 1 && CS_FT_Fruit >= 1 && CS_FT_Meats == 0 && CS_FT_Eggs == 0 && CS_FT_Vegetables == 0 && CS_FT_Sweetener == 0)
-                CS_CrockPotListAddFood("水果杂烩", 10);
+                CS_CrockPotListAddFood("F_trail_mix", 10);
             if (CS_FT_Vegetables >= 1.5 && CS_FT_Meats >= 1.5)
-                CS_CrockPotListAddFood("辣椒酱", 10);
+                CS_CrockPotListAddFood("F_spicy_chili", 10);
             if (CS_FT_Eel >= 1 && CS_FT_Lichen >= 1)
-                CS_CrockPotListAddFood("鳗鱼", 20);
+                CS_CrockPotListAddFood("F_unagi", 20);
             if (CS_FT_Pumpkin >= 1 && CS_FT_Sweetener >= 2)
-                CS_CrockPotListAddFood("南瓜饼", 10);
+                CS_CrockPotListAddFood("F_pumpkin_cookie", 10);
             if (CS_FT_Corn >= 1 && CS_FT_Honey >= 1 && CS_FT_Twigs >= 1)
-                CS_CrockPotListAddFood("芝士蛋糕", 10);
+                CS_CrockPotListAddFood("F_powdercake", 10);
             if (CS_FT_Mandrake >= 1)
-                CS_CrockPotListAddFood("曼德拉汤", 10);
+                CS_CrockPotListAddFood("F_mandrake_soup", 10);
             if (CS_FT_Fishes >= 0.5 && CS_FT_Twigs == 1)
-                CS_CrockPotListAddFood("炸鱼条", 10);
+                CS_CrockPotListAddFood("F_fishsticks", 10);
             if (CS_FT_Fishes >= 0.5 && CS_FT_Corn >= 1)
-                CS_CrockPotListAddFood("玉米饼包炸鱼", 10);
+                CS_CrockPotListAddFood("F_fish_tacos", 10);
             if (CS_FT_Meats >= 1.5 && CS_FT_Eggs >= 2 && CS_FT_Vegetables == 0)
-                CS_CrockPotListAddFood("培根煎蛋", 10);
+                CS_CrockPotListAddFood("F_bacon_and_eggs", 10);
             if (CS_FT_Drumstick >= 2 && CS_FT_Meats >= 1.5 && (CS_FT_Vegetables >= 0.5 || CS_FT_Fruit >= 0.5))
-                CS_CrockPotListAddFood("火鸡正餐", 10);
+                CS_CrockPotListAddFood("F_turkey_dinner", 10);
             if (CS_FT_Sweetener >= 3 && CS_FT_Meats == 0)
-                CS_CrockPotListAddFood("太妃糖", 10);
+                CS_CrockPotListAddFood("F_taffy", 10);
             if (CS_FT_Butter >= 1 && CS_FT_Eggs >= 1 && CS_FT_Berries >= 1)
-                CS_CrockPotListAddFood("华夫饼", 10);
+                CS_CrockPotListAddFood("F_waffles", 10);
             if (CS_FT_MonsterFoods >= 2 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("怪物千层饼", 10);
+                CS_CrockPotListAddFood("F_monster_lasagna", 10);
             if (CS_FT_Eggs >= 1 && CS_FT_Meats >= 0.5 && CS_FT_Vegetables >= 0.5 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("饺子", 5);
+                CS_CrockPotListAddFood("F_pierogi", 5);
             if (CS_FT_Meats >= 0.5 && CS_FT_Twigs == 1 && CS_FT_MonsterFoods <= 1)
-                CS_CrockPotListAddFood("肉串", 5);
+                CS_CrockPotListAddFood("F_kabobs", 5);
             if (CS_FT_Meats >= 2 && CS_FT_Honey >= 1 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("蜜汁火腿", 2);
+                CS_CrockPotListAddFood("F_honey_ham", 2);
             if (CS_FT_Meats >= 0.5 && CS_FT_Meats < 2 && CS_FT_Honey >= 1 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("甜蜜金砖", 2);
+                CS_CrockPotListAddFood("F_honey_nuggets", 2);
             if (CS_FT_Butterfly_wings >= 1 && CS_FT_Vegetables >= 0.5 && CS_FT_Meats == 0)
-                CS_CrockPotListAddFood("奶油松饼", 1);
+                CS_CrockPotListAddFood("F_butter_muffin", 1);
             if (CS_FT_FrogLegs >= 1 && CS_FT_Vegetables >= 0.5)
-                CS_CrockPotListAddFood("青蛙圆面包三明治", 1);
+                CS_CrockPotListAddFood("F_froggle_bunwich", 1);
             if (CS_FT_DragonFruit >= 1 && CS_FT_Meats == 0)
-                CS_CrockPotListAddFood("火龙果派", 1);
+                CS_CrockPotListAddFood("F_dragonpie", 1);
             if (CS_FT_Eggplant >= 1 && CS_FT_Vegetables >= 0.5)
-                CS_CrockPotListAddFood("香酥茄盒", 1);
+                CS_CrockPotListAddFood("F_stuffed_eggplant", 1);
             if (CS_FT_Vegetables >= 0.5 && CS_FT_Meats == 0 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("蔬菜杂烩", 0);
+                CS_CrockPotListAddFood("F_ratatouille", 0);
             if (CS_FT_Fruit >= 0.5 && CS_FT_Meats == 0 && CS_FT_Vegetables == 0)
             {
                 if (CS_FT_Fruit < 3)
                 {
-                    CS_CrockPotListAddFood("果酱蜜饯", 0);
+                    CS_CrockPotListAddFood("F_fist_full_of_jam", 0);
                 }
                 else
                 {
                     if (CS_FT_Twigs == 0)
                     {
-                        CS_CrockPotListAddFood("果酱蜜饯", 0);
-                        CS_CrockPotListAddFood("水果拼盘", 0);
+                        CS_CrockPotListAddFood("F_fist_full_of_jam", 0);
+                        CS_CrockPotListAddFood("F_fruit_medley", 0);
                     }
                     else
                     {
-                        CS_CrockPotListAddFood("水果拼盘", 0);
+                        CS_CrockPotListAddFood("F_fruit_medley", 0);
                     }
                 }
             }
             if (CS_FT_Meats >= 3 && CS_FT_Twigs == 0)
             {
-                CS_CrockPotListAddFood("肉汤", 0);
+                CS_CrockPotListAddFood("F_meaty_stew", 0);
             }
 
             if (CS_FT_Meats >= 0.5 && CS_FT_Meats < 3 && CS_FT_Twigs == 0)
-                CS_CrockPotListAddFood("肉丸", -1);
+                CS_CrockPotListAddFood("F_meatballs", -1);
             #endregion
             #region 食物判断
             if (CrockPotListIndex == -1)
             {
-                CS_F_name = "湿腻焦糊";
-                CS_image_Food_Result_Source("F_wet_goop");
+                CS_CrockPotListAddFood("F_wet_goop", -2);
             }
-            else
-            {
-                CS_F_name = CrockPotList[0];
-                switch (CrockPotList[0])
-                {
-                    case "新鲜水果薄饼":
-                        CS_image_Food_Result_Source("F_fresh_fruit_crepes");
-                        break;
-                    case "怪物鞑靼":
-                        CS_image_Food_Result_Source("F_monster_tartare");
-                        break;
-                    case "贝类淡菜汤":
-                        CS_image_Food_Result_Source("F_mussel_bouillabaise");
-                        break;
-                    case "薯蛋奶酥":
-                        CS_image_Food_Result_Source("F_sweet_potato_souffle");
-                        break;
-                    case "龙虾浓汤":
-                        CS_image_Food_Result_Source("F_lobster_bisque");
-                        break;
-                    case "汤":
-                        CS_image_Food_Result_Source("F_bisque");
-                        break;
-                    case "咖啡":
-                        CS_image_Food_Result_Source("F_coffee");
-                        break;
-                    case "海鲜牛排":
-                        CS_image_Food_Result_Source("F_surf_'n'_turf");
-                        break;
-                    case "龙虾正餐":
-                        CS_image_Food_Result_Source("F_lobster_dinner");
-                        break;
-                    case "香蕉冰淇淋":
-                        CS_image_Food_Result_Source("F_banana_pop");
-                        break;
-                    case "加州卷":
-                        CS_image_Food_Result_Source("F_california_roll");
-                        break;
-                    case "果冻冰淇淋":
-                        CS_image_Food_Result_Source("F_jelly-O_pop");
-                        break;
-                    case "橘汁腌鱼":
-                        CS_image_Food_Result_Source("F_ceviche");
-                        break;
-                    case "鱼翅汤":
-                        CS_image_Food_Result_Source("F_shark_fin_soup");
-                        break;
-                    case "海鲜汤":
-                        CS_image_Food_Result_Source("F_seafood_gumbo");
-                        break;
-                    case "鼹鼠鳄梨酱":
-                        CS_image_Food_Result_Source("F_guacamole");
-                        break;
-                    case "花瓣沙拉":
-                        CS_image_Food_Result_Source("F_flower_salad");
-                        break;
-                    case "冰淇淋":
-                        CS_image_Food_Result_Source("F_ice_cream");
-                        break;
-                    case "西瓜冰":
-                        CS_image_Food_Result_Source("F_melonsicle");
-                        break;
-                    case "水果杂烩":
-                        CS_image_Food_Result_Source("F_trail_mix");
-                        break;
-                    case "辣椒酱":
-                        CS_image_Food_Result_Source("F_spicy_chili");
-                        break;
-                    case "鳗鱼":
-                        CS_image_Food_Result_Source("F_unagi");
-                        break;
-                    case "南瓜饼":
-                        CS_image_Food_Result_Source("F_pumpkin_cookie");
-                        break;
-                    case "芝士蛋糕":
-                        CS_image_Food_Result_Source("F_powdercake");
-                        break;
-                    case "曼德拉汤":
-                        CS_image_Food_Result_Source("F_mandrake_soup");
-                        break;
-                    case "炸鱼条":
-                        CS_image_Food_Result_Source("F_fishsticks");
-                        break;
-                    case "玉米饼包炸鱼":
-                        CS_image_Food_Result_Source("F_fish_tacos");
-                        break;
-                    case "培根煎蛋":
-                        CS_image_Food_Result_Source("F_bacon_and_eggs");
-                        break;
-                    case "火鸡正餐":
-                        CS_image_Food_Result_Source("F_turkey_dinner");
-                        break;
-                    case "太妃糖":
-                        CS_image_Food_Result_Source("F_taffy");
-                        break;
-                    case "华夫饼":
-                        CS_image_Food_Result_Source("F_waffles");
-                        break;
-                    case "怪物千层饼":
-                        CS_image_Food_Result_Source("F_monster_lasagna");
-                        break;
-                    case "饺子":
-                        CS_image_Food_Result_Source("F_pierogi");
-                        break;
-                    case "肉串":
-                        CS_image_Food_Result_Source("F_kabobs");
-                        break;
-                    case "蜜汁火腿":
-                        CS_image_Food_Result_Source("F_honey_ham");
-                        break;
-                    case "甜蜜金砖":
-                        CS_image_Food_Result_Source("F_honey_nuggets");
-                        break;
-                    case "奶油松饼":
-                        CS_image_Food_Result_Source("F_butter_muffin");
-                        break;
-                    case "青蛙圆面包三明治":
-                        CS_image_Food_Result_Source("F_froggle_bunwich");
-                        break;
-                    case "火龙果派":
-                        CS_image_Food_Result_Source("F_dragonpie");
-                        break;
-                    case "香酥茄盒":
-                        CS_image_Food_Result_Source("F_stuffed_eggplant");
-                        break;
-                    case "蔬菜杂烩":
-                        CS_image_Food_Result_Source("F_ratatouille");
-                        break;
-                    case "果酱蜜饯":
-                        CS_image_Food_Result_Source("F_fist_full_of_jam");
-                        break;
-                    case "水果拼盘":
-                        CS_image_Food_Result_Source("F_fruit_medley");
-                        break;
-                    case "肉汤":
-                        CS_image_Food_Result_Source("F_meaty_stew");
-                        break;
-                    case "肉丸":
-                        CS_image_Food_Result_Source("F_meatballs");
-                        break;
-                }
-            }
+            CS_F_name = CrockPotList[0];
+            CS_image_Food_Result_Source(CrockPotList[0]);
             #endregion
             #region 选择按钮显示判断
             if (CrockPotListIndex < 1)
@@ -819,7 +679,7 @@ namespace 饥荒百科全书CSharp
             }
             #endregion
             //显示食物名称
-            TextBlock_CS_FoodName.Text = CS_F_name;
+            TextBlock_CS_FoodName.Text = CS_Food_Text(CS_F_name);
             #region 自动清空材料
             if (checkBox_CS_AutoClean.IsChecked == true)
             {
@@ -849,6 +709,166 @@ namespace 饥荒百科全书CSharp
         {
             Image_CS_Food_Result.Source = RSN.PictureShortName(RSN.ShortName(source, CS_ResourceDir));
         }
+        //烹饪结果文字
+        private string CS_Food_Text(string source)
+        {
+            switch (source)
+            {
+                case "F_fresh_fruit_crepes":
+                    return "新鲜水果薄饼";
+                case "F_monster_tartare":
+                    return "怪物鞑靼";
+                case "F_mussel_bouillabaise":
+                    return "贝类淡菜汤";
+                case "F_sweet_potato_souffle":
+                    return "薯蛋奶酥";
+                case "F_lobster_bisque":
+                    return "龙虾浓汤";
+                case "F_bisque":
+                    return "汤";
+                case "F_coffee":
+                    return "咖啡";
+                case "F_surf_'n'_turf":
+                    return "海鲜牛排";
+                case "F_lobster_dinner":
+                    return "龙虾正餐";
+                case "F_banana_pop":
+                    return "香蕉冰淇淋";
+                case "F_california_roll":
+                    return "加州卷";
+                case "F_jelly-O_pop":
+                    return "果冻冰淇淋";
+                case "F_ceviche":
+                    return "橘汁腌鱼";
+                case "F_shark_fin_soup":
+                    return "鱼翅汤";
+                case "F_seafood_gumbo":
+                    return "海鲜汤";
+                case "F_jellybeans":
+                    return "糖豆";
+                case "F_guacamole":
+                    if (UI_gameversion.SelectedIndex ==4)
+                        return "鼹梨沙拉酱";
+                    else
+                        return "鼹鼠鳄梨酱";
+                case "F_flower_salad":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "花沙拉";
+                    else
+                        return "花瓣沙拉";
+                case "F_ice_cream":
+                    return "冰淇淋";
+                case "F_melonsicle":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "西瓜冰棍";
+                    else
+                        return "西瓜冰";
+                case "F_trail_mix":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "什锦干果";
+                    else
+                        return "水果杂烩";
+                case "F_spicy_chili":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "辣椒炖肉";
+                    else
+                        return "辣椒酱";
+                case "F_unagi":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "鳗鱼料理";
+                    else
+                        return "鳗鱼";
+                case "F_pumpkin_cookie":
+                    return "南瓜饼";
+                case "F_powdercake":
+                    return "芝士蛋糕";
+                case "F_mandrake_soup":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "曼德拉草汤";
+                    else
+                        return "曼德拉汤";
+                case "F_fishsticks":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "炸鱼排";
+                    else
+                        return "炸鱼条";
+                case "F_fish_tacos":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "鱼肉玉米卷";
+                    else
+                        return "玉米饼包炸鱼";
+                case "F_bacon_and_eggs":
+                    return "培根煎蛋";
+                case "F_turkey_dinner":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "火鸡大餐";
+                    else
+                        return "火鸡正餐";
+                case "F_taffy":
+                    return "太妃糖";
+                case "F_waffles":
+                    return "华夫饼";
+                case "F_monster_lasagna":
+                    return "怪物千层饼";
+                case "F_pierogi":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "波兰水饺";
+                    else
+                        return "饺子";
+                case "F_kabobs":
+                    return "肉串";
+                case "F_honey_ham":
+                    return "蜜汁火腿";
+                case "F_honey_nuggets":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "蜜汁卤肉";
+                    else
+                        return "甜蜜金砖";
+                case "F_butter_muffin":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "奶油玛芬";
+                    else
+                        return "奶油松饼";
+                case "F_froggle_bunwich":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "蛙腿三明治";
+                    else
+                        return "青蛙圆面包三明治";
+                case "F_dragonpie":
+                    return "火龙果派";
+                case "F_stuffed_eggplant":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "酿茄子";
+                    else
+                        return "香酥茄盒";
+                case "F_ratatouille":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "蔬菜大杂烩";
+                    else
+                        return "蔬菜杂烩";
+                case "F_fist_full_of_jam":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "满满的果酱";
+                    else
+                        return "果酱蜜饯";
+                case "F_fruit_medley":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "水果圣代";
+                    else
+                        return "水果沙拉";
+                case "F_meaty_stew":
+                    return "肉汤";
+                case "F_meatballs":
+                    return "肉丸";
+                case "F_wet_goop":
+                    if (UI_gameversion.SelectedIndex == 4)
+                        return "失败料理";
+                    else
+                        return "湿腻焦糊";
+                default:
+                    return null;
+            }
+        }
         //左右切换按钮
         private void button_CS_Switch_Left_Click(object sender, RoutedEventArgs e)
         {
@@ -861,149 +881,9 @@ namespace 饥荒百科全书CSharp
                     button_CS_Switch_Left.IsEnabled = false;
                 }
                 CS_F_name = CrockPotList[FoodIndex];
-                switch (CrockPotList[FoodIndex])
-                {
-                    case "新鲜水果薄饼":
-                        CS_image_Food_Result_Source("F_fresh_fruit_crepes");
-                        break;
-                    case "怪物鞑靼":
-                        CS_image_Food_Result_Source("F_monster_tartare");
-                        break;
-                    case "贝类淡菜汤":
-                        CS_image_Food_Result_Source("F_mussel_bouillabaise");
-                        break;
-                    case "薯蛋奶酥":
-                        CS_image_Food_Result_Source("F_sweet_potato_souffle");
-                        break;
-                    case "龙虾浓汤":
-                        CS_image_Food_Result_Source("F_lobster_bisque");
-                        break;
-                    case "汤":
-                        CS_image_Food_Result_Source("F_bisque");
-                        break;
-                    case "咖啡":
-                        CS_image_Food_Result_Source("F_coffee");
-                        break;
-                    case "海鲜牛排":
-                        CS_image_Food_Result_Source("F_surf_'n'_turf");
-                        break;
-                    case "龙虾正餐":
-                        CS_image_Food_Result_Source("F_lobster_dinner");
-                        break;
-                    case "香蕉冰淇淋":
-                        CS_image_Food_Result_Source("F_banana_pop");
-                        break;
-                    case "加州卷":
-                        CS_image_Food_Result_Source("F_california_roll");
-                        break;
-                    case "果冻冰淇淋":
-                        CS_image_Food_Result_Source("F_jelly-O_pop");
-                        break;
-                    case "橘汁腌鱼":
-                        CS_image_Food_Result_Source("F_ceviche");
-                        break;
-                    case "鱼翅汤":
-                        CS_image_Food_Result_Source("F_shark_fin_soup");
-                        break;
-                    case "海鲜汤":
-                        CS_image_Food_Result_Source("F_seafood_gumbo");
-                        break;
-                    case "糖豆":
-                        CS_image_Food_Result_Source("F_jellybeans");
-                        break;
-                    case "鼹鼠鳄梨酱":
-                        CS_image_Food_Result_Source("F_guacamole");
-                        break;
-                    case "花瓣沙拉":
-                        CS_image_Food_Result_Source("F_flower_salad");
-                        break;
-                    case "冰淇淋":
-                        CS_image_Food_Result_Source("F_ice_cream");
-                        break;
-                    case "西瓜冰":
-                        CS_image_Food_Result_Source("F_melonsicle");
-                        break;
-                    case "水果杂烩":
-                        CS_image_Food_Result_Source("F_trail_mix");
-                        break;
-                    case "辣椒酱":
-                        CS_image_Food_Result_Source("F_spicy_chili");
-                        break;
-                    case "鳗鱼":
-                        CS_image_Food_Result_Source("F_unagi");
-                        break;
-                    case "南瓜饼":
-                        CS_image_Food_Result_Source("F_pumpkin_cookie");
-                        break;
-                    case "芝士蛋糕":
-                        CS_image_Food_Result_Source("F_powdercake");
-                        break;
-                    case "曼德拉汤":
-                        CS_image_Food_Result_Source("F_mandrake_soup");
-                        break;
-                    case "炸鱼条":
-                        CS_image_Food_Result_Source("F_fishsticks");
-                        break;
-                    case "玉米饼包炸鱼":
-                        CS_image_Food_Result_Source("F_fish_tacos");
-                        break;
-                    case "培根煎蛋":
-                        CS_image_Food_Result_Source("F_bacon_and_eggs");
-                        break;
-                    case "火鸡正餐":
-                        CS_image_Food_Result_Source("F_turkey_dinner");
-                        break;
-                    case "太妃糖":
-                        CS_image_Food_Result_Source("F_taffy");
-                        break;
-                    case "华夫饼":
-                        CS_image_Food_Result_Source("F_waffles");
-                        break;
-                    case "怪物千层饼":
-                        CS_image_Food_Result_Source("F_monster_lasagna");
-                        break;
-                    case "饺子":
-                        CS_image_Food_Result_Source("F_pierogi");
-                        break;
-                    case "肉串":
-                        CS_image_Food_Result_Source("F_kabobs");
-                        break;
-                    case "蜜汁火腿":
-                        CS_image_Food_Result_Source("F_honey_ham");
-                        break;
-                    case "甜蜜金砖":
-                        CS_image_Food_Result_Source("F_honey_nuggets");
-                        break;
-                    case "奶油松饼":
-                        CS_image_Food_Result_Source("F_butter_muffin");
-                        break;
-                    case "青蛙圆面包三明治":
-                        CS_image_Food_Result_Source("F_froggle_bunwich");
-                        break;
-                    case "火龙果派":
-                        CS_image_Food_Result_Source("F_dragonpie");
-                        break;
-                    case "香酥茄盒":
-                        CS_image_Food_Result_Source("F_stuffed_eggplant");
-                        break;
-                    case "蔬菜杂烩":
-                        CS_image_Food_Result_Source("F_ratatouille");
-                        break;
-                    case "果酱蜜饯":
-                        CS_image_Food_Result_Source("F_fist_full_of_jam");
-                        break;
-                    case "水果拼盘":
-                        CS_image_Food_Result_Source("F_fruit_medley");
-                        break;
-                    case "肉汤":
-                        CS_image_Food_Result_Source("F_meaty_stew");
-                        break;
-                    case "肉丸":
-                        CS_image_Food_Result_Source("F_meatballs");
-                        break;
-                }
+                CS_image_Food_Result_Source(CrockPotList[FoodIndex]);
             }
-            TextBlock_CS_FoodName.Text = CS_F_name;
+            TextBlock_CS_FoodName.Text = CS_Food_Text(CS_F_name);
         }
         private void button_CS_Switch_Right_Click(object sender, RoutedEventArgs e)
         {
@@ -1016,159 +896,42 @@ namespace 饥荒百科全书CSharp
                     button_CS_Switch_Right.IsEnabled = false;
                 }
                 CS_F_name = CrockPotList[FoodIndex];
-                switch (CrockPotList[FoodIndex])
+                CS_image_Food_Result_Source(CrockPotList[FoodIndex]);
+            }
+            TextBlock_CS_FoodName.Text = CS_Food_Text(CS_F_name);
+        }
+        //烹饪结果跳转
+        private void button_CS_Food_Result_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (UIElement expanderStackpanel in WrapPanel_Right_Food.Children)
+            {
+                foreach (UIElement buttonWithText in ((ExpanderStackpanel)expanderStackpanel).UCWrapPanel.Children)
                 {
-                    case "新鲜水果薄饼":
-                        CS_image_Food_Result_Source("F_fresh_fruit_crepes");
-                        break;
-                    case "怪物鞑靼":
-                        CS_image_Food_Result_Source("F_monster_tartare");
-                        break;
-                    case "贝类淡菜汤":
-                        CS_image_Food_Result_Source("F_mussel_bouillabaise");
-                        break;
-                    case "薯蛋奶酥":
-                        CS_image_Food_Result_Source("F_sweet_potato_souffle");
-                        break;
-                    case "龙虾浓汤":
-                        CS_image_Food_Result_Source("F_lobster_bisque");
-                        break;
-                    case "汤":
-                        CS_image_Food_Result_Source("F_bisque");
-                        break;
-                    case "咖啡":
-                        CS_image_Food_Result_Source("F_coffee");
-                        break;
-                    case "海鲜牛排":
-                        CS_image_Food_Result_Source("F_surf_'n'_turf");
-                        break;
-                    case "龙虾正餐":
-                        CS_image_Food_Result_Source("F_lobster_dinner");
-                        break;
-                    case "香蕉冰淇淋":
-                        CS_image_Food_Result_Source("F_banana_pop");
-                        break;
-                    case "加州卷":
-                        CS_image_Food_Result_Source("F_california_roll");
-                        break;
-                    case "果冻冰淇淋":
-                        CS_image_Food_Result_Source("F_jelly-O_pop");
-                        break;
-                    case "橘汁腌鱼":
-                        CS_image_Food_Result_Source("F_ceviche");
-                        break;
-                    case "鱼翅汤":
-                        CS_image_Food_Result_Source("F_shark_fin_soup");
-                        break;
-                    case "海鲜汤":
-                        CS_image_Food_Result_Source("F_seafood_gumbo");
-                        break;
-                    case "糖豆":
-                        CS_image_Food_Result_Source("F_jellybeans");
-                        break;
-                    case "鼹鼠鳄梨酱":
-                        CS_image_Food_Result_Source("F_guacamole");
-                        break;
-                    case "花瓣沙拉":
-                        CS_image_Food_Result_Source("F_flower_salad");
-                        break;
-                    case "冰淇淋":
-                        CS_image_Food_Result_Source("F_ice_cream");
-                        break;
-                    case "西瓜冰":
-                        CS_image_Food_Result_Source("F_melonsicle");
-                        break;
-                    case "水果杂烩":
-                        CS_image_Food_Result_Source("F_trail_mix");
-                        break;
-                    case "辣椒酱":
-                        CS_image_Food_Result_Source("F_spicy_chili");
-                        break;
-                    case "鳗鱼":
-                        CS_image_Food_Result_Source("F_unagi");
-                        break;
-                    case "南瓜饼":
-                        CS_image_Food_Result_Source("F_pumpkin_cookie");
-                        break;
-                    case "芝士蛋糕":
-                        CS_image_Food_Result_Source("F_powdercake");
-                        break;
-                    case "曼德拉汤":
-                        CS_image_Food_Result_Source("F_mandrake_soup");
-                        break;
-                    case "炸鱼条":
-                        CS_image_Food_Result_Source("F_fishsticks");
-                        break;
-                    case "玉米饼包炸鱼":
-                        CS_image_Food_Result_Source("F_fish_tacos");
-                        break;
-                    case "培根煎蛋":
-                        CS_image_Food_Result_Source("F_bacon_and_eggs");
-                        break;
-                    case "火鸡正餐":
-                        CS_image_Food_Result_Source("F_turkey_dinner");
-                        break;
-                    case "太妃糖":
-                        CS_image_Food_Result_Source("F_taffy");
-                        break;
-                    case "华夫饼":
-                        CS_image_Food_Result_Source("F_waffles");
-                        break;
-                    case "怪物千层饼":
-                        CS_image_Food_Result_Source("F_monster_lasagna");
-                        break;
-                    case "饺子":
-                        CS_image_Food_Result_Source("F_pierogi");
-                        break;
-                    case "肉串":
-                        CS_image_Food_Result_Source("F_kabobs");
-                        break;
-                    case "蜜汁火腿":
-                        CS_image_Food_Result_Source("F_honey_ham");
-                        break;
-                    case "甜蜜金砖":
-                        CS_image_Food_Result_Source("F_honey_nuggets");
-                        break;
-                    case "奶油松饼":
-                        CS_image_Food_Result_Source("F_butter_muffin");
-                        break;
-                    case "青蛙圆面包三明治":
-                        CS_image_Food_Result_Source("F_froggle_bunwich");
-                        break;
-                    case "火龙果派":
-                        CS_image_Food_Result_Source("F_dragonpie");
-                        break;
-                    case "香酥茄盒":
-                        CS_image_Food_Result_Source("F_stuffed_eggplant");
-                        break;
-                    case "蔬菜杂烩":
-                        CS_image_Food_Result_Source("F_ratatouille");
-                        break;
-                    case "果酱蜜饯":
-                        CS_image_Food_Result_Source("F_fist_full_of_jam");
-                        break;
-                    case "水果拼盘":
-                        CS_image_Food_Result_Source("F_fruit_medley");
-                        break;
-                    case "肉汤":
-                        CS_image_Food_Result_Source("F_meaty_stew");
-                        break;
-                    case "肉丸":
-                        CS_image_Food_Result_Source("F_meatballs");
-                        break;
+                    string[] RightButtonTag = (string[])(((ButtonWithText)buttonWithText).UCButton.Tag);
+                    string RightButtonTag0 = RightButtonTag[0];
+                    RightButtonTag0 = RSN.GetFileName(RightButtonTag0);
+                    if (CrockPotList[FoodIndex] == RightButtonTag0)
+                    {
+                        Sidebar_Food_Click(null, null);
+                        Sidebar_Food.IsChecked = true;
+                        WrapPanel_Left_Food.UpdateLayout();
+                        Food_Click(((ButtonWithText)buttonWithText).UCButton, null);
+                        WrapPanel_Left_Food.UpdateLayout();
+                        //Point point = ((ButtonWithText)buttonWithText).TransformToVisual(WrapPanel_Right_Food).Transform(new Point(0, 0));
+                        //ScrollViewer_Right_Food.ScrollToVerticalOffset(point.Y);
+                    }
                 }
             }
-            TextBlock_CS_FoodName.Text = CS_F_name;
         }
 
-        //CookingSimulator面板Click事件(食材)
+        //CookingSimulator面板Click事件
         private void CookingSimulator_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             string[] BWTTag = (string[])button.Tag;//获取参数
             CookingSimulator_Click_Handle(BWTTag);
         }
-        //WrapPanel_Left_Food控件创建事件(食材)
+        //WrapPanel_Left_CookingSimulator控件创建事件
         private void CookingSimulator_Click_Handle(string[] BWTTag)
         {
             //BWTTag = { Picture, Name, Health, Hunger, Sanity, Perish, Attribute, AttributeValue, Attribute_2, AttributeValue_2, Introduce };

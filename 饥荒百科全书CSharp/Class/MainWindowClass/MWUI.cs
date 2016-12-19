@@ -207,6 +207,7 @@ namespace 饥荒百科全书CSharp
             {
                 LoadGameVersionXml();
                 RegeditRW.RegWrite("GameVersion", UI_gameversion.SelectedIndex);
+                button_CS_Reset_Click(null, null);//模拟初始化
             }
         }
         #endregion

@@ -245,39 +245,20 @@
                                 <ColumnDefinition Width="170"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <CheckBox x:Name="checkBox_CS_AutoClean" Content="自动清空材料" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="1" />
+                            <CheckBox x:Name="checkBox_CS_AutoClean" Content="自动清空材料" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="1" IsChecked="True"/>
                             <Button x:Name="button_CS_Reset" Content="重置" VerticalAlignment="Top" Width="64" Cursor="{DynamicResource Cursor_link}" Margin="0,7,0,0" HorizontalAlignment="Right" Grid.Column="1" Click="button_CS_Reset_Click"/>
                         </Grid>
-                        <Grid x:Name="Grid_FoodAttribute" Height="100" Width="303.2">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition Height="15"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="40"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock HorizontalAlignment="Center" Text="生成食物属性" VerticalAlignment="Top" Grid.Column="2"/>
-                            <TextBlock HorizontalAlignment="Center" Text="食材总属性" VerticalAlignment="Top" Grid.RowSpan="2"/>
-                            <TextBlock HorizontalAlignment="Center" Text="生命" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
-                            <TextBlock HorizontalAlignment="Center" Text="饥饿" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
-                            <TextBlock HorizontalAlignment="Center" Text="精神" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"/>
-                        </Grid>
                         <StackPanel x:Name="StackPanel_CS_FoodButton" Width="303.2">
-                            <Button x:Name="Button_CS_Food_1" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_1_Click">
+                            <Button x:Name="Button_CS_Food_1" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_1_Click" Background="{x:Null}">
                                 <Image x:Name="Image_CS_Food_1" Height="52" Width="52"/>
                             </Button>
-                            <Button x:Name="Button_CS_Food_2" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_2_Click">
+                            <Button x:Name="Button_CS_Food_2" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_2_Click" Background="{x:Null}">
                                 <Image x:Name="Image_CS_Food_2" Height="52" Width="52"/>
                             </Button>
-                            <Button x:Name="Button_CS_Food_3" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_3_Click">
+                            <Button x:Name="Button_CS_Food_3" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_3_Click" Background="{x:Null}">
                                 <Image x:Name="Image_CS_Food_3" Height="52" Width="52"/>
                             </Button>
-                            <Button x:Name="Button_CS_Food_4" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_4_Click">
+                            <Button x:Name="Button_CS_Food_4" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_4_Click" Background="{x:Null}">
                                 <Image x:Name="Image_CS_Food_4" Height="52" Width="52"/>
                             </Button>
                         </StackPanel>
@@ -300,13 +281,32 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <Button x:Name="button_CS_Switch_Left" Grid.Column="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="44" HorizontalAlignment="Right" Style="{DynamicResource SwitchButtonLeftStyle}" Click="button_CS_Switch_Left_Click" Visibility="Collapsed"/>
-                            <Button x:Name="Button_CS_Food_Result" Grid.Column="1" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}">
+                            <Button x:Name="button_CS_Food_Result" Grid.Column="1" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="button_CS_Food_Result_Click" Background="{x:Null}">
                                 <Image x:Name="Image_CS_Food_Result" Height="52" Width="52"/>
                             </Button>
                             <Button x:Name="button_CS_Switch_Right" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Width="44" HorizontalAlignment="Left" Style="{DynamicResource SwitchButtonRightStyle}" Click="button_CS_Switch_Right_Click" Visibility="Collapsed"/>
                         </Grid>
                         <Grid x:Name="Grid_CS_FoodName" Height="40" Width="303.2">
                             <TextBlock x:Name="TextBlock_CS_FoodName" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <Grid x:Name="Grid_FoodAttribute" Height="100" Width="303.2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition Height="15"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock HorizontalAlignment="Center" Text="生成食物属性" VerticalAlignment="Top" Grid.Column="2"/>
+                            <TextBlock HorizontalAlignment="Center" Text="食材总属性" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                            <TextBlock HorizontalAlignment="Center" Text="生命" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+                            <TextBlock HorizontalAlignment="Center" Text="饥饿" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+                            <TextBlock HorizontalAlignment="Center" Text="精神" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"/>
                         </Grid>
                     </WrapPanel>
                 </ScrollViewer>
