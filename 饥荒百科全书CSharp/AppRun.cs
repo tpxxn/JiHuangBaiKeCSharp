@@ -63,7 +63,8 @@ namespace 饥荒百科全书CSharp.Class
                         MessageBox.Show("请不要重复运行(ノ｀Д)ノ");
                         Environment.Exit(-2);
                     }
-                }else
+                }
+                else
                 {
                     if (args[0].ToString() == "-clear")
                     {

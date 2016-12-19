@@ -18,7 +18,7 @@ namespace 饥荒百科全书CSharp
             splashTimer.Tick += new EventHandler(splashStop);
             splashTimer.Start();
         }
-
+        //todo:建议是MainWindows 读取
         void splashStop(object sender, EventArgs e)
         {
             splashTimer.Enabled = false;
