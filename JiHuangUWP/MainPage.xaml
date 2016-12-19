@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="JiHuangUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JiHuangUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding Source={StaticResource ViewModel},Path=View}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <x:Double x:Key="SplitWidth">35</x:Double>
+
+        <Style x:Key="SplitStackPanel" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal" />
+            <Setter Property="Margin" Value="0,0,0,0" />
+        </Style>
+
+        <Style x:Key="SplitFe" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
+            <Setter Property="Width" Value="{StaticResource SplitWidth}" />
+        </Style>
+
+        <Style x:Key="SplitButton" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+        </Style>
+
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <ToggleButton x:Name="SplitToggleButton" Visibility="{Binding FrameVisibility,Mode=OneWay}">
+                <ToggleButton.Content>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE700;"></TextBlock>
+                </ToggleButton.Content>
+            </ToggleButton>
+        </Grid>
+        <Frame Grid.Row="1" x:Name="Frame"></Frame>
+        <SplitView Grid.Row="1" IsPaneOpen="{Binding ElementName=SplitToggleButton,Path=IsChecked,Mode=TwoWay}"
+                   DisplayMode="CompactOverlay"  OpenPaneLength="200" Visibility="{Binding FrameVisibility,Mode=OneWay}"
+                   CompactPaneLength="0" >
+            <SplitView.Pane>
+                <Grid>
+                    <StackPanel>
+                        <Button Style="{StaticResource SplitButton}">
+                            <Button.Content>
+                                <Grid>
+                                    <StackPanel Style="{StaticResource SplitStackPanel}">
+                                        <TextBlock Style="{StaticResource SplitFe}"
+                                           Text="&#xE224;" />
+                                        <TextBlock Text="私密文本" />
+                                    </StackPanel>
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+
+                        <Button Style="{StaticResource SplitButton}">
+                            <Button.Content>
+                                <Grid>
+                                    <StackPanel Style="{StaticResource SplitStackPanel}">
+                                        <TextBlock Style="{StaticResource SplitFe}"
+                                           Text="&#xE224;" />
+                                        <TextBlock Text="密码本" />
+                                    </StackPanel>
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+
+
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Bottom">
+                        <Button Style="{StaticResource SplitButton}"
+                                Click="{x:Bind View.NavigateToInfo}">
+                            <Button.Content>
+                                <StackPanel Style="{StaticResource SplitStackPanel}">
+                                    <TextBlock Style="{StaticResource SplitFe}"
+                                                  Text="&#xE783;"></TextBlock>
+                                    <TextBlock Text="信息"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SplitButton}"
+                                Click="{x:Bind View.NavigateToAccount}">
+                            <Button.Content>
+                                <StackPanel Style="{StaticResource SplitStackPanel}">
+                                    <TextBlock Style="{StaticResource SplitFe}"
+                                                  Text="&#xE713;"></TextBlock>
+                                    <TextBlock Text="设置"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SplitButton}">
+                            <Button.Content>
+                                <StackPanel Style="{StaticResource SplitStackPanel}">
+                                    <TextBlock Style="{StaticResource SplitFe}"
+                                                  Text="&#xE7E8;"></TextBlock>
+                                    <TextBlock Text="关闭"></TextBlock>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </SplitView.Pane>
+        </SplitView>
+        
+    </Grid>
+</Page>
