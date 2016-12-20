@@ -177,7 +177,8 @@
                 <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10"/>
                 <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
-            <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1" d:IsHidden="True">
+            <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1">
+                <DedicatedServer:DediModBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,50,0,0" Width="350" Height="120"/>
                 <TextBlock Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,40,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
                 <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
                 <TextBlock Text="单机版：v198251" VerticalAlignment="Top" Margin="0,121.599,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
@@ -257,7 +258,7 @@
                     <WrapPanel x:Name="WrapPanel_Right_Goods" Focusable="False" Background="#88409A9E"/>
                 </ScrollViewer>
             </Grid>
-            <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1">
+            <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1" d:IsHidden="True">
                 <Grid.Background>
                     <ImageBrush ImageSource="Resources/DedicatedServer/D_background.png"/>
                 </Grid.Background>
@@ -298,8 +299,8 @@
                             <RadioButton x:Name="DediTitleBaseSet" Content="基本设置" Grid.Column="1" Style="{DynamicResource DediMainPanelRadioButtonStyle}" IsChecked="True" Click="DediTitleBaseSet_Click"/>
                             <RadioButton x:Name="DediTitleEditWorld" Content="编辑世界" Grid.Column="2" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleEditWorld_Click"/>
                             <RadioButton x:Name="DediTitleMod" Content="Mods" Grid.Column="3" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleMod_Click"/>
-                            <RadioButton x:Name="DediTitleRollback" Content="回档" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleRollback_Click"/>
-                            <RadioButton x:Name="DediTitleBlacklist" Content="黑名单" Grid.Column="5" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleBlacklist_Click"/>
+                            <RadioButton x:Name="DediTitleRollback" Content="控制台" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleRollback_Click"/>
+                            <RadioButton x:Name="DediTitleBlacklist" Content="黑/白名单" Grid.Column="5" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleBlacklist_Click"/>
                         </Grid>
                         <Canvas x:Name="DediTop" Grid.Row="1" Margin="-10,0,10,0">
                             <Image x:Name="DediMainTop_portraitsBG" Height="70" Width="70" Canvas.Left="15" Canvas.Top="15" Source="Resources/DedicatedServer/D_mp_portraits_bg.png" Stretch="Fill"/>
@@ -325,7 +326,7 @@
                                 <ColumnDefinition Width="12*"/>
                                 <ColumnDefinition Width="10"/>
                             </Grid.ColumnDefinitions>
-                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
+                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" d:IsHidden="True" >
                                 <StackPanel>
                                     <Grid x:Name="DediSettingGameVersion" Height="40">
                                         <Grid.Background>
@@ -528,57 +529,36 @@
                                     <ColumnDefinition Width="4*"/>
                                     <ColumnDefinition Width="4*"/>
                                 </Grid.ColumnDefinitions>
-                                <ScrollViewer Grid.Column="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}"  >
-                                    <StackPanel>
-                                        <Label Content="地上世界" Margin="0,10,0,10" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center"></Label>
-
+                                <ScrollViewer Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}"  >
+                                    <StackPanel HorizontalAlignment="Center">
+                                        <Label Content="地上世界" Margin="0,10,0,10" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
                                         <WrapPanel x:Name="DediOverWorldWorld" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="食物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="食物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediOverWolrdFoods" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="动物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="动物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediOverWorldAnimals" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="怪物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="怪物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediOverWorldMonsters" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediOverWorldResources" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
                                     </StackPanel>
                                 </ScrollViewer>
-                                <ScrollViewer Grid.Column="0" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}"  >
-                                    <StackPanel>
-                                        <Label Content="地下世界" Margin="0,10,0,10" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center"></Label>
-
+                                <ScrollViewer Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Grid.Column="1"  >
+                                    <StackPanel HorizontalAlignment="Center">
+                                        <Label Content="地下世界" Margin="0,10,0,10" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
                                         <WrapPanel x:Name="DediCavesWorld" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="食物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="食物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediCavesFoods" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="动物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="动物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediCavesAnimals" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="怪物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="怪物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediCavesMonsters" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                                        <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
-
+                                        <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                         <WrapPanel x:Name="DediCavesResources" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
                                     </StackPanel>
                                 </ScrollViewer>
-
                             </Grid>
-                            <Grid x:Name="DediModSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
+                            <Grid x:Name="DediModSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="2*"/>
                                     <ColumnDefinition Width="2*"/>
@@ -591,18 +571,16 @@
                                     <StackPanel x:Name="DediModXiJie" Orientation="Vertical"></StackPanel>
                                 </ScrollViewer>
                                 <ScrollViewer Grid.Column="0" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
-
                                     <TextBlock x:Name="DediModDescription"  />
                                 </ScrollViewer>
                             </Grid>
                             <Grid x:Name="DediModRollBack" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
-                                <StackPanel>
-                                <Button   Content="回档" Style="{DynamicResource DediButtonCreateWorldStyle}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" Click="DediButton_Click" />
+                                <StackPanel HorizontalAlignment="Center">
+                                    <Button  Content="回档" Style="{DynamicResource DediButtonCreateWorldStyle}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" Click="DediButton_Click" />
                                     <Button  Content="重置世界" Style="{DynamicResource DediButtonCreateWorldStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" Click="DediButton_Click" />
                                     <Button  Content="保存" Style="{DynamicResource DediButtonCreateWorldStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" Click="DediButton_Click" />
                                     <Button  Content="复活" Style="{DynamicResource DediButtonCreateWorldStyle}"   HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" Click="DediButton_Click" />
                                 </StackPanel>
-
                             </Grid>
                             <Image x:Name="DediButtomBorder_h1" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5"/>
                             <Image x:Name="DediButtomBorder_h2" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5" Grid.Row="2"/>
@@ -612,7 +590,7 @@
                             <Image x:Name="DediButtomBorder_v4" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3" Grid.Column="6"/>
                         </Grid>
                     </Grid>
-                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
                         <Button x:Name="DediCtrateOpenGame" Content="打开游戏" Style="{DynamicResource DediButtonCreateWorldStyle}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" Click="DediOpenGameButton_Click" />
                         <Button x:Name="DediCtrateWorldButton" Content="创建世界" Style="{DynamicResource DediButtonCreateWorldStyle}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="150" Height="50" FontSize="18" FontWeight="Bold" Click="DediCtrateWorldButton_Click" />
                     </StackPanel>

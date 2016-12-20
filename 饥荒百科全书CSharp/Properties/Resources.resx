@@ -4363,4 +4363,28 @@
   <data name="D_set_rightarrow_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DedicatedServer\D_set_rightarrow_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="D_mp_mod_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_mod_bg_unchecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_bg_unchecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_mod_border" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_mod_checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_mod_checked_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_checked_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_mod_config" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_mod_unchecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_unchecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D_mp_mod_unchecked_tobeclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DedicatedServer\D_mp_mod_unchecked_tobeclick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

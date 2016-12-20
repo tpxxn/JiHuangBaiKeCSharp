@@ -21,7 +21,7 @@ namespace ServerTools
         /// <param name="encoding"></param>
         /// <param name="isReturn"></param>
         /// <returns></returns>
-        public LuaTable readLua(string path, Encoding encoding,bool isReturn) {
+        public LuaTable ReadLua(string path, Encoding encoding,bool isReturn) {
 
             //lua读取
             using (Lua l = new Lua())
@@ -36,13 +36,10 @@ namespace ServerTools
                 try
                 {
                      r = g.DoChunk(reader, "test.lua");
-                    
                 }
                 catch (Exception  )
                 {
                    
-
-                  
                 }
              
                 reader.Close();
@@ -51,22 +48,12 @@ namespace ServerTools
                 {
                     LuaTable lt = (LuaTable)r[0];
                     return lt;
-
                 }
                 else {
-                  
                     LuaTable lt = g;
                     return lt;
-
                 }
-                
-
             }
-
-
-
-
         }
-
     }
 }

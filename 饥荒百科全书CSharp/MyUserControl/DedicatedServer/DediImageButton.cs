@@ -29,14 +29,11 @@ namespace WpfLearn.UserControls
     /// </summary>
     public class DediImageButton : Button
     {
-
-
         // private static bool isFirst = true;
         #region 【依赖属性】
         // 依赖属性 参考网址：http://www.cnblogs.com/luluping/archive/2011/05/06/2039489.html
         // 没怎么看懂.... http://blog.csdn.net/luxiaoyu_sdc/article/details/6173758
         // http://blog.csdn.net/rabbitsoft_1987/article/details/18677067
-
 
         // 1. 创建依赖属性---静态只读
         /// <summary>
@@ -102,7 +99,6 @@ namespace WpfLearn.UserControls
 
         }
 
-
         // 3.包装属性
         /// <summary>
         /// 鼠标进入时的图片
@@ -134,7 +130,6 @@ namespace WpfLearn.UserControls
             }
         }
 
-
         public string Text
         {
             get
@@ -146,13 +141,6 @@ namespace WpfLearn.UserControls
                 base.SetValue(DediImageButton.TextProperty, value);
             }
         }
-
-
         #endregion
-
-
-
-
     }
-
 }

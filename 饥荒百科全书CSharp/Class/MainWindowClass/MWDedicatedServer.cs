@@ -10,7 +10,6 @@ using System.Windows.Media.Imaging;
 using WpfLearn.UserControls;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
 
-
 namespace 饥荒百科全书CSharp
 {
     /// <summary>
@@ -18,7 +17,7 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class MainWindow : Window
     {
-        #region "字段,属性"
+        #region 字段、属性
         int cunDangCao = 0; // 存档槽
         string gamePingTai; // 游戏平台
         private UTF8Encoding utf8NoBom = new UTF8Encoding(false); // 编码
@@ -36,13 +35,10 @@ namespace 饥荒百科全书CSharp
             {
                 return gamePingTai;
             }
-
             set
             {
                 XmlHelper.WriteGamePingTai("ServerConfig.xml", value);
                 gamePingTai = value;
-
-
             }
         }
 
@@ -52,17 +48,15 @@ namespace 饥荒百科全书CSharp
             {
                 return cunDangCao;
             }
-
             set
             {
                 cunDangCao = value;
                 pathAll.CunDangCao = value;
-
             }
         }
         #endregion
 
-        #region "设置"
+        #region 设置
         // 初始化
         public void InitServer()
         {
@@ -118,11 +112,11 @@ namespace 饥荒百科全书CSharp
                     Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao);
 
                 }
-               ((RadioButton)sender).Content = getHouseName(CunDangCao);
+               ((RadioButton)sender).Content = GetHouseName(CunDangCao);
 
             }
             // 1.6 复活
-            jinyong(true);
+            Jinyong(true);
 
             // 2.【基本设置】
             SetBaseSet();
@@ -158,13 +152,15 @@ namespace 饥荒百科全书CSharp
                 for (int i = 0; i < mods.ListMod.Count; i++)
                 {
                     // 屏蔽 客户端MOD
-                    if (mods.ListMod[i].Tyype == modType.客户端)
+                    if (mods.ListMod[i].Tyype == ModType.客户端)
                     {
                         continue;
                     }
-                    DediMod dod = new DediMod();
-                    dod.Width = 200;
-                    dod.Height = 60;
+                    DediMod dod = new DediMod()
+                    {
+                        Width = 200,
+                        Height = 60
+                    };
                     dod.Title.Content = mods.ListMod[i].Name;
                     dod.checkBox.Tag = i;
                     if (mods.ListMod[i].Configuration_options.Count != 0)
@@ -218,12 +214,14 @@ namespace 饥荒百科全书CSharp
                 Debug.WriteLine(n);
                 DediModXiJie.Children.Clear();
 
-                Label labelModXiJie = new Label();
-                labelModXiJie.Height = 300;
-                labelModXiJie.Width = 300;
-                labelModXiJie.Content = "QQ群: 580332268 \r\n 啦啦啦";
-                labelModXiJie.FontWeight = FontWeights.Bold;
-                labelModXiJie.FontSize = (double)20;
+                Label labelModXiJie = new Label()
+                {
+                    Height = 300,
+                    Width = 300,
+                    Content = "QQ群: 580332268 \r\n 啦啦啦",
+                    FontWeight = FontWeights.Bold,
+                    FontSize = (double)20
+                };
                 DediModXiJie.Children.Add(labelModXiJie);
             }
             else
@@ -418,14 +416,16 @@ namespace 饥荒百科全书CSharp
                     continue;
                 }
 
-                DediComboBoxWithImage di = new DediComboBoxWithImage();
-                di.ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative));
-                di.ItemsSource = HanHua(item.Value.WorldconfigList);
-                di.SelectedValue = HanHua(item.Value.Worldconfig);
-                di.ImageToolTip = HanHua(item.Value.ToolTip);
-                di.Tag = item.Key;
-                di.Width = 200;
-                di.Height = 60;
+                DediComboBoxWithImage di = new DediComboBoxWithImage()
+                {
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
+                    ItemsSource = HanHua(item.Value.WorldconfigList),
+                    SelectedValue = HanHua(item.Value.Worldconfig),
+                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    Tag = item.Key,
+                    Width = 200,
+                    Height = 60
+                };
                 di.SelectionChanged += DiOverWorld_SelectionChanged;
                 DediOverWorldWorld.Children.Add(di);
 
@@ -686,7 +686,6 @@ namespace 饥荒百科全书CSharp
                 //Caves.SaveWorld();
                 //Debug.WriteLine("保存地上世界");
             }
-
         }
 
         // "检查"
@@ -740,7 +739,7 @@ namespace 饥荒百科全书CSharp
 
 
                     // 取出存档名称
-                    ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + Num)).Content = getHouseName(int.Parse(Num));
+                    ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + Num)).Content = GetHouseName(int.Parse(Num));
 
 
                 }
@@ -748,7 +747,7 @@ namespace 饥荒百科全书CSharp
             }
 
             // 禁用
-            jinyong(false);
+            Jinyong(false);
             DediSettingGameVersionSelect.IsEnabled = true;
             // 不选择任何一项
             ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).IsChecked = false;
@@ -760,7 +759,7 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region "打开"
+        #region 打开
         // 打开"客户端"
         private void RunClient()
         {
@@ -848,7 +847,7 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region "回档" 等
+        #region 回档 等
         // 发送"消息"
         private void ssendMessage(string messageStr)
         {
@@ -924,9 +923,9 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region "其他"
+        #region 其他
         // 获取房间名
-        private string getHouseName(int d_cundangcao)
+        private string GetHouseName(int d_cundangcao)
         {
             string clusterIniPath = pathAll.DoNotStarveTogether_DirPath + @"\Server_" + GamePingTai + "_" + d_cundangcao.ToString() + @"\cluster.ini";
             if (!File.Exists(clusterIniPath))
@@ -939,9 +938,8 @@ namespace 饥荒百科全书CSharp
             return houseName;
         }
         // 禁用
-        private void jinyong(bool b)
+        private void Jinyong(bool b)
         {
-
             // DediMainBorder.IsEnabled = b;
             DediTitleBaseSet.IsEnabled = b;
             DediTitleEditWorld.IsEnabled = b;
@@ -951,13 +949,10 @@ namespace 饥荒百科全书CSharp
             DediMainTop_Delete.IsEnabled = b;
             DediCtrateWorldButton.IsEnabled = b;
             DediBaseSet.IsEnabled = b;
-
-
         }
         // 汉化
         private string HanHua(string s)
         {
-
             if (hanhua.ContainsKey(s))
             {
                 return hanhua[s];
@@ -967,9 +962,9 @@ namespace 饥荒百科全书CSharp
                 return s;
             }
         }
+
         private List<string> HanHua(List<string> s)
         {
-
             List<string> r = new List<string>();
             foreach (string item in s)
             {
@@ -983,12 +978,10 @@ namespace 饥荒百科全书CSharp
                 }
             }
             return r;
-
         }
-
         #endregion
-
     }
+
     public enum Message
     {
         保存,

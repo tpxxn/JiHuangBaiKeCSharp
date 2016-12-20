@@ -492,7 +492,7 @@ namespace 饥荒百科全书CSharp
             // 2.2 
          
             // DediMainBorder.IsEnabled = false;
-            jinyong(false);
+            Jinyong(false);
             //// 3. 复制一份新的过来                 
             //ServerTools.Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
 

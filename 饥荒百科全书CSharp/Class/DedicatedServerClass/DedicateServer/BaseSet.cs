@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
- 
+
 
 namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 {
@@ -23,7 +23,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
         private UTF8Encoding utf8NoBom = new UTF8Encoding(false);
 
-        private bool isFileToProperty=false;
+        private bool isFileToProperty = false;
         private List<string> gameStyle;
         private string gameStyleText;
         private string houseName;
@@ -46,14 +46,14 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         {
             get
             {
-             
+
                 return houseName;
 
             }
 
             set
             {
-                
+
                 houseName = value;
                 if (!isFileToProperty) { SavePropertyToFile("HouseName"); };
                 //NotifyPropertyChange("HouseName");
@@ -78,7 +78,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             }
         }
 
-  
+
         /// <summary>
         /// 人数限制
         /// </summary>
@@ -177,7 +177,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             get
             {
                 return isPVP;
-   
+
             }
 
             set
@@ -240,7 +240,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 //NotifyPropertyChange("GameMode");
             }
 
-         
+
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 //NotifyPropertyChange("GameStyle");
             }
 
-           
+
         }
 
         public string ServerMode
@@ -284,7 +284,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// clusterIni的地址，目前地址只能通过构造函数传入，以后有需要再改
         /// </summary>
         /// <param name="clusterIni_FilePath"></param>
-        public BaseSet(string clusterIni_FilePath) {
+        public BaseSet(string clusterIni_FilePath)
+        {
 
             // 游戏风格【字段赋值】
             gameStyle = new List<string>();
@@ -294,7 +295,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             gameStyle.Add("疯狂");
             gameStyleText = "合作";
             //NotifyPropertyChange("GameStyle");
-           
+
             // 游戏模式【字段赋值】
             gameMode = new List<string>();
             gameMode.Add("生存");
@@ -302,7 +303,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             gameMode.Add("荒野");
             gameModeText = "无尽";
             //NotifyPropertyChange("GameMode");
-         
+
 
             // 其他先全部赋值，防止为空
             //houseName = "qq群：351765204";
@@ -321,11 +322,12 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 // 从文件读，给字段赋值
                 FileToProperty(clusterIni_FilePath);
             }
-            else {
+            else
+            {
 
                 Debug.WriteLine("cluster.ini文件不存在");
             }
-                     
+
         }
         #endregion
 
@@ -333,12 +335,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// <summary>
         /// 从文件读，给字段赋值
         /// </summary>
-        private void FileToProperty(string clusterIniPath) {
+        private void FileToProperty(string clusterIniPath)
+        {
 
             // 改变记号（这个记号可能以后保存的时候会有用）
             isFileToProperty = true;
 
-  
+
             // 标记！：这里没有判断文件是否存在，在外面判断了，以后再看用不用修改
 
             //读取基本设置
@@ -360,7 +363,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             Describe = fj_miaoshu;
             //读取游戏模式
             string yx_moshi = iniTool.ReadValue("GAMEPLAY", "game_mode");
-            if (yx_moshi == "endless") { GameModeText= "无尽"; };
+            if (yx_moshi == "endless") { GameModeText = "无尽"; };
             if (yx_moshi == "survival") { GameModeText = "生存"; };
             if (yx_moshi == "wilderness") { GameModeText = "荒野"; };
             //读取人数限制
@@ -374,7 +377,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             //读取是否启用控制台[标记：这里没有变成小写]
             string yx_kongzhitai = iniTool.ReadValue("MISC", "console_enabled");
             if (yx_kongzhitai == "true") { IsConsole = "是"; };
-            if (yx_kongzhitai == "false") {IsConsole= "否"; };
+            if (yx_kongzhitai == "false") { IsConsole = "否"; };
 
             //读取无人时暂停[标记：这里没有变成小写]
             string yx_zhanting = iniTool.ReadValue("GAMEPLAY", "pause_when_empty");
@@ -397,14 +400,15 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
             isFileToProperty = false;
 
-      
+
 
         }
 
         #endregion
 
         #region 保存
-        public void SavePropertyToFile(string propertyName) {
+        public void SavePropertyToFile(string propertyName)
+        {
 
             // 保存
             if (isFileToProperty == false)
@@ -430,7 +434,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 }
                 if (propertyName == "IsCave")
                 {
-                    ini1.write("SHARD", "shard_enabled",IsCave=="是"?"true":"false", utf8NoBom);
+                    ini1.write("SHARD", "shard_enabled", IsCave == "是" ? "true" : "false", utf8NoBom);
                 }
                 if (propertyName == "IsConsole")
                 {
@@ -457,7 +461,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                     if (GameModeText == "生存") { ini1.write("GAMEPLAY", "game_mode", "survival", utf8NoBom); };
                     if (GameModeText == "荒野") { ini1.write("GAMEPLAY", "game_mode", "wilderness", utf8NoBom); };
                 }
-                if (propertyName=="ServerMode")
+                if (propertyName == "ServerMode")
                 {
                     if (ServerMode == "离线") { ini1.write("NETWORK", "offline_cluster", "true", utf8NoBom); };
                     if (ServerMode == "在线") { ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom); };
@@ -479,7 +483,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             {
                 //根据PropertyChanged事件的委托类，实现PropertyChanged事件： 
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-     
+
             }
         }
 

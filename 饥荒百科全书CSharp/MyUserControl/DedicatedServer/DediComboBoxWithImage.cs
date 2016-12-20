@@ -37,27 +37,27 @@ namespace WpfLearn.UserControls
 
         private void DediComboBoxWithImage_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (dediComboBox!=null)
+            if (dediComboBox != null)
             {
                 this.SelectedIndex = dediComboBox.SelectedIndex;
             }
-          
+
         }
 
         // 图片uri
         public static readonly DependencyProperty ImageSourceProperty = DependencyProperty.Register("ImageSource", typeof(ImageSource), typeof(DediComboBoxWithImage)
-            ,new PropertyMetadata(new PropertyChangedCallback(OnImageSourceChanged)));
+            , new PropertyMetadata(new PropertyChangedCallback(OnImageSourceChanged)));
 
         private static void OnImageSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-           
-                //DediComboBoxWithImage dediComboBoxWithImage = d as DediComboBoxWithImage;
-                //if (dediComboBoxWithImage.image!=null)
-                //{
-                //    dediComboBoxWithImage.image.Source = (ImageSource)e.NewValue;
-                //}
-           
-                
+
+            //DediComboBoxWithImage dediComboBoxWithImage = d as DediComboBoxWithImage;
+            //if (dediComboBoxWithImage.image!=null)
+            //{
+            //    dediComboBoxWithImage.image.Source = (ImageSource)e.NewValue;
+            //}
+
+
         }
 
         public ImageSource ImageSource
@@ -66,20 +66,13 @@ namespace WpfLearn.UserControls
             get { return (ImageSource)GetValue(ImageSourceProperty); }
         }
 
-        
         // ImageToolTip
         public static readonly DependencyProperty ImageToolTipProperty = DependencyProperty.Register("ImageToolTip", typeof(string), typeof(DediComboBoxWithImage));
 
-     
         public string ImageToolTip
         {
             set { SetValue(ImageToolTipProperty, value); }
             get { return (string)GetValue(ImageToolTipProperty); }
         }
-
-
-
-
-
     }
 }

@@ -108,7 +108,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
             this.Modoverride_file_Path = modoverrides_file_Path;
             LuaConfig luaconfig = new LuaConfig();
-            LuaTable lt = luaconfig.readLua(modoverrides_file_Path, Encoding.UTF8, true);
+            LuaTable lt = luaconfig.ReadLua(modoverrides_file_Path, Encoding.UTF8, true);
 
             // 遍历modsPath中每一个文件modinfo.lua文件
             DirectoryInfo dinfo = new DirectoryInfo(mods_dir_Path);

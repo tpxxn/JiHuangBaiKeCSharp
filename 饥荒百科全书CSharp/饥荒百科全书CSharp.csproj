@@ -127,6 +127,9 @@
     <Compile Include="MyUserControl\DedicatedServer\DediMod.xaml.cs">
       <DependentUpon>DediMod.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\DedicatedServer\DediModBox.xaml.cs">
+      <DependentUpon>DediModBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
@@ -172,6 +175,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Dictionary\DedicatedServer\DediLeftPanelRadioButtonDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediModBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -246,6 +253,10 @@
     <Page Include="MyUserControl\DedicatedServer\DediMod.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyUserControl\DedicatedServer\DediModBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\DedicatedServer\DediSelectBox.xaml">
       <SubType>Designer</SubType>
@@ -4668,6 +4679,14 @@
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\设置1_Enter.png" />
     <Resource Include="Resources\DedicatedServer\设置1_Leave.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_bg.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_bg_unchecked.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_border.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_checked.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_checked_tobeclick.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_config.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_unchecked.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_unchecked_tobeclick.png" />
     <Content Include="ServerConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

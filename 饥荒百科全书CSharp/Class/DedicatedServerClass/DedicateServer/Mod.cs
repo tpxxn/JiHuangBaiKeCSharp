@@ -9,7 +9,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
     /// <summary>
     /// mod的类型
     /// </summary>
-    public enum modType
+    public enum ModType
     {
         客户端 = 0,
         服务端 = 1,
@@ -62,7 +62,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
         /// <summary>
         /// mod的类型
         /// </summary>
-        private modType tyype;
+        private ModType tyype;
 
         /// <summary>
         /// mod的细节    <name,modxijie>
@@ -152,7 +152,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             }
         }
 
-        public modType Tyype
+        public ModType Tyype
         {
             get
             {
@@ -212,7 +212,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
 
             // 读取modinfo文件,各种判断是否为空
             LuaConfig luaReader = new LuaConfig();
-            LuaTable lt_modinfo= luaReader.readLua(modinfoPath, Encoding.UTF8, false);
+            LuaTable lt_modinfo= luaReader.ReadLua(modinfoPath, Encoding.UTF8, false);
 
             this.Name = lt_modinfo["name"] == null ? "" : lt_modinfo["name"].ToString();
             this.Description = lt_modinfo["description"] == null ? "" : lt_modinfo["description"].ToString();
@@ -226,25 +226,25 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 if (lt_modinfo["all_clients_require_mod"] == null)
                 {
 
-                    this.Tyype= modType.所有人;
+                    this.Tyype= ModType.所有人;
 
                 }
                 else
                 {
                     if (lt_modinfo["all_clients_require_mod"].ToString().Trim().ToLower() == "true")
                     {
-                        this.Tyype = modType.所有人;
+                        this.Tyype = ModType.所有人;
                     }
                     else
                     {
-                        this.Tyype = modType.服务端;
+                        this.Tyype = ModType.服务端;
                     }
 
                 }
             }
             else
             {
-                this.Tyype = modType.客户端;
+                this.Tyype = ModType.客户端;
             }
      
 

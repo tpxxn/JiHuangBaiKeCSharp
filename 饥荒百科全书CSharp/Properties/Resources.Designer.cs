@@ -2623,6 +2623,86 @@ namespace 饥荒百科全书CSharp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_bg {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_bg_unchecked {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_bg_unchecked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_border {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_border", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_checked {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_checked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_checked_tobeclick {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_checked_tobeclick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_config {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_config", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_unchecked {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_unchecked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap D_mp_mod_unchecked_tobeclick {
+            get {
+                object obj = ResourceManager.GetObject("D_mp_mod_unchecked_tobeclick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap D_mp_portraits_bg {
             get {
                 object obj = ResourceManager.GetObject("D_mp_portraits_bg", resourceCulture);

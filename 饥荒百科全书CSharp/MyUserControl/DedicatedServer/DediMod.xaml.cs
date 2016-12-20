@@ -25,8 +25,6 @@ namespace WpfLearn.UserControls
             InitializeComponent();
         }
 
-   
-
         //#region
         //// 标题
         //public static readonly DependencyProperty TitleProperty = 

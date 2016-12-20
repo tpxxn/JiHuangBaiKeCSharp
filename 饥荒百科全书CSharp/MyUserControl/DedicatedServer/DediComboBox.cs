@@ -20,32 +20,29 @@ namespace WpfLearn.UserControls
     {
         static DediComboBox()
         {
-          
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DediComboBox), new FrameworkPropertyMetadata(typeof(DediComboBox)));
         }
 
         public DediImageButton LeftButton;
         public DediImageButton RightButton;
 
-
         public override void OnApplyTemplate()
         {
-            
             base.OnApplyTemplate();
             LeftButton = GetTemplateChild("PART_LeftButton") as DediImageButton;
             RightButton = GetTemplateChild("PART_RightButton") as DediImageButton;
 
-            if (LeftButton!=null && RightButton != null)
+            if (LeftButton != null && RightButton != null)
             {
                 LeftButton.Click += LeftButton_Click;
                 RightButton.Click += RightButton_Click;
-             this.SelectionChanged += ServerComboBox_SelectionChanged;
+                this.SelectionChanged += ServerComboBox_SelectionChanged;
 
-                if (SelectedIndex==0)
+                if (SelectedIndex == 0)
                 {
                     LeftButton.Visibility = Visibility.Collapsed;
                 }
-                if (Items.Count==1)
+                if (Items.Count == 1)
                 {
                     SelectedIndex = 0;
                     LeftButton.Visibility = Visibility.Collapsed;
@@ -56,11 +53,7 @@ namespace WpfLearn.UserControls
                     RightButton.Visibility = Visibility.Collapsed;
                 }
             }
-
-          
         }
-
-
 
         private void ServerComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -75,14 +68,15 @@ namespace WpfLearn.UserControls
                 LeftButton.Visibility = Visibility.Collapsed;
                 RightButton.Visibility = Visibility.Collapsed;
             }
-      
+
             if (this.Items.Count > 1)
             {
                 if (this.SelectedIndex == 0)
                 {
                     LeftButton.Visibility = Visibility.Collapsed;
                     RightButton.Visibility = Visibility.Visible;
-                }else
+                }
+                else
                 if (this.SelectedIndex == this.Items.Count - 1)
                 {
                     RightButton.Visibility = Visibility.Collapsed;
@@ -92,9 +86,7 @@ namespace WpfLearn.UserControls
                 {
                     RightButton.Visibility = Visibility.Visible;
                     LeftButton.Visibility = Visibility.Visible;
-
                 }
-
             }
         }
 
@@ -113,13 +105,11 @@ namespace WpfLearn.UserControls
 
             }
             this.SelectedIndex += 1;
-
-
         }
+
         // 点击左键
         private void LeftButton_Click(object sender, RoutedEventArgs e)
         {
-
             // 空，返回
             if (this.Items.Count <= 0)
             {
@@ -131,7 +121,6 @@ namespace WpfLearn.UserControls
                 return;
 
             }
-       
             this.SelectedIndex -= 1;
         }
     }
