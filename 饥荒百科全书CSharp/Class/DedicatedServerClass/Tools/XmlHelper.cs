@@ -21,7 +21,7 @@ namespace ServerTools
         public static String ReadGamePingTai(string xmlpath)
         {
 
-          
+            xmlpath = "ServerConfig1.xml";
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(xmlpath);
             XmlNode details = xmldoc.SelectSingleNode("configuration/banben/details");
@@ -49,7 +49,7 @@ namespace ServerTools
         /// </summary>
         public static void WriteGamePingTai(string xmlpath, String pingtai)
         {
-
+            xmlpath = "ServerConfig1.xml";
             Dictionary<string, string> dic = new Dictionary<string, string>();
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(xmlpath);
@@ -92,7 +92,7 @@ namespace ServerTools
         /// </summary>
         public static string ReadClientPath(string xmlpath, String pingtai)
         {
-
+            xmlpath = "ServerConfig1.xml";
             Dictionary<string, string> dic = new Dictionary<string, string>();
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(xmlpath);
@@ -122,7 +122,7 @@ namespace ServerTools
         /// </summary>
         public static void WriteClientPath(string xmlpath, string ClientPath, String pingtai)
         {
-
+            xmlpath = "ServerConfig1.xml";
             Dictionary<string, string> dic = new Dictionary<string, string>();
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(xmlpath);
@@ -152,7 +152,7 @@ namespace ServerTools
         /// </summary>
         public static string ReadServerPath(string xmlpath, String pingtai)
         {
-
+            xmlpath = "ServerConfig1.xml";
             Dictionary<string, string> dic = new Dictionary<string, string>();
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(xmlpath);
@@ -182,7 +182,7 @@ namespace ServerTools
         /// </summary>
         public static void WriteServerPath(string xmlpath, string ServerPath, String pingtai)
         {
-
+            xmlpath = "ServerConfig1.xml";
             Dictionary<string, string> dic = new Dictionary<string, string>();
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(xmlpath);
