@@ -28,10 +28,10 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Image x:Name="UCImage" Margin="5" Grid.RowSpan="2"/>
-            <Image x:Name="UCConfig" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,60,12" Grid.Row="1" Width="48" Height="40" VerticalAlignment="Bottom" Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_config.png"/>
-            <Label x:Name="UCTitle" Content="Label" Grid.Column="1" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}"/>
-            <Label x:Name="UCEnableLabel" Content="停用" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Width="91" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}"/>
-            <CheckBox x:Name="UCCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,15,10" Grid.Row="1" Width="42" Height="40" VerticalAlignment="Bottom" RenderTransformOrigin="0.649,1.261" Style="{DynamicResource DediModBoxCheckBoxStyle}" Click="UCCheckBox_Click" />
+            <Image x:Name="UCConfig" Grid.Column="1" HorizontalAlignment="Right" Margin="0,8,60,12" Grid.Row="1" Width="48" Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_config.png"/>
+            <Label x:Name="UCTitle" Content="Label" Grid.Column="1" FontWeight="Bold" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}"/>
+            <Label x:Name="UCEnableLabel" FontWeight="Bold"   Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Width="91" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}"/>
+            <CheckBox x:Name="UCCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" Width="47"  Style="{DynamicResource DediModBoxCheckBoxStyle}"   />
         </Grid>
     </Border>
 </UserControl>

@@ -169,7 +169,7 @@ namespace ServerTools
                 if (value.Contains("dontstarve_dedicated_server_nullrenderer.exe"))
                 {
                     server_FilePath = value.Trim();
-                    XmlHelper.WriteClientPath("ServerConfig.xml", server_FilePath, GamePingTai);
+                    XmlHelper.WriteServerPath("ServerConfig.xml", server_FilePath, GamePingTai);
 
 
                 }

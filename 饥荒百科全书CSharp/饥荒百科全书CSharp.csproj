@@ -64,6 +64,8 @@
     <Reference Include="Neo.Lua, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Neo.Lua.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
@@ -124,9 +126,6 @@
       <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediComboBoxWithImage.cs" />
-    <Compile Include="MyUserControl\DedicatedServer\DediMod.xaml.cs">
-      <DependentUpon>DediMod.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediModBox.xaml.cs">
       <DependentUpon>DediModBox.xaml</DependentUpon>
     </Compile>
@@ -249,10 +248,6 @@
     <Page Include="MyUserControl\ButtonWithText.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MyUserControl\DedicatedServer\DediMod.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="MyUserControl\DedicatedServer\DediModBox.xaml">
       <SubType>Designer</SubType>

@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using WpfLearn.UserControls;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
+using 饥荒百科全书CSharp.MyUserControl.DedicatedServer;
 
 namespace 饥荒百科全书CSharp
 {
@@ -88,10 +89,11 @@ namespace 饥荒百科全书CSharp
         private void DediRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             // 0.保存之前的
-            if (OverWorld != null & Caves != null & mods != null)
+            if (OverWorld != null & Caves != null & mods != null & Directory.Exists(pathAll.YyServer_DirPath))
             {
                 OverWorld.SaveWorld();
                 Caves.SaveWorld();
+
                 mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Master\modoverrides.lua", utf8NoBom);
                 mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Caves\modoverrides.lua", utf8NoBom);
             }
@@ -156,34 +158,34 @@ namespace 饥荒百科全书CSharp
                     {
                         continue;
                     }
-                    DediMod dod = new DediMod()
+                    DediModBox dod = new DediModBox()
                     {
                         Width = 200,
-                        Height = 60
+                        Height = 70
                     };
-                    dod.Title.Content = mods.ListMod[i].Name;
-                    dod.checkBox.Tag = i;
+                    dod.UCTitle.Content = mods.ListMod[i].Name;
+                    dod.UCCheckBox.Tag = i;
                     if (mods.ListMod[i].Configuration_options.Count != 0)
                     {
-                        dod.config.Source = new BitmapImage(new Uri("/饥荒百科全书CSharp;component/Resources/DedicatedServer/设置1_Leave.png", UriKind.Relative));
+                        dod.UCConfig.Source = new BitmapImage(new Uri("/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_config.png", UriKind.Relative));
                     }
                     else
                     {
-                        dod.config.Source = null;
+                        dod.UCConfig.Source = null;
                     }
                     if (mods.ListMod[i].Enabled == false)
                     {
-                        dod.checkBox.IsChecked = false;
+                        dod.UCCheckBox.IsChecked = false;
 
                     }
                     else
                     {
-                        dod.checkBox.IsChecked = true;
+                        dod.UCCheckBox.IsChecked = true;
                     }
-                    dod.checkBox.Checked += CheckBox_Checked;
-                    dod.checkBox.Unchecked += CheckBox_Unchecked;
+                    dod.UCCheckBox.Checked += CheckBox_Checked;
+                    dod.UCCheckBox.Unchecked += CheckBox_Unchecked;
                     dod.PreviewMouseLeftButtonDown += Dod_MouseLeftButtonDown;
-                    dod.EnableLabel.Content = mods.ListMod[i].Tyype;
+                    dod.UCEnableLabel.Content = mods.ListMod[i].Tyype;
 
 
                     DediModList.Children.Add(dod);
@@ -197,7 +199,7 @@ namespace 饥荒百科全书CSharp
         private void Dod_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             // 左边显示
-            int n = (int)(((DediMod)sender).checkBox.Tag);
+            int n = (int)(((DediModBox)sender).UCCheckBox.Tag);
             string author = "作者:\r\n" + mods.ListMod[n].Author + "\r\n\r\n";
             string description = "描述:\r\n" + mods.ListMod[n].Description + "\r\n\r\n";
             string strName = "Mod名字:\r\n" + mods.ListMod[n].Name + "\r\n\r\n";
@@ -234,11 +236,12 @@ namespace 饥荒百科全书CSharp
                     // stackPanel
                     StackPanel stackPanel = new StackPanel();
                     stackPanel.Height = 40;
-                    stackPanel.Width = 300;
+                    stackPanel.Width = 330;
                     stackPanel.Orientation = Orientation.Horizontal;
                     Label labelModXiJie = new Label();
                     labelModXiJie.Height = stackPanel.Height;
-                    labelModXiJie.Width = 150;
+                    labelModXiJie.Width = 180;
+                    labelModXiJie.FontWeight = FontWeights.Bold;
                     labelModXiJie.Content = string.IsNullOrEmpty(item.Value.Label) ? item.Value.Name : item.Value.Label;
 
                     // dediComboBox
@@ -425,6 +428,7 @@ namespace 饥荒百科全书CSharp
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
+                            
                 };
                 di.SelectionChanged += DiOverWorld_SelectionChanged;
                 DediOverWorldWorld.Children.Add(di);

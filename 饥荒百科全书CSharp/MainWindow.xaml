@@ -177,7 +177,7 @@
                 <TextBox x:Name="UI_search" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10"/>
                 <Button x:Name="UI_search_clear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
-            <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1">
+            <Grid x:Name="RightGrid_Welcome" Margin="0" Grid.Row="1" Grid.Column="1" d:IsHidden="True">
                 <TextBlock Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,40,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
                 <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
                 <TextBlock Text="单机版：v198251" VerticalAlignment="Top" Margin="0,121.599,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
@@ -257,7 +257,7 @@
                     <WrapPanel x:Name="WrapPanel_Right_Goods" Focusable="False" Background="#88409A9E"/>
                 </ScrollViewer>
             </Grid>
-            <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1" d:IsHidden="True">
+            <Grid x:Name="RightGrid_Dedicated_Server" Grid.Row="1" Grid.Column="1">
                 <Grid.Background>
                     <ImageBrush ImageSource="Resources/DedicatedServer/D_background.png"/>
                 </Grid.Background>
@@ -325,7 +325,7 @@
                                 <ColumnDefinition Width="12*"/>
                                 <ColumnDefinition Width="10"/>
                             </Grid.ColumnDefinitions>
-                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" d:IsHidden="True" >
+                            <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
                                 <StackPanel>
                                     <Grid x:Name="DediSettingGameVersion" Height="40">
                                         <Grid.Background>
@@ -557,19 +557,19 @@
                                     </StackPanel>
                                 </ScrollViewer>
                             </Grid>
-                            <Grid x:Name="DediModSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
+                            <Grid x:Name="DediModSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="2*"/>
                                     <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
-                                <ScrollViewer Grid.Column="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
+                                <ScrollViewer Grid.Column="0" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
                                     <StackPanel x:Name="DediModList"/>
                                 </ScrollViewer>
-                                <ScrollViewer Grid.Column="2" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
-                                    <StackPanel x:Name="DediModXiJie" Orientation="Vertical"></StackPanel>
+                                <ScrollViewer Grid.Column="1" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
+                                    <StackPanel  x:Name="DediModXiJie" Orientation="Vertical"></StackPanel>
                                 </ScrollViewer>
-                                <ScrollViewer Grid.Column="0" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
+                                <ScrollViewer Grid.Column="2" Template="{DynamicResource DediRightPanelScrollViewerControlTemplate}">
                                     <TextBlock x:Name="DediModDescription"  />
                                 </ScrollViewer>
                             </Grid>

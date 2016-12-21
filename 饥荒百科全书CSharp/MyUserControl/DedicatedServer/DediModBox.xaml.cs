@@ -27,19 +27,19 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
             InitializeComponent();
         }
 
-        private void UCCheckBox_Click(object sender, RoutedEventArgs e)
-        {
-            if(UCCheckBox.IsChecked == false)
-            {
-                UCEnableLabel.Foreground = Brushes.Black;
-                UCEnableLabel.Content = "停用";
-            }
-            else
-            {
-                UCEnableLabel.Foreground = Brushes.Green;
-                UCEnableLabel.Content = "启用";
-            }
-        }
+        //private void UCCheckBox_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if(UCCheckBox.IsChecked == false)
+        //    {
+        //        UCEnableLabel.Foreground = Brushes.Black;
+        //        UCEnableLabel.Content = "停用";
+        //    }
+        //    else
+        //    {
+        //        UCEnableLabel.Foreground = Brushes.Green;
+        //        UCEnableLabel.Content = "启用";
+        //    }
+        //}
 
         private void Border_GotFocus(object sender, RoutedEventArgs e)
         {
