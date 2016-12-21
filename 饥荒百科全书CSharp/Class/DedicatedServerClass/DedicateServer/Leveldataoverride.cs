@@ -72,6 +72,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             //   string sb = "";
 
             // 地上世界
+            // 读取模板中地上世界配置的前半部分和后半部分dishangStrQ，dishangStrH，用于拼接字符串，保存用
             string dishangWorld = File.ReadAllText(pathall.ServerMoBanPath + @"\Master\leveldataoverride.lua");
             dishangWorld = dishangWorld.Replace("\r\n", "\n").Replace("\n", "\r\n");
             Regex regex = new Regex(@".*overrides\s*=\s*{|random_set_pieces.*", RegexOptions.Singleline);
