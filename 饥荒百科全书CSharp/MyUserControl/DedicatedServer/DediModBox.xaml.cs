@@ -31,12 +31,24 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         {
             if(UCCheckBox.IsChecked == false)
             {
-                UCGrid.Background = new ImageBrush(RSN.PictureShortName(@"/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_bg_unchecked.png"));
+                UCEnableLabel.Foreground = Brushes.Black;
+                UCEnableLabel.Content = "停用";
             }
             else
             {
-                UCGrid.Background = new ImageBrush(RSN.PictureShortName(@"/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_bg.png"));
+                UCEnableLabel.Foreground = Brushes.Green;
+                UCEnableLabel.Content = "启用";
             }
+        }
+
+        private void Border_GotFocus(object sender, RoutedEventArgs e)
+        {
+            UC.Background = new ImageBrush(RSN.PictureShortName(@"../../Resources/DedicatedServer/D_mp_mod_bg.png"));
+        }
+
+        private void Border_LostFocus(object sender, RoutedEventArgs e)
+        {
+            UC.Background = new ImageBrush(RSN.PictureShortName(@"../../Resources/DedicatedServer/D_mp_mod_bg_unchecked.png"));
         }
     }
 }

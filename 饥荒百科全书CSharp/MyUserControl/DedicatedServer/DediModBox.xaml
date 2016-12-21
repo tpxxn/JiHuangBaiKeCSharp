@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="饥荒百科全书CSharp.MyUserControl.DedicatedServer.DediModBox"
+﻿<UserControl x:Name="UC" x:Class="饥荒百科全书CSharp.MyUserControl.DedicatedServer.DediModBox"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -13,13 +13,12 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_bg_unchecked.png"/>
+    </UserControl.Background>
 
-    <!--<Border Style="{DynamicResource DediModBoxBorderStyle}">-->
-    <Border>
-        <Grid x:Name="UCGrid" Style="{DynamicResource DediModBoxGridStyle}">
-            <Grid.Background>
-                <ImageBrush ImageSource="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_bg_unchecked.png"/>
-            </Grid.Background>
+    <Border Style="{DynamicResource DediModBoxBorderStyle}" GotFocus="Border_GotFocus" LostFocus="Border_LostFocus">
+        <Grid Background="#00000000">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -31,9 +30,8 @@
             <Image x:Name="UCImage" Margin="5" Grid.RowSpan="2"/>
             <Image x:Name="UCConfig" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,60,12" Grid.Row="1" Width="48" Height="40" VerticalAlignment="Bottom" Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_config.png"/>
             <Label x:Name="UCTitle" Content="Label" Grid.Column="1" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}"/>
-            <Label x:Name="UCEnableLabel" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Width="91" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}"/>
+            <Label x:Name="UCEnableLabel" Content="停用" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Width="91" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}"/>
             <CheckBox x:Name="UCCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,15,10" Grid.Row="1" Width="42" Height="40" VerticalAlignment="Bottom" RenderTransformOrigin="0.649,1.261" Style="{DynamicResource DediModBoxCheckBoxStyle}" Click="UCCheckBox_Click" />
-            <Border Style="{DynamicResource DediModBoxBorderStyle}" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         </Grid>
     </Border>
 </UserControl>
