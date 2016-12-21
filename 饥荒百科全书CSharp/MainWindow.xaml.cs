@@ -404,7 +404,7 @@ namespace 饥荒百科全书CSharp
                 }
                 pathAll.Client_FilePath = fileName;
                 DediSettingGameDirSelectTextBox.Text = fileName;
-                XmlHelper.WriteClientPath("ServerConfig.xml", fileName, GamePingTai);
+                XmlHelper.WriteClientPath(  fileName, GamePingTai);
 
             }
         }
@@ -432,7 +432,7 @@ namespace 饥荒百科全书CSharp
                 }
                 pathAll.Server_FilePath = fileName;
                 DediSettingDediDirSelectTextBox.Text = fileName;
-                XmlHelper.WriteServerPath("ServerConfig.xml", fileName, GamePingTai);
+                XmlHelper.WriteServerPath(  fileName, GamePingTai);
 
                 // 读取mods
                 mods = null;

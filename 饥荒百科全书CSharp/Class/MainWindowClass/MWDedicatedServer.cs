@@ -38,7 +38,7 @@ namespace 饥荒百科全书CSharp
             }
             set
             {
-                XmlHelper.WriteGamePingTai("ServerConfig.xml", value);
+                XmlHelper.WriteGamePingTai(  value);
                 gamePingTai = value;
             }
         }
@@ -71,7 +71,7 @@ namespace 饥荒百科全书CSharp
             CheckServer();
 
             // 2.汉化
-            hanhua = XmlHelper.ReadHanhua("ServerConfig.xml");
+            hanhua = XmlHelper.ReadHanhua();
 
             // 3.读取服务器mods文件夹下所有信息.mod多的话,读取时间也多
             //   此时的mod没有被current覆盖
@@ -324,7 +324,7 @@ namespace 饥荒百科全书CSharp
         // 设置"平台"
         private void SetPingTai()
         {
-            gamePingTai = XmlHelper.ReadGamePingTai("ServerConfig.xml");
+            gamePingTai = XmlHelper.ReadGamePingTai( );
             DediSettingGameVersionSelect.Text = gamePingTai;
             Debug.WriteLine("游戏平台-完");
         }
@@ -364,7 +364,7 @@ namespace 饥荒百科全书CSharp
             DediOverWorldResources.Children.Clear();
             // 地上 分类
 
-            Dictionary<string, string> OverWorld_FenLei = XmlHelper.ReadWorldFenLei("ServerConfig.xml", false);
+            Dictionary<string, string> OverWorld_FenLei = XmlHelper.ReadWorldFenLei( false);
 
             Dictionary<string, ShowWorld> foods = new Dictionary<string, ShowWorld>();
             Dictionary<string, ShowWorld> animals = new Dictionary<string, ShowWorld>();
@@ -541,7 +541,7 @@ namespace 饥荒百科全书CSharp
             DediCavesResources.Children.Clear();
             // 地下 分类
 
-            Dictionary<string, string> fenleil = XmlHelper.ReadWorldFenLei("ServerConfig.xml", true);
+            Dictionary<string, string> fenleil = XmlHelper.ReadWorldFenLei( true);
 
             Dictionary<string, ShowWorld> foods = new Dictionary<string, ShowWorld>();
             Dictionary<string, ShowWorld> animals = new Dictionary<string, ShowWorld>();

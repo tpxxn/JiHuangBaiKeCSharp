@@ -232,7 +232,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
             selectConfigWorld.Clear();
 
             //读取文件,填入到字典
-            List<string> listStr= XmlHelper.ReadWorldSelect("ServerConfig.xml",isCave);
+            List<string> listStr= XmlHelper.ReadWorldSelect(isCave);
 
             for (int i = 0; i < listStr.Count; i++)
             {
