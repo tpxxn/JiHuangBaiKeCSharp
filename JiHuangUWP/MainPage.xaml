@@ -28,17 +28,18 @@
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Height="50"
+              Visibility="Collapsed">
             <ToggleButton x:Name="SplitToggleButton" Visibility="{Binding FrameVisibility,Mode=OneWay}">
                 <ToggleButton.Content>
                     <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE700;"></TextBlock>
                 </ToggleButton.Content>
             </ToggleButton>
         </Grid>
-        <Frame Grid.Row="1" x:Name="Frame"></Frame>
+        <Frame Grid.Row="1" x:Name="frame"></Frame>
         <SplitView Grid.Row="1" IsPaneOpen="{Binding ElementName=SplitToggleButton,Path=IsChecked,Mode=TwoWay}"
                    DisplayMode="CompactOverlay"  OpenPaneLength="200" Visibility="{Binding FrameVisibility,Mode=OneWay}"
                    CompactPaneLength="0" >
@@ -105,6 +106,5 @@
                 </Grid>
             </SplitView.Pane>
         </SplitView>
-        
     </Grid>
 </Page>

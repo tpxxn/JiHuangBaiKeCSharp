@@ -26,7 +26,7 @@ namespace JiHuangUWP
         {
             this.InitializeComponent();
             View = (ViewModel.ViewModel) DataContext;
-            View.Content = Frame;
+            View.Content = frame;
             View.Read();
         }
 

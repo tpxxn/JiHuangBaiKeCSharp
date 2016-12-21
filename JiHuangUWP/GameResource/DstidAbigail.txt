@@ -1,0 +1,1494 @@
+﻿Abigail's Flower
+Abigail之花
+c_give("abigail_flower",1)
+S_abigail's_flower_1.png
+
+Applied Horticulture
+应用园艺学
+c_give("book_gardening",1)
+S_applied_horticulture.png
+
+Ashes	
+灰烬	
+c_give("ash",1)
+G_ash.png
+
+Axe	
+斧头	
+c_give("axe",1)
+S_axe.png
+
+Backpack	
+背包
+c_give("backpack",1)
+S_backpack.png
+
+Bacon and Eggs	
+鸡蛋火腿	
+c_give("baconeggs",1)
+F_bacon_and_eggs.png
+
+Ball and Cup	
+球与奖杯
+c_give("trinket_7",1)
+T_ball_and_cup.png
+
+Bat Bat	
+蝙蝠斧棍	
+c_give("batbat",1)
+S_bat_bat.png
+
+Batilisk Wing	
+黑蝙蝠翅膀	
+c_give("batwing",1)
+F_batilisk_wing.png
+
+Beard Hair	
+胡须	
+c_give("beardhair",1)
+G_beard_hair.png
+
+Beardling	
+兔子	
+c_give("rabbit",1)
+A_beardling.png
+
+Bee	
+蜜蜂	
+c_give("bee",1)
+A_bee.png
+
+Bee Mine	
+蜜蜂地雷	
+c_give("beemine",1)
+S_bee_mine.png
+
+Beefalo Hat	
+牛帽	
+c_give("beefalohat",1)
+S_beefalo_hat.png
+
+Beefalo Horn	
+牛角	
+c_give("horn",1)
+G_beefalo_horn.png
+
+Beefalo Wool	
+牛毛	
+c_give("beefalowool",1)
+G_beefalo_wool.png
+
+Beekeeper Hat	
+养蜂人的帽子	
+c_give("beehat",1)
+S_beekeeper_hat.png
+
+Belt of Hunger	
+饥饿腰带	
+c_give("armorslurper",1)
+S_belt_of_hunger.png
+
+Berries	
+浆果	
+c_give("berries",1)
+F_berries.png
+
+Berry Bush	
+浆果灌木丛	
+c_give("dug_berrybush",1)
+G_berry_bush.png
+
+Birds of the World	
+世界上的鸟	
+c_give("book_birds",1)
+S_birds_of_the_world.png
+
+Bird Trap	
+捕鸟器	
+c_give("birdtrap",1)
+S_bird_trap.png.png
+
+Blow Dart	
+吹箭	
+c_give("blowdart_pipe",1)
+.png
+
+Blue Cap	
+蓝菇头	
+c_give("blue_cap",1)
+.png
+
+Blue Gem	
+蓝宝石	
+c_give("bluegem",1)
+.png
+
+Blueprint	
+蓝图	
+c_give("<name>_blueprint",1)
+.png
+
+Boards	
+木板	
+c_give("boards",1)
+.png
+
+Boomerang
+回旋镖	
+c_give("boomerang",1)
+.png
+
+Box Thing
+盒状传送机零件	
+c_give("teleportato_box",1)
+.png
+
+Braised Eggplant	
+红烧茄子	
+c_give("eggplant_cooked",1)
+.png
+
+Breezy Vest	
+夏日背心	
+c_give("trunkvest_summer",1)
+.png
+
+Broken Shell	
+破碎的背壳	
+c_give("slurtle_shellpieces",1)
+.png
+
+Bug Net	
+捕虫网	
+c_give("bugnet",1)
+.png
+
+Bunny Puff	
+兔毛	
+c_give("manrabbit_tail",1)
+.png
+
+Bush Hat	
+丛林帽	
+c_give("bushhat",1)
+.png
+
+Butter	
+蝴蝶黄油	
+c_give("butter",1)
+.png
+
+Butter Muffin	
+奶油松饼	
+c_give("butterflymuffin",1)
+.png
+
+Butterfly	
+蝴蝶	
+c_give("butterfly",1)
+.png
+
+Butterfly Wings	
+蝴蝶翅膀	
+c_give("butterflywings",1)
+.png
+
+Carrot	
+胡萝卜	
+c_give("carrot",1)
+.png
+
+Carrot Seeds	
+胡萝卜种子	
+c_give("carrot_seeds",1)
+.png
+
+Cave Banana	
+洞穴香蕉	
+c_give("cave_banana",1)
+.png
+
+Cave Rock Turf	
+洞穴石地	
+c_give("turf_underrock",1)
+.png
+
+Charcoal	
+木炭	
+c_give("charcoal",1)
+.png
+
+Carpeted Flooring	
+地毯地板	
+c_give("turf_carpetfloor",1)
+.png
+
+Checkerboard Flooring	
+棋盘地毯	
+c_give("turf_checkerfloor",1)
+.png
+
+Chilled Amulet	
+寒冰护符	
+c_give("blueamulet",1)
+.png
+
+Cobblestones	
+卵石路	
+c_give("turf_road",1)
+.png
+
+Codex Umbra	
+暗影密典	
+c_give("waxwelljournal",1)
+.png
+
+Construction Amulet	
+建造护符	
+c_give("greenamulet",1)
+.png
+
+Cooked Batilisk Wing	
+煮熟的黑蝙蝠翅膀	
+c_give("batwing_cooked",1)
+.png
+
+Cooked Blue Cap	
+烤蓝蘑菇	
+c_give("blue_cap_cooked",1)
+.png
+
+Cooked Cave Banana	
+洞穴香蕉	
+c_give("cave_banana_cooked",1)
+.png
+
+Cooked Egg	
+熟鸡蛋	
+c_give("bird_egg_cooked",1)
+.png
+
+Cooked Eel	
+煮熟的鳗鱼	
+c_give("eel_cooked",1)
+.png
+
+Cooked Fish
+	熟鱼	
+c_give("fish_cooked",1)
+.png
+
+Cooked Frog Legs	
+熟青蛙腿	
+c_give("froglegs_cooked",1)
+.png
+
+Cooked Green Cap	
+烤绿蘑菇	
+c_give("green_cap_cooked",1)
+.png
+
+Cooked Leafy Meat	
+煮熟的多叶肉	
+c_give("plantmeat_cooked",1)
+.png
+
+Cooked Mandrake	
+熟曼德拉草	
+c_give("mandrake",1)
+.png
+
+Cooked Meat	
+熟肉	
+c_give("cookedmeat",1)
+.png
+
+Cooked Monster Meat	
+熟怪兽肉	
+c_give("cookedmonstermeat",1)
+.png
+
+Cooked Morsel	
+熟肉块	
+c_give("cookedsmallmeat",1)
+.png
+
+Cooked Red Cap	
+烤红蘑菇	
+c_give("red_cap_cooked",1)
+.png
+
+Compass	
+指南针	
+c_give("compass",1)
+.png
+
+Corn	
+玉米	
+c_give("corn",1)
+.png
+
+Corn Seeds	
+玉米种子	
+c_give("corn_seeds",1)
+.png
+
+Crank Thing	
+曲柄状传送机零件	
+c_give("teleportato_crank",1)
+.png
+
+Crimson Feather	
+红色羽毛	
+c_give("feather_robin",1)
+.png
+
+Crow	
+乌鸦	
+c_give("crow",1)
+.png
+
+Crow Feather	
+黑色羽毛	
+c_give("feather_crow",1)
+.png
+
+Cut Grass	
+割下的草	
+c_give("cutgrass",1)
+.png
+
+Cut Reeds	
+割好的芦苇	
+c_give("cutreeds",1)
+.png
+
+Cut Stone	
+石砖块	
+c_give("cutstone",1)
+.png
+
+Dapper Vest	
+小巧背心	
+c_give("sweatervest",1)
+.png
+
+Dark Petals	
+恶魔花瓣	
+c_give("petals_evil",1)
+.png
+
+Dark Sword	
+影刀	
+c_give("nightsword",1)
+.png
+
+Deconstruction Staff	
+毁灭权杖	
+c_give("greenstaff",1)
+.png
+
+Deerclops Eyeball	
+巨鹿眼球	
+c_give("deerclops_eyeball",1)
+.png
+
+Dessicated Tentacle	
+干瘪触手	
+c_give("trinket_12",1)
+.png
+
+Divining Rod	
+魔杖	
+c_give("diviningrod",1)
+.png
+
+Dragon Fruit	
+火龙果	
+c_give("dragonfruit",1)
+.png
+
+Dragon Fruit Seeds	
+火龙果种子	
+c_give("dragonfruit_seeds",1)
+.png
+
+Dragonpie	
+火龙果派	
+c_give("dragonpie",1)
+.png
+
+Drumstick	
+鸡腿	
+c_give("drumstick",1)
+.png
+
+Durian	
+榴莲	
+c_give("durian",1)
+.png
+
+Durian Seeds	
+榴莲种子	
+c_give("durian_seeds",1)
+.png
+
+Eel	
+鳗鱼	
+c_give("eel",1)
+.png
+
+Egg	
+鸡蛋	
+c_give("bird_egg",1)
+.png
+
+Eggplant	
+茄子	
+c_give("eggplant",1)
+.png
+
+Eggplant Seeds	
+茄子种子	
+c_give("eggplant_seeds",1)
+.png
+
+Extra Smelly Durian	
+超臭榴莲	
+c_give("durian_cooked",1)
+.png
+
+Eye Bone	
+切斯特眼骨	
+c_give("chester_eyebone",1)
+.png
+
+Fake Kazoo	
+假卡祖笛	
+c_give("trinket_2",1)
+.png
+
+Feather Hat	
+羽毛帽	
+c_give("featherhat",1)
+.png
+
+Fire Dart	
+燃烧吹箭	
+c_give("blowdart_fire",1)
+.png
+
+Fire Staff	
+火魔杖	
+c_give("firestaff",1)
+.png
+
+Fireflies	
+萤火虫	
+c_give("fireflies",1)
+.png
+
+Fish	
+鱼	
+c_give("fish"
+
+Fish Tacos	
+鱼炸玉米饼	
+c_give("fishtacos",1)
+.png
+
+Fishing Rod	
+钓竿	
+c_give("fishingrod",1)
+.png
+
+Fishsticks	
+炸鱼条	
+c_give("fishsticks",1)
+.png
+
+Fist Full of Jam	
+果酱蜜饯	
+c_give("jammypreserves",1)
+.png
+
+Fleshy Bulb	
+多肉的球茎	
+c_give("lureplantbulb",1)
+.png
+
+Flint	
+燧石	
+c_give("flint",1)
+.png
+
+Football Helmet	
+猪皮足球头盔	
+c_give("footballhat",1)
+.png
+
+Foliage	
+树叶	
+c_give("foliage",1)
+.png
+
+Forest Turf	
+森林草皮	
+c_give("turf_forest",1)
+.png
+
+Frazzled Wires	
+破烂电线	
+c_give("trinket_6",1)
+.png
+
+Fried Drumstick
+	炸鸡腿	
+c_give("drumstick_cooked",1)
+.png
+
+Fried Tallbird Egg	
+油煎高脚鸟蛋	
+c_give("tallbirdegg_cooked",1)
+.png
+
+Frog Legs	
+青蛙腿	
+c_give("froglegs",1)
+.png
+
+Froggle Bunwich	
+青蛙圆面包三明治	
+c_give("frogglebunwich",1)
+.png
+
+Fruit Medley	
+水果拼盘	
+c_give("fruitmedley",1)
+.png
+
+Fungal Turf (Blue)	
+菌类地皮（蓝）	
+c_give("turf_fungus",1)
+.png
+
+Fungal Turf (Red)	
+菌类地皮（红）	
+c_give("turf_fungus",1)
+.png
+
+Fungal Turf (Green)	
+菌类地皮（绿）	
+c_give("turf_fungus",1)
+.png
+
+Fur Roll	
+毛皮铺盖	
+c_give("bedroll_furry",1)
+.png
+
+Garland	
+花环	
+c_give("flowerhat",1)
+.png
+
+Gears	
+齿轮	
+c_give("gears",1)
+.png
+
+Glow Berry	
+发光浆果	
+c_give("wormlight",1)
+.png
+
+Gnome	
+地精玩偶	
+c_give("trinket_4",1)
+.png
+
+Gold Nugget	
+金块	
+c_give("goldnugget",1)
+.png
+
+Gord's Knot	
+歌德结	
+c_give("trinket_3",1)
+.png
+
+Grass Suit	
+草地盔甲	
+c_give("armorgrass",1)
+.png
+
+Grass Tuft	
+长草簇	
+c_give("grass",1)
+.png
+
+Grass Turf	
+长草草皮	
+c_give("turf_grass",1)
+.png
+
+Green Gem	
+绿宝石	
+c_give("greengem",1)
+.png
+
+Green Cap	
+绿菇头	
+c_give("green_cap",1)
+.png
+
+Guano	
+鸟屎	
+c_give("guano",1)
+.png
+
+Guano Turf	
+鸟粪草地	
+c_give("turf_cave",1)
+.png
+
+
+Guardian's Horn	
+守卫者的角	
+c_give("minotaurhorn",1)
+.png
+
+Gunpowder	
+火药	
+c_give("gunpowder",1)
+.png
+
+Ham Bat	
+火腿球棒	
+c_give("hambat",1)
+.png
+
+Hammer	
+锤子	
+c_give("hammer",1)
+.png
+
+Hardened Rubber Bung	
+硬化橡胶塞	
+c_give("trinket_8",1)
+.png
+
+Hatching Tallbird Egg	
+孵化的高脚鸟蛋	
+c_give("tallbirdegg_cracked",1)
+.png
+
+Hay Wall	
+干草墙	
+c_give("wall_hay_item",1)
+.png
+
+Healing Salve	
+治疗药膏	
+c_give("healingsalve",1)
+.png
+
+Thermal Stone	
+蓄热石	
+c_give("heatrock",1)
+.png
+
+Honey	
+蜂蜜	
+c_give("honey",1)
+.png
+
+Honey Ham	
+蜜汁火腿	
+c_give("honeyham",1)
+.png
+
+Honey Nuggets	
+甜蜜金砖	
+c_give("honeynuggets",1)
+.png
+
+Honey Poultice	
+蜂蜜药膏	
+c_give("bandage",1)
+.png
+
+Honeycomb	
+蜂巢	
+c_give("honeycomb",1)
+.png
+
+Hot Pumpkin	
+热南瓜	
+c_give("pumpkin_cooked",1)
+.png
+
+Hound's Tooth	
+狗牙	
+c_give("houndstooth",1)
+.png
+
+Houndius Shootius	
+恒迪尤斯·舒提尤斯	
+c_give("eyeturret_item",1)
+.png
+
+Ice Staff	
+冰魔杖	
+c_give("icestaff",1)
+.png
+
+Jerky	
+乔奇	
+c_give("meat_dried",1)
+.png
+
+Kabobs	
+肉串	
+c_give("kabobs",1)
+.png
+
+Killer Bee	
+杀人蜂	
+c_give("killerbee",1)
+.png
+
+Koalefant Trunk	
+红色象鼻	
+c_give("trunk_summer",1)
+.png
+
+Koalefant Trunk Steak	
+烤熟象鼻	
+c_give("trunk_cooked",1)
+.png
+
+Krampus Sack	
+坎普斯背包	
+c_give("krampus_sack",1)
+.png
+
+Lantern	
+提灯	
+c_give("lantern",1)
+.png
+
+The Lazy Forager	
+懒惰的强盗	
+c_give("orangeamulet",1)
+.png
+
+Lichen	
+苔藓	
+c_give("cutlichen",1)
+.png
+
+Leafy Meat	
+多叶的肉	
+c_give("plantmeat",1)
+.png
+
+Life Giving Amulet	
+提神护符	
+c_give("amulet",1)
+.png
+
+Light Bulb	
+荧光果	
+c_give("lightbulb",1)
+.png
+
+Living Log	
+活木	
+c_give("livinglog",1)
+.png
+
+Log	
+木材	
+c_give("log",1)
+.png
+
+Log Suit	
+木制盔甲	
+c_give("armorwood",1)
+.png
+
+Lucy the Axe	
+露西斧	
+c_give("lucy",1)
+.png
+
+Luxury Axe
+金斧头	
+c_give("goldenaxe",1)
+.png
+
+Lying Robot	
+半躺机器人	
+c_give("trinket_11",1)
+.png
+
+Magiluminescence	
+魔力之光	
+c_give("yellowamulet",1)
+.png
+
+Mandrake	
+曼德拉草	
+c_give("mandrake",1)
+.png
+
+Mandrake Soup	
+曼德拉草汤	
+c_give("mandrakesoup",1)
+.png
+
+Manure	
+便便	
+c_give("poop",1)
+.png
+
+Marble	
+大理石	
+c_give("marble",1)
+.png
+
+Marble Suit	
+大理石盔甲	
+c_give("armormarble",1)
+.png
+
+Marsh Bush	
+尖刺灌木	
+c_give("dug_marsh_bush",1)
+.png
+
+Marsh Turf	
+沼泽草皮	
+c_give("turf_marsh",1)
+.png
+
+Meat	
+肉	
+c_give("meat",1)
+.png
+
+Meatballs	
+肉丸	
+c_give("meatballs",1)
+.png
+
+Meaty Stew	
+肉汤	
+c_give("bonestew",1)
+.png
+
+Melty Marbles	
+融化的大理石	
+c_give("trinket_1",1)
+.png
+
+Metal Potato Thing	
+球状传送机零件	
+c_give("teleportato_potato",1)
+.png
+
+Miner Hat	
+矿工帽	
+c_give("minerhat",1)
+.png
+
+Mismatched Buttons	
+不匹配的钮扣	
+c_give("trinket_9",1)
+.png
+
+Monster Jerky	
+怪兽肉干	
+c_give("monstermeat_dried",1)
+.png
+
+Monster Lasagna	
+怪物千层饼	
+c_give("monsterlasagna",1)
+.png
+
+Monster Meat	
+怪兽肉	
+c_give("monstermeat",1)
+.png
+
+Morsel	
+小肉块	
+c_give("smallmeat",1)
+.png
+
+Mosquito	
+蚊子	
+c_give("mosquito",1)
+.png
+
+Mosquito Sack	
+蚊子血袋	
+c_give("mosquitosack",1)
+.png
+
+Mud Turf	
+泥泞草地	
+c_give("turf_mud",1)
+.png
+
+Night Armour	
+魂甲	
+c_give("armor_sanity",1)
+.png
+
+Nightmare Fuel	
+噩梦燃料	
+c_give("nightmarefuel",1)
+.png
+
+Nightmare Amulet	
+梦魇护符	
+c_give("purpleamulet",1)
+.png
+
+Nitre	
+硝石	
+c_give("nitre",1)
+.png
+
+On Tentacles	
+在触手上	
+c_give("book_tentacles",1)
+.png
+
+One-man Band	
+独奏乐器	
+c_give("onemanband",1)
+.png
+
+Opulent Pickaxe	
+黄金鹤嘴锄	
+c_give("goldenpickaxe",1)
+.png
+
+Orange Gem	
+橙宝石	
+c_give("orangegem",1)
+.png
+
+Pan Flute	
+排箫	
+c_give("panflute",1)
+.png
+
+Papyrus	
+莎草纸	
+c_give("papyrus",1)
+.png
+
+Petals	
+花瓣	
+c_give("petals",1)
+.png
+
+Pickaxe	
+鹤嘴锄	
+c_give("pickaxe",1)
+.png
+
+Pick/Axe	
+镐斧	
+c_give("multitool_axe_pickaxe",1)
+.png
+
+Pierogi	
+饺子	
+c_give("perogies",1)
+.png
+
+Pig Skin	
+猪皮	
+c_give("pigskin",1)
+.png
+
+Piggyback	
+小猪包	
+c_give("piggyback",1)
+.png
+
+Pile o' Balloons	
+一堆气球	
+c_give("balloons_empty",1)
+.png
+
+Pine Cone	
+松果	
+c_give("pinecone",1)
+.png
+
+Pitchfork	
+草叉	
+c_give("pitchfork",1)
+.png
+
+Pomegranate
+	石榴	
+c_give("pomegranate",1)
+.png
+
+Pomegranate Seeds	
+石榴种子	
+c_give("pomegranate_seeds",1)
+.png
+
+Popcorn	
+爆米花	
+c_give("corn_cooked",1)
+.png
+
+Powdercake	
+芝士蛋糕	
+c_give("powcake",1)
+.png
+
+Prepared Dragon Fruit	
+精致火龙果	
+c_give("dragonfruit_cooked",1)
+.png
+
+Puffy Vest	
+寒冬背心	
+c_give("trunkvest_winter",1)
+.png
+
+Pumpkin	
+普奇里	
+c_give("pumpkin",1)
+.png
+
+Pumpkin Seeds	
+南瓜种子	
+c_give("pumpkin_seeds",1)
+.png
+
+Pumpkin Cookie	
+南瓜饼	
+c_give("pumpkincookie",1)
+.png
+
+Pumpkin Lantern	
+南瓜灯	
+c_give("pumpkin_lantern",1)
+.png
+
+Purple Gem	
+紫宝石	
+c_give("purplegem",1)
+.png
+
+Rabbit	
+兔子	
+c_give("rabbit",1)
+.png
+
+Rabbit Earmuffs	
+兔毛耳套	
+c_give("earmuffshat",1)
+.png
+
+Ratatouille	
+蔬菜杂烩	
+c_give("ratatouille",1)
+.png
+
+Razor	
+剃刀	
+c_give("razor",1)
+.png
+
+Red Gem	
+红宝石	
+c_give("redgem",1)
+.png
+
+Red Cap	
+红菇头	
+c_give("red_cap",1)
+.png
+
+Redbird	
+红雀	
+c_give("robin",1)
+.png
+
+Regal Shovel	
+黄金铁铲	
+c_give("goldenshovel",1)
+.png
+
+Ring Thing	
+环状传送机零件	
+c_give("teleportato_ring",1)
+.png
+
+Roasted Berries	
+烤浆果	
+c_give("berries_cooked",1)
+.png
+
+Roasted Carrot	
+烤胡萝卜	
+c_give("carrot_cooked",1)
+.png
+
+Rocks	
+岩石	
+c_give("rocks",1)
+.png
+
+Rocky Turf	
+岩石草皮	
+c_give("turf_rocky",1)
+.png
+
+Rope	
+绳索	
+c_give("rope",1)
+.png
+
+Rot	
+腐烂食物	
+c_give("spoiled_food",1)
+.png
+
+Rotten Egg	
+烂鸡蛋	
+c_give("rottenegg",1)
+.png
+
+Dug Sapling	
+树苗	
+c_give("sapling",1)
+.png
+
+Savanna Turf	
+热带草原草皮	
+c_give("turf_savanna",1)
+.png
+
+Second-hand Dentures	
+二手假牙	
+c_give("trinket_10",1)
+.png
+
+Seeds	
+种子	
+c_give("seeds",1)
+.png
+
+Sewing Kit	
+缝纫工具包	
+c_give("sewing_kit",1)
+.png
+
+Shelmet	
+背壳头盔	
+c_give("slurtlehat",1)
+.png
+
+Shovel	
+铁铲	
+c_give("shovel",1)
+.png
+
+Silk	
+蜘蛛网	
+c_give("silk",1)
+.png
+
+Sleep Dart	
+麻醉吹箭	
+c_give("blowdart_sleep",1)
+.png
+
+Sleepytime Stories	
+睡前的故事	
+c_give("book_sleep",1)
+.png
+
+Sliced Pomegranate	
+石榴片	
+c_give("pomegranate_cooked",1)
+.png
+
+Slimey Turf	
+粘滑地皮	
+c_give("turf_sinkhole",1)
+.png
+
+Slurper Pelt	
+缀食者之皮	
+c_give("slurper_pelt",1)
+.png
+
+Slurtle Slime	
+粘滑含糊虫	
+c_give("slurtleslime",1)
+.png
+
+Small Jerky	
+小块肉干	
+c_give("smallmeat_dried",1)
+.png
+
+Snowbird	
+雪雀	
+c_give("robin_winter",1)
+.png
+
+Azure Feather	
+蓝色羽毛	
+c_give("feather_robin_winter",1)
+.png
+
+Snurtle Shell Armour	
+蜗牛龟盔甲	
+c_give("armorsnurtleshell",1)
+.png
+
+Spear	
+长矛	
+c_give("spear",1)
+.png
+
+Spider Eggs	
+蜘蛛卵	
+c_give("spidereggsack",1)
+.png
+
+Spider Gland	
+蜘蛛腺体	
+c_give("spidergland",1)
+.png
+
+Spiderhat	
+蜘蛛帽	
+c_give("spiderhat",1)
+.png
+
+Star Caller's Staff	
+星星呼唤者权杖	
+c_give("stafflight",1)
+.png
+
+Stinger	
+蜂刺	
+c_give("stinger",1)
+.png
+
+Stone Wall	
+石墙	
+c_give("wall_stone_item",1)
+.png
+
+Straw Hat	
+草帽	
+c_give("strawhat",1)
+.png
+
+Straw Roll	
+稻草卷	
+c_give("bedroll_straw",1)
+.png
+
+Stuffed Eggplant	
+香酥茄盒	
+c_give("stuffedeggplant",1)
+.png
+
+Taffy	
+太妃糖	
+c_give("taffy",1)
+.png
+
+Tallbird Egg	
+高脚鸟蛋	
+c_give("tallbirdegg",1)
+.png
+
+Tam o' Shanter	
+贝雷帽	
+c_give("walrushat",1)
+.png
+
+Telelocator Staff	
+传送权杖	
+c_give("telestaff",1)
+.png
+
+Tentacle Spike	
+触手尖刺	
+c_give("tentaclespike",1)
+.png
+
+Tentacle Spots	
+斑点触手皮	
+c_give("tentaclespots",1)
+.png
+
+The End is Nigh!	
+快要结束了！	
+c_give("book_brimstone",1)
+.png
+
+The Lazy Explorer	
+懒惰的探索者	
+c_give("orangestaff",1)
+.png
+
+Thulecite	
+铥矿	
+c_give("thulecite",1)
+.png
+
+Thulecite Crown	
+铥矿石皇冠	
+c_give("ruinshat",1)
+.png
+
+Thulecite Fragments	
+铥矿石碎片	
+c_give("thulecite_pieces",1)
+.png
+
+Thulecite Club	
+铥矿棒	
+c_give("ruins_bat",1)
+.png
+
+Thulecite Medallion	
+铥矿奖章	
+c_give("nightmare_timepiece",1)
+.png
+
+Thulecite Suit	
+铥矿甲胄	
+c_give("armorruins",1)
+.png
+
+Thulecite Wall	
+铥矿墙壁	
+c_give("wall_ruins_item",1)
+.png
+
+Tiny Rocketship	
+小型火箭飞船	
+c_give("trinket_5",1)
+.png
+
+Toasted Seeds	
+烤种子	
+c_give("seeds_cooked",1)
+.png
+
+Tooth Trap	
+狗牙陷阱	
+c_give("trap_teeth",1)
+.png
+
+Top Hat	
+高礼帽	
+c_give("tophat",1)
+.png
+
+Torch	
+火炬	
+c_give("torch",1)
+.png
+
+Trap	
+陷阱	
+c_give("trap",1)
+.png
+
+Turkey Dinner	
+火鸡正餐	
+c_give("turkeydinner",1)
+.png
+
+Twigs	
+小树枝	
+c_give("twigs",1)
+.png
+
+Umbrella	
+雨伞	
+c_give("umbrella",1)
+.png
+
+Unagi	
+鳗鱼	
+c_give("unagi",1)
+.png
+
+Walking Cane	
+步行手杖	
+c_give("cane",1)
+.png
+
+Waffles	
+华夫饼	
+c_give("waffles",1)
+.png
+
+Walrus Tusk	
+海象牙	
+c_give("walrus_tusk",1)
+.png
+
+Wet Goop	
+湿腻焦糊	
+c_give("wetgoop",1)
+.png
+
+Winter Hat	
+寒冬帽	
+c_give("winterhat",1)
+.png
+
+Winter Rabbit	
+兔子	
+c_give("rabbit",1)
+.png
+
+Winter Koalefant Trunk	
+蓝色象鼻	
+c_give("trunk_winter",1)
+.png
+
+Willow's Lighter	
+薇洛的打火机	
+c_give("lighter",1)
+.png
+
+Wood Wall	
+木墙	
+c_give("wall_wood_item",1)
+.png
+
+Wooden Flooring	
+木质地板	
+c_give("turf_woodfloor",1)
+.png
+
+Yellow Gem	
+黄宝石	
+c_give("yellowgem",1)
+.png
