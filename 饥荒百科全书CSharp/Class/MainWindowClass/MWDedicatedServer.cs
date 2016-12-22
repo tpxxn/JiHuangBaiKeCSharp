@@ -853,7 +853,7 @@ namespace 饥荒百科全书CSharp
 
         #region 回档 等
         // 发送"消息"
-        private void ssendMessage(string messageStr)
+        private void ssendMessage(string messageStr) 
         {
             mySendMessage mySendMessage = new mySendMessage();
 

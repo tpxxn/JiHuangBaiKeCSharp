@@ -679,7 +679,7 @@ namespace 饥荒百科全书CSharp
         
           
     
-            string[] GameVersion = new string[] { "Steam", "TGP", "游侠" };
+            string[] GameVersion = new string[] { "Steam", "TGP"};
             DediSettingGameVersionSelect.ItemsSource=GameVersion;            
             DediButtomPanelVisibilityInitialize();
 
