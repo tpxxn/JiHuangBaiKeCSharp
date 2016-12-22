@@ -59,8 +59,6 @@ namespace JiHuangUWP.ViewModel
             List<DstidAbigail> dstidAbigail = new List<DstidAbigail>();
             try
             {
-
-
                 string url = "ms-appx:///GameResource/DstidAbigail.txt";
                 StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri(url));
 

@@ -1,1 +1,1 @@
-Y:\JiHuangBaiKeCSharp\JiHuangUWP\AppPackages\JiHuangUWP_1.1.1.0\JiHuangUWP_1.1.1.0_x86_x64_arm.appxbundle
+Y:\JiHuangBaiKeCSharp\JiHuangUWP\AppPackages\JiHuangUWP_1.1.5.0\JiHuangUWP_1.1.5.0_x86_x64_arm.appxbundle
