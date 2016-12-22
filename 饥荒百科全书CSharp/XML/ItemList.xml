@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <items>
   <!--其他命令-->
-  <other>
-    <details chinese="保存" code="" image= ""/>
-    <details chinese="重置世界" code="" image= ""/>
-    <details chinese="回档" code="" image= ""/>
-    <details chinese="复活" code="" image= ""/>
+  <other chinese="其他">
+    <details chinese="保存" code="c_save()" image= ""/>
+    <details chinese="重置世界" code="c_regenerateworld()" image= ""/>
+    <details chinese="回档" code="c_rollback(1)" image= ""/>
+    <details chinese="复活" code="for k, v in pairs(AllPlayers) do v: PushEvent('respawnfromghost') end" image= ""/>
+    <details chinese="全物品直接制造" code="GetPlayer().components.builder:GiveAllRecipes()" image= ""/>
+    <details chinese="跳过一天" code="GetClock():MakeNextDay()" image= ""/>
+    <details chinese="开始春天" code="GetSeasonManager():StartSpring()" image= ""/>
+    <details chinese="开始秋天" code="GetSeasonManager():StartAutumn()" image= ""/>
+    <details chinese="开始冬天" code="GetSeasonManager():StartWinter()" image= ""/>
+    <details chinese="开始夏天" code="GetSeasonManager():StartSummer()" image= ""/>
+    <details chinese="开始下雨" code="GetSeasonManager():StartPrecip()" image= ""/>
+    <details chinese="停止下雨" code="GetSeasonManager():StopPrecip()" image= ""/>
+
   </other>
   <!--食物-->
-  <food>
+  <food chinese="食物">
     <details code="acorn" chinese="橡果" image="" />
     <details code="acorn_cooked" chinese="熟橡果" image="" />
     <details code="baconeggs" chinese="鸡蛋火腿" image="" />
@@ -127,7 +136,7 @@
     <details code="wormlight" chinese="发光浆果" image="" />
   </food>
   <!--资源-->
-  <resources>
+  <resources chinese="资源">
     <details code="acorn" chinese="橡果" image="" />
     <details code="ash" chinese="灰" image="" />
     <details code="batwing" chinese="蝙蝠翅膀" image="" />
@@ -291,7 +300,7 @@
     <details code="winter_ornament_plain8" chinese="" image="" />
   </resources>
   <!--工具-->
-  <tools>
+  <tools chinese="工具">
     <details code="abigail_flower" chinese="阿比盖尔之花" image="" />
     <details code="axe" chinese="斧子" image="" />
     <details code="balloons_empty" chinese="空气球" image="" />
@@ -361,7 +370,7 @@
     <details code="bundlewrap" chinese="" image="" />
   </tools>
   <!--武器-->
-  <weapons>
+  <weapons chinese="武器">
     <details code="armor_sanity" chinese="夜魔盔甲" image="" />
     <details code="armorgrass" chinese="草盔甲" image="" />
     <details code="armormarble" chinese="大理石盔甲" image="" />
@@ -400,7 +409,7 @@
     <details code="blowdart_yellow" chinese="" image="" />
   </weapons>
   <!--礼物-->
-  <gifts>
+  <gifts chinese="礼物">
     <details code="nightmare_timepiece" chinese="铥矿奖章" image="" />
     <details code="teleportato_box" chinese="盒状传送机零件" image="" />
     <details code="teleportato_crank" chinese="曲柄状传送机零件" image="" />
@@ -445,7 +454,7 @@
     <details code="trinket_37" chinese="" image="" />
   </gifts>
   <!--衣服-->
-  <clothes>
+  <clothes chinese="衣物">
     <details code="amulet" chinese="红色护身符" image="" />
     <details code="armordragonfly" chinese="蜻蜓盔甲" image="" />
     <details code="armorsnurtleshell" chinese="蜗牛龟盔甲" image="" />

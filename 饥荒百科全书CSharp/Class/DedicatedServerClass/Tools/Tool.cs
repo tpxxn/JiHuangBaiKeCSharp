@@ -9,12 +9,36 @@ namespace ServerTools
 {
     class Tool
     {
+
+
+        #region 读取资源文件
+        /// <summary>
+        /// 读取资源文件
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static string ReadResources(string path)
+        {
+            UTF8Encoding utf8NoBom = new UTF8Encoding(false);
+
+            System.Reflection.Assembly _assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            System.IO.Stream sStream = _assembly.GetManifestResourceStream("饥荒百科全书CSharp." + path);
+            StreamReader sr = new StreamReader(sStream, Encoding.UTF8);
+
+            return sr.ReadToEnd();
+        }
+
+
+        #endregion
+
+
+
         /// <summary>
         /// 拷贝文件夹,会覆盖!!
         /// </summary>
         /// <param name="strFromPath"></param>
         /// <param name="strToPath"></param>
-        public  static  void CopyDirectory(string strFromPath, string strToPath)
+        public static  void CopyDirectory(string strFromPath, string strToPath)
         {
             //如果源文件夹不存在，则创建
             if (!Directory.Exists(strFromPath))

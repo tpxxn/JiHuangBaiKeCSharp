@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,10 @@ namespace ServerTools
     /// </summary>
     class XmlHelper
     {
+
+ 
+
+
         #region 读写当前游戏平台
         /// <summary>
         /// 读取当前游戏版本[tgp,steam,游侠] 

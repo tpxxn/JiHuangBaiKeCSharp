@@ -6,7 +6,9 @@ using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Xml;
 using WpfLearn.UserControls;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
 using 饥荒百科全书CSharp.MyUserControl.DedicatedServer;
@@ -38,7 +40,7 @@ namespace 饥荒百科全书CSharp
             }
             set
             {
-                XmlHelper.WriteGamePingTai(  value);
+                XmlHelper.WriteGamePingTai(value);
                 gamePingTai = value;
             }
         }
@@ -106,8 +108,8 @@ namespace 饥荒百科全书CSharp
             if (((RadioButton)sender).Content.ToString() == "创建世界")
             {
                 // 复制一份过去                  
-                Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
-
+                //Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
+                CopyServerModel(pathAll.DoNotStarveTogether_DirPath);
                 // 改名字
                 if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao))
                 {
@@ -129,6 +131,8 @@ namespace 饥荒百科全书CSharp
             SetCavesSet();
             // 4. "Mod"
             SetModSet();
+            // 5. "控制台"
+            CreateConsoleButton();
 
         }
 
@@ -220,7 +224,7 @@ namespace 饥荒百科全书CSharp
                 {
                     Height = 300,
                     Width = 300,
-                    Content = "QQ群: 580332268 \r\n 啦啦啦",
+                    Content = "QQ群: 580332268 \r\n mod类型:\r\n 所有人: 所有人都必须有.\r\n 服务器:只要服务器有就行了",
                     FontWeight = FontWeights.Bold,
                     FontSize = (double)20
                 };
@@ -324,7 +328,7 @@ namespace 饥荒百科全书CSharp
         // 设置"平台"
         private void SetPingTai()
         {
-            gamePingTai = XmlHelper.ReadGamePingTai( );
+            gamePingTai = XmlHelper.ReadGamePingTai();
             DediSettingGameVersionSelect.Text = gamePingTai;
             Debug.WriteLine("游戏平台-完");
         }
@@ -364,7 +368,7 @@ namespace 饥荒百科全书CSharp
             DediOverWorldResources.Children.Clear();
             // 地上 分类
 
-            Dictionary<string, string> OverWorld_FenLei = XmlHelper.ReadWorldFenLei( false);
+            Dictionary<string, string> OverWorld_FenLei = XmlHelper.ReadWorldFenLei(false);
 
             Dictionary<string, ShowWorld> foods = new Dictionary<string, ShowWorld>();
             Dictionary<string, ShowWorld> animals = new Dictionary<string, ShowWorld>();
@@ -428,7 +432,7 @@ namespace 饥荒百科全书CSharp
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
-                            
+
                 };
                 di.SelectionChanged += DiOverWorld_SelectionChanged;
                 DediOverWorldWorld.Children.Add(di);
@@ -541,7 +545,7 @@ namespace 饥荒百科全书CSharp
             DediCavesResources.Children.Clear();
             // 地下 分类
 
-            Dictionary<string, string> fenleil = XmlHelper.ReadWorldFenLei( true);
+            Dictionary<string, string> fenleil = XmlHelper.ReadWorldFenLei(true);
 
             Dictionary<string, ShowWorld> foods = new Dictionary<string, ShowWorld>();
             Dictionary<string, ShowWorld> animals = new Dictionary<string, ShowWorld>();
@@ -726,7 +730,8 @@ namespace 饥荒百科全书CSharp
             if (ServerTGPPathList.Count == 0)
             {
                 // 复制一份过去                  
-                Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
+                //Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
+                CopyServerModel(pathAll.DoNotStarveTogether_DirPath);
 
                 // 改名字
                 if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_0"))
@@ -851,9 +856,9 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region 回档 等
+        #region 控制台
         // 发送"消息"
-        private void ssendMessage(string messageStr) 
+        private void ssendMessage(string messageStr)
         {
             mySendMessage mySendMessage = new mySendMessage();
 
@@ -867,65 +872,108 @@ namespace 饥荒百科全书CSharp
                 mySendMessage.sendEnter(pstr[i].MainWindowHandle);
             }
         }
-        // 发送"消息"
-        private void SendMessage(Message m, int n = 1)
-        {
-            System.Windows.Forms.MessageBoxButtons messButton = System.Windows.Forms.MessageBoxButtons.OKCancel;
+ 
 
-            System.Windows.Forms.DialogResult dr = System.Windows.Forms.MessageBox.Show("命令也会复制到剪贴板,如果没成功请手动粘贴到黑窗口,[TGP版]可能不成功", "确认", messButton);
-            if (dr == System.Windows.Forms.DialogResult.OK)//如果点击“确定”按钮
-            {
-
-                string str = "";
-                if (m == Message.复活)
-                {
-                    str = @"for k, v in pairs(AllPlayers) do v: PushEvent('respawnfromghost') end";
-                }
-                if (m == Message.保存)
-                {
-                    str = @"c_save()";
-                }
-                if (m == Message.回档)
-                {
-                    str = @"c_rollback(" + n + ")";
-                }
-                if (m == Message.重置世界)
-                {
-                    str = @"c_regenerateworld()";
-                }
-
-                ssendMessage(str);
-                System.Windows.Forms.Clipboard.SetDataObject(str);
-            }
-        }
-
-        // 按钮
-        private void DediButton_Click(object sender, RoutedEventArgs e)
-        {
-            Button b = (Button)sender;
-            if (b.Content.ToString() == "回档")
-            {
-                SendMessage(Message.回档);
-            }
-            if (b.Content.ToString() == "重置世界")
-            {
-                SendMessage(Message.重置世界);
-            }
-            if (b.Content.ToString() == "保存")
-            {
-                SendMessage(Message.保存);
-            }
-            if (b.Content.ToString() == "复活")
-            {
-                SendMessage(Message.复活);
-            }
-            //if (GamePingTai=="TGP")
-            //{
-            //    MessageBox.Show("命令已经复制到剪贴板,请开启黑窗口的快速编辑模式,粘贴到黑窗口中");
-            //}
-
-        }
         #endregion
+        //DediConsoleFenLei
+        /// <summary>
+        /// 根据分类生产RadioButton
+        /// </summary>
+        private void CreateConsoleButton()
+        {
+            DediConsoleFenLei.Children.Clear();
+            // 读取分类信息
+            System.Reflection.Assembly _assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            System.IO.Stream sStream = _assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ItemList.xml");
+            System.Xml.XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(sStream);
+
+
+            XmlNodeList details = xmldoc.SelectNodes("/items/*");
+
+            foreach (XmlNode item in details)
+            {
+
+                string chinese = ((XmlElement)item).GetAttribute("chinese");
+                // RadioButton
+                RadioButton b = new RadioButton()
+                {
+                    Content = chinese,
+                    Width = 140,
+                    Height = 40,
+                    Foreground = new SolidColorBrush(Colors.Black),
+                    Tag = ((XmlElement)item),
+                    FontWeight = FontWeights.Bold,
+                    Style = (Style)this.FindResource("RadioButtonStyle")
+
+                };
+                b.Checked += B_Click;
+                if (b.Content.ToString()=="其他")
+                {
+                    b.IsChecked = true;
+                }
+                
+                DediConsoleFenLei.Children.Add(b);
+            }
+
+
+        }
+        // 显示具体分类信息
+        private void B_Click(object sender, RoutedEventArgs e)
+        {
+            // 把当前选择的值放到这里了
+            DediConsoleFenLei.Tag=((RadioButton)sender).Content;
+            XmlElement item = (XmlElement)((RadioButton)sender).Tag;
+            DediConsoleDetails.Children.Clear();
+            // 显示具体分类信息
+            XmlNodeList xnl = item.ChildNodes;
+            foreach (XmlNode x in xnl)
+            {
+                string codestr = ((XmlElement)x).GetAttribute("code");
+                string chinesestr = ((XmlElement)x).GetAttribute("chinese");
+                if (string.IsNullOrEmpty(chinesestr))
+                {
+                    continue;
+                }
+                // 按钮
+                Button bx = new Button()
+                {
+                    Content = chinesestr,
+                    Width = 115,
+                    Height = 35,
+                    Tag = codestr,
+                    FontWeight = FontWeights.Bold,
+                    Style = (Style)this.FindResource("DediButtonCreateWorldStyle")
+
+                };
+                bx.Click += Bx_Click;
+                DediConsoleDetails.Children.Add(bx);
+
+
+            }
+        }
+
+        private void Bx_Click(object sender, RoutedEventArgs e)
+        {
+            string code = ((Button)sender).Tag.ToString();
+            // 如果是其他分类,则直接运行code
+            if (DediConsoleFenLei.Tag.ToString() == "其他")
+            {
+                ssendMessage(code);
+                System.Windows.Forms.Clipboard.SetDataObject(code);
+            }
+            // 如果不是其他
+            else
+            {
+                ssendMessage("c_give(\""+ code+"\", 1)");
+                System.Windows.Forms.Clipboard.SetDataObject("c_give(\"" + code + "\", 1)");
+            }
+
+            
+
+
+
+        }
 
         #region 其他
         // 获取房间名
@@ -983,6 +1031,32 @@ namespace 饥荒百科全书CSharp
             }
             return r;
         }
+
+        // 复制Server模板到指定位置
+        private void CopyServerModel(string path)
+        {
+            // 判断是否存在
+            if (Directory.Exists(path + @"\Server"))
+            {
+                Directory.Delete(path + @"\Server", true);
+            }
+            // 建立文件夹
+            Directory.CreateDirectory(path + @"\Server");
+            Directory.CreateDirectory(path + @"\Server\Caves");
+            Directory.CreateDirectory(path + @"\Server\Master");
+
+            // 填文件
+            File.WriteAllText(path + @"\Server\cluster.ini", Tool.ReadResources("Server模板.cluster.ini"), utf8NoBom);
+            File.WriteAllText(path + @"\Server\Caves\leveldataoverride.lua", Tool.ReadResources("Server模板.Caves.leveldataoverride.lua"), utf8NoBom);
+            File.WriteAllText(path + @"\Server\Caves\modoverrides.lua", Tool.ReadResources("Server模板.Caves.modoverrides.lua"), utf8NoBom);
+            File.WriteAllText(path + @"\Server\Caves\server.ini", Tool.ReadResources("Server模板.Caves.server.ini"), utf8NoBom);
+            File.WriteAllText(path + @"\Server\Master\leveldataoverride.lua", Tool.ReadResources("Server模板.Master.leveldataoverride.lua"), utf8NoBom);
+            File.WriteAllText(path + @"\Server\Master\modoverrides.lua", Tool.ReadResources("Server模板.Master.modoverrides.lua"), utf8NoBom);
+            File.WriteAllText(path + @"\Server\Master\server.ini", Tool.ReadResources("Server模板.Master.server.ini"), utf8NoBom);
+
+        }
+
+
         #endregion
     }
 

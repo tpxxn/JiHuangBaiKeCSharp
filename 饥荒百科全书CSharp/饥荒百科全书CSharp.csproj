@@ -296,6 +296,13 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="Server模板\Caves\leveldataoverride.lua" />
+    <EmbeddedResource Include="Server模板\Caves\modoverrides.lua" />
+    <EmbeddedResource Include="Server模板\Caves\server.ini" />
+    <EmbeddedResource Include="Server模板\cluster.ini" />
+    <EmbeddedResource Include="Server模板\Master\leveldataoverride.lua" />
+    <EmbeddedResource Include="Server模板\Master\modoverrides.lua" />
+    <EmbeddedResource Include="Server模板\Master\server.ini" />
     <None Include="VK值.xlsx" />
     <Resource Include="Resources\Cursor\Cursor_link.ani" />
     <Resource Include="Resources\Cursor\Cursor_workOrbusy.ani" />
@@ -4687,9 +4694,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="XML\ItemList.xml">
+    <EmbeddedResource Include="XML\ItemList.xml">
       <SubType>Designer</SubType>
-    </Resource>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

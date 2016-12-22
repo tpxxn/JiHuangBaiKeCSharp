@@ -69,10 +69,7 @@ namespace ServerTools
 
 
 
-        /// <summary>
-        /// 模板路径
-        /// </summary>
-        private string serverMoBanPath;
+    
         /// <summary>
         /// 我的文档
         /// </summary>
@@ -101,7 +98,7 @@ namespace ServerTools
             set
             {
                 current_DirPath = value;
-                ServerMoBanPath = current_DirPath + @"\Server模板\" + GamePingTai + @"\Server";
+              
 
             }
 
@@ -355,21 +352,7 @@ namespace ServerTools
             }
         }
 
-        /// <summary>
-        /// 模板路径
-        /// </summary>
-        public string ServerMoBanPath
-        {
-            get
-            {
-                return serverMoBanPath;
-            }
-
-            set
-            {
-                serverMoBanPath = value;
-            }
-        }
+ 
 
         public string Pic_DirPath
         {
