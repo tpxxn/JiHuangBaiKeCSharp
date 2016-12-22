@@ -47,7 +47,7 @@ namespace JiHuangUWP.ViewModel
             DstidAbigail.Clear();
             foreach (var temp in _dstidAbigail)
             {
-                if (Bdt(temp.Name, DebugStr) || Bdt(temp.Chinese, DebugStr))
+                if (string.IsNullOrEmpty(DebugStr) || Bdt(temp.Name, DebugStr) || Bdt(temp.Chinese, DebugStr))
                 {
                     DstidAbigail.Add(temp);
                 }
@@ -71,6 +71,7 @@ namespace JiHuangUWP.ViewModel
                     if (temp == text[i])
                     {
                         reu = true;
+                        i++;
                         break;
                     }
                 }

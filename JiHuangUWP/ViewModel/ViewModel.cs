@@ -11,7 +11,7 @@ using JiHuangUWP.View;
 
 namespace JiHuangUWP.ViewModel
 {
-    class ViewModel : ViewModelBase
+    public class ViewModel : ViewModelBase
     {
         public ViewModel()
         {
@@ -85,8 +85,6 @@ namespace JiHuangUWP.ViewModel
             {
 
             }
-
-            await Task.Delay(1000);
 
             Navigateto(typeof(DstidModel), dstidAbigail);
         }
