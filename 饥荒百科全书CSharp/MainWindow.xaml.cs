@@ -440,8 +440,9 @@ namespace 饥荒百科全书CSharp
                 {
                     mods = new Mods(pathAll.ServerMods_DirPath);
                 }
-
-                SetModSet();
+                 SetModSet();
+          
+           
             }
 
         }

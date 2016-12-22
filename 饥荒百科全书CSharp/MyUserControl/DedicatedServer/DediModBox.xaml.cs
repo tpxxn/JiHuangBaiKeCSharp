@@ -43,12 +43,14 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
 
         private void Border_GotFocus(object sender, RoutedEventArgs e)
         {
-            UC.Background = new ImageBrush(RSN.PictureShortName(@"../../Resources/DedicatedServer/D_mp_mod_bg.png"));
+            // 有bug,在vs里测试没有问题的,但是放到外面,当勾选某个mod时,会出问题.我不会弄..
+            //UC.Background = new ImageBrush(RSN.PictureShortName(@"../../Resources/DedicatedServer/D_mp_mod_bg.png"));
         }
 
         private void Border_LostFocus(object sender, RoutedEventArgs e)
         {
-            UC.Background = new ImageBrush(RSN.PictureShortName(@"../../Resources/DedicatedServer/D_mp_mod_bg_unchecked.png"));
+            // 有bug,在vs里测试没有问题的,但是放到外面,当勾选某个mod时,会出问题.
+            //UC.Background = new ImageBrush(RSN.PictureShortName(@"../../Resources/DedicatedServer/D_mp_mod_bg_unchecked.png"));
         }
     }
 }

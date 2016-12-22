@@ -131,7 +131,10 @@ namespace 饥荒百科全书CSharp
             // 3. "世界设置"
             SetCavesSet();
             // 4. "Mod"
-            SetModSet();
+          
+                SetModSet();
+       
+          
   
 
         }
@@ -139,7 +142,7 @@ namespace 饥荒百科全书CSharp
         // 设置 "Mod"
         private void SetModSet()
         {   // 设置
-            if (!string.IsNullOrEmpty(pathAll.ServerMods_DirPath))
+            if (!string.IsNullOrEmpty(pathAll.ServerMods_DirPath) )
             {
                 // 清空,Enabled变成默认值
                 foreach (Mod item in mods.ListMod)
@@ -298,14 +301,20 @@ namespace 饥荒百科全书CSharp
         // 设置 "Mod" "CheckBox_Unchecked"
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
+        
+                mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = false;
+     
             //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
-            mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = false;
+          
         }
         // 设置 "Mod" "CheckBox_Checked"
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
+           
+                mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = true;
+   
             //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
-            mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = true;
+          
         }
 
         // 设置"路径"

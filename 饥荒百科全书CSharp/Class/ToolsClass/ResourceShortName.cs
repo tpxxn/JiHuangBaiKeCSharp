@@ -31,6 +31,7 @@ namespace 饥荒百科全书CSharp.Class
             {
                 Picture.UriSource = new Uri("{x:Null}", UriKind.Relative);
             }
+     
             else
             {
                 Picture.UriSource = new Uri(source, UriKind.Relative);

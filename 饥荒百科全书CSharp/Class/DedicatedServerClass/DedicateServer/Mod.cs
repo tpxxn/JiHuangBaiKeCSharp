@@ -333,6 +333,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer
                 if (options == null)
                 {
                     listOptions = null;
+                    // bug,感谢 零下依渡 
+                    continue;
                 }
                 else
                 {
