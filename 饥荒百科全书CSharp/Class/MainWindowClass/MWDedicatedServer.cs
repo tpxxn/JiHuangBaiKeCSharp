@@ -146,13 +146,13 @@ namespace 饥荒百科全书CSharp
                 {
                     item.Enabled = false;
                 }
-                // 细节也要变成默认值,之后再重新读取
+                // 细节也要变成默认值,之后再重新读取1
                 foreach (Mod item in mods.ListMod)
                 {
                     foreach (KeyValuePair<string,ModXiJie> item1 in item.Configuration_options)
                     {
-                        item1.Value.Current = item1.Value.Default1;
-                    }
+                         item1.Value.Current = item1.Value.Default1;
+                    } 
                 
                 }
 
