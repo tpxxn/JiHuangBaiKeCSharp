@@ -345,7 +345,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="游戏exe地址:" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox x:Name="DediSettingGameDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="200" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick"/>
+                                                <TextBox x:Name="DediSettingGameDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="300" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick"/>
                                                 <Button x:Name="DediSettingGameDirSelect" Tag="选择文件" Width="30" Height="30" Style="{DynamicResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingGameDirSelect_Click">
                                                     <Image Source="Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
                                                 </Button>
@@ -359,7 +359,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="服务器exe地址:" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox x:Name="DediSettingDediDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="200" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick"/>
+                                                <TextBox x:Name="DediSettingDediDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="300" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick"/>
                                                 <Button x:Name="DediSettingDediDirSelect" Tag="选择文件" Width="30" Height="30" Style="{DynamicResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingDediDirSelect_Click">
                                                     <Image Source="Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
                                                 </Button>
@@ -573,7 +573,7 @@
                                     <TextBlock x:Name="DediModDescription"  />
                                 </ScrollViewer>
                             </Grid>
-                            <Grid x:Name="DediModRollBack" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
+                            <Grid x:Name="DediModRollBack" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                                 <Grid.ColumnDefinitions>
                              
                                     <ColumnDefinition Width="2*"/>
@@ -588,6 +588,35 @@
                                     </WrapPanel>
                                 </ScrollViewer>
                             </Grid>
+
+                            <Grid x:Name="DediModManager" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <WrapPanel Grid.Row="0" >
+                                    <Label Content="添加管理员:" ></Label>
+                                    <TextBox    Style="{DynamicResource DediTextBoxStyle}" Width="300" />
+                                    <Button Content="添加管理员" Style="{DynamicResource DediButtonCreateWorldStyle}" Width="100"></Button>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="1" >
+                                    <Label Content="添加白名单:" ></Label>
+                                    <TextBox    Style="{DynamicResource DediTextBoxStyle}" Width="300" />
+                                    <Button Content="添加白名单" Style="{DynamicResource DediButtonCreateWorldStyle}" Width="100"></Button>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="2" >
+                                    <Label Content="添加黑名单:" ></Label>
+                                    <TextBox    Style="{DynamicResource DediTextBoxStyle}" Width="300" />
+                                    <Button Content="添加黑名单" Style="{DynamicResource DediButtonCreateWorldStyle}" Width="100"></Button>
+                                </WrapPanel>
+
+
+
+                            </Grid>
+                            
+                            
                             <Image x:Name="DediButtomBorder_h1" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5"/>
                             <Image x:Name="DediButtomBorder_h2" Source="Resources/DedicatedServer/D_buttomborder_h.png" Stretch="Fill" Grid.ColumnSpan="7" Margin="0,3.5" Grid.Row="2"/>
                             <Image x:Name="DediButtomBorder_v1" Source="Resources/DedicatedServer/D_buttomborder_v.png" Stretch="Fill" Margin="3,0" Grid.RowSpan="3"/>

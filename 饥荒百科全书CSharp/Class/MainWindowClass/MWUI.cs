@@ -667,7 +667,7 @@ namespace 饥荒百科全书CSharp
                     Visi.VisiCol(false, DediModRollBack);
                     break;
                 case "Blacklist":
-
+                    Visi.VisiCol(false, DediModManager); 
                     break;
             }
         }

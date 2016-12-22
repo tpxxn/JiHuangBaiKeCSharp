@@ -82,7 +82,8 @@ namespace 饥荒百科全书CSharp
             {
                 mods = new Mods(pathAll.ServerMods_DirPath);
             }
-
+            // 4. "控制台"
+            CreateConsoleButton();
 
             // 3."基本设置" 等在 点击radioButton后设置
 
@@ -131,8 +132,7 @@ namespace 饥荒百科全书CSharp
             SetCavesSet();
             // 4. "Mod"
             SetModSet();
-            // 5. "控制台"
-            CreateConsoleButton();
+  
 
         }
 
@@ -141,11 +141,21 @@ namespace 饥荒百科全书CSharp
         {   // 设置
             if (!string.IsNullOrEmpty(pathAll.ServerMods_DirPath))
             {
-                // 清空
+                // 清空,Enabled变成默认值
                 foreach (Mod item in mods.ListMod)
                 {
                     item.Enabled = false;
                 }
+                // 细节也要变成默认值,之后再重新读取
+                foreach (Mod item in mods.ListMod)
+                {
+                    foreach (KeyValuePair<string,ModXiJie> item1 in item.Configuration_options)
+                    {
+                        item1.Value.Current = item1.Value.Default1;
+                    }
+                
+                }
+
                 // 重新读取
                 mods.ReadModsOverrides(pathAll.ServerMods_DirPath, pathAll.YyServer_DirPath + @"\Master\modoverrides.lua");
             }
@@ -224,7 +234,7 @@ namespace 饥荒百科全书CSharp
                 {
                     Height = 300,
                     Width = 300,
-                    Content = "QQ群: 580332268 \r\n mod类型:\r\n 所有人: 所有人都必须有.\r\n 服务器:只要服务器有就行了",
+                    Content = "QQ群: 580332268 \r\n mod类型:\r\n 所有人: 所有人都必须有.\r\n 服务器:只要服务器有就行",
                     FontWeight = FontWeights.Bold,
                     FontSize = (double)20
                 };
@@ -873,9 +883,6 @@ namespace 饥荒百科全书CSharp
             }
         }
  
-
-        #endregion
-        //DediConsoleFenLei
         /// <summary>
         /// 根据分类生产RadioButton
         /// </summary>
@@ -918,6 +925,7 @@ namespace 饥荒百科全书CSharp
 
 
         }
+
         // 显示具体分类信息
         private void B_Click(object sender, RoutedEventArgs e)
         {
@@ -974,6 +982,7 @@ namespace 饥荒百科全书CSharp
 
 
         }
+        #endregion
 
         #region 其他
         // 获取房间名
