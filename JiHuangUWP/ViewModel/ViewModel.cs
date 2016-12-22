@@ -78,7 +78,7 @@ namespace JiHuangUWP.ViewModel
                     });
                 }
 
-                await DsBitmapRead(dstidAbigail, await folder.GetFilesAsync());
+                DsBitmapRead(dstidAbigail, await folder.GetFilesAsync());
 
             }
             catch (Exception)
@@ -91,7 +91,7 @@ namespace JiHuangUWP.ViewModel
             Navigateto(typeof(DstidModel), dstidAbigail);
         }
 
-        private static async Task DsBitmapRead(List<DstidAbigail> dstidAbigail, IReadOnlyList<StorageFile> folder)
+        private static void DsBitmapRead(List<DstidAbigail> dstidAbigail, IReadOnlyList<StorageFile> folder)
         {
             //foreach (var temp in await folder)
             //{

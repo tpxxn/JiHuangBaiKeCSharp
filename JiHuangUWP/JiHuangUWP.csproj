@@ -16,7 +16,12 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>JiHuangUWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>JiHuangUWP_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>E174ABF5226762ABD7F0214CE54098E27B39C836</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>Y:\JiHuangBaiKeCSharp\JiHuangUWP\AppPackages\</AppxPackageDir>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -89,7 +94,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="Assets\belisa_plumilla.ttf" />
+    <None Include="JiHuangUWP_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -120,7 +125,89 @@
     <None Include="JiHuangUWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\belisa_plumilla.ttf" />
+    <Content Include="Assets\DST.ico" />
     <Content Include="Assets\Loading.png" />
+    <Content Include="Assets\LockScreenLogo_24x24.png" />
+    <Content Include="Assets\LockScreenLogo_30x30.png" />
+    <Content Include="Assets\LockScreenLogo_36x36.png" />
+    <Content Include="Assets\LockScreenLogo_48x48.png" />
+    <Content Include="Assets\LockScreenLogo_96x96.png" />
+    <Content Include="Assets\Logo_Square_150_150x150.png" />
+    <Content Include="Assets\Logo_Square_150_188x188.png" />
+    <Content Include="Assets\Logo_Square_150_225x225.png" />
+    <Content Include="Assets\Logo_Square_150_300x300.png" />
+    <Content Include="Assets\Logo_Square_150_600x600.png" />
+    <Content Include="Assets\Logo_Square_310_1240x1240.png" />
+    <Content Include="Assets\Logo_Square_310_310x310.png" />
+    <Content Include="Assets\Logo_Square_310_310x310.scale-100.png" />
+    <Content Include="Assets\Logo_Square_310_310x310.scale-125.png" />
+    <Content Include="Assets\Logo_Square_310_310x310.scale-150.png" />
+    <Content Include="Assets\Logo_Square_310_388x388.png" />
+    <Content Include="Assets\Logo_Square_310_465x465.png" />
+    <Content Include="Assets\Logo_Square_310_465x465.scale-125.png" />
+    <Content Include="Assets\Logo_Square_310_465x465.scale-150.png" />
+    <Content Include="Assets\Logo_Square_310_620x620.png" />
+    <Content Include="Assets\Logo_Square_44_16x16.png" />
+    <Content Include="Assets\Logo_Square_44_176x176.png" />
+    <Content Include="Assets\Logo_Square_44_24x24.png" />
+    <Content Include="Assets\Logo_Square_44_256x256.png" />
+    <Content Include="Assets\Logo_Square_44_44x44.png" />
+    <Content Include="Assets\Logo_Square_44_48x48.png" />
+    <Content Include="Assets\Logo_Square_44_55x55.png" />
+    <Content Include="Assets\Logo_Square_44_66x66.png" />
+    <Content Include="Assets\Logo_Square_44_88x88.png" />
+    <Content Include="Assets\Logo_Square_71_107x107.png" />
+    <Content Include="Assets\Logo_Square_71_142x142.png" />
+    <Content Include="Assets\Logo_Square_71_284x284.png" />
+    <Content Include="Assets\Logo_Square_71_71x71.png" />
+    <Content Include="Assets\Logo_Square_71_89x89.png" />
+    <Content Include="Assets\Logo_Wide_1240x600.png" />
+    <Content Include="Assets\Logo_Wide_310x150.png" />
+    <Content Include="Assets\Logo_Wide_388x188.png" />
+    <Content Include="Assets\Logo_Wide_465x225.png" />
+    <Content Include="Assets\Logo_Wide_620x300.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Splash_1240x600.png" />
+    <Content Include="Assets\Splash_2480x1200.png" />
+    <Content Include="Assets\Splash_620x300.png" />
+    <Content Include="Assets\Splash_744x360.png" />
+    <Content Include="Assets\Splash_930x450.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square71x71Logo.scale-125.png" />
+    <Content Include="Assets\Square71x71Logo.scale-150.png" />
+    <Content Include="Assets\Square71x71Logo.scale-200.png" />
+    <Content Include="Assets\Square71x71Logo.scale-400.png" />
+    <Content Include="Assets\SquareLogo.scale-100.png" />
+    <Content Include="Assets\SquareLogo.scale-125.png" />
+    <Content Include="Assets\SquareLogo.scale-150.png" />
+    <Content Include="Assets\SquareLogo.scale-200.png" />
+    <Content Include="Assets\SquareLogo.scale-400.png" />
+    <Content Include="Assets\SquareLogo.targetsize-16.png" />
+    <Content Include="Assets\SquareLogo.targetsize-24.png" />
+    <Content Include="Assets\SquareLogo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\StoreLogo_100x100.png" />
+    <Content Include="Assets\StoreLogo_200x200.png" />
+    <Content Include="Assets\StoreLogo_50x50.png" />
+    <Content Include="Assets\StoreLogo_63x63.png" />
+    <Content Include="Assets\StoreLogo_75x75.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="GameResource\A_ancient_guardian.png" />
     <Content Include="GameResource\A_baby_beefalo.png" />
     <Content Include="GameResource\A_baby_beefalo_2.png" />
@@ -1382,14 +1469,8 @@
     <Content Include="GameResource\T_wine_bottle_candle.png" />
     <Content Include="GameResource\T_wire_hanger.png" />
     <Content Include="GameResource\DstidAbigail.txt" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

@@ -490,7 +490,8 @@ c_give("fireflies",1)
 
 Fish	
 鱼	
-c_give("fish"
+c_give("fish",1)
+.png
 
 Fish Tacos	
 鱼炸玉米饼	
@@ -543,7 +544,7 @@ c_give("trinket_6",1)
 .png
 
 Fried Drumstick
-	炸鸡腿	
+炸鸡腿	
 c_give("drumstick_cooked",1)
 .png
 
@@ -651,7 +652,6 @@ Guano Turf
 鸟粪草地	
 c_give("turf_cave",1)
 .png
-
 
 Guardian's Horn	
 守卫者的角	

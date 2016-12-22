@@ -1,48 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
-
-  <Identity
-    Name="22fd5f72-5d49-4971-86dc-e32e0cdcdef8"
-    Publisher="CN=linde"
-    Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="22fd5f72-5d49-4971-86dc-e32e0cdcdef8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="43179.171160C88AB1" Publisher="CN=227D1644-D24B-430C-AFA3-3FD86CE65409" Version="1.1.1.0" />
+  <mp:PhoneIdentity PhoneProductId="22fd5f72-5d49-4971-86dc-e32e0cdcdef8" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>JiHuangUWP</DisplayName>
-    <PublisherDisplayName>linde</PublisherDisplayName>
+    <DisplayName>饥荒百科全书 UWP</DisplayName>
+    <PublisherDisplayName>林德熙</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="JiHuangUWP.App">
-      <uap:VisualElements
-        DisplayName="JiHuangUWP"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="JiHuangUWP"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="JiHuangUWP.App">
+      <uap:VisualElements DisplayName="饥荒百科全书" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\SquareLogo.png" Description="目前做了作弊码，可以让大家查作弊码" BackgroundColor="white">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>

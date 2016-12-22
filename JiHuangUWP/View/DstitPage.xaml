@@ -91,9 +91,13 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid>
-                <TextBox Margin="10,10,100,10"></TextBox>
+                <TextBox Margin="10,10,100,10"
+                         Text="{x:Bind View.DebugStr,Mode=TwoWay}"
+                         KeyDown="Text_OnKeyDown"></TextBox>
                 <Button Margin="10,10,10,10" Width="50" Content="确定"
-                       HorizontalAlignment="Right"></Button>
+                        HorizontalAlignment="Right"
+                        Click="{x:Bind View.Screen}"></Button>
+                <Grid></Grid>
             </Grid>
             <Grid Grid.Row="1">
                 <!--<Grid.ColumnDefinitions>
@@ -116,7 +120,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Grid>
                                     <Image Height="{StaticResource ImageAbigail}" Width="{StaticResource ImageAbigail}"
-                                           Source="{Binding ImageSource,Mode=OneWay}"></Image>
+                                           Source="{x:Bind ImageSource,Mode=OneWay}"></Image>
                                 </Grid>
                                 <Grid Grid.Column="1" >
                                     <Grid.RowDefinitions>

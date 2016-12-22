@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -36,6 +37,21 @@ namespace JiHuangUWP.View
         {
             set;
             get;
+        }
+
+
+        private void Text_OnKeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            var temp = sender as TextBox;
+            if (temp == null)
+            {
+                return;
+            }
+            if (e.Key == VirtualKey.Enter)
+            {
+                View.DebugStr = temp.Text;
+                View.Screen();
+            }
         }
     }
 
