@@ -822,8 +822,8 @@ namespace 饥荒百科全书CSharp
                 mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Master\modoverrides.lua", utf8NoBom);
                 mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Caves\modoverrides.lua", utf8NoBom);
             }
-            // 如果是youxia1,强行设置为 离线,局域网
-            if (GamePingTai == "youxia1")
+            // 如果是youxia,强行设置为 离线,局域网
+            if (GamePingTai == "youxia")
             {
                 INIhelper ini1 = new INIhelper(pathAll.YyServer_DirPath + @"\cluster.ini", utf8NoBom);
                 ini1.write("NETWORK", "offline_cluster", "true", utf8NoBom);

@@ -407,7 +407,7 @@ namespace ServerTools
                 DoNotStarveTogether_DirPath = Document_DirPath + @"\Klei\DoNotStarveTogetherRail";
 
             }
-            if (GamePingTai.ToLower() == "youxia1" || GamePingTai.ToLower() == "steam")
+            if (GamePingTai.ToLower() == "youxia" || GamePingTai.ToLower() == "steam")
             {
                 DoNotStarveTogether_DirPath = Document_DirPath + @"\Klei\DoNotStarveTogether";
             }
