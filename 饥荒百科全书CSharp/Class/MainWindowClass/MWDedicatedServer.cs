@@ -820,11 +820,11 @@ namespace 饥荒百科全书CSharp
                 mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Master\modoverrides.lua", utf8NoBom);
                 mods.saveListmodsToFile(pathAll.YyServer_DirPath + @"\Caves\modoverrides.lua", utf8NoBom);
             }
-            // 如果是游侠,强行设置为 离线,局域网
-            if (GamePingTai == "游侠")
+            // 如果是youxia1,强行设置为 离线,局域网
+            if (GamePingTai == "youxia1")
             {
                 INIhelper ini1 = new INIhelper(pathAll.YyServer_DirPath + @"\cluster.ini", utf8NoBom);
-                ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
+                ini1.write("NETWORK", "offline_cluster", "true", utf8NoBom);
                 ini1.write("NETWORK", "lan_only_cluster", "true", utf8NoBom);
 
             }
@@ -1015,7 +1015,7 @@ namespace 饥荒百科全书CSharp
             DediTitleEditWorld.IsEnabled = b;
             DediTitleMod.IsEnabled = b;
             DediTitleRollback.IsEnabled = b;
-            DediTitleBlacklist.IsEnabled = b;
+         
             DediMainTop_Delete.IsEnabled = b;
             DediCtrateWorldButton.IsEnabled = b;
             DediBaseSet.IsEnabled = b;

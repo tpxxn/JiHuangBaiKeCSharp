@@ -22,7 +22,7 @@ namespace ServerTools
 
         #region 读写当前游戏平台
         /// <summary>
-        /// 读取当前游戏版本[tgp,steam,游侠] 
+        /// 读取当前游戏版本[tgp,steam,youxia1] 
         /// </summary>
         public static String ReadGamePingTai( )
         {
@@ -54,14 +54,14 @@ namespace ServerTools
             //}
             //else
             //{
-            //    return "游侠";
+            //    return "youxia1";
             //}
          
 
         }
 
         /// <summary>
-        /// 保存当前游戏平台[tgp,steam,游侠]
+        /// 保存当前游戏平台[tgp,steam,youxia1]
         /// </summary>
         public static void WriteGamePingTai( String pingtai)
         {

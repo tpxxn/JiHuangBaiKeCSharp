@@ -292,14 +292,13 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
-                                <ColumnDefinition/>
+                           
                             </Grid.ColumnDefinitions>
                             <RadioButton x:Name="DediTitleSetting" Content="设置" Grid.Column="0" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleSetting_Click"/>
                             <RadioButton x:Name="DediTitleBaseSet" Content="基本设置" Grid.Column="1" Style="{DynamicResource DediMainPanelRadioButtonStyle}" IsChecked="True" Click="DediTitleBaseSet_Click"/>
                             <RadioButton x:Name="DediTitleEditWorld" Content="编辑世界" Grid.Column="2" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleEditWorld_Click"/>
                             <RadioButton x:Name="DediTitleMod" Content="Mods" Grid.Column="3" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleMod_Click"/>
                             <RadioButton x:Name="DediTitleRollback" Content="控制台" Grid.Column="4" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleRollback_Click"/>
-                            <RadioButton x:Name="DediTitleBlacklist" Content="黑/白名单" Grid.Column="5" Style="{DynamicResource DediMainPanelRadioButtonStyle}" Click="DediTitleBlacklist_Click"/>
                         </Grid>
                         <Canvas x:Name="DediTop" Grid.Row="1" Margin="-10,0,10,0">
                             <Image x:Name="DediMainTop_portraitsBG" Height="70" Width="70" Canvas.Left="15" Canvas.Top="15" Source="Resources/DedicatedServer/D_mp_portraits_bg.png" Stretch="Fill"/>
@@ -345,7 +344,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="游戏exe地址:" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox x:Name="DediSettingGameDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="300" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick"/>
+                                                <TextBox x:Name="DediSettingGameDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="500" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick"/>
                                                 <Button x:Name="DediSettingGameDirSelect" Tag="选择文件" Width="30" Height="30" Style="{DynamicResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingGameDirSelect_Click">
                                                     <Image Source="Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
                                                 </Button>
@@ -359,7 +358,7 @@
                                         <Viewbox Margin="0,2">
                                             <StackPanel Orientation="Horizontal">
                                                 <Label Content="服务器exe地址:" FontWeight="Bold" FontSize="16"/>
-                                                <TextBox x:Name="DediSettingDediDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="300" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick"/>
+                                                <TextBox x:Name="DediSettingDediDirSelectTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="500" IsReadOnly="True" Cursor="{DynamicResource Cursor_link}" PreviewMouseDoubleClick="DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick"/>
                                                 <Button x:Name="DediSettingDediDirSelect" Tag="选择文件" Width="30" Height="30" Style="{DynamicResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingDediDirSelect_Click">
                                                     <Image Source="Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
                                                 </Button>
@@ -669,12 +668,12 @@
                     <RadioButton x:Name="Sidebar_Welcome" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
                     <RadioButton x:Name="Sidebar_Character" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
                     <RadioButton x:Name="Sidebar_Food" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Food_Style}" Focusable="False" Click="Sidebar_Food_Click" />
+                    <RadioButton x:Name="Sidebar_DedicatedServer" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
                     <RadioButton x:Name="Sidebar_Cooking_Simulator" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Cooking_Simulator_Style}" Focusable="False" Click="Sidebar_Cooking_Simulator_Click" />
                     <RadioButton x:Name="Sidebar_Science" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Science_Style}" Focusable="False" Click="Sidebar_Science_Click" />
                     <RadioButton x:Name="Sidebar_Animal" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
                     <RadioButton x:Name="Sidebar_Natural" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
                     <RadioButton x:Name="Sidebar_Goods" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
-                    <RadioButton x:Name="Sidebar_DedicatedServer" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
                     <RadioButton x:Name="Sidebar_Setting" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
                 </WrapPanel>
                 <TextBlock x:Name="UI_Version" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True"/>
