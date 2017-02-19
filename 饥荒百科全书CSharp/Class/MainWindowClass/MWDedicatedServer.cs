@@ -64,6 +64,13 @@ namespace 饥荒百科全书CSharp
         // 初始化
         public void InitServer()
         {
+            // -2.游侠修改为youxia，不用汉字了         
+            string pingtail = RegeditRW.RegReadString("banben");
+            if (pingtail=="游侠")
+            {
+                RegeditRW.RegWrite("banben", "youxia");
+            }
+
             //-1.游戏平台
             SetPingTai();
 
