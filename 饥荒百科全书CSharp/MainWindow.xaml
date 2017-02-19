@@ -365,6 +365,20 @@
                                             </StackPanel>
                                         </Viewbox>
                                     </Grid>
+                                    <Grid x:Name="DediSettingDediCluster" Height="40">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="Resources/DedicatedServer/D_set_bg.png"/>
+                                        </Grid.Background>
+                                        <Viewbox Margin="0,2">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="ClusterToken:" FontWeight="Bold" FontSize="16"/>
+                                                <TextBox x:Name="DediSettingClusterTokenTextBox" Style="{DynamicResource DediTextBoxStyle}" Height="30" Width="500"  Cursor="{DynamicResource Cursor_link}"  />
+                                                <Button x:Name="DediSettingSaveCluster" Tag="保存" Width="30" Height="30" Style="{DynamicResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingSaveCluster_Click">
+                                                    <Image Source="Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </Viewbox>
+                                    </Grid>
                                 </StackPanel>
                             </ScrollViewer>
                             <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using WpfLearn.UserControls;
+using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServerClass.DedicateServer;
 using 饥荒百科全书CSharp.MyUserControl.DedicatedServer;
 
@@ -84,7 +85,8 @@ namespace 饥荒百科全书CSharp
             }
             // 4. "控制台"
             CreateConsoleButton();
-
+            // 5.clusterToken
+            this.DediSettingClusterTokenTextBox.Text = Class.RegeditRW.RegReadString("cluster");
             // 3."基本设置" 等在 点击radioButton后设置
 
         }
@@ -1071,6 +1073,18 @@ namespace 饥荒百科全书CSharp
             File.WriteAllText(path + @"\Server\Master\leveldataoverride.lua", Tool.ReadResources("Server模板.Master.leveldataoverride.lua"), utf8NoBom);
             File.WriteAllText(path + @"\Server\Master\modoverrides.lua", Tool.ReadResources("Server模板.Master.modoverrides.lua"), utf8NoBom);
             File.WriteAllText(path + @"\Server\Master\server.ini", Tool.ReadResources("Server模板.Master.server.ini"), utf8NoBom);
+
+            // clusterToken
+            bool flag2 = !string.IsNullOrEmpty(RegeditRW.RegReadString("cluster"));
+            if (flag2)
+            {
+                File.WriteAllText(path + "\\Server\\cluster_token.txt", RegeditRW.RegReadString("cluster"), this.utf8NoBom);
+            }
+            else
+            {
+                File.WriteAllText(path + "\\Server\\cluster_token.txt", "", this.utf8NoBom);
+            }
+
 
         }
 

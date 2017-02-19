@@ -519,8 +519,29 @@ namespace 饥荒百科全书CSharp
         }
 
 
+
         #endregion
 
-
+        private void DediSettingSaveCluster_Click(object sender, RoutedEventArgs e)
+        {
+            bool flag = this.DediSettingClusterTokenTextBox.Text == null;
+            if (flag)
+            {
+                System.Windows.MessageBox.Show("cluster没填写，不能保存");
+            }
+            else
+            {
+                bool flag2 = this.DediSettingClusterTokenTextBox.Text.Trim() == "";
+                if (flag2)
+                {
+                    System.Windows.MessageBox.Show("cluster没填写，不能保存");
+                }
+                else
+                {
+                    RegeditRW.RegWrite("cluster", this.DediSettingClusterTokenTextBox.Text.Trim());
+                    System.Windows.MessageBox.Show("保存完毕！");
+                }
+            }
+        }
     }
 }
