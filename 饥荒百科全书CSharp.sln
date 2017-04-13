@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "饥荒百科全书CSharp", "饥荒百科全书CSharp\饥荒百科全书CSharp.csproj", "{1F513118-3E69-4C5D-BE7F-2DCCAF211FCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiHuangUWP", "JiHuangUWP\JiHuangUWP.csproj", "{84060844-0424-4A3F-94AF-6E8784569FA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "..\..\uwp\uwp\src\Framework\Framework\Framework.csproj", "{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,22 @@ Global
 		{84060844-0424-4A3F-94AF-6E8784569FA3}.Release|x86.ActiveCfg = Release|x86
 		{84060844-0424-4A3F-94AF-6E8784569FA3}.Release|x86.Build.0 = Release|x86
 		{84060844-0424-4A3F-94AF-6E8784569FA3}.Release|x86.Deploy.0 = Release|x86
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|ARM.ActiveCfg = Debug|ARM
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|ARM.Build.0 = Debug|ARM
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|x64.ActiveCfg = Debug|x64
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|x64.Build.0 = Debug|x64
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|x86.ActiveCfg = Debug|x86
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Debug|x86.Build.0 = Debug|x86
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|ARM.ActiveCfg = Release|ARM
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|ARM.Build.0 = Release|ARM
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|x64.ActiveCfg = Release|x64
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|x64.Build.0 = Release|x64
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|x86.ActiveCfg = Release|x86
+		{6163E3B1-803C-4DE5-BE3C-48E7A04BCF65}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
