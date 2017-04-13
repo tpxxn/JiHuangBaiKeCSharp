@@ -108,6 +108,7 @@
     <Compile Include="Model\DstidAbigail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\DstidModel.cs" />
+    <Compile Include="Model\EposPage.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="View\DstitPage.xaml.cs">
       <DependentUpon>DstitPage.xaml</DependentUpon>

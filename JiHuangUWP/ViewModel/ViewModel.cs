@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -42,16 +41,23 @@ namespace JiHuangUWP.ViewModel
 
         private Visibility _frameVisibility;
 
-
-
-
-
-
-
         public ViewModel View
         {
             set;
             get;
+        }
+
+        public List<EposPage> EposPage
+        {
+            get;
+        } = new List<EposPage>()
+        {
+            new EposPage("物品",typeof(DstidModel)),
+        };
+
+        public void Epos_OnItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
 
         public void NavigateToInfo()
@@ -83,9 +89,6 @@ namespace JiHuangUWP.ViewModel
                 //加载所有ViewModel
                 var applacationAssembly = Application.Current.GetType().GetTypeInfo().Assembly;
 
-                //CodeStorageModel = new CodeStorageModel();
-                //ViewModel.Add(new ViewModelPage(CodeStorageModel, typeof(MasterDetailPage))
-                //);
                 foreach (var temp in applacationAssembly.DefinedTypes.Where(temp => temp.IsSubclassOf(typeof(ViewModelBase))))
                 {
                     ViewModel.Add(new ViewModelPage(temp.AsType()));
@@ -117,7 +120,8 @@ namespace JiHuangUWP.ViewModel
 
             await DstidModel.Read();
 
-            Navigate(typeof(DstidModel),null);
+            Navigate(typeof(DstidModel), null);
+            FrameVisibility = Visibility.Visible;
         }
     }
 }
