@@ -25,9 +25,10 @@ namespace JiHuangUWP
         public MainPage()
         {
             this.InitializeComponent();
-            View = (ViewModel.ViewModel) DataContext;
+            View = (ViewModel.ViewModel)DataContext;
             View.Content = frame;
-            View.Read();
+            //View.Read();
+            View.OnNavigatedTo(this, frame);
         }
 
         private ViewModel.ViewModel View

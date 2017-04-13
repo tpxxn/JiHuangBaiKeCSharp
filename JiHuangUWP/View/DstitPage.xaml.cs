@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using JiHuangUWP.Model;
 using JiHuangUWP.ViewModel;
+using lindexi.uwp.Framework.ViewModel;
 
 // “空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234238 上有介绍
 
@@ -23,6 +24,7 @@ namespace JiHuangUWP.View
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
+    [ViewModel(ViewModel = typeof(DstidModel))]
     public sealed partial class DstitPage : Page
     {
         public DstitPage()

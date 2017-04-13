@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
+using lindexi.uwp.Framework.ViewModel;
 
 namespace JiHuangUWP.Model
 {
@@ -85,5 +86,7 @@ namespace JiHuangUWP.Model
                 
             }
         }
+
+     
     }
 }

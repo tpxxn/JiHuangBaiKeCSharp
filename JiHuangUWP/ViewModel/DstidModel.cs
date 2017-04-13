@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using JiHuangUWP.Model;
+using lindexi.uwp.Framework.ViewModel;
 
 namespace JiHuangUWP.ViewModel
 {
@@ -82,12 +83,14 @@ namespace JiHuangUWP.ViewModel
             return reu;
         }
 
-        public override void OnNavigatedFrom(object obj)
+
+
+        public override void OnNavigatedFrom(object sender, object obj)
         {
             DstidAbigail.Clear();
         }
 
-        public override async void OnNavigatedTo(object obj)
+        public override async void OnNavigatedTo(object sender, object obj)
         {
             //_dstidAbigail = obj as List<DstidAbigail>;
             if (_dstidAbigail != null)
@@ -104,6 +107,7 @@ namespace JiHuangUWP.ViewModel
                     await temp.Read();
                 }
             }
+
         }
 
         public async Task Read()
@@ -142,16 +146,6 @@ namespace JiHuangUWP.ViewModel
 
         private static void DsBitmapRead(List<DstidAbigail> dstidAbigail, IReadOnlyList<StorageFile> folder)
         {
-            //foreach (var temp in await folder)
-            //{
-            //    for (int i = 0; i < dstidAbigail.Count; i++)
-            //    {
-            //        string str = dstidAbigail[i].Name.Replace(" ", "_");
-
-            //    }
-            //}
-
-
             foreach (var temp in dstidAbigail)
             {
                 for (int i = 0; i < folder.Count; i++)
@@ -163,7 +157,7 @@ namespace JiHuangUWP.ViewModel
                     }
                 }
             }
-
         }
+
     }
 }
