@@ -34,7 +34,7 @@ namespace 饥荒百科全书CSharp.Class
         public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
         private readonly Window _mainWindow;
-        WindowInteropHelper _host;
+        private readonly WindowInteropHelper _host;
 
         public KeyboardHandler(Window mainWindow)
         {
@@ -49,7 +49,7 @@ namespace 饥荒百科全书CSharp.Class
         {
             if (msg.message == WM_HOTKEY)
             {
-                MainWindow.MWVisivility = !MainWindow.MWVisivility;
+                MainWindow.MwVisivility = !MainWindow.MwVisivility;
             }
         }
 

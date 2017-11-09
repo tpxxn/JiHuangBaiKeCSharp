@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 
@@ -13,8 +12,8 @@ namespace 饥荒百科全书CSharp
         public DownloadWindow()
         {
             InitializeComponent();
-            DownloadVersion.Text = "新版本 " + MainWindow.updatePan.NewVersion + " 下载地址";
-            DownloadURL_TextBlock.Text = MainWindow.updatePan.DownloadURL;
+            DownloadVersion.Text = "新版本 " + MainWindow.UpdatePan.NewVersion + " 下载地址";
+            DownloadURL_TextBlock.Text = MainWindow.UpdatePan.DownloadURL;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -29,12 +28,12 @@ namespace 饥荒百科全书CSharp
 
         private void DownloadURL_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start(MainWindow.updatePan.DownloadURL);
+            Process.Start(MainWindow.UpdatePan.DownloadURL);
         }
 
-        private void Window_Unloaded(Object sender, RoutedEventArgs e)
+        private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
-            MainWindow.MWVisivility = true;
+            MainWindow.MwVisivility = true;
         }
     }
 }

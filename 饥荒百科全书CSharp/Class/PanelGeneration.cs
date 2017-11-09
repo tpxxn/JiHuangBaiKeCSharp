@@ -4,19 +4,18 @@ using System.Windows;
 
 namespace 饥荒百科全书CSharp.Class
 {
-    static class PG
+    internal static class Pg
     {
         public static Grid GridInterval(double height)
         {
-            Grid grid = new Grid();
+            var grid = new Grid { Height = height };
             //grid.Background = Brushes.DarkOliveGreen;
-            grid.Height = height;
             return grid;
         }
 
         public static Grid GridInit(double height = 0)
         {
-            Grid grid = new Grid();
+            var grid = new Grid();
             //grid.Background = Brushes.DarkOrange;
             if (height != 0)
             {
@@ -27,8 +26,7 @@ namespace 饥荒百科全书CSharp.Class
 
         public static TextBlock TextBlockInit(double height = 0)
         {
-            TextBlock textBlock = new TextBlock();
-            textBlock.Background = Brushes.Aqua;
+            var textBlock = new TextBlock {Background = Brushes.Aqua};
             if (height != 0)
             {
                 textBlock.Height = height;
@@ -36,15 +34,13 @@ namespace 饥荒百科全书CSharp.Class
             return textBlock;
         }
 
-        public static Grid GridTag(string TagString, double ThicknessLeft = 10)
+        public static Grid GridTag(string tagString, double thicknessLeft = 10)
         {
-            Grid gTag = GridInit();
-            gTag.Background = BC.brushConverter("B2ECED","55");
-            TextBlock tb = new TextBlock();
-            tb.Text = TagString;
-            Thickness TTag = new Thickness();
-            TTag.Left = ThicknessLeft;
-            tb.Margin = TTag;
+            var gTag = GridInit();
+            gTag.Background = Bc.BrushConverter("B2ECED", "55");
+            var tb = new TextBlock {Text = tagString};
+            var tag = new Thickness {Left = thicknessLeft};
+            tb.Margin = tag;
             gTag.Children.Add(tb);
             return gTag;
         }

@@ -1,33 +1,29 @@
 ﻿using System;
-using System.Windows;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
-using System.Windows.Controls;
-using System.Threading;
 using System.Reflection;
+using System.Threading;
+using System.Windows;
 
-namespace 饥荒百科全书CSharp.Class
+namespace 饥荒百科全书CSharp
 {
-    class AppRun
+    internal class AppRun
     {
 
         /// <summary>
         /// Interaction logic for App.xaml
         /// </summary>
-        public partial class App_Run : Application
+        private class App_Run : Application
         {
             public App_Run()
             {
                 Debug.WriteLine("App constructor");
-                Startup += new StartupEventHandler(App_Startup);
+                Startup += App_Startup;
             }
 
-            void App_Startup(object sender, StartupEventArgs e)
+            private static void App_Startup(object sender, StartupEventArgs e)
             {
                 Debug.WriteLine("App_Startup");
-                SplashScreen splashWindow = new SplashScreen();
+                var splashWindow = new SplashScreen();
                 splashWindow.InitializeComponent();
                 splashWindow.Show();
             }
@@ -36,8 +32,8 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// Entry point class to handle single instance of the application
         /// </summary>
-        private static Semaphore singleInstanceWatcher;
-        private static bool createdNew;
+        private static Semaphore _singleInstanceWatcher;
+        private static bool _createdNew;
 
         public static class EntryPoint
         {
@@ -49,13 +45,13 @@ namespace 饥荒百科全书CSharp.Class
                     //Console.WriteLine("Main");
                     //Console.ReadLine();
                     // 确保不存在程序的其他实例
-                    singleInstanceWatcher = new Semaphore(
+                    _singleInstanceWatcher = new Semaphore(
                         0, // Initial count.
                         1, // Maximum count.
-                        Assembly.GetExecutingAssembly().GetName().Name, out createdNew);
-                    if (createdNew)
+                        Assembly.GetExecutingAssembly().GetName().Name, out _createdNew);
+                    if (_createdNew)
                     {
-                        App_Run app = new App_Run();
+                        var app = new App_Run();
                         app.Run();
                     }
                     else
@@ -65,7 +61,7 @@ namespace 饥荒百科全书CSharp.Class
                     }
                 }else
                 {
-                    if (args[0].ToString() == "-clear")
+                    if (args[0] == "-clear")
                     {
                         //MessageBox.Show("清除设置");
                         Environment.Exit(0);

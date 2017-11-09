@@ -1,72 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Win32;
-using System.Windows.Forms;
+﻿using Microsoft.Win32;
 
 namespace 饥荒百科全书CSharp.Class
 {
-    static class RegeditRW
+    static class RegeditRw
     {
         /// <summary>
         /// 写入注册表(double值)
         /// </summary>
-        /// <param name="ValueName">注册表值</param>
-        /// <param name="Value">值</param>
-        public static void RegWrite(string ValueName, double Value)
+        /// <param name="valueName">注册表值</param>
+        /// <param name="value">值</param>
+        public static void RegWrite(string valueName, double value)
         {
-            Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", ValueName, Value, RegistryValueKind.DWord);
+            Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", valueName, value, RegistryValueKind.DWord);
         }
 
         /// <summary>
         /// 写入注册表(string值)
         /// </summary>
-        /// <param name="ValueName">注册表值</param>
-        /// <param name="Value">值</param>
-        public static void RegWrite(string ValueName, string Value)
+        /// <param name="valueName">注册表值</param>
+        /// <param name="value">值</param>
+        public static void RegWrite(string valueName, string value)
         {
-            Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", ValueName, Value);
+            Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", valueName, value);
 
         }
 
         /// <summary>
         /// 读取注册表(double值)
         /// </summary>
-        /// <param name="ValueName">注册表值</param>
+        /// <param name="valueName">注册表值</param>
         /// <returns>值</returns>
-        public static double RegRead(string ValueName)
+        public static double RegRead(string valueName)
         {
-            double GetValue = 0;
-            string GetValueTemp = "";
+            double getValue = 0;
+            string getValueTemp = "";
             try
             {
-                GetValueTemp = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", ValueName, 0).ToString();
+                getValueTemp = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", valueName, 0).ToString();
             }
             catch 
             //(Exception e)
             {
                 //MessageBox.Show(e.ToString());
             }
-            if (GetValueTemp != "")
+            if (getValueTemp != "")
             {
-                GetValue = double.Parse(GetValueTemp);
+                getValue = double.Parse(getValueTemp);
             }
-            return GetValue;
+            return getValue;
         }
 
         /// <summary>
         /// 读取注册表(string值)
         /// </summary>
-        /// <param name="ValueName">注册表值</param>
+        /// <param name="valueName">注册表值</param>
         /// <returns>值</returns>
-        public static string RegReadString(string ValueName)
+        public static string RegReadString(string valueName)
         {
             string GetValue = "";
             string GetValueTemp = "";
             try
             {
-                GetValueTemp = (string)Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", ValueName, string.Empty);
+                GetValueTemp = (string)Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", valueName, string.Empty);
             }
             catch { }
             if (GetValueTemp != "")

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace 饥荒百科全书CSharp.Class
 {
-    static class ADRD
+    internal static class Adrd
     {
         public static string[] DelRepeatData(string[] a)
         {
-            string[] b = a.GroupBy(p => p).Select(p => p.Key).ToArray();
-            if (b.Length == 1)
+            var b = a.GroupBy(p => p).Select(p => p.Key).ToArray();
+            if (b.Length != 1) return b;
+            var temp = new List<string>
             {
-                List<string> temp = new List<string>();
-                temp.Add(b[0]);
-                temp.Add("");
-                b = temp.ToArray();
-            }
+                b[0],
+                ""
+            };
+            b = temp.ToArray();
             return b;
         }
     }

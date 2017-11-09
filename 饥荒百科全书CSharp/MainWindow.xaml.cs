@@ -23,10 +23,10 @@
 //}
 //RegeditRW.RegWrite("OldVersionPath", "");
 //#endregion
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,9 +35,9 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Xml;
 using 饥荒百科全书CSharp.Class;
-using 饥荒百科全书CSharp.MyUserControl;
+using Control = System.Windows.Forms.Control;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace 饥荒百科全书CSharp
 {
@@ -48,101 +48,75 @@ namespace 饥荒百科全书CSharp
     {
         
         //检查更新实例 update(网盘)
-        public static UpdatePan updatePan = new UpdatePan();
+        public static UpdatePan UpdatePan = new UpdatePan();
 
         #region "窗口可视化属性"
-        Timer VisiTimer = new Timer();
 
-        public static bool mWVisivility;
-        public static bool MWVisivility
-        {
-            get
-            {
-                return mWVisivility;
-            }
-            set
-            {
-                mWVisivility = value;
-            }
-        }
+        private readonly Timer _visiTimer = new Timer();
 
-        void VisiTimerEvent(object sender, EventArgs e)
+        public static bool MwVisivility { get; set; }
+
+        private void VisiTimerEvent(object sender, EventArgs e)
         {
-            if (MWVisivility == true)
-            {
-                Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Visibility = Visibility.Collapsed;
-            }
+            Visibility = MwVisivility ? Visibility.Visible : Visibility.Collapsed;
         }
         #endregion
 
         #region "窗口是否初始化属性"
-        public static bool mWInit = false;
-        public static bool MWInit
-        {
-            get
-            {
-                return mWInit;
-            }
-            set
-            {
-                mWInit = value;
-            }
-        }
+
+        public static bool MwInit { get; set; }
+
         #endregion
 
-        public static bool loadFont = false;
+        public static bool LoadFont;
         #region "MainWindow"
         //MainWindow构造函数
         public MainWindow()
         {
             #region "读取注册表(必须在初始化之前读取)"
             //背景图片
-            string bg = RegeditRW.RegReadString("Background");
-            double bgStretch = RegeditRW.RegRead("BackgroundStretch");
+            string bg = RegeditRw.RegReadString("Background");
+            double bgStretch = RegeditRw.RegRead("BackgroundStretch");
             //透明度
-            double bgAlpha = RegeditRW.RegRead("BGAlpha");
-            double bgPanelAlpha = RegeditRW.RegRead("BGPanelAlpha");
-            double windowAlpha = RegeditRW.RegRead("WindowAlpha");
+            double bgAlpha = RegeditRw.RegRead("BGAlpha");
+            double bgPanelAlpha = RegeditRw.RegRead("BGPanelAlpha");
+            double windowAlpha = RegeditRw.RegRead("WindowAlpha");
             //窗口大小
-            double mainWindowHeight = RegeditRW.RegRead("MainWindowHeight");
-            double mainWindowWidth = RegeditRW.RegRead("MainWindowWidth");
+            double mainWindowHeight = RegeditRw.RegRead("MainWindowHeight");
+            double mainWindowWidth = RegeditRw.RegRead("MainWindowWidth");
             //字体
-            string mainWindowFont = RegeditRW.RegReadString("MainWindowFont");
+            string mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
             //设置菜单
-            double winTopmost = RegeditRW.RegRead("Topmost");
+            double winTopmost = RegeditRw.RegRead("Topmost");
             //游戏版本
-            double gameVersion = RegeditRW.RegRead("GameVersion");
+            double gameVersion = RegeditRw.RegRead("GameVersion");
             #endregion
             //初始化
             InitializeComponent();
             //窗口缩放
-            SourceInitialized += delegate (object sender, EventArgs e) { _HwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource; };
-            MouseMove += new System.Windows.Input.MouseEventHandler(Window_MouseMove);
+            SourceInitialized += delegate (object sender, EventArgs e) { _hwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource; };
+            MouseMove += Window_MouseMove;
             //mainWindow初始化标志
-            MWInit = true;
+            MwInit = true;
             #region "读取设置"
             //设置字体
-            if (mainWindowFont == "" || mainWindowFont == null)
+            if (string.IsNullOrEmpty(mainWindowFont))
             {
-                RegeditRW.RegWrite("MainWindowFont", "微软雅黑");
+                RegeditRw.RegWrite("MainWindowFont", "微软雅黑");
                 mainWindowFont = "微软雅黑";
             }
             mainWindow.FontFamily = new FontFamily(mainWindowFont);
             //版本初始化
-            UI_Version.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            UiVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version;
             //窗口可视化计时器
-            VisiTimer.Enabled = true;
-            VisiTimer.Interval = 200;
-            VisiTimer.Tick += new EventHandler(VisiTimerEvent);
-            VisiTimer.Start();
+            _visiTimer.Enabled = true;
+            _visiTimer.Interval = 200;
+            _visiTimer.Tick += VisiTimerEvent;
+            _visiTimer.Start();
             //设置光标资源字典路径
-            cursorDictionary.Source = new Uri("Dictionary/CursorDictionary.xaml", UriKind.Relative);
+            CursorDictionary.Source = new Uri("Dictionary/CursorDictionary.xaml", UriKind.Relative);
             //显示窗口
-            MWVisivility = true;
+            MwVisivility = true;
             //右侧面板Visibility属性初始化
             RightPanelVisibility("Welcome");
 
@@ -154,23 +128,23 @@ namespace 饥荒百科全书CSharp
             //设置背景
             if (bg == "")
             {
-                Se_BG_Alpha_Text.Foreground = Brushes.Silver;
-                Se_BG_Alpha.IsEnabled = false;
+                SeBgAlphaText.Foreground = Brushes.Silver;
+                SeBgAlpha.IsEnabled = false;
             }
             else
             {
-                Se_BG_Alpha_Text.Foreground = Brushes.Black;
+                SeBgAlphaText.Foreground = Brushes.Black;
                 try
                 {
-                    var brush = new ImageBrush()
+                    var brush = new ImageBrush
                     {
                         ImageSource = new BitmapImage(new Uri(bg))
                     };
-                    UI_BackGroundBorder.Background = brush;
+                    UiBackGroundBorder.Background = brush;
                 }
                 catch
                 {
-                    Visi.VisiCol(true, UI_BackGroundBorder);
+                    Visi.VisiCol(true, UiBackGroundBorder);
                 }
             }
             //设置背景拉伸方式
@@ -178,59 +152,59 @@ namespace 饥荒百科全书CSharp
             {
                 bgStretch = 2;
             }
-            Se_ComboBox_Background_Stretch.SelectedIndex = (int)bgStretch - 1;
+            SeComboBoxBackgroundStretch.SelectedIndex = (int)bgStretch - 1;
             //设置背景透明度
             if (bgAlpha == 0)
             {
                 bgAlpha = 101;
             }
-            Se_BG_Alpha.Value = bgAlpha - 1;
-            Se_BG_Alpha_Text.Text = "背景不透明度：" + (int)Se_BG_Alpha.Value + "%";
-            UI_BackGroundBorder.Opacity = (bgAlpha - 1) / 100;
+            SeBgAlpha.Value = bgAlpha - 1;
+            SeBgAlphaText.Text = "背景不透明度：" + (int)SeBgAlpha.Value + "%";
+            UiBackGroundBorder.Opacity = (bgAlpha - 1) / 100;
             //设置面板透明度
             if (bgPanelAlpha == 0)
             {
                 bgPanelAlpha = 61;
             }
-            Se_Panel_Alpha.Value = bgPanelAlpha - 1;
-            Se_Panel_Alpha_Text.Text = "面板不透明度：" + (int)Se_Panel_Alpha.Value + "%";
+            SePanelAlpha.Value = bgPanelAlpha - 1;
+            SePanelAlphaText.Text = "面板不透明度：" + (int)SePanelAlpha.Value + "%";
             RightGrid.Background.Opacity = (bgPanelAlpha - 1) / 100;
             //设置窗口透明度
             if (windowAlpha == 0)
             {
                 windowAlpha = 101;
             }
-            Se_Window_Alpha.Value = windowAlpha - 1;
-            Se_Window_Alpha_Text.Text = "窗口不透明度：" + (int)Se_Window_Alpha.Value + "%";
+            SeWindowAlpha.Value = windowAlpha - 1;
+            SeWindowAlphaText.Text = "窗口不透明度：" + (int)SeWindowAlpha.Value + "%";
             Opacity = (windowAlpha - 1) / 100;
             //设置高度和宽度
             Width = mainWindowWidth;
             Height = mainWindowHeight;
             //设置游戏版本
-            UI_gameversion.SelectedIndex = (int)gameVersion;
+            UiGameversion.SelectedIndex = (int)gameVersion;
             #endregion
         }
         //MainWindow窗口加载
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            new KeyboardHandler(this);//加载快捷键
-            foreach (string str in RF())//加载字体
+            var _ = new KeyboardHandler(this);
+            foreach (var str in Rf())//加载字体
             {
-                TextBlock TB = new TextBlock()
+                var tb = new TextBlock
                 {
                     Text = str,
                     FontFamily = new FontFamily(str)
                 };
-                Se_ComboBox_Font.Items.Add(TB);
+                SeComboBoxFont.Items.Add(tb);
             }
-            string mainWindowFont = RegeditRW.RegReadString("MainWindowFont");
-            List<string> Ls = new List<string>();
-            foreach (TextBlock TB in Se_ComboBox_Font.Items)
+            var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
+            var ls = new List<string>();
+            foreach (TextBlock tb in SeComboBoxFont.Items)
             {
-                Ls.Add(TB.Text);
+                ls.Add(tb.Text);
             }
-            Se_ComboBox_Font.SelectedIndex = Ls.IndexOf(mainWindowFont);
-            loadFont = true;
+            SeComboBoxFont.SelectedIndex = ls.IndexOf(mainWindowFont);
+            LoadFont = true;
             LoadGameVersionXml();//加载游戏版本Xml文件
             DediButtomPanelInitalize();//服务器面板初始化
         }
@@ -266,79 +240,78 @@ namespace 饥荒百科全书CSharp
 
         #region "设置面板"
         //老板键
-        private void Se_BossKey_Key_KeyDown(Object sender, System.Windows.Input.KeyEventArgs e)
+        private void Se_BossKey_Key_KeyDown(Object sender, KeyEventArgs e)
         {
-            byte PressAlt = 0; //Alt
-            byte PressCtrl = 0; //Ctrl
-            byte PressShift = 0; //Shift
-            int ControlKeys = 0; //Alt + Ctrl + Shift的值
-            string PreString = ""; //前面的值
-            string MainKey = ""; //主值
+            byte pressAlt; //Alt
+            byte pressCtrl; //Ctrl
+            byte pressShift; //Shift
+            string preString; //前面的值
+            var mainKey = ""; //主值
 
             //字母 || F1-F12 || 小键盘区的数字 || 空格?
             if ((e.Key >= Key.A && e.Key <= Key.Z) || (e.Key >= Key.F1 && e.Key <= Key.F12) || (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9) || (e.Key == Key.Space))
             {
                 e.Handled = true;
-                MainKey = e.Key.ToString();
+                mainKey = e.Key.ToString();
             }
             //字母区上面的数字
             if (e.Key >= Key.D0 && e.Key <= Key.D9)
             {
                 e.Handled = true;
-                MainKey = e.Key.ToString().Replace("D", "");
+                mainKey = e.Key.ToString().Replace("D", "");
             }
             //Alt Ctrl Shift键判断
-            if ((System.Windows.Forms.Control.ModifierKeys & Keys.Alt) == Keys.Alt)
-                PressAlt = 1;
+            if ((Control.ModifierKeys & Keys.Alt) == Keys.Alt)
+                pressAlt = 1;
             else
-                PressAlt = 0;
+                pressAlt = 0;
 
-            if ((System.Windows.Forms.Control.ModifierKeys & Keys.Control) == Keys.Control)
-                PressCtrl = 2;
+            if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
+                pressCtrl = 2;
             else
-                PressCtrl = 0;
+                pressCtrl = 0;
 
-            if ((System.Windows.Forms.Control.ModifierKeys & Keys.Shift) == Keys.Shift)
-                PressShift = 4;
+            if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
+                pressShift = 4;
             else
-                PressShift = 0;
+                pressShift = 0;
 
-            ControlKeys = PressAlt + PressCtrl + PressShift;
-            switch (ControlKeys)
+            var controlKeys = pressAlt + pressCtrl + pressShift;
+            switch (controlKeys)
             {
                 case 1:
-                    PreString = "Alt + ";
+                    preString = "Alt + ";
                     break;
                 case 2:
-                    PreString = "Ctrl + ";
+                    preString = "Ctrl + ";
                     break;
                 case 3:
-                    PreString = "Ctrl + Alt + ";
+                    preString = "Ctrl + Alt + ";
                     break;
                 case 4:
-                    PreString = "Shift + ";
+                    preString = "Shift + ";
                     break;
                 case 5:
-                    PreString = "Alt + Shift + ";
+                    preString = "Alt + Shift + ";
                     break;
                 case 6:
-                    PreString = "Ctrl + Shift + ";
+                    preString = "Ctrl + Shift + ";
                     break;
                 case 7:
-                    PreString = "Ctrl + Alt + Shift + ";
+                    preString = "Ctrl + Alt + Shift + ";
                     break;
                 default:
-                    PreString = "";
+                    preString = "";
                     break;
             }
             //输出值
-            if (MainKey != "")
+            if (mainKey != "")
             {
-                Se_BossKey_Key.Content = PreString + MainKey;
+                SeBossKeyKey.Content = preString + mainKey;
             }
             else
             {
-                Se_BossKey_Key.Content = "Ctrl + Alt + B";
+                SeBossKeyKey.Content = "Ctrl + Alt + B";
             }
         }
         #endregion

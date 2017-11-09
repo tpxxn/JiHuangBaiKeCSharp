@@ -14,57 +14,37 @@ namespace 饥荒百科全书CSharp.Class
     {
         #region "成员变量"
         ///使用WebClient下载
-        private WebClient client = new WebClient();
+        private readonly WebClient _client = new WebClient();
         ///用于计算下载速度
-        private Stopwatch stopwatch = new Stopwatch();
+        private readonly Stopwatch _stopwatch = new Stopwatch();
         ///当前版本
-        private string LocalVersion = null;
+        private string _localVersion;
         ///最新版本
-        private string NewVersion = null;
+        private string _newVersion;
         ///下载地址
-        private string NewVersionDownloadURL = null;
+        private string _newVersionDownloadUrl;
         ///新版本文件名
-        private string NewVersionFileName = null;
+        private string _newVersionFileName;
         ///MD5
-        private string MD5Value = null;
+        private string _md5Value;
         ///设置文件夹位置
-        static string CurrentPath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
-        static string UpdatePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\";
-        static string UpdateXmlPath = UpdatePath + "update.xml";
+        private static readonly string CurrentPath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
+        private static readonly string UpdatePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKe\";
+        private static readonly string UpdateXmlPath = UpdatePath + "update.xml";
         #endregion
 
         #region "成员属性"
-        public bool download;
-        public string downloadSpeed;
-        public double downloadProgress;
-        public string downloaded;
-        public bool downloadcompleted;
 
-        public bool Download
-        {
-            get { return download; }
-            set { download = value; }
-        }
-        public string DownloadSpeed
-        {
-            get { return downloadSpeed; }
-            set { downloadSpeed = value; }
-        }
-        public double DownloadProgress
-        {
-            get { return downloadProgress; }
-            set { downloadProgress = value; }
-        }
-        public string Downloaded
-        {
-            get { return downloaded; }
-            set { downloaded = value; }
-        }
-        public bool Downloadcompleted
-        {
-            get { return downloadcompleted; }
-            set { downloadcompleted = value; }
-        }
+        public bool Download { get; set; }
+
+        public string DownloadSpeed { get; set; }
+
+        public double DownloadProgress { get; set; }
+
+        public string Downloaded { get; set; }
+
+        public bool Downloadcompleted { get; set; }
+
         #endregion
 
         /// <summary>
@@ -72,7 +52,7 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         public void UpdateNow()
         {
-            LocalVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            _localVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             DownloadCheckUpdateXml();
         }
 
@@ -89,7 +69,7 @@ namespace 饥荒百科全书CSharp.Class
                     Directory.CreateDirectory(UpdatePath);
                 }
                 //第一个参数是文件的地址,第二个参数是文件保存的路径文件名
-                client.DownloadFile("http://www.jihuangbaike.com/Update/update.xml", UpdateXmlPath);
+                _client.DownloadFile("http://www.jihuangbaike.com/Update/update.xml", UpdateXmlPath);
                 LatestVersion();
             }
             catch
@@ -105,33 +85,33 @@ namespace 饥荒百科全书CSharp.Class
         {
             if (File.Exists(UpdateXmlPath))
             {
-                XmlDocument doc = new XmlDocument();
+                var doc = new XmlDocument();
                 //加载要读取的XML
                 doc.Load(UpdateXmlPath);
-                XmlNode list = doc.SelectSingleNode("Update");
+                var list = doc.SelectSingleNode("Update");
+                if (list == null) return;
                 foreach (XmlNode node in list)
                 {
-                    if (node.Name == "Soft")
+                    if (node.Name != "Soft") continue;
+                    foreach (XmlNode xml in node)
                     {
-                        foreach (XmlNode xml in node)
+                        if (xml.Name == "Verson")
                         {
-                            if (xml.Name == "Verson")
-                            {
-                                NewVersion = xml.InnerText;
-                            }
-                            if (xml.Name == "DownLoad")
-                            {
-                                NewVersionDownloadURL = xml.InnerText;
-                            }
-                            if (xml.Name == "MD5")
-                            {
-                                MD5Value = xml.InnerText;
-                            }
+                            _newVersion = xml.InnerText;
                         }
-                        int slashPlace = NewVersionDownloadURL.LastIndexOf('/');
-                        NewVersionFileName = NewVersionDownloadURL.Replace(".zip", "").Replace("_"," ").Substring(slashPlace + 1);
-                        DownloadNewvirsion();
+                        if (xml.Name == "DownLoad")
+                        {
+                            _newVersionDownloadUrl = xml.InnerText;
+                        }
+                        if (xml.Name == "MD5")
+                        {
+                            _md5Value = xml.InnerText;
+                        }
                     }
+                    var slashPlace = _newVersionDownloadUrl.LastIndexOf('/');
+                    _newVersionFileName = _newVersionDownloadUrl.Replace(".zip", "").Replace("_", " ")
+                        .Substring(slashPlace + 1);
+                    DownloadNewvirsion();
                 }
             }
             else if (!File.Exists(UpdateXmlPath))
@@ -146,18 +126,18 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         private void DownloadNewvirsion()
         {
-            if (LocalVersion == NewVersion)
+            if (_localVersion == _newVersion)
             {
                 MessageBox.Show("恭喜你，已经更新到最新版本");
             }
-            else if (LocalVersion != NewVersion && File.Exists(UpdateXmlPath))
+            else if (_localVersion != _newVersion && File.Exists(UpdateXmlPath))
             {
                 if (MessageBox.Show("检测到新版本，是否下载？", "检查更新", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
                 {
                     //检测并删除已经下载但未完成的文件
-                    if (File.Exists(CurrentPath + NewVersionFileName + ".zip"))
+                    if (File.Exists(CurrentPath + _newVersionFileName + ".zip"))
                     {
-                        if (GetMD5HashFromFile(CurrentPath + NewVersionFileName + ".zip") == MD5Value)
+                        if (GetMd5HashFromFile(CurrentPath + _newVersionFileName + ".zip") == _md5Value)
                         {
                             MessageBox.Show("检测到文件已下载，开始解压！");
                             Downloadcompleted = true;
@@ -166,7 +146,7 @@ namespace 饥荒百科全书CSharp.Class
                         }
                         else
                         {
-                            File.Delete(CurrentPath + NewVersionFileName + ".zip");
+                            File.Delete(CurrentPath + _newVersionFileName + ".zip");
                             DownloadNewversion_();
                         }
                     }
@@ -183,17 +163,17 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         private void DownloadNewversion_()
         {
-            DownloadWindow DW = new DownloadWindow();
-            DW.Show();
+            var dw = new DownloadWindow();
+            dw.Show();
             Download = true;
             //添加下载完成/下载进度事件
-            client.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-            client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+            _client.DownloadFileCompleted += Completed;
+            _client.DownloadProgressChanged += ProgressChanged;
             //
-            stopwatch.Start();
+            _stopwatch.Start();
             // 开始异步下载  
-            Uri newVersionDownloadURL = new Uri(NewVersionDownloadURL);
-            client.DownloadFileAsync(newVersionDownloadURL, CurrentPath + NewVersionFileName + ".zip");
+            var newVersionDownloadUrl = new Uri(_newVersionDownloadUrl);
+            _client.DownloadFileAsync(newVersionDownloadUrl, CurrentPath + _newVersionFileName + ".zip");
         }
         
         /// <summary>
@@ -204,7 +184,7 @@ namespace 饥荒百科全书CSharp.Class
             try
             {
                 // 显示下载速度
-                DownloadSpeed = (Convert.ToDouble(e.BytesReceived) / 1024 / stopwatch.Elapsed.TotalSeconds).ToString("0.00") + " kb/s";
+                DownloadSpeed = (Convert.ToDouble(e.BytesReceived) / 1024 / _stopwatch.Elapsed.TotalSeconds).ToString("0.00") + " kb/s";
                 // 进度条  
                 DownloadProgress = e.ProgressPercentage;
                 // 当前比例
@@ -223,15 +203,15 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         private void Completed(object sender, AsyncCompletedEventArgs e)
         {
-            stopwatch.Reset();
-            if (e.Cancelled == true)
+            _stopwatch.Reset();
+            if (e.Cancelled)
             {
                 MessageBox.Show("下载未完成!", "下载中断");
             }
             else
             {
                 MessageBox.Show("下载完毕!");
-                if (GetMD5HashFromFile(CurrentPath + NewVersionFileName + ".zip") == MD5Value)
+                if (GetMd5HashFromFile(CurrentPath + _newVersionFileName + ".zip") == _md5Value)
                 {
                     MessageBox.Show("MD5校验正确！");
                     Downloadcompleted = true;
@@ -249,7 +229,7 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         public void DownloadCancel()
         {
-            client.CancelAsync();
+            _client.CancelAsync();
         }
 
         /// <summary>
@@ -258,9 +238,9 @@ namespace 饥荒百科全书CSharp.Class
         private void CompressionRun()
         {
             //解压
-            string zipPath = CurrentPath + NewVersionFileName + ".zip";
+            string zipPath = CurrentPath + _newVersionFileName + ".zip";
 
-            if (!File.Exists(CurrentPath + NewVersionFileName + ".exe"))
+            if (!File.Exists(CurrentPath + _newVersionFileName + ".exe"))
             {
                 using (ZipArchive archive = ZipFile.Open(zipPath, ZipArchiveMode.Update))
                 {
@@ -270,9 +250,9 @@ namespace 饥荒百科全书CSharp.Class
             //删除下载的压缩文件
             File.Delete(zipPath);
             //注册表写入需要删除的旧版本文件路径
-            RegeditRW.RegWrite("OldVersionPath", System.Windows.Forms.Application.ExecutablePath);
+            RegeditRw.RegWrite("OldVersionPath", System.Windows.Forms.Application.ExecutablePath);
             //运行
-            Process.Start(CurrentPath + NewVersionFileName + ".exe");
+            Process.Start(CurrentPath + _newVersionFileName + ".exe");
             Environment.Exit(0);
         }
 
@@ -281,7 +261,7 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        public static string GetMD5HashFromFile(string fileName)
+        public static string GetMd5HashFromFile(string fileName)
         {
             try
             {

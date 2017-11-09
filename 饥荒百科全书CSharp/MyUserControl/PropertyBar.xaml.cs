@@ -12,7 +12,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
         public PropertyBar(bool isNegativeNum = false)
         {
             InitializeComponent();
-            if (isNegativeNum == true)
+            if (isNegativeNum)
             {
                 UCProgressBarAngle.Angle = 180;
                 UCTextBlockValue.Foreground = Brushes.Red;

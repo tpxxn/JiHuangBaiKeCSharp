@@ -17,7 +17,7 @@ namespace 饥荒百科全书CSharp
         {
             XmlDocument doc = new XmlDocument();
             Assembly assembly = Assembly.GetEntryAssembly();
-            switch (UI_gameversion.SelectedIndex)
+            switch (UiGameversion.SelectedIndex)
             {
                 case 0:
                     Stream streamDS = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.DSXml.xml");
@@ -56,25 +56,25 @@ namespace 饥荒百科全书CSharp
         private void HandleXml(XmlNode list)
         {
             #region 初始化
-            if (WrapPanel_Left_Character != null)
+            if (WrapPanelLeftCharacter != null)
             {
-                WrapPanel_Left_Character.Children.Clear();
+                WrapPanelLeftCharacter.Children.Clear();
             }
-            if (WrapPanel_Right_Character != null)
+            if (WrapPanelRightCharacter != null)
             {
-                WrapPanel_Right_Character.Children.Clear();
+                WrapPanelRightCharacter.Children.Clear();
             }
-            if (WrapPanel_Left_Food != null)
+            if (WrapPanelLeftFood != null)
             {
-                WrapPanel_Left_Food.Children.Clear();
+                WrapPanelLeftFood.Children.Clear();
             }
-            if (WrapPanel_Right_Food != null)
+            if (WrapPanelRightFood != null)
             {
-                WrapPanel_Right_Food.Children.Clear();
+                WrapPanelRightFood.Children.Clear();
             }
-            if (WrapPanel_Right_Cooking_Simulator != null)
+            if (WrapPanelRightCookingSimulator != null)
             {
-                WrapPanel_Right_Cooking_Simulator.Children.Clear();
+                WrapPanelRightCookingSimulator.Children.Clear();
             }
             #endregion
             foreach (XmlNode Node in list)
@@ -177,7 +177,7 @@ namespace 饥荒百科全书CSharp
                             BWT.UCButton.Click += Character_Click;
                             try
                             {
-                                WrapPanel_Right_Character.Children.Add(BWT);
+                                WrapPanelRightCharacter.Children.Add(BWT);
                             }
                             catch { }
                         }
@@ -194,7 +194,7 @@ namespace 饥荒百科全书CSharp
                             #region 食谱
                             case "FoodRecipe":
                                 ExpanderStackpanel ESRecipe = new ExpanderStackpanel("食谱", "../Resources/CP_CrockPot.png");
-                                WrapPanel_Right_Food.Children.Add(ESRecipe);
+                                WrapPanelRightFood.Children.Add(ESRecipe);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -355,7 +355,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += Food_Recipe_Click;
                                         try
                                         {
-                                            ESRecipe.UCWrapPanel.Children.Add(BWT);
+                                            ESRecipe.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -366,7 +366,7 @@ namespace 饥荒百科全书CSharp
                             case "FoodMeats":
                                 #region 食物
                                 ExpanderStackpanel ESMeast = new ExpanderStackpanel("肉类", "../Resources/GameResources/Food/FC_Meats.png");
-                                WrapPanel_Right_Food.Children.Add(ESMeast);
+                                WrapPanelRightFood.Children.Add(ESMeast);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -434,7 +434,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += Food_Click;
                                         try
                                         {
-                                            ESMeast.UCWrapPanel.Children.Add(BWT);
+                                            ESMeast.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -442,7 +442,7 @@ namespace 饥荒百科全书CSharp
                                 #endregion
                                 #region 模拟
                                 ExpanderStackpanel ESMeast_CS = new ExpanderStackpanel("肉类", "../Resources/GameResources/Food/FC_Meats.png");
-                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESMeast_CS);
+                                WrapPanelRightCookingSimulator.Children.Add(ESMeast_CS);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -498,7 +498,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += CookingSimulator_Click;
                                         try
                                         {
-                                            ESMeast_CS.UCWrapPanel.Children.Add(BWT);
+                                            ESMeast_CS.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -510,7 +510,7 @@ namespace 饥荒百科全书CSharp
                             case "FoodVegetables":
                                 #region 食物
                                 ExpanderStackpanel ESVegetables = new ExpanderStackpanel("蔬菜", "../Resources/GameResources/Food/FC_Vegetables.png");
-                                WrapPanel_Right_Food.Children.Add(ESVegetables);
+                                WrapPanelRightFood.Children.Add(ESVegetables);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -578,7 +578,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += Food_Click;
                                         try
                                         {
-                                            ESVegetables.UCWrapPanel.Children.Add(BWT);
+                                            ESVegetables.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -586,7 +586,7 @@ namespace 饥荒百科全书CSharp
                                 #endregion
                                 #region 模拟
                                 ExpanderStackpanel ESVegetables_CS = new ExpanderStackpanel("蔬菜", "../Resources/GameResources/Food/FC_Vegetables.png");
-                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESVegetables_CS);
+                                WrapPanelRightCookingSimulator.Children.Add(ESVegetables_CS);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -650,7 +650,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += CookingSimulator_Click;
                                         try
                                         {
-                                            ESVegetables_CS.UCWrapPanel.Children.Add(BWT);
+                                            ESVegetables_CS.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -662,7 +662,7 @@ namespace 饥荒百科全书CSharp
                             case "FoodFruit":
                                 #region 食物
                                 ExpanderStackpanel ESFruit = new ExpanderStackpanel("水果", "../Resources/GameResources/Food/FC_Fruit.png");
-                                WrapPanel_Right_Food.Children.Add(ESFruit);
+                                WrapPanelRightFood.Children.Add(ESFruit);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -730,7 +730,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += Food_Click;
                                         try
                                         {
-                                            ESFruit.UCWrapPanel.Children.Add(BWT);
+                                            ESFruit.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -738,7 +738,7 @@ namespace 饥荒百科全书CSharp
                                 #endregion
                                 #region 模拟
                                 ExpanderStackpanel ESFruit_CS = new ExpanderStackpanel("水果", "../Resources/GameResources/Food/FC_Fruit.png");
-                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESFruit_CS);
+                                WrapPanelRightCookingSimulator.Children.Add(ESFruit_CS);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -802,7 +802,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += CookingSimulator_Click;
                                         try
                                         {
-                                            ESFruit_CS.UCWrapPanel.Children.Add(BWT);
+                                            ESFruit_CS.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -814,7 +814,7 @@ namespace 饥荒百科全书CSharp
                             case "FoodEggs":
                                 #region 食物
                                 ExpanderStackpanel ESEggs = new ExpanderStackpanel("蛋类", "../Resources/GameResources/Food/FC_Eggs.png");
-                                WrapPanel_Right_Food.Children.Add(ESEggs);
+                                WrapPanelRightFood.Children.Add(ESEggs);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -882,7 +882,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += Food_Click;
                                         try
                                         {
-                                            ESEggs.UCWrapPanel.Children.Add(BWT);
+                                            ESEggs.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -890,7 +890,7 @@ namespace 饥荒百科全书CSharp
                                 #endregion
                                 #region 模拟
                                 ExpanderStackpanel ESEggs_CS = new ExpanderStackpanel("蛋类", "../Resources/GameResources/Food/FC_Eggs.png");
-                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESEggs_CS);
+                                WrapPanelRightCookingSimulator.Children.Add(ESEggs_CS);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -954,7 +954,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += CookingSimulator_Click;
                                         try
                                         {
-                                            ESEggs_CS.UCWrapPanel.Children.Add(BWT);
+                                            ESEggs_CS.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -966,7 +966,7 @@ namespace 饥荒百科全书CSharp
                             case "FoodOthers":
                                 #region 食物
                                 ExpanderStackpanel ESOthers = new ExpanderStackpanel("其他", "../Resources/GameResources/Food/F_twigs.png");
-                                WrapPanel_Right_Food.Children.Add(ESOthers);
+                                WrapPanelRightFood.Children.Add(ESOthers);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -1034,7 +1034,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += Food_Click;
                                         try
                                         {
-                                            ESOthers.UCWrapPanel.Children.Add(BWT);
+                                            ESOthers.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -1042,7 +1042,7 @@ namespace 饥荒百科全书CSharp
                                 #endregion
                                 #region 模拟
                                 ExpanderStackpanel ESOthers_CS = new ExpanderStackpanel("其他", "../Resources/GameResources/Food/F_twigs.png");
-                                WrapPanel_Right_Cooking_Simulator.Children.Add(ESOthers_CS);
+                                WrapPanelRightCookingSimulator.Children.Add(ESOthers_CS);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -1106,7 +1106,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += CookingSimulator_Click;
                                         try
                                         {
-                                            ESOthers_CS.UCWrapPanel.Children.Add(BWT);
+                                            ESOthers_CS.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }
@@ -1117,7 +1117,7 @@ namespace 饥荒百科全书CSharp
                             #region 非食材
                             case "FoodNoFC":
                                 ExpanderStackpanel ESNoFC = new ExpanderStackpanel("非食材", "../Resources/GameResources/Food/F_petals.png");
-                                WrapPanel_Right_Food.Children.Add(ESNoFC);
+                                WrapPanelRightFood.Children.Add(ESNoFC);
                                 foreach (XmlNode Level2childNode in childNode)
                                 {
                                     if (Level2childNode.Name == "Food")
@@ -1173,7 +1173,7 @@ namespace 饥荒百科全书CSharp
                                         BWT.UCButton.Click += Food_NoFC_Click;
                                         try
                                         {
-                                            ESNoFC.UCWrapPanel.Children.Add(BWT);
+                                            ESNoFC.UcWrapPanel.Children.Add(BWT);
                                         }
                                         catch { }
                                     }

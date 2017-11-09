@@ -11,15 +11,14 @@ namespace 饥荒百科全书CSharp.MyUserControl
     {
         public ExpanderStackpanel(string textblockText = "", string imageSource = "")
         {
-            InitializeComponent(); 
-            UCTextBlock.Text = textblockText;
+            InitializeComponent();
+            UcTextBlock.Text = textblockText;
             if (imageSource != "")
             {
-                Thickness T = new Thickness();
-                T.Left = 32;
-                UCTextBlock.Margin = T;
-                UCImage.Visibility = Visibility.Visible;
-                UCImage.Source = RSN.PictureShortName(imageSource);
+                var T = new Thickness { Left = 32 };
+                UcTextBlock.Margin = T;
+                UcImage.Visibility = Visibility.Visible;
+                UcImage.Source = RSN.PictureShortName(imageSource);
             }
         }
     }

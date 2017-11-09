@@ -20,12 +20,12 @@ namespace 饥荒百科全书CSharp
             Button_CS_Food_2_Click(null, null);
             Button_CS_Food_3_Click(null, null);
             Button_CS_Food_4_Click(null, null);
-            Image_CS_Food_Result.Source = null;
-            TextBlock_CS_FoodName.Text = "";
+            ImageCsFoodResult.Source = null;
+            TextBlockCsFoodName.Text = "";
             CrockPotList.Clear();
             CrockPotListIndex = -1;
             CrockPotMaxPriority = -128;
-            Visi.VisiCol(true, button_CS_Switch_Left, button_CS_Switch_Right);
+            Visi.VisiCol(true, ButtonCsSwitchLeft, ButtonCsSwitchRight);
         }
         //目录设置
         const string CS_ResourceDir = "GameResources/Food/";
@@ -88,22 +88,22 @@ namespace 饥荒百科全书CSharp
             if (CS_Recipe_1 == "")
             {
                 CS_Recipe_1 = Name;
-                Image_CS_Food_1.Source = RSN.PictureShortName(Name);
+                ImageCsFood1.Source = RSN.PictureShortName(Name);
             }
             else if (CS_Recipe_2 == "")
             {
                 CS_Recipe_2 = Name;
-                Image_CS_Food_2.Source = RSN.PictureShortName(Name);
+                ImageCsFood2.Source = RSN.PictureShortName(Name);
             }
             else if (CS_Recipe_3 == "")
             {
                 CS_Recipe_3 = Name;
-                Image_CS_Food_3.Source = RSN.PictureShortName(Name);
+                ImageCsFood3.Source = RSN.PictureShortName(Name);
             }
             else if (CS_Recipe_4 == "")
             {
                 CS_Recipe_4 = Name;
-                Image_CS_Food_4.Source = RSN.PictureShortName(Name);
+                ImageCsFood4.Source = RSN.PictureShortName(Name);
             }
             if (CS_Recipe_1 != "" && CS_Recipe_2 != "" && CS_Recipe_3 != "" && CS_Recipe_4 != "")
             {
@@ -114,22 +114,22 @@ namespace 饥荒百科全书CSharp
         private void Button_CS_Food_1_Click(object sender, RoutedEventArgs e)
         {
             CS_Recipe_1 = "";
-            Image_CS_Food_1.Source = null;
+            ImageCsFood1.Source = null;
         }
         private void Button_CS_Food_2_Click(object sender, RoutedEventArgs e)
         {
             CS_Recipe_2 = "";
-            Image_CS_Food_2.Source = null;
+            ImageCsFood2.Source = null;
         }
         private void Button_CS_Food_3_Click(object sender, RoutedEventArgs e)
         {
             CS_Recipe_3 = "";
-            Image_CS_Food_3.Source = null;
+            ImageCsFood3.Source = null;
         }
         private void Button_CS_Food_4_Click(object sender, RoutedEventArgs e)
         {
             CS_Recipe_4 = "";
-            Image_CS_Food_4.Source = null;
+            ImageCsFood4.Source = null;
         }
         //食材属性统计
         private void CS_RecipeStatistics(string Name)
@@ -537,10 +537,10 @@ namespace 饥荒百科全书CSharp
             #endregion
             #region 烹饪
             //------------------------SW------------------------
-            if (UI_gameversion.SelectedIndex == 2)
+            if (UiGameversion.SelectedIndex == 2)
             {
                 //便携式烹饪锅的四种食物
-                if (ComboBox_CS_crockpot.SelectedIndex == 1)
+                if (ComboBoxCsCrockpot.SelectedIndex == 1)
                 {
                     if (CS_FT_Fruit >= 2 && CS_FT_Butter >= 1 && CS_FT_Honey >= 1)
                         CS_CrockPotListAddFood("F_fresh_fruit_crepes", 30);
@@ -667,30 +667,30 @@ namespace 饥荒百科全书CSharp
             #region 选择按钮显示判断
             if (CrockPotListIndex < 1)
             {
-                button_CS_Switch_Left.Visibility = Visibility.Collapsed;
-                button_CS_Switch_Right.Visibility = Visibility.Collapsed;
+                ButtonCsSwitchLeft.Visibility = Visibility.Collapsed;
+                ButtonCsSwitchRight.Visibility = Visibility.Collapsed;
             }
             else
             {
-                button_CS_Switch_Left.Visibility = Visibility.Visible;
-                button_CS_Switch_Right.Visibility = Visibility.Visible;
-                button_CS_Switch_Left.IsEnabled = false;
-                button_CS_Switch_Right.IsEnabled = true;
+                ButtonCsSwitchLeft.Visibility = Visibility.Visible;
+                ButtonCsSwitchRight.Visibility = Visibility.Visible;
+                ButtonCsSwitchLeft.IsEnabled = false;
+                ButtonCsSwitchRight.IsEnabled = true;
             }
             #endregion
             //显示食物名称
-            TextBlock_CS_FoodName.Text = CS_Food_Text(CS_F_name);
+            TextBlockCsFoodName.Text = CS_Food_Text(CS_F_name);
             #region 自动清空材料
-            if (checkBox_CS_AutoClean.IsChecked == true)
+            if (CheckBoxCsAutoClean.IsChecked == true)
             {
                 CS_Recipe_1 = "";
                 CS_Recipe_2 = "";
                 CS_Recipe_3 = "";
                 CS_Recipe_4 = "";
-                Image_CS_Food_1.Source = null;
-                Image_CS_Food_2.Source = null;
-                Image_CS_Food_3.Source = null;
-                Image_CS_Food_4.Source = null;
+                ImageCsFood1.Source = null;
+                ImageCsFood2.Source = null;
+                ImageCsFood3.Source = null;
+                ImageCsFood4.Source = null;
             }
             #endregion
         }
@@ -707,7 +707,7 @@ namespace 饥荒百科全书CSharp
         //烹饪结果图片
         private void CS_image_Food_Result_Source(string source)
         {
-            Image_CS_Food_Result.Source = RSN.PictureShortName(RSN.ShortName(source, CS_ResourceDir));
+            ImageCsFoodResult.Source = RSN.PictureShortName(RSN.ShortName(source, CS_ResourceDir));
         }
         //烹饪结果文字
         private string CS_Food_Text(string source)
@@ -747,34 +747,34 @@ namespace 饥荒百科全书CSharp
                 case "F_jellybeans":
                     return "糖豆";
                 case "F_guacamole":
-                    if (UI_gameversion.SelectedIndex ==4)
+                    if (UiGameversion.SelectedIndex ==4)
                         return "鼹梨沙拉酱";
                     else
                         return "鼹鼠鳄梨酱";
                 case "F_flower_salad":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "花沙拉";
                     else
                         return "花瓣沙拉";
                 case "F_ice_cream":
                     return "冰淇淋";
                 case "F_melonsicle":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "西瓜冰棍";
                     else
                         return "西瓜冰";
                 case "F_trail_mix":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "什锦干果";
                     else
                         return "水果杂烩";
                 case "F_spicy_chili":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "辣椒炖肉";
                     else
                         return "辣椒酱";
                 case "F_unagi":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "鳗鱼料理";
                     else
                         return "鳗鱼";
@@ -783,24 +783,24 @@ namespace 饥荒百科全书CSharp
                 case "F_powdercake":
                     return "芝士蛋糕";
                 case "F_mandrake_soup":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "曼德拉草汤";
                     else
                         return "曼德拉汤";
                 case "F_fishsticks":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "炸鱼排";
                     else
                         return "炸鱼条";
                 case "F_fish_tacos":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "鱼肉玉米卷";
                     else
                         return "玉米饼包炸鱼";
                 case "F_bacon_and_eggs":
                     return "培根煎蛋";
                 case "F_turkey_dinner":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "火鸡大餐";
                     else
                         return "火鸡正餐";
@@ -811,7 +811,7 @@ namespace 饥荒百科全书CSharp
                 case "F_monster_lasagna":
                     return "怪物千层饼";
                 case "F_pierogi":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "波兰水饺";
                     else
                         return "饺子";
@@ -820,39 +820,39 @@ namespace 饥荒百科全书CSharp
                 case "F_honey_ham":
                     return "蜜汁火腿";
                 case "F_honey_nuggets":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "蜜汁卤肉";
                     else
                         return "甜蜜金砖";
                 case "F_butter_muffin":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "奶油玛芬";
                     else
                         return "奶油松饼";
                 case "F_froggle_bunwich":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "蛙腿三明治";
                     else
                         return "青蛙圆面包三明治";
                 case "F_dragonpie":
                     return "火龙果派";
                 case "F_stuffed_eggplant":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "酿茄子";
                     else
                         return "香酥茄盒";
                 case "F_ratatouille":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "蔬菜大杂烩";
                     else
                         return "蔬菜杂烩";
                 case "F_fist_full_of_jam":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "满满的果酱";
                     else
                         return "果酱蜜饯";
                 case "F_fruit_medley":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "水果圣代";
                     else
                         return "水果沙拉";
@@ -861,7 +861,7 @@ namespace 饥荒百科全书CSharp
                 case "F_meatballs":
                     return "肉丸";
                 case "F_wet_goop":
-                    if (UI_gameversion.SelectedIndex == 4)
+                    if (UiGameversion.SelectedIndex == 4)
                         return "失败料理";
                     else
                         return "湿腻焦糊";
@@ -872,40 +872,40 @@ namespace 饥荒百科全书CSharp
         //左右切换按钮
         private void button_CS_Switch_Left_Click(object sender, RoutedEventArgs e)
         {
-            button_CS_Switch_Right.IsEnabled = true;
+            ButtonCsSwitchRight.IsEnabled = true;
             if (FoodIndex != 0)
             {
                 FoodIndex -= 1;
                 if (FoodIndex == 0)
                 {
-                    button_CS_Switch_Left.IsEnabled = false;
+                    ButtonCsSwitchLeft.IsEnabled = false;
                 }
                 CS_F_name = CrockPotList[FoodIndex];
                 CS_image_Food_Result_Source(CrockPotList[FoodIndex]);
             }
-            TextBlock_CS_FoodName.Text = CS_Food_Text(CS_F_name);
+            TextBlockCsFoodName.Text = CS_Food_Text(CS_F_name);
         }
         private void button_CS_Switch_Right_Click(object sender, RoutedEventArgs e)
         {
-            button_CS_Switch_Left.IsEnabled = true;
+            ButtonCsSwitchLeft.IsEnabled = true;
             if (FoodIndex != CrockPotListIndex)
             {
                 FoodIndex += 1;
                 if (FoodIndex == CrockPotListIndex)
                 {
-                    button_CS_Switch_Right.IsEnabled = false;
+                    ButtonCsSwitchRight.IsEnabled = false;
                 }
                 CS_F_name = CrockPotList[FoodIndex];
                 CS_image_Food_Result_Source(CrockPotList[FoodIndex]);
             }
-            TextBlock_CS_FoodName.Text = CS_Food_Text(CS_F_name);
+            TextBlockCsFoodName.Text = CS_Food_Text(CS_F_name);
         }
         //烹饪结果跳转
         private void button_CS_Food_Result_Click(object sender, RoutedEventArgs e)
         {
-            foreach (UIElement expanderStackpanel in WrapPanel_Right_Food.Children)
+            foreach (UIElement expanderStackpanel in WrapPanelRightFood.Children)
             {
-                foreach (UIElement buttonWithText in ((ExpanderStackpanel)expanderStackpanel).UCWrapPanel.Children)
+                foreach (UIElement buttonWithText in ((ExpanderStackpanel)expanderStackpanel).UcWrapPanel.Children)
                 {
                     string[] RightButtonTag = (string[])(((ButtonWithText)buttonWithText).UCButton.Tag);
                     string RightButtonTag0 = RightButtonTag[0];
@@ -913,10 +913,10 @@ namespace 饥荒百科全书CSharp
                     if (CrockPotList[FoodIndex] == RightButtonTag0)
                     {
                         Sidebar_Food_Click(null, null);
-                        Sidebar_Food.IsChecked = true;
-                        WrapPanel_Left_Food.UpdateLayout();
+                        SidebarFood.IsChecked = true;
+                        WrapPanelLeftFood.UpdateLayout();
                         Food_Click(((ButtonWithText)buttonWithText).UCButton, null);
-                        WrapPanel_Left_Food.UpdateLayout();
+                        WrapPanelLeftFood.UpdateLayout();
                         //Point point = ((ButtonWithText)buttonWithText).TransformToVisual(WrapPanel_Right_Food).Transform(new Point(0, 0));
                         //ScrollViewer_Right_Food.ScrollToVerticalOffset(point.Y);
                     }
@@ -947,8 +947,8 @@ namespace 饥荒百科全书CSharp
         //WrapPanel_Left_Cooking_Simulator内Grid.Width设置为WrapPanel_Left_Cooking_Simulator.ActualWidth
         private void WrapPanel_Left_Cooking_Simulator_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            int LeftCookingSimulatorWidth = (int)WrapPanel_Left_Cooking_Simulator.ActualWidth;
-            foreach (UIElement uielement in WrapPanel_Left_Cooking_Simulator.Children)
+            int LeftCookingSimulatorWidth = (int)WrapPanelLeftCookingSimulator.ActualWidth;
+            foreach (UIElement uielement in WrapPanelLeftCookingSimulator.Children)
             {
                 if (uielement.GetType().ToString() == "System.Windows.Controls.Grid")
                 {
@@ -967,9 +967,9 @@ namespace 饥荒百科全书CSharp
         //WrapPanel_Right_Cooking_Simulator内Expander.Width设置为WrapPanel_Right_Cooking_Simulator.ActualWidth
         private void WrapPanel_Right_Cooking_Simulator_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            foreach (ExpanderStackpanel expanderStackpanel in WrapPanel_Right_Cooking_Simulator.Children)
+            foreach (ExpanderStackpanel expanderStackpanel in WrapPanelRightCookingSimulator.Children)
             {
-                expanderStackpanel.Width = (int)WrapPanel_Right_Cooking_Simulator.ActualWidth;
+                expanderStackpanel.Width = (int)WrapPanelRightCookingSimulator.ActualWidth;
             }
         }
     }
