@@ -113,7 +113,9 @@ namespace 饥荒百科全书CSharp
             _visiTimer.Tick += VisiTimerEvent;
             _visiTimer.Start();
             //设置光标资源字典路径
-            CursorDictionary.Source = new Uri("Dictionary/CursorDictionary.xaml", UriKind.Relative);
+            CursorDictionary.Source = new Uri(
+                "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
+                UriKind.Absolute);
             //显示窗口
             MwVisivility = true;
             //右侧面板Visibility属性初始化
@@ -203,7 +205,6 @@ namespace 饥荒百科全书CSharp
             }
             SeComboBoxFont.SelectedIndex = ls.IndexOf(mainWindowFont);
             LoadFont = true;
-            LoadGameVersionXml();//加载游戏版本Xml文件
             DediButtomPanelInitalize();//服务器面板初始化
         }
         #endregion

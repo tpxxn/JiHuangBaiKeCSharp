@@ -21,30 +21,9 @@
         WindowStartupLocation="CenterScreen" 
         SizeChanged="MainWindow_SizeChanged" 
         Loaded="MainWindow_Loaded" 
-        Cursor="{DynamicResource Cursor_pointer}" 
+        Cursor="{StaticResource CursorPointer}" 
         WindowStyle="None" 
         AllowsTransparency="True" MouseDoubleClick="MainWindow_MouseDoubleClick">
-
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dictionary/CheckBoxDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/ComboBoxDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/CursorDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/ExpanderDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/GridSplitter.xaml" />
-                <ResourceDictionary Source="Dictionary/ScrollViewerDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/SliderDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/SwitchButtonDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/WindowDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediLeftPanelRadioButtonDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediScrollViewerDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelButtonDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelRadioButtonDictionary.xaml" />
-                <ResourceDictionary Source="Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
 
     <Grid x:Name="ResizeGrid">
         <Grid.RowDefinitions>
@@ -73,21 +52,21 @@
             <Border x:Name="UiBackGroundBorder" BorderThickness="0" Grid.RowSpan="2" Grid.Column="1" d:IsLocked="True"/>
             <Grid x:Name="UiGrid" Grid.Row="0" Grid.Column="1">
                 <TextBlock x:Name="UiTitle" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" />
-                <Button x:Name="UiBtnClose" Width="20" ToolTip="退出" Click="UI_btn_close_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,10,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnMaximized" Width="20" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_maximized_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnNormal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_normal_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnMinimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnBg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
+                <Button x:Name="UiBtnClose" Width="20" ToolTip="退出" Click="UI_btn_close_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,10,20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_close_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UiBtnMaximized" Width="20" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_maximized_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UiBtnNormal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_normal_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UiBtnMinimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UiBtnBg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
                 <Popup x:Name="UiPopBg" PopupAnimation="Fade" Width="200" PlacementTarget="{Binding ElementName=UiBtnBg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
-                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White" Cursor="{DynamicResource Cursor_pointer}">
+                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White" Cursor="{DynamicResource CursorPointer}">
                         <StackPanel Margin="10">
-                            <Button x:Name="SeButtonBackground" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
+                            <Button x:Name="SeButtonBackground" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource CursorLink}">
                                 <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
                                     <Image Height="40" Width="40" Source="/Resources/Setting_Skin.png" Margin="0,0,0,0"/>
                                     <TextBlock TextWrapping="Wrap" Text="选择背景" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="130" TextAlignment="Center"/>
                                 </Canvas>
                             </Button>
-                            <Button x:Name="SeButtonBackgroundClear" Click="Se_button_Background_Clear_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}">
+                            <Button x:Name="SeButtonBackgroundClear" Click="Se_button_Background_Clear_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource CursorLink}">
                                 <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
                                     <Image Height="40" Width="40" Source="Resources/Setting_Skin_Clear.png" Margin="0,0,0,0"/>
                                     <TextBlock TextWrapping="Wrap" Text="清除背景" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="130" TextAlignment="Center"/>
@@ -111,25 +90,25 @@
                             <TextBlock x:Name="SeTextFont" TextWrapping="Wrap" Text="字体：" Margin="0,10,0,0" HorizontalAlignment="Left"/>
                             <ComboBox x:Name="SeComboBoxFont" HorizontalAlignment="Right" Width="133" Margin="0,-19,0,0" Focusable="False" SelectionChanged="Se_ComboBox_Font_SelectionChanged" SelectedIndex="1" Style="{DynamicResource ComboBoxStyle}" IsReadOnly="True"/>
                             <TextBlock x:Name="SeBgAlphaText" TextWrapping="Wrap" Text="背景不透明度：100%" Margin="0,10,0,0"/>
-                            <Slider x:Name="SeBgAlpha" ValueChanged="Se_BG_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Cursor="{DynamicResource Cursor_link}" Margin="0,0,1,0" />
+                            <Slider x:Name="SeBgAlpha" ValueChanged="Se_BG_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Cursor="{DynamicResource CursorLink}" Margin="0,0,1,0" />
                             <TextBlock x:Name="SePanelAlphaText" TextWrapping="Wrap" Text="面板不透明度：100%" Margin="0,10,0,0"/>
-                            <Slider x:Name="SePanelAlpha" ValueChanged="Se_Panel_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Cursor="{DynamicResource Cursor_link}" Margin="0,0,1,0" />
+                            <Slider x:Name="SePanelAlpha" ValueChanged="Se_Panel_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Cursor="{DynamicResource CursorLink}" Margin="0,0,1,0" />
                             <TextBlock x:Name="SeWindowAlphaText" TextWrapping="Wrap" Text="窗口不透明度：100%" Margin="0,10,0,0"/>
-                            <Slider x:Name="SeWindowAlpha" ValueChanged="Se_Window_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Minimum="10" Cursor="{DynamicResource Cursor_link}" Margin="0,0,1,0"/>
+                            <Slider x:Name="SeWindowAlpha" ValueChanged="Se_Window_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Minimum="10" Cursor="{DynamicResource CursorLink}" Margin="0,0,1,0"/>
                         </StackPanel>
                     </Border>
                 </Popup>
-                <Button x:Name="UiBtnSetting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Margin="0,10,110,20" Height="20" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_setting_Style}" Focusable="False" />
+                <Button x:Name="UiBtnSetting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Margin="0,10,110,20" Height="20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_setting_Style}" Focusable="False" />
                 <Popup x:Name="UiPopSetting" PopupAnimation="Fade" Width="150" Height="110" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Margin="0,0,748,-150" VerticalOffset="10">
-                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
+                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White"  Cursor="{DynamicResource CursorPointer}">
                         <StackPanel Margin="10">
-                            <Button x:Name="SeButtonTopmost" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}" Click="Se_button_Topmost_Click">
+                            <Button x:Name="SeButtonTopmost" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource CursorLink}" Click="Se_button_Topmost_Click">
                                 <Canvas Height="40" Width="120" Margin="-2,-2,0,0" >
                                     <Image x:Name="SeImageTopmost" Height="40" Width="40" Source="Resources/Setting_Top_F.png" Margin="0,0,0,0"/>
                                     <TextBlock x:Name="SeTextblockTopmost" TextWrapping="Wrap" Text="永不置顶" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="80" TextAlignment="Center"/>
                                 </Canvas>
                             </Button>
-                            <Button x:Name="SeButtonUpdate" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource Cursor_link}" Click="Se_button_Update_Click">
+                            <Button x:Name="SeButtonUpdate" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource CursorLink}" Click="Se_button_Update_Click">
                                 <Canvas Height="40" Width="120" Margin="-2,-2,0,0" >
                                     <Image Height="40" Width="40" Source="Resources/Setting_Update.png" Margin="0,0,0,0"/>
                                     <TextBlock TextWrapping="Wrap" Text="检查更新" Canvas.Left="40" Padding="0,12,0,0" Height="40" Width="80" TextAlignment="Center"/>
@@ -139,7 +118,19 @@
                     </Border>
                 </Popup>
                 <ComboBox x:Name="UiGameversion" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{DynamicResource ComboBoxStyle}" HorizontalAlignment="Right">
-                    <ComboBoxItem IsSelected="True" Focusable="False">
+                    <ComboBoxItem Focusable="False">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/DLC_DST.PNG" Width="32" Height="32"  />
+                            <TextBlock Text="DST" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem Focusable="False">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/DLC_DST_TX.PNG" Width="32" Height="32" />
+                            <TextBlock Text="Tencent" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem IsSelected="False" Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DS.PNG" Width="32" Height="32" />
                             <TextBlock Text="DS" VerticalAlignment="Center" Margin="10,0,0,0" />
@@ -157,22 +148,10 @@
                             <TextBlock Text="SW" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem Focusable="False">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/DLC_DST.PNG" Width="32" Height="32"  />
-                            <TextBlock Text="DST" VerticalAlignment="Center" Margin="10,0,0,0" />
-                        </StackPanel>
-                    </ComboBoxItem>
-                    <ComboBoxItem Focusable="False">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/DLC_DST_TX.PNG" Width="32" Height="32" />
-                            <TextBlock Text="Tencent" VerticalAlignment="Center" Margin="10,0,0,0" />
-                        </StackPanel>
-                    </ComboBoxItem>
                 </ComboBox>
                 <TextBlock x:Name="UiGameversionTextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" HorizontalAlignment="Right" VerticalAlignment="Top" d:IsLocked="True"/>
-                <TextBox x:Name="UiSearch" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource Cursor_text}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10"/>
-                <Button x:Name="UiSearchClear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
+                <TextBox x:Name="UiSearch" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource CursorText}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10"/>
+                <Button x:Name="UiSearchClear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
             <Frame x:Name="RightFrame" Grid.Row="1" Grid.Column="1" Margin="0,1,0,0" NavigationUIVisibility="Hidden"/>
             <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF" Visibility="Collapsed">
@@ -180,135 +159,13 @@
                     <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
                     <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <GridSplitter x:Name="UiSplitter" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource Cursor_horz}" Grid.Column="1" Style="{DynamicResource GridSplitterStyle}" />
-                <ScrollViewer Grid.Column="0" x:Name="ScrollViewerLeftFood" Template="{DynamicResource MyScrollViewer}" Focusable="False">
-                    <StackPanel x:Name="WrapPanelLeftFood" Focusable="False" SizeChanged="WrapPanel_Left_Food_SizeChanged"/>
-                </ScrollViewer>
                 <Popup x:Name="PopFoodAttribute" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Right" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White"  Cursor="{DynamicResource Cursor_pointer}">
+                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White"  Cursor="{DynamicResource CursorPointer}">
                         <ScrollViewer x:Name="ScrollViewerFoodAttribute" Template="{DynamicResource MyScrollViewer}" Focusable="False" Height="350">
                             <WrapPanel x:Name="WrapPanelFoodAttribute" Width="185"/>
                         </ScrollViewer>
                     </Border>
                 </Popup>
-                <ScrollViewer x:Name="ScrollViewerRightFood" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelRightFood" Focusable="False" SizeChanged="WrapPanel_Right_Food_SizeChanged"/>
-                </ScrollViewer>
-                <ScrollViewer Grid.Column="0" x:Name="ScrollViewerLeftCookingSimulator" Template="{DynamicResource MyScrollViewer}" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelLeftCookingSimulator" Focusable="False" SizeChanged="WrapPanel_Left_Cooking_Simulator_SizeChanged">
-                        <ComboBox x:Name="ComboBoxCsCrockpot" VerticalAlignment="Top" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{DynamicResource ComboBoxStyle}" HorizontalContentAlignment="Center" Width="{Binding ActualWidth, ElementName=WrapPanelLeftCookingSimulator, Mode=OneWay}">
-                            <ComboBoxItem x:Name="ComboBoxItemCsCrockPot" IsSelected="True" Focusable="False" HorizontalContentAlignment="Center">
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Resources/CP_CrockPot.PNG" Width="32" Height="32" />
-                                    <TextBlock Text="烹煮锅" VerticalAlignment="Center" Margin="10,0,0,0" />
-                                </StackPanel>
-                            </ComboBoxItem>
-                            <ComboBoxItem x:Name="ComboBoxItemCsPortableCrockPot" Focusable="False" HorizontalContentAlignment="Center">
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Resources/CP_PortableCrockPot.PNG" Width="32" Height="32" />
-                                    <TextBlock Text="便携式烹饪锅" VerticalAlignment="Center" Margin="10,0,0,0" />
-                                </StackPanel>
-                            </ComboBoxItem>
-                        </ComboBox>
-                        <Grid x:Name="GridSettingAndReset" Height="40" Width="303.2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="170"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <CheckBox x:Name="CheckBoxCsAutoClean" Content="自动清空材料" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="1" IsChecked="True"/>
-                            <Button x:Name="ButtonCsReset" Content="重置" VerticalAlignment="Top" Width="64" Cursor="{DynamicResource Cursor_link}" Margin="0,7,0,0" HorizontalAlignment="Right" Grid.Column="1" Click="button_CS_Reset_Click"/>
-                        </Grid>
-                        <StackPanel x:Name="StackPanelCsFoodButton" Width="303.2">
-                            <Button x:Name="ButtonCsFood1" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_1_Click" Background="{x:Null}">
-                                <Image x:Name="ImageCsFood1" Height="52" Width="52"/>
-                            </Button>
-                            <Button x:Name="ButtonCsFood2" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_2_Click" Background="{x:Null}">
-                                <Image x:Name="ImageCsFood2" Height="52" Width="52"/>
-                            </Button>
-                            <Button x:Name="ButtonCsFood3" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_3_Click" Background="{x:Null}">
-                                <Image x:Name="ImageCsFood3" Height="52" Width="52"/>
-                            </Button>
-                            <Button x:Name="ButtonCsFood4" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="Button_CS_Food_4_Click" Background="{x:Null}">
-                                <Image x:Name="ImageCsFood4" Height="52" Width="52"/>
-                            </Button>
-                        </StackPanel>
-                        <Grid x:Name="GridCsCalculation" Height="64" Width="303.2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Image Height="52" Width="52" Source="Resources/DedicatedServer/D_set_rightarrow.png" RenderTransformOrigin="0.5,0.5">
-                                <Image.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="90"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Image.RenderTransform>
-                            </Image>
-                        </Grid>
-                        <Grid x:Name="GridCsResultButton" Height="64" Width="303.2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="64"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Button x:Name="ButtonCsSwitchLeft" Grid.Column="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="44" HorizontalAlignment="Right" Style="{DynamicResource SwitchButtonLeftStyle}" Click="button_CS_Switch_Left_Click" Visibility="Collapsed"/>
-                            <Button x:Name="ButtonCsFoodResult" Grid.Column="1" Width="64" Height="64" Cursor="{DynamicResource Cursor_link}" Click="button_CS_Food_Result_Click" Background="{x:Null}">
-                                <Image x:Name="ImageCsFoodResult" Height="52" Width="52"/>
-                            </Button>
-                            <Button x:Name="ButtonCsSwitchRight" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Width="44" HorizontalAlignment="Left" Style="{DynamicResource SwitchButtonRightStyle}" Click="button_CS_Switch_Right_Click" Visibility="Collapsed"/>
-                        </Grid>
-                        <Grid x:Name="GridCsFoodName" Height="40" Width="303.2">
-                            <TextBlock x:Name="TextBlockCsFoodName" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Grid>
-                        <Grid x:Name="GridFoodAttribute" Height="100" Width="303.2">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition Height="15"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="40"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock HorizontalAlignment="Center" Text="生成食物属性" VerticalAlignment="Top" Grid.Column="2"/>
-                            <TextBlock HorizontalAlignment="Center" Text="食材总属性" VerticalAlignment="Top" Grid.Row="0"
-                                       Grid.RowSpan="2" Grid.Column="0" />
-                            <TextBlock HorizontalAlignment="Center" Text="生命" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
-                            <TextBlock HorizontalAlignment="Center" Text="饥饿" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
-                            <TextBlock HorizontalAlignment="Center" Text="精神" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"/>
-                        </Grid>
-                    </WrapPanel>
-                </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewerRightCookingSimulator" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelRightCookingSimulator" Focusable="False" SizeChanged="WrapPanel_Right_Cooking_Simulator_SizeChanged"/>
-                </ScrollViewer>
-                <ScrollViewer Grid.Column="0" x:Name="ScrollViewerLeftScience" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelLeftScience" Focusable="False" Background="#88DE9191"/>
-                </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewerRightScience" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelRightScience" Focusable="False" Background="#88409A9E"/>
-                </ScrollViewer>
-                <ScrollViewer Grid.Column="0" x:Name="ScrollViewerLeftAnimal" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelLeftAnimal" Focusable="False" Background="#88DE9191"/>
-                </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewerRightAnimal" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelRightAnimal" Focusable="False" Background="#88409A9E"/>
-                </ScrollViewer>
-                <ScrollViewer Grid.Column="0" x:Name="ScrollViewerLeftNatural" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelLeftNatural" Focusable="False" Background="#88DE9191"/>
-                </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewerRightNatural" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelRightNatural" Focusable="False" Background="#88409A9E"/>
-                </ScrollViewer>
-                <ScrollViewer Grid.Column="0" x:Name="ScrollViewerLeftGoods" Template="{DynamicResource MyScrollViewer}" Visibility="Collapsed" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelLeftGoods" Focusable="False" Background="#88DE9191"/>
-                </ScrollViewer>
-                <ScrollViewer x:Name="ScrollViewerRightGoods" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Visibility="Collapsed" Margin="5,0,0,0" Focusable="False">
-                    <WrapPanel x:Name="WrapPanelRightGoods" Focusable="False" Background="#88409A9E"/>
-                </ScrollViewer>
             </Grid>
             <Grid x:Name="RightGridDedicatedServer" Visibility="Collapsed" Grid.Row="1" Grid.Column="1" d:IsHidden="True">
                 <Grid.Background>
@@ -650,17 +507,17 @@
             </Grid>
             <Canvas Grid.Row="0" Grid.Column="0" x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658" d:IsLocked="True">
-                    <Button x:Name="SidebarMenu" Width="50" Height="50" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
-                    <RadioButton x:Name="SidebarWelcome" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
-                    <RadioButton x:Name="SidebarCharacter" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
-                    <RadioButton x:Name="SidebarFood" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Food_Style}" Focusable="False" Click="Sidebar_Food_Click" />
-                    <RadioButton x:Name="SidebarCookingSimulator" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Cooking_Simulator_Style}" Focusable="False" Click="Sidebar_Cooking_Simulator_Click" />
-                    <RadioButton x:Name="SidebarScience" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Science_Style}" Focusable="False" Click="Sidebar_Science_Click" />
-                    <RadioButton x:Name="SidebarAnimal" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
-                    <RadioButton x:Name="SidebarNatural" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
-                    <RadioButton x:Name="SidebarGoods" Height="50" Width="150" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
-                    <RadioButton x:Name="SidebarDedicatedServer" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
-                    <RadioButton x:Name="SidebarSetting" Height="50" Width="150" Margin="0" Cursor="{DynamicResource Cursor_link}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
+                    <Button x:Name="SidebarMenu" Width="50" Height="50" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
+                    <RadioButton x:Name="SidebarWelcome" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
+                    <RadioButton x:Name="SidebarCharacter" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
+                    <RadioButton x:Name="SidebarFood" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Food_Style}" Focusable="False" Click="Sidebar_Food_Click" />
+                    <RadioButton x:Name="SidebarCookingSimulator" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Cooking_Simulator_Style}" Focusable="False" Click="Sidebar_Cooking_Simulator_Click" />
+                    <RadioButton x:Name="SidebarScience" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Science_Style}" Focusable="False" Click="Sidebar_Science_Click" />
+                    <RadioButton x:Name="SidebarAnimal" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
+                    <RadioButton x:Name="SidebarNatural" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
+                    <RadioButton x:Name="SidebarGoods" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
+                    <RadioButton x:Name="SidebarDedicatedServer" Height="50" Width="150" Margin="0" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
+                    <RadioButton x:Name="SidebarSetting" Height="50" Width="150" Margin="0" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" />
                 </WrapPanel>
                 <TextBlock x:Name="UiVersion" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True"/>
             </Canvas>

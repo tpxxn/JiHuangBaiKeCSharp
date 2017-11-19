@@ -12,21 +12,27 @@
       Title="CharacterPage" SizeChanged="Page_SizeChanged">
     
     <Page.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Dictionary/ScrollViewerDictionary.xaml" />
-                <ResourceDictionary Source="../Dictionary/CursorDictionary.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        <DataTemplate x:Key="CharacterDataTemplate" DataType="class:Character">
+            <Button Click="CharacterButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+                <Grid Margin="5" Width="135" Height="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="{Binding Path=Picture}" Stretch="Uniform" />
+                    <TextBlock Grid.Row="1" Text="{Binding Path=Name}" HorizontalAlignment="Center" />
+                </Grid>
+            </Button>
+        </DataTemplate>
     </Page.Resources>
-
+    
     <Grid x:Name="RootGrid" Background="#FEFFFFFF">
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
             <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>
         </Grid.ColumnDefinitions>
-        <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource Cursor_horz}" Style="{DynamicResource GridSplitterStyle}" />
-        <ScrollViewer x:Name="ScrollViewerLeftCharacter" Grid.Column="0" Template="{DynamicResource MyScrollViewer}" Focusable="False">
+        <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{StaticResource CursorHorz}" Style="{StaticResource GridSplitterStyle}" />
+        <ScrollViewer x:Name="ScrollViewerLeftCharacter" Grid.Column="0" Template="{StaticResource MyScrollViewer}" Focusable="False">
             <Grid x:Name="CharacterLeftGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -65,27 +71,13 @@
                 <TextBlock Grid.Row="10" x:Name="CharacterIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" FontSize="13"/>
             </Grid>
         </ScrollViewer>
-        <ScrollViewer x:Name="ScrollViewerRightCharacter" Template="{DynamicResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
-            <ItemsControl Name="CharacterItemsControl" ItemsSource="{Binding}" Margin="10">
+        <ScrollViewer x:Name="ScrollViewerRightCharacter" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl ItemTemplate="{StaticResource CharacterDataTemplate}" Name="CharacterItemsControl" ItemsSource="{Binding}" Margin="10">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate DataType="class:Character">
-                        <Button Click="CharacterButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{DynamicResource Cursor_link}" Focusable="False">
-                            <Grid Margin="5" Width="135" Height="210">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Image Source="{Binding Path=Picture}" Stretch="Uniform" />
-                                <TextBlock Grid.Row="1" Text="{Binding Path=Name}" HorizontalAlignment="Center" />
-                            </Grid>
-                        </Button>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
     </Grid>

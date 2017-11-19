@@ -15,7 +15,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Button x:Name="UCButton" HorizontalAlignment="Left" VerticalAlignment="Top" Cursor="{DynamicResource Cursor_link}" Width="35" Height="35" Focusable="False" Background="{x:Null}" BorderBrush="{x:Null}">
+    <Button x:Name="UCButton" HorizontalAlignment="Left" VerticalAlignment="Top" Cursor="{DynamicResource CursorLink}" Width="35" Height="35" Focusable="False" Background="{x:Null}" BorderBrush="{x:Null}">
         <Image x:Name="UCImage" Width="32" Height="32" Margin="-1,-1,0,0"/>
     </Button>
 </UserControl>

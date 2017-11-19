@@ -54,9 +54,8 @@ namespace 饥荒百科全书CSharp.Class
             //            var storageFile = await StorageFile.GetFileFromApplicationUriAsync(uri);
             //            var str = await FileIO.ReadTextAsync(storageFile);
 
-            Stream src2 = Application.GetResourceStream(new Uri("../Json/DST/Characters.json", UriKind.Relative)).Stream;
-
-            string str =new StreamReader(src2, Encoding.UTF8).ReadToEnd();
+            Stream src2 = Application.GetResourceStream(new Uri("/饥荒百科全书CSharp;component/Json/"+ Global.BuiltInGameVersionJsonFolder[Global.GameVersion]+ "/" + fileName, UriKind.Relative))?.Stream;
+            string str =new StreamReader(src2 ?? throw new InvalidOperationException(), Encoding.UTF8).ReadToEnd();
             return str;
         }
 
@@ -71,25 +70,25 @@ namespace 饥荒百科全书CSharp.Class
             switch (strHead)
             {
                 case "A":
-                    str = $"../Resources/GameResources/Animal/{str}.png";
+                    str = $"/Resources/GameResources/Animal/{str}.png";
                     break;
                 case "C":
-                    str = $"../Resources/GameResources/Characters/{str}.png";
+                    str = $"/Resources/GameResources/Characters/{str}.png";
                     break;
                 case "F":
-                    str = $"../Resources/GameResources/Food/{str}.png";
+                    str = $"/Resources/GameResources/Food/{str}.png";
                     break;
                 case "G":
-                    str = $"../Resources/GameResources/Goods/{str}.png";
+                    str = $"/Resources/GameResources/Goods/{str}.png";
                     break;
                 case "N":
-                    str = $"../Resources/GameResources/Natural/{str}.png";
+                    str = $"/Resources/GameResources/Natural/{str}.png";
                     break;
                 case "S":
-                    str = $"../Resources/GameResources/Science/{str}.png";
+                    str = $"/Resources/GameResources/Science/{str}.png";
                     break;
                 case "T":
-                    str = $"../Resources/GameResources/Goods/{str}.png";
+                    str = $"/Resources/GameResources/Goods/{str}.png";
                     break;
             }
             return str;

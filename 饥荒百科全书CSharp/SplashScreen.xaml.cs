@@ -9,23 +9,23 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class SplashScreen : Window
     {
-        private Timer splashTimer = new Timer() { };
+        private readonly Timer _splashTimer = new Timer();
 
         public SplashScreen()
         {
             InitializeComponent();
-            splashTimer.Interval = 1;
-            splashTimer.Tick += new EventHandler(splashStop);
-            splashTimer.Start();
+            _splashTimer.Interval = 1;
+            _splashTimer.Tick += SplashStop;
+            _splashTimer.Start();
         }
 
-        void splashStop(object sender, EventArgs e)
+        private void SplashStop(object sender, EventArgs e)
         {
-            splashTimer.Enabled = false;
-            MainWindow MainWindowShow = new MainWindow();
-            MainWindowShow.InitializeComponent();
-            MainWindowShow.Show();
-            MainWindowShow.Activate();
+            _splashTimer.Enabled = false;
+            var mainWindowShow = new MainWindow();
+            mainWindowShow.InitializeComponent();
+            mainWindowShow.Show();
+            mainWindowShow.Activate();
             Close();
         }
 

@@ -4,7 +4,6 @@
              xmlns:local="clr-namespace:饥荒百科全书CSharp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
-    </Application.Resources>
 
+    </Application.Resources>
 </Application>

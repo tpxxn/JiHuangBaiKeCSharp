@@ -2,31 +2,31 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:饥荒百科全书CSharp">
     <!--普通-->
-    <Cursor x:Key="Cursor_pointer">/Resources/Cursor/Cursor_pointer.cur</Cursor>
+    <Cursor x:Key="CursorPointer">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_pointer.cur</Cursor>
     <!--点击-->
-    <Cursor x:Key="Cursor_link">/Resources/Cursor/Cursor_link.ani</Cursor>
+    <Cursor x:Key="CursorLink">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_link.ani</Cursor>
     <!--普通_?-->
-    <Cursor x:Key="Cursor_help">/Resources/Cursor/Cursor_help.cur</Cursor>
+    <Cursor x:Key="CursorHelp">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_help.cur</Cursor>
     <!--忙-->
-    <Cursor x:Key="Cursor_workOrbusy">/Resources/Cursor/Cursor_workOrbusy.ani</Cursor>
+    <Cursor x:Key="CursorWorkOrbusy">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_workOrbusy.ani</Cursor>
     <!--精确定位-->
-    <Cursor x:Key="Cursor_cross">/Resources/Cursor/Cursor_cross.cur</Cursor>
+    <Cursor x:Key="CursorCross">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_cross.cur</Cursor>
     <!--文本-->
-    <Cursor x:Key="Cursor_text">/Resources/Cursor/Cursor_text.cur</Cursor>
+    <Cursor x:Key="CursorText">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_text.cur</Cursor>
     <!--手-->
-    <Cursor x:Key="Cursor_hand">/Resources/Cursor/Cursor_hand.cur</Cursor>
+    <Cursor x:Key="CursorHand">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_hand.cur</Cursor>
     <!--不可用-->
-    <Cursor x:Key="Cursor_unavailiable">/Resources/Cursor/Cursor_unavailiable.cur</Cursor>
+    <Cursor x:Key="CursorUnavailiable">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_unavailiable.cur</Cursor>
     <!--拖动_上下-->
-    <Cursor x:Key="Cursor_vert">/Resources/Cursor/Cursor_vert.cur</Cursor>
+    <Cursor x:Key="CursorVert">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_vert.cur</Cursor>
     <!--拖动_左右-->
-    <Cursor x:Key="Cursor_horz">/Resources/Cursor/Cursor_horz.cur</Cursor>
+    <Cursor x:Key="CursorHorz">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_horz.cur</Cursor>
     <!--拖动_左上_右下-->
-    <Cursor x:Key="Cursor_dgn1">/Resources/Cursor/Cursor_dgn1.cur</Cursor>
+    <Cursor x:Key="CursorDgn1">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_dgn1.cur</Cursor>
     <!--拖动_右上_左下-->
-    <Cursor x:Key="Cursor_dgn2">/Resources/Cursor/Cursor_dgn2.cur</Cursor>
+    <Cursor x:Key="CursorDgn2">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_dgn2.cur</Cursor>
     <!--移动-->
-    <Cursor x:Key="Cursor_move">/Resources/Cursor/Cursor_move.cur</Cursor>
+    <Cursor x:Key="CursorMove">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_move.cur</Cursor>
     <!--alternate(交替?)-->
-    <Cursor x:Key="Cursor_alternate">/Resources/Cursor/Cursor_alternate.cur</Cursor>
+    <Cursor x:Key="CursorAlternate">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_alternate.cur</Cursor>
 </ResourceDictionary>

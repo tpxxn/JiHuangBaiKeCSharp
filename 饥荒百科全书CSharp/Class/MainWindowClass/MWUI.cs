@@ -58,7 +58,7 @@ namespace 饥荒百科全书CSharp
             if (Mouse.LeftButton == MouseButtonState.Pressed) return;
             if (e.OriginalSource is FrameworkElement element && !element.Name.Contains("Resize"))
             {
-                Cursor = (Cursor)CursorDictionary["Cursor_pointer"];
+                Cursor = (Cursor)CursorDictionary["CursorPointer"];
             }
         }
         private void ResizePressed(object sender, MouseEventArgs e)
@@ -70,28 +70,28 @@ namespace 饥荒百科全书CSharp
             switch (direction)
             {
                 case ResizeDirection.Left:
-                    Cursor = (Cursor)CursorDictionary["Cursor_horz"];
+                    Cursor = (Cursor)CursorDictionary["CursorHorz"];
                     break;
                 case ResizeDirection.Right:
-                    Cursor = (Cursor)CursorDictionary["Cursor_horz"];
+                    Cursor = (Cursor)CursorDictionary["CursorHorz"];
                     break;
                 case ResizeDirection.Top:
-                    Cursor = (Cursor)CursorDictionary["Cursor_vert"];
+                    Cursor = (Cursor)CursorDictionary["CursorVert"];
                     break;
                 case ResizeDirection.Bottom:
-                    Cursor = (Cursor)CursorDictionary["Cursor_vert"];
+                    Cursor = (Cursor)CursorDictionary["CursorVert"];
                     break;
                 case ResizeDirection.TopLeft:
-                    Cursor = (Cursor)CursorDictionary["Cursor_dgn1"];
+                    Cursor = (Cursor)CursorDictionary["CursorDgn1"];
                     break;
                 case ResizeDirection.BottomRight:
-                    Cursor = (Cursor)CursorDictionary["Cursor_dgn1"];
+                    Cursor = (Cursor)CursorDictionary["CursorDgn1"];
                     break;
                 case ResizeDirection.TopRight:
-                    Cursor = (Cursor)CursorDictionary["Cursor_dgn2"];
+                    Cursor = (Cursor)CursorDictionary["CursorDgn2"];
                     break;
                 case ResizeDirection.BottomLeft:
-                    Cursor = (Cursor)CursorDictionary["Cursor_dgn2"];
+                    Cursor = (Cursor)CursorDictionary["CursorDgn2"];
                     break;
             }
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -112,29 +112,35 @@ namespace 饥荒百科全书CSharp
             var inUiGrid = false;
             var inWelcome = false;
             var inSetting = false;
-            if ((positionUiGrid.X >= 0 && positionUiGrid.X < UiGrid.ActualWidth && positionUiGrid.Y >= 0 && positionUiGrid.Y < UiGrid.ActualHeight))
+            if (positionUiGrid.X >= 0 && positionUiGrid.X < UiGrid.ActualWidth && positionUiGrid.Y >= 0 && positionUiGrid.Y < UiGrid.ActualHeight)
             {
                 inUiGrid = true;
             }
-            if ((positionRightGridWelcome.X >= 0 && positionRightGridWelcome.X < RightFrame.ActualWidth && positionRightGridWelcome.Y >= 0 && positionRightGridWelcome.Y < RightFrame.ActualHeight))
+            if (positionRightGridWelcome.X >= 0 && positionRightGridWelcome.X < RightFrame.ActualWidth && positionRightGridWelcome.Y >= 0 && positionRightGridWelcome.Y < RightFrame.ActualHeight)
             {
                 inWelcome = true;
             }
-            if ((positionRightGridSetting.X >= 0 && positionRightGridSetting.X < RightGridSetting.ActualWidth && positionRightGridSetting.Y >= 0 && positionRightGridSetting.Y < RightGridSetting.ActualHeight))
+            if (positionRightGridSetting.X >= 0 && positionRightGridSetting.X < RightGridSetting.ActualWidth && positionRightGridSetting.Y >= 0 && positionRightGridSetting.Y < RightGridSetting.ActualHeight)
             {
                 inSetting = true;
             }
             // 如果鼠标位置在标题栏内，允许拖动  
             if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inWelcome && !inSetting)) return;
-            Cursor = (Cursor)CursorDictionary["Cursor_move"];
+            Cursor = (Cursor)CursorDictionary["CursorMove"];
             DragMove();
         }
+
+        /// <summary>
+        /// 切换鼠标指针为默认状态
+        /// </summary>
         private void MainWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Cursor = (Cursor)CursorDictionary["Cursor_pointer"];
+            Cursor = (Cursor)CursorDictionary["CursorPointer"];
         }
 
-        //双击标题栏最大化
+        /// <summary>
+        /// 双击标题栏最大化
+        /// </summary>
         private void MainWindow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var positionUiGrid = e.GetPosition(UiGrid);
@@ -150,7 +156,9 @@ namespace 饥荒百科全书CSharp
             }
         }
 
-        //MainWindow窗口尺寸改变
+        /// <summary>
+        /// MainWindow窗口尺寸改变
+        /// </summary>
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             //最大化
@@ -164,8 +172,6 @@ namespace 饥荒百科全书CSharp
             //左侧面板高度
             LeftCanvas.Height = mainWindow.ActualHeight - 2;
             LeftWrapPanel.Height = mainWindow.ActualHeight - 2;
-            //Splitter高度
-            UiSplitter.Height = ActualHeight - 52;
             RegeditRw.RegWrite("MainWindowHeight", ActualHeight);
             RegeditRw.RegWrite("MainWindowWidth", ActualWidth);
         }
@@ -191,9 +197,10 @@ namespace 饥荒百科全书CSharp
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!MwInit) return;
-            LoadGameVersionXml();
+            Global.GameVersion = UiGameversion.SelectedIndex;
+            RightFrame.Navigate(new Uri("../View/WelcomePage.xaml", UriKind.Relative));
+            SidebarWelcome.IsChecked = true;
             RegeditRw.RegWrite("GameVersion", UiGameversion.SelectedIndex);
-            button_CS_Reset_Click(null, null);//模拟初始化
         }
         #endregion
 
@@ -236,9 +243,19 @@ namespace 饥荒百科全书CSharp
         {
             UiPopBg.IsOpen = true;
         }
+        
+        //获取字体函数
+        private static IEnumerable<string> Rf()
+        {
+            var installedFontCollectionFont = new InstalledFontCollection();
+            var fontFamilys = installedFontCollectionFont.Families;
+            return fontFamilys.Length < 1 ? null : fontFamilys.Select(item => item.Name).ToList();
+        }
 
-        //设置背景方法
-        public void SetBackground()
+        /// <summary>
+        /// 设置背景
+        /// </summary>
+        private void Se_button_Background_Click(object sender, RoutedEventArgs e)
         {
             var ofd = new Microsoft.Win32.OpenFileDialog()
             {
@@ -246,13 +263,13 @@ namespace 饥荒百科全书CSharp
                 DefaultExt = ".png", // 默认文件扩展名
                 Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png" //文件扩展名过滤器
             };
-//            var result = ofd.ShowDialog(); //显示打开文件对话框
+            var result = ofd.ShowDialog(); //显示打开文件对话框
 
             Visi.VisiCol(false, UiBackGroundBorder);
             try
             {
                 var pictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKeCSharp\Background\"; //设置文件夹位置
-                if ((Directory.Exists(pictruePath)) == false) //若文件夹不存在
+                if (Directory.Exists(pictruePath) == false) //若文件夹不存在
                 {
                     Directory.CreateDirectory(pictruePath);
                 }
@@ -280,8 +297,10 @@ namespace 饥荒百科全书CSharp
             }
         }
 
-        //清除背景方法
-        private void ClearBackground()
+        /// <summary>
+        /// 清除背景
+        /// </summary>
+        private void Se_button_Background_Clear_Click(object sender, RoutedEventArgs e)
         {
             Visi.VisiCol(true, UiBackGroundBorder);
             SeBgAlphaText.Foreground = Brushes.Silver;
@@ -289,27 +308,9 @@ namespace 饥荒百科全书CSharp
             RegeditRw.RegWrite("Background", "");
         }
 
-        //获取字体函数
-        private static IEnumerable<string> Rf()
-        {
-            var installedFontCollectionFont = new InstalledFontCollection();
-            var fontFamilys = installedFontCollectionFont.Families;
-            return fontFamilys.Length < 1 ? null : fontFamilys.Select(item => item.Name).ToList();
-        }
-
-        //设置背景
-        private void Se_button_Background_Click(object sender, RoutedEventArgs e)
-        {
-            SetBackground();
-        }
-
-        //清除背景
-        private void Se_button_Background_Clear_Click(object sender, RoutedEventArgs e)
-        {
-            ClearBackground();
-        }
-
-        //设置背景拉伸方式
+        /// <summary>
+        /// 设置背景拉伸方式
+        /// </summary>
         private void Se_ComboBox_Background_Stretch_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
             var bg = RegeditRw.RegReadString("Background");
@@ -339,7 +340,9 @@ namespace 饥荒百科全书CSharp
             }
         }
 
-        //修改字体
+        /// <summary>
+        /// 修改字体
+        /// </summary>
         private void Se_ComboBox_Font_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
             if (!LoadFont) return;
@@ -348,7 +351,9 @@ namespace 饥荒百科全书CSharp
             RegeditRw.RegWrite("MainWindowFont", ls[SeComboBoxFont.SelectedIndex]);
         }
 
-        //设置背景透明度
+        /// <summary>
+        /// 设置背景透明度
+        /// </summary>
         private void Se_BG_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             UiBackGroundBorder.Opacity = SeBgAlpha.Value / 100;
@@ -356,15 +361,20 @@ namespace 饥荒百科全书CSharp
             RegeditRw.RegWrite("BGAlpha", SeBgAlpha.Value + 1);
         }
 
-        //设置面板透明度
+        /// <summary>
+        /// 设置面板透明度
+        /// </summary>
         private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            //TODO
             RightGrid.Background.Opacity = SePanelAlpha.Value / 100;
             SePanelAlphaText.Text = "面板不透明度：" + (int)SePanelAlpha.Value + "%";
             RegeditRw.RegWrite("BGPanelAlpha", SePanelAlpha.Value + 1);
         }
 
-        //设置窗口透明度
+        /// <summary>
+        /// 设置窗口透明度
+        /// </summary>
         private void Se_Window_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             Opacity = SeWindowAlpha.Value / 100;
@@ -374,14 +384,17 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "最小化/最大化/关闭按钮"
-        //最小化按钮
+        public Rect Rcnormal;//窗口位置
+        /// <summary>
+        /// 最小化按钮
+        /// </summary>
         private void UI_btn_minimized_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
-
-        public Rect Rcnormal;//窗口位置
-        //最大化按钮
+        /// <summary>
+        /// 最大化按钮
+        /// </summary>
         private void UI_btn_maximized_Click(object sender, RoutedEventArgs e)
         {
             Visi.VisiCol(true, UiBtnMaximized);
@@ -394,7 +407,9 @@ namespace 饥荒百科全书CSharp
             Height = rc.Height;
             //WindowState = WindowState.Maximized;
         }
-        //还原按钮
+        /// <summary>
+        /// 还原按钮
+        /// </summary>
         private void UI_btn_normal_Click(object sender, RoutedEventArgs e)
         {
             Visi.VisiCol(false, UiBtnMaximized);
@@ -405,7 +420,9 @@ namespace 饥荒百科全书CSharp
             Height = Rcnormal.Height;
             //WindowState = WindowState.Normal;
         }
-        //关闭按钮
+        /// <summary>
+        /// 关闭按钮
+        /// </summary>
         private void UI_btn_close_Click(object sender, RoutedEventArgs e)
         {
 
@@ -457,119 +474,38 @@ namespace 饥荒百科全书CSharp
         }
         private void Sidebar_Food_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Food");
+            RightFrame.Navigate(new Uri("../View/FoodPage.xaml", UriKind.Relative));
         }
         private void Sidebar_Science_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Science");
+
         }
         private void Sidebar_Cooking_Simulator_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Cooking_Simulator");
+
         }
         private void Sidebar_Animal_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Animal");
+
         }
         private void Sidebar_Natural_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Natural");
+
         }
         private void Sidebar_Goods_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Goods");
+
         }
         private void Sidebar_DedicatedServer_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("DedicatedServer");
+
         }
         private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Setting");
+
         }
         #endregion
 
-        #region "右侧面板Visibility属性设置"
-        //右侧面板初始化
-        private void RightPanelVisibilityInitialize()
-        {
-            foreach (UIElement vControl in RightGrid.Children)
-            {
-                Visi.VisiCol(true, vControl);
-            }
-        }
-
-        // 右侧面板可视化设置
-        // obj可选值：
-        // 主页：Welcome
-        // 人物：Character
-        // 食物：Food
-        // 科技：Science
-        // 模拟：Cooking_Simulator
-        // 生物：Animal
-        // 自然：Natural
-        // 物品：Goods
-        // 设置：Setting
-        private void RightPanelVisibility(string obj)
-        {
-            RightPanelVisibilityInitialize();
-            switch (obj)
-            {
-                //设置界面
-                case "Setting":
-                    Visi.VisiCol(false, RightGridSetting);
-                    Visi.VisiCol(true, RightGrid, RightGridDedicatedServer);
-                    break;
-                //服务器界面
-                case "DedicatedServer":
-                    Visi.VisiCol(false, RightGridDedicatedServer);
-                    Visi.VisiCol(true, RightGrid, RightGridSetting);
-                    break;
-                //内容界面
-                default:
-                    //隐藏欢迎/设置界面
-                    Visi.VisiCol(true, RightGridDedicatedServer);
-                    Visi.VisiCol(true, RightGridSetting);
-                    //显示右侧内容Grid容器/分割器
-                    Visi.VisiCol(false, RightGrid);
-                    Visi.VisiCol(false, UiSplitter);
-                    switch (obj)
-                    {
-                        case "Food":
-                            Visi.VisiCol(false, ScrollViewerLeftFood, ScrollViewerRightFood);
-                            SlWidth.MinWidth = 220;
-                            SlWidth.Width = new GridLength(220);
-                            break;
-                        case "Science":
-                            Visi.VisiCol(false, ScrollViewerLeftScience, ScrollViewerRightScience);
-                            SlWidth.MinWidth = 220;
-                            SlWidth.Width = new GridLength(220);
-                            break;
-                        case "Cooking_Simulator":
-                            Visi.VisiCol(false, ScrollViewerLeftCookingSimulator, ScrollViewerRightCookingSimulator);
-                            SlWidth.MinWidth = 220;
-                            SlWidth.Width = new GridLength(220);
-                            break;
-                        case "Animal":
-                            Visi.VisiCol(false, ScrollViewerLeftAnimal, ScrollViewerRightAnimal);
-                            SlWidth.MinWidth = 220;
-                            SlWidth.Width = new GridLength(220);
-                            break;
-                        case "Natural":
-                            Visi.VisiCol(false, ScrollViewerLeftNatural, ScrollViewerRightNatural);
-                            SlWidth.MinWidth = 220;
-                            SlWidth.Width = new GridLength(220);
-                            break;
-                        case "Goods":
-                            Visi.VisiCol(false, ScrollViewerLeftGoods, ScrollViewerRightGoods);
-                            SlWidth.MinWidth = 220;
-                            SlWidth.Width = new GridLength(220);
-                            break;
-                    }
-                    break;
-            }
-        }
-        #endregion
         #endregion
 
         #region "DedicatedServer"
