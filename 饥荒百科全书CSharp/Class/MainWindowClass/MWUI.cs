@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.MyUserControl;
+using 饥荒百科全书CSharp.View;
 
 namespace 饥荒百科全书CSharp
 {
@@ -106,7 +107,7 @@ namespace 饥荒百科全书CSharp
         private void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var positionUiGrid = e.GetPosition(UiGrid);
-            var positionRightGridWelcome = e.GetPosition(RightGridWelcome);
+            var positionRightGridWelcome = e.GetPosition(RightFrame);
             var positionRightGridSetting = e.GetPosition(RightGridSetting);
             var inUiGrid = false;
             var inWelcome = false;
@@ -115,7 +116,7 @@ namespace 饥荒百科全书CSharp
             {
                 inUiGrid = true;
             }
-            if ((positionRightGridWelcome.X >= 0 && positionRightGridWelcome.X < RightGridWelcome.ActualWidth && positionRightGridWelcome.Y >= 0 && positionRightGridWelcome.Y < RightGridWelcome.ActualHeight))
+            if ((positionRightGridWelcome.X >= 0 && positionRightGridWelcome.X < RightFrame.ActualWidth && positionRightGridWelcome.Y >= 0 && positionRightGridWelcome.Y < RightFrame.ActualHeight))
             {
                 inWelcome = true;
             }
@@ -448,11 +449,11 @@ namespace 饥荒百科全书CSharp
         //左侧菜单按钮
         private void Sidebar_Welcome_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Welcome");
+            RightFrame.Navigate(new Uri("../View/WelcomePage.xaml", UriKind.Relative));
         }
         private void Sidebar_Character_Click(object sender, RoutedEventArgs e)
         {
-            RightPanelVisibility("Character");
+            RightFrame.Navigate(new Uri("../View/CharacterPage.xaml", UriKind.Relative));
         }
         private void Sidebar_Food_Click(object sender, RoutedEventArgs e)
         {
@@ -514,25 +515,19 @@ namespace 饥荒百科全书CSharp
             RightPanelVisibilityInitialize();
             switch (obj)
             {
-                //欢迎界面
-                case "Welcome":
-                    Visi.VisiCol(false, RightGridWelcome);
-                    Visi.VisiCol(true, RightGridSetting, RightGrid, RightGridDedicatedServer);
-                    break;
                 //设置界面
                 case "Setting":
                     Visi.VisiCol(false, RightGridSetting);
-                    Visi.VisiCol(true, RightGridWelcome, RightGrid, RightGridDedicatedServer);
+                    Visi.VisiCol(true, RightGrid, RightGridDedicatedServer);
                     break;
                 //服务器界面
                 case "DedicatedServer":
                     Visi.VisiCol(false, RightGridDedicatedServer);
-                    Visi.VisiCol(true, RightGridWelcome, RightGrid, RightGridSetting);
+                    Visi.VisiCol(true, RightGrid, RightGridSetting);
                     break;
                 //内容界面
                 default:
                     //隐藏欢迎/设置界面
-                    Visi.VisiCol(true, RightGridWelcome);
                     Visi.VisiCol(true, RightGridDedicatedServer);
                     Visi.VisiCol(true, RightGridSetting);
                     //显示右侧内容Grid容器/分割器
@@ -540,11 +535,6 @@ namespace 饥荒百科全书CSharp
                     Visi.VisiCol(false, UiSplitter);
                     switch (obj)
                     {
-                        case "Character":
-                            Visi.VisiCol(false, ScrollViewerLeftCharacter, ScrollViewerRightCharacter);
-                            SlWidth.MinWidth = 320;
-                            SlWidth.Width = new GridLength(320);
-                            break;
                         case "Food":
                             Visi.VisiCol(false, ScrollViewerLeftFood, ScrollViewerRightFood);
                             SlWidth.MinWidth = 220;

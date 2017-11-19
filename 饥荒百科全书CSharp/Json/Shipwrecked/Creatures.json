@@ -1,0 +1,1346 @@
+﻿{
+	"Land": {
+		"Creature": [
+			{
+				"Picture": "A_spider",
+				"Name": "蜘蛛",
+				"EnName": "Spider",
+				"Health": 100,
+				"Attack": 20,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"Dangerous": 2,
+				"SanityEffect": -25,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（50%）",
+					"G_silk|×1（50%）",
+					"G_spider_gland|×1（50%）"
+				],
+				"Introduction": "蜘蛛出生在蜘蛛巢或由蜘蛛女王孵化，当玩家经过蜘蛛网时，会有少量蜘蛛来巡查。黄昏和夜晚蜘蛛会主动出来行动。若攻击了一只蜘蛛，周围的蜘蛛都会来帮忙，蜘蛛的攻击间隔较长，很容易风筝。用陷阱可以直接杀害蜘蛛。",
+				"Console": "spider"
+			},
+			{
+				"Picture": "A_werepig",
+				"Name": "疯猪",
+				"EnName": "Werepig",
+				"Health": 350,
+				"Attack": 40,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×2",
+					"G_pig_skin|×1"
+				],
+				"Introduction": "疯了疯了！一定是疯了！变态的损失精神光环，月圆之夜还是远离这种怪物吧！"
+			},
+			{
+				"Picture": "A_smallbird",
+				"Name": "高鸟宝宝",
+				"EnName": "Smallbird",
+				"Health": 50,
+				"Attack": 10,
+				"AttackInterval": 1,
+				"AttackScope": 3,
+				"MoveSpeed": 6,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1"
+				],
+				"Introduction": "可爱又脆弱的高鸟宝宝，出生于高鸟蛋，会跟随玩家，极低的生命值导致它很容易夭折，如果饿了会一直叫，会饿死，可以吃浆果和各种种子。10天后长成青年高鸟。",
+				"Console": "smallbird"
+			},
+			{
+				"Picture": "A_teentallbird",
+				"Name": "青年高鸟",
+				"EnName": "Smallish Tallbird",
+				"Health": 300,
+				"Attack": 37.5,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 6,
+				"RunSpeed": 6,
+				"Dangerous": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×1"
+				],
+				"Ability": [
+					"成长为高鸟"
+				],
+				"Introduction": "青年高鸟会食用任何东西，饥饿值为0的时候会啄玩家(一次2点伤害)，会饿死，食用任何食物都会回复1/3的生命。18天后长成高鸟，并且重新变成敌对状态。",
+				"Console": "teenbird"
+			},
+			{
+				"Picture": "A_tallbird",
+				"Name": "高鸟",
+				"EnName": "Tallbirds",
+				"Health": 400,
+				"Attack": 50,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×2"
+				],
+				"Introduction": "通常生长在岩石地带，有几率遇见高鸟彩蛋(一堆高鸟巢围着一堆矿石)。打高鸟时可以风筝它，当然装备够好硬抗也是可以的。当它发现玩家试图偷取高鸟蛋的时候会主动攻击玩家。夜里高鸟会睡觉，可以趁此机会偷取鸟蛋，几秒种后才会醒来并开始追击。",
+				"Console": "tallbird"
+			},
+			{
+				"Picture": "A_lureplants",
+				"Name": "诱饵草",
+				"EnName": "Lureplants",
+				"Health": 300,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_fleshy_bulb|×1",
+					"F_leafy_meat|×5"
+				],
+				"Ability": [
+					"产生眼球植物"
+				],
+				"Introduction": "野生诱饵草的周围会有至多27株眼球植物，它们会保护诱饵草母体。诱饵草被种植下两天后开始生长眼球植物，眼球植物吞噬的东西会被传送到诱饵草母体。诱饵草会长出诱饵(如果眼球植物吞噬了肉类那么诱饵就是这些肉类，否则就是多叶的肉)，若诱饵被取下周围的眼球植物会全部消失。诱饵草冬天进入休眠状态(变成刚种下的样子)，周围的眼球植物全部消失。",
+				"Console": "lureplant"
+			},
+			{
+				"Picture": "A_eye_plant",
+				"Name": "眼球植物",
+				"EnName": "Eyeplant",
+				"Health": 30,
+				"Attack": 20,
+				"AttackInterval": 1,
+				"AttackScope": 2.5,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Ability": [
+					"吞噬所有能放在玩家身上的东西"
+				],
+				"Introduction": "眼球植物会吞噬周围的东西，还会自动攻击想要靠近诱饵草的生物。虽然多而且攻击力不低，但是血量也不是很高，一般武器最多两下打死一个。眼球植物不会生长在卵石路和制作的草皮上。",
+				"Console": "eyeplant"
+			},
+			{
+				"Picture": "A_mandrake",
+				"Name": "曼德拉草",
+				"EnName": "Mandrake",
+				"Health": 20,
+				"MoveSpeed": 6,
+				"RunSpeed": 6,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_mandrake|×1"
+				],
+				"Ability": [
+					"在黄昏或夜晚捡起会跟随玩家"
+				],
+				"Introduction": "出现在草地和洞穴的罕见生物，一个世界只会生成2-5个，通常会长在同一片区域。白天拔起时会直接死亡，黄昏或夜晚拔起会跟随玩家直至天亮又重新自己种回地里。直接食用曼德拉草或做成曼德拉汤食用都会导致周围生物睡着。",
+				"Console": "mandrake"
+			},
+			{
+				"Picture": "A_merm",
+				"Name": "鱼人",
+				"EnName": "Merm",
+				"Health": 250,
+				"Attack": 30,
+				"AttackInterval": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 8,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_tropical_fish|×1",
+					"F_frog_legs|×1"
+				],
+				"Ability": [
+					"吃地上的水果和蔬菜"
+				],
+				"Introduction": "鱼人通常能在沼泽发现，不同的是，它们不会攻击，遇到玩家会逃跑。定期从潮汐池中捞出热带鱼但是并不吃。",
+				"Console": "merm"
+			},
+			{
+				"Picture": "A_crabbit",
+				"Name": "兔蟹",
+				"EnName": "Crabbit",
+				"Health": 50,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_fish_morsel|×1",
+					"A_beardling_sw|S_trap"
+				],
+				"Introduction": "船难版的兔子。与兔子不同的是，被追击太久不会优先回家，而是创造一个流沙把自己埋起来，保护自己免受伤害。",
+				"Console": "crab"
+			},
+			{
+				"Picture": "A_beardling_sw",
+				"Name": "黑兔蟹",
+				"EnName": "Crabbit",
+				"Health": 50,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 5,
+				"SanityEffect": -40,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_monster_meat|×1（40%）",
+					"G_nightmare_fuel|×1（40%）",
+					"G_beard_hair|×1（20%）",
+					"A_beardling_sw|S_trap"
+				],
+				"Introduction": "玩家精神低于40%时兔蟹会变成黑兔蟹，掉落物会有所变化，其他行为没有变化。当玩家精神回复到40%以上又会变回兔蟹。"
+			},
+			{
+				"Picture": "A_prime_ape",
+				"Name": "猿猴",
+				"EnName": "Prime Ape",
+				"Health": 125,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 3,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"F_banana|×1（50%）",
+					"G_manure|×1（如果生产了且没抛）",
+					"|任何捡起且未消耗的物品"
+				],
+				"Ability": [
+					"偷东西",
+					"抛便便",
+					"喂食香蕉可以做朋友"
+				],
+				"Introduction": "猿猴会搜寻附近地面上的大多数物品，会吃浆果、蘑菇，并从农场收获农作物。如果猿猴注意到玩家，会跟随玩家，特别是玩家身上带着香蕉的时候。他们会戴帽子并且享受帽子的效果。如果猿猴是侵略性的，喂食香蕉会安抚它们，否则会和它们交朋友（如同用肉喂食猪人）。好友猿猴会帮助玩家收获割下的草和树枝，但是依然会吃能吃的东西。威尔伯角色会被永久认为是友好的。猿猴的攻击方式是抛便便，不会造成伤害，但是会降低10点精神。",
+				"Console": "primeape"
+			},
+			{
+				"Picture": "A_spider_warrior_sw",
+				"Name": "毒蜘蛛",
+				"EnName": "Spider Warrior",
+				"Health": 200,
+				"Attack": 20,
+				"AttackInterval": 4,
+				"AttackScope": 6,
+				"MoveSpeed": 4,
+				"RunSpeed": 5,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（50%）",
+					"G_silk|×1（25%）",
+					"G_venom_gland|×1（25%）"
+				],
+				"Ability": [
+					"跳跃攻击",
+					"攻击带毒"
+				],
+				"Introduction": "船难版的战斗蜘蛛，除了攻击带毒没有什么两样。",
+				"Console": "spider_warrior"
+			},
+			{
+				"Picture": "A_fishermerm",
+				"Name": "渔人",
+				"EnName": "Fishermerm",
+				"Health": 150,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_tropical_fish|×1"
+				],
+				"Introduction": "渔人是船难版的鱼人，通常能在沼泽发现，不同的是，它们不会攻击，遇到玩家会逃跑。定期从潮汐池中捞出热带鱼但是并不吃。",
+				"Console": "mermfisher"
+			},
+			{
+				"Picture": "A_flup",
+				"Name": "追踪性弹涂鱼",
+				"EnName": "Flup",
+				"Health": 100,
+				"Attack": 25,
+				"MoveSpeed": 4,
+				"RunSpeed": 6.5,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_eyeshot|×1（25%）"
+				],
+				"Introduction": "追踪性弹涂鱼会出现在潮滩，类似于触手，它们会隐藏在泥里，等待生物经过惊吓它们。仔细观察可以看到它们伸出来的眼睛或者气泡，如果预先提防就不容易被攻击。",
+				"Console": "flup"
+			},
+			{
+				"Picture": "A_wildbore",
+				"Name": "野猪",
+				"EnName": "Wildbore",
+				"Health": 250,
+				"Attack": 24,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"Dangerous": 2,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×1（75%）",
+					"G_pig_skin|×1（25%）"
+				],
+				"Ability": [
+					"喂大肉可以做朋友"
+				],
+				"Introduction": "船难版的猪人，和猪人不同的是，如果玩家摧毁了它们的家(荒野小屋)，它们会主动攻击玩家。若玩家不停地靠近野猪，会积累烦恼值，当烦恼值到达阈值时会主动攻击玩家，并且在10秒后停止。",
+				"Console": "wildbore"
+			},
+			{
+				"Picture": "A_snake",
+				"Name": "蛇",
+				"EnName": "Snake",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 1,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（33%）",
+					"G_snakeskin|×1（16%）",
+					"G_snake_oil|×1（0.33%）"
+				],
+				"Introduction": "蛇有可能出生在藤蔓丛或浆果灌木丛，砍倒丛林树也有可能会出现。蛇通常出现在黄昏和夜晚，除非玩家砍伐丛林树或砍伐藤蔓从。蛇有时候会吃地上的肉和蛋。",
+				"Console": "snake"
+			},
+			{
+				"Picture": "A_poison_snake",
+				"Name": "毒蛇",
+				"EnName": "Poison Snake",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 3,
+				"AttackScope": 2.5,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 2,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（20%）",
+					"G_venom_gland|×1（20%）",
+					"G_snakeskin|×1（10%）",
+					"G_snake_oil|×1（0.2%）"
+				],
+				"Ability": [
+					"攻击带毒"
+				],
+				"Introduction": "毒蛇类似于蛇，不过攻击附带毒性，如果毒蛇咬到将会每秒失去1.5的生命，除非用抗蛇毒血清解毒(击杀毒蛇有几率掉落抗蛇毒血清的制作材料毒腺体)。",
+				"Console": "snake_poison"
+			},
+			{
+				"Picture": "A_baby_doydoy",
+				"Name": "幼小的渡渡鸟",
+				"EnName": "Baby Doydoy",
+				"Health": 25,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1",
+					"G_doydoy_feather|×1"
+				],
+				"Ability": [
+					"吃种子",
+					"成长为渡渡鸟"
+				],
+				"Introduction": "只吃种子，过两天成长为小渡渡鸟。",
+				"Console": "doydoybaby"
+			},
+			{
+				"Picture": "A_doydoy_child",
+				"Name": "小渡渡鸟",
+				"EnName": "Doydoy Child",
+				"Health": 75,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 1.5,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_drumstick|×1",
+					"G_doydoy_feather|×2"
+				],
+				"Ability": [
+					"吃种子和蔬菜",
+					"成长为渡渡鸟"
+				],
+				"Introduction": "吃种子和蔬菜，过一天成长为渡渡鸟。"
+			},
+			{
+				"Picture": "A_doydoy",
+				"Name": "渡渡鸟",
+				"EnName": "Doydoy",
+				"Health": 100,
+				"MoveSpeed": 2,
+				"RunSpeed": 2,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×1",
+					"F_drumstick|×2",
+					"G_doydoy_feather|×2"
+				],
+				"Ability": [
+					"吃看到的任何食物除了自己的蛋(包括农场和锅里)"
+				],
+				"Introduction": "一个地图会有两只渡渡鸟生成在不同的岛上(通常是丛林岛)。渡渡鸟夜晚会睡觉，当它睡觉时可以捡起(在身上时会吃身上的东西)。杀人蜂和蜘蛛会忽视渡渡鸟，而蛇、龙骑士和猎犬都会主动攻击渡渡鸟，需要保护它们免受攻击。每过两到三天在一起的两只渡渡鸟会配对成情侣，除非已经有20只渡渡鸟，配对后会产生一个渡渡鸟巢，若不采集就会生出幼小的渡渡鸟。渡渡鸟被攻击时不会逃跑，存在的数量越少击杀渡渡鸟增加的顽皮值越高。",
+				"Console": "doydoy"
+			},
+			{
+				"Picture": "A_dragoon",
+				"Name": "龙骑士",
+				"EnName": "Dragoon",
+				"Health": 300,
+				"Attack": 25,
+				"AttackInterval": 1,
+				"MoveSpeed": 3,
+				"RunSpeed": 15,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_monster_meat|×1",
+					"F_dragoon_heart|×1（10%）"
+				],
+				"Ability": [
+					"火焰冲刺"
+				],
+				"Introduction": "龙骑士出生于龙人巢或孵化于完整的龙人蛋，它们只在白天外出，如果有龙人巢的话黄昏会回龙人巢，空闲的时候会在地上吐熔岩。进入战斗后它们会冲向攻击目标并且在经过的路上留下火焰。",
+				"Console": "dragoon"
+			},
+			{
+				"Picture": "A_elephant_cactus",
+				"Name": "刺人的象仙人掌",
+				"EnName": "Prickly Elephant Cactus",
+				"Health": 400,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 5,
+				"Dangerous": 2,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_cactus_spike|×1"
+				],
+				"Ability": [
+					"范围攻击",
+					"反击"
+				],
+				"Introduction": "天然刺人的象仙人掌只存在于火山，它们会范围攻击，并且攻击它的时候会反弹10点伤害，缺点是不会动，并且只在干旱季节才活跃，其他季节会枯萎。击杀后获得的仙人掌可以移植，不过只能移植在岩浆草皮、灰色的草皮和火山草皮上，用灰烬灌溉。",
+				"Console": "elephantcactus_active"
+			}
+		]
+	},
+	"Ocean": {
+		"Creature": [
+			{
+				"Picture": "A_dogfish",
+				"Name": "狗鱼",
+				"EnName": "Dogfish",
+				"Health": 100,
+				"MoveSpeed": 5,
+				"RunSpeed": 8,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_dead_dogfish|×1"
+				],
+				"Introduction": "通常发现在海洋中和珊瑚礁旁，当船靠近会飞快游走。可以用矛枪或者逼到岸边角落击杀。",
+				"Console": "solofish"
+			},
+			{
+				"Picture": "A_swordfish",
+				"Name": "旗鱼",
+				"EnName": "Swordfish",
+				"Health": 200,
+				"Attack": 30,
+				"AttackInterval": 2,
+				"MoveSpeed": 5,
+				"RunSpeed": 8,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_dead_swordfish|×1"
+				],
+				"Introduction": "旗鱼通常被发现于深海中，一旦发现玩家会追杀玩家。在其出现时可以放一个浮标之类的东西标记一下。",
+				"Console": "swordfish"
+			},
+			{
+				"Picture": "A_wobster",
+				"Name": "龙虾",
+				"EnName": "Wobster",
+				"Health": 25,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 4,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_dead_wobster|×1"
+				],
+				"Introduction": "龙虾出现在龙虾的巢穴附近，一个巢穴一只龙虾，黄昏和夜晚才会出来，玩家靠近它就会跑回巢穴里。可以用拖网或海洋陷阱捕捉。",
+				"Console": "lobster"
+			},
+			{
+				"Picture": "A_bioluminescence",
+				"Name": "海洋生物",
+				"EnName": "Bioluminescence",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_bioluminescence|S_bug_net",
+					"G_bioluminescence|S_trawl_net"
+				],
+				"Ability": [
+					"发光"
+				],
+				"Introduction": "通常会在深海发现，12个一组可以认为是海洋中的萤火虫，但是玩家靠近它不会消失，可以用拖网或捕虫网捕捉。注意放在陆地上会被摧毁，放在海里才可以生存。",
+				"Console": "bioluminescence"
+			},
+			{
+				"Picture": "A_jellyfish",
+				"Name": "水母",
+				"EnName": "Jellyfish",
+				"Health": 50,
+				"Attack": 5,
+				"MoveSpeed": 2,
+				"RunSpeed": 2,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_dead_jellyfish|×1",
+					"F_jellyfish|S_bug_net",
+					"F_jellyfish|S_trawl_net"
+				],
+				"Ability": [
+					"使攻击它的玩家触电"
+				],
+				"Introduction": "可以在浅海区域找到它们，有时候会成群出现。攻击它会触电，可以用捕虫网或拖网直接捕获，也可以用蛇鳞帽或蛇鳞上衣防电。放在地上会直接死亡。",
+				"Console": "jellyfish"
+			},
+			{
+				"Picture": "A_bottenosed_ballphin",
+				"Name": "宽吻海豚",
+				"EnName": "Bottlenosed Ballphin",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 6,
+				"MoveSpeed": 5,
+				"RunSpeed": 8,
+				"Dangerous": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_fish_morsel|×2",
+					"S_empty_bottle|×1（50%）"
+				],
+				"Introduction": "可以在海洋的任何地方发现宽吻海豚，一般12个一组，在第15~16天才会出现。如果一组中的一部分被杀害，会在温和季节重生，如果一组中只剩一只，那么它会跟着玩家到一片新的海域，不过路上很容易分心。它们会攻击任何敌对生物(如恶臭魔鬼鱼或海狗)。",
+				"Console": "ballphin"
+			},
+			{
+				"Picture": "A_blue_whale",
+				"Name": "蓝鲸",
+				"EnName": "Blue Whale",
+				"Health": 650,
+				"Attack": 50,
+				"AttackInterval": 3.5,
+				"MoveSpeed": 2,
+				"RunSpeed": 4,
+				"Dangerous": 4,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"A_blue_whale_carcass|×1"
+				],
+				"Ability": [
+					"蓝鲸尸体战利品：",
+					"生鱼片×4",
+					"鲸油×4",
+					"3~9样其他物品"
+				],
+				"Introduction": "有三分之二的几率可以通过可疑的泡泡(类似可疑的土堆)发现它，在被攻击之前它会尽量躲避玩家。被杀死后留下蓝鲸尸体，只有玩家在附近3~5天才能用砍刀切开获得战利品(火药可以加速腐烂)。",
+				"Console": "whale_blue"
+			},
+			{
+				"Picture": "A_white_whale",
+				"Name": "白鲸",
+				"EnName": "White Whale",
+				"Health": 800,
+				"Attack": 75,
+				"AttackInterval": 3,
+				"MoveSpeed": 2.5,
+				"RunSpeed": 5,
+				"Dangerous": 5,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"A_white_whale_carcass|×1"
+				],
+				"Ability": [
+					"白鲸尸体战利品：",
+					"生鱼片×4",
+					"鲸油×4",
+					"鱼叉×1",
+					"3~9样其他物品"
+				],
+				"Introduction": "有三分之一的几率可以通过可疑的泡泡(类似可疑的土堆)发现它，玩家靠近就会一直追杀玩家。被杀死后留下白鲸尸体，只有玩家在附近3~5天才能用砍刀切开获得战利品。",
+				"Console": "whale_white"
+			},
+			{
+				"Picture": "A_floaty_boaty_knight",
+				"Name": "浮船骑士",
+				"EnName": "Floaty Boaty Knight",
+				"Health": 500,
+				"Attack": 50,
+				"AttackInterval": 6,
+				"MoveSpeed": 3,
+				"RunSpeed": 6,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_gears|×1~3"
+				],
+				"Ability": [
+					"远程攻击×3"
+				],
+				"Introduction": "守护木制平台的生物，4只同时出现。也会在击杀任何海洋生物时有几率出现1~3只。一旦离玩家过近会拉开安全距离然后开始攻击(放炮)，一次性放出三个炮弹落在靠近玩家某一点附近的随机位置。",
+				"Console": "knightboat"
+			},
+			{
+				"Picture": "A_stink_ray",
+				"Name": "恶臭魔鬼鱼",
+				"EnName": "Stink Ray",
+				"Health": 50,
+				"AttackInterval": 1,
+				"AttackScope": 1.5,
+				"MoveSpeed": 8,
+				"RunSpeed": 8,
+				"Dangerous": 1,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_venom_gland|×1（33%）",
+					"F_monster_meat|×1（66%）"
+				],
+				"Ability": [
+					"排出有毒气体"
+				],
+				"Introduction": "恶臭魔鬼鱼通常6个一组出现在海上，它们没有攻击力，只会释放毒气使玩家中毒。戴着粉尘净化器或者使用WX-78可以免疫毒气。",
+				"Console": "stungray"
+			},
+			{
+				"Picture": "A_water_beefalo",
+				"Name": "水牛",
+				"EnName": "Water Beefalo",
+				"Health": 500,
+				"Attack": 34,
+				"AttackInterval": 4,
+				"AttackScope": 3,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 7.5,
+				"Dangerous": 3,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×4",
+					"G_horn|×1",
+					"G_manure|×1（周期产生）"
+				],
+				"Ability": [
+					"春天生水牛",
+					"上岸变成敌对"
+				],
+				"Introduction": "和皮弗娄牛类似，不过无法对其使用剃刀，即没有牛毛，而且掉落的是角而不是牛角。它们通常生活在红树林，虽然一般都在水里，但也可以上岸，上岸后会主动攻击。",
+				"Console": "ox"
+			}
+		]
+	},
+	"Fly": {
+		"Creature": [
+			{
+				"Picture": "A_bee",
+				"Name": "蜜蜂",
+				"EnName": "Bee",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 4,
+				"RunSpeed": 6,
+				"Dangerous": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_honey|×1（16.7%）",
+					"G_stinger|×1（83.3%）",
+					"A_bee|S_bug_net"
+				],
+				"Ability": [
+					"给花传粉"
+				],
+				"Introduction": "蜜蜂是中性生物，出现在蜂巢、杀人蜂巢和蜂箱。白天出来采蜜，黄昏回到蜂巢。若蜂箱附近没有花产蜜效率会急剧降低。当蜜蜂被攻击后，同一个蜂巢的蜜蜂会变成杀人蜂追杀攻击者，可以逃跑。到了春天所有蜜蜂从外观和行为上都会变成杀人蜂的样子(捕捉后依然是蜜蜂)，到夏天就还原。",
+				"Console": "bee"
+			},
+			{
+				"Picture": "A_killer_bee",
+				"Name": "杀人蜂",
+				"EnName": "Killer Bee",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 4,
+				"RunSpeed": 6,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_honey|×1（16.7%）",
+					"G_stinger|×1（83.3%）",
+					"A_killer_bee|S_bug_net"
+				],
+				"Introduction": "如果一只蜜蜂被攻击，同一个蜂巢中的蜜蜂会变成杀人蜂。若靠近杀人蜂巢也会引出杀人蜂。春天的时候包括蜂箱里的蜜蜂全部都会变成杀人蜂。",
+				"Console": "killerbee"
+			},
+			{
+				"Picture": "A_butterfly_sw",
+				"Name": "蝴蝶",
+				"EnName": "Butterfly",
+				"Health": 1,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_butterfly_wing_sw|×1（98%）",
+					"F_butter|×1（2%）",
+					"A_butterfly_sw|S_bug_net"
+				],
+				"Introduction": "最弱小的生物，但是飞得很快，白天出现，黄昏消失在花里，冬季蝴蝶不会出现。击杀蝴蝶有极小几率掉落稀有的蝴蝶黄油，可以烹饪出冰淇淋或华夫饼，蝴蝶翅膀也可以烹饪出奶油松饼。想要击杀蝴蝶，需紧跟它并预判走位按下'CTRL+F'强制攻击即可。用捕虫网的话则可以比较方便捕捉到活蝴蝶，活蝴蝶右键种植会变成花。",
+				"Console": "butterfly"
+			},
+			{
+				"Picture": "A_mosquito",
+				"Name": "毒蚊子",
+				"EnName": "Poison Mosquito",
+				"Health": 100,
+				"Attack": 3,
+				"AttackInterval": 2,
+				"AttackScope": 4,
+				"MoveSpeed": 8,
+				"RunSpeed": 12,
+				"Dangerous": 1,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_yellow_mosquito_sack|×1（50%）",
+					"G_venom_gland|×1",
+					"A_mosquito|S_bug_net"
+				],
+				"Ability": [
+					"吸完血后爆炸",
+					"攻击带毒"
+				],
+				"Introduction": "毒蚊子出现于风季的水灾的潮水中或者坏结局的老虎机，成功攻击四次后自爆，对周围造成34点伤害。攻击附带毒性，要小心。",
+				"Console": "mosquito_poison"
+			},
+			{
+				"Picture": "A_parrot",
+				"Name": "鹦鹉",
+				"EnName": "Parrot",
+				"Health": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_crimson_feather|×1（50%）",
+					"A_parrot|S_bird_trap"
+				],
+				"Ability": [
+					"掉落种子",
+					"吃种子"
+				],
+				"Introduction": "船难版中替代红鸟的鸟类。囚禁在鸟笼里时，喂食熟怪兽肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
+				"Console": "parrot"
+			},
+			{
+				"Picture": "A_parrot_pirate",
+				"Name": "海盗鹦鹉",
+				"EnName": "Parrot Pirate",
+				"Health": 25,
+				"SanityEffect": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_crimson_feather|×1（50%）",
+					"A_parrot_pirate|S_bird_trap"
+				],
+				"Ability": [
+					"掉落金币"
+				],
+				"Introduction": "一种特殊的鹦鹉，不会掉落种子，而是掉落金币。捕捉后关在笼子里有恢复精神光环。囚禁在鸟笼里时，喂食熟怪兽肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
+				"Console": "parrot_pirate"
+			},
+			{
+				"Picture": "A_toucan",
+				"Name": "大嘴鸟",
+				"EnName": "Toucan",
+				"Health": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_jet_feather|×1（50%）",
+					"A_toucan|S_bird_trap"
+				],
+				"Ability": [
+					"掉落种子",
+					"吃种子"
+				],
+				"Introduction": "船难版中替代乌鸦的鸟类。囚禁在鸟笼里时，喂食熟怪兽肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
+				"Console": "toucan"
+			},
+			{
+				"Picture": "A_seagull",
+				"Name": "海鸥",
+				"EnName": "Seagull",
+				"Health": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_azure_feather|×1（50%）",
+					"A_seagull|S_bird_trap"
+				],
+				"Ability": [
+					"掉落种子",
+					"吃种子"
+				],
+				"Introduction": "海鸥是杂食鸟类，会吃地上的肉和帽贝岩的帽贝。囚禁在鸟笼里时，喂食熟怪兽肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
+				"Console": "seagull"
+			}
+		]
+	},
+	"Evil": {
+		"Creature": [
+			{
+				"Picture": "A_hound",
+				"Name": "猎犬",
+				"EnName": "Hound",
+				"Health": 150,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 3,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×1（12.5%）"
+				],
+				"Introduction": "猎犬通常出生在猎犬丘，它们速度极快，成群结队，是新手的噩梦。除了猎犬丘，还会有周期性的野生猎犬全世界范围内搜寻并攻击玩家(在进攻前会有咆哮声警告)，必须在猎犬到来前做好应敌准备，每一波猎犬都会比前一波更猛烈，并且提前咆哮警告时间越来越短，直到猎犬数量达到最大值。夏季和秋季的猎犬进攻会伴随着红色猎犬，冬季和春季的猎犬进攻会伴随着蓝色猎犬。",
+				"Console": "hound"
+			},
+			{
+				"Picture": "A_red_hound",
+				"Name": "红色猎犬",
+				"EnName": "Red Hound",
+				"Health": 100,
+				"Attack": 30,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 10,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×1",
+					"G_ash|×3",
+					"G_red_gem|×1（20%）"
+				],
+				"Ability": [
+					"被杀死后燃烧周围可燃物"
+				],
+				"Introduction": "红色猎犬死亡时会燃烧周围的可燃物，如果这些可燃物在雪球发射器的范围内就不会被烧毁，并且不会掉落灰烬。有时候会看到4、5只睡着的红色猎犬围着一个火魔杖睡觉，若直接捡起火魔杖，这些猎犬会醒来并攻击玩家，建议单独消灭每一只红色猎犬，因为攻击其中一只其他的红色猎犬并不会醒来。",
+				"Console": "firehound"
+			},
+			{
+				"Picture": "A_blue_hound",
+				"Name": "蓝色猎犬",
+				"EnName": "Blue Hound",
+				"Health": 100,
+				"Attack": 30,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×2",
+					"G_blue_gem|×1（20%）"
+				],
+				"Ability": [
+					"被杀死后冰冻周围可冻物体"
+				],
+				"Introduction": "蓝色猎犬死亡时会冰冻周围生物，持续约5秒。海象总是会带着两只蓝色猎犬。和火魔杖陷阱一样有几率可以找到冰魔杖陷阱。",
+				"Console": "icehound"
+			},
+			{
+				"Picture": "A_sea_hound",
+				"Name": "海狗",
+				"EnName": "Sea Hound",
+				"Health": 150,
+				"Attack": 20,
+				"AttackInterval": 1.5,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 3,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×1（12.5%）",
+					"F_shark_fin|×1（12.5%）"
+				],
+				"Introduction": "在船难版里，如果猎犬进攻时间到了而玩家在海上的话，就会有海狗代替猎犬来发动进攻。其掉落的鱼翅可以做鱼翅汤和星芒头盔。",
+				"Console": "sharx"
+			},
+			{
+				"Picture": "A_krampus_sw",
+				"Name": "坎普斯",
+				"EnName": "Krampus",
+				"Health": 200,
+				"Attack": 50,
+				"AttackInterval": 1.2,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_charcoal|×2",
+					"G_krampus_sack|×1（1%）"
+				],
+				"Ability": [
+					"偷东西（包括箱子和背包里的东西）"
+				],
+				"Introduction": "坎普斯会在顽皮值到达一定值(31-50之间的随机值)的时候出现，出现后顽皮值置0。它的动作类似火鸡，避免靠近玩家，但是会偷取箱子里或者地上的所有东西，包括背包(除了眼骨、鱼骨、星-空、露西斧、薇洛的打火机、Abigail之花、一堆气球、魔杖、传送机零件底座等特殊物品，除非它们在背包里)。在晚上它会睡觉，可以很容易击杀它。每分钟(一天8分钟)会减少一点顽皮值，而用火、狗牙陷阱、蜜蜂地雷、火药击杀生物将不会增加顽皮值，因为这被认为是环境破坏导致生物死亡。",
+				"Console": "krampus"
+			},
+			{
+				"Picture": "A_pirate_ghost",
+				"Name": "海盗的鬼魂",
+				"EnName": "Pirate Ghost",
+				"Health": 200,
+				"Attack": 15,
+				"AttackInterval": 1.2,
+				"AttackScope": 1.5,
+				"MoveSpeed": 2,
+				"RunSpeed": 2,
+				"Dangerous": 2,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Introduction": "在船难版里海盗的鬼魂替代了鬼魂，用锤子砸沉船或者在潮湿的坟墓里钓鱼都有可能会出现海盗的鬼魂。",
+				"Console": "pirateghost"
+			},
+			{
+				"Picture": "A_night_hand",
+				"Name": "黑夜之手",
+				"EnName": "Night Hand",
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"SanityEffect": -40,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Ability": [
+					"抓灭各类火堆"
+				],
+				"Introduction": "黑夜之手会在晚上点燃火堆时出现，它们会逐渐靠近并试图抓灭火堆，最多同时存在三只。玩家可以去踩黑夜之手使其后退，但是如果不踩掉其根源，就会一直试图靠近火堆。萤火虫可以有效防止黑夜之手。",
+				"Console": "shadowhand"
+			},
+			{
+				"Picture": "A_mr_skittish",
+				"Name": "Skittish先生",
+				"EnName": "Mr.Skittish",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Introduction": "船难版的Skits先生。"
+			},
+			{
+				"Picture": "A_shadow_watcher",
+				"Name": "暗影观察者",
+				"EnName": "Shadow Watcher",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Introduction": "它会出现在玩家精神低于65%的晚上，不能攻击或被攻击，踩在它的眼睛上或白天到来时就会消失。"
+			},
+			{
+				"Picture": "A_crawling_nightmare",
+				"Name": "爬行梦魇",
+				"EnName": "Crawling Nightmare",
+				"Health": 300,
+				"Attack": 20,
+				"AttackInterval": 2.5,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 4,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_nightmare_fuel|×1",
+					"G_nightmare_fuel|×1（50%）"
+				],
+				"Ability": [
+					"被攻击时消失并在周围随机位置出现。"
+				],
+				"Introduction": "当玩家精神高于15%时爬行梦魇会徘徊在玩家周围，并且会阻止玩家进入帐篷，当玩家精神低于15%时就会变成实体(可以攻击和被攻击)攻击玩家，并且被攻击时会消失并随机出现在附近某个位置，击杀爬行梦魇会回复15点精神。诞生于影灯和远古雕像的爬行梦魇会无视玩家的精神百分比攻击玩家(击杀后不回复精神)。",
+				"Console": "crawlingnightmare"
+			},
+			{
+				"Picture": "A_crawling_horror",
+				"Name": "爬行梦魇",
+				"EnName": "Crawling Horror",
+				"Health": 400,
+				"Attack": 50,
+				"AttackInterval": 1.5,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 5,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_nightmare_fuel|×1",
+					"G_nightmare_fuel|×1（50%）"
+				],
+				"Ability": [
+					"被攻击时消失并在周围随机位置出现。"
+				],
+				"Introduction": "爬行梦魇只在玩家精神低于15%的时候出现并攻击玩家，并且被攻击时会消失并随机出现在附近某个位置，击杀爬行梦魇会回复33点精神。诞生于影灯、远古雕像和大豪华箱子的爬行梦魇会无视玩家的精神百分比攻击玩家(击杀后不回复精神)。",
+				"Console": "nightmarebeak"
+			},
+			{
+				"Picture": "A_swimming_horror",
+				"Name": "海洋影怪",
+				"EnName": "Swimming Horror",
+				"Health": 300,
+				"Attack": 20,
+				"AttackInterval": 2.5,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 4,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_nightmare_fuel|×1",
+					"G_nightmare_fuel|×1（50%）"
+				],
+				"Ability": [
+					"被攻击时消失并在周围随机位置出现。"
+				],
+				"Introduction": "海洋影怪可以在浅滩发现，它们会主动不停地追逐玩家，除非玩家离开浅滩或回到岸上。",
+				"Console": "swimminghorror"
+			},
+			{
+				"Picture": "A_charlie",
+				"Name": "查理",
+				"EnName": "Charlie",
+				"Attack": 100,
+				"Dangerous": 10,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Ability": [
+					"无所不在"
+				],
+				"Introduction": "在玩家进入完全黑暗之后十秒左右，每隔几秒就会受到看不见的查理的攻击，攻击力高达100点，同时被攻击还会减少20点精神。在没有防御的情况下，大多数人物可以承受1次攻击。"
+			}
+		]
+	},
+	"Others": {
+		"Creature": [
+			{
+				"Picture": "A_packim_baggims",
+				"Name": "鹈鹕",
+				"EnName": "Packim Baggims",
+				"Health": 450,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"|储存的物品"
+				],
+				"Ability": [
+					"跟随鱼骨",
+					"9格储物",
+					"生命恢复",
+					"食用其体内鱼类食物",
+					"升级为胖鹈鹕/火焰鹈鹕"
+				],
+				"Introduction": "船难版的切斯特，会跟随鱼骨(可能在除了出生岛屿之外的其他任何岛屿)，它可以吃最基本的鱼类食品，拥有150的最大饥饿值，饥饿值每天减少48点，在饥饿的时候不会掉血。",
+				"Console": "packim"
+			},
+			{
+				"Picture": "A_fat_packim_baggims",
+				"Name": "胖鹈鹕",
+				"EnName": "Fat Packim Baggims",
+				"Health": 450,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"|储存的物品"
+				],
+				"Ability": [
+					"跟随鱼骨",
+					"12格储物",
+					"生命恢复",
+					"食用其体内鱼类食物"
+				],
+				"Introduction": "当鹈鹕的饥饿值到达120以上时就会变成胖鹈鹕，拥有12个格子，此时当饥饿掉到0时又会变回普通鹈鹕，额外的三个格子里的物品会掉落下来。"
+			},
+			{
+				"Picture": "A_fire_packim_baggims",
+				"Name": "火焰鹈鹕",
+				"EnName": "Fire Packim Baggims",
+				"Health": 450,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"|储存的物品"
+				],
+				"Ability": [
+					"跟随鱼骨",
+					"9格储物",
+					"生命恢复",
+					"火焰攻击附近怪物",
+					"烹饪食物"
+				],
+				"Introduction": "在鹈鹕的每个格子里放入至少一个黑曜石就会变成火焰鹈鹕，它免疫火并且会自动用远程火焰攻击怪物和敌对生物(包括韦伯)。它会自动烹煮食物，并且如果有易燃品那么就会变成灰烬。"
+			},
+			{
+				"Picture": "A_yaarctopus",
+				"Name": "亚克章鱼",
+				"EnName": "Yaarctopus",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Introduction": "亚克章鱼通常可以在浅海的珊瑚礁附近找到，它躺在一个珊瑚礁上，交易生物之一。白天和黄昏可以用鱼类、玩具和部分食物交易，交易完或者到了晚上就会睡觉，到第二天才会醒来。",
+				"Console": "octopusking"
+			}
+		]
+	},
+	"Boss": {
+		"Creature": [
+			{
+				"Picture": "A_palm_treeguard",
+				"Name": "椰树守卫",
+				"EnName": "Palm Treeguard",
+				"Health": 750,
+				"Attack": 150,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 1.5,
+				"Dangerous": 6,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_living_log|×6",
+					"F_coconut|×2",
+					"F_monster_meat|×1（一定几率）"
+				],
+				"Ability": [
+					"抛椰子远程攻击"
+				],
+				"Introduction": "和树人守卫一样，砍伐椰子树就有几率出现椰树守卫，它们同样有3种大小，但是属性并没有变化。一旦产生，它们会保持永久敌对状态，离开当前岛屿再回来仇恨还是保持，除非种植丛林树种或椰子。椰树守卫有近程攻击和远程抛椰子攻击，抛椰子可以通过地上的影子躲避。",
+				"Console": "treeguard"
+			},
+			{
+				"Picture": "A_quacken",
+				"Name": "呱肯乌贼",
+				"EnName": "Quacken",
+				"Health": 1000,
+				"Attack": 50,
+				"AttackInterval": 7.5,
+				"AttackScope": 20,
+				"Dangerous": 6,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"N_chest_of_the_depths|×1",
+					"N_booty_bag_1|×1",
+					"G_iron_key|×1（仅第一次）"
+				],
+				"Ability": [
+					"墨水炸弹",
+					"生成呱肯乌贼的触手"
+				],
+				"Introduction": "呱肯乌贼是船难版的BOSS之一，用钓竿在潮湿的坟墓或者在深海用拖网就有机会召唤出呱肯乌贼，每一个物品陷入拖网中就有5%的几率产生呱肯乌贼。击杀呱肯乌贼的20天内不会再产生第二个呱肯乌贼。它本身没有近程攻击，但是会召唤呱肯乌贼的触手帮助它攻击(从小地图看就像是诱饵草和眼球植物)，它的远程攻击是墨水弹，可以通过阴影躲避，被击中受到50点伤害，并且墨水弹掉落位置会形成持续几秒的墨水斑点，在墨水斑点区域内会减速70%。当本体每损失250点生命时，呱肯乌贼会移动到附近的另一个地方，总共会移动三次。",
+				"Console": "kraken"
+			},
+			{
+				"Picture": "A_quacken_tentacle",
+				"Name": "呱肯乌贼的触手",
+				"EnName": "Quacken Tentacle",
+				"Health": 90,
+				"Attack": 50,
+				"AttackInterval": 6,
+				"AttackScope": 4,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_tentacle_spike|×1（5%）",
+					"G_tentacle_spots|×1（10%）"
+				],
+				"Ability": [
+					"制造巨浪"
+				],
+				"Introduction": "呱肯乌贼的触手本身会近程攻击，另外还会掀起浪花攻击，生命值和呱肯乌贼本体并不共享，所以无视就好了。击杀后获得的铁制钥匙是和金制钥匙、骨制钥匙一起解锁火山笼子里的伍德莱格的。",
+				"Console": "kraken_tentacle"
+			},
+			{
+				"Picture": "A_sealnado",
+				"Name": "豹卷风",
+				"EnName": "Sealnado",
+				"Health": 3000,
+				"Attack": 75,
+				"AttackInterval": 3,
+				"AttackScope": 6,
+				"MoveSpeed": 5,
+				"RunSpeed": 13,
+				"Dangerous": 9,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_turbine_blades|×1"
+				],
+				"Ability": [
+					"范围攻击",
+					"可以在岛屿和海洋活动"
+				],
+				"Introduction": "豹卷风是船难版的BOSS之一，会在风季出现。平时不去惹它时不会主动攻击，但是当玩家靠的过近或者攻击它时它就会拍打一下然后吸入周围所有物品再喷出来，被吸入会减少250点生命并下降33点精神(目前版本有一个被吸入就无法出来的BUG，只能重启游戏了)。要击杀它用打二走一的方法或者用远程武器击杀，死后生成海豹。",
+				"Console": "twister"
+			},
+			{
+				"Picture": "A_seal",
+				"Name": "海豹",
+				"EnName": "Deerclops",
+				"Health": 10,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×4",
+					"G_magic_seal|×1（无论是否被击杀）"
+				],
+				"Introduction": "豹卷风死后生成无害的海豹，但是击杀它会立即引来坎普斯。不论是否击杀都能得到豹印。",
+				"Console": "twister_seal"
+			},
+			{
+				"Picture": "A_tiger_shark",
+				"Name": "虎鲨",
+				"EnName": "Tiger Shark",
+				"Health": 2500,
+				"Attack": 100,
+				"AttackInterval": 3,
+				"AttackScope": 4,
+				"MoveSpeed": 8,
+				"RunSpeed": 12,
+				"Dangerous": 7,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_raw_fish|×8",
+					"F_eye_of_the_tiger_shark|1~2",
+					"G_shark_gills|×2~4"
+				],
+				"Ability": [
+					"范围攻击",
+					"可以在陆地或海洋",
+					"生成小虎鲨"
+				],
+				"Introduction": "虎鲨是船难版的BOSS之一，会在任何季节玩家做某些事情时在海岸边生成，风季的可能性比较大(用海洋陷阱和拖网的可能性也比较大)。它的攻击是范围性的。白天时，当它的血量低于250就会逃入海中，玩家无法追上，只能用远程武器击杀，黄昏和夜晚则不会逃跑，并且在陆地，可以轻松击杀。",
+				"Console": "tigershark"
+			},
+			{
+				"Picture": "A_sharkitten",
+				"Name": "小虎鲨",
+				"EnName": "Sharkitten",
+				"Health": 150,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_raw_fish|×2~3",
+					"G_shark_gills|×0~2"
+				],
+				"Ability": [
+					"被虎鲨保护"
+				],
+				"Introduction": "虎鲨生成的生物，不会攻击，只会跟随着虎鲨。",
+				"Console": "sharkitten"
+			}
+		]
+	}
+}

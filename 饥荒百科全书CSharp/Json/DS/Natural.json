@@ -1,0 +1,449 @@
+﻿{
+  "Biomes": {
+    "Nature": [
+      {
+        "Picture": "N_grasslands",
+        "Name": "草原",
+        "EnName": "Grasslands",
+        "Abundant": [
+          "A_redbird",
+          "N_flower_1"
+        ],
+        "Occasional": [
+          "G_flint",
+          "F_carrot",
+          "N_berry_bush_1",
+          "N_evergreen_1",
+          "N_grass",
+          "N_sapling",
+          "A_bee",
+          "N_beehive",
+          "A_butterfly",
+          "A_fireflies",
+          "N_pond",
+          "A_rabbit",
+          "N_rabbit_hole"
+        ],
+        "Rare": [
+          "N_walrus_camp",
+          "A_spider",
+          "N_spider_den_3",
+          "N_red_mushroom",
+          "A_killer_bee",
+          "N_killer_bee_hive"
+        ],
+        "Introduction": "草原是常见的生物群落之一，它们一般有多种类型的资源。玩家进入世界总会出生在草原(除了船难版)，无论是小的或是大片的草原。草原主要的危险是蜘蛛巢和杀人蜂巢，有时候也会出现海象巢穴。"
+      },
+      {
+        "Picture": "N_savanna",
+        "Name": "稀树大草原",
+        "EnName": "Savanna",
+        "Abundant": [
+          "N_grass",
+          "A_rabbit",
+          "N_rabbit_hole",
+          "A_redbird",
+          "A_crow"
+        ],
+        "Occasional": [
+          "A_beefalo",
+          "G_manure",
+          "N_boulder_1"
+        ],
+        "Rare": [
+          "N_flower_1",
+          "A_butterfly",
+          "N_spider_den_3",
+          "G_crank_thing_1"
+        ],
+        "Introduction": "稀树大草原是唯一已知产生皮弗娄牛的生物群落(需要稀树大草原至少有25块草皮)，曲柄状传送机零件总是在稀树大草原。稀树大草原是获得草的好地方，不过春天要小心皮弗娄牛。"
+      },
+      {
+        "Picture": "N_forest",
+        "Name": "森林",
+        "EnName": "Forest",
+        "Abundant": [
+          "N_evergreen_1",
+          "N_lumpy_evergreen_1",
+          "N_sapling",
+          "A_redbird",
+          "A_crow"
+        ],
+        "Occasional": [
+          "N_pig_house",
+          "A_spider",
+          "N_spider_den_3",
+          "N_headstone_1",
+          "N_blue_mushroom",
+          "N_red_mushroom",
+          "N_flower_1"
+        ],
+        "Rare": [
+          "N_berry_bush_1",
+          "N_grass",
+          "N_boulder_1",
+          "N_boulder_2",
+          "N_totally_normal_tree",
+          "N_sinkhole"
+        ],
+        "Introduction": "森林里有时会发现大范围的蜘蛛巢和分散的坟墓，这里是最容易着火的区域。森林里有时也会找到猪舍和卵石。"
+      },
+      {
+        "Picture": "N_graveyard",
+        "Name": "墓地",
+        "EnName": "Graveyard",
+        "Abundant": [
+          "N_headstone_1",
+          "S_gold_nugget"
+        ],
+        "Occasional": [
+          "N_evergreen_1",
+          "G_flint",
+          "G_rocks"
+        ],
+        "Introduction": "墓地通常会在森林附近，有几颗稀疏的树，地上常常能看到金块。如果喜欢挖坟找玩具就来这里吧！"
+      },
+      {
+        "Picture": "N_marsh",
+        "Name": "沼泽",
+        "EnName": "Marsh",
+        "Abundant": [
+          "A_tentacle",
+          "N_spiky_bush",
+          "N_spiky_tree",
+          "A_crow",
+          "N_blue_mushroom",
+          "N_green_mushroom"
+        ],
+        "Occasional": [
+          "A_spider",
+          "N_spider_den_3",
+          "N_pond_mos",
+          "N_reeds",
+          "N_rundown_house"
+        ],
+        "Rare": [
+          "N_grass",
+          "N_evergreen_1"
+        ],
+        "Introduction": "沼泽是十分危险的地方，这里有触手、鱼人和蜘蛛，它们经常会打起来，可以坐收渔翁之利。沿着道路走一般不会遇到触手。"
+      },
+      {
+        "Picture": "N_chess",
+        "Name": "棋盘",
+        "EnName": "Chess",
+        "Abundant": [
+          "N_evil_flower_1",
+          "N_marble_tree_1",
+          "N_marble_pillar"
+        ],
+        "Occasional": [
+          "A_butterfly",
+          "A_clockwork_knight",
+          "A_clockwork_bishop",
+          "A_clckwork_rook"
+        ],
+        "Rare": [
+          "N_maxwell_statue",
+          "N_harp_statue",
+          "N_wooden_thing_advanture"
+        ],
+        "Introduction": "棋盘生物群落有少量的大理石和发条生物，是保护传送机零件底座的地方，同时，花也被恶魔之花取代。"
+      },
+      {
+        "Picture": "N_mosaic",
+        "Name": "马赛克",
+        "EnName": "Mosaic",
+        "Abundant": [
+          "G_rocks",
+          "G_flint",
+          "A_crow"
+        ],
+        "Occasional": [
+          "S_gold_nugget",
+          "N_evergreen_1",
+          "N_boulder_1",
+          "N_boulder_2"
+        ],
+        "Rare": [
+          "N_tallbird_nest",
+          "G_birchnut",
+          "N_sapling",
+          "N_grass",
+          "N_berry_bush_1"
+        ],
+        "Introduction": "马赛克区域通常在海边，由各种地皮组成，也有各种资源。"
+      },
+      {
+        "Picture": "N_rockyland",
+        "Name": "矿区",
+        "EnName": "Rockyland",
+        "Abundant": [
+          "G_flint",
+          "G_rocks",
+          "A_crow",
+          "N_boulder_1",
+          "N_boulder_2"
+        ],
+        "Occasional": [
+          "S_gold_nugget",
+          "A_spider",
+          "N_spider_den_3"
+        ],
+        "Rare": [
+          "A_tallbird",
+          "N_tallbird_nest"
+        ],
+        "Introduction": "顾名思义，有很多的卵石，冬天也会有不少迷你冰川，一般会有2-3只高脚鸟生活在这里。有的时候会发现成片的蜘蛛巢，并且伴随着不少金块。"
+      },
+      {
+        "Picture": "N_ocean",
+        "Name": "海洋",
+        "EnName": "Ocean",
+        "Introduction": "海洋是不可穿越的，没有任何的生物、植物或建筑，不过如果用了至少4倍速度的话很有可能冲到海洋哦！"
+      },
+      {
+        "Picture": "N_spider_infested",
+        "Name": "蜘蛛出没",
+        "EnName": "Spider Infested",
+        "Abundant": [
+          "A_spider",
+          "N_spider_den_3",
+          "A_tentacle",
+          "N_reeds"
+        ],
+        "Rare": [
+          "N_spiky_bush"
+        ],
+        "Introduction": "在这里，芦苇资源丰富，然而要小心极多的蜘蛛，还有触手。"
+      },
+      {
+        "Picture": "N_light_flower_swamp",
+        "Name": "荧光草沼泽",
+        "EnName": "Light Flower Swamp",
+        "Abundant": [
+          "N_light_flower_1",
+          "A_big_tentacle"
+        ],
+        "Rare": [
+          "A_tentacle"
+        ],
+        "Introduction": "这里有丰富的荧光草资源，然而有时会遇到大触手。"
+      },
+      {
+        "Picture": "N_mushtree_forest",
+        "Name": "蘑菇树森林",
+        "EnName": "Mushtree Forest",
+        "Abundant": [
+          "N_blue_mushtree",
+          "N_green_mushtree",
+          "N_red_mushtree",
+          "N_green_mushroom"
+        ],
+        "Introduction": "富含三种蘑菇树和绿蘑菇。"
+      },
+      {
+        "Picture": "N_blue_mushtree_forest",
+        "Name": "蓝色蘑菇树森林",
+        "EnName": "Blue Mushtree Forest",
+        "Abundant": [
+          "N_blue_mushtree",
+          "N_blue_mushroom",
+          "N_light_flower_1",
+          "N_fern_1"
+        ],
+        "Occasional": [
+          "N_rabbit_hutch"
+        ],
+        "Rare": [
+          "A_depths_worm",
+          "N_slurtle_mound"
+        ],
+        "Introduction": "富含蓝色蘑菇树、蓝蘑菇和荧光草，有时会找到兔子窝，偶尔会有深渊蠕虫在附近活动，也可能看到含糊虫土堆。"
+      },
+      {
+        "Picture": "N_green_mushtree_forest",
+        "Name": "绿色蘑菇树森林",
+        "EnName": "Green Mushtree Forest",
+        "Abundant": [
+          "N_green_mushtree",
+          "N_green_mushroom",
+          "N_light_flower_1",
+          "N_fern_1"
+        ],
+        "Rare": [
+          "A_depths_worm",
+          "N_slurtle_mound"
+        ],
+        "Introduction": "富含绿色蘑菇树、绿蘑菇和荧光草，偶尔会有深渊蠕虫在附近活动，也可能看到含糊虫土堆。"
+      },
+      {
+        "Picture": "N_red_mushtree_forest",
+        "Name": "红色蘑菇树森林",
+        "EnName": "Red Mushtree Forest",
+        "Abundant": [
+          "N_red_mushtree",
+          "N_red_mushroom",
+          "N_light_flower_1",
+          "N_fern_1"
+        ],
+        "Rare": [
+          "A_depths_worm",
+          "N_slurtle_mound"
+        ],
+        "Introduction": "富含红色蘑菇树、红蘑菇和荧光草，偶尔会有深渊蠕虫在附近活动，也可能看到含糊虫土堆。"
+      },
+      {
+        "Picture": "N_rocky_plains",
+        "Name": "岩石平原",
+        "EnName": "Rocky Plains",
+        "Abundant": [
+          "A_rock_lobster",
+          "N_boulder_3"
+        ],
+        "Rare": [
+          "N_nightmare_fissure"
+        ],
+        "Introduction": "这里几乎只有岩石大龙虾和卵石，偶尔会看到噩梦裂缝。"
+      },
+      {
+        "Picture": "N_stalagmite_biomes",
+        "Name": "石笋生物群落",
+        "EnName": "Stalagmite Biomes",
+        "Abundant": [
+          "N_stalagmite",
+          "A_spitter"
+        ],
+        "Rare": [
+          "N_nightmare_fissure"
+        ],
+        "Introduction": "这里生活的生物是喷吐蜘蛛，偶尔会看到噩梦裂缝。被塞上的洞可能会在这里。"
+      },
+      {
+        "Picture": "N_tall_stalagmite_biomes",
+        "Name": "高石笋生物群落",
+        "EnName": "Tall Stalagmite Biomes",
+        "Abundant": [
+          "N_stalagmite_tall"
+        ],
+        "Occasional": [
+          "A_batilisk",
+          "G_guano"
+        ],
+        "Rare": [
+          "N_nightmare_fissure"
+        ],
+        "Introduction": "这里生活的生物是黑蝙蝠，偶尔会看到噩梦裂缝。被塞上的洞可能会在这里。"
+      },
+      {
+        "Picture": "N_sunken_forest",
+        "Name": "沉没森林",
+        "EnName": "Sunke Forest",
+        "Abundant": [
+          "N_evergreen_1"
+        ],
+        "Occasional": [
+          "N_grass",
+          "N_sapling",
+          "N_berry_bush_1",
+          "N_cave_banana_tree"
+        ],
+        "Introduction": "这里通常有一大片的树和少量的树苗和浆果灌木丛，不会有生物在这里生成(除了火鸡和树精守卫)。"
+      },
+      {
+        "Picture": "N_labyrinth",
+        "Name": "迷宫",
+        "EnName": "Labyrinth",
+        "Abundant": [
+          "N_ornate_chest",
+          "A_dangling_depth_dweller"
+        ],
+        "Occasional": [
+          "N_nightmare_light",
+          "N_cave_lichen",
+          "N_light_flower_1",
+          "N_thulecite_wall_1"
+        ],
+        "Rare": [
+          "A_ancient_guardian"
+        ],
+        "Introduction": "迷宫区域十分曲折，通常路的尽头会有豪华箱子，然而几乎不可避免地会遇上白蜘蛛。会有一大片空地并且能在那里找到远古守护者。"
+      },
+      {
+        "Picture": "N_military",
+        "Name": "军事",
+        "EnName": "Military",
+        "Abundant": [
+          "N_ancient_statue_head",
+          "N_ancient_statue_mage_nogem",
+          "N_nightmare_light"
+        ],
+        "Occasional": [
+          "A_dangling_depth_dweller",
+          "N_boulder_3",
+          "N_broken_clockworks_1",
+          "N_thulecite_wall_1"
+        ],
+        "Rare": [
+          "N_ancient_pseudoscience_station"
+        ],
+        "Introduction": "在这里会发现不少影灯和远古雕像，也会找到白蜘蛛和破碎的时钟，两个能找到破碎的远古遗迹的生物群落之一。"
+      },
+      {
+        "Picture": "N_sacred",
+        "Name": "神圣",
+        "EnName": "Sacred",
+        "Abundant": [
+          "N_broken_clockworks_1",
+          "N_ancient_statue_head",
+          "N_ancient_statue_mage_nogem",
+          "N_nightmare_light"
+        ],
+        "Occasional": [
+          "N_thulecite_wall_1"
+        ],
+        "Rare": [
+          "N_ancient_pseudoscience_station"
+        ],
+        "Introduction": "尽管这里很像军事生物群落，但是通过紫色的草皮可以很容易分辨。在这里会发现不少影灯和远古雕像，破碎的时钟大多聚集在一起，两个能找到破碎的远古遗迹的生物群落之一(只有在这里可能发现完整的远古遗迹)。"
+      },
+      {
+        "Picture": "N_village",
+        "Name": "村庄",
+        "EnName": "Village",
+        "Abundant": [
+          "A_splumonkey",
+          "N_splumonkey_pod",
+          "N_cave_banana_tree",
+          "N_relic_bowl"
+        ],
+        "Occasional": [
+          "N_pond_cave",
+          "N_light_flower_1",
+          "N_cave_lichen",
+          "N_thulecite_wall_1"
+        ],
+        "Introduction": "这里是古代文明的住宅区，可以找到洞穴香蕉树和暴躁猴，偶尔会有少量池塘和荧光草等。"
+      },
+      {
+        "Picture": "N_wilds",
+        "Name": "野外",
+        "EnName": "Wilds",
+        "Abundant": [
+          "N_cave_lichen"
+        ],
+        "Occasional": [
+          "N_pond_cave",
+          "N_light_flower_1",
+          "A_slurper",
+          "N_blue_mushroom",
+          "A_depths_worm"
+        ],
+        "Rare": [
+          "N_splumonkey_pod"
+        ],
+        "Introduction": "古代文明也没有涉足的区域，可以找到洞穴池塘和各种植物，缀食者和深渊蠕虫也会在这里出现。"
+      }
+    ]
+  }
+}

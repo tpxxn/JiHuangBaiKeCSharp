@@ -1,0 +1,1916 @@
+﻿{
+	"Land": {
+		"Creature": [
+			{
+				"Picture": "A_rabbit",
+				"Name": "兔子",
+				"EnName": "Rabbit",
+				"Health": 25,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1",
+					"A_rabbit|S_trap"
+				],
+				"Ability": [
+					"吃地上的水果和蔬菜"
+				],
+				"Introduction": "草原上常见的生物，靠近就会逃跑，可以利用这一点来捕捉它，也可以在陷阱里放水果和蔬菜吸引。若挖起兔子窝里面的兔子会跑出来，没有窝的兔子会睡在外面。",
+				"Console": "rabbit"
+			},
+			{
+				"Picture": "A_rabbit_winter",
+				"Name": "雪兔",
+				"EnName": "Winter Rabbit",
+				"Health": 25,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1",
+					"A_rabbit_winter|S_trap"
+				],
+				"Ability": [
+					"吃地上的水果和蔬菜"
+				],
+				"Introduction": "普通兔子到了冬天就会变成雪兔，除了外观以外没有任何区别。",
+				"Console": "rabbit"
+			},
+			{
+				"Picture": "A_beardling",
+				"Name": "黑兔子",
+				"EnName": "Beardling",
+				"Health": 25,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"SanityEffect": -40,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_monster_meat|×1（40%）",
+					"G_nightmare_fuel|×1（40%）",
+					"G_beard_hair|×1（20%）",
+					"A_beardling|S_trap"
+				],
+				"Ability": [
+					"吃地上的水果和蔬菜"
+				],
+				"Introduction": "精神低于40%(麦克斯韦是30%)的时候看到的兔子都会变成黑兔子，它们已经变成怪物了！当精神上升高于40%的时候又会变回普通的兔子。"
+			},
+			{
+				"Picture": "A_gobbler",
+				"Name": "火鸡",
+				"EnName": "Gobbler",
+				"Health": 50,
+				"MoveSpeed": 3,
+				"RunSpeed": 8,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_drumstick|×2"
+				],
+				"Ability": [
+					"吃浆果丛的浆果"
+				],
+				"Introduction": "采集浆果丛的时候有几率窜出来火鸡，靠近则会逃跑，可以用远程武器击杀。火鸡看到芝士蛋糕就不顾危险地想要去吃它！可以利用这点来做一个火鸡陷阱。",
+				"Console": "perd"
+			},
+			{
+				"Picture": "A_frog",
+				"Name": "青蛙",
+				"EnName": "Frog",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 1,
+				"AttackScope": 3,
+				"MoveSpeed": 4,
+				"RunSpeed": 8,
+				"Dangerous": 2,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_frog_legs|×1"
+				],
+				"Ability": [
+					"攻击击落玩家背包第一格物品"
+				],
+				"Introduction": "十分恶心的小生物，出现在白天的池塘边，被打一下就掉一样东西，可以绕着打躲避它的攻击。",
+				"Console": "frog"
+			},
+			{
+				"Picture": "A_catcoon",
+				"Name": "浣猫",
+				"EnName": "Catcoon",
+				"Health": 150,
+				"Attack": 25,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×1",
+					"G_coontail|×1（33%）"
+				],
+				"Ability": [
+					"玩礼物（击杀后不掉落）"
+				],
+				"Introduction": "生长在桦树林的中空树桩内，单机版杀掉一个树桩的9只浣猫就不会再生了。跳跃时的攻击范围为4，经常捕食蝴蝶等小型生物。",
+				"Console": "catcoon"
+			},
+			{
+				"Picture": "A_moleworm",
+				"Name": "鼹鼠",
+				"EnName": "Moleworm",
+				"Health": 25,
+				"MoveSpeed": 2.75,
+				"RunSpeed": 2.75,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1",
+					"F_moleworm|S_hammer",
+					"|偷取的任何东西"
+				],
+				"Ability": [
+					"藏在地下",
+					"偷东西"
+				],
+				"Introduction": "生活在桦树林的小生物，平常在地下钻来钻去，遇到有东西可以偷就会钻出来，趁这个时候可以用锤子一锤敲晕。击杀鼹鼠后偷取的物品会全部归还。",
+				"Console": "mole"
+			},
+			{
+				"Picture": "A_spider",
+				"Name": "蜘蛛",
+				"EnName": "Spider",
+				"Health": 100,
+				"Attack": 20,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"Dangerous": 2,
+				"SanityEffect": -25,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（50%）",
+					"G_silk|×1（50%）",
+					"G_spider_gland|×1（50%）"
+				],
+				"Introduction": "蜘蛛出生在蜘蛛巢或由蜘蛛女王孵化，当玩家经过蜘蛛网时，会有少量蜘蛛来巡查。黄昏和夜晚蜘蛛会主动出来行动。若攻击了一只蜘蛛，周围的蜘蛛都会来帮忙，蜘蛛的攻击间隔较长，很容易风筝。用陷阱可以直接杀害蜘蛛。",
+				"Console": "spider"
+			},
+			{
+				"Picture": "A_spider_warrior",
+				"Name": "蜘蛛战士",
+				"EnName": "Spider Warrior",
+				"Health": 200,
+				"Attack": 20,
+				"AttackInterval": 4,
+				"AttackScope": 6,
+				"MoveSpeed": 4,
+				"RunSpeed": 5,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（50%）",
+					"G_silk|×1（25%）",
+					"G_spider_gland|×1（25%）"
+				],
+				"Ability": [
+					"跳跃攻击"
+				],
+				"Introduction": "蜘蛛战士的血量较多，当玩家在蜘蛛网上攻击蜘蛛或直接攻击蜘蛛巢时会出现(前提是蜘蛛巢不是一级的)。它会近程攻击也会跳跃攻击，两种攻击方式循环使用，掌握好节奏也可以无伤击杀。用陷阱同样可以直接杀害战斗蜘蛛。",
+				"Console": "spider_warrior"
+			},
+			{
+				"Picture": "A_pig_man",
+				"Name": "猪人",
+				"EnName": "Pig",
+				"Health": 250,
+				"Attack": 33,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"Dangerous": 2,
+				"SanityEffect": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×1（75%）",
+					"G_pig_skin|×1（25%）"
+				],
+				"Ability": [
+					"喂大肉可以做朋友，月圆之夜变成疯猪"
+				],
+				"Introduction": "猪人只有白天会出来活动，一到黄昏变会回到猪舍睡觉，若猪舍被砸了会睡在外面。若攻击猪人，它会智能地和玩家战斗。如果喂大肉可以做朋友，会帮你一起做事(打怪、砍树等)，还有回复精神光环。到了月圆之夜则要小心它们变成疯猪(喂食4块怪兽肉也会变成疯猪)。若玩家身上装备了独奏乐队且有猪人朋友时，回复精神光环会变成损失精神光环。给猪人喂食花瓣会拉便便(放在地上的花瓣猪人也会主动食用)，可以通过这种方式刷便便。",
+				"Console": "pigman"
+			},
+			{
+				"Picture": "A_guard_pig",
+				"Name": "猪人守卫",
+				"EnName": "Guard Pig",
+				"Health": 300,
+				"Attack": 33,
+				"AttackInterval": 1.5,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×1（75%）",
+					"G_pig_skin|×1（25%）"
+				],
+				"Ability": [
+					"变成疯猪的转换时间短"
+				],
+				"Introduction": "猪人守卫一般出现在猪人火炬附近，一旦发现有生物靠近猪人火炬就会主动出击。虽然攻击力和猪人相同，但是攻击间隔只有猪人的一半。",
+				"Console": "pigguard"
+			},
+			{
+				"Picture": "A_werepig",
+				"Name": "疯猪",
+				"EnName": "Werepig",
+				"Health": 350,
+				"Attack": 40,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×2",
+					"G_pig_skin|×1"
+				],
+				"Introduction": "疯了疯了！一定是疯了！变态的损失精神光环，月圆之夜还是远离这种怪物吧！"
+			},
+			{
+				"Picture": "A_baby_beefalo",
+				"Name": "小皮弗娄牛",
+				"EnName": "Baby Beefalo",
+				"Health": 300,
+				"MoveSpeed": 2,
+				"RunSpeed": 9,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_morsel|×3",
+					"G_beefalo_wool|×1"
+				],
+				"Ability": [
+					"成长为皮弗娄牛"
+				],
+				"Introduction": "最小型的皮弗娄牛。",
+				"Console": "babybeefalo"
+			},
+			{
+				"Picture": "A_baby_beefalo_2",
+				"Name": "幼年皮弗娄牛",
+				"EnName": "Toddler Beefalo",
+				"Health": 300,
+				"MoveSpeed": 2,
+				"RunSpeed": 9,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_morsel|×4",
+					"G_beefalo_wool|×2"
+				],
+				"Ability": [
+					"成长为皮弗娄牛"
+				],
+				"Introduction": "稍微大一点的皮弗娄牛。"
+			},
+			{
+				"Picture": "A_baby_beefalo_3",
+				"Name": "青年皮弗娄牛",
+				"EnName": "Teen Beefalo",
+				"Health": 300,
+				"MoveSpeed": 2,
+				"RunSpeed": 9,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×3",
+					"G_beefalo_wool|×2"
+				],
+				"Ability": [
+					"成长为皮弗娄牛"
+				],
+				"Introduction": "即将成型的皮弗娄牛。"
+			},
+			{
+				"Picture": "A_beefalo",
+				"Name": "皮弗娄牛",
+				"EnName": "Beefalo",
+				"Health": 500,
+				"Attack": 34,
+				"AttackInterval": 4,
+				"AttackScope": 3,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 7,
+				"Dangerous": 3,
+				"SanityEffect": 6.25,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×4",
+					"G_beefalo_wool|×3",
+					"G_beefalo_horn|×1（33%）",
+					"G_manure|×1（周期产生）",
+					"G_beefalo_wool|S_razor"
+				],
+				"Ability": [
+					"春天生小牛，变成敌对"
+				],
+				"Introduction": "生活在草原的皮弗娄牛，刚到冬天和一整个春天会进入交配期，变成主动攻击生物，春天会生下小牛。夜晚拿剃刀刮牛毛不会吸引到仇恨。只有在与矮胖的家养牛靠的很近的时候才有精神光环。",
+				"Console": "beefalo"
+			},
+			{
+				"Picture": "A_smallbird",
+				"Name": "高鸟宝宝",
+				"EnName": "Smallbird",
+				"Health": 50,
+				"Attack": 10,
+				"AttackInterval": 1,
+				"AttackScope": 3,
+				"MoveSpeed": 6,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1"
+				],
+				"Introduction": "可爱又脆弱的高鸟宝宝，出生于高鸟蛋，会跟随玩家，极低的生命值导致它很容易夭折，如果饿了会一直叫，会饿死，可以吃浆果和各种种子。10天后长成青年高鸟。",
+				"Console": "smallbird"
+			},
+			{
+				"Picture": "A_teentallbird",
+				"Name": "青年高鸟",
+				"EnName": "Smallish Tallbird",
+				"Health": 300,
+				"Attack": 37.5,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 6,
+				"RunSpeed": 6,
+				"Dangerous": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×1"
+				],
+				"Ability": [
+					"成长为高鸟"
+				],
+				"Introduction": "青年高鸟会食用任何东西，饥饿值为0的时候会啄玩家(一次2点伤害)，会饿死，食用任何食物都会回复1/3的生命。18天后长成高鸟，并且重新变成敌对状态。",
+				"Console": "teenbird"
+			},
+			{
+				"Picture": "A_tallbird",
+				"Name": "高鸟",
+				"EnName": "Tallbirds",
+				"Health": 400,
+				"Attack": 50,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×2"
+				],
+				"Introduction": "通常生长在岩石地带，有几率遇见高鸟彩蛋(一堆高鸟巢围着一堆矿石)。打高鸟时可以风筝它，当然装备够好硬抗也是可以的。当它发现玩家试图偷取高鸟蛋的时候会主动攻击玩家。夜里高鸟会睡觉，可以趁此机会偷取鸟蛋，几秒种后才会醒来并开始追击。",
+				"Console": "tallbird"
+			},
+			{
+				"Picture": "A_pengull",
+				"Name": "企鸥",
+				"EnName": "Pengull",
+				"Health": 400,
+				"Attack": 33,
+				"AttackInterval": 3,
+				"AttackScope": 2.5,
+				"MoveSpeed": 2,
+				"RunSpeed": 2,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_drumstick|×1（10%）",
+					"F_meat|×1（10%）",
+					"G_jet_feather|×1（20%）",
+					"F_egg|×1（如果藏了一个）"
+				],
+				"Introduction": "冬天成群出现在海岸边，若攻击其中一只企鸥那么其他的企鸥也会一起滑翔攻击。它们会在一片冰地上下蛋，并且当玩家靠近时会把蛋藏起来。",
+				"Console": "penguin"
+			},
+			{
+				"Picture": "A_lureplants",
+				"Name": "诱饵草",
+				"EnName": "Lureplants",
+				"Health": 300,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_fleshy_bulb|×1",
+					"F_leafy_meat|×5"
+				],
+				"Ability": [
+					"产生眼球植物"
+				],
+				"Introduction": "野生诱饵草的周围会有至多27株眼球植物，它们会保护诱饵草母体。诱饵草被种植下两天后开始生长眼球植物，眼球植物吞噬的东西会被传送到诱饵草母体。诱饵草会长出诱饵(如果眼球植物吞噬了肉类那么诱饵就是这些肉类，否则就是多叶的肉)，若诱饵被取下周围的眼球植物会全部消失。诱饵草冬天进入休眠状态(变成刚种下的样子)，周围的眼球植物全部消失。",
+				"Console": "lureplant"
+			},
+			{
+				"Picture": "A_eye_plant",
+				"Name": "眼球植物",
+				"EnName": "Eyeplant",
+				"Health": 30,
+				"Attack": 20,
+				"AttackInterval": 1,
+				"AttackScope": 2.5,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Ability": [
+					"吞噬所有能放在玩家身上的东西"
+				],
+				"Introduction": "眼球植物会吞噬周围的东西，还会自动攻击想要靠近诱饵草的生物。虽然多而且攻击力不低，但是血量也不是很高，一般武器最多两下打死一个。眼球植物不会生长在卵石路和制作的草皮上。",
+				"Console": "eyeplant"
+			},
+			{
+				"Picture": "A_mandrake",
+				"Name": "曼德拉草",
+				"EnName": "Mandrake",
+				"Health": 20,
+				"MoveSpeed": 6,
+				"RunSpeed": 6,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_mandrake|×1"
+				],
+				"Ability": [
+					"在黄昏或夜晚捡起会跟随玩家"
+				],
+				"Introduction": "出现在草地和洞穴的罕见生物，一个世界只会生成2-5个，通常会长在同一片区域。白天拔起时会直接死亡，黄昏或夜晚拔起会跟随玩家直至天亮又重新自己种回地里。直接食用曼德拉草或做成曼德拉汤食用都会导致周围生物睡着。",
+				"Console": "mandrake"
+			},
+			{
+				"Picture": "A_merm",
+				"Name": "鱼人",
+				"EnName": "Merm",
+				"Health": 250,
+				"Attack": 30,
+				"AttackInterval": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 8,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_tropical_fish|×1",
+					"F_frog_legs|×1"
+				],
+				"Ability": [
+					"吃地上的水果和蔬菜"
+				],
+				"Introduction": "鱼人通常能在沼泽发现，不同的是，它们不会攻击，遇到玩家会逃跑。定期从潮汐池中捞出热带鱼但是并不吃。",
+				"Console": "merm"
+			},
+			{
+				"Picture": "A_wee_mactusk",
+				"Name": "小海象",
+				"EnName": "Wee MacTusk",
+				"Health": 100,
+				"Attack": 22,
+				"AttackInterval": 5.1,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Introduction": "几乎没有任何威胁的生物，跟在它的父亲后狐假虎威。玩家靠近会逃跑。击杀后也没有任何战利品，一般无视就好了。",
+				"Console": "little_walrus"
+			},
+			{
+				"Picture": "A_mactusk",
+				"Name": "海象",
+				"EnName": "Mactusk",
+				"Health": 150,
+				"Attack": 33,
+				"AttackInterval": 3,
+				"AttackScope": 8,
+				"MoveSpeed": 2,
+				"RunSpeed": 4,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×2",
+					"S_blow_dart|×1.5",
+					"G_walrus_tusk|×1（50%）",
+					"G_tam_o'shanter|×1（25%）"
+				],
+				"Introduction": "会远程攻击的烦人生物，通常一个海象巢穴会有一个海象一个小海象和两只蓝色猎犬，玩家靠近时会拉开距离然后攻击。击杀海象的时候最好先干掉两只猎犬然后再击杀海象，或者用远程武器击杀。如果一直追着海象，海象有可能会停下来一段时间，这个时候可以攻击它，也可以逼到角落击杀。杀死后有几率掉落海象牙(制作步行手杖)和贝雷帽(回复精神的神器)。",
+				"Console": "walrus"
+			},
+			{
+				"Picture": "A_volt_goat",
+				"Name": "电羊",
+				"EnName": "Volt Goat",
+				"Health": 350,
+				"Attack": 25,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 4,
+				"RunSpeed": 8,
+				"Dangerous": 3,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×2",
+					"G_volt_goat_horn|×1（25%）"
+				],
+				"Ability": [
+					"变成带电山羊"
+				],
+				"Introduction": "电羊被攻击会逃跑。攻击一只电羊不会引起整群电羊围攻，可以击杀大部分电羊，剩下一只赶到家附近用围墙围起，然后就会繁殖。电羊是闪电优先攻击的目标，被闪电或晨星击中会变成伏特电羊。",
+				"Console": "lightninggoat"
+			},
+			{
+				"Picture": "A_volt_goat_withelectric",
+				"Name": "伏特电羊",
+				"EnName": "Volt Goat",
+				"Health": 300,
+				"Attack": 37.5,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 4,
+				"RunSpeed": 8,
+				"Dangerous": 5,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_electric_milk|×1",
+					"F_meat|×2",
+					"G_volt_goat_horn|×1（25%）"
+				],
+				"Introduction": "击杀伏特电羊会额外获得一个电羊奶。攻击电羊或被电羊攻击均会触电，可以戴着雨帽、雨衣或眼球伞来防电。"
+			},
+			{
+				"Picture": "A_koalefant",
+				"Name": "考拉象",
+				"EnName": "Koalefant",
+				"Health": 500,
+				"Attack": 50,
+				"AttackInterval": 4,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_koalefant_trunk|×1",
+					"F_meat|×8",
+					"G_manure|×1（周期产生）"
+				],
+				"Introduction": "在春、夏、秋季沿着动物足迹寻找有可能找到考拉象(另外两种是座狼和钢羊)，在被攻击之前，会一直保持躲避玩家的状态。它和皮弗娄牛一样会周期性掉落便便。击杀后掉落的红色象鼻是制作夏日背心的必要材料。可以用围墙围起，在必要的时候击杀取肉。",
+				"Console": "koalefant_summer"
+			},
+			{
+				"Picture": "A_winter_koalefant",
+				"Name": "冬考拉象",
+				"EnName": "Winter Koalefant",
+				"Health": 500,
+				"Attack": 50,
+				"AttackInterval": 4,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_winter_koalefant_trunk|×1",
+					"F_meat|×8",
+					"G_manure|×1（周期产生）"
+				],
+				"Introduction": "在冬季沿着动物足迹寻找有可能找到冬考拉象(另外两种是座狼和钢羊)，在被攻击之前，会一直保持躲避玩家的状态。它和皮弗娄牛一样会周期性掉落便便。击杀后掉落的蓝色象鼻是制作寒冬背心的必要材料。可以用围墙围起，在必要的时候击杀取肉。",
+				"Console": "koalefant_winter"
+			},
+			{
+				"Picture": "A_clockwork_knight",
+				"Name": "发条骑士",
+				"EnName": "Clockwork Knight",
+				"Health": 300,
+				"Attack": 40,
+				"AttackInterval": 2,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_gears|×2"
+				],
+				"Introduction": "保护传送机零件底座的生物之一，通常传送机零件底座周围有两只。一般处于睡觉状态，当有生物靠近会主动攻击，可以风筝击杀。",
+				"Console": "knight"
+			},
+			{
+				"Picture": "A_clockwork_bishop",
+				"Name": "发条主教",
+				"EnName": "Clockwork Bishop",
+				"Health": 300,
+				"Attack": 40,
+				"AttackInterval": 4,
+				"AttackScope": 6,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"Dangerous": 5,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_gears|×2",
+					"G_purple_gem|×1"
+				],
+				"Ability": [
+					"远程攻击"
+				],
+				"Introduction": "保护传送机零件底座的生物之一，通常传送机零件底座周围有两只。一般处于睡觉状态，当有生物靠近会主动攻击，远程且攻击力高，一般先击杀其他机械生物最后击杀它，或者吸引机械战车冲撞击杀它。",
+				"Console": "bishop"
+			},
+			{
+				"Picture": "A_clckwork_rook",
+				"Name": "发条战车",
+				"EnName": "Clockwork Rook",
+				"Health": 300,
+				"Attack": 45,
+				"AttackInterval": 2,
+				"MoveSpeed": 5,
+				"RunSpeed": 16,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_gears|×2"
+				],
+				"Ability": [
+					"摧毁冲撞路径上的树木，建筑"
+				],
+				"Introduction": "保护传送机零件底座的生物之一，通常传送机零件底座周围有一只。平时很温和，但是一旦发现敌人就会开始冲撞起来，会摧毁沿途的树木、建筑，撞到玩家或生物会中途停止。如果撞到的是生物伤害为200。如果不是特别缺齿轮可以留着砍树什么的。",
+				"Console": "rook"
+			}
+		]
+	},
+	"Fly": {
+		"Creature": [
+			{
+				"Picture": "A_bee",
+				"Name": "蜜蜂",
+				"EnName": "Bee",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 4,
+				"RunSpeed": 6,
+				"Dangerous": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_honey|×1（16.7%）",
+					"G_stinger|×1（83.3%）",
+					"A_bee|S_bug_net"
+				],
+				"Ability": [
+					"给花传粉"
+				],
+				"Introduction": "蜜蜂是中性生物，出现在蜂巢、杀人蜂巢和蜂箱。白天出来采蜜，黄昏回到蜂巢。若蜂箱附近没有花产蜜效率会急剧降低。当蜜蜂被攻击后，同一个蜂巢的蜜蜂会变成杀人蜂追杀攻击者，可以逃跑。到了春天所有蜜蜂从外观和行为上都会变成杀人蜂的样子(捕捉后依然是蜜蜂)，到夏天就还原。",
+				"Console": "bee"
+			},
+			{
+				"Picture": "A_killer_bee",
+				"Name": "杀人蜂",
+				"EnName": "Killer Bee",
+				"Health": 100,
+				"Attack": 10,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 4,
+				"RunSpeed": 6,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_honey|×1（16.7%）",
+					"G_stinger|×1（83.3%）",
+					"A_killer_bee|S_bug_net"
+				],
+				"Introduction": "如果一只蜜蜂被攻击，同一个蜂巢中的蜜蜂会变成杀人蜂。若靠近杀人蜂巢也会引出杀人蜂。春天的时候包括蜂箱里的蜜蜂全部都会变成杀人蜂。",
+				"Console": "killerbee"
+			},
+			{
+				"Picture": "A_butterfly",
+				"Name": "蝴蝶",
+				"EnName": "Butterfly",
+				"Health": 1,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_butterfly_wing|×1（98%）",
+					"F_butter|×1（2%）",
+					"A_butterfly|S_bug_net"
+				],
+				"Introduction": "最弱小的生物，但是飞得很快，白天出现，黄昏消失在花里，冬季蝴蝶不会出现。击杀蝴蝶有极小几率掉落稀有的蝴蝶黄油，可以烹饪出冰淇淋或华夫饼，蝴蝶翅膀也可以烹饪出奶油松饼。想要击杀蝴蝶，需紧跟它并预判走位按下'CTRL+F'强制攻击即可。用捕虫网的话则可以比较方便捕捉到活蝴蝶，活蝴蝶右键种植会变成花。",
+				"Console": "butterfly"
+			},
+			{
+				"Picture": "A_mosquito",
+				"Name": "蚊子",
+				"EnName": "Mosquito",
+				"Health": 100,
+				"Attack": 3,
+				"AttackInterval": 2,
+				"AttackScope": 4,
+				"MoveSpeed": 8,
+				"RunSpeed": 12,
+				"Dangerous": 1,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_mosquito_sack|×1（50%）",
+					"A_mosquito|S_bug_net"
+				],
+				"Ability": [
+					"吸完血后爆炸"
+				],
+				"Introduction": "蚊子出现在黄昏和夜晚的沼泽池塘，成功攻击四次后自爆，对周围造成34点伤害。冬天池塘结冰不会出现。",
+				"Console": "mosquito"
+			},
+			{
+				"Picture": "A_redbird",
+				"Name": "红鸟",
+				"EnName": "Redbird",
+				"Health": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_crimson_feather|×1（50%）",
+					"A_redbird|S_bird_trap"
+				],
+				"Ability": [
+					"掉落种子",
+					"吃种子"
+				],
+				"Introduction": "只会出现在夏季的鸟类。玩家靠近会飞走，要用远程武器或者捕鸟器击杀和捕捉。囚禁在鸟笼里时，喂食熟怪物肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
+				"Console": "robin"
+			},
+			{
+				"Picture": "A_snowbird",
+				"Name": "雪鸟",
+				"EnName": "Snowbird",
+				"Health": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_azure_feather|×1（50%）",
+					"A_snowbird|S_bird_trap"
+				],
+				"Ability": [
+					"掉落种子",
+					"吃种子"
+				],
+				"Introduction": "只会出现在冬季的鸟类。玩家靠近会飞走，要用远程武器或者捕鸟器击杀和捕捉。囚禁在鸟笼里时，喂食熟怪物肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
+				"Console": "robin_winter"
+			},
+			{
+				"Picture": "A_crow",
+				"Name": "乌鸦",
+				"EnName": "Crow",
+				"Health": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_jet_feather|×1（50%）",
+					"A_crow|S_bird_trap"
+				],
+				"Ability": [
+					"掉落种子",
+					"吃种子"
+				],
+				"Introduction": "四季都能看到的鸟类。玩家靠近会飞走，要用远程武器或者捕鸟器击杀和捕捉。囚禁在鸟笼里时，喂食熟怪物肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
+				"Console": "crow"
+			},
+			{
+				"Picture": "A_buzzards",
+				"Name": "秃鹫",
+				"EnName": "Buzzards",
+				"Health": 125,
+				"Attack": 15,
+				"AttackInterval": 2,
+				"MoveSpeed": 4,
+				"RunSpeed": 8,
+				"Dangerous": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_morsel|×1-2",
+					"F_drumstick|×1",
+					"G_jet_feather|×1（33%）"
+				],
+				"Introduction": "秃鹰通常盘旋在上空寻找肉类，可以在沙漠和岩石区找到它们。可以用肉类作诱饵引诱它们下来。",
+				"Console": "buzzard"
+			},
+			{
+				"Picture": "A_fireflies",
+				"Name": "萤火虫",
+				"EnName": "Fireflies",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_fireflies|S_bug_net"
+				],
+				"Ability": [
+					"发光"
+				],
+				"Introduction": "萤火虫可以在夜晚的森林或草原上找到，也可以在洞穴(主要是蘑菇树附近)找到。萤火虫会发光，当玩家靠近后会消失，离开后1-2s又重新聚集。可以在3-4组邻近的萤火虫之间来回奔跑保证不被黑夜(查理)侵袭，不过精神仍然会明显下降。可以用捕虫网捕捉，制作矿工帽和南瓜灯，也可以给矿工帽添加燃料。注意萤火虫是不可再生资源。",
+				"Console": "fireflies"
+			}
+		]
+	},
+	"Cave": {
+		"Creature": [
+			{
+				"Picture": "A_bunnyman",
+				"Name": "兔人",
+				"EnName": "Bunnyman",
+				"Health": 200,
+				"Attack": 40,
+				"AttackInterval": 2,
+				"AttackScope": 30,
+				"MoveSpeed": 3,
+				"RunSpeed": 6,
+				"Dangerous": 2,
+				"SanityEffect": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_carrot|×2",
+					"F_meat|×1（75%）",
+					"G_bunny_puff|×1（25%）"
+				],
+				"Ability": [
+					"玩家身上携带肉类食物会主动攻击",
+					"变成黑兔人",
+					"吃地上的水果和蔬菜"
+				],
+				"Introduction": "兔人通常生活在蘑菇树森林附近，离洞穴一层入口也比较近。当携带肉类(火腿球棒和高鸟蛋除外)靠近兔人的时候会惹怒兔人，它们将会变成主动攻击。当兔人生命值低于70时会开始逃跑，只能逼到死角或者用远程武器击杀，击杀后得到的兔毛可以做兔子窝，兔人死亡一天后在兔子窝重生。",
+				"Console": "bunnyman"
+			},
+			{
+				"Picture": "A_beardlord",
+				"Name": "黑兔人",
+				"EnName": "Beardlord",
+				"Health": 200,
+				"Attack": 60,
+				"AttackInterval": 1,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 6,
+				"Dangerous": 3,
+				"SanityEffect": -40,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_beard_hair|×2",
+					"F_monster_meat|×1"
+				],
+				"Ability": [
+					"玩家身上携带肉类食物会主动攻击",
+					"变成兔人",
+					"吃地上的水果和蔬菜"
+				],
+				"Introduction": "玩家精神低于40%时兔人会变成黑兔人，掉落物会有所变化，其他行为没有变化。当玩家精神回复到40%以上又会变回兔人。"
+			},
+			{
+				"Picture": "A_splumonkey",
+				"Name": "洞穴猴子",
+				"EnName": "Splumonkey",
+				"Health": 125,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 3,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_morsel|×1",
+					"F_banana|×1",
+					"G_nightmare_fuel|×1（50%）"
+				],
+				"Ability": [
+					"抛大便",
+					"噩梦阶段变成暗影洞穴猴子",
+					"偷取任何东西"
+				],
+				"Introduction": "洞穴猴子生活在废墟的洞穴猴子窝，它们会采摘洞穴香蕉树的香蕉，浆果灌木丛的浆果以及眼前的任何蘑菇，它们会偷农场、箱子、切斯特以及烹饪锅里的东西，如果偷到的是帽子，它们将会带上它并且产生相对应的效果。通常情况下，它们是中立的，但是它们也会远程扔便便保护自己，被便便扔中会受到少量伤害并降低10点精神。一旦开始地震，它们会回到洞穴猴子窝并把偷的东西扔下(帽子类除外)。它们偶尔会跟随玩家，特别是当玩家携带了香蕉的时候。",
+				"Console": "monkey"
+			},
+			{
+				"Picture": "A_shadow_splumonkey",
+				"Name": "暗影洞穴猴子",
+				"EnName": "Shadow Splumonkey",
+				"Health": 125,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 3,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_morsel|×1",
+					"F_banana|×1",
+					"G_beard_hair|×1",
+					"G_nightmare_fuel|×1（50%）"
+				],
+				"Ability": [
+					"平静阶段变成洞穴猴子"
+				],
+				"Introduction": "当噩梦循环到达噩梦阶段的时候，洞穴猴子就会变成暗影洞穴猴子，它们会变成主动攻击形态，并且在地震的时候不会回到洞穴猴子窝。"
+			},
+			{
+				"Picture": "A_cave_spider",
+				"Name": "洞穴蜘蛛",
+				"EnName": "Cave Spider",
+				"Health": 150,
+				"Attack": 20,
+				"AttackInterval": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"Dangerous": 3,
+				"SanityEffect": -15,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（50%）",
+					"G_silk|×1（25%）",
+					"G_spider_gland|×1（25%）"
+				],
+				"Ability": [
+					"可以躲在壳里抵挡75%伤害。"
+				],
+				"Introduction": "洞穴蜘蛛生活在G_silk岩，它拥有一个贝壳状的甲壳，缩起来可以抵挡75%的伤害，而普通状态下是极其脆弱的。",
+				"Console": "spider_hider"
+			},
+			{
+				"Picture": "A_spitter",
+				"Name": "喷吐蜘蛛",
+				"EnName": "Spitter",
+				"Health": 175,
+				"Attack": 20,
+				"AttackInterval": 6,
+				"AttackScope": 8,
+				"MoveSpeed": 4,
+				"RunSpeed": 5,
+				"Dangerous": 4,
+				"SanityEffect": -15,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（50%）",
+					"G_silk|×1（25%）",
+					"G_spider_gland|×1（25%）"
+				],
+				"Introduction": "喷吐蜘蛛同样生活在G_silk岩，它会喷出远程的G_silk攻击，尽量不要靠近它，除非只有一只喷吐蜘蛛。",
+				"Console": "spider_spitter"
+			},
+			{
+				"Picture": "A_dangling_depth_dweller",
+				"Name": "悬挂深渊蜘蛛",
+				"EnName": "Dangling Depth Dweller",
+				"Health": 200,
+				"Attack": 20,
+				"AttackInterval": 4,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 5,
+				"Dangerous": 4,
+				"SanityEffect": -25,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1（50%）",
+					"G_silk|×1（25%）",
+					"G_spider_gland|×1（25%）"
+				],
+				"Ability": [
+					"跳跃攻击"
+				],
+				"Introduction": "可以在废墟的蜘蛛网(迷宫区比较多)找到它们，当玩家站在蜘蛛网上时，它们会从天而降，和蜘蛛战士一样会跳跃攻击。它们的巢穴在顶部，单机版可以把可燃物放在网中心点燃来烧毁网。",
+				"Console": "spider_dropper"
+			},
+			{
+				"Picture": "A_batilisk",
+				"Name": "洞穴蝙蝠",
+				"EnName": "Batilisk",
+				"Health": 50,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 1.5,
+				"MoveSpeed": 8,
+				"RunSpeed": 8,
+				"Dangerous": 2,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_batilisk_wing|×1（15%）",
+					"G_guano|×1（15%）",
+					"F_monster_meat|×1（15%）"
+				],
+				"Introduction": "洞穴蝙蝠生活在石笋附近的蝙蝠洞里，除了冬天，挖开落水洞也会飞出几只洞穴蝙蝠。洞穴蝙蝠白天回蝙蝠洞(若无法回洞则站立睡觉)，黄昏和晚上出来活动，会定期掉落鸟粪，具有不俗的施肥能力。击杀后获得的洞穴蝙蝠翅膀更是能制作武器__蝙蝠斧棍。",
+				"Console": "bat"
+			},
+			{
+				"Picture": "A_slurtles",
+				"Name": "龟壳蜗牛",
+				"EnName": "Slurtles",
+				"Health": 600,
+				"Attack": 25,
+				"AttackInterval": 4,
+				"AttackScope": 2.5,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_slurtle_slime|×2",
+					"G_broken_shell|×1（90%）",
+					"G_shelmet|×1（10%）"
+				],
+				"Ability": [
+					"藏在壳里吸收95%伤害",
+					"吃地上和容器里的矿物"
+				],
+				"Introduction": "龟壳蜗牛是生活在含糊虫土堆的其中一种生物，每过一段时间会排出含糊虫粘液(类似皮弗娄牛排出便便)。它们是中性的，然而它们会吃矿石，若玩家身上有矿石它们也会攻击玩家，一次成功的攻击会掉落矿石(类似青蛙的攻击)。它们走得很缓慢，但是被数次攻击后会缩回壳里，吸收95%的伤害，所以最好打2-3下就停一下。杀死它有极小的几率掉落龟壳蜗牛头盔。用火炬攻击一次就会在几秒钟后爆炸，形成小范围的300点伤害，但是不掉落战利品。",
+				"Console": "slurtle"
+			},
+			{
+				"Picture": "A_snurtles",
+				"Name": "龟壳蜗牛",
+				"EnName": "Snurtles",
+				"Health": 200,
+				"MoveSpeed": 1,
+				"RunSpeed": 1,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"G_slurtle_slime|×2",
+					"G_broken_shell|×1（25%）",
+					"G_snurtle_shell_armor|×1（75%）"
+				],
+				"Ability": [
+					"藏在壳里吸收80%伤害",
+					"吃地上和容器里的矿物"
+				],
+				"Introduction": "含糊虫是生活在含糊虫土堆的另一种生物，它们会主动逃离玩家，被攻击就会缩入壳中，吸收80%的伤害。杀死它有极小的几率掉落含糊虫壳甲。用火炬攻击一次就会在几秒钟后爆炸，形成小范围的300点伤害，但是不掉落战利品。",
+				"Console": "snurtle"
+			},
+			{
+				"Picture": "A_rock_lobster",
+				"Name": "石虾",
+				"EnName": "Rock Lobster",
+				"Health": 1800,
+				"Attack": 90,
+				"MoveSpeed": 2.66,
+				"RunSpeed": 2.66,
+				"Dangerous": 5,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_rocks|×1",
+					"F_meat|×1",
+					"G_flint|×2"
+				],
+				"Ability": [
+					"伪装成石头吸收95%伤害并回复生命",
+					"吃地上的矿物"
+				],
+				"Introduction": "石虾生活在洞穴里的岩石平原，吃除了大理石外的所有矿石，并且免疫冰冻。它们行动缓慢并且群居，每隔四天就会生长一次，最开始时，生命为1125(联机版为2250)，攻击力为56.25，速度为2.66，长到最大时，生命为1800(联机版为3600)，攻击力为90，速度为1.66(越长大速度越慢)。平时它们会四处寻找岩石和燧石吃，受到攻击会伪装成大石头，吸收95%的伤害，并且每秒恢复10点生命。像猪一样给它们吃任何矿物它们会跟着玩家并且为玩家战斗，一次半天，最多两天半。它们会清醒两天并睡一天半，睡着的时候可以用火药炸(单机版最大形态需要9个火药，联机版需要18个)。",
+				"Console": "rocky"
+			},
+			{
+				"Picture": "A_slurper",
+				"Name": "吞噬者",
+				"EnName": "Slurper",
+				"Health": 200,
+				"Attack": 30,
+				"AttackInterval": 5,
+				"AttackScope": 8,
+				"MoveSpeed": 9,
+				"RunSpeed": 9,
+				"Dangerous": 3,
+				"SanityEffect": -25,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_light_bulb|×2",
+					"G_slurper_pelt|×1（50%）"
+				],
+				"Ability": [
+					"清醒时提供光",
+					"替换玩家帽子并发光"
+				],
+				"Introduction": "吞噬者生活在废墟，刚生成时会睡觉，到达50%饥饿时会醒来并且四处游荡。它们会自动寻找玩家、兔人、猪人(总是优先玩家)并通过快速滚动攻击，并且试图寄生在猎物的脑袋上吸食饥饿，当成功寄生时，会发出和矿工帽相同的光芒，吸食到饥饿值到达90%时就会自动脱落并进入睡眠。",
+				"Console": "slurper"
+			},
+			{
+				"Picture": "A_big_tentacle",
+				"Name": "巨型触手",
+				"EnName": "Big Tentacle",
+				"Health": 500,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": false,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_light_bulb|×1（80%）",
+					"G_tentacle_spike|×1（50%）",
+					"G_tentacle_spots|×1（40%）",
+					"G_marsh_turf|×1（25%）",
+					"G_slurtle_slime|×1（10%）",
+					"N_skeleton_3|×1（10%）",
+					"G_rocks|×1（10%）"
+				],
+				"Ability": [
+					"被攻击时生成小触手"
+				],
+				"Introduction": "洞穴中可以发现巨型触手，它们血量很少而且不会攻击，但是被攻击时会生成许多小触手保护。击杀后可以得到些许材料，而小触手会全部消失，所在位置会有一个巨大的洞，跳进去会传送到另一个巨型触手的位置。",
+				"Console": "tentacle_pillar"
+			},
+			{
+				"Picture": "A_baby_tentacle",
+				"Name": "小触手",
+				"EnName": "Baby Tentacle",
+				"Health": 20,
+				"Attack": 5,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"Dangerous": 2,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Introduction": "由巨型触手生成，攻击力极低但胜在数量多，有防御的话不足为惧。"
+			},
+			{
+				"Picture": "A_damaged_knight",
+				"Name": "损坏的骑士",
+				"EnName": "Damaged Knight",
+				"Health": 300,
+				"Attack": 40,
+				"AttackInterval": 2,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_gears|×1（50%）",
+					"G_thulecite_fragments|×1（50%）",
+					"G_nightmare_fuel|×1（60%）"
+				],
+				"Introduction": "洞穴里的发条骑士，可以通过使用3个齿轮修复一个破碎的时钟作为永久友军(被闪电劈了会变成敌对)。",
+				"Console": "knight_nightmare"
+			},
+			{
+				"Picture": "A_damaged_bishop",
+				"Name": "损坏的主教",
+				"EnName": "Damaged Bishop",
+				"Health": 300,
+				"Attack": 40,
+				"AttackInterval": 4,
+				"AttackScope": 6,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"Dangerous": 5,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_purple_gem|×1（60%）",
+					"G_thulecite_fragments|×1（50%）",
+					"G_nightmare_fuel|×1（60%）"
+				],
+				"Ability": [
+					"远程攻击",
+					"如果从破碎的时钟创建则可以跟随"
+				],
+				"Introduction": "洞穴里的发条主教，可以通过使用3个齿轮修复一个破碎的时钟作为永久友军(被闪电劈了会变成敌对)。",
+				"Console": "bishop_nightmare"
+			},
+			{
+				"Picture": "A_damage_rook",
+				"Name": "损坏的战车",
+				"EnName": "Damaged Rook",
+				"Health": 300,
+				"Attack": 45,
+				"AttackInterval": 2,
+				"MoveSpeed": 5,
+				"RunSpeed": 16,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_gears|×1（50%）",
+					"G_thulecite_fragments|×1（50%）",
+					"G_nightmare_fuel|×1（60%）"
+				],
+				"Ability": [
+					"摧毁冲撞路上的树木以及建筑"
+				],
+				"Introduction": "洞穴里的机械战车，可以通过使用3个齿轮修复一个破碎的时钟作为永久友军(被闪电劈了会变成敌对)。",
+				"Console": "rook_nightmare"
+			}
+		]
+	},
+	"Evil": {
+		"Creature": [
+			{
+				"Picture": "A_tentacle",
+				"Name": "触手",
+				"EnName": "Tentacle",
+				"Health": 500,
+				"Attack": 34,
+				"AttackInterval": 2,
+				"AttackScope": 4,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×2",
+					"G_tentacle_spike|×1（50%）",
+					"G_tentacle_spots|×1（20%）"
+				],
+				"Ability": [
+					"躲藏在地下"
+				],
+				"Introduction": "触手潜伏在沼泽区域，维克波顿的《在触手上》也可以召唤3只触手。当有生物经过的时候，会现在地上冒几个气泡然后冲出地面攻击。由于它一下可以攻击两次，所以伤害高达68点，要十分小心，最好勾引鱼人和触手打架，可以收获食物和触手棒。",
+				"Console": "tentacle"
+			},
+			{
+				"Picture": "A_shadow_tentacle",
+				"Name": "暗影触手",
+				"EnName": "Shadow Tentacle",
+				"Health": 500,
+				"Attack": 34,
+				"AttackInterval": 2,
+				"AttackScope": 2,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Introduction": "用铥矿棒命中敌人的时候，有20%的几率产生暗影触手，它们存在时间极短，攻击范围有限(攻击敌人)，并且同样拥有触手的负面精神光环。",
+				"Console": "shadowtentacle"
+			},
+			{
+				"Picture": "A_hound",
+				"Name": "猎犬",
+				"EnName": "Hound",
+				"Health": 150,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 3,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×1（12.5%）"
+				],
+				"Introduction": "猎犬通常出生在猎犬丘，它们速度极快，成群结队，是新手的噩梦。除了猎犬丘，还会有周期性的野生猎犬全世界范围内搜寻并攻击玩家(在进攻前会有咆哮声警告)，必须在猎犬到来前做好应敌准备，每一波猎犬都会比前一波更猛烈，并且提前咆哮警告时间越来越短，直到猎犬数量达到最大值。夏季和秋季的猎犬进攻会伴随着红色猎犬，冬季和春季的猎犬进攻会伴随着蓝色猎犬。",
+				"Console": "hound"
+			},
+			{
+				"Picture": "A_red_hound",
+				"Name": "红色猎犬",
+				"EnName": "Red Hound",
+				"Health": 100,
+				"Attack": 30,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 10,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×1",
+					"G_ash|×3",
+					"G_red_gem|×1（20%）"
+				],
+				"Ability": [
+					"被杀死后燃烧周围可燃物"
+				],
+				"Introduction": "红色猎犬死亡时会燃烧周围的可燃物，如果这些可燃物在雪球发射器的范围内就不会被烧毁，并且不会掉落灰烬。有时候会看到4、5只睡着的红色猎犬围着一个火魔杖睡觉，若直接捡起火魔杖，这些猎犬会醒来并攻击玩家，建议单独消灭每一只红色猎犬，因为攻击其中一只其他的红色猎犬并不会醒来。",
+				"Console": "firehound"
+			},
+			{
+				"Picture": "A_blue_hound",
+				"Name": "蓝色猎犬",
+				"EnName": "Blue Hound",
+				"Health": 100,
+				"Attack": 30,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×2",
+					"G_blue_gem|×1（20%）"
+				],
+				"Ability": [
+					"被杀死后冰冻周围可冻物体"
+				],
+				"Introduction": "蓝色猎犬死亡时会冰冻周围生物，持续约5秒。海象总是会带着两只蓝色猎犬。和火魔杖陷阱一样有几率可以找到冰魔杖陷阱。",
+				"Console": "icehound"
+			},
+			{
+				"Picture": "A_depths_worm",
+				"Name": "深渊蠕虫",
+				"EnName": "Depths Worm",
+				"Health": 900,
+				"Attack": 75,
+				"AttackInterval": 4,
+				"AttackScope": 3,
+				"Dangerous": 5,
+				"SanityEffect": -25,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×4",
+					"F_glow_berry|×1"
+				],
+				"Ability": [
+					"藏在地下并有发光的诱饵"
+				],
+				"Introduction": "深渊蠕虫通常可以在废墟找到，也有可能有一只落单的深渊蠕虫在蘑菇树森林。平常它们会伪装成神秘的植物，一旦发现猎物就会从地下钻出来攻击，它们攻击一次就会回到地下行动并且再次钻出攻击。深渊蠕虫作为洞穴里的猎犬替代生物，每过一段时间就会主动找到玩家并攻击，一开始是12天1只，随着时间的增加频率和个数会越来越多，到了150天开始就是每5天出现3只。",
+				"Console": "worm"
+			},
+			{
+				"Picture": "A_krampus",
+				"Name": "坎普斯",
+				"EnName": "Krampus",
+				"Health": 200,
+				"Attack": 50,
+				"AttackInterval": 1.2,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 4,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_charcoal|×2",
+					"G_krampus_sack|×1（1%）"
+				],
+				"Ability": [
+					"偷东西（包括箱子和背包里的东西）"
+				],
+				"Introduction": "坎普斯会在顽皮值到达一定值(31-50之间的随机值)的时候出现，出现后顽皮值置0。它的动作类似火鸡，避免靠近玩家，但是会偷取箱子里或者地上的所有东西，包括背包(除了眼骨、鱼骨、星-空、露西斧、薇洛的打火机、Abigail之花、一堆气球、魔杖、传送机零件底座等特殊物品，除非它们在背包里)。在晚上它会睡觉，可以很容易击杀它。每分钟(一天8分钟)会减少一点顽皮值，而用火、狗牙陷阱、蜜蜂地雷、火药击杀生物将不会增加顽皮值，因为这被认为是环境破坏导致生物死亡。",
+				"Console": "krampus"
+			},
+			{
+				"Picture": "A_ghost",
+				"Name": "鬼魂",
+				"EnName": "Ghost",
+				"Health": 200,
+				"Attack": 15,
+				"AttackInterval": 1.2,
+				"AttackScope": 1.5,
+				"MoveSpeed": 2,
+				"RunSpeed": 2,
+				"Dangerous": 2,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Introduction": "用铲子挖坟有10%的几率挖出鬼魂，而挖开麦斯威尔的墓地里的所有坟墓一定会出现鬼魂。鬼魂移动速度非常缓慢并且过一段时间会消失，最好的办法就是置之不理。满月的时候每个墓地都会产生一只鬼魂。在血量过低的时候，鬼魂也会有伤心的样子。",
+				"Console": "ghost"
+			},
+			{
+				"Picture": "A_night_hand",
+				"Name": "黑夜之手",
+				"EnName": "Night Hand",
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"SanityEffect": -40,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Ability": [
+					"抓灭各类火堆"
+				],
+				"Introduction": "黑夜之手会在晚上点燃火堆时出现，它们会逐渐靠近并试图抓灭火堆，最多同时存在三只。玩家可以去踩黑夜之手使其后退，但是如果不踩掉其根源，就会一直试图靠近火堆。萤火虫可以有效防止黑夜之手。",
+				"Console": "shadowhand"
+			},
+			{
+				"Picture": "A_mr_skits",
+				"Name": "Skits先生",
+				"EnName": "Mr.Skits",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Introduction": "它会出现在玩家精神低于82.5%的时候，不能攻击或被攻击，靠近时会转身爬走。它们还有可能出现在方尖碑升降的时候。"
+			},
+			{
+				"Picture": "A_shadow_watcher",
+				"Name": "暗影观察者",
+				"EnName": "Shadow Watcher",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Introduction": "它会出现在玩家精神低于65%的晚上，不能攻击或被攻击，踩在它的眼睛上或白天到来时就会消失。"
+			},
+			{
+				"Picture": "A_crawling_nightmare",
+				"Name": "爬行梦魇",
+				"EnName": "Crawling Nightmare",
+				"Health": 300,
+				"Attack": 20,
+				"AttackInterval": 2.5,
+				"AttackScope": 3,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 4,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_nightmare_fuel|×1",
+					"G_nightmare_fuel|×1（50%）"
+				],
+				"Ability": [
+					"被攻击时消失并在周围随机位置出现。"
+				],
+				"Introduction": "当玩家精神高于15%时爬行梦魇会徘徊在玩家周围，并且会阻止玩家进入帐篷，当玩家精神低于15%时就会变成实体(可以攻击和被攻击)攻击玩家，并且被攻击时会消失并随机出现在附近某个位置，击杀爬行梦魇会回复15点精神。诞生于影灯和远古雕像的爬行梦魇会无视玩家的精神百分比攻击玩家(击杀后不回复精神)。",
+				"Console": "crawlingnightmare"
+			},
+			{
+				"Picture": "A_crawling_horror",
+				"Name": "爬行梦魇",
+				"EnName": "Crawling Horror",
+				"Health": 400,
+				"Attack": 50,
+				"AttackInterval": 1.5,
+				"AttackScope": 3,
+				"MoveSpeed": 7,
+				"RunSpeed": 7,
+				"Dangerous": 5,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_nightmare_fuel|×1",
+					"G_nightmare_fuel|×1（50%）"
+				],
+				"Ability": [
+					"被攻击时消失并在周围随机位置出现。"
+				],
+				"Introduction": "爬行梦魇只在玩家精神低于15%的时候出现并攻击玩家，并且被攻击时会消失并随机出现在附近某个位置，击杀爬行梦魇会回复33点精神。诞生于影灯、远古雕像和大豪华箱子的爬行梦魇会无视玩家的精神百分比攻击玩家(击杀后不回复精神)。",
+				"Console": "nightmarebeak"
+			},
+			{
+				"Picture": "A_charlie",
+				"Name": "查理",
+				"EnName": "Charlie",
+				"Attack": 100,
+				"Dangerous": 10,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Ability": [
+					"无所不在"
+				],
+				"Introduction": "在玩家进入完全黑暗之后十秒左右，每隔几秒就会受到看不见的查理的攻击，攻击力高达100点，同时被攻击还会减少20点精神。在没有防御的情况下，大多数人物可以承受1次攻击。"
+			},
+			{
+				"Picture": "A_varg",
+				"Name": "座狼",
+				"EnName": "Varg",
+				"Health": 600,
+				"Attack": 50,
+				"AttackInterval": 3,
+				"AttackScope": 5,
+				"MoveSpeed": 5.5,
+				"RunSpeed": 5.5,
+				"Dangerous": 6,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_hound's_tooth|×1~3",
+					"F_monster_meat|×4~6"
+				],
+				"Ability": [
+					"召唤三种猎犬"
+				],
+				"Introduction": "沿着动物足迹寻找有可能找到座狼(另外两种是考拉象或冬考拉象和钢羊)，找到的几率从第一天的5%到第一百天的33%。它会召唤猎犬、红色猎犬、蓝色猎犬中随机的两只，其中红色猎犬和蓝色猎犬根据季节而定，如果时间过久还会召唤更多的猎犬。",
+				"Console": "warg"
+			}
+		]
+	},
+	"Others": {
+		"Creature": [
+			{
+				"Picture": "A_glommer",
+				"Name": "格罗姆",
+				"EnName": "Glommer",
+				"Health": 100,
+				"SanityEffect": 6.25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_monster_meat|×3",
+					"G_glommer's_wings|×1",
+					"F_glommer's_goop|×2"
+				],
+				"Introduction": "在月圆之夜(天数十位数为奇数个位数为一的晚上)在格罗姆雕像可以找到格罗姆之花，捡起它格罗姆就会出现，格罗姆会跟着格罗姆之花，可以带进洞穴。击杀格罗姆会直接增加50点顽皮值，召唤出坎普斯，格罗姆死后会在下个月圆之夜复活。格罗姆有6.25的精神光环，可以抵消晚上-5的精神光环影响。",
+				"Console": "glommer"
+			},
+			{
+				"Picture": "A_chester",
+				"Name": "切斯特",
+				"EnName": "Chester",
+				"Health": 450,
+				"MoveSpeed": 3,
+				"RunSpeed": 7,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"|储存的物品"
+				],
+				"Ability": [
+					"跟随眼骨",
+					"9格储物",
+					"生命恢复",
+					"升级为寒冰切斯特/暗影切斯特。"
+				],
+				"Introduction": "切斯特是跟随眼骨的储物生物，拥有9格储物功能。眼骨很有可能可以在一条通往青蛙池塘的路的尽头附近找到。切斯特每3秒可以恢复22.5点生命(寒冰切斯特、暗影切斯特、哈奇、河豚哈奇、音乐盒哈奇、鹈鹕、胖鹈鹕、火焰鹈鹕均有该属性)。",
+				"Console": "chester"
+			},
+			{
+				"Picture": "A_snow_chester",
+				"Name": "寒冰切斯特",
+				"EnName": "Snow Chester",
+				"Health": 450,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"|储存的物品"
+				],
+				"Ability": [
+					"跟随眼骨",
+					"9格储物",
+					"生命恢复",
+					"食物保鲜。"
+				],
+				"Introduction": "月圆之夜在切斯特的每个格子里放入至少一个蓝宝石就会变成寒冰切斯特，具有冰箱的保鲜效果，死后变成正常的切斯特。"
+			},
+			{
+				"Picture": "A_shadow_chester",
+				"Name": "暗影切斯特",
+				"EnName": "Shadow Chester",
+				"Health": 450,
+				"MoveSpeed": 3,
+				"RunSpeed": 7,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"|储存的物品"
+				],
+				"Ability": [
+					"跟随眼骨",
+					"12格储物",
+					"生命恢复"
+				],
+				"Introduction": "月圆之夜在切斯特的每个格子里放入至少一个噩梦燃料就会变成暗影切斯特，拥有12个格子，死后变成正常的切斯特。"
+			},
+			{
+				"Picture": "A_pig_king",
+				"Name": "猪王",
+				"EnName": "Pig King",
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Introduction": "猪王通常可以在桦树林中的一小片草原上找到，它躺在木质地板上，被方尖碑包围者，交易生物之一，在白天和黄昏可以用部分肉类和玩具交换金块，晚上会睡觉。",
+				"Console": "pigking"
+			}
+		]
+	},
+	"Boss": {
+		"Creature": [
+			{
+				"Picture": "A_treeguard",
+				"Name": "树人守卫(小)",
+				"EnName": "Treeguard",
+				"Health": 1400,
+				"Attack": 35,
+				"AttackInterval": 3,
+				"AttackScope": 2.1,
+				"MoveSpeed": 1.05,
+				"RunSpeed": 1.05,
+				"Dangerous": 6,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_living_log|×6"
+				],
+				"Introduction": "生成自小型常青树。世界天数3天后，砍倒常青树时，附近的常青树就有1.33%的可能性变成树人守卫，根据常青树的大小分为小、中、大三种。树人守卫刚生成时会对砍倒树的玩家产生永久性敌对关系，但是可以通过种植松果使其平静下来，在16单位以内种植有15%的可能性，在5单位以内种植有33%的可能性。"
+			},
+			{
+				"Picture": "A_treeguard",
+				"Name": "树人守卫(中)",
+				"EnName": "Treeguard",
+				"Health": 2000,
+				"Attack": 50,
+				"AttackInterval": 3,
+				"AttackScope": 3,
+				"MoveSpeed": 1.5,
+				"RunSpeed": 1.5,
+				"Dangerous": 6,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_living_log|×6"
+				],
+				"Introduction": "生成自大型常青树。"
+			},
+			{
+				"Picture": "A_treeguard",
+				"Name": "树人守卫(大)",
+				"EnName": "Treeguard",
+				"Health": 2500,
+				"Attack": 62,
+				"AttackInterval": 3,
+				"AttackScope": 3.75,
+				"MoveSpeed": 1.875,
+				"RunSpeed": 1.875,
+				"Dangerous": 6,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_living_log|×6"
+				],
+				"Introduction": "生成自大型常青树。(leif_sparse)",
+				"Console": "leif"
+			},
+			{
+				"Picture": "A_poison_birchnut_trees",
+				"Name": "毒桦树",
+				"EnName": "Poison Birchnut Trees",
+				"Attack": 40,
+				"AttackInterval": 1.5,
+				"AttackScope": 2,
+				"Dangerous": 5,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_birchnut|×3",
+					"G_living_log|×1-2",
+					"G_living_log|S_shovel",
+					"G_nightmare_fuel|×1（20%）"
+				],
+				"Introduction": "生成自桦树。世界天数3天后，除了冬天，砍倒桦树时，附近的桦树就有一定的可能性变成毒桦树。毒桦树会用它的树根(远程)攻击靠近它的所有生物，并且每过一小段时间就会生成一个坚果辅助攻击。经过足够长的时间毒桦树会变回桦树。可以用斧头砍倒桦树。",
+				"Console": "deciduoustree",
+				"ConsoleStateValue": "StartMonster(true)"
+			},
+			{
+				"Picture": "A_birchnutter",
+				"Name": "桦树果人",
+				"EnName": "Birchnutter",
+				"Health": 50,
+				"Attack": 5,
+				"AttackInterval": 2,
+				"AttackScope": 2.5,
+				"MoveSpeed": 3.5,
+				"RunSpeed": 3.5,
+				"Dangerous": 2,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"G_twigs|×1（60%）",
+					"G_birchnut|×1（40%）"
+				],
+				"Introduction": "坚果是毒桦树生成的保护它的小生物，血量和攻击力不高，但胜在数量多，如果不理会它们直接去砍毒桦树的话会吃不少苦头，如果有强力护甲就可以无视掉了。",
+				"Console": "birchnutdrake"
+			},
+			{
+				"Picture": "A_spider_queen",
+				"Name": "蜘蛛女王",
+				"EnName": "Spider Queen",
+				"Health": 1250,
+				"Attack": 80,
+				"AttackInterval": 3,
+				"AttackScope": 5,
+				"MoveSpeed": 1.75,
+				"RunSpeed": 1.75,
+				"Dangerous": 7,
+				"SanityEffect": -400,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×4",
+					"G_silk|×4",
+					"S_spider_eggs|×1",
+					"G_spiderhat|×1"
+				],
+				"Ability": [
+					"生成蜘蛛和战斗蜘蛛"
+				],
+				"Introduction": "三级蜘蛛巢经过足够长的时间会变成蜘蛛女王。蜘蛛女王是一个小BOSS，每20秒会生成一只蜘蛛，如果攻击目标是玩家那么每到第三个蜘蛛就会是战斗蜘蛛，最多有十六只蜘蛛跟随蜘蛛女王，若玩家离得足够远，蜘蛛会回到蜘蛛女王身上。若经过足够长的时间不去管它(在视野外)，蜘蛛女王又会变成一级蜘蛛巢。",
+				"Console": "spiderqueen"
+			},
+			{
+				"Picture": "A_ancient_guardian",
+				"Name": "远古守卫者",
+				"EnName": "Ancient Guardian",
+				"Health": 2500,
+				"Attack": 100,
+				"AttackInterval": 2,
+				"AttackScope": 25,
+				"MoveSpeed": 5,
+				"RunSpeed": 17,
+				"Dangerous": 8,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×8",
+					"F_guardian's_horn|×1",
+					"N_ornate_chest|×1"
+				],
+				"Introduction": "远古守卫者是在废墟迷宫区域的小BOSS，在联机版中更是有10000点生命。它的行动方式和机械战车类似，但是多加了一个100点伤害的近程攻击。击杀后掉落的守卫者的角可以配合巨鹿眼球制作恒迪尤斯_舒提尤斯。",
+				"Console": "minotaur"
+			},
+      {
+        "Picture": "A_moose",
+        "Name": "驼鹿/巨鹅",
+        "EnName": "Moose/Goose",
+        "Health": 3000,
+        "Attack": 75,
+        "AttackInterval": 3,
+        "AttackScope": 5.5,
+        "MoveSpeed": 8,
+        "RunSpeed": 12,
+        "Dangerous": 7,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_meat|×6",
+          "F_drumstick|×2",
+          "G_down_feather|×3-5",
+          "G_sketch|×1（DST）"
+        ],
+        "Ability": [
+          "尖叫使得武器掉落"
+        ],
+        "Introduction": "驼鹿是春季BOSS，在进入春天的2-4天出现(前提是至少有3个建筑在靠近的位置，比如科学机器、避雷针、烹煮锅等)，在夏季到达时会离开。到达约一天后会生成驼鹿蛋，孵化出5只小驼鹿鹅，小驼鹿鹅不会成长为驼鹿。注意如果青蛙雨的青蛙攻击了小驼鹿鹅可能会产生另一只驼鹿。驼鹿不会破坏玩家的建筑，除了墙。驼鹿只会近程攻击(攻击生物时攻击力为150)，每到第三次攻击就会让玩家的武器掉落在附近地上。可以把驼鹿吸引到皮弗娄牛处或者青蛙雨处击杀。如果自己动手打的话带上武器防具注意躲避攻击也是可以击杀的。",
+        "Console": "moose"
+      },
+			{
+				"Picture": "A_mosling",
+				"Name": "小驼鹿鹅",
+				"EnName": "Mosling",
+				"Health": 350,
+				"Attack": 50,
+				"AttackInterval": 3,
+				"AttackScope": 2,
+				"MoveSpeed": 5,
+				"RunSpeed": 5,
+				"Dangerous": 4,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×1",
+					"F_drumstick|×1",
+					"G_down_feather|×2-3"
+				],
+				"Ability": [
+					"旋风冲撞"
+				],
+				"Introduction": "小驼鹿鹅出现在驼鹿和驼鹿巢附近。正常情况下，它们会像火鸡一样尽量避免冲突，但是如果驼鹿被杀死它们会变成愤怒的红色，并且让自身变为旋风攻击。旋风停下会有一小段眩晕时间，趁这个时候击杀它。",
+				"Console": "mossling"
+			},
+			{
+				"Picture": "A_dragonfly",
+				"Name": "龙蝇",
+				"EnName": "Dragonfly",
+				"Health": 2750,
+				"Attack": 75,
+				"AttackInterval": 2.5,
+				"AttackScope": 4,
+				"MoveSpeed": 4,
+				"RunSpeed": 4,
+				"Dangerous": 10,
+				"SanityEffect": -400,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_meat|×8（ROG）",
+					"G_scales|×1"
+				],
+				"Ability": [
+					"生成熔岩幼虫",
+					"被攻击时用火焰包围自己",
+					"让靠近它的任何东西着火",
+					"对附近任何东西造成火焰伤害"
+				],
+				"Introduction": "龙蝇是夏季BOSS，通常可以在荒漠的岩浆附近找到。拍打攻击伤害为75(对生物150)，并且会放出三次37.5(对生物75)伤害的火环，有燃烧效果。联机版的龙蝇还会生成能燃烧物品的熔岩幼虫，要十分小心。如果龙蝇离开它的巢穴过远就会飞回去并恢复满状态。可以建造围墙挡住熔岩幼虫然后穿上足够的装备击杀。",
+				"Console": "dragonfly"
+			},
+      {
+        "Picture": "A_bearger",
+        "Name": "熊獾",
+        "EnName": "Bearger",
+        "Health": 3000,
+        "Attack": 100,
+        "AttackInterval": 3,
+        "AttackScope": 6,
+        "MoveSpeed": 3,
+        "RunSpeed": 10,
+        "Dangerous": 8,
+        "SanityEffect": -100,
+        "IsActiveAttack": false,
+        "IsTeamWork": false,
+        "Goods": [
+          "F_meat|×8",
+          "S_thick_fur|×1"
+        ],
+        "Ability": [
+          "范围攻击",
+          "吃地上和容器里的食物"
+        ],
+        "Introduction": "熊獾是秋季BOSS，出现后会到处寻找食物吃，包括箱子里的食物，会被蜂箱吸引，吃了10个蜂蜜就会睡觉。它路过的建筑和树木会被摧毁。在联机版里，熊獾会一边走一边掉落毛簇，90个毛簇即可制作三个厚皮毛(击杀熊獾也会掉落一个厚皮毛)。熊獾被激怒后移动速度会提升到6，精神影响也会变成-400/min，它会攻击玩家和生物，攻击生物时攻击力为200点。它的攻击方式是打三下然后用前爪猛击地面，产生的冲击波会摧毁树木和建筑，所以击杀熊獾时要远离家里。",
+        "Console": "bearger"
+      },
+			{
+				"Picture": "A_deerclops",
+				"Name": "独眼巨鹿",
+				"EnName": "Deerclops",
+				"Health": 2000,
+				"Attack": 75,
+				"AttackInterval": 3,
+				"AttackScope": 6,
+				"MoveSpeed": 3,
+				"RunSpeed": 3,
+				"Dangerous": 8,
+				"SanityEffect": -100,
+				"IsActiveAttack": true,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_meat|×8",
+					"F_deerclops_eyeball|×1"
+				],
+				"Ability": [
+					"攻击摧毁树木、建筑",
+					"冰冻攻击"
+				],
+				"Introduction": "独眼巨鹿是冬季BOSS，会在入冬第十天左右的晚上出现，会有脚步声警示。它出现后的第一次攻击会寻找离玩家最近的建筑，它的攻击能破坏建筑，并且经过的地方树木也会被摧毁。它的目标是摧毁所有建筑，但是如果玩家去骚扰它的话它会先收拾掉玩家再去拆建筑。它的攻击方式是用爪子向一个方向拍出一大片冰的范围攻击，可以通过走位来躲避攻击。可以把它引到树人守卫多的地方或者皮弗娄牛群让它们打起来，当然对装备和操作有信心也可以自己击杀。",
+				"Console": "deerclops"
+			}
+		]
+	}
+}

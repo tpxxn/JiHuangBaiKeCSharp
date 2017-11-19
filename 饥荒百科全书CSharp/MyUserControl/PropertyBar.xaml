@@ -15,23 +15,23 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid x:Name="UCGrid">
+    <Grid x:Name="UcGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="GridNameWidth" Width="Auto"/>
             <ColumnDefinition x:Name="GridBarWidth" Width="*"/>
             <ColumnDefinition x:Name="GridValueWidth" Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="UCTextBlockName" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
-        <ProgressBar x:Name="UCProgressBar" Margin="10,0" Grid.Column="1" BorderBrush="{x:Null}" BorderThickness="0" Value="30" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="UcTextBlockName" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <ProgressBar x:Name="UcProgressBar" Margin="10,0" Grid.Column="1" BorderBrush="{x:Null}" BorderThickness="0" Value="30" RenderTransformOrigin="0.5,0.5">
             <ProgressBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform x:Name="UCProgressBarAngle" Angle="0"/>
+                    <RotateTransform x:Name="UcProgressBarAngle" Angle="0"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </ProgressBar.RenderTransform>
         </ProgressBar>
-        <TextBlock x:Name="UCTextBlockValue" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
+        <TextBlock x:Name="UcTextBlockValue" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
     </Grid>
 </UserControl>

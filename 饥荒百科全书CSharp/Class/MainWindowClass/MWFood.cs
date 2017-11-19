@@ -136,18 +136,18 @@ namespace 饥荒百科全书CSharp
                     var propertyHealth = Convert.ToDouble(bwtTag[4]);
                     var gHealth = Pg.GridInit(15);
                     var pbHealth = propertyHealth < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbHealth.UCTextBlockName.Width = 30;
-                    pbHealth.UCTextBlockName.Text = "生命";
-                    pbHealth.UCProgressBar.Value = Math.Abs(propertyHealth);
-                    pbHealth.UCProgressBar.Foreground = Bc.BrushConverter(PbcGreen);
-                    pbHealth.UCTextBlockValue.Width = 38;
-                    pbHealth.UCTextBlockValue.Text = bwtTag[4];
+                    pbHealth.UcTextBlockName.Width = 30;
+                    pbHealth.UcTextBlockName.Text = "生命";
+                    pbHealth.UcProgressBar.Value = Math.Abs(propertyHealth);
+                    pbHealth.UcProgressBar.Foreground = Bc.BrushConverter(PbcGreen);
+                    pbHealth.UcTextBlockValue.Width = 38;
+                    pbHealth.UcTextBlockValue.Text = bwtTag[4];
                     gHealth.Children.Add(pbHealth);
                     WrapPanelLeftFood.Children.Add(gHealth);
 
                     if (bwtTag[2] == "Jellybeans")
                     {
-                        pbHealth.UCTextBlockValue.Text = "2+120";
+                        pbHealth.UcTextBlockValue.Text = "2+120";
                         var gHealthJellybeans = Pg.GridInit();
                         var tbJellybeans = new TextBlock()
                         {
@@ -170,12 +170,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gHunger = Pg.GridInit(15);
                     var pbHunger = propertyHunger < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbHunger.UCTextBlockName.Width = 30;
-                    pbHunger.UCTextBlockName.Text = "饥饿";
-                    pbHunger.UCProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
-                    pbHunger.UCProgressBar.Foreground = Bc.BrushConverter(PbcOrange);
-                    pbHunger.UCTextBlockValue.Width = 38;
-                    pbHunger.UCTextBlockValue.Text = bwtTag[5];
+                    pbHunger.UcTextBlockName.Width = 30;
+                    pbHunger.UcTextBlockName.Text = "饥饿";
+                    pbHunger.UcProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
+                    pbHunger.UcProgressBar.Foreground = Bc.BrushConverter(PbcOrange);
+                    pbHunger.UcTextBlockValue.Width = 38;
+                    pbHunger.UcTextBlockValue.Text = bwtTag[5];
                     gHunger.Children.Add(pbHunger);
                     WrapPanelLeftFood.Children.Add(gHunger);
                 }
@@ -188,12 +188,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gSanity = Pg.GridInit(15);
                     var pbSanity = propertySanity < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbSanity.UCTextBlockName.Width = 30;
-                    pbSanity.UCTextBlockName.Text = "精神";
-                    pbSanity.UCProgressBar.Value = Math.Abs(propertySanity) / 0.5;
-                    pbSanity.UCProgressBar.Foreground = Bc.BrushConverter(PbcRed);
-                    pbSanity.UCTextBlockValue.Width = 38;
-                    pbSanity.UCTextBlockValue.Text = bwtTag[6];
+                    pbSanity.UcTextBlockName.Width = 30;
+                    pbSanity.UcTextBlockName.Text = "精神";
+                    pbSanity.UcProgressBar.Value = Math.Abs(propertySanity) / 0.5;
+                    pbSanity.UcProgressBar.Foreground = Bc.BrushConverter(PbcRed);
+                    pbSanity.UcTextBlockValue.Width = 38;
+                    pbSanity.UcTextBlockValue.Text = bwtTag[6];
                     gSanity.Children.Add(pbSanity);
                     WrapPanelLeftFood.Children.Add(gSanity);
                 }
@@ -206,12 +206,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gPerish = Pg.GridInit(15);
                     var pbPerish = propertyPerish < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbPerish.UCTextBlockName.Width = 30;
-                    pbPerish.UCTextBlockName.Text = "保鲜";
-                    pbPerish.UCProgressBar.Value = Math.Abs(propertyPerish) / 0.2;
-                    pbPerish.UCProgressBar.Foreground = Bc.BrushConverter(PbcBlue);
-                    pbPerish.UCTextBlockValue.Width = 38;
-                    pbPerish.UCTextBlockValue.Text = propertyPerish == 1000 ? "∞" : bwtTag[7];
+                    pbPerish.UcTextBlockName.Width = 30;
+                    pbPerish.UcTextBlockName.Text = "保鲜";
+                    pbPerish.UcProgressBar.Value = Math.Abs(propertyPerish) / 0.2;
+                    pbPerish.UcProgressBar.Foreground = Bc.BrushConverter(PbcBlue);
+                    pbPerish.UcTextBlockValue.Width = 38;
+                    pbPerish.UcTextBlockValue.Text = propertyPerish == 1000 ? "∞" : bwtTag[7];
                     gPerish.Children.Add(pbPerish);
                     WrapPanelLeftFood.Children.Add(gPerish);
                 }
@@ -224,12 +224,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gCooktime = Pg.GridInit(15);
                     var pbCooktime = propertyCooktime < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbCooktime.UCTextBlockName.Width = 30;
-                    pbCooktime.UCTextBlockName.Text = "烹饪";
-                    pbCooktime.UCProgressBar.Value = Math.Abs(propertyCooktime) / 0.6;
-                    pbCooktime.UCProgressBar.Foreground = Bc.BrushConverter(PbcPurple);
-                    pbCooktime.UCTextBlockValue.Width = 38;
-                    pbCooktime.UCTextBlockValue.Text = bwtTag[8];
+                    pbCooktime.UcTextBlockName.Width = 30;
+                    pbCooktime.UcTextBlockName.Text = "烹饪";
+                    pbCooktime.UcProgressBar.Value = Math.Abs(propertyCooktime) / 0.6;
+                    pbCooktime.UcProgressBar.Foreground = Bc.BrushConverter(PbcPurple);
+                    pbCooktime.UcTextBlockValue.Width = 38;
+                    pbCooktime.UcTextBlockValue.Text = bwtTag[8];
                     gCooktime.Children.Add(pbCooktime);
                     WrapPanelLeftFood.Children.Add(gCooktime);
                 }
@@ -242,12 +242,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gPriority = Pg.GridInit(15);
                     var pbPriority = propertyPriority < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbPriority.UCTextBlockName.Width = 30;
-                    pbPriority.UCTextBlockName.Text = "优先";
-                    pbPriority.UCProgressBar.Value = Math.Abs(propertyPriority) / 0.3;
-                    pbPriority.UCProgressBar.Foreground = Bc.BrushConverter(PbcPink);
-                    pbPriority.UCTextBlockValue.Width = 38;
-                    pbPriority.UCTextBlockValue.Text = bwtTag[9];
+                    pbPriority.UcTextBlockName.Width = 30;
+                    pbPriority.UcTextBlockName.Text = "优先";
+                    pbPriority.UcProgressBar.Value = Math.Abs(propertyPriority) / 0.3;
+                    pbPriority.UcProgressBar.Foreground = Bc.BrushConverter(PbcPink);
+                    pbPriority.UcTextBlockValue.Width = 38;
+                    pbPriority.UcTextBlockValue.Text = bwtTag[9];
                     gPriority.Children.Add(pbPriority);
                     WrapPanelLeftFood.Children.Add(gPriority);
                 }
@@ -489,12 +489,12 @@ namespace 饥荒百科全书CSharp
                     var propertyHealth = Convert.ToDouble(bwtTag[3]);
                     var gHealth = Pg.GridInit(15);
                     var pbHealth = propertyHealth < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbHealth.UCTextBlockName.Width = 30;
-                    pbHealth.UCTextBlockName.Text = "生命";
-                    pbHealth.UCProgressBar.Value = Math.Abs(propertyHealth);
-                    pbHealth.UCProgressBar.Foreground = Bc.BrushConverter(PbcGreen);
-                    pbHealth.UCTextBlockValue.Width = 39;
-                    pbHealth.UCTextBlockValue.Text = bwtTag[3];
+                    pbHealth.UcTextBlockName.Width = 30;
+                    pbHealth.UcTextBlockName.Text = "生命";
+                    pbHealth.UcProgressBar.Value = Math.Abs(propertyHealth);
+                    pbHealth.UcProgressBar.Foreground = Bc.BrushConverter(PbcGreen);
+                    pbHealth.UcTextBlockValue.Width = 39;
+                    pbHealth.UcTextBlockValue.Text = bwtTag[3];
                     gHealth.Children.Add(pbHealth);
                     WrapPanelLeftFood.Children.Add(gHealth);
                 }
@@ -507,12 +507,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gHunger = Pg.GridInit(15);
                     var pbHunger = propertyHunger < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbHunger.UCTextBlockName.Width = 30;
-                    pbHunger.UCTextBlockName.Text = "饥饿";
-                    pbHunger.UCProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
-                    pbHunger.UCProgressBar.Foreground = Bc.BrushConverter(PbcOrange);
-                    pbHunger.UCTextBlockValue.Width = 39;
-                    pbHunger.UCTextBlockValue.Text = bwtTag[4];
+                    pbHunger.UcTextBlockName.Width = 30;
+                    pbHunger.UcTextBlockName.Text = "饥饿";
+                    pbHunger.UcProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
+                    pbHunger.UcProgressBar.Foreground = Bc.BrushConverter(PbcOrange);
+                    pbHunger.UcTextBlockValue.Width = 39;
+                    pbHunger.UcTextBlockValue.Text = bwtTag[4];
                     gHunger.Children.Add(pbHunger);
                     WrapPanelLeftFood.Children.Add(gHunger);
                 }
@@ -525,12 +525,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gSanity = Pg.GridInit(15);
                     var pbSanity = propertySanity < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbSanity.UCTextBlockName.Width = 30;
-                    pbSanity.UCTextBlockName.Text = "精神";
-                    pbSanity.UCProgressBar.Value = Math.Abs(propertySanity) / 0.5;
-                    pbSanity.UCProgressBar.Foreground = Bc.BrushConverter(PbcRed);
-                    pbSanity.UCTextBlockValue.Width = 39;
-                    pbSanity.UCTextBlockValue.Text = bwtTag[5];
+                    pbSanity.UcTextBlockName.Width = 30;
+                    pbSanity.UcTextBlockName.Text = "精神";
+                    pbSanity.UcProgressBar.Value = Math.Abs(propertySanity) / 0.5;
+                    pbSanity.UcProgressBar.Foreground = Bc.BrushConverter(PbcRed);
+                    pbSanity.UcTextBlockValue.Width = 39;
+                    pbSanity.UcTextBlockValue.Text = bwtTag[5];
                     gSanity.Children.Add(pbSanity);
                     WrapPanelLeftFood.Children.Add(gSanity);
                 }
@@ -543,12 +543,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     var gPerish = Pg.GridInit(15);
                     var pbPerish = propertyPerish < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbPerish.UCTextBlockName.Width = 30;
-                    pbPerish.UCTextBlockName.Text = "保鲜";
-                    pbPerish.UCProgressBar.Value = Math.Abs(propertyPerish) / 0.4;
-                    pbPerish.UCProgressBar.Foreground = Bc.BrushConverter(PbcBlue);
-                    pbPerish.UCTextBlockValue.Width = 39;
-                    pbPerish.UCTextBlockValue.Text = propertyPerish == 1000 ? "∞" : bwtTag[6];
+                    pbPerish.UcTextBlockName.Width = 30;
+                    pbPerish.UcTextBlockName.Text = "保鲜";
+                    pbPerish.UcProgressBar.Value = Math.Abs(propertyPerish) / 0.4;
+                    pbPerish.UcProgressBar.Foreground = Bc.BrushConverter(PbcBlue);
+                    pbPerish.UcTextBlockValue.Width = 39;
+                    pbPerish.UcTextBlockValue.Text = propertyPerish == 1000 ? "∞" : bwtTag[6];
                     gPerish.Children.Add(pbPerish);
                     WrapPanelLeftFood.Children.Add(gPerish);
                 }
@@ -682,12 +682,12 @@ namespace 饥荒百科全书CSharp
                     double propertyHealth = Convert.ToDouble(bwtTag[3]);
                     Grid gHealth = Pg.GridInit(15);
                     var pbHealth = propertyHealth < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbHealth.UCTextBlockName.Width = 30;
-                    pbHealth.UCTextBlockName.Text = "生命";
-                    pbHealth.UCProgressBar.Value = Math.Abs(propertyHealth);
-                    pbHealth.UCProgressBar.Foreground = Bc.BrushConverter(PbcGreen);
-                    pbHealth.UCTextBlockValue.Width = 39;
-                    pbHealth.UCTextBlockValue.Text = bwtTag[3];
+                    pbHealth.UcTextBlockName.Width = 30;
+                    pbHealth.UcTextBlockName.Text = "生命";
+                    pbHealth.UcProgressBar.Value = Math.Abs(propertyHealth);
+                    pbHealth.UcProgressBar.Foreground = Bc.BrushConverter(PbcGreen);
+                    pbHealth.UcTextBlockValue.Width = 39;
+                    pbHealth.UcTextBlockValue.Text = bwtTag[3];
                     gHealth.Children.Add(pbHealth);
                     WrapPanelLeftFood.Children.Add(gHealth);
                 }
@@ -700,12 +700,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     Grid gHunger = Pg.GridInit(15);
                     var pbHunger = propertyHunger < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbHunger.UCTextBlockName.Width = 30;
-                    pbHunger.UCTextBlockName.Text = "饥饿";
-                    pbHunger.UCProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
-                    pbHunger.UCProgressBar.Foreground = Bc.BrushConverter(PbcOrange);
-                    pbHunger.UCTextBlockValue.Width = 39;
-                    pbHunger.UCTextBlockValue.Text = bwtTag[4];
+                    pbHunger.UcTextBlockName.Width = 30;
+                    pbHunger.UcTextBlockName.Text = "饥饿";
+                    pbHunger.UcProgressBar.Value = Math.Abs(propertyHunger) / 1.5;
+                    pbHunger.UcProgressBar.Foreground = Bc.BrushConverter(PbcOrange);
+                    pbHunger.UcTextBlockValue.Width = 39;
+                    pbHunger.UcTextBlockValue.Text = bwtTag[4];
                     gHunger.Children.Add(pbHunger);
                     WrapPanelLeftFood.Children.Add(gHunger);
                 }
@@ -718,12 +718,12 @@ namespace 饥荒百科全书CSharp
                     WrapPanelLeftFood.Children.Add(gi);
                     Grid gSanity = Pg.GridInit(15);
                     var pbSanity = propertySanity < 0 ? new PropertyBar(true) : new PropertyBar();
-                    pbSanity.UCTextBlockName.Width = 30;
-                    pbSanity.UCTextBlockName.Text = "精神";
-                    pbSanity.UCProgressBar.Value = Math.Abs(propertySanity) / 0.5;
-                    pbSanity.UCProgressBar.Foreground = Bc.BrushConverter(PbcRed);
-                    pbSanity.UCTextBlockValue.Width = 39;
-                    pbSanity.UCTextBlockValue.Text = bwtTag[5];
+                    pbSanity.UcTextBlockName.Width = 30;
+                    pbSanity.UcTextBlockName.Text = "精神";
+                    pbSanity.UcProgressBar.Value = Math.Abs(propertySanity) / 0.5;
+                    pbSanity.UcProgressBar.Foreground = Bc.BrushConverter(PbcRed);
+                    pbSanity.UcTextBlockValue.Width = 39;
+                    pbSanity.UcTextBlockValue.Text = bwtTag[5];
                     gSanity.Children.Add(pbSanity);
                     WrapPanelLeftFood.Children.Add(gSanity);
                 }
@@ -740,15 +740,15 @@ namespace 饥荒百科全书CSharp
                         pbPerish = new PropertyBar(true);
                     else
                         pbPerish = new PropertyBar();
-                    pbPerish.UCTextBlockName.Width = 30;
-                    pbPerish.UCTextBlockName.Text = "保鲜";
-                    pbPerish.UCProgressBar.Value = Math.Abs(propertyPerish) / 0.4;
-                    pbPerish.UCProgressBar.Foreground = Bc.BrushConverter(PbcBlue);
-                    pbPerish.UCTextBlockValue.Width = 39;
+                    pbPerish.UcTextBlockName.Width = 30;
+                    pbPerish.UcTextBlockName.Text = "保鲜";
+                    pbPerish.UcProgressBar.Value = Math.Abs(propertyPerish) / 0.4;
+                    pbPerish.UcProgressBar.Foreground = Bc.BrushConverter(PbcBlue);
+                    pbPerish.UcTextBlockValue.Width = 39;
                     if (propertyPerish == 1000)
-                        pbPerish.UCTextBlockValue.Text = "∞";
+                        pbPerish.UcTextBlockValue.Text = "∞";
                     else
-                        pbPerish.UCTextBlockValue.Text = bwtTag[6];
+                        pbPerish.UcTextBlockValue.Text = bwtTag[6];
                     gPerish.Children.Add(pbPerish);
                     WrapPanelLeftFood.Children.Add(gPerish);
                 }

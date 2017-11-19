@@ -605,82 +605,118 @@
     <value>..\Resources\CP_PortableCrockPot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_walani" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_walani.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_walani.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_walani_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_walani_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_walani_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_warly" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_warly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_warly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_warly_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_warly_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_warly_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wathgrithr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wathgrithr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wathgrithr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_wathgrithr_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_wathgrithr_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_waxwell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_waxwell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_waxwell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_waxwell_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_waxwell_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_waxwell_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_waxwell_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_waxwell_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_webber" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_webber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_webber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_webber_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_webber_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wendy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wendy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wendy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_wendy_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_wendy_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wendy_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wendy_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wendy_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wendy_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wendy_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wendy_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_wes_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_wes_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wes_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wes_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wes_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wickerbottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wickerbottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wickerbottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_wickerbottom_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_wickerbottom_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wilbur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wilbur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wilbur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_willow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_willow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_willow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_willow_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_willow_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_willow_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_willow_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_willow_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wilson" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wilson.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wilson.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_wilson_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_wilson_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_winona_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_winona_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wolfgang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wolfgang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wolfgang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_wolfgang_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_wolfgang_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_woodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_woodie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_woodie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_woodie_dst.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_woodie_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_woodie_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_woodie_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_woodie_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_woodie_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_woodie_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_woodie_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_woodlegs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_woodlegs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_woodlegs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_woodlegs_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_woodlegs_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_woodlegs_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_woodlegs_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_woodlegs_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_woodlegs_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_wx78" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameResources\Character\C_wx78.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\GameResources\Characters\C_wx78.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C_wx78_dst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Characters\C_wx78_dst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DLC_DST" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DLC_DST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

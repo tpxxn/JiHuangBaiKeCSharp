@@ -1,0 +1,258 @@
+﻿{
+  "Biomes": {
+    "Nature": [
+      {
+        "Picture": "N_beach",
+        "Name": "海滩",
+        "EnName": "Beach",
+        "Abundant": [
+          "N_palm_tree_1",
+          "N_sapling",
+          "N_grass_sw",
+          "G_flint",
+          "N_crabbit_den",
+          "N_sandy_pile",
+          "G_seashell"
+        ],
+        "Occasional": [
+          "G_rocky_turf",
+          "N_boulder_1",
+          "N_boulder_3",
+          "N_limpet_rock",
+          "N_wildbore_house"
+        ],
+        "Rare": [
+          "N_crate_1"
+        ],
+        "Introduction": "海滩是船难版常见的生物群落之一，它们一般有多种类型的资源。玩家进入世界(船难版)总会出生在海滩。晚上临近海洋的区域会被淹没，月圆之夜是潮汐最强的时候。"
+      },
+      {
+        "Picture": "N_sacred",
+        "Name": "神圣",
+        "EnName": "Sacred",
+        "Introduction": ""
+      },
+      {
+        "Picture": "N_jungle",
+        "Name": "热带雨林",
+        "EnName": "Jungle",
+        "Abundant": [
+          "N_jungle_tree_1",
+          "N_bamboo_patch",
+          "N_viney_bush",
+          "N_flower_1",
+          "A_fireflies",
+          "N_prime_ape_hut",
+          "A_spider"
+        ],
+        "Occasional": [
+          "N_berry_bush_2",
+          "N_boulder_2",
+          "N_wildbore_house",
+          "N_spider_den",
+          "N_blue_mushroom",
+          "N_green_mushroom",
+          "N_red_mushroom",
+          "A_snake",
+          "A_poison_snake",
+          "A_butterfly"
+        ],
+        "Rare": [
+          "N_boulder_1",
+          "G_rocks",
+          "G_flint"
+        ],
+        "Introduction": "热带雨林生物群落的生物、植物和资源都十分丰富，在这里要小心蛇和猿猴，它们十分令人讨厌。"
+      },
+      {
+        "Picture": "N_mangrove_bio",
+        "Name": "红树林",
+        "EnName": "Mangrove",
+        "Abundant": [
+          "N_mangrove_1",
+          "N_grass_sw"
+        ],
+        "Occasional": [
+          "N_shoal"
+        ],
+        "Rare": [
+          "A_water_beefalo"
+        ],
+        "Introduction": "这里虽然只能乘船通行，然而一般还是认为是一个岛屿，这里生活着水牛，草不会枯萎。"
+      },
+      {
+        "Picture": "N_magma_field",
+        "Name": "岩浆领域",
+        "EnName": "Magma Field",
+        "Abundant": [
+          "N_magma_pile",
+          "N_magma_pile_gold",
+          "N_krissure"
+        ],
+        "Occasional": [
+          "N_sapling",
+          "N_boulder_1",
+          "N_boulder_2"
+        ],
+        "Rare": [
+          "A_tallbird",
+          "N_tallbird_nest"
+        ],
+        "Introduction": "黑暗而崎岖的地形，有丰富的熔岩矿和熔岩金矿，偶尔会遇到高脚鸟。要小心压力火泉。"
+      },
+      {
+        "Picture": "N_meadow",
+        "Name": "草甸",
+        "EnName": "Meadow",
+        "Abundant": [
+          "N_grass_sw",
+          "N_flower_1",
+          "A_butterfly",
+          "F_sweet_potato"
+        ],
+        "Occasional": [
+          "G_rocks",
+          "G_flint",
+          "N_beehive",
+          "A_mandrake"
+        ],
+        "Rare": [
+          "N_red_mushroom"
+        ],
+        "Introduction": "富含草的生物群落，这里也是唯一能找到甘薯的地方，通常还有少量的蜂巢和曼德拉草。"
+      },
+      {
+        "Picture": "N_tidal_marsh",
+        "Name": "潮汐沼泽",
+        "EnName": "Tidal Marsh",
+        "Abundant": [
+          "N_reeds",
+          "A_flup",
+          "N_tidal_pool",
+          "N_poisonous_hole"
+        ],
+        "Occasional": [
+          "A_merm",
+          "N_merm_hut"
+        ],
+        "Rare": [
+          "A_fishermerm",
+          "N_fishermerm's_hut"
+        ],
+        "Introduction": "潮汐沼泽通常存在于单独的小岛，覆盖满了潮滩地皮。这里是鱼人/渔人和追踪性弹涂鱼的天堂，要小心毒洞哦！"
+      },
+      {
+        "Picture": "N_coral_reef_bio",
+        "Name": "珊瑚礁",
+        "EnName": "Coral Reef",
+        "Abundant": [
+          "N_coral_reef",
+          "N_shoal",
+          "A_dogfish"
+        ],
+        "Occasional": [
+          "N_seaweed",
+          "A_jellyfish"
+        ],
+        "Rare": [
+          "N_brainy_sprout"
+        ],
+        "Introduction": "珊瑚礁生物群落富含珊瑚礁，能找到浅滩和狗鱼，偶尔会有海藻和水母。运气好可以找到聪明芽。"
+      },
+      {
+        "Picture": "N_ocean_shallow",
+        "Name": "海洋(浅)",
+        "EnName": "Ocean(shallow)",
+        "Abundant": [
+          "N_seaweed"
+        ],
+        "Occasional": [
+          "A_jellyfish",
+          "N_wobster_den",
+          "F_mussel",
+          "A_dogfish"
+        ],
+        "Rare": [
+          "G_message_in_a_bottle"
+        ],
+        "Introduction": "淡蓝色的地形，没有海浪，围绕着所有岛屿，但是有可能会延伸。在这里可以发现贻贝、龙虾的巢穴、狗鱼和海藻。"
+      },
+      {
+        "Picture": "N_ocean_medium",
+        "Name": "海洋(中)",
+        "EnName": "Ocean(medium)",
+        "Abundant": [
+          "N_waves"
+        ],
+        "Occasional": [
+          "A_stink_ray",
+          "A_seagull"
+        ],
+        "Rare": [
+          "A_dogfish",
+          "N_shoal"
+        ],
+        "Introduction": "这里有许多的海浪，在这里可以发现恶臭魔鬼鱼、可疑的气泡、浅滩、旗鱼，温和季节会有海鸥出现。不会与岛屿接壤。"
+      },
+      {
+        "Picture": "N_ocean_deep",
+        "Name": "海洋(深)",
+        "EnName": "Ocean(deep)",
+        "Abundant": [
+          "N_waves"
+        ],
+        "Occasional": [
+          "A_bottenosed_ballphin",
+          "A_seagull"
+        ],
+        "Rare": [
+          "A_swordfish",
+          "N_shoal",
+          "G_rawling",
+          "N_volcano"
+        ],
+        "Introduction": "海洋深处，深色区域，只有这里有残骸和潮湿的坟墓，通常可以找到浅滩、海藻和狗鱼。不会与海洋(浅)和岛屿接壤。"
+      },
+      {
+        "Picture": "N_ship_graveyard",
+        "Name": "船舶墓地",
+        "EnName": "Ship Graveyard",
+        "Abundant": [],
+        "Occasional": [
+          "N_wreck_1",
+          "N_steamer_trunk",
+          "N_shoal"
+        ],
+        "Rare": [
+          "N_seaweed",
+          "N_watery_grave_1",
+          "A_swordfish"
+        ],
+        "Introduction": "残骸和潮湿的坟墓区域。"
+      },
+      {
+        "Picture": "N_volcano_bio",
+        "Name": "火山",
+        "EnName": "Volcano",
+        "Abundant": [
+          "N_coffee_plant",
+          "N_magma_pile",
+          "N_magma_pile_gold",
+          "N_charcoal_boulder",
+          "N_obsidian_boulder"
+        ],
+        "Occasional": [
+          "N_skeleton_1",
+          "N_elephant_cactus",
+          "N_krissure",
+          "N_dragoon_den"
+        ],
+        "Rare": [
+          "N_obsidian_workbench",
+          "N_woodlegs'_cage"
+        ],
+        "Introduction": "围绕火山口的生物群落，中间是含有大量熔岩的区域，靠近会过热。在这里可以找到大量咖啡树、熔岩矿熔岩金矿、黑曜岩和煤矿，也有不少象仙人掌和龙人巢，必定有一个火山祭坛和黑曜石工作台。如果没有解锁伍德莱格那么在这里会发现伍德莱格的笼子。"
+      }
+    ]
+  }
+}

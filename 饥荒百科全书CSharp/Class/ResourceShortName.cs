@@ -8,25 +8,27 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// 资源文件短名
         /// </summary>
-        /// <param name="RUrl">资源文件第一层目录</param>
-        /// <param name="RUrlSecond">资源文件第二层目录(可选)</param>
-        /// <param name="ExtensionName">资源文件扩展名(可选)</param>
+        /// <param name="rUrl">资源文件第一层目录</param>
+        /// <param name="rUrlSecond">资源文件第二层目录(可选)</param>
+        /// <param name="extensionName">资源文件扩展名(可选)</param>
         /// <returns>资源文件路径</returns>
-        public static string ShortName(string RUrl, string RUrlSecond = "" ,string ExtensionName = "png")
+        public static string ShortName(string rUrl, string rUrlSecond = "" ,string extensionName = "png")
         {
-            RUrl = "../Resources/" + RUrlSecond + RUrl + "." +ExtensionName;
-            return RUrl;
+            rUrl = "../Resources/" + rUrlSecond + rUrl + "." +extensionName;
+            return rUrl;
         }
+
         /// <summary>
         /// 获取扩展名
         /// </summary>
-        /// <param name="ShortName">长字符串</param>
+        /// <param name="shortName">长字符串</param>
         /// <returns>资源文件路径</returns>
-        public static string GetFileName(string ShortName)
+        public static string GetFileName(string shortName)
         {
-            ShortName = ShortName.Substring(ShortName.LastIndexOf('/') + 1, ShortName.Length - ShortName.LastIndexOf('/') - 5);
-            return ShortName;
+            shortName = shortName.Substring(shortName.LastIndexOf('/') + 1, shortName.Length - shortName.LastIndexOf('/') - 5);
+            return shortName;
         }
+
         /// <summary>
         /// 图片短名
         /// </summary>
@@ -34,18 +36,11 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>BitmapImage类</returns>
         public static BitmapImage PictureShortName(string source = "")
         {
-            var Picture = new BitmapImage();
-            Picture.BeginInit();
-            if (source == "")
-            {
-                Picture.UriSource = new Uri("{x:Null}", UriKind.Relative);
-            }
-            else
-            {
-                Picture.UriSource = new Uri(source, UriKind.Relative);
-            }
-            Picture.EndInit();
-            return Picture;
+            var picture = new BitmapImage();
+            picture.BeginInit();
+            picture.UriSource = source == "" ? new Uri("{x:Null}", UriKind.Relative) : new Uri(source, UriKind.Relative);
+            picture.EndInit();
+            return picture;
         }
 
 

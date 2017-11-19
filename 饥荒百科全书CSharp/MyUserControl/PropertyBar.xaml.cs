@@ -14,8 +14,8 @@ namespace 饥荒百科全书CSharp.MyUserControl
             InitializeComponent();
             if (isNegativeNum)
             {
-                UCProgressBarAngle.Angle = 180;
-                UCTextBlockValue.Foreground = Brushes.Red;
+                UcProgressBarAngle.Angle = 180;
+                UcTextBlockValue.Foreground = Brushes.Red;
             }
         }
     }

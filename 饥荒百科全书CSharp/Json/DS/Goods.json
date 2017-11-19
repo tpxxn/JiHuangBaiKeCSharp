@@ -1,0 +1,1977 @@
+﻿{
+    "Material": {
+        "GoodMaterial": [
+            {
+                "Picture": "G_ash",
+                "Name": "灰烬",
+                "EnName": "Ash",
+                "Science": [
+                    "S_healing_salve"
+                ],
+                "SourceCreature": [
+                    "A_red_hound"
+                ],
+                "Introduction": "主要还是来源于烧毁的植物。",
+                "Console": "ash"
+            },
+            {
+                "Picture": "G_flint",
+                "Name": "燧石",
+                "EnName": "Flint",
+                "Science": [
+                    "S_axe",
+                    "S_pickaxe",
+                    "S_shovel",
+                    "S_pitchfork",
+                    "S_razor",
+                    "S_compass",
+                    "S_thermal_stone",
+                    "S_spear",
+                    "S_bee_mine"
+                ],
+                "SourceCreature": [
+                    "A_rock_lobster"
+                ],
+                "Introduction": "通常草原和马赛克区域的地上能找到不少，通过挖卵石也可以获得。",
+                "Console": "flint"
+            },
+            {
+                "Picture": "G_nitre",
+                "Name": "硝石",
+                "EnName": "Nitre",
+                "Science": [
+                    "S_endothermic_fire",
+                    "S_endothermic_fire_pit",
+                    "S_booster_shot",
+                    "S_gunpowder",
+                    "S_morning_star"
+                ],
+                "Introduction": "主要靠挖卵石获得。",
+                "Console": "nitre"
+            },
+            {
+                "Picture": "G_rocks",
+                "Name": "岩石",
+                "EnName": "Rocks",
+                "Science": [
+                    "S_hammer",
+                    "S_fire_pit",
+                    "S_healing_salve",
+                    "S_thermal_stone",
+                    "S_improved_farm",
+                    "S_science_machine",
+                    "S_cut_stone"
+                ],
+                "SourceCreature": [
+                    "A_rock_lobster",
+                    "A_big_tentacle"
+                ],
+                "Introduction": "通常草原和马赛克区域的地上能找到不少，通过挖卵石也可以获得。",
+                "Console": "rocks"
+            },
+            {
+                "Picture": "G_gold_nugget",
+                "Name": "金块",
+                "EnName": "Gold Nugget",
+                "Science": [
+                    "S_goldenaxe",
+                    "S_luxury_machete",
+                    "S_goldenpickaxe",
+                    "S_goldenshovel",
+                    "S_saddle",
+                    "S_brush",
+                    "S_willow's_lighter",
+                    "S_miner_hat",
+                    "S_compass",
+                    "S_ice_box",
+                    "S_science_machine",
+                    "S_thermal_measurer",
+                    "S_rainometer",
+                    "S_lightning_rod",
+                    "S_birdcage",
+                    "S_one-man_band",
+                    "S_night_light",
+                    "S_life_giving_amulet",
+                    "S_chilled_amulet",
+                    "S_nightmare_amulet",
+                    "S_telelocator_focus",
+                    "S_walking_cane"
+                ],
+                "Introduction": "挖金卵石可以获得，有时候矿区地上也会有很多散落的金块。",
+                "Console": "goldnugget"
+            },
+            {
+                "Picture": "G_marble",
+                "Name": "大理石",
+                "EnName": "Marble",
+                "Science": [
+                    "S_marble_suit",
+                    "S_checkered_flooring"
+                ],
+                "Introduction": "挖大理石树和大理石柱子获得。",
+                "Console": "marble"
+            },
+            {
+                "Picture": "G_twigs",
+                "Name": "树枝",
+                "EnName": "Twigs",
+                "Science": [
+                    "S_axe",
+                    "S_goldenaxe",
+                    "S_pickaxe",
+                    "S_goldenpickaxe",
+                    "S_shovel",
+                    "S_goldenshovel",
+                    "S_hammer",
+                    "S_pitchfork",
+                    "S_razor",
+                    "S_torch",
+                    "S_lantern_1",
+                    "S_trap",
+                    "S_bird_trap",
+                    "S_bug_net",
+                    "S_fishing_rod",
+                    "S_umbrella",
+                    "S_backpack",
+                    "S_tent",
+                    "S_drying_rack",
+                    "S_crock_pot",
+                    "S_divining_rod",
+                    "S_battle_spear",
+                    "S_spear",
+                    "S_ham_bat",
+                    "S_grass_suit",
+                    "S_hay_wall",
+                    "S_rabbit_earmuffs",
+                    "S_fashion_melon",
+                    "S_walking_cane",
+                    "S_eyebrella"
+                ],
+                "Introduction": "采集小树苗根、尖刺灌木或砍多枝的树、针叶树、洞穴香蕉树获得，用铲子挖没有灌溉的浆果灌木丛也会得到两个树枝，树枝是可以制作科技种类最多的材料。",
+                "Console": "twigs"
+            },
+            {
+                "Picture": "G_cut_grass",
+                "Name": "割下的草",
+                "EnName": "Cut Grass",
+                "Science": [
+                    "S_hammer",
+                    "S_campfire",
+                    "S_torch",
+                    "S_endothermic_fire",
+                    "S_lantern_1",
+                    "S_trap",
+                    "S_backpack",
+                    "S_straw_roll",
+                    "S_basic_farm",
+                    "S_improved_farm",
+                    "S_grass_suit",
+                    "S_hay_wall",
+                    "S_straw_hat",
+                    "S_rope"
+                ],
+                "Introduction": "采集草或者靠近草壁虎获得。",
+                "Console": "cutgrass"
+            },
+            {
+                "Picture": "G_log",
+                "Name": "木头",
+                "EnName": "Log",
+                "Science": [
+                    "S_campfire",
+                    "S_fire_pit",
+                    "S_basic_farm",
+                    "S_science_machine",
+                    "S_log_suit",
+                    "S_tooth_trap",
+                    "S_sewing_kit",
+                    "S_boards"
+                ],
+                "Introduction": "砍树砍树！",
+                "Console": "log"
+            },
+            {
+                "Picture": "G_charcoal",
+                "Name": "木炭",
+                "EnName": "Charcoal",
+                "Science": [
+                    "S_drying_rack",
+                    "S_crock_pot",
+                    "S_gunpowder",
+                    "S_fire_dart",
+                    "S_boomerang"
+                ],
+                "SourceCreature": [
+                    "A_krampus"
+                ],
+                "Introduction": "烧树吧！",
+                "Console": "charcoal"
+            },
+            {
+                "Picture": "G_cut_reeds",
+                "Name": "割下的芦苇",
+                "EnName": "Cut Reeds",
+                "Science": [
+                    "S_blow_dart",
+                    "S_sleep_dart",
+                    "S_fire_dart",
+                    "S_pan_flute",
+                    "S_papyrus"
+                ],
+                "Introduction": "只能去沼泽地里割芦苇了。",
+                "Console": "cutreeds"
+            },
+            {
+                "Picture": "G_petals",
+                "Name": "花瓣",
+                "EnName": "Petals",
+                "Science": [
+                    "S_garland"
+                ],
+                "Introduction": "一般草原和森林里比较多。",
+                "Console": "petals"
+            },
+            {
+                "Picture": "G_dark_petals",
+                "Name": "黑暗花瓣",
+                "EnName": "Dark Petals",
+                "Science": [
+                    "S_nightmare_fuel"
+                ],
+                "Introduction": "完全正常的树、正常的丛林树周围会有不少，有的麦克斯韦雕像旁边也会有一些。",
+                "Console": "petals_evil"
+            },
+            {
+                "Picture": "G_stinger",
+                "Name": "蜂刺",
+                "EnName": "Stinger",
+                "Science": [
+                    "S_sleep_dart"
+                ],
+                "SourceCreature": [
+                    "A_bee",
+                    "A_killer_bee"
+                ],
+                "Introduction": "击杀蜜蜂和杀人蜂都可以掉落。",
+                "Console": "stinger"
+            },
+            {
+                "Picture": "G_hound's_tooth",
+                "Name": "猎犬牙齿",
+                "EnName": "Hound's Tooth",
+                "Science": [
+                    "S_blow_dart",
+                    "S_blow_dart",
+                    "S_sewing_kit",
+                    "S_dapper_vest"
+                ],
+                "SourceCreature": [
+                    "A_hound",
+                    "A_red_hound",
+                    "A_blue_hound",
+                    "A_varg"
+                ],
+                "Introduction": "击杀三种猎犬、海狗还有座狼可以获得。",
+                "Console": "houndstooth"
+            },
+            {
+                "Picture": "G_azure_feather",
+                "Name": "天蓝羽毛",
+                "EnName": "Azure Feather",
+                "Science": [
+                    "S_blow_dart"
+                ],
+                "SourceCreature": [
+                    "A_snowbird"
+                ],
+                "Introduction": "击杀雪鸟获得。",
+                "Console": "feather_robin_winter"
+            },
+            {
+                "Picture": "G_crimson_feather",
+                "Name": "绯红羽毛",
+                "EnName": "Crimson Feather",
+                "Science": [
+                    "S_fire_dart",
+                    "S_feather_hat",
+                    "S_bush_hat"
+                ],
+                "SourceCreature": [
+                    "A_redbird"
+                ],
+                "Introduction": "击杀红鸟获得。",
+                "Console": "feather_robin"
+            },
+            {
+                "Picture": "G_jet_feather",
+                "Name": "墨黑羽毛",
+                "EnName": "Jet Feather",
+                "Science": [
+                    "S_sleep_dart",
+                    "S_poison_dart",
+                    "S_feather_hat"
+                ],
+                "SourceCreature": [
+                    "A_pengull",
+                    "A_crow",
+                    "A_buzzards"
+                ],
+                "Introduction": "击杀企鹅、乌鸦、秃鹰获得。",
+                "Console": "feather_crow"
+            },
+            {
+                "Picture": "G_pig_skin",
+                "Name": "猪皮",
+                "EnName": "Pig Skin",
+                "Science": [
+                    "S_umbrella",
+                    "S_piggyback",
+                    "S_ham_bat",
+                    "S_football_helmet",
+                    "S_pig_house",
+                    "S_one-man_band",
+                    "S_summer_frest"
+                ],
+                "SourceCreature": [
+                    "A_pig_man",
+                    "A_guard_pig",
+                    "A_werepig"
+                ],
+                "Introduction": "击杀各种猪或摧毁猪舍和猪人头获得。",
+                "Console": "pigskin"
+            },
+            {
+                "Picture": "G_beefalo_wool",
+                "Name": "牛毛",
+                "EnName": "Beefalo Wool",
+                "Science": [
+                    "S_carpeted_flooring",
+                    "S_beefalo_hat",
+                    "S_winter_hat",
+                    "S_puffy_vest"
+                ],
+                "SourceCreature": [
+                    "A_baby_beefalo",
+                    "A_baby_beefalo_2",
+                    "A_baby_beefalo_3",
+                    "A_beefalo"
+                ],
+                "Introduction": "击杀皮弗娄牛获得。",
+                "Console": "beefalowool"
+            },
+            {
+                "Picture": "G_beefalo_horn",
+                "Name": "牛角",
+                "EnName": "Beefalo Horn",
+                "Science": [
+                    "S_beefalo_hat"
+                ],
+                "SourceCreature": [
+                    "A_beefalo"
+                ],
+                "Introduction": "击杀皮弗娄牛获得，做牛帽的必备材料。使用牛角会使至多5头皮弗娄牛跟随玩家，小皮弗娄牛会跟随父母，晚上皮弗娄牛会睡觉，皮弗娄牛最后会停留在最终位置附近活动。使用牛角还可以使发怒的皮弗娄牛冷静下来。",
+                "Console": "horn"
+            },
+            {
+                "Picture": "G_manure",
+                "Name": "粪便",
+                "EnName": "Manure",
+                "Science": [
+                    "S_basic_farm",
+                    "S_improved_farm",
+                    "S_applied_horticulture"
+                ],
+                "SourceCreature": [
+                    "A_beefalo",
+                    "A_koalefant",
+                    "A_winter_koalefant"
+                ],
+                "Introduction": "皮弗娄牛、考拉象、冬考拉象都会周期性地产生便便。便便可以用来浇灌植物，不过最好还是做成便便篮提高利用效率。",
+                "Console": "poop"
+            },
+            {
+                "Picture": "G_guano",
+                "Name": "鸟粪",
+                "EnName": "Guano",
+                "SourceCreature": [
+                    "A_batilisk"
+                ],
+                "Introduction": "击杀黑蝙蝠获得(黑蝙蝠活动范围内也会产生)，联机版里喂食被囚禁的鸟种子也会得到，可以用来浇灌植物。",
+                "Console": "guano"
+            },
+            {
+                "Picture": "G_fleshy_bulb",
+                "Name": "肉球茎",
+                "EnName": "Fleshy Bulb",
+                "SourceCreature": [
+                    "A_lureplants"
+                ],
+                "Introduction": "击杀食人花获得，可以种植在需要的地方。",
+                "Console": "lureplantbulb"
+            },
+            {
+                "Picture": "G_silk",
+                "Name": "蛛丝",
+                "EnName": "Silk",
+                "Science": [
+                    "S_glossamer_saddle",
+                    "S_bird_trap",
+                    "S_bug_net",
+                    "S_fishing_rod",
+                    "S_umbrella",
+                    "S_piggyback",
+                    "S_tent",
+                    "S_boomerang",
+                    "S_sewing_kit",
+                    "S_top_hat",
+                    "S_winter_hat",
+                    "S_beekeeper_hat",
+                    "S_dapper_vest",
+                    "S_breezy_vest",
+                    "S_puffy_vest"
+                ],
+                "SourceCreature": [
+                    "A_spider",
+                    "A_spider_warrior",
+                    "A_cave_spider",
+                    "A_spitter",
+                    "A_dangling_depth_dweller",
+                    "A_spider_queen"
+                ],
+                "Introduction": "击杀所有蜘蛛都可以获得，摧毁蜘蛛巢也会掉落。",
+                "Console": "silk"
+            },
+            {
+                "Picture": "G_spider_gland",
+                "Name": "蜘蛛腺体",
+                "EnName": "Spider Gland",
+                "Science": [
+                    "S_healing_salve"
+                ],
+                "SourceCreature": [
+                    "A_spider",
+                    "A_spider_warrior",
+                    "A_cave_spider",
+                    "A_spitter",
+                    "A_dangling_depth_dweller"
+                ],
+                "Introduction": "击杀部分蜘蛛可以得到。",
+                "Console": "spidergland"
+            },
+            {
+                "Picture": "G_gears",
+                "Name": "齿轮",
+                "EnName": "Gears",
+                "Science": [
+                    "S_ice_box",
+                    "S_divining_rod",
+                    "S_ice_flingomatic"
+                ],
+                "SourceCreature": [
+                    "A_clockwork_knight",
+                    "A_clockwork_bishop",
+                    "A_clckwork_rook",
+                    "A_damaged_knight",
+                    "A_damage_rook"
+                ],
+                "Introduction": "击杀发条生物得到，在棋盘区域有时候也会有几个齿轮，实在找不到还可以开风滚草。",
+                "Console": "gears"
+            },
+            {
+                "Picture": "G_tentacle_spots",
+                "Name": "触手皮",
+                "EnName": "Tentacle Spots",
+                "Science": [
+                    "S_feather_hat",
+                    "S_on_tentacles"
+                ],
+                "SourceCreature": [
+                    "A_tentacle",
+                    "A_big_tentacle"
+                ],
+                "Introduction": "击杀触手、大触手获得。",
+                "Console": "tentaclespots"
+            },
+            {
+                "Picture": "G_nightmare_fuel",
+                "Name": "噩梦燃料",
+                "EnName": "Nightmare Fuel",
+                "Science": [
+                    "S_divining_rod",
+                    "S_shadow_manipulator",
+                    "S_one-man_band",
+                    "S_night_light",
+                    "S_night_armour",
+                    "S_dark_sword",
+                    "S_belt_of_hunger",
+                    "S_life_giving_amulet",
+                    "S_nightmare_amulet",
+                    "S_fire_staff",
+                    "S_telelocator_staff",
+                    "S_telelocator_focus",
+                    "S_thulecite_medallion",
+                    "S_the_lazy_forager",
+                    "S_magiluminescence",
+                    "S_construction_amulet",
+                    "S_the_lazy_explorer",
+                    "S_star_caller's_staff",
+                    "S_deconstruction_staff",
+                    "S_thulecite_crown",
+                    "S_thulecite_suit",
+                    "S_thulecite_club",
+                    "S_sleepytime_stories"
+                ],
+                "SourceCreature": [
+                    "A_beardling",
+                    "A_splumonkey",
+                    "A_shadow_splumonkey",
+                    "A_damaged_knight",
+                    "A_damaged_bishop",
+                    "A_damage_rook",
+                    "A_crawling_nightmare",
+                    "A_crawling_horror"
+                ],
+                "Introduction": "击杀黑化生物、各种影怪、损坏的发条生物和暴躁猴获得，也可以用黑暗花瓣合成，魔法科技的重要材料。",
+                "Console": "nightmarefuel"
+            },
+            {
+                "Picture": "G_living_log",
+                "Name": "活木",
+                "EnName": "Living Log",
+                "Science": [
+                    "S_shadow_manipulator",
+                    "S_dark_sword",
+                    "S_bat_bat",
+                    "S_telelocator_staff",
+                    "S_telelocator_focus",
+                    "S_Seaworthy",
+                    "S_star_caller's_staff",
+                    "S_deconstruction_staff",
+                    "S_thulecite_club"
+                ],
+                "SourceCreature": [
+                    "A_treeguard"
+                ],
+                "Introduction": "击杀树精守卫、桦树精获得，砍倒完全正常的树也可以得到。",
+                "Console": "livinglog"
+            },
+            {
+                "Picture": "G_mosquito_sack",
+                "Name": "蚊子血袋",
+                "EnName": "Mosquito Sack",
+                "Science": [
+                    "S_waterballoon"
+                ],
+                "SourceCreature": [
+                    "A_mosquito"
+                ],
+                "Introduction": "击杀蚊子获得，可以做水球。",
+                "Console": "mosquitosack"
+            },
+            {
+                "Picture": "G_walrus_tusk",
+                "Name": "海象牙",
+                "EnName": "Walrus Tusk",
+                "Science": [
+                    "S_walking_cane"
+                ],
+                "SourceCreature": [
+                    "A_mactusk"
+                ],
+                "Introduction": "击杀海象获得。",
+                "Console": "walrus_tusk"
+            },
+            {
+                "Picture": "G_red_gem",
+                "Name": "红宝石",
+                "EnName": "Red Gem",
+                "Science": [
+                    "S_night_light",
+                    "S_life_giving_amulet",
+                    "S_fire_staff",
+                    "S_the_end_is_nigh!",
+                    "S_purple_gem"
+                ],
+                "SourceCreature": [
+                    "A_red_hound"
+                ],
+                "Introduction": "击杀红色猎犬、龙蝇，挖坟墓，敲古代雕像、石笋、破碎的时钟、远古遗迹获得，大豪华箱子里也有可能出现。",
+                "Console": "redgem"
+            },
+            {
+                "Picture": "G_blue_gem",
+                "Name": "蓝宝石",
+                "EnName": "Blue Gem",
+                "Science": [
+                    "S_chilled_amulet",
+                    "S_ice_staff",
+                    "S_purple_gem"
+                ],
+                "SourceCreature": [
+                    "A_blue_hound"
+                ],
+                "Introduction": "击杀红色猎犬、龙蝇，挖坟墓，敲古代雕像、石笋、破碎的时钟、远古遗迹获得，大豪华箱子里也有可能出现。",
+                "Console": "bluegem"
+            },
+            {
+                "Picture": "G_purple_gem",
+                "Name": "紫宝石",
+                "EnName": "Purple Gem",
+                "Science": [
+                    "S_bat_bat",
+                    "S_shadow_manipulator",
+                    "S_nightmare_amulet",
+                    "S_telelocator_staff"
+                ],
+                "SourceCreature": [
+                    "A_clockwork_bishop",
+                    "A_damaged_bishop"
+                ],
+                "Introduction": "击杀红色猎犬、龙蝇，挖坟墓，敲古代雕像、石笋、破碎的时钟、远古遗迹获得，大豪华箱子里也有可能出现。",
+                "Console": "purplegem"
+            },
+            {
+                "Picture": "G_orange_gem",
+                "Name": "橙宝石",
+                "EnName": "Orange Gem",
+                "Science": [
+                    "S_the_lazy_forager",
+                    "S_the_lazy_explorer"
+                ],
+                "Introduction": "击杀龙蝇，敲金色古代雕像、破碎的时钟、远古遗迹、废墟获得，大豪华箱子里也有可能出现。",
+                "Console": "orangegem"
+            },
+            {
+                "Picture": "G_green_gem",
+                "Name": "绿宝石",
+                "EnName": "Green Gem",
+                "Science": [
+                    "S_construction_amulet",
+                    "S_deconstruction_staff"
+                ],
+                "Introduction": "击杀龙蝇，敲金色古代雕像、破碎的时钟、远古遗迹、废墟获得，大豪华箱子里也有可能出现。",
+                "Console": "greengem"
+            },
+            {
+                "Picture": "G_yellow_gem",
+                "Name": "黄宝石",
+                "EnName": "Yellow Gem",
+                "Science": [
+                    "S_magiluminescence",
+                    "S_star_caller's_staff"
+                ],
+                "Introduction": "击杀龙蝇，敲金色古代雕像、破碎的时钟、远古遗迹、废墟获得，大豪华箱子里也有可能出现。",
+                "Console": "yellowgem"
+            },
+            {
+                "Picture": "G_light_bulb",
+                "Name": "荧光灯泡果",
+                "EnName": "Light Bulb",
+                "Science": [
+                    "S_lantern_1"
+                ],
+                "SourceCreature": [
+                    "A_slurper",
+                    "A_big_tentacle"
+                ],
+                "Introduction": "采集荧光草获得。",
+                "Console": "lightbulb"
+            },
+            {
+                "Picture": "G_bunny_puff",
+                "Name": "兔毛",
+                "EnName": "Bunny Puff",
+                "Science": [
+                    "S_fur_roll",
+                    "S_rabbit_hutch"
+                ],
+                "SourceCreature": [
+                    "A_bunnyman"
+                ],
+                "Introduction": "击杀兔人或拆兔子窝获得。",
+                "Console": "manrabbit_tail"
+            },
+            {
+                "Picture": "G_foliage",
+                "Name": "蕨叶",
+                "EnName": "Foliage",
+                "Science": [
+                    "S_potted_fern"
+                ],
+                "SourceCreature": [
+                    "N_fern_1"
+                ],
+                "Introduction": "采集蕨类植物获得。",
+                "Console": "foliage"
+            },
+            {
+                "Picture": "G_broken_shell",
+                "Name": "碎壳",
+                "EnName": "Broken Shell",
+                "Science": [
+                    "S_potted_fern"
+                ],
+                "SourceCreature": [
+                    "A_slurtles",
+                    "A_snurtles"
+                ],
+                "Introduction": "击杀黏糊虫和含糊虫获得。",
+                "Console": "slurtle_shellpieces"
+            },
+            {
+                "Picture": "G_slurtle_slime",
+                "Name": "蜗牛粘液",
+                "EnName": "Slurtle Slime",
+                "SourceCreature": [
+                    "A_slurtles",
+                    "A_snurtles",
+                    "A_big_tentacle"
+                ],
+                "Introduction": "击杀黏糊虫、含糊虫和大触手获得，点燃后几秒爆炸。",
+                "Console": "slurtleslime"
+            },
+            {
+                "Picture": "G_beard_hair",
+                "Name": "胡须",
+                "EnName": "Beard Hair",
+                "Science": [
+                    "S_meat_effigy"
+                ],
+                "SourceCreature": [
+                    "A_beardling",
+                    "A_beardlord",
+                    "A_shadow_splumonkey"
+                ],
+                "Introduction": "击杀黑化生物获得，威尔逊用剃刀刮胡须也可以得到，制作肉块雕像的材料之一。",
+                "Console": "beardhair"
+            },
+            {
+                "Picture": "G_slurper_pelt",
+                "Name": "吞噬者皮",
+                "EnName": "Slurper Pelt",
+                "Science": [
+                    "S_belt_of_hunger"
+                ],
+                "SourceCreature": [
+                    "A_slurper"
+                ],
+                "Introduction": "击杀啜食兽获得。",
+                "Console": "slurper_pelt"
+            },
+            {
+                "Picture": "G_thulecite_fragments",
+                "Name": "铥矿碎片",
+                "EnName": "Thulecite Fragments",
+                "Science": [
+                    "S_thulecite"
+                ],
+                "SourceCreature": [
+                    "A_damaged_knight",
+                    "A_damaged_bishop",
+                    "A_damage_rook"
+                ],
+                "Introduction": "击杀损坏的发条生物，敲二层洞穴入口和铥矿墙壁获得，大豪华箱子里也有可能出现。",
+                "Console": "thulecite_pieces"
+            }
+        ]
+    },
+    "Equipment": {
+        "GoodEquipment": [
+            {
+                "Picture": "S_axe",
+                "Name": "斧头",
+                "EnName": "Axe",
+                "Attack": 27.2,
+                "Durability": "100次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "axe"
+            },
+            {
+                "Picture": "S_goldenaxe",
+                "Name": "奢侈金斧",
+                "EnName": "Luxury Axe",
+                "Attack": 27.2,
+                "Durability": "400次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "goldenaxe"
+            },
+            {
+                "Picture": "S_pickaxe",
+                "Name": "十字镐",
+                "EnName": "Pickaxe",
+                "Attack": 27.2,
+                "Durability": "33次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "pickaxe"
+            },
+            {
+                "Picture": "S_goldenpickaxe",
+                "Name": "华丽金镐",
+                "EnName": "Opulent Pickaxe",
+                "Attack": 27.2,
+                "Durability": "132次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "goldenpickaxe"
+            },
+            {
+                "Picture": "S_shovel",
+                "Name": "铲子",
+                "EnName": "Shovel",
+                "Attack": 17,
+                "Durability": "25次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "shovel"
+            },
+            {
+                "Picture": "S_goldenshovel",
+                "Name": "豪华金铲",
+                "EnName": "Regal Shovel",
+                "Attack": 17,
+                "Durability": "100次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "goldenshovel"
+            },
+            {
+                "Picture": "S_hammer",
+                "Name": "锤子",
+                "EnName": "Hammer",
+                "Attack": 17,
+                "Durability": "75次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "hammer"
+            },
+            {
+                "Picture": "S_pitchfork",
+                "Name": "草叉",
+                "EnName": "Pitchfork",
+                "Attack": 17,
+                "Durability": "200次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "pitchfork"
+            },
+            {
+                "Picture": "S_pickaxe_1",
+                "Name": "镐/头",
+                "EnName": "Pick/Axe",
+                "Attack": 30.6,
+                "Durability": "400次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "multitool_axe_pickaxe"
+            },
+            {
+                "Picture": "G_lucy_the_axe",
+                "Name": "露西斧",
+                "EnName": "Lucy the Axe",
+                "Attack": 27.2,
+                "Durability": "1000",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "lucy"
+            },
+            {
+                "Picture": "S_bug_net",
+                "Name": "捕虫网",
+                "EnName": "Bug Net",
+                "Attack": 4.25,
+                "Durability": "3.3次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "bugnet"
+            },
+            {
+                "Picture": "S_fishing_rod",
+                "Name": "鱼竿",
+                "EnName": "Fishing Rod",
+                "Attack": 4.25,
+                "Durability": "9次",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "fishingrod"
+            },
+            {
+                "Picture": "S_walking_cane",
+                "Name": "步行手杖",
+                "EnName": "Walking Cane",
+                "Attack": 17,
+                "Durability": "1000",
+                "Introduction": "除了用作工具还能用来打怪。",
+                "Console": "cane"
+            },
+            {
+                "Picture": "S_torch",
+                "Name": "火把",
+                "EnName": "Torch",
+                "Attack": 17,
+                "Durability": "75秒",
+                "Wet": 20,
+                "Introduction": "除了攻击伤害还有后续的燃烧伤害，带着还有一定的防潮效果。",
+                "Console": "torch"
+            },
+            {
+                "Picture": "S_miner_hat",
+                "Name": "矿灯帽",
+                "EnName": "Miner Hat",
+                "Durability": "468秒",
+                "Wet": 20,
+                "Introduction": "不仅可以照明还有少量防潮效果。",
+                "Console": "minerhat"
+            },
+            {
+                "Picture": "S_umbrella",
+                "Name": "雨伞",
+                "EnName": "Umbrella",
+                "Attack": 17,
+                "Durability": "20次",
+                "Wet": 90,
+                "Sanity": 2,
+                "Introduction": "不俗的防潮效果。",
+                "Console": "umbrella"
+            },
+            {
+                "Picture": "S_straw_hat",
+                "Name": "草帽",
+                "EnName": "Straw Hat",
+                "Durability": "5天",
+                "Wet": 20,
+                "HeatResistance": 60,
+                "Introduction": "一般的防潮隔热装备。",
+                "Console": "strawhat"
+            },
+            {
+                "Picture": "S_top_hat",
+                "Name": "高礼帽",
+                "EnName": "Top Hat",
+                "Durability": "6天",
+                "Wet": 20,
+                "HeatResistance": 60,
+                "Sanity": 2,
+                "Introduction": "少量的防潮效果，还有少量隔热和效果和精神光环。",
+                "Console": "tophat"
+            },
+            {
+                "Picture": "S_eyebrella",
+                "Name": "眼球伞",
+                "EnName": "Eyebrella",
+                "Durability": "8天",
+                "Wet": 100,
+                "HeatResistance": 240,
+                "Introduction": "无敌的防潮效果！隔热效果也是绝佳！",
+                "Console": "eyebrellahat"
+            },
+            {
+                "Picture": "S_thermal_stone",
+                "Name": "保温石",
+                "EnName": "Thermal Stone",
+                "ColdResistance": 120,
+                "HeatResistance": 120,
+                "Introduction": "每次变灰耐久度减少1点，可以用来升温也可以用来降温。",
+                "Console": "heatrock"
+            },
+            {
+                "Picture": "S_rabbit_earmuffs",
+                "Name": "兔子耳罩",
+                "EnName": "Rabbit Earmuffs",
+                "Durability": "5天",
+                "ColdResistance": 60,
+                "Introduction": "不怎么样的隔热装备，不过挺可爱的~",
+                "Console": "earmuffshat"
+            },
+            {
+                "Picture": "S_beefalo_hat",
+                "Name": "牛帽",
+                "EnName": "Beefalo Hat",
+                "Durability": "10天",
+                "Wet": 20,
+                "ColdResistance": 240,
+                "Introduction": "有了牛帽冬天就不用愁了。",
+                "Console": "beefalohat"
+            },
+            {
+                "Picture": "S_winter_hat",
+                "Name": "冬帽",
+                "EnName": "Winter Hat",
+                "Durability": "10天",
+                "ColdResistance": 120,
+                "Sanity": 1.33,
+                "Introduction": "一般过冬的装备。",
+                "Console": "winterhat"
+            },
+            {
+                "Picture": "S_dapper_vest",
+                "Name": "短背心",
+                "EnName": "Dapper Vest",
+                "Durability": "10天",
+                "ColdResistance": 60,
+                "Sanity": 3.33,
+                "Introduction": "没啥用的隔热装备。",
+                "Console": "sweatervest"
+            },
+            {
+                "Picture": "S_breezy_vest",
+                "Name": "透风外套",
+                "EnName": "Breezy Vest",
+                "Durability": "10天",
+                "ColdResistance": 60,
+                "Sanity": 2,
+                "Introduction": "纯粹是浪费红色象鼻。",
+                "Console": "trunkvest_summer"
+            },
+            {
+                "Picture": "S_puffy_vest",
+                "Name": "厚外套",
+                "EnName": "Puffy Vest",
+                "Durability": "15天",
+                "ColdResistance": 240,
+                "Sanity": 2,
+                "Introduction": "极好的隔热装备。",
+                "Console": "trunkvest_winter"
+            },
+            {
+                "Picture": "S_gunpowder",
+                "Name": "火药",
+                "EnName": "Gunpowder",
+                "Attack": 200,
+                "Durability": "1次",
+                "Introduction": "Boom！",
+                "Console": "gunpowder"
+            },
+            {
+                "Picture": "S_spear",
+                "Name": "长矛",
+                "EnName": "Spear",
+                "Attack": 34,
+                "Durability": 150,
+                "Introduction": "一般的武器。",
+                "Console": "spear"
+            },
+            {
+                "Picture": "S_ham_bat",
+                "Name": "火腿棒",
+                "EnName": "Ham Bat",
+                "Attack": 59.5,
+                "Durability": "10天",
+                "Introduction": "过得越久攻击越低。(29.75 - 59.5)",
+                "Console": "hambat"
+            },
+            {
+                "Picture": "S_blow_dart",
+                "Name": "吹箭",
+                "EnName": "Blow Dart",
+                "DropBy": "A_mactusk",
+                "Attack": 100,
+                "Durability": "1次",
+                "Introduction": "一下100点的伤害也不错了。",
+                "Console": "blowdart_pipe"
+            },
+            {
+                "Picture": "S_sleep_dart",
+                "Name": "麻醉吹箭",
+                "EnName": "Sleep Dart",
+                "Durability": "1次",
+                "Introduction": "让生物睡觉的吹箭。",
+                "Console": "blowdart_sleep"
+            },
+            {
+                "Picture": "S_fire_dart",
+                "Name": "燃烧吹箭",
+                "EnName": "Fire Dart",
+                "Attack": 5,
+                "Durability": "1次",
+                "Introduction": "虽然攻击只有5，但是有后续燃烧伤害。",
+                "Console": "blowdart_fire"
+            },
+            {
+                "Picture": "S_boomerang",
+                "Name": "回旋镖",
+                "EnName": "Boomerang",
+                "Attack": 27.2,
+                "Durability": "10次",
+                "Introduction": "不按空格接住还会打到自己。",
+                "Console": "boomerang"
+            },
+            {
+                "Picture": "S_dark_sword",
+                "Name": "暗影剑",
+                "EnName": "Dark Sword",
+                "Attack": 68,
+                "Durability": "100次",
+                "Sanity": -20,
+                "Introduction": "打着打着精神就没了。",
+                "Console": "nightsword"
+            },
+            {
+                "Picture": "S_bat_bat",
+                "Name": "吸血短棒",
+                "EnName": "Bat Bat",
+                "Attack": 42.5,
+                "Durability": "75次",
+                "Sanity": -3.33,
+                "Introduction": "每次攻击吸血6.8。",
+                "Console": "batbat"
+            },
+            {
+                "Picture": "S_fire_staff",
+                "Name": "火焰法杖",
+                "EnName": "Fire Staff",
+                "Attack": 150,
+                "Durability": "20次",
+                "Sanity": -1,
+                "Introduction": "烧吧烧吧！(攻击力范围：100-150)",
+                "Console": "firestaff"
+            },
+            {
+                "Picture": "S_ice_staff",
+                "Name": "冰冻法杖",
+                "EnName": "Ice Staff",
+                "Durability": "20次",
+                "Sanity": -1,
+                "Introduction": "冰冻敌人！",
+                "Console": "icestaff"
+            },
+            {
+                "Picture": "S_belt_of_hunger",
+                "Name": "饱食腰带",
+                "EnName": "Belt of Hunger",
+                "Ability": [
+                    "抵御饥饿"
+                ],
+                "Durability": "8天",
+                "Sanity": 2,
+                "Hunger": 60,
+                "Introduction": "饥饿速度变为默认的60%。",
+                "Console": "armorslurper"
+            },
+            {
+                "Picture": "S_thulecite_club",
+                "Name": "铥制棒",
+                "EnName": "Thulecite Club",
+                "Attack": 59.5,
+                "Durability": 150,
+                "Introduction": "攻击力不错的武器，增加10%的移动速度。",
+                "Console": "ruins_bat"
+            },
+            {
+                "Picture": "G_tentacle_spike",
+                "Name": "触手棒",
+                "EnName": "Tentacle Spike",
+                "DropBy": "A_tentacle",
+                "Attack": 51,
+                "Durability": "100次",
+                "Introduction": "没事去沼泽就能捡到几个。",
+                "Console": "tentaclespike"
+            },
+            {
+                "Picture": "S_grass_suit",
+                "Name": "草制护甲",
+                "EnName": "Grass Suit",
+                "Durability": "225HP",
+                "Defense": 60,
+                "Introduction": "最弱的防御装备。",
+                "Console": "armorgrass"
+            },
+            {
+                "Picture": "S_log_suit",
+                "Name": "木制护甲",
+                "EnName": "Log Suit",
+                "Durability": "450HP",
+                "Defense": 80,
+                "Introduction": "看得过去的防御装备。",
+                "Console": "armorwood"
+            },
+            {
+                "Picture": "S_marble_suit",
+                "Name": "大理石护甲",
+                "EnName": "Marble Suit",
+                "Ability": [
+                    "减速30%"
+                ],
+                "Durability": "1050HP",
+                "Defense": 95,
+                "Introduction": "接近无敌的防御装备，不过会减速30%，而且材料不好找。",
+                "Console": "armormarble"
+            },
+            {
+                "Picture": "S_football_helmet",
+                "Name": "橄榄球头盔",
+                "EnName": "Football Helmet",
+                "Durability": "450HP",
+                "Wet": 20,
+                "Defense": 80,
+                "Introduction": "防御性能不错！",
+                "Console": "footballhat"
+            },
+            {
+                "Picture": "S_night_armour",
+                "Name": "暗影护甲",
+                "EnName": "Night Armour",
+                "Ability": [
+                    "降低所受伤害10%的精神"
+                ],
+                "Durability": "750HP",
+                "Sanity": -10,
+                "Defense": 95,
+                "Introduction": "防御力极高，打着打着就没精神了。",
+                "Console": "armor_sanity"
+            },
+            {
+                "Picture": "S_beekeeper_hat",
+                "Name": "养蜂帽",
+                "EnName": "Beekeeper Hat",
+                "Durability": "750HP",
+                "Wet": 20,
+                "Defense": 80,
+                "Introduction": "仅防御来自蜜蜂和杀人蜂的攻击。",
+                "Console": "beehat"
+            },
+            {
+                "Picture": "S_thulecite_crown",
+                "Name": "铥制王冠",
+                "EnName": "Thulecite Crown",
+                "Ability": [
+                    "免疫中毒"
+                ],
+                "Durability": "1200HP",
+                "Defense": 90,
+                "Introduction": "防御力很高而且耐久也不错，还有被动效果。",
+                "Console": "ruinshat"
+            },
+            {
+                "Picture": "S_thulecite_suit",
+                "Name": "铥制护甲",
+                "EnName": "Thulecite Suit",
+                "Durability": "1800HP",
+                "Sanity": 3.33,
+                "Defense": 90,
+                "Introduction": "耐久最高，防御力也很高。",
+                "Console": "armorruins"
+            },
+            {
+                "Picture": "G_shelmet",
+                "Name": "蜗牛头盔",
+                "EnName": "Shelmet",
+                "DropBy": "A_slurtles",
+                "Durability": "750HP",
+                "Wet": 20,
+                "Defense": 90,
+                "Introduction": "防御力高，爆率低。",
+                "Console": "slurtlehat"
+            },
+            {
+                "Picture": "G_snurtle_shell_armor",
+                "Name": "蜗牛壳盔甲",
+                "EnName": "Snurtle Shell Armor",
+                "DropBy": "A_snurtles",
+                "Durability": "1050HP",
+                "Defense": 60,
+                "Introduction": "防御力低，爆率高，使用后可以钻进壳里躲避怪物攻击仇恨。",
+                "Console": "armorsnurtleshell"
+            },
+            {
+                "Picture": "G_tam_o'shanter",
+                "Name": "苏格兰帽",
+                "EnName": "Tam o' Shanter",
+                "DropBy": "A_mactusk",
+                "Durability": "25天",
+                "ColdResistance": 120,
+                "Sanity": 6.66,
+                "Introduction": "只能打海象掉落。",
+                "Console": "walrushat"
+            },
+            {
+                "Picture": "G_spiderhat",
+                "Name": "蜘蛛帽",
+                "EnName": "Spiderhat",
+                "DropBy": "A_spider_queen",
+                "Ability": [
+                    "指挥蜘蛛"
+                ],
+                "Durability": "120秒",
+                "Wet": 20,
+                "Sanity": -2,
+                "Introduction": "只能打蜘蛛女王掉落，可以控制蜘蛛。",
+                "Console": "spiderhat"
+            },
+            {
+                "Picture": "G_slurper",
+                "Name": "吞噬者",
+                "EnName": "Slurper",
+                "DropBy": "A_slurper",
+                "Ability": [
+                    "提供和矿灯帽相同的光照"
+                ],
+                "Hunger": -100,
+                "Introduction": "戴在头上会发光，吸食饥饿。",
+                "Console": "slurper"
+            },
+            {
+                "Picture": "G_krampus_sack",
+                "Name": "坎普斯背包",
+                "EnName": "Krampus Sack",
+                "DropBy": "A_krampus",
+                "Ability": [
+                    "14格背包"
+                ],
+                "Durability": "1000",
+                "Introduction": "击杀坎普斯极小几率获得。",
+                "Console": "krampus_sack"
+            }
+        ]
+    },
+    "Sapling": {
+        "GoodSapling": [
+            {
+                "Picture": "G_birchnut",
+                "Name": "桦木果",
+                "EnName": "Birchnut",
+                "Plants": [
+                    "N_birchnut_tree_3"
+                ],
+                "Introduction": "砍伐桦树获得。",
+                "Console": "acorn"
+            },
+            {
+                "Picture": "G_pine_cone",
+                "Name": "松果",
+                "EnName": "Pine Cone",
+                "Plants": [
+                    "N_evergreen_3"
+                ],
+                "Introduction": "砍伐常青树获得。",
+                "Console": "pinecone"
+            },
+            {
+                "Picture": "G_grass_tuft",
+                "Name": "草丛根",
+                "EnName": "Grass Tuft",
+                "Plants": [
+                    "N_grass",
+                    "N_grass_diseased"
+                ],
+                "Introduction": "挖取草或患病的草获得。",
+                "Console": "dug_grass"
+            },
+            {
+                "Picture": "G_sapling",
+                "Name": "小树苗根",
+                "EnName": "Sapling",
+                "Plants": [
+                    "N_sapling",
+                    "N_sapling_diseased"
+                ],
+                "Introduction": "挖取小树苗根或患病的小树苗根获得。",
+                "Console": "dug_sapling"
+            },
+            {
+                "Picture": "G_berry_bush",
+                "Name": "浆果丛",
+                "EnName": "Berry Bush",
+                "Plants": [
+                    "N_berry_bush_1",
+                    "N_berry_bush_diseased"
+                ],
+                "Introduction": "挖取浆果灌木丛或患病的浆果灌木丛获得。",
+                "Console": "dug_berrybush"
+            },
+            {
+                "Picture": "G_berry_bush_2",
+                "Name": "浆果丛",
+                "EnName": "Berry Bush",
+                "Plants": [
+                    "N_berry_bush_2"
+                ],
+                "Introduction": "挖取浆果灌木丛获得。",
+                "Console": "dug_berrybush2"
+            },
+            {
+                "Picture": "G_spiky_bushes",
+                "Name": "荆棘丛",
+                "EnName": "Spiky Bushes",
+                "Plants": [
+                    "N_spiky_bush"
+                ],
+                "Introduction": "挖取尖刺灌木获得。",
+                "Console": "dug_marsh_bush"
+            }
+        ]
+    },
+    "Creatures": {
+        "GoodCreatures": [
+            {
+                "Picture": "A_rabbit",
+                "Name": "兔子",
+                "EnName": "Rabbit",
+                "Fresh": 2,
+                "Goods": [
+                    "F_morsel|×1"
+                ],
+                "Console": "rabbit"
+            },
+            {
+                "Picture": "A_rabbit_winter",
+                "Name": "雪兔",
+                "EnName": "Winter Rabbit",
+                "Fresh": 2,
+                "Goods": [
+                    "F_morsel|×1"
+                ],
+                "Console": "rabbit"
+            },
+            {
+                "Picture": "A_beardling",
+                "Name": "黑兔子",
+                "EnName": "Beardling",
+                "Fresh": 2,
+                "Goods": [
+                    "F_monster_meat|×1（40%）",
+                    "G_nightmare_fuel|×1（40%）"
+                ],
+                "Console": "rabbit"
+            },
+            {
+                "Picture": "F_moleworm",
+                "Name": "鼹鼠",
+                "EnName": "Moleworm",
+                "Fresh": 2,
+                "Goods": [
+                    "F_morsel|×1"
+                ],
+                "Console": "mole"
+            },
+            {
+                "Picture": "A_bee",
+                "Name": "蜜蜂",
+                "EnName": "Bee",
+                "Fresh": 2,
+                "Goods": [
+                    "G_stinger|×1（80%）",
+                    "F_honey|×1（20%）"
+                ],
+                "Console": "bee"
+            },
+            {
+                "Picture": "A_killer_bee",
+                "Name": "杀人蜂",
+                "EnName": "Killer Bee",
+                "Fresh": 2,
+                "Goods": [
+                    "G_stinger|×1（80%）",
+                    "F_honey|×1（20%）"
+                ],
+                "Console": "killerbee"
+            },
+            {
+                "Picture": "A_butterfly",
+                "Name": "蝴蝶",
+                "EnName": "Butterfly",
+                "Fresh": 2,
+                "Goods": [
+                    "F_butterfly_wing|×1（98%）",
+                    "F_butter|×1（2%）"
+                ],
+                "Console": "butterfly"
+            },
+            {
+                "Picture": "A_mosquito",
+                "Name": "蚊子",
+                "EnName": "Mosquito",
+                "Fresh": 2,
+                "Goods": [
+                    "G_mosquito_sack|×1（50%）"
+                ],
+                "Console": "mosquito"
+            },
+            {
+                "Picture": "A_redbird",
+                "Name": "红鸟",
+                "EnName": "Redbird",
+                "Fresh": 2,
+                "Goods": [
+                    "F_morsel|×1（50%）",
+                    "G_crimson_feather|×1（50%）"
+                ],
+                "Console": "robin"
+            },
+            {
+                "Picture": "A_snowbird",
+                "Name": "雪鸟",
+                "EnName": "Snowbird",
+                "Fresh": 2,
+                "Goods": [
+                    "F_morsel|×1（50%）",
+                    "G_azure_feather|×1（50%）"
+                ],
+                "Console": "robin_winter"
+            },
+            {
+                "Picture": "A_crow",
+                "Name": "乌鸦",
+                "EnName": "Crow",
+                "Fresh": 2,
+                "Goods": [
+                    "F_morsel|×1（50%）",
+                    "G_jet_feather|×1（50%）"
+                ],
+                "Console": "crow"
+            },
+            {
+                "Picture": "G_fireflies",
+                "Name": "萤火虫",
+                "EnName": "Fireflies",
+                "Fresh": 1000,
+                "Console": "fireflies"
+            }
+        ]
+    },
+    "Trinkets": {
+        "GoodTrinkets": [
+            {
+                "Picture": "T_melty_marbles",
+                "Name": "融在一起的玻璃球",
+                "EnName": "Melty Marbles",
+                "Console": "trinket_1"
+            },
+            {
+                "Picture": "T_fake_kazoo",
+                "Name": "卡祖笛仿造品",
+                "EnName": "Fake Kazoo",
+                "Console": "trinket_2"
+            },
+            {
+                "Picture": "T_gord's_knot",
+                "Name": "戈德结",
+                "EnName": "Gord's Knot",
+                "Console": "trinket_3"
+            },
+            {
+                "Picture": "T_gnome_1",
+                "Name": "地精玩偶",
+                "EnName": "Gnome",
+                "Console": "trinket_4"
+            },
+            {
+                "Picture": "T_tiny_rocketship",
+                "Name": "迷你火箭飞船",
+                "EnName": "Tiny Rocketship",
+                "Console": "trinket_5"
+            },
+            {
+                "Picture": "T_frazzled_wires",
+                "Name": "被磨破的电线",
+                "EnName": "Frazzled Wires",
+                "Console": "trinket_6"
+            },
+            {
+                "Picture": "T_ball_and_cup",
+                "Name": "剑玉",
+                "EnName": "Ball and Cup",
+                "Console": "trinket_7"
+            },
+            {
+                "Picture": "T_hardened_rubber_bung",
+                "Name": "硬化橡胶塞",
+                "EnName": "Hardened Rubber Bung",
+                "Console": "trinket_8"
+            },
+            {
+                "Picture": "T_mismatched_buttons",
+                "Name": "配错的纽扣",
+                "EnName": "Mismatched Buttons",
+                "Console": "trinket_9"
+            },
+            {
+                "Picture": "T_second_hand_dentures",
+                "Name": "二手假牙",
+                "EnName": "Second Hand Dentures",
+                "Console": "trinket_10"
+            },
+            {
+                "Picture": "T_lying_robot",
+                "Name": "坐在地上的机器人",
+                "EnName": "Lying Robot",
+                "Console": "trinket_11"
+            },
+            {
+                "Picture": "T_dessicated_tentacle",
+                "Name": "干燥的触手",
+                "EnName": "Dessicated Tentacle",
+                "Console": "trinket_12"
+            },
+            {
+                "Picture": "T_gnome_2",
+                "Name": "地精玩偶",
+                "EnName": "Gnome",
+                "Console": "trinket_13"
+            },
+            {
+                "Picture": "T_leaky_teacup",
+                "Name": "缺口的茶杯",
+                "EnName": "Leaky Teacup",
+                "Console": "trinket_14"
+            },
+            {
+                "Picture": "T_white_bishop",
+                "Name": "白棋主教",
+                "EnName": "White Bishop",
+                "Console": "trinket_15"
+            },
+            {
+                "Picture": "T_black_bishop",
+                "Name": "黑棋主教",
+                "EnName": "Black Bishop",
+                "Console": "trinket_16"
+            },
+            {
+                "Picture": "T_bent_spork",
+                "Name": "弯曲的叉勺",
+                "EnName": "Bent Spork",
+                "Console": "trinket_17"
+            },
+            {
+                "Picture": "T_toy_trojan_horse",
+                "Name": "玩具特洛伊木马",
+                "EnName": "Toy Trojan Horse",
+                "Console": "trinket_18"
+            },
+            {
+                "Picture": "T_unbalanced_top",
+                "Name": "不稳定的陀螺",
+                "EnName": "Unbalanced Top",
+                "Console": "trinket_19"
+            },
+            {
+                "Picture": "T_back_scratcher",
+                "Name": "挠痒器",
+                "EnName": "Back Scratcher",
+                "Console": "trinket_20"
+            },
+            {
+                "Picture": "T_beaten_beater",
+                "Name": "搅拌器",
+                "EnName": "Beaten beater",
+                "Console": "trinket_21"
+            },
+            {
+                "Picture": "T_frayed_yarn",
+                "Name": "磨损的毛线",
+                "EnName": "Frayed Yarn",
+                "Console": "trinket_22"
+            },
+            {
+                "Picture": "T_shoe_horn",
+                "Name": "鞋拔",
+                "EnName": "Shoe Horn",
+                "Console": "trinket_23"
+            },
+            {
+                "Picture": "T_lucky_cat_jar",
+                "Name": "幸运猫罐",
+                "EnName": "Lucky Cat Jar",
+                "Console": "trinket_24"
+            },
+            {
+                "Picture": "T_air_unfreshener",
+                "Name": "空气非清新剂",
+                "EnName": "Air Unfreshener",
+                "Console": "trinket_25"
+            },
+            {
+                "Picture": "T_potato_cup",
+                "Name": "土豆杯",
+                "EnName": "Potato Cup",
+                "Console": "trinket_26"
+            },
+            {
+                "Picture": "T_wire_hanger",
+                "Name": "铁丝衣架",
+                "EnName": "Wire Hanger",
+                "Console": "trinket_27"
+            }
+        ]
+    },
+    "Turf": {
+        "GoodTurf": [
+            {
+                "Picture": "S_cobblestones",
+                "Name": "鹅卵石",
+                "EnName": "Cobblestones",
+                "Make": "S_cobblestones",
+                "Texture": "Texture_cobblestone",
+                "Introduction": "使玩家和所有生物加速30%，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的鹅卵石足够大时，附近只会出现乌鸦。",
+                "Console": "turf_road"
+            },
+            {
+                "Picture": "S_wooden_flooring",
+                "Name": "木质地板",
+                "EnName": "Wooden Flooring",
+                "Make": "S_wooden_flooring",
+                "Texture": "Texture_wooden_flooring",
+                "Introduction": "猪王和试金石所在地的地皮，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的木质地板足够大时，附近只会出现乌鸦。",
+                "Console": "turf_woodfloor"
+            },
+            {
+                "Picture": "S_checkered_flooring",
+                "Name": "棋格地板",
+                "EnName": "Checkered Flooring",
+                "Make": "S_checkered_flooring",
+                "Texture": "Texture_checkered_flooring",
+                "Introduction": "出现在棋盘区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的方格地板足够大时，附近只会出现乌鸦。在船难版中，不会产生水坑，但是依然会被潮汐和洪水淹没。",
+                "Console": "turf_checkerfloor"
+            },
+            {
+                "Picture": "S_carpeted_flooring",
+                "Name": "地毯地板",
+                "EnName": "Carpeted Flooring",
+                "Make": "S_carpeted_flooring",
+                "Texture": "Texture_carpeted_flooring",
+                "Introduction": "出现在棋盘区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的地毯地板足够大时，附近只会出现乌鸦。在船难版中，不会产生水坑，但是依然会被潮汐和洪水淹没。",
+                "Console": "turf_carpetfloor"
+            },
+            {
+                "Picture": "G_deciduous_turf",
+                "Name": "落叶林地皮",
+                "EnName": "Deciduous Turf",
+                "Texture": "Texture_deciduous_turf",
+                "Introduction": "出现在落叶阔叶林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的季节性草地足够大时，附近只会出现乌鸦。",
+                "Console": "turf_deciduous"
+            },
+            {
+                "Picture": "G_forest_turf",
+                "Name": "森林地皮",
+                "EnName": "Forest Turf",
+                "Texture": "Texture_forest_turf",
+                "Introduction": "出现在森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的森林地皮足够大时，附近只会出现乌鸦、红鸟和雪鸟。",
+                "Console": "turf_forest"
+            },
+            {
+                "Picture": "G_grass_turf",
+                "Name": "草地地皮",
+                "EnName": "Grass Turf",
+                "Texture": "Texture_grass_turf",
+                "Introduction": "出现在草原区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的长草地皮足够大时，附近只会出现红鸟和雪鸟。",
+                "Console": "turf_grass"
+            },
+            {
+                "Picture": "G_marsh_turf",
+                "Name": "沼泽地皮",
+                "EnName": "Marsh Turf",
+                "Texture": "Texture_marsh_turf",
+                "Introduction": "出现在沼泽区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的沼泽地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_marsh"
+            },
+            {
+                "Picture": "G_rocky_turf",
+                "Name": "岩石地皮",
+                "EnName": "Rocky Turf",
+                "Texture": "Texture_rocky_turf",
+                "Introduction": "出现在矿区区域，不能在上面种植植物，但是可以种植食人花(眼球草不会生长)，当铺设的岩石地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_rocky"
+            },
+            {
+                "Picture": "G_sandy_turf",
+                "Name": "沙漠地皮",
+                "EnName": "Sandy Turf",
+                "Texture": "Texture_sandy_turf",
+                "Introduction": "出现在沙漠区域，不能在上面种植植物，但是可以种植食人花(眼球草不会生长)，当铺设的沙地足够大时，附近只会出现乌鸦。",
+                "Console": "turf_desertdirt"
+            },
+            {
+                "Picture": "G_savanna_turf",
+                "Name": "草原地皮",
+                "EnName": "Savanna Turf",
+                "Texture": "Texture_savanna_turf",
+                "Introduction": "出现在稀树大草原区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的草原地皮足够大时，附近只会出现乌鸦、红鸟和雪鸟。",
+                "Console": "turf_savanna"
+            },
+            {
+                "Picture": "G_cave_rock_turf",
+                "Name": "洞穴岩石地皮",
+                "EnName": "Cave Rock Turf",
+                "Texture": "Texture_cave_rock_turf",
+                "Introduction": "出现在岩石平原和石笋生物群落区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的洞穴石地足够大时，附近只会出现乌鸦。",
+                "Console": "turf_underrock"
+            },
+            {
+                "Picture": "G_fungal_turf_blue",
+                "Name": "真菌地皮(蓝)",
+                "EnName": "Fungal Turf",
+                "Texture": "Texture_fungal_turf_blue",
+                "Introduction": "出现在蘑菇树森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的真菌地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_fungus"
+            },
+            {
+                "Picture": "G_fungal_turf_green",
+                "Name": "真菌地皮(绿)",
+                "EnName": "Fungal Turf",
+                "Texture": "Texture_fungal_turf_green",
+                "Introduction": "出现在蘑菇树森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的真菌地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_fungus_green"
+            },
+            {
+                "Picture": "G_fungal_turf_red",
+                "Name": "真菌地皮(红)",
+                "EnName": "Fungal Turf",
+                "Texture": "Texture_fungal_turf_red",
+                "Introduction": "出现在蘑菇树森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的真菌地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_fungus_red"
+            },
+            {
+                "Picture": "G_guano_turf",
+                "Name": "蝙蝠粪地皮",
+                "EnName": "Guano Turf",
+                "Texture": "Texture_guano_turf",
+                "Introduction": "出现在石笋生物群落区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的蝙蝠粪地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_cave"
+            },
+            {
+                "Picture": "G_mud_turf",
+                "Name": "淤泥地皮",
+                "EnName": "Mud Turf",
+                "Texture": "Texture_mud_turf",
+                "Introduction": "出现在沉没森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的淤泥地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_mud"
+            },
+            {
+                "Picture": "G_slimey_turf",
+                "Name": "粘泥地皮",
+                "EnName": "Slimey Turf",
+                "Texture": "Texture_slimey_turf",
+                "Introduction": "出现在沉没森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的粘滑地皮足够大时，附近只会出现乌鸦。",
+                "Console": "turf_sinkhole"
+            },
+            {
+                "Picture": "G_sticky_webbing",
+                "Name": "粘蛛网",
+                "EnName": "Sticky Webbing",
+                "Texture": "Texture_sticky_webbing",
+                "Introduction": "不可以挖出！出现在蜘蛛巢周围，如果踩在上面会导致蜘蛛出现和调查，如果看不到威胁就会回巢穴(白蜘蛛除外)。所有经过的生物都会被减速，除了蜘蛛和韦伯。摧毁蜘蛛巢后粘蛛网会消失。"
+            }
+        ]
+    },
+    "Pet": {
+        "GoodPet": [
+            {
+                "Picture": "G_eye_bone",
+                "Name": "切斯特眼骨",
+                "EnName": "Eye Bone",
+                "Dead": "G_eye_bone_died",
+                "Follow": [
+                  "A_chester"
+                ],
+                "Introduction": "通常可以在鹅卵石的尽头找到，也有可能在沼泽附近。眼骨可以召唤切斯特并让切斯特跟随，放在地上或切斯特里会使切斯特停止跟随。切斯特死亡后眼骨将闭眼，一天后切斯特重生。",
+                "Console": "chester_eyebone"
+              },
+              {
+                "Picture": "G_eye_bone_snow",
+                "Name": "寒冰切斯特眼骨",
+                "EnName": "Eye Bone",
+                "Dead": "G_eye_bone_died_snow",
+                "Follow": [
+                  "A_snow_chester"
+                ],
+                "Introduction": "通常可以在鹅卵石的尽头找到，也有可能在沼泽附近。眼骨可以召唤切斯特并让切斯特跟随，放在地上或切斯特里会使切斯特停止跟随。切斯特死亡后眼骨将闭眼，一天后切斯特重生。",
+                "Console": "chester_eyebone"
+              },
+              {
+                "Picture": "G_eye_bone_shadow",
+                "Name": "暗影切斯特眼骨",
+                "EnName": "Eye Bone",
+                "Dead": "G_eye_bone_died_shadow",
+                "Follow": [
+                  "A_shadow_chester"
+                ],
+                "Introduction": "通常可以在鹅卵石的尽头找到，也有可能在沼泽附近。眼骨可以召唤切斯特并让切斯特跟随，放在地上或切斯特里会使切斯特停止跟随。切斯特死亡后眼骨将闭眼，一天后切斯特重生。",
+                "Console": "chester_eyebone"
+              }
+        ]
+    },
+    "Unlock": {
+        "GoodUnlock": [
+            {
+                "Picture": "G_webber's_skull",
+                "Name": "韦伯的头颅",
+                "EnName": "Webbers Skull",
+                "DropBy": [
+                    "A_spider",
+                    "A_spider_warrior",
+                    "A_spitter",
+                    "A_cave_spider",
+                    "A_dangling_depth_dweller",
+                    "A_spider_queen",
+                    "N_spider_den",
+                    "N_spilagmite"
+                ],
+                "UnlockCharacter": "C_webber",
+                "Introduction": "每次击杀任何蜘蛛或拆蜘蛛巢和蛛网岩都有5%的几率掉落维伯的头颅，把维伯的头颅放进挖开的坟墓中，坟墓会被闪电劈中，维伯会出现，然后跳回坟墓消失，并出现6只蜘蛛，维伯就解锁了(不需要杀死蜘蛛)。",
+                "Console": "webberskull"
+            }
+        ]
+    },
+    "Component": {
+        "Good": [
+            {
+                "Picture": "G_box_thing_1",
+                "Name": "盒状传送机零件",
+                "EnName": "Box Thing",
+                "Introduction": "盒状传送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_box"
+            },
+            {
+                "Picture": "G_box_thing_2",
+                "Name": "盒状传送机零件（冒险模式）",
+                "EnName": "Box Thing",
+                "Introduction": "盒状传送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_box"
+            },
+            {
+                "Picture": "G_crank_thing_1",
+                "Name": "曲柄状传送机零件",
+                "EnName": "Crank Thing",
+                "Introduction": "曲柄状送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_crank"
+            },
+            {
+                "Picture": "G_crank_thing_2",
+                "Name": "曲柄状传送机零件（冒险模式）",
+                "EnName": "Crank Thing",
+                "Introduction": "曲柄状送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_crank"
+            },
+            {
+                "Picture": "G_metal_potato_thing_1",
+                "Name": "球状传送机零件",
+                "EnName": "Metal Potato Thing",
+                "Introduction": "球状传送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_potato"
+            },
+            {
+                "Picture": "G_metal_potato_thing_2",
+                "Name": "球状传送机零件（冒险模式）",
+                "EnName": "Metal Potato Thing",
+                "Introduction": "球状传送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_potato"
+            },
+            {
+                "Picture": "G_ring_thing_1",
+                "Name": "环状传送机零件",
+                "EnName": "Ring Thing",
+                "Introduction": "环状传送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_ring"
+            },
+            {
+                "Picture": "G_ring_thing_2",
+                "Name": "环状传送机零件（冒险模式）",
+                "EnName": "Ring Thing",
+                "Introduction": "环状传送机零件是用来制作传送机的四个零件之一。",
+                "Console": "teleportato_ring"
+            }
+        ]
+    },
+    "GoodOthers": {
+        "Good": [
+            {
+                "Picture": "G_blueprint",
+                "Name": "科技蓝图",
+                "EnName": "Blueprint",
+                "Introduction": "蓝图通常可以在风滚草和X标记点找到，冒险模式的开始也可以找到一些。使用蓝图将会恢复15点精神，并且解锁某个科技，旧钟科技只能通过蓝图解锁。(以上规律不适用于远古科技)",
+                "Console": "(prefab name)_blueprint"
+            }
+        ]
+    }
+}
