@@ -17,9 +17,9 @@ using 饥荒百科全书CSharp.Class;
 namespace 饥荒百科全书CSharp.View.Details
 {
     /// <summary>
-    /// FoodDetail.xaml 的交互逻辑
+    /// GoodTurfDetail.xaml 的交互逻辑
     /// </summary>
-    public partial class FoodDetail : Page
+    public partial class GoodTurfDetail : Page
     {
         private int _loadedTime;
 
@@ -27,38 +27,32 @@ namespace 饥荒百科全书CSharp.View.Details
         {
             if (e.ExtraData == null || _loadedTime != 0) return;
             _loadedTime++;
-            LoadData((Food)e.ExtraData);
+            LoadData((GoodTurf)e.ExtraData);
         }
 
-        public FoodDetail()
+        public GoodTurfDetail()
         {
             InitializeComponent();
-            Global.FoodLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
+            Global.GoodLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
 
-
-        private void LoadData(Food c)
+        private void LoadData(GoodTurf c)
         {
-            FoodImage.Source = new BitmapImage(new Uri(c.Picture, UriKind.Relative));
-            FoodName.Text = c.Name;
-            FoodEnName.Text = c.EnName;
-            FoodHealth.Value = c.Health;
-            FoodHealth.BarColor = Global.ColorGreen;
-            FoodHunger.Value = c.Hunger;
-            FoodHunger.BarColor = Global.ColorKhaki;
-            FoodSanity.Value = c.Sanity;
-            FoodSanity.BarColor = Global.ColorRed;
-            FoodPerish.Value = c.Perish;
-            FoodPerish.BarColor = Global.ColorBlue;
-            Attribute1PicButton.Source = $"/Resources/GameResources/Foods/{c.Attribute}.png";
-            Attribute1PicButton.Text = c.AttributeValue ?? c.Attribute;
-            if (c.AttributeValue2 != null)
+            GoodImage.Source = new BitmapImage(new Uri(c.Picture, UriKind.Relative));
+            GoodName.Text = c.Name;
+            GoodEnName.Text = c.EnName;
+            // 制作科技
+            if (string.IsNullOrEmpty(c.Make))
             {
-                Attribute2PicButton.Source = $"/Resources/GameResources/Foods/{c.Attribute2}.png";
-                Attribute2PicButton.Text = c.AttributeValue2;
-                Attribute2PicButton.Visibility = Visibility.Visible;
+                GoodMakeStackPanel.Visibility = Visibility.Collapsed;
             }
-            FoodIntroduction.Text = c.Introduce;
+            else
+            {
+                GoodMakePicButton.Source = StringProcess.GetGameResourcePath(c.Make);
+            }
+            //草皮纹理
+            GoodSourceTextureWrapPanel.Source = new BitmapImage(new Uri(StringProcess.GetGameResourcePath(c.Texture), UriKind.Relative));
+            GoodIntroduction.Text = c.Introduction;
             ConsolePre.Text = $"c_give(\"{c.Console}\",";
         }
 

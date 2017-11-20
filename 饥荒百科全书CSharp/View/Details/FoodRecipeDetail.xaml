@@ -21,14 +21,13 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="20" />
             </Grid.RowDefinitions>
             <Image Grid.Row="0" x:Name="FoodRecipeImage" Stretch="Uniform" Height="64" HorizontalAlignment="Center" />
+            <Image Grid.Row="0" x:Name="FoodRecipePortableCrockPot" Height="32" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,0,0" Visibility="Collapsed"/>
             <TextBlock Grid.Row="1" x:Name="FoodRecipeName" FontSize="26" HorizontalAlignment="Center" />
             <TextBlock Grid.Row="2" x:Name="FoodRecipeEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" />
-            <Image Grid.Row="3" x:Name="FoodRecipePortableCrockPot" Height="32" HorizontalAlignment="Center" Margin="0,5,0,0" Visibility="Collapsed"/>
-            <StackPanel Grid.Row="4" Margin="10">
+            <StackPanel Grid.Row="3" Margin="10">
                 <uc:BarChart x:Name="FoodRecipeHealth" Label="生命" MaxValue="100"/>
                 <uc:BarChart x:Name="FoodRecipeHunger" Label="饥饿" MaxValue="150"/>
                 <uc:BarChart x:Name="FoodRecipeSanity" Label="精神" MaxValue="50"/>
@@ -38,7 +37,7 @@
                 <uc:BarChart x:Name="FoodTemperature" Label="温度" MaxValue="40"/>
                 <uc:BarChart x:Name="FoodTemperatureDuration" Label="温时" MaxValue="15"/>
             </StackPanel>
-            <StackPanel x:Name="FoodNeedStackPanel" Grid.Row="5" Margin="10,5,0,0">
+            <StackPanel x:Name="FoodNeedStackPanel" Grid.Row="4" Margin="10,5,0,0">
                 <TextBlock Text="烹饪需求：" Background="#55B2ECED"/>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                     <uc:PicButton x:Name="Need1Button"/>
@@ -47,11 +46,11 @@
                     <uc:PicButton x:Name="Need3Button" Margin="20,0,0,0" Visibility="Collapsed"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Row="6" Margin="10,5,0,0">
+            <StackPanel Grid.Row="5" Margin="10,5,0,0">
                 <TextBlock x:Name="FoodRecipeRestrictionsTextBlock" Text="填充限制："  Background="#55B2ECED"/>
                 <StackPanel x:Name="FoodRecipeRestrictionsStackPanel" HorizontalAlignment="Center" Orientation="Vertical"/>
             </StackPanel>
-            <StackPanel x:Name="FoodRecommendStackPanel" Grid.Row="7" Margin="10,5,0,0">
+            <StackPanel x:Name="FoodRecommendStackPanel" Grid.Row="6" Margin="10,5,0,0">
                 <TextBlock Text="推荐食谱：" Background="#55B2ECED"/>
                 <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
@@ -62,8 +61,8 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-            <TextBlock Grid.Row="8" x:Name="FoodRecipeIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" />
-            <Grid Grid.Row="9" HorizontalAlignment="Center">
+            <TextBlock Grid.Row="7" x:Name="FoodRecipeIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" />
+            <Grid Grid.Row="8" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -75,7 +74,7 @@
                 <TextBlock Grid.Column="2" x:Name="ConsolePos" Text=")" Margin="0,5,15,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
                 <Button Grid.Column="3" HorizontalAlignment="Left" Content="复制" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
             </Grid>
-            <Grid Grid.Row="10"/>
+            <Grid Grid.Row="9"/>
         </Grid>
 </ScrollViewer>
 </Page>

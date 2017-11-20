@@ -476,25 +476,25 @@ namespace 饥荒百科全书CSharp
         {
             RightFrame.Navigate(new Uri("../View/FoodPage.xaml", UriKind.Relative));
         }
-        private void Sidebar_Science_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
         private void Sidebar_Cooking_Simulator_Click(object sender, RoutedEventArgs e)
         {
 
         }
+        private void Sidebar_Science_Click(object sender, RoutedEventArgs e)
+        {
+            RightFrame.Navigate(new Uri("../View/SciencePage.xaml", UriKind.Relative));
+        }
         private void Sidebar_Animal_Click(object sender, RoutedEventArgs e)
         {
-
+            RightFrame.Navigate(new Uri("../View/CreaturePage.xaml", UriKind.Relative));
         }
         private void Sidebar_Natural_Click(object sender, RoutedEventArgs e)
         {
-
+            RightFrame.Navigate(new Uri("../View/NaturalPage.xaml", UriKind.Relative));
         }
         private void Sidebar_Goods_Click(object sender, RoutedEventArgs e)
         {
-
+            RightFrame.Navigate(new Uri("../View/GoodPage.xaml", UriKind.Relative));
         }
         private void Sidebar_DedicatedServer_Click(object sender, RoutedEventArgs e)
         {

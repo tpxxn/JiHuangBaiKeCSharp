@@ -46,7 +46,7 @@ namespace 饥荒百科全书CSharp.View.Details
             if (c.PortableCrockPot)
             {
                 FoodRecipePortableCrockPot.Visibility = Visibility.Visible;
-                FoodRecipePortableCrockPot.Source = new BitmapImage(new Uri("/饥荒百科全书CSharp;component/Resources/CP_PortableCrockPot.png"));
+                FoodRecipePortableCrockPot.Source = new BitmapImage(new Uri("/Resources/CP_PortableCrockPot.png", UriKind.Relative));
             }
             FoodRecipeHealth.Value = c.Health;
             FoodRecipeHealth.BarColor = Global.ColorGreen;

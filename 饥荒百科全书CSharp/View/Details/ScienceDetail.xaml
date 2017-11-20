@@ -1,4 +1,4 @@
-﻿<Page x:Class="饥荒百科全书CSharp.View.Details.FoodDetail"
+﻿<Page x:Class="饥荒百科全书CSharp.View.Details.ScienceDetail"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,9 +7,9 @@
       xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="FoodDetail">
+      Title="ScienceDetail">
 
-    <ScrollViewer x:Name="FoodLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
+    <ScrollViewer x:Name="ScienceLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -21,23 +21,25 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="20" />
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" x:Name="FoodImage" Stretch="Uniform" Height="85" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="1" x:Name="FoodName" FontSize="26" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="2" x:Name="FoodEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" />
-            <StackPanel Grid.Row="3" Margin="10">
-                <uc:BarChart x:Name="FoodHealth" Label="生命" MaxValue="100"/>
-                <uc:BarChart x:Name="FoodHunger" Label="饥饿" MaxValue="150"/>
-                <uc:BarChart x:Name="FoodSanity" Label="精神" MaxValue="50"/>
-                <uc:BarChart x:Name="FoodPerish" Label="保鲜" MaxValue="40"/>
-            </StackPanel>
-            <StackPanel x:Name="FoodAttributeStackPanel" Grid.Row="4" Margin="10,5,0,0">
-                <TextBlock Text="食物属性：" Background="#55B2ECED"/>
+            <Image Grid.Row="0" x:Name="ScienceImage" Stretch="Uniform" Height="85" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="1" x:Name="ScienceName" FontSize="26" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="2" x:Name="ScienceEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" />
+            <StackPanel Grid.Row="3" x:Name="ScienceNeedStackPanel" Margin="0,5,0,0">
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <uc:PicButton x:Name="Attribute1PicButton"/>
-                    <uc:PicButton x:Name="Attribute2PicButton" Visibility="Collapsed" Margin="5,0,0,0"/>
+                    <uc:PicButton x:Name="Need1PicButton"/>
+                    <uc:PicButton x:Name="Need2PicButton" Margin="10,0,0,0" Visibility="Collapsed"/>
+                    <uc:PicButton x:Name="Need3PicButton" Margin="10,0,0,0" Visibility="Collapsed"/>
                 </StackPanel>
             </StackPanel>
-            <TextBlock Grid.Row="5" x:Name="FoodIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" />
+            <StackPanel Grid.Row="4" x:Name="ScienceUnlockStackPanel" Margin="10">
+                <TextBlock Text="解锁：" Background="#55B2ECED"/>
+                <Button x:Name="UnlockCharcterButton" Cursor="{StaticResource CursorLink}" Width="81" Height="126" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" Visibility="Collapsed">
+                    <Image x:Name="UnlockCharcterImage" Height="123" Margin="-10"/>
+                </Button>
+                <uc:PicButton x:Name="UnlockPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60"/>
+                <uc:PicButton x:Name="UnlockBlueprintPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60"/>
+            </StackPanel>
+            <TextBlock Grid.Row="5" x:Name="ScienceIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" />
             <Grid Grid.Row="6" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>

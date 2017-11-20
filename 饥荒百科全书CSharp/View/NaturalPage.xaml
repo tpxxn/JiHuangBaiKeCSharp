@@ -1,0 +1,53 @@
+﻿<Page x:Class="饥荒百科全书CSharp.View.NaturalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:饥荒百科全书CSharp.View"
+      xmlns:class="clr-namespace:饥荒百科全书CSharp.Class"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="888"
+      Title="NaturalPage" SizeChanged="Page_SizeChanged">
+    
+    <Page.Resources>
+        <DataTemplate x:Key="NaturalDataTemplate" DataType="class:Nature">
+            <Button Click="NaturalButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+                <Grid Margin="5" Width="100" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image x:Name="Image" Source="{Binding Picture}" Stretch="Uniform" />
+                    <TextBlock Grid.Row="1" Text="{Binding Name}" HorizontalAlignment="Center" />
+                </Grid>
+            </Button>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="RootGrid" Background="#FEFFFFFF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
+            <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="LeftFrame"/>
+        <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource CursorHorz}" Style="{DynamicResource GridSplitterStyle}" />
+        <ScrollViewer x:Name="ScrollViewerRight" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Expander x:Name="BiomesExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="生物群落" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource NaturalDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

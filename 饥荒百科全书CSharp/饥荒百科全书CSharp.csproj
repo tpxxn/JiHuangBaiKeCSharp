@@ -137,8 +137,14 @@
     <Compile Include="View\CharacterPage.xaml.cs">
       <DependentUpon>CharacterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CreaturePage.xaml.cs">
+      <DependentUpon>CreaturePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Details\CharacterDetail.xaml.cs">
       <DependentUpon>CharacterDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\CreatureDetail.xaml.cs">
+      <DependentUpon>CreatureDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Details\FoodDetail.xaml.cs">
       <DependentUpon>FoodDetail.xaml</DependentUpon>
@@ -146,8 +152,47 @@
     <Compile Include="View\Details\FoodRecipeDetail.xaml.cs">
       <DependentUpon>FoodRecipeDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Details\GoodCreaturesDetail.xaml.cs">
+      <DependentUpon>GoodCreaturesDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\GoodDetail.xaml.cs">
+      <DependentUpon>GoodDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\GoodEquipmentDetail.xaml.cs">
+      <DependentUpon>GoodEquipmentDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\GoodMaterialDetail.xaml.cs">
+      <DependentUpon>GoodMaterialDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\GoodPetDetail.xaml.cs">
+      <DependentUpon>GoodPetDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\GoodSaplingDetail.xaml.cs">
+      <DependentUpon>GoodSaplingDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\GoodTurfDetail.xaml.cs">
+      <DependentUpon>GoodTurfDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\GoodUnlockDetail.xaml.cs">
+      <DependentUpon>GoodUnlockDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\NaturalDetail.xaml.cs">
+      <DependentUpon>NaturalDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\ScienceDetail.xaml.cs">
+      <DependentUpon>ScienceDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FoodPage.xaml.cs">
       <DependentUpon>FoodPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GoodPage.xaml.cs">
+      <DependentUpon>GoodPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NaturalPage.xaml.cs">
+      <DependentUpon>NaturalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SciencePage.xaml.cs">
+      <DependentUpon>SciencePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
@@ -255,7 +300,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\CreaturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Details\CharacterDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\CreatureDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -267,7 +320,59 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Details\GoodCreaturesDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\GoodDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\GoodEquipmentDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\GoodMaterialDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\GoodPetDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\GoodSaplingDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\GoodTurfDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\GoodUnlockDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\NaturalDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\ScienceDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\FoodPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\GoodPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NaturalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SciencePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

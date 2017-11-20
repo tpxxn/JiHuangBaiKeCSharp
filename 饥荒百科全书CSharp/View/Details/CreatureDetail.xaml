@@ -1,0 +1,66 @@
+﻿<Page x:Class="饥荒百科全书CSharp.View.Details.CreatureDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:饥荒百科全书CSharp.View.Details"
+      xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="CreatureDetail">
+
+    <ScrollViewer x:Name="CreatureLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
+        <Grid x:Name="CreaturesRootGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" x:Name="CreatureImage" Stretch="Uniform" Height="85" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="1" x:Name="CreatureName" FontSize="26" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="2" x:Name="CreatureEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" />
+            <StackPanel Grid.Row="3" x:Name="BaructackPanel1" Margin="10">
+                <uc:BarChart x:Name="CreatureHealth" Label="生命" MaxValue="27500" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureAttack" Label="攻击力" MaxValue="150" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureAttackInterval" Label="攻击间隔" MaxValue="7.5" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureAttackScope" Label="攻击范围" MaxValue="25" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureMoveSpeed" Label="移动速度" MaxValue="20" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureRunSpeed" Label="奔跑速度" MaxValue="10" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureDangerous" Label="危险程度" MaxValue="60" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureSanityEffect" Label="精神影响" MaxValue="400" LabelWidth="60"/>
+            </StackPanel>
+            <StackPanel x:Name="ActiveAttackAndTeamWorkStackPanel" Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                <CheckBox Name="ActiveAttackCheckBox" Content="主动攻击" IsEnabled="False" Style="{StaticResource CheckBoxStyle1}"/>
+                <CheckBox Name="TeamWorkCheckBox" Content="团队合作" IsEnabled="False" Style="{StaticResource CheckBoxStyle1}" Margin="50,0,0,0" />
+            </StackPanel>
+            <TextBlock Grid.Row="5" x:Name="GoodsTextBlock" Text="战利品：" Background="#55B2ECED" Margin="10"/>
+            <WrapPanel Grid.Row="6" x:Name="GoodsWrapPanel" Orientation="Horizontal"/>
+            <TextBlock x:Name="AbilityTextBlock" Grid.Row="7" Text="特殊能力：" Background="#55B2ECED" Margin="10"/>
+            <StackPanel x:Name="AbilityStackPanel" Grid.Row="8" HorizontalAlignment="Left" Margin="10"/>
+            <TextBlock Grid.Row="10" x:Name="CreatureIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10,20,10,10" />
+            <Grid x:Name="CopyGrid" Grid.Row="11" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="ConsolePre" Margin="0,5,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
+                <TextBox x:Name="ConsoleNum" Grid.Column="1" Text="1" MaxLength="4" Cursor="{StaticResource CursorText}" TextChanged="ConsoleNum_TextChanged" TextAlignment="Center" Margin="0,5,0,0" FontSize="14"/>
+                <TextBlock Grid.Column="2" x:Name="ConsolePos" Text=")" Margin="0,5,15,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
+                <Button Grid.Column="3" HorizontalAlignment="Left" Content="复制" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
+            </Grid>
+            <Grid Grid.Row="12"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

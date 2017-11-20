@@ -126,6 +126,7 @@ namespace 饥荒百科全书CSharp.View
             var food = (Food)((Button)sender).DataContext;
             LeftFrame.NavigationService.Navigate(new FoodDetail(), food);
         }
+
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             UiSplitter.Height = ActualHeight;

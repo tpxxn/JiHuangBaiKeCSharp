@@ -17,9 +17,9 @@ using 饥荒百科全书CSharp.Class;
 namespace 饥荒百科全书CSharp.View.Details
 {
     /// <summary>
-    /// FoodDetail.xaml 的交互逻辑
+    /// GoodDetail.xaml 的交互逻辑
     /// </summary>
-    public partial class FoodDetail : Page
+    public partial class GoodDetail : Page
     {
         private int _loadedTime;
 
@@ -27,38 +27,22 @@ namespace 饥荒百科全书CSharp.View.Details
         {
             if (e.ExtraData == null || _loadedTime != 0) return;
             _loadedTime++;
-            LoadData((Food)e.ExtraData);
+            LoadData((Good)e.ExtraData);
         }
 
-        public FoodDetail()
+        public GoodDetail()
         {
             InitializeComponent();
-            Global.FoodLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
+            Global.GoodLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
 
-
-        private void LoadData(Food c)
+        private void LoadData(Good c)
         {
-            FoodImage.Source = new BitmapImage(new Uri(c.Picture, UriKind.Relative));
-            FoodName.Text = c.Name;
-            FoodEnName.Text = c.EnName;
-            FoodHealth.Value = c.Health;
-            FoodHealth.BarColor = Global.ColorGreen;
-            FoodHunger.Value = c.Hunger;
-            FoodHunger.BarColor = Global.ColorKhaki;
-            FoodSanity.Value = c.Sanity;
-            FoodSanity.BarColor = Global.ColorRed;
-            FoodPerish.Value = c.Perish;
-            FoodPerish.BarColor = Global.ColorBlue;
-            Attribute1PicButton.Source = $"/Resources/GameResources/Foods/{c.Attribute}.png";
-            Attribute1PicButton.Text = c.AttributeValue ?? c.Attribute;
-            if (c.AttributeValue2 != null)
-            {
-                Attribute2PicButton.Source = $"/Resources/GameResources/Foods/{c.Attribute2}.png";
-                Attribute2PicButton.Text = c.AttributeValue2;
-                Attribute2PicButton.Visibility = Visibility.Visible;
-            }
-            FoodIntroduction.Text = c.Introduce;
+            GoodImage.Source = new BitmapImage(new Uri(c.Picture, UriKind.Relative));
+            GoodName.Text = c.Name;
+            GoodEnName.Text = c.EnName;
+            if (string.IsNullOrEmpty(c.Introduction) == false)
+                GoodIntroduction.Text = c.Introduction;
             ConsolePre.Text = $"c_give(\"{c.Console}\",";
         }
 
