@@ -70,22 +70,22 @@ namespace 饥荒百科全书CSharp.Class
             switch (strHead)
             {
                 case "A":
-                    str = $"/Resources/GameResources/Animal/{str}.png";
+                    str = $"/Resources/GameResources/Creatures/{str}.png";
                     break;
                 case "C":
                     str = $"/Resources/GameResources/Characters/{str}.png";
                     break;
                 case "F":
-                    str = $"/Resources/GameResources/Food/{str}.png";
+                    str = $"/Resources/GameResources/Foods/{str}.png";
                     break;
                 case "G":
                     str = $"/Resources/GameResources/Goods/{str}.png";
                     break;
                 case "N":
-                    str = $"/Resources/GameResources/Natural/{str}.png";
+                    str = $"/Resources/GameResources/Natures/{str}.png";
                     break;
                 case "S":
-                    str = $"/Resources/GameResources/Science/{str}.png";
+                    str = $"/Resources/GameResources/Sciences/{str}.png";
                     break;
                 case "T":
                     str = $"/Resources/GameResources/Goods/{str}.png";
@@ -100,18 +100,25 @@ namespace 饥荒百科全书CSharp.Class
         /// <param name="textbox">文本框对象</param>
         public static void ConsoleNumTextCheck(TextBox textbox)
         {
-            if (!Regex.IsMatch(textbox.Text, "^\\d*\\.?\\d*$") && textbox.Text != "")
+            try
             {
-                int pos = textbox.SelectionStart - 1;
-                textbox.Text = textbox.Text.Remove(pos, 1);
-                textbox.SelectionStart = pos;
-            }
-            if (textbox.Text != "")
-            {
-                if (int.Parse(textbox.Text) > 1000)
+                if (!Regex.IsMatch(textbox.Text, "^\\d*\\.?\\d*$") && textbox.Text != "")
                 {
-                    textbox.Text = "1000";
+                    int pos = textbox.SelectionStart - 1;
+                    textbox.Text = textbox.Text.Remove(pos, 1);
+                    textbox.SelectionStart = pos;
                 }
+                if (textbox.Text != "")
+                {
+                    if (int.Parse(textbox.Text) > 1000)
+                    {
+                        textbox.Text = "1000";
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                textbox.Text = "1";
             }
         }
 

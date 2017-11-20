@@ -30,7 +30,8 @@ namespace 饥荒百科全书CSharp.Class
         public static TextBlock FrameTitle { get; set; }
         public static Frame RootFrame { get; set; }
         public static List<ListBoxItem> MainPageListBoxItem { get; set; } = new List<ListBoxItem>();
-
+        public static Frame CharacterLeftFrame { get; set; }
+        public static Frame FoodLeftFrame { get; set; }
         #region 颜色常量
 
         public static SolidColorBrush ColorGreen = new SolidColorBrush(Color.FromArgb(255, 94, 182, 96));     //绿色

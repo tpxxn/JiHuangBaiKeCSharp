@@ -89,7 +89,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
         }
 
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.Register("Value", typeof(double), typeof(BarChart), new PropertyMetadata((double?)0, OnValueChanged));
+            DependencyProperty.Register("Value", typeof(double), typeof(BarChart), new PropertyMetadata((double?)0.1, OnValueChanged));
 
         private static void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -106,7 +106,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
             }
             if ((double)e.NewValue < 0)
             {
-                barChart.ValueTextBlock.Foreground = new SolidColorBrush(Colors.White);
+                barChart.ValueTextBlock.Foreground = new SolidColorBrush(Colors.Red);
                 barChart.ValueRectangle.Width = -(double)e.NewValue / barChart.MaxValue * 300;
             }
             else

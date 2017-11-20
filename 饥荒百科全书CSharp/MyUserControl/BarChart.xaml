@@ -15,6 +15,6 @@
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="LabelTextBlock" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left"/>
         <Rectangle Grid.Column="1" x:Name="ValueRectangle" Fill="#FFF4F4F5" Height="20" MinWidth="32" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" x:Name="ValueTextBlock" FontSize="12" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="2" x:Name="ValueTextBlock" FontSize="12" TextWrapping="Wrap" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0"/>
     </Grid>
 </UserControl>

@@ -107,25 +107,25 @@ namespace 饥荒百科全书CSharp
         private void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var positionUiGrid = e.GetPosition(UiGrid);
-            var positionRightGridWelcome = e.GetPosition(RightFrame);
+            var positionRightGridFrame = e.GetPosition(RightFrame);
             var positionRightGridSetting = e.GetPosition(RightGridSetting);
             var inUiGrid = false;
-            var inWelcome = false;
+            var inFrame = false;
             var inSetting = false;
             if (positionUiGrid.X >= 0 && positionUiGrid.X < UiGrid.ActualWidth && positionUiGrid.Y >= 0 && positionUiGrid.Y < UiGrid.ActualHeight)
             {
                 inUiGrid = true;
             }
-            if (positionRightGridWelcome.X >= 0 && positionRightGridWelcome.X < RightFrame.ActualWidth && positionRightGridWelcome.Y >= 0 && positionRightGridWelcome.Y < RightFrame.ActualHeight)
+            if (positionRightGridFrame.X >= 0 && positionRightGridFrame.X < RightFrame.ActualWidth && positionRightGridFrame.Y >= 0 && positionRightGridFrame.Y < RightFrame.ActualHeight)
             {
-                inWelcome = true;
+                inFrame = true;
             }
             if (positionRightGridSetting.X >= 0 && positionRightGridSetting.X < RightGridSetting.ActualWidth && positionRightGridSetting.Y >= 0 && positionRightGridSetting.Y < RightGridSetting.ActualHeight)
             {
                 inSetting = true;
             }
             // 如果鼠标位置在标题栏内，允许拖动  
-            if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inWelcome && !inSetting)) return;
+            if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inFrame && !inSetting)) return;
             Cursor = (Cursor)CursorDictionary["CursorMove"];
             DragMove();
         }

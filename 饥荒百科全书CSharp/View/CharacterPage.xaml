@@ -5,7 +5,6 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:饥荒百科全书CSharp.View"
       xmlns:datetype="using:饥荒百科全书CSharp.Class"
-      xmlns:charts="clr-namespace:饥荒百科全书CSharp.MyUserControl"
       xmlns:class="clr-namespace:饥荒百科全书CSharp.Class"
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="956"
@@ -31,47 +30,9 @@
             <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
             <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>
         </Grid.ColumnDefinitions>
+        <Frame x:Name="LeftFrame"/>
         <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{StaticResource CursorHorz}" Style="{StaticResource GridSplitterStyle}" />
-        <ScrollViewer x:Name="ScrollViewerLeftCharacter" Grid.Column="0" Template="{StaticResource MyScrollViewer}" Focusable="False">
-            <Grid x:Name="CharacterLeftGrid">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Image x:Name="CharacterImage" Stretch="Uniform" Height="220" HorizontalAlignment="Center" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Characters/C_wilson_dst.png"/>
-                <TextBlock Grid.Row="1" x:Name="CharacterName" FontSize="26" HorizontalAlignment="Center" />
-                <TextBlock Grid.Row="2" x:Name="CharacterEnName" FontSize="20" FontFamily="/Assets/Font/belisa_plumilla.ttf#Belisa plumilla manual" HorizontalAlignment="Center" Margin="0,5,0,0" />
-                <TextBlock Grid.Row="3" x:Name="CharacterMotto" FontSize="16" HorizontalAlignment="Center" Margin="0,5,0,0" />
-                <StackPanel Grid.Row="4" HorizontalAlignment="Center" Width="300" Margin="0,10,0,0">
-                    <charts:BarChart x:Name="CharacterHealth" Label="生命" MaxValue="300"/>
-                    <charts:BarChart x:Name="CharacterHunger" Label="饥饿" MaxValue="300"/>
-                    <charts:BarChart x:Name="CharacterLog" HorizontalAlignment="Left" Label="树木值" LabelWidth="45" MaxValue="100" Visibility="Collapsed" />
-                    <charts:BarChart x:Name="CharacterSanity" Label="精神" MaxValue="300"/>
-                    <charts:BarChart x:Name="CharacterDayDamage" HorizontalAlignment="Left" Label="伤害(白天)" LabelWidth="75" MaxValue="40" Visibility="Collapsed" />
-                    <charts:BarChart x:Name="CharacterDuskDamage" HorizontalAlignment="Left" Label="伤害(黄昏)" LabelWidth="75" MaxValue="40" Visibility="Collapsed" />
-                    <charts:BarChart x:Name="CharacterNightDamage" HorizontalAlignment="Left" Label="伤害(夜晚)" LabelWidth="75" MaxValue="40" Visibility="Collapsed" />
-                </StackPanel>
-                <TextBlock Grid.Row="5" x:Name="CharacterDamage" HorizontalAlignment="Center" Margin="10" />
-                <TextBlock Grid.Row="6" x:Name="CharacterDescription1" HorizontalAlignment="Left" Margin="50,5,10,5" FontSize="14"/>
-                <TextBlock Grid.Row="7" x:Name="CharacterDescription2" HorizontalAlignment="Left" Margin="50,5,10,5" FontSize="14"/>
-                <TextBlock Grid.Row="8" x:Name="CharacterDescription3" HorizontalAlignment="Left" Margin="50,5,10,5" FontSize="14"/>
-                <StackPanel Grid.Row="9" x:Name="CharacterUnlockStackPanel" Visibility="Collapsed" Margin="0,5,0,0">
-                    <TextBlock Text="解锁方式：" />
-                    <TextBlock x:Name="UnlockTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10,0"/>
-                </StackPanel>
-                <TextBlock Grid.Row="10" x:Name="CharacterIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" FontSize="13"/>
-            </Grid>
-        </ScrollViewer>
-        <ScrollViewer x:Name="ScrollViewerRightCharacter" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
+        <ScrollViewer x:Name="RightScrollViewer" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
             <ItemsControl ItemTemplate="{StaticResource CharacterDataTemplate}" Name="CharacterItemsControl" ItemsSource="{Binding}" Margin="10">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>

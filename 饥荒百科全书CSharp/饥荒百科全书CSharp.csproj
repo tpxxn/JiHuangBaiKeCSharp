@@ -114,20 +114,14 @@
     <Compile Include="MyUserControl\BarChart.xaml.cs">
       <DependentUpon>BarChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\ButtonWithPicture.xaml.cs">
-      <DependentUpon>ButtonWithPicture.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediImageButton.xaml.cs">
       <DependentUpon>DediImageButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\ExpanderStackpanel.xaml.cs">
-      <DependentUpon>ExpanderStackpanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MyUserControl\PropertyBar.xaml.cs">
-      <DependentUpon>PropertyBar.xaml</DependentUpon>
+    <Compile Include="MyUserControl\PicButton.xaml.cs">
+      <DependentUpon>PicButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\ValueConvert\BoolToVisibility.cs" />
     <Compile Include="MyUserControl\ValueConvert\BoolToVisibility_Reverse.cs" />
@@ -142,6 +136,15 @@
     <Compile Include="ValueConverter\DediTooltipPlacementConverter.cs" />
     <Compile Include="View\CharacterPage.xaml.cs">
       <DependentUpon>CharacterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\CharacterDetail.xaml.cs">
+      <DependentUpon>CharacterDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\FoodDetail.xaml.cs">
+      <DependentUpon>FoodDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\FoodRecipeDetail.xaml.cs">
+      <DependentUpon>FoodRecipeDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FoodPage.xaml.cs">
       <DependentUpon>FoodPage.xaml</DependentUpon>
@@ -232,14 +235,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\ButtonWithPicture.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MyUserControl\ButtonWithText.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MyUserControl\DedicatedServer\DediImageButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -248,11 +243,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\ExpanderStackpanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MyUserControl\PropertyBar.xaml">
+    <Page Include="MyUserControl\PicButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,6 +252,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CharacterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\CharacterDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\FoodDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\FoodRecipeDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -274,9 +277,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyUserControl\ButtonWithText.xaml.cs">
-      <DependentUpon>ButtonWithText.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
