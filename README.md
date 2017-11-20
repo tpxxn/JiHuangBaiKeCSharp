@@ -2,7 +2,7 @@
 饥荒百科(新版)
 
 ## 许可
-该应用使用 [__MIT License__](https://github.com/tpxxn/JiHuangBaiKeCSharp/blob/master/LICENSE)
+该应用使用 [__MIT License__](https://github.com/tpxxn/JiHuangBaiKeCSharp/blob/newMaster/LICENSE)
 
 ## 简介
 最新最全饥荒资料，就在饥荒百科全书！
