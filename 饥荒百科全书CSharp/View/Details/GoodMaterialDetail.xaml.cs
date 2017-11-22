@@ -63,7 +63,7 @@ namespace 饥荒百科全书CSharp.View.Details
                         Margin = thickness,
                         Source = StringProcess.GetGameResourcePath(picPath)
                     };
-                    //picButton.Tapped += Good_Jump_Tapped;
+                    picButton.Click += Good_Jump_Click;
                     GoodScienceWrapPanel.Children.Add(picButton);
                 }
             }
@@ -82,7 +82,7 @@ namespace 饥荒百科全书CSharp.View.Details
                         Margin = thickness,
                         Source = StringProcess.GetGameResourcePath(picPath)
                     };
-                    //picButton.Tapped += Good_Jump_Tapped;
+                    picButton.Click += Good_Jump_Click;
                     GoodSourceCreatureWrapPanel.Children.Add(picButton);
                 }
             }
@@ -92,6 +92,31 @@ namespace 饥荒百科全书CSharp.View.Details
             ConsolePre.Text = $"c_give(\"{c.Console}\",";
         }
 
+
+        private static void Good_Jump_Click(object sender, RoutedEventArgs e)
+        {
+            var picturePath = Global.ButtonToPicButton((Button)sender).Source;
+            var rightFrame = Global.RightFrame;
+            var shortName = StringProcess.GetFileName(picturePath);
+            Global.SetAutoSuggestBoxItem();
+            foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
+            {
+                if (picturePath != suggestBoxItem.Picture) continue;
+                var picHead = shortName.Substring(0, 1);
+                string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture };
+                switch (picHead)
+                {
+                    case "S":
+                        Global.PageJump(4);
+                        rightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                        return;
+                    case "A":
+                        Global.PageJump(5);
+                        rightFrame.NavigationService.Navigate(new CreaturePage(), extraData);
+                        return;
+                }
+            }
+        }
 
         private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)
         {

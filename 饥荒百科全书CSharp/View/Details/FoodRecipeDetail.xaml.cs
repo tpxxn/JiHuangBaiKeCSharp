@@ -158,7 +158,7 @@ namespace 饥荒百科全书CSharp.View.Details
                         {
                             Source = $"/Resources/GameResources/Foods/{str}.png"
                         };
-                        //picButton.Tapped += Food_Jump_Tapped;//TODO
+                        picButton.Click += Food_Jump_Click;
                         stackPanel1.Children.Add(picButton);
                     }
                     FoodRecipeRestrictionsStackPanel.Children.Add(stackPanel1);
@@ -177,7 +177,7 @@ namespace 饥荒百科全书CSharp.View.Details
                         {
                             Source = $"/Resources/GameResources/Foods/{str}.png"
                         };
-                        //picButton.Tapped += Food_Jump_Tapped;//TODO
+                        picButton.Click += Food_Jump_Click;
                         stackPanel2.Children.Add(picButton);
                     }
                     FoodRecipeRestrictionsStackPanel.Children.Add(stackPanel2);
@@ -199,6 +199,29 @@ namespace 饥荒百科全书CSharp.View.Details
             ConsolePre.Text = $"c_give(\"{c.Console}\",";
         }
 
+        private void Food_Jump_Click(object sender, RoutedEventArgs eventArgs)
+        {
+            var picturePath = Global.ButtonToPicButton((Button)sender).Source;
+            var rightFrame = Global.RightFrame;
+            var shortName = StringProcess.GetFileName(picturePath);
+            Global.SetAutoSuggestBoxItem();
+            foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
+            {
+                if (picturePath != suggestBoxItem.Picture) continue;
+                var picHead = shortName.Substring(0, 2);
+                var extraData = new[] { suggestBoxItem.SourcePath, suggestBoxItem.Picture };
+                switch (picHead)
+                {
+                    case "F_":
+                        rightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                        return;
+                    case "FC":
+                        // ignore
+                        return;
+                }
+            }
+        }
+
         private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)
         {
             var textbox = (TextBox)sender;
@@ -213,30 +236,5 @@ namespace 饥荒百科全书CSharp.View.Details
             }
             Clipboard.SetText(ConsolePre.Text + ConsoleNum.Text + ")");
         }
-
-        //TODO
-        //private async void Food_Jump_Tapped(object sender, TappedRoutedEventArgs e)
-        //{
-        //    var picturePath = ((PicButton)sender).Source;
-        //    var rootFrame = Global.RootFrame;
-        //    var shortName = StringProcess.GetFileName(picturePath);
-        //    await Global.SetAutoSuggestBoxItem();
-        //    foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
-        //    {
-        //        if (picturePath != suggestBoxItem.Picture) continue;
-        //        var picHead = shortName.Substring(0, 2);
-        //        var extraData = new[] { suggestBoxItem.SourcePath, suggestBoxItem.Picture };
-        //        switch (picHead)
-        //        {
-        //            case "F_":
-        //                rootFrame.Navigate(typeof(FoodPage), extraData);
-        //                break;
-        //            case "FC":
-        //                // ignore
-        //                break;
-        //        }
-        //    }
-        //}
-
     }
 }

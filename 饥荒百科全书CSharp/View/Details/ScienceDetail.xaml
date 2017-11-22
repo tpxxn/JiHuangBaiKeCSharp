@@ -26,18 +26,18 @@
             <TextBlock Grid.Row="2" x:Name="ScienceEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" />
             <StackPanel Grid.Row="3" x:Name="ScienceNeedStackPanel" Margin="0,5,0,0">
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <uc:PicButton x:Name="Need1PicButton"/>
-                    <uc:PicButton x:Name="Need2PicButton" Margin="10,0,0,0" Visibility="Collapsed"/>
-                    <uc:PicButton x:Name="Need3PicButton" Margin="10,0,0,0" Visibility="Collapsed"/>
+                    <uc:PicButton x:Name="Need1PicButton" Click="Science_Jump_Click"/>
+                    <uc:PicButton x:Name="Need2PicButton" Margin="10,0,0,0" Visibility="Collapsed" Click="Science_Jump_Click"/>
+                    <uc:PicButton x:Name="Need3PicButton" Margin="10,0,0,0" Visibility="Collapsed" Click="Science_Jump_Click"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="4" x:Name="ScienceUnlockStackPanel" Margin="10">
                 <TextBlock Text="解锁：" Background="#55B2ECED"/>
-                <Button x:Name="UnlockCharcterButton" Cursor="{StaticResource CursorLink}" Width="81" Height="126" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" Visibility="Collapsed">
+                <Button x:Name="UnlockCharcterButton" Cursor="{StaticResource CursorLink}" Width="81" Height="126" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" Visibility="Collapsed" Click="Science_CharacterJump_Click">
                     <Image x:Name="UnlockCharcterImage" Height="123" Margin="-10"/>
                 </Button>
-                <uc:PicButton x:Name="UnlockPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60"/>
-                <uc:PicButton x:Name="UnlockBlueprintPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60"/>
+                <uc:PicButton x:Name="UnlockPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60" Click="Science_Jump_Click"/>
+                <uc:PicButton x:Name="UnlockBlueprintPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60" Click="Science_Jump_Click"/>
             </StackPanel>
             <TextBlock Grid.Row="5" x:Name="ScienceIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" />
             <Grid Grid.Row="6" HorizontalAlignment="Center">

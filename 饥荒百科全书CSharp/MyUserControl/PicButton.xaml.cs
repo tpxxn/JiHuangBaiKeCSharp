@@ -110,9 +110,9 @@ namespace 饥荒百科全书CSharp.MyUserControl
         #endregion
 
         #region Click事件
-        public delegate void ClickHandler(object sender, EventArgs e);
+        public delegate void ClickHandler(object sender, RoutedEventArgs e);
 
-        public event EventHandler Click;
+        public event RoutedEventHandler Click;
 
         public void Button_Click(object sender, RoutedEventArgs e)
         {

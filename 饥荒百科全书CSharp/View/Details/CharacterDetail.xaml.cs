@@ -56,8 +56,6 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 CharacterMotto.Visibility = Visibility.Collapsed;
             }
-            //CharacterHealth.LabelWidth = 30;
-            //CharacterSanity.LabelWidth = 30;
             CharacterHealth.Value = c.Health;
             CharacterHealth.BarColor = Global.ColorGreen;
             CharacterHunger.Value = c.Hunger;

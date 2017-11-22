@@ -100,6 +100,11 @@ namespace 饥荒百科全书CSharp
             MwInit = true;
             //RightFrame
             Global.RightFrame = RightFrame;
+            //MainPageHamburgerButton
+            for (var i = 1; i < LeftWrapPanel.Children.Count; i++)
+            {
+                Global.MainPageHamburgerButton.Add((System.Windows.Controls.RadioButton)LeftWrapPanel.Children[i]);
+            }
             #region "读取设置"
             //设置字体
             if (string.IsNullOrEmpty(mainWindowFont))

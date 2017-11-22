@@ -54,6 +54,88 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            var extraData = (string[])e.ExtraData;
+            Deserialize();
+            if (extraData == null)
+            {
+                LeftFrame.NavigationService.Navigate(new ScienceDetail(), _scienceToolData[0]);
+            }
+            else
+            {
+                //导航到指定页面
+                var suggestBoxItemPicture = extraData[1];
+                switch (extraData[0])
+                {
+                    case "ScienceTool":
+                        OnNavigatedToScienceDialog(_scienceToolData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceLight":
+                        OnNavigatedToScienceDialog(_scienceLightData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceNautical":
+                        OnNavigatedToScienceDialog(_scienceNauticalData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceSurvival":
+                        OnNavigatedToScienceDialog(_scienceSurvivalData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceFood":
+                        OnNavigatedToScienceDialog(_scienceFoodData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceTechnology":
+                        OnNavigatedToScienceDialog(_scienceTechnologyData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceFight":
+                        OnNavigatedToScienceDialog(_scienceFightData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceStructure":
+                        OnNavigatedToScienceDialog(_scienceStructureData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRefine":
+                        OnNavigatedToScienceDialog(_scienceRefineData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceMagic":
+                        OnNavigatedToScienceDialog(_scienceMagicData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceDress":
+                        OnNavigatedToScienceDialog(_scienceDressData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceAncient":
+                        OnNavigatedToScienceDialog(_scienceAncientData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceBook":
+                        OnNavigatedToScienceDialog(_scienceBookData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceShadow":
+                        OnNavigatedToScienceDialog(_scienceShadowData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceCritter":
+                        OnNavigatedToScienceDialog(_scienceCritterData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceSculpt":
+                        OnNavigatedToScienceDialog(_scienceSculptData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceCartography":
+                        OnNavigatedToScienceDialog(_scienceCartographyData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceOfferings":
+                        OnNavigatedToScienceDialog(_scienceOfferingsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceVolcano":
+                        OnNavigatedToScienceDialog(_scienceVolcanoData, suggestBoxItemPicture);
+                        break;
+                }
+            }
+        }
+
+        private void OnNavigatedToScienceDialog(ObservableCollection<Science> scienceCollection, string suggestBoxItemPicture)
+        {
+            foreach (var itemsControlItem in scienceCollection)
+            {
+                var science = itemsControlItem;
+                if (science == null || science.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new ScienceDetail(), science);
+                break;
+            }
         }
 
         public SciencePage()
@@ -283,7 +365,6 @@ namespace 饥荒百科全书CSharp.View
             CartographyExpander.DataContext = _scienceCartographyData;
             OfferingsExpander.DataContext = _scienceOfferingsData;
             VolcanoExpander.DataContext = _scienceVolcanoData;
-            LeftFrame.NavigationService.Navigate(new ScienceDetail(), _scienceToolData[0]);
         }
 
         private void ScienceButton_Click(object sender, RoutedEventArgs e)

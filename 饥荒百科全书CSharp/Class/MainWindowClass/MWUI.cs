@@ -177,17 +177,98 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "右上角按钮"
-        #region "搜索框清除按钮显示/隐藏"
-        //设置清除按钮可见性
-        private void UI_search_TextChanged(object sender, TextChangedEventArgs e)
+
+        #region "搜索框"
+        /// <summary>
+        /// 搜索框内容改变
+        /// </summary>
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Visi.VisiCol(UiSearch.Text == "", UiSearchClear);
+            // 显示清除按钮
+            Visi.VisiCol(SearchTextBox.Text == "", SearchClearButton);
+            // 搜索
+            Global.AutoSuggestBoxItem.Clear();
+            foreach (var item in Global.AutoSuggestBoxItemSource)
+            {
+                Global.AutoSuggestBoxItem.Add(item);
+            }
+            var str = ((TextBox)sender).Text.Trim().ToLower();
+            if (string.IsNullOrEmpty(str)) return;
+            for (var i = Global.AutoSuggestBoxItem.Count - 1; i >= 0; i--)
+            {
+                if (Global.AutoSuggestBoxItem[i].Name.ToLower().IndexOf(str, StringComparison.Ordinal) < 0 && Global.AutoSuggestBoxItem[i].EnName.ToLower().IndexOf(str, StringComparison.Ordinal) < 0)
+                {
+                    Global.AutoSuggestBoxItem.Remove(Global.AutoSuggestBoxItem[i]);
+                }
+            }
+            if (Global.AutoSuggestBoxItem.Count != 0)
+            {
+                SearchItemsControl.DataContext = Global.AutoSuggestBoxItem;
+                SearchScrollViewer.ScrollToHorizontalOffset(0);
+                SearchPopup.IsOpen = true;
+            }
+            else
+            {
+                SearchPopup.IsOpen = false;
+            }
         }
-        //清除按钮
+
+        /// <summary>
+        /// 清除按钮
+        /// </summary>
         private void UI_search_clear_Click(object sender, RoutedEventArgs e)
         {
-            UiSearch.Text = "";
-            Visi.VisiCol(true, UiSearchClear);
+            SearchTextBox.Text = "";
+            Visi.VisiCol(true, SearchClearButton);
+        }
+
+        /// <summary>
+        /// 搜索结果Click事件
+        /// </summary>
+        private void SearchResultButton_Click(object sender, RoutedEventArgs e)
+        {
+            var suggestBoxItem = (SuggestBoxItem)((Button)sender).DataContext;
+            if (suggestBoxItem == null) return;
+            var extraData = new[] { suggestBoxItem.SourcePath, suggestBoxItem.Picture, suggestBoxItem.Category };
+            AutoSuggestNavigate(extraData);
+            //清空搜索框文本
+            SearchTextBox.Text = "";
+            SearchPopup.IsOpen = false;
+        }
+
+        /// <summary>
+        /// 自动搜索框导航
+        /// </summary>
+        /// <param name="extraData">额外数据</param>
+        private void AutoSuggestNavigate(string[] extraData)
+        {
+            switch (extraData[2])
+            {
+                case "人物":
+                    SidebarCharacter.IsChecked = true;
+                    RightFrame.NavigationService.Navigate(new CharacterPage(), extraData);
+                    break;
+                case "食物":
+                    SidebarFood.IsChecked = true;
+                    RightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                    break;
+                case "科技":
+                    SidebarScience.IsChecked = true;
+                    RightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                    break;
+                case "生物":
+                    SidebarAnimal.IsChecked = true;
+                    RightFrame.NavigationService.Navigate(new CreaturePage(), extraData);
+                    break;
+                case "自然":
+                    SidebarNatural.IsChecked = true;
+                    RightFrame.NavigationService.Navigate(new NaturalPage(), extraData);
+                    break;
+                case "物品":
+                    SidebarGoods.IsChecked = true;
+                    RightFrame.NavigationService.Navigate(new GoodPage(), extraData);
+                    break;
+            }
         }
         #endregion
 
@@ -302,6 +383,7 @@ namespace 饥荒百科全书CSharp
         private void Se_button_Background_Clear_Click(object sender, RoutedEventArgs e)
         {
             Visi.VisiCol(true, UiBackGroundBorder);
+            UiBackGroundBorder.Background = null;
             SeBgAlphaText.Foreground = Brushes.Silver;
             SeBgAlpha.IsEnabled = false;
             RegeditRw.RegWrite("Background", "");

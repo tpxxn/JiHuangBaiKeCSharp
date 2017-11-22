@@ -49,6 +49,147 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            var extraData = (string[])e.ExtraData;
+            Deserialize();
+            if (extraData == null)
+            {
+                LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), _goodMaterialData[0]);
+            }
+            else
+            {
+                //导航到指定页面
+                var suggestBoxItemPicture = extraData[1];
+                switch (extraData[0])
+                {
+                    case "GoodMaterial":
+                        OnNavigatedToGoodMaterialDialog(suggestBoxItemPicture);
+                        break;
+                    case "GoodEquipment":
+                        OnNavigatedToGoodEquipmentDialog(suggestBoxItemPicture);
+                        break;
+                    case "GoodSapling":
+                        OnNavigatedToGoodSaplingDialog(suggestBoxItemPicture);
+                        break;
+                    case "GoodCreatures":
+                        OnNavigatedToGoodCreaturesDialog(suggestBoxItemPicture);
+                        break;
+                    case "GoodTrinkets":
+                        OnNavigatedToGoodDialog(_goodTrinketsData, suggestBoxItemPicture);
+                        break;
+                    case "GoodTurf":
+                        OnNavigatedToGoodTurfDialog(suggestBoxItemPicture);
+                        break;
+                    case "GoodPet":
+                        OnNavigatedToGoodPetDialog(suggestBoxItemPicture);
+                        break;
+                    case "GoodUnlock":
+                        OnNavigatedToGoodUnlockDialog(suggestBoxItemPicture);
+                        break;
+                    case "GoodHallowedNights":
+                        OnNavigatedToGoodDialog(_goodHallowedNightsData, suggestBoxItemPicture);
+                        break;
+                    case "GoodWintersFeast":
+                        OnNavigatedToGoodDialog(_goodWintersFeastData, suggestBoxItemPicture);
+                        break;
+                    case "GoodYearOfTheGobbler":
+                        OnNavigatedToGoodDialog(_goodYearOfTheGobblerData, suggestBoxItemPicture);
+                        break;
+                    case "GoodComponent":
+                        OnNavigatedToGoodDialog(_goodComponentData, suggestBoxItemPicture);
+                        break;
+                    case "GoodOthers":
+                        OnNavigatedToGoodDialog(_goodOthersData, suggestBoxItemPicture);
+                        break;
+                }
+            }
+        }
+
+        private void OnNavigatedToGoodMaterialDialog(string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in _goodMaterialData)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), good);
+                break;
+            }
+        }
+
+        private void OnNavigatedToGoodEquipmentDialog(string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in _goodEquipmentData)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodEquipmentDetail(), good);
+                break;
+            }
+        }
+
+        private void OnNavigatedToGoodSaplingDialog(string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in _goodSaplingData)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodSaplingDetail(), good);
+                break;
+            }
+        }
+
+        private void OnNavigatedToGoodCreaturesDialog(string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in _goodCreaturesData)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodCreaturesDetail(), good);
+                break;
+            }
+        }
+
+        private void OnNavigatedToGoodTurfDialog(string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in _goodTurfData)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodTurfDetail(), good);
+                break;
+            }
+        }
+
+        private void OnNavigatedToGoodPetDialog(string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in _goodPetData)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodPetDetail(), good);
+                break;
+            }
+        }
+
+        private void OnNavigatedToGoodUnlockDialog(string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in _goodUnlockData)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodUnlockDetail(), good);
+                break;
+            }
+        }
+
+        private void OnNavigatedToGoodDialog(ObservableCollection<Good> goodCollection, string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in goodCollection)
+            {
+                var good = gridViewItem;
+                if (good == null || good.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new GoodDetail(), good);
+                break;
+            }
         }
 
         public GoodPage()
@@ -203,7 +344,6 @@ namespace 饥荒百科全书CSharp.View
             YearOfTheGobblerExpander.DataContext = _goodYearOfTheGobblerData;
             ComponentExpander.DataContext = _goodComponentData;
             GoodOthersExpander.DataContext = _goodOthersData;
-            LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), _goodMaterialData[0]);
         }
 
 

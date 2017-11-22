@@ -42,6 +42,63 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            var extraData = (string[])e.ExtraData;
+            Deserialize();
+            if (extraData == null)
+            {
+                LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), _foodRecipeData[0]);
+            }
+            else
+            {
+                var suggestBoxItemPicture = extraData[1];
+                //导航到指定页面
+                switch (extraData[0])
+                {
+                    case "FoodRecipe":
+                        OnNavigatedToFoodRecipeDialog(suggestBoxItemPicture);
+                        break;
+                    case "FoodMeats":
+                        OnNavigatedToFoodDialog(_foodMeatData, suggestBoxItemPicture);
+                        break;
+                    case "FoodVegetables":
+                        OnNavigatedToFoodDialog(_foodVegetableData, suggestBoxItemPicture);
+                        break;
+                    case "FoodFruits":
+                        OnNavigatedToFoodDialog(_foodFruitData, suggestBoxItemPicture);
+                        break;
+                    case "FoodEggs":
+                        OnNavigatedToFoodDialog(_foodEggData, suggestBoxItemPicture);
+                        break;
+                    case "FoodOthers":
+                        OnNavigatedToFoodDialog(_foodOtherData, suggestBoxItemPicture);
+                        break;
+                    case "FoodNoFc":
+                        OnNavigatedToFoodDialog(_foodNoFcData, suggestBoxItemPicture);
+                        break;
+                }
+            }
+        }
+
+        private void OnNavigatedToFoodRecipeDialog(string suggestBoxItemPicture)
+        {
+            foreach (var itemsControlItem in _foodRecipeData)
+            {
+                var food = itemsControlItem;
+                if (food == null || food.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), food);
+                break;
+            }
+        }
+
+        private void OnNavigatedToFoodDialog(ObservableCollection<Food> foodCollection, string suggestBoxItemPicture)
+        {
+            foreach (var itemsControlItem in foodCollection)
+            {
+                var food = itemsControlItem;
+                if (food == null || food.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new FoodDetail(), food);
+                break;
+            }
         }
 
         public FoodPage()
@@ -49,7 +106,6 @@ namespace 饥荒百科全书CSharp.View
             InitializeComponent();
             Global.FoodLeftFrame = LeftFrame;
             Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
-            Deserialize();
         }
 
         public void Deserialize()
@@ -125,7 +181,6 @@ namespace 饥荒百科全书CSharp.View
             EggsExpander.DataContext = _foodEggData;
             OtherExpander.DataContext = _foodOtherData;
             NoFcExpander.DataContext = _foodNoFcData;
-            LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), _foodRecipeData[0]);
         }
 
         private void FoodRecipeButton_Click(object sender, RoutedEventArgs e)

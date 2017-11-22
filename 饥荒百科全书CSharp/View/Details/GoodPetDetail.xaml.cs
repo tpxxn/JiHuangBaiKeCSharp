@@ -66,12 +66,26 @@ namespace 饥荒百科全书CSharp.View.Details
                         Source = StringProcess.GetGameResourcePath(picPath),
                         PictureSize = 90
                     };
-                    //picButton.Tapped += Good_Jump_Tapped;
+                    picButton.Click += Good_Jump_Click;
                     GoodFollowWrapPanel.Children.Add(picButton);
                 }
             }
             GoodIntroduction.Text = c.Introduction;
             ConsolePre.Text = $"c_give(\"{c.Console}\",";
+        }
+
+        private static void Good_Jump_Click(object sender, RoutedEventArgs e)
+        {
+            var picturePath = Global.ButtonToPicButton((Button)sender).Source;
+            var rightFrame = Global.RightFrame;
+            Global.SetAutoSuggestBoxItem();
+            foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
+            {
+                if (picturePath != suggestBoxItem.Picture) continue;
+                string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture }; ;
+                Global.PageJump(5);
+                rightFrame.NavigationService.Navigate(new CreaturePage(), extraData);
+            }
         }
 
         private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)

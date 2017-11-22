@@ -28,7 +28,7 @@
             <TextBlock Grid.Row="3" x:Name="GoodIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" />
             <StackPanel x:Name="GoodMakeStackPanel" Margin="10" Grid.Row="4" Orientation="Vertical">
                 <TextBlock Text="制作科技：" Background="#55B2ECED"/>
-                <uc:PicButton x:Name="GoodMakePicButton" Margin="5,10,0,0"/>
+                <uc:PicButton x:Name="GoodMakePicButton" Margin="5,10,0,0" Click="Good_Jump_Click"/>
             </StackPanel>
             <TextBlock Grid.Row="5" x:Name="GoodSourceTextureTextBlock" Text="草皮纹理：" Margin="10" Background="#55B2ECED"/>
             <Image Grid.Row="6" x:Name="GoodSourceTextureWrapPanel" HorizontalAlignment="Center" Width="120" Height="120" Margin="0,0,0,10"/>

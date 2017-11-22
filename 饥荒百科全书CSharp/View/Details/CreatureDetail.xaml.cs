@@ -166,7 +166,7 @@ namespace 饥荒百科全书CSharp.View.Details
                             Margin = thickness,
                             Source = StringProcess.GetGameResourcePath(goodSource),
                         };
-                        //picButton.Click += Creature_Jump_Tapped;
+                        picButton.Click += Creature_Jump_Click;
                         GoodsWrapPanel.Children.Add(picButton);
                     }
                     else
@@ -189,8 +189,8 @@ namespace 饥荒百科全书CSharp.View.Details
                                 Source = StringProcess.GetGameResourcePath(goodText),
                                 Text = "）"
                             };
-                            //picButton1.Tapped += Creature_Jump_Tapped;
-                            //picButton2.Tapped += Creature_Jump_Tapped;
+                            picButton1.Click += Creature_Jump_Click;
+                            picButton2.Click += Creature_Jump_Click;
                             stackPanel.Children.Add(picButton1);
                             stackPanel.Children.Add(picButton2);
                             GoodsWrapPanel.Children.Add(stackPanel);
@@ -204,7 +204,7 @@ namespace 饥荒百科全书CSharp.View.Details
                                 Source = StringProcess.GetGameResourcePath(goodSource),
                                 Text = goodText
                             };
-                            //picButton.Tapped += Creature_Jump_Tapped;
+                            picButton.Click += Creature_Jump_Click;
                             GoodsWrapPanel.Children.Add(picButton);
                         }
                     }
@@ -1071,6 +1071,38 @@ namespace 饥荒百科全书CSharp.View.Details
             rootStackPanel.Children.Add(recipeToScienceWrapPanel);
             CreaturesRootGrid.Children.Add(rootStackPanel);
             Grid.SetRow(rootStackPanel, 9);
+        }
+
+        private static void Creature_Jump_Click(object sender, RoutedEventArgs e)
+        {
+            var picturePath = Global.ButtonToPicButton((Button)sender).Source;
+            var rightFrame = Global.RightFrame;
+            var shortName = StringProcess.GetFileName(picturePath);
+            Global.SetAutoSuggestBoxItem();
+            foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
+            {
+                if (picturePath == suggestBoxItem.Picture)
+                {
+                    var picHead = shortName.Substring(0, 1);
+                    string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture }; ;
+                    switch (picHead)
+                    {
+                        case "F":
+                            Global.PageJump(2);
+                            rightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                            return;
+                        case "S":
+                            Global.PageJump(4);
+                            rightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                            return;
+                        case "A":
+                        case "G":
+                            Global.PageJump(7);
+                            rightFrame.NavigationService.Navigate(new GoodPage(), extraData);
+                            return;
+                    }
+                }
+            }
         }
 
         private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)

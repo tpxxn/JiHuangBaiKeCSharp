@@ -37,27 +37,27 @@
                 <uc:BarChart x:Name="FoodTemperature" Label="温度" MaxValue="40"/>
                 <uc:BarChart x:Name="FoodTemperatureDuration" Label="温时" MaxValue="15"/>
             </StackPanel>
-            <StackPanel x:Name="FoodNeedStackPanel" Grid.Row="4" Margin="10,5,0,0">
+            <StackPanel x:Name="FoodNeedStackPanel" Grid.Row="4" Margin="10">
                 <TextBlock Text="烹饪需求：" Background="#55B2ECED"/>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <uc:PicButton x:Name="Need1Button"/>
-                    <uc:PicButton x:Name="NeedOrButton" Visibility="Collapsed"/>
-                    <uc:PicButton x:Name="Need2Button" Margin="20,0,0,0" Visibility="Collapsed"/>
-                    <uc:PicButton x:Name="Need3Button" Margin="20,0,0,0" Visibility="Collapsed"/>
+                    <uc:PicButton x:Name="Need1Button" Click="Food_Jump_Click"/>
+                    <uc:PicButton x:Name="NeedOrButton" Visibility="Collapsed" Click="Food_Jump_Click"/>
+                    <uc:PicButton x:Name="Need2Button" Margin="20,0,0,0" Visibility="Collapsed" Click="Food_Jump_Click"/>
+                    <uc:PicButton x:Name="Need3Button" Margin="20,0,0,0" Visibility="Collapsed" Click="Food_Jump_Click"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="5" Margin="10,5,0,0">
                 <TextBlock x:Name="FoodRecipeRestrictionsTextBlock" Text="填充限制："  Background="#55B2ECED"/>
                 <StackPanel x:Name="FoodRecipeRestrictionsStackPanel" HorizontalAlignment="Center" Orientation="Vertical"/>
             </StackPanel>
-            <StackPanel x:Name="FoodRecommendStackPanel" Grid.Row="6" Margin="10,5,0,0">
+            <StackPanel x:Name="FoodRecommendStackPanel" Grid.Row="6" Margin="10">
                 <TextBlock Text="推荐食谱：" Background="#55B2ECED"/>
                 <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
-                        <uc:PicButton x:Name="Recommend1Button"/>
-                        <uc:PicButton x:Name="Recommend2Button"/>
-                        <uc:PicButton x:Name="Recommend3Button"/>
-                        <uc:PicButton x:Name="Recommend4Button"/>
+                        <uc:PicButton x:Name="Recommend1Button" Click="Food_Jump_Click"/>
+                        <uc:PicButton x:Name="Recommend2Button" Click="Food_Jump_Click"/>
+                        <uc:PicButton x:Name="Recommend3Button" Click="Food_Jump_Click"/>
+                        <uc:PicButton x:Name="Recommend4Button" Click="Food_Jump_Click"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

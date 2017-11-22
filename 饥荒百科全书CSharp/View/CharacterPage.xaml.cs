@@ -36,6 +36,17 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            var extraData = (string[])e.ExtraData;
+            Deserialize();
+            if (extraData == null) return;
+            var suggestBoxItemPicture = extraData[1];
+            foreach (var itemsControlItem in _characterData)
+            {
+                var character = itemsControlItem;
+                if (character == null || character.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new CharacterDetail(), character);
+                break;
+            }
         }
 
         public CharacterPage()
@@ -43,7 +54,6 @@ namespace 饥荒百科全书CSharp.View
             InitializeComponent();
             Global.CharacterLeftFrame = LeftFrame;
             Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
-            Deserialize();
         }
         
         public void Deserialize()

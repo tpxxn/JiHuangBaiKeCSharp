@@ -30,7 +30,7 @@
                 <uc:BarChart x:Name="FoodSanity" Label="精神" MaxValue="50"/>
                 <uc:BarChart x:Name="FoodPerish" Label="保鲜" MaxValue="40"/>
             </StackPanel>
-            <StackPanel x:Name="FoodAttributeStackPanel" Grid.Row="4" Margin="10,5,0,0">
+            <StackPanel x:Name="FoodAttributeStackPanel" Grid.Row="4" Margin="10">
                 <TextBlock Text="食物属性：" Background="#55B2ECED"/>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                     <uc:PicButton x:Name="Attribute1PicButton"/>

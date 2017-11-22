@@ -40,8 +40,6 @@ namespace 饥荒百科全书CSharp.View.Details
             Global.ScienceLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
 
-        private string _unlockCharcter;
-
         private void LoadData(Science c)
         {
             ScienceImage.Source = new BitmapImage(new Uri(c.Picture,UriKind.Relative));
@@ -86,6 +84,50 @@ namespace 饥荒百科全书CSharp.View.Details
             }
             ScienceIntroduction.Text = c.Introduction;
             ConsolePre.Text = $"c_give(\"{c.Console}\",";
+        }
+
+        private string _unlockCharcter;
+
+        private void Science_Jump_Click(object sender, RoutedEventArgs e)
+        {
+            var picturePath = Global.ButtonToPicButton((Button)sender).Source;
+            var rightFrame = Global.RightFrame;
+            var shortName = StringProcess.GetFileName(picturePath);
+            Global.SetAutoSuggestBoxItem();
+            foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
+            {
+                if (picturePath != suggestBoxItem.Picture) continue;
+                var picHead = shortName.Substring(0, 1);
+                string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture }; ;
+                switch (picHead)
+                {
+                    case "F":
+                        Global.PageJump(2);
+                        rightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                        return;
+                    case "S":
+                        rightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                        return;
+                    case "G":
+                        Global.PageJump(7);
+                        rightFrame.NavigationService.Navigate(new GoodPage(), extraData);
+                        return;
+                }
+            }
+        }
+
+        private void Science_CharacterJump_Click(object sender, RoutedEventArgs e)
+        {
+            var picturePath = _unlockCharcter;
+            var rightFrame = Global.RightFrame;
+            Global.SetAutoSuggestBoxItem();
+            foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
+            {
+                if (picturePath != suggestBoxItem.Picture) continue;
+                string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture }; ;
+                Global.PageJump(1);
+                rightFrame.NavigationService.Navigate(new CharacterPage(), extraData);
+            }
         }
 
         private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)

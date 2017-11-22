@@ -41,8 +41,8 @@
             <TextBlock Grid.Row="6" x:Name="CharacterDescription1" HorizontalAlignment="Left" Margin="50,5,10,5" FontSize="14" Visibility="Collapsed"/>
             <TextBlock Grid.Row="7" x:Name="CharacterDescription2" HorizontalAlignment="Left" Margin="50,5,10,5" FontSize="14" Visibility="Collapsed"/>
             <TextBlock Grid.Row="8" x:Name="CharacterDescription3" HorizontalAlignment="Left" Margin="50,5,10,5" FontSize="14" Visibility="Collapsed"/>
-            <StackPanel Grid.Row="9" x:Name="CharacterUnlockStackPanel" Visibility="Collapsed" Margin="0,5,0,0">
-                <TextBlock Text="解锁方式：" />
+            <StackPanel Grid.Row="9" x:Name="CharacterUnlockStackPanel" Visibility="Collapsed" Margin="10">
+                <TextBlock Text="解锁方式：" Background="#55B2ECED"/>
                 <TextBlock x:Name="UnlockTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10,0"/>
             </StackPanel>
             <TextBlock Grid.Row="10" x:Name="CharacterIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" FontSize="13"/>

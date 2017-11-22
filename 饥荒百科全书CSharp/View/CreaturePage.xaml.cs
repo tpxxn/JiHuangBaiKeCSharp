@@ -42,6 +42,52 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            var extraData = (string[])e.ExtraData;
+            Deserialize();
+            if (extraData == null)
+            {
+                LeftFrame.NavigationService.Navigate(new CreatureDetail(), _creatureLandData[0]);
+            }
+            else
+            {
+                //导航到指定页面
+                var suggestBoxItemPicture = extraData[1];
+                switch (extraData[0])
+                {
+                    case "CreatureLand":
+                        OnNavigatedToCreatureDialog(_creatureLandData, suggestBoxItemPicture);
+                        break;
+                    case "CreatureOcean":
+                        OnNavigatedToCreatureDialog(_creatureOceanData, suggestBoxItemPicture);
+                        break;
+                    case "CreatureFly":
+                        OnNavigatedToCreatureDialog(_creatureFlyData, suggestBoxItemPicture);
+                        break;
+                    case "CreatureCave":
+                        OnNavigatedToCreatureDialog(_creatureCaveData, suggestBoxItemPicture);
+                        break;
+                    case "CreatureEvil":
+                        OnNavigatedToCreatureDialog(_creatureEvilData, suggestBoxItemPicture);
+                        break;
+                    case "CreatureOther":
+                        OnNavigatedToCreatureDialog(_creatureOthersData, suggestBoxItemPicture);
+                        break;
+                    case "CreatureBoss":
+                        OnNavigatedToCreatureDialog(_creatureBossData, suggestBoxItemPicture);
+                        break;
+                }
+            }
+        }
+
+        private void OnNavigatedToCreatureDialog(ObservableCollection<Creature> creatureCollection, string suggestBoxItemPicture)
+        {
+            foreach (var gridViewItem in creatureCollection)
+            {
+                var creature = gridViewItem;
+                if (creature == null || creature.Picture != suggestBoxItemPicture) continue;
+                LeftFrame.NavigationService.Navigate(new CreatureDetail(), creature);
+                break;
+            }
         }
 
         public CreaturePage()
@@ -128,12 +174,11 @@ namespace 饥荒百科全书CSharp.View
             }
             LandExpander.DataContext = _creatureLandData;
             OceanExpander.DataContext = _creatureOceanData;
-            FlyExpander.DataContext = _creatureFlyData; 
+            FlyExpander.DataContext = _creatureFlyData;
             CaveExpander.DataContext = _creatureCaveData;
             EvilExpander.DataContext = _creatureEvilData;
             OthersExpander.DataContext = _creatureOthersData;
             BossExpander.DataContext = _creatureBossData;
-            LeftFrame.NavigationService.Navigate(new CreatureDetail(), _creatureLandData[0]);
         }
 
         private void CreatureButton_Click(object sender, RoutedEventArgs e)

@@ -1117,21 +1117,18 @@ namespace 饥荒百科全书CSharp.View
         /// </summary>
         private void ResultButton_Click(object sender, RoutedEventArgs e)
         {
-            //if (FoodResultImage.Source == null) return;
-            //var picturePath = CrockPotList[FoodIndex];
-            //var rootFrame = Global.RootFrame;
-            //var frameTitle = Global.FrameTitle;
-            //await Global.SetAutoSuggestBoxItem();
-            //foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
-            //{
-            //    if (picturePath != StringProcess.GetFileName(suggestBoxItem.Picture)) continue;
-            //    frameTitle.Text = "食物";
-            //    Global.PageJump(1);
-            //    var extraData = new[] { suggestBoxItem.SourcePath, suggestBoxItem.Picture };
-            //    rootFrame.Navigate(typeof(FoodPage), extraData);
-            //    Global.PageStack.Push(new PageStackItem { TypeName = typeof(FoodPage), Object = extraData });
-            //    break;
-            //}
+            if (FoodResultImage.Source == null) return;
+            var picturePath = CrockPotList[FoodIndex];
+            var rightFrame = Global.RightFrame;
+            Global.SetAutoSuggestBoxItem();
+            foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
+            {
+                if (picturePath != StringProcess.GetFileName(suggestBoxItem.Picture)) continue;
+                Global.PageJump(2);
+                var extraData = new[] { suggestBoxItem.SourcePath, suggestBoxItem.Picture };
+                rightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                break;
+            }
         }
 
         /// <summary>
