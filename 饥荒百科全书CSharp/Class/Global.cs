@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,10 +27,12 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// MainPage需要保存在Global里额几个控件对象
         /// </summary>
+        public static FontFamily FontFamily { get; set; }
         public static Grid RootGrid { get; set; }
         public static TextBlock FrameTitle { get; set; }
         public static Frame RootFrame { get; set; }
         public static List<ListBoxItem> MainPageListBoxItem { get; set; } = new List<ListBoxItem>();
+        public static Frame RightFrame { get; set; }
         public static Frame CharacterLeftFrame { get; set; }
         public static Frame FoodLeftFrame { get; set; }
         public static Frame ScienceLeftFrame { get; set; }
@@ -68,6 +71,27 @@ namespace 饥荒百科全书CSharp.Class
         };
 
         #endregion
+
+        /// <summary>
+        /// 遍历视觉树
+        /// </summary>
+        /// <typeparam name="T">泛型T</typeparam>
+        /// <param name="results">结果List</param>
+        /// <param name="startNode">开始节点</param>
+        public static void FindChildren<T>(List<T> results, DependencyObject startNode) where T : DependencyObject
+        {
+            var count = VisualTreeHelper.GetChildrenCount(startNode);
+            for (var i = 0; i < count; i++)
+            {
+                var current = VisualTreeHelper.GetChild(startNode, i);
+                if (current.GetType() == typeof(T) || (current.GetType().GetTypeInfo().IsSubclassOf(typeof(T))))
+                {
+                    var asType = (T)current;
+                    results.Add(asType);
+                }
+                FindChildren(results, current);
+            }
+        }
 
         /// <summary>
         /// 透明Style

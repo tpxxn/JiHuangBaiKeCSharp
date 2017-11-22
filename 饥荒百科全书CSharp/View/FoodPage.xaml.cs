@@ -32,10 +32,23 @@ namespace 饥荒百科全书CSharp.View
         private readonly ObservableCollection<Food> _foodOtherData = new ObservableCollection<Food>();
         private readonly ObservableCollection<Food> _foodNoFcData = new ObservableCollection<Food>();
 
+        private int _loadedTime;
+
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (_loadedTime != 0) return;
+            _loadedTime++;
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+        }
+
         public FoodPage()
         {
             InitializeComponent();
             Global.FoodLeftFrame = LeftFrame;
+            Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
             Deserialize();
         }
 

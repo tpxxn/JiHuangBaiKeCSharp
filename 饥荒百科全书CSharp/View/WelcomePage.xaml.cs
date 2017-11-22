@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using 饥荒百科全书CSharp.Class;
 
 namespace 饥荒百科全书CSharp.View
 {
@@ -21,9 +22,22 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class WelcomePage : Page
     {
+        private int _loadedTime;
+
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (_loadedTime != 0) return;
+            _loadedTime++;
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+        }
+
         public WelcomePage()
         {
             InitializeComponent();
+            Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
 
         #region "主页面板"

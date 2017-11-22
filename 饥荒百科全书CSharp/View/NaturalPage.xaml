@@ -24,7 +24,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid x:Name="RootGrid" Background="#FEFFFFFF">
+    <Grid x:Name="RootGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
             <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>

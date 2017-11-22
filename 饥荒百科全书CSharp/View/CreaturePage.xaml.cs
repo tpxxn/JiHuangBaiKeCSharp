@@ -32,10 +32,23 @@ namespace 饥荒百科全书CSharp.View
         private readonly ObservableCollection<Creature> _creatureOthersData = new ObservableCollection<Creature>();
         private readonly ObservableCollection<Creature> _creatureBossData = new ObservableCollection<Creature>();
 
+        private int _loadedTime;
+
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (_loadedTime != 0) return;
+            _loadedTime++;
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+        }
+
         public CreaturePage()
         {
             InitializeComponent();
             Global.CreatureLeftFrame = LeftFrame;
+            Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
             if (Global.GameVersion != 4)
             {
                 OceanExpander.Visibility = Visibility.Collapsed;

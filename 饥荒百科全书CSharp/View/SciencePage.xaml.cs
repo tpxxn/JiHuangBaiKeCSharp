@@ -44,10 +44,23 @@ namespace 饥荒百科全书CSharp.View
         private readonly ObservableCollection<Science> _scienceOfferingsData = new ObservableCollection<Science>();
         private readonly ObservableCollection<Science> _scienceVolcanoData = new ObservableCollection<Science>();
 
+        private int _loadedTime;
+
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (_loadedTime != 0) return;
+            _loadedTime++;
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+        }
+
         public SciencePage()
         {
             InitializeComponent();
             Global.ScienceLeftFrame = LeftFrame;
+            Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
             if (Global.GameVersion != 4)
             {
                 NauticalExpander.Visibility = Visibility.Collapsed;

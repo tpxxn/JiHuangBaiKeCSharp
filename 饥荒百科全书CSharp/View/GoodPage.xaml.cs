@@ -39,10 +39,23 @@ namespace 饥荒百科全书CSharp.View
         private readonly ObservableCollection<Good> _goodComponentData = new ObservableCollection<Good>();
         private readonly ObservableCollection<Good> _goodOthersData = new ObservableCollection<Good>();
 
+        private int _loadedTime;
+
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (_loadedTime != 0) return;
+            _loadedTime++;
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+        }
+
         public GoodPage()
         {
             InitializeComponent();
             Global.GoodLeftFrame = LeftFrame;
+            Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
             if (Global.GameVersion == 0 || Global.GameVersion == 1)
             {
                 UnlockExpander.Visibility = Visibility.Collapsed;

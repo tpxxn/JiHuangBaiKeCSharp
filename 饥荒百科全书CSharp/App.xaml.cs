@@ -7,8 +7,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Diagnostics;
+using System.Drawing.Text;
 using System.Reflection;
 using System.Threading;
+using System.Windows.Media;
+using 饥荒百科全书CSharp.Class;
 
 namespace 饥荒百科全书CSharp
 {
@@ -31,6 +34,13 @@ namespace 饥荒百科全书CSharp
             private static void App_Startup(object sender, StartupEventArgs e)
             {
                 Debug.WriteLine("App_Startup");
+                //设置全局字体
+                var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
+                if (!string.IsNullOrEmpty(mainWindowFont))
+                {
+                    Global.FontFamily = new FontFamily(mainWindowFont);
+                }
+                //读取资源字典
                 var resourceDictionaries = new Collection<ResourceDictionary>
                 {
                     new ResourceDictionary
@@ -118,7 +128,6 @@ namespace 饥荒百科全书CSharp
                             UriKind.Absolute)
                     }
                 };
-
                 foreach (var t in resourceDictionaries)
                 {
                     Current.Resources.MergedDictionaries.Add(t);
@@ -166,7 +175,16 @@ namespace 饥荒百科全书CSharp
                 {
                     if (args[0] == "-clear")
                     {
-                        //MessageBox.Show("清除设置");
+                        if (MessageBox.Show("警告：您将会删除所有注册表设置，点“确定”立即清除，点“取消”取消清除！", "Σ(っ°Д°;)っ", MessageBoxButton.OKCancel) ==
+                            MessageBoxResult.OK)
+                        {
+                            RegeditRw.ClearReg();
+                            MessageBox.Show("清除完毕！", "ヾ(๑╹◡╹)ﾉ");
+                        }
+                        else
+                        {
+                            MessageBox.Show("取消清除！", "(～￣▽￣)～");
+                        }
                         Environment.Exit(0);
                     }
                 }

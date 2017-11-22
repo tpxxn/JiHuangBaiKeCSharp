@@ -137,6 +137,9 @@
     <Compile Include="View\CharacterPage.xaml.cs">
       <DependentUpon>CharacterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CookingSimulatorPage.xaml.cs">
+      <DependentUpon>CookingSimulatorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CreaturePage.xaml.cs">
       <DependentUpon>CreaturePage.xaml</DependentUpon>
     </Compile>
@@ -297,6 +300,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CharacterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CookingSimulatorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

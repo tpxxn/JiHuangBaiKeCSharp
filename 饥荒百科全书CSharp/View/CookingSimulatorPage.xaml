@@ -1,0 +1,215 @@
+﻿<Page x:Class="饥荒百科全书CSharp.View.CookingSimulatorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:饥荒百科全书CSharp.View"
+      xmlns:class="clr-namespace:饥荒百科全书CSharp.Class"
+      xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="888"
+      Title="CookingSimulatorPage" SizeChanged="Page_SizeChanged">
+
+    <Page.Resources>
+        <DataTemplate x:Key="FoodDataTemplate" DataType="class:Food">
+            <Button Click="FoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+                <Grid Margin="5" Width="80" Height="80">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image x:Name="Image" Source="{Binding Picture}" Stretch="Uniform" />
+                    <TextBlock Grid.Row="1" Text="{Binding Name}" HorizontalAlignment="Center" />
+                </Grid>
+            </Button>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="RootGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
+            <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer x:Name="CookingSimulatorLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
+            <StackPanel x:Name="CookingSimulatorLeftStackPanel" Focusable="False">
+                <ComboBox x:Name="CrockpotComboBox" VerticalAlignment="Top" Focusable="False" IsReadOnly="True" Style="{StaticResource ComboBoxStyle}" HorizontalContentAlignment="Center" Width="{Binding ActualWidth, ElementName=CookingSimulatorLeftStackPanel, Mode=OneWay}">
+                    <ComboBoxItem x:Name="CrockpotComboBoxItem" IsSelected="True" Focusable="False" HorizontalContentAlignment="Center">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/CP_CrockPot.PNG" Width="32" Height="32" />
+                            <TextBlock Text="烹煮锅" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Name="PortableCrockPotComboBoxItem" Focusable="False" HorizontalContentAlignment="Center">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/CP_PortableCrockPot.PNG" Width="32" Height="32" />
+                            <TextBlock Text="便携式烹饪锅" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+                </ComboBox>
+                <Grid x:Name="SettingAndResetGrid" Height="40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="170"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="AutoCleanCheckBox" Content="自动清空材料" HorizontalAlignment="Left" VerticalAlignment="Top" Cursor="{StaticResource CursorLink}" Margin="0,10,0,0" Grid.Column="1" IsChecked="True"/>
+                    <Button x:Name="ResetButton" Content="重置" VerticalAlignment="Top" Width="64" Cursor="{StaticResource CursorLink}" Margin="0,7,0,0" HorizontalAlignment="Right" Grid.Column="1" Click="ResetButton_Click"/>
+                </Grid>
+                <StackPanel x:Name="FoodButtonStackPanel">
+                    <Button x:Name="Food1Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food1Button_Click" Background="{x:Null}">
+                        <Image x:Name="Food1Image" Height="52" Width="52"/>
+                    </Button>
+                    <Button x:Name="Food2Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food2Button_Click" Background="{x:Null}">
+                        <Image x:Name="Food2Image" Height="52" Width="52"/>
+                    </Button>
+                    <Button x:Name="Food3Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food3Button_Click" Background="{x:Null}">
+                        <Image x:Name="Food3Image" Height="52" Width="52"/>
+                    </Button>
+                    <Button x:Name="Food4Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food4Button_Click" Background="{x:Null}">
+                        <Image x:Name="Food4Image" Height="52" Width="52"/>
+                    </Button>
+                </StackPanel>
+                <Grid x:Name="CalculationGrid" Height="64" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Height="52" Width="52" Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_set_rightarrow.png" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+                <Grid x:Name="ResultButtonGrid" Height="64" Width="152" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="64"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="SwitchLeftButton" Grid.Column="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="44" HorizontalAlignment="Right" Style="{StaticResource SwitchButtonLeftStyle}" Click="SwitchLeftButton_Click" Visibility="Collapsed"/>
+                    <Button x:Name="ResultButton" Grid.Column="1" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="ResultButton_Click" Background="{x:Null}">
+                        <Image x:Name="FoodResultImage" Height="52" Width="52"/>
+                    </Button>
+                    <Button x:Name="SwitchRightButton" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Width="44" HorizontalAlignment="Left" Style="{StaticResource SwitchButtonRightStyle}" Click="SwitchRightButton_Click" Visibility="Collapsed"/>
+                </Grid>
+                <Grid x:Name="FoodNameGrid" Height="40">
+                    <TextBlock x:Name="FoodResultTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Grid>
+                <Grid x:Name="FoodAttributeGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Center" Text="食材总属性" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                    <TextBlock HorizontalAlignment="Center" Text="生成食物属性" VerticalAlignment="Top" Grid.Row="0" Grid.Column="2"/>
+                    <StackPanel Grid.Row="1" Grid.Column="0">
+                        <uc:BarChart x:Name="FoodHealth" Label="" MaxValue="400"/>
+                        <uc:BarChart x:Name="FoodHunger" Label="" MaxValue="600"/>
+                        <uc:BarChart x:Name="FoodSanity" Label="" MaxValue="200"/>
+                    </StackPanel>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="生命" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Text="饥饿" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="2" Text="精神" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                    <StackPanel Grid.Row="1" Grid.Column="2">
+                        <uc:BarChart x:Name="FoodRecipeHealth" Label="" MaxValue="100"/>
+                        <uc:BarChart x:Name="FoodRecipeHunger" Label="" MaxValue="150"/>
+                        <uc:BarChart x:Name="FoodRecipeSanity" Label="" MaxValue="50"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+        <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{StaticResource CursorHorz}" Style="{StaticResource GridSplitterStyle}" />
+        <ScrollViewer x:Name="ScrollViewerRight" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Expander x:Name="MeatsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Foods/FC_Meats.png" />
+                            <TextBlock Text="肉类" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource FoodDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="VegetablesExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Foods/FC_Vegetables.png" />
+                            <TextBlock Text="蔬菜" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource FoodDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="FruitsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Foods/FC_Fruit.png" />
+                            <TextBlock Text="水果" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource FoodDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="EggsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Foods/FC_Eggs.png" />
+                            <TextBlock Text="蛋类" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource FoodDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="OtherExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Goods/G_twigs.png" />
+                            <TextBlock Text="其他" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource FoodDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

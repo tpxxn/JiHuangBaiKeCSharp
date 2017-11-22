@@ -111,6 +111,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
             }
             else
             {
+                barChart.ValueTextBlock.Foreground = new SolidColorBrush(Colors.Black);
                 barChart.ValueRectangle.Width = (double)e.NewValue / barChart.MaxValue * 300;
             }
             if ((double)e.NewValue == 1000)

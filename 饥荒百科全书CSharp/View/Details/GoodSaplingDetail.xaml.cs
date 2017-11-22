@@ -29,6 +29,10 @@ namespace 饥荒百科全书CSharp.View.Details
             if (e.ExtraData == null || _loadedTime != 0) return;
             _loadedTime++;
             LoadData((GoodSapling)e.ExtraData);
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
         }
 
         public GoodSaplingDetail()

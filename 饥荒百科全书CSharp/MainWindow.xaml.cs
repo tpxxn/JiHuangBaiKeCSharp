@@ -36,6 +36,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
+using 饥荒百科全书CSharp.View;
 using Control = System.Windows.Forms.Control;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
@@ -97,6 +98,8 @@ namespace 饥荒百科全书CSharp
             MouseMove += Window_MouseMove;
             //mainWindow初始化标志
             MwInit = true;
+            //RightFrame
+            Global.RightFrame = RightFrame;
             #region "读取设置"
             //设置字体
             if (string.IsNullOrEmpty(mainWindowFont))
@@ -118,8 +121,6 @@ namespace 饥荒百科全书CSharp
                 UriKind.Absolute);
             //显示窗口
             MwVisivility = true;
-            //右侧面板Visibility属性初始化
-            RightFrame.Navigate(new Uri("../View/WelcomePage.xaml", UriKind.Relative));
             //窗口置顶
             if (winTopmost == 1)
             {
@@ -183,29 +184,35 @@ namespace 饥荒百科全书CSharp
             //设置游戏版本
             UiGameversion.SelectedIndex = (int)gameVersion;
             #endregion
+            //右侧面板导航到欢迎界面
+            RightFrame.Navigate(new WelcomePage());
         }
-        //MainWindow窗口加载
+
+        /// <summary>
+        /// MainWindow窗口加载
+        /// </summary>
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             var _ = new KeyboardHandler(this);
-            foreach (var str in Rf())//加载字体
+            foreach (var str in ReadFont())//加载字体
             {
-                var tb = new TextBlock
+                var textBlock = new TextBlock
                 {
                     Text = str,
                     FontFamily = new FontFamily(str)
                 };
-                SeComboBoxFont.Items.Add(tb);
+                SeComboBoxFont.Items.Add(textBlock);
             }
             var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
-            var ls = new List<string>();
-            foreach (TextBlock tb in SeComboBoxFont.Items)
+            var stringList = new List<string>();
+            foreach (TextBlock textBlock in SeComboBoxFont.Items)
             {
-                ls.Add(tb.Text);
+                stringList.Add(textBlock.Text);
             }
-            SeComboBoxFont.SelectedIndex = ls.IndexOf(mainWindowFont);
+            SeComboBoxFont.SelectedIndex = stringList.IndexOf(mainWindowFont);
             LoadFont = true;
-            DediButtomPanelInitalize();//服务器面板初始化
+            //服务器面板初始化
+            DediButtomPanelInitalize();
         }
         #endregion
 

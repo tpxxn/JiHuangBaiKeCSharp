@@ -63,8 +63,7 @@ namespace 饥荒百科全书CSharp
         }
         private void ResizePressed(object sender, MouseEventArgs e)
         {
-            var element = sender as FrameworkElement;
-            if (element == null) return;
+            if (!(sender is FrameworkElement element)) return;
             var direction = (ResizeDirection)Enum.Parse(typeof(ResizeDirection), element.Name.Replace("Resize", ""));
 
             switch (direction)
@@ -245,7 +244,7 @@ namespace 饥荒百科全书CSharp
         }
         
         //获取字体函数
-        private static IEnumerable<string> Rf()
+        private static IEnumerable<string> ReadFont()
         {
             var installedFontCollectionFont = new InstalledFontCollection();
             var fontFamilys = installedFontCollectionFont.Families;
@@ -311,7 +310,7 @@ namespace 饥荒百科全书CSharp
         /// <summary>
         /// 设置背景拉伸方式
         /// </summary>
-        private void Se_ComboBox_Background_Stretch_SelectionChanged(Object sender, SelectionChangedEventArgs e)
+        private void Se_ComboBox_Background_Stretch_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var bg = RegeditRw.RegReadString("Background");
             if (!MwInit) return;
@@ -343,12 +342,14 @@ namespace 饥荒百科全书CSharp
         /// <summary>
         /// 修改字体
         /// </summary>
-        private void Se_ComboBox_Font_SelectionChanged(Object sender, SelectionChangedEventArgs e)
+        private void Se_ComboBox_Font_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!LoadFont) return;
-            var ls = (from TextBlock tb in SeComboBoxFont.Items select tb.Text).ToList();
-            mainWindow.FontFamily = new FontFamily(ls[SeComboBoxFont.SelectedIndex]);
-            RegeditRw.RegWrite("MainWindowFont", ls[SeComboBoxFont.SelectedIndex]);
+            var textList = (from TextBlock textBlock in SeComboBoxFont.Items select textBlock.Text).ToList();
+            mainWindow.FontFamily = new FontFamily(textList[SeComboBoxFont.SelectedIndex]);
+            Global.FontFamily = mainWindow.FontFamily;
+            RightFrame.NavigationService.Navigate(new WelcomePage());
+            RegeditRw.RegWrite("MainWindowFont", textList[SeComboBoxFont.SelectedIndex]);
         }
 
         /// <summary>
@@ -366,8 +367,7 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void Se_Panel_Alpha_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            //TODO
-            RightGrid.Background.Opacity = SePanelAlpha.Value / 100;
+            RightFrame.Background.Opacity = SePanelAlpha.Value / 100;
             SePanelAlphaText.Text = "面板不透明度：" + (int)SePanelAlpha.Value + "%";
             RegeditRw.RegWrite("BGPanelAlpha", SePanelAlpha.Value + 1);
         }
@@ -466,43 +466,43 @@ namespace 饥荒百科全书CSharp
         //左侧菜单按钮
         private void Sidebar_Welcome_Click(object sender, RoutedEventArgs e)
         {
-            RightFrame.Navigate(new Uri("../View/WelcomePage.xaml", UriKind.Relative));
+            RightFrame.NavigationService.Navigate(new WelcomePage());
         }
         private void Sidebar_Character_Click(object sender, RoutedEventArgs e)
         {
-            RightFrame.Navigate(new Uri("../View/CharacterPage.xaml", UriKind.Relative));
+            RightFrame.NavigationService.Navigate(new CharacterPage());
         }
         private void Sidebar_Food_Click(object sender, RoutedEventArgs e)
         {
-            RightFrame.Navigate(new Uri("../View/FoodPage.xaml", UriKind.Relative));
+            RightFrame.NavigationService.Navigate(new FoodPage());
         }
         private void Sidebar_Cooking_Simulator_Click(object sender, RoutedEventArgs e)
         {
-
+            RightFrame.NavigationService.Navigate(new CookingSimulatorPage());
         }
         private void Sidebar_Science_Click(object sender, RoutedEventArgs e)
         {
-            RightFrame.Navigate(new Uri("../View/SciencePage.xaml", UriKind.Relative));
+            RightFrame.NavigationService.Navigate(new SciencePage());
         }
         private void Sidebar_Animal_Click(object sender, RoutedEventArgs e)
         {
-            RightFrame.Navigate(new Uri("../View/CreaturePage.xaml", UriKind.Relative));
+            RightFrame.NavigationService.Navigate(new CreaturePage());
         }
         private void Sidebar_Natural_Click(object sender, RoutedEventArgs e)
         {
-            RightFrame.Navigate(new Uri("../View/NaturalPage.xaml", UriKind.Relative));
+            RightFrame.NavigationService.Navigate(new NaturalPage());
         }
         private void Sidebar_Goods_Click(object sender, RoutedEventArgs e)
         {
-            RightFrame.Navigate(new Uri("../View/GoodPage.xaml", UriKind.Relative));
+            RightFrame.NavigationService.Navigate(new GoodPage());
         }
         private void Sidebar_DedicatedServer_Click(object sender, RoutedEventArgs e)
         {
-
+            //TODO
         }
         private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
         {
-
+            //TODO
         }
         #endregion
 

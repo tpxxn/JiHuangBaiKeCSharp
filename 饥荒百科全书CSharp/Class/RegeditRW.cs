@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using System;
+using Microsoft.Win32;
 
 namespace 饥荒百科全书CSharp.Class
 {
@@ -69,6 +70,23 @@ namespace 饥荒百科全书CSharp.Class
                 GetValue = GetValueTemp;
             }
             return GetValue;
+        }
+
+        /// <summary>
+        /// 清空注册表
+        /// </summary>
+        public static void ClearReg()
+        {
+            try
+            {
+                var key = Registry.CurrentUser;
+                key.DeleteSubKey(@"SOFTWARE\JiHuangBaiKeCSharp", true); //该方法无返回值，直接调用即可
+                key.Close();
+            }
+            catch (Exception)
+            {
+                //ignore
+            }
         }
     }
 }

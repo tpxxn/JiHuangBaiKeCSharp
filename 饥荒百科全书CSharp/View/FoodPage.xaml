@@ -11,6 +11,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="888"
       Title="FoodPage" SizeChanged="Page_SizeChanged">
+    
     <Page.Resources>
         <DataTemplate x:Key="FoodRecipeDataTemplate" DataType="class:FoodRecipe2">
             <Button Click="FoodRecipeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
@@ -39,7 +40,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid x:Name="RootGrid" Background="#FEFFFFFF">
+    <Grid x:Name="RootGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
             <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>
@@ -78,7 +79,6 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-
                 <Expander x:Name="VegetablesExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
@@ -94,8 +94,6 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-
-
                 <Expander x:Name="FruitsExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
@@ -111,7 +109,6 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-
                 <Expander x:Name="EggsExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
@@ -127,7 +124,6 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-
                 <Expander x:Name="OtherExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
@@ -143,7 +139,6 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-
                 <Expander x:Name="NoFcExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">

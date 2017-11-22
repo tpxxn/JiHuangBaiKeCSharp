@@ -8,7 +8,7 @@
       d:DesignHeight="660" d:DesignWidth="956"
       Title="WelcomePage">
 
-    <Grid x:Name="RightGridWelcome" Visibility="Visible" Margin="0">
+    <Grid x:Name="RightGridWelcome" Visibility="Visible">
         <TextBlock Text="饥荒百科全书" VerticalAlignment="Top" Margin="0,10,40,0" Foreground="Black" FontSize="53.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Right" d:IsLocked="True"/>
         <TextBlock Text="对应游戏版本：" VerticalAlignment="Top" Margin="0,82.733,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
         <TextBlock Text="单机版：v222215" VerticalAlignment="Top" Margin="0,121.599,40,0" Foreground="Black" FontSize="26.667" FontWeight="Bold" HorizontalAlignment="Right" d:LayoutOverrides="VerticalAlignment"/>

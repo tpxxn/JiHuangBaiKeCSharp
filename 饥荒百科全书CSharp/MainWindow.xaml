@@ -56,7 +56,7 @@
                 <Button x:Name="UiBtnMaximized" Width="20" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_maximized_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UiBtnNormal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_normal_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UiBtnMinimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnBg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" />
+                <Button x:Name="UiBtnBg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_bg_Style}" Focusable="False" d:IsLocked="True" />
                 <Popup x:Name="UiPopBg" PopupAnimation="Fade" Width="200" PlacementTarget="{Binding ElementName=UiBtnBg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
                     <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White" Cursor="{DynamicResource CursorPointer}">
                         <StackPanel Margin="10">
@@ -91,15 +91,15 @@
                             <ComboBox x:Name="SeComboBoxFont" HorizontalAlignment="Right" Width="133" Margin="0,-19,0,0" Focusable="False" SelectionChanged="Se_ComboBox_Font_SelectionChanged" SelectedIndex="1" Style="{DynamicResource ComboBoxStyle}" IsReadOnly="True"/>
                             <TextBlock x:Name="SeBgAlphaText" TextWrapping="Wrap" Text="背景不透明度：100%" Margin="0,10,0,0"/>
                             <Slider x:Name="SeBgAlpha" ValueChanged="Se_BG_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Cursor="{DynamicResource CursorLink}" Margin="0,0,1,0" />
-                            <TextBlock x:Name="SePanelAlphaText" TextWrapping="Wrap" Text="面板不透明度：100%" Margin="0,10,0,0" Visibility="Collapsed"/>
-                            <Slider x:Name="SePanelAlpha" ValueChanged="Se_Panel_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Cursor="{DynamicResource CursorLink}" Margin="0,0,1,0" Visibility="Collapsed" />
+                            <TextBlock x:Name="SePanelAlphaText" TextWrapping="Wrap" Text="面板不透明度：100%" Margin="0,10,0,0"/>
+                            <Slider x:Name="SePanelAlpha" ValueChanged="Se_Panel_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Cursor="{DynamicResource CursorLink}" Margin="0,0,1,0" />
                             <TextBlock x:Name="SeWindowAlphaText" TextWrapping="Wrap" Text="窗口不透明度：100%" Margin="0,10,0,0"/>
                             <Slider x:Name="SeWindowAlpha" ValueChanged="Se_Window_Alpha_ValueChanged" Maximum="100" SmallChange="1" LargeChange="10" Value="100" Minimum="10" Cursor="{DynamicResource CursorLink}" Margin="0,0,1,0"/>
                         </StackPanel>
                     </Border>
                 </Popup>
-                <Button x:Name="UiBtnSetting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Margin="0,10,110,20" Height="20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_setting_Style}" Focusable="False" />
-                <Popup x:Name="UiPopSetting" PopupAnimation="Fade" Width="150" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Margin="0,0,748,-150" VerticalOffset="10">
+                <Button x:Name="UiBtnSetting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Margin="0,10,110,20" Height="20" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_setting_Style}" Focusable="False" d:IsLocked="True" />
+                <Popup x:Name="UiPopSetting" PopupAnimation="Fade" Width="150" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Margin="0,0,748,-150" VerticalOffset="10" d:IsLocked="True">
                     <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White"  Cursor="{DynamicResource CursorPointer}">
                         <StackPanel Margin="10">
                             <Button x:Name="SeButtonTopmost" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{DynamicResource CursorLink}" Click="Se_button_Topmost_Click">
@@ -117,7 +117,8 @@
                         </StackPanel>
                     </Border>
                 </Popup>
-                <ComboBox x:Name="UiGameversion" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{DynamicResource ComboBoxStyle}" HorizontalAlignment="Right">
+                <TextBlock x:Name="UiGameversionTextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="14" d:IsLocked="True"/>
+                <ComboBox x:Name="UiGameversion" VerticalAlignment="Top" Width="120" Margin="0,3,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{DynamicResource ComboBoxStyle}" HorizontalAlignment="Right" d:IsLocked="True">
                     <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DST.PNG" Width="32" Height="32"  />
@@ -149,11 +150,10 @@
                         </StackPanel>
                     </ComboBoxItem>
                 </ComboBox>
-                <TextBlock x:Name="UiGameversionTextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,13,265,0" HorizontalAlignment="Right" VerticalAlignment="Top" d:IsLocked="True"/>
-                <TextBox x:Name="UiSearch" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource CursorText}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10" Visibility="Collapsed"/>
+                <TextBox x:Name="UiSearch" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Margin="0,10,350,0" Cursor="{DynamicResource CursorText}"  Style="{DynamicResource UI_search_Style}" TextChanged="UI_search_TextChanged" FontSize="15" MaxLength="10" Visibility="Collapsed" d:IsLocked="True"/>
                 <Button x:Name="UiSearchClear" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,12,351,18" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" d:IsLocked="True"/>
             </Grid>
-            <Frame x:Name="RightFrame" Grid.Row="1" Grid.Column="1" Margin="0,1,0,0" NavigationUIVisibility="Hidden"/>
+            <Frame x:Name="RightFrame" Grid.Row="1" Grid.Column="1" Margin="0,1,0,0" Background="#FEFFFFFF" NavigationUIVisibility="Hidden"/>
             <Grid x:Name="RightGrid" Grid.Row="1" Grid.Column="1" Background="#FEFFFFFF" Visibility="Collapsed">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
@@ -507,15 +507,15 @@
             </Grid>
             <Canvas Grid.Row="0" Grid.Column="0" x:Name="LeftCanvas" Margin="0,0,0,50" Width="50" HorizontalAlignment="Left">
                 <WrapPanel x:Name="LeftWrapPanel" Width="50" HorizontalAlignment="Left" Background="#FF2B2B2B" Height="658">
-                    <Button x:Name="SidebarMenu" Width="50" Height="50" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" />
-                    <RadioButton x:Name="SidebarWelcome" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" />
-                    <RadioButton x:Name="SidebarCharacter" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" />
-                    <RadioButton x:Name="SidebarFood" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Food_Style}" Focusable="False" Click="Sidebar_Food_Click" />
-                    <RadioButton x:Name="SidebarCookingSimulator" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Cooking_Simulator_Style}" Focusable="False" Click="Sidebar_Cooking_Simulator_Click" Visibility="Collapsed" />
-                    <RadioButton x:Name="SidebarScience" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Science_Style}" Focusable="False" Click="Sidebar_Science_Click" />
-                    <RadioButton x:Name="SidebarAnimal" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
-                    <RadioButton x:Name="SidebarNatural" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
-                    <RadioButton x:Name="SidebarGoods" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
+                    <Button x:Name="SidebarMenu" Width="50" Height="50" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Menu_Style}" Focusable="False" Click="Sidebar_Menu_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarWelcome" Height="50" Width="150" IsChecked="True" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Welcome_Style}" Focusable="False" Click="Sidebar_Welcome_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarCharacter" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Character_Style}" Focusable="False" Click="Sidebar_Character_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarFood" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Food_Style}" Focusable="False" Click="Sidebar_Food_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarCookingSimulator" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Cooking_Simulator_Style}" Focusable="False" Click="Sidebar_Cooking_Simulator_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarScience" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Science_Style}" Focusable="False" Click="Sidebar_Science_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarAnimal" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarNatural" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" d:IsLocked="True" />
+                    <RadioButton x:Name="SidebarGoods" Height="50" Width="150" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" d:IsLocked="True" />
                     <RadioButton x:Name="SidebarDedicatedServer" Height="50" Width="150" Margin="0" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" Visibility="Collapsed" />
                     <RadioButton x:Name="SidebarSetting" Height="50" Width="150" Margin="0" Cursor="{DynamicResource CursorLink}" Style="{DynamicResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" Visibility="Collapsed" />
                 </WrapPanel>
