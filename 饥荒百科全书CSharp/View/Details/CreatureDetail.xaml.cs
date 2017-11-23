@@ -265,7 +265,7 @@ namespace 饥荒百科全书CSharp.View.Details
         /// 顽皮值表
         /// </summary>
         /// <param name="gameVersion">游戏版本</param>
-        private void ShowKrampus(int gameVersion)
+        private void ShowKrampus(double gameVersion)
         {
             var rootStackPanel = new StackPanel
             {
@@ -494,7 +494,7 @@ namespace 饥荒百科全书CSharp.View.Details
         /// 猪王交换表
         /// </summary>
         /// <param name="gameVersion">游戏版本</param>
-        private void ShowPigKing(int gameVersion)
+        private void ShowPigKing(double gameVersion)
         {
             var rootStackPanel = new StackPanel
             {

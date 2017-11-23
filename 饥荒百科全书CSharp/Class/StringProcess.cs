@@ -54,7 +54,7 @@ namespace 饥荒百科全书CSharp.Class
             //            var storageFile = await StorageFile.GetFileFromApplicationUriAsync(uri);
             //            var str = await FileIO.ReadTextAsync(storageFile);
 
-            Stream src2 = Application.GetResourceStream(new Uri("/饥荒百科全书CSharp;component/Json/"+ Global.BuiltInGameVersionJsonFolder[Global.GameVersion]+ "/" + fileName, UriKind.Relative))?.Stream;
+            Stream src2 = Application.GetResourceStream(new Uri("/饥荒百科全书CSharp;component/Json/"+ Global.BuiltInGameVersionJsonFolder[(int)Global.GameVersion]+ "/" + fileName, UriKind.Relative))?.Stream;
             string str = new StreamReader(src2 ?? throw new InvalidOperationException(), Encoding.UTF8).ReadToEnd();
             return str;
         }

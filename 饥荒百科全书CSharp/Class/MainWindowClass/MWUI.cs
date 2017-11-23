@@ -278,6 +278,8 @@ namespace 饥荒百科全书CSharp
         {
             if (!MwInit) return;
             Global.GameVersion = UiGameversion.SelectedIndex;
+            // 设置AutoSuggestBox的数据源
+            Global.SetAutoSuggestBoxItem();
             RightFrame.Navigate(new Uri("../View/WelcomePage.xaml", UriKind.Relative));
             SidebarWelcome.IsChecked = true;
             RegeditRw.RegWrite("GameVersion", UiGameversion.SelectedIndex);

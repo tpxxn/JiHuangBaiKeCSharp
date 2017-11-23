@@ -61,7 +61,7 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// 游戏版本
         /// </summary>
-        public static int GameVersion { get; set; }
+        public static double GameVersion { get; set; }
 
         /// <summary>
         /// 内置游戏版本Json文件夹名
