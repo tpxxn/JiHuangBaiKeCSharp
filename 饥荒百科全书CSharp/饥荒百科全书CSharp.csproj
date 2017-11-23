@@ -5440,6 +5440,9 @@
     <Resource Include="Resources\GameResources\Creatures\A_blue_crocodog.png" />
     <Resource Include="Resources\GameResources\Creatures\A_yellow_crocodog.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Newtonsoft.Json.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

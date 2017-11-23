@@ -164,6 +164,18 @@ namespace 饥荒百科全书CSharp
                         Assembly.GetExecutingAssembly().GetName().Name, out _createdNew);
                     if (_createdNew)
                     {
+                        //加载DLL
+                        AppDomain.CurrentDomain.AssemblyResolve += (sender, arguments) =>
+                        {
+                            String projectName = Assembly.GetExecutingAssembly().GetName().Name.ToString();
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(projectName + ".Newtonsoft.Json.dll"))
+                            {
+                                Byte[] bytes = new Byte[stream.Length];
+                                stream.Read(bytes, 0, bytes.Length);
+                                return Assembly.Load(bytes);
+                            }
+                        };
+                        //启动
                         var app = new App_Run();
                         app.Run();
                     }
