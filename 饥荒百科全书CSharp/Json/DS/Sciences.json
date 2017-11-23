@@ -20,7 +20,7 @@
                 "Need1Value": 2,
                 "Need2": "G_gold_nugget",
                 "Need2Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "耐久度是普通斧头的四倍。尽情地砍吧，少年！",
                 "Console": "goldenaxe"
             },
@@ -43,7 +43,7 @@
                 "Need1Value": 4,
                 "Need2": "G_gold_nugget",
                 "Need2Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "耐久度是普通十字镐的四倍。用它去征服矿区！",
                 "Console": "goldenpickaxe"
             },
@@ -55,7 +55,7 @@
                 "Need1Value": 2,
                 "Need2": "G_flint",
                 "Need2Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "前期移植作物的工具，要坚持走可持续发展道路，两下三下奔小康，铲子也能把树桩铲掉。",
                 "Console": "shovel"
             },
@@ -67,7 +67,7 @@
                 "Need1Value": 4,
                 "Need2": "G_gold_nugget",
                 "Need2Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "耐久度是普通铲子的四倍。人手一把去挖坟！",
                 "Console": "goldenshovel"
             },
@@ -81,7 +81,7 @@
                 "Need2Value": 3,
                 "Need3": "S_rope",
                 "Need3Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "用于破坏建筑，收回50%以上的建材，一般可以去拆野外的建筑获得资源。",
                 "Console": "hammer"
             },
@@ -93,7 +93,7 @@
                 "Need1Value": 2,
                 "Need2": "G_flint",
                 "Need2Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "可以把地皮铲起来，后期改造基地非常有用。尽早给基地铺上鹅卵石的路吧。",
                 "Console": "pitchfork"
             },
@@ -105,7 +105,7 @@
                 "Need1Value": 2,
                 "Need2": "G_flint",
                 "Need2Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "用于刮牛毛，晚上趁牛睡觉可以举着火把刮点毛下来，威尔逊和韦伯的胡子长了你也可以自己刮点下来。",
                 "Console": "razor"
             }
@@ -156,7 +156,7 @@
                 "Need2Value": 1,
                 "Need3": "G_fireflies",
                 "Need3Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "大范围照明工具，优点在于你能腾出手来干活，缺点就是萤火虫是不可再生资源。可以用萤火虫、荧光果、粘滑含糊虫添加燃料。",
                 "Console": "minerhat"
             },
@@ -168,7 +168,7 @@
                 "Need1Value": 1,
                 "Need2": "G_fireflies",
                 "Need2Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "丢出来成为一个微弱的光源，持续时间1~2天。由于太暗，所以没人用，打烂它可以放出萤火虫。",
                 "Console": "pumpkin_lantern"
             },
@@ -182,7 +182,7 @@
                 "Need2Value": 2,
                 "Need3": "G_light_bulb",
                 "Need3Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "大范围照明工具，可以放置在地下，右键开关，下洞穴带着它是个不错的选择。可以用萤火虫、荧光果、粘滑含糊虫添加燃料。",
                 "Console": "lantern"
             }
@@ -209,7 +209,7 @@
                 "Need1Value": 3,
                 "Need2": "G_silk",
                 "Need2Value": 4,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "顾名思义，捕鸟的陷阱。可多次使用。",
                 "Console": "birdtrap"
             },
@@ -232,7 +232,7 @@
                 "Need1Value": 4,
                 "Need2": "G_twigs",
                 "Need2Value": 4,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "前期就能制作，能增加8格物品栏，相信所有喜欢旅行喜欢探险的玩家都会装备吧。",
                 "Console": "backpack"
             },
@@ -246,7 +246,7 @@
                 "Need2Value": 6,
                 "Need3": "S_rope",
                 "Need3Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "猪皮背包能增加12格物品栏，但是会减少主角的移动速度，毕竟不是LV的包包，不是很实用。",
                 "Console": "piggyback"
             },
@@ -260,7 +260,7 @@
                 "Need2Value": 1,
                 "Need3": "G_spider_gland",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "可以恢复20生命，但是寻找素材比较麻烦，如果我有蜘蛛腺体，还是直接使用(恢复8生命)方便点。",
                 "Console": "healingsalve"
             },
@@ -272,7 +272,7 @@
                 "Need1Value": 1,
                 "Need2": "F_honey",
                 "Need2Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可以恢复30生命，只要控制了沼泽地的芦苇便能大面积生产，它没有保鲜度，所以要备一些在箱子。",
                 "Console": "bandage"
             },
@@ -284,7 +284,7 @@
                 "Need1Value": 6,
                 "Need2": "S_rope",
                 "Need2Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "睡觉可以度过晚上，并且恢复精神，由于材料非常好找，自己精神低的时候就别硬撑了。",
                 "Console": "bedroll_straw"
             },
@@ -296,7 +296,7 @@
                 "Need1Value": 1,
                 "Need2": "G_bunny_puff",
                 "Need2Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "和草铺卷一样是睡觉用的，相比之下毛铺卷还能额外恢复30生命值，使用次数也增加到了3次。",
                 "Console": "bedroll_furry"
             },
@@ -310,7 +310,7 @@
                 "Need2Value": 4,
                 "Need3": "S_rope",
                 "Need3Value": 3,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "供玩家睡觉，可使用6次，可同时恢复生命和精神。用过5次之后建议用锤子砸烂并回收部分建材。",
                 "Console": "tent"
             },
@@ -324,7 +324,7 @@
                 "Need2Value": 1,
                 "Need3": "G_silk",
                 "Need3Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "降低下雨对玩家的影响，有些文艺青年也拿它当武器使。",
                 "Console": "umbrella"
             },
@@ -338,7 +338,7 @@
                 "Need2Value": 2,
                 "Need3": "S_rope",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "可以用来抓蝴蝶、蜜蜂、萤火虫。可使用10次。最好先造个原型体，然后到哪都可以抓虫子了。",
                 "Console": "bugnet"
             },
@@ -350,7 +350,7 @@
                 "Need1Value": 2,
                 "Need2": "G_silk",
                 "Need2Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "人人都知道鱼排是补血神器，素材简单，回血又多。你还在等什么,还不弄个杆子去钓鱼，不用鱼饵哟。",
                 "Console": "fishingrod"
             },
@@ -364,7 +364,7 @@
                 "Need2Value": 1,
                 "Need3": "G_flint",
                 "Need3Value": 3,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "靠近萤火可以吸收热量，供玩家在冬季保暖，有一定热度时戴在身上还可以发光.放在冰箱里可以放热，供玩家夏季乘凉。",
                 "Console": "heatrock"
             }
@@ -382,7 +382,7 @@
                 "Need2Value": 4,
                 "Need3": "G_log",
                 "Need3Value": 4,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "素材要求比较低，前期可以弄几个来种植蔬菜。",
                 "Console": "slow_farmplot"
             },
@@ -396,7 +396,7 @@
                 "Need2Value": 6,
                 "Need3": "G_rocks",
                 "Need3Value": 4,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "需要大量的素材，但是它是值得的，因为它的生长速度和施肥效率都是基本农场的2倍。",
                 "Console": "fast_farmplot"
             },
@@ -410,7 +410,7 @@
                 "Need2Value": 1,
                 "Need3": "A_bee",
                 "Need3Value": 4,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "可自行养殖蜜蜂生产蜂蜜，旁边需要用蝴蝶种植一些花朵蜜蜂采蜜才有效率，收蜜时小心蜜蜂攻击。",
                 "Console": "beebox"
             },
@@ -424,7 +424,7 @@
                 "Need2Value": 2,
                 "Need3": "S_rope",
                 "Need3Value": 3,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "可以把肉类风干，大肉和蝙蝠翅膀需要2天，其他肉需要1天，下雨暂停风干过程。",
                 "Console": "meatrack"
             },
@@ -438,7 +438,7 @@
                 "Need2Value": 6,
                 "Need3": "G_twigs",
                 "Need3Value": 6,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "允许玩家把4份食材烹饪成料理，料理配方见食物表。",
                 "Console": "cookpot"
             },
@@ -452,7 +452,7 @@
                 "Need2Value": 1,
                 "Need3": "S_cut_stone",
                 "Need3Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "拥有9格的储存功能，只允许储藏食物和保温石，放进去的食物腐烂速度延缓50%。",
                 "Console": "icebox"
             }
@@ -483,7 +483,7 @@
                 "Need2Value": 2,
                 "Need3": "G_gold_nugget",
                 "Need3Value": 6,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "靠近后为玩家解锁二级科技，制作成功后，当前科技将永久解锁。",
                 "Console": "researchlab2"
             },
@@ -497,7 +497,7 @@
                 "Need2Value": 4,
                 "Need3": "G_gears",
                 "Need3Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "魔棒是用于定位和寻找麦斯威尔之门的道具，在联机版里貌似没有用处。",
                 "Console": "diviningrod"
             },
@@ -510,7 +510,7 @@
                 "Need2": "G_gold_nugget",
                 "Need2Value": 2,
                 "Need3Value": 0,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "显示当前温度，判断夏季和冬季来临时间。",
                 "Console": "winterometer"
             },
@@ -524,7 +524,7 @@
                 "Need2Value": 2,
                 "Need3": "S_rope",
                 "Need3Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "显示当前湿度，判断下雨和下雪的来临时间。",
                 "Console": "rainometer"
             },
@@ -538,7 +538,7 @@
                 "Need2Value": 1,
                 "Need3": "G_nitre",
                 "Need3Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "点燃后爆炸，小范围造成200点伤害，这足以秒杀玩家，高数量伤害会叠加，对付移动速度慢的怪好用。",
                 "Console": "gunpowder"
             },
@@ -551,7 +551,7 @@
                 "Need2": "S_cut_stone",
                 "Need2Value": 1,
                 "Need3Value": 0,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "引导雷电，使其不会劈到周围可燃物上，如果避雷针被雷电劈中，它连续几天都有静电且会发光。",
                 "Console": "lightning_rod"
             },
@@ -565,7 +565,7 @@
                 "Need2Value": 1,
                 "Need3": "G_gears",
                 "Need3Value": 6,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "仅存在于PSN/XBOX版本的东西，唯一目的就是增加一项成就。每激活25次就会放一次焰火，激活725次放更大的焰火并且获得成就__...and despair!",
                 "Console": "accomploshrine"
             }
@@ -583,7 +583,7 @@
                 "Need2Value": 1,
                 "Need3": "G_flint",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "若小伙伴中没有威戈芙瑞德，就只能用长矛将就一下了，比较不错的前期武器。",
                 "Console": "spear"
             },
@@ -597,7 +597,7 @@
                 "Need2Value": 2,
                 "Need3": "G_meat",
                 "Need3Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "需要两个大肉，不够长矛来得实在，不过攻击力还可以。攻击力随着新鲜度而变化，最高59.5，然后逐渐下降到30，最后变成腐烂食物。",
                 "Console": "hambat"
             },
@@ -620,7 +620,7 @@
                 "Need1Value": 8,
                 "Need2": "S_rope",
                 "Need2Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "虽然防御不是最高的，但是配合橄榄球头盔使用你就能单挑巨鹿了，素材也不是很难找，万金油防具。",
                 "Console": "armorwood"
             },
@@ -632,7 +632,7 @@
                 "Need1Value": 12,
                 "Need2": "S_rope",
                 "Need2Value": 4,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "接近于无敌的防具，但是素材比较难找，大理石比较稀少，采完了只能等洞穴地震了，而且会减速30%。",
                 "Console": "armormarble"
             },
@@ -644,7 +644,7 @@
                 "Need1Value": 1,
                 "Need2": "S_rope",
                 "Need2Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "防御优异的帽子，素材也容易寻找，可惜需要炼金机器才能解锁，配合其他防具让你拥有极高的防御。",
                 "Console": "footballhat"
             },
@@ -658,7 +658,7 @@
                 "Need2Value": 1,
                 "Need3": "G_azure_feather",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "一次性武器，伤害最高且远程的武器，吃饱的大力士可以一箭秒掉海象。",
                 "Console": "blowdart_pipe"
             },
@@ -672,7 +672,7 @@
                 "Need2Value": 1,
                 "Need3": "G_jet_feather",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "一次性武器，远程催眠怪物，如果怪物体型较大，你可能要使用多次才能成功催眠。",
                 "Console": "blowdart_sleep"
             },
@@ -686,7 +686,7 @@
                 "Need2Value": 1,
                 "Need3": "G_crimson_feather",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "一次性武器，远程点燃并伤害怪物，怪物被烧死后掉落的肉类都是被烤熟的，其他战利品变成灰烬。",
                 "Console": "blowdart_fire"
             },
@@ -700,7 +700,7 @@
                 "Need2Value": 1,
                 "Need3": "G_charcoal",
                 "Need3Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "比较普通的远程武器，飞出并返回，须按空格接住，否则伤到自己并损失2倍耐久度。",
                 "Console": "boomerang"
             },
@@ -714,7 +714,7 @@
                 "Need2Value": 4,
                 "Need3": "G_flint",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "敌人踩上去会爆炸，出现4只蜜蜂进行攻击，如果周围有蜂箱蜂巢其他蜜蜂也会协同攻击。",
                 "Console": "beemine"
             },
@@ -728,7 +728,7 @@
                 "Need2Value": 1,
                 "Need3": "G_hound's_tooth",
                 "Need3Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "伤害是长矛的2倍，数量多时会非常恐怖，基地简直固若金汤，冬天刷海象父子就能获得大量狗牙。",
                 "Console": "trap_teeth"
             }
@@ -742,7 +742,7 @@
                 "EnName": "Chest",
                 "Need1": "S_boards",
                 "Need1Value": 3,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "拥有3×3格的储物箱子。",
                 "Console": "treasurechest"
             },
@@ -752,7 +752,7 @@
                 "EnName": "Sign",
                 "Need1": "S_boards",
                 "Need1Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "放置后会显示在小地图上，可以标记一些重要地点。同时也是fast travel MOD的载体。",
                 "Console": "homesign"
             },
@@ -764,7 +764,7 @@
                 "Need1Value": 4,
                 "Need2": "G_twigs",
                 "Need2Value": 2,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "可放置围墙，每份50生命，可叠加放置，最高100，生命太少没什么用，一般起装饰作用或者防火鸡什么的。",
                 "Console": "wall_hay_item"
             },
@@ -776,7 +776,7 @@
                 "Need1Value": 2,
                 "Need2": "S_rope",
                 "Need2Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "可放置围墙，每份100生命，可叠加放置，最高200，生命一般，素材好找，防野狗、巨鹿都是不错的选择。",
                 "Console": "wall_wood_item"
             },
@@ -786,7 +786,7 @@
                 "EnName": "Stone Wall",
                 "Need1": "S_cut_stone",
                 "Need1Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可放置围墙，每份200生命，可叠加放置，最高400，和前两种墙相比，生命值挺高，且不能被点燃。",
                 "Console": "wall_stone_item"
             },
@@ -800,7 +800,7 @@
                 "Need2Value": 3,
                 "Need3": "G_pig_skin",
                 "Need3Value": 4,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "建造一个猪人房，和野外的一样，合理运用地理位置，将会使自己基地多了一群守卫。",
                 "Console": "pighouse"
             },
@@ -814,7 +814,7 @@
                 "Need2Value": 10,
                 "Need3": "G_bunny_puff",
                 "Need3Value": 4,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "建造一个兔人房，和野外的一样，合理运用地理位置，将会使自己基地多了一群守卫。",
                 "Console": "rabbithouse"
             },
@@ -828,7 +828,7 @@
                 "Need2Value": 6,
                 "Need3": "F_seeds",
                 "Need3Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可以把捕捉到的小鸟放置在鸟笼内，可以用作物与其兑换种子，用肉类兑换鸟蛋。",
                 "Console": "birdcage"
             },
@@ -840,7 +840,7 @@
                 "Need1Value": 1,
                 "Need2": "S_boards",
                 "Need2Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可放置地皮，主角和其他生物在鹅卵石上行走，都会增加50%移动速度，尽早为自己基地铺上吧。",
                 "Console": "cobblestones"
             },
@@ -850,7 +850,7 @@
                 "EnName": "Wooden Flooring",
                 "Need1": "S_boards",
                 "Need1Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可放置地皮，仅有装饰性。",
                 "Console": "turf_woodfloor"
             },
@@ -860,7 +860,7 @@
                 "EnName": "Checkered Flooring",
                 "Need1": "G_marble",
                 "Need1Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可放置地皮，仅有装饰性。",
                 "Console": "turf_checkerfloor"
             },
@@ -872,7 +872,7 @@
                 "Need1Value": 1,
                 "Need2": "G_beefalo_wool",
                 "Need2Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可放置地皮，仅有装饰性。",
                 "Console": "turf_carpetfloor"
             },
@@ -884,7 +884,7 @@
                 "Need1Value": 5,
                 "Need2": "G_broken_shell",
                 "Need2Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "仅有装饰作用，且其材料仅有洞穴或风滚草才能获得。",
                 "Console": "pottedfern"
             }
@@ -898,7 +898,7 @@
                 "EnName": "Rope",
                 "Need1": "G_cut_grass",
                 "Need1Value": 3,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "高级素材，可进一步合成更多道具装备。",
                 "Console": "rope"
             },
@@ -908,7 +908,7 @@
                 "EnName": "Boards",
                 "Need1": "G_log",
                 "Need1Value": 4,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "高级素材，可进一步合成更多道具，或者建造建筑。",
                 "Console": "boards"
             },
@@ -918,7 +918,7 @@
                 "EnName": "Cut Stone",
                 "Need1": "G_rocks",
                 "Need1Value": 3,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "高级素材，一些建造需要用到圆滑石砖。",
                 "Console": "cutstone"
             },
@@ -928,7 +928,7 @@
                 "EnName": "Papyrus",
                 "Need1": "G_cut_reeds",
                 "Need1Value": 4,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "高级素材，可进一步合成其他道具。维克波顿制作书籍必备素材。",
                 "Console": "papyrus"
             },
@@ -938,7 +938,7 @@
                 "EnName": "Nightmare Fuel",
                 "Need1": "G_dark_petals",
                 "Need1Value": 4,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "高级素材，可以用来制作梦魇装备，或者为暗影灯添加燃料。",
                 "Console": "nightmarefuel"
             },
@@ -950,7 +950,7 @@
                 "Need1Value": 1,
                 "Need2": "G_blue_gem",
                 "Need2Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "高级素材，可以用来合成暗影操纵器等道具。",
                 "Console": "purplegem"
             }
@@ -968,7 +968,7 @@
                 "Need2Value": 4,
                 "Need3": "S_top_hat",
                 "Need3Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "靠近后为玩家解锁一级魔法，制作成功后，当前魔法将永久解锁。",
                 "Console": "researchlab4"
             },
@@ -982,7 +982,7 @@
                 "Need2Value": 1,
                 "Need3": "G_nightmare_fuel",
                 "Need3Value": 7,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "靠近后为玩家解锁二级魔法，制作成功后，当前魔法将永久解锁。",
                 "Console": "researchlab3"
             },
@@ -996,7 +996,7 @@
                 "Need2Value": 4,
                 "Need3": "F_cooked_meat",
                 "Need3Value": 4,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "死亡后点击右上角 激活雕像 即可在此复活，每造一个都会减少40生命上限，一般造一个在家里就好了。",
                 "Console": "resurrectionstatue"
             },
@@ -1010,7 +1010,7 @@
                 "Need2Value": 1,
                 "Need3": "S_rope",
                 "Need3Value": 1,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "能让周围所有生物睡着的神器，由于制作材料需要曼德拉草，一般还是捡到的比较多。",
                 "Console": "panflute"
             },
@@ -1024,7 +1024,7 @@
                 "Need2Value": 4,
                 "Need3": "G_pig_skin",
                 "Need3Value": 2,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "牺牲精神来吸引猪人，也是没什么用，同时吸引十几个猪人能让你精神瞬间见底。",
                 "Console": "onemanband"
             },
@@ -1038,7 +1038,7 @@
                 "Need2Value": 2,
                 "Need3": "G_red_gem",
                 "Need3Value": 1,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "添加噩梦燃料便会燃烧，一个就能烧很久，但是太靠近暗影火炬会掉精神，因此这货并不是很好用。",
                 "Console": "nightlight"
             },
@@ -1050,7 +1050,7 @@
                 "Need1Value": 5,
                 "Need2": "S_papyrus",
                 "Need2Value": 3,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "防御力极高，但是会快速消耗掉你的精神，加上噩梦燃料不太好刷，装备的实用性就不是很高了。",
                 "Console": "armor_sanity"
             },
@@ -1062,7 +1062,7 @@
                 "Need1Value": 5,
                 "Need2": "G_living_log",
                 "Need2Value": 1,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "装备后会快速失去精神，但是其伤害可是杠杠的。",
                 "Console": "nightsword"
             },
@@ -1076,7 +1076,7 @@
                 "Need2Value": 2,
                 "Need3": "G_purple_gem",
                 "Need3Value": 1,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "虽然攻击会失去精神，但是能吸6.8生命，防具给力时这把武器完全能让你硬顶着压力打怪。",
                 "Console": "batbat"
             },
@@ -1090,7 +1090,7 @@
                 "Need2Value": 2,
                 "Need3": "G_nightmare_fuel",
                 "Need3Value": 2,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "由缀食者之皮制作而成，具有神秘力量，玩家饥饿速度将变成默认的60%。",
                 "Console": "armorslurper"
             },
@@ -1104,7 +1104,7 @@
                 "Need2Value": 2,
                 "Need3": "G_red_gem",
                 "Need3Value": 1,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "它除了死后复活之外也能让玩家缓慢地把饥饿转化为生命，同时精神也能缓慢恢复。",
                 "Console": "amulet"
             },
@@ -1116,7 +1116,7 @@
                 "Need1Value": 3,
                 "Need2": "G_blue_gem",
                 "Need2Value": 1,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "持续恢复少量精神，任何试图攻击你的生物都会受到冰冻效果，同时你自己也会被其寒气所影响。",
                 "Console": "blueamulet"
             },
@@ -1130,7 +1130,7 @@
                 "Need2Value": 4,
                 "Need3": "G_purple_gem",
                 "Need3Value": 2,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "穿上后会立刻陷入噩梦状态(精神为0)，每分钟掉3.33精神，取下后会恢复到实际精神值。过方尖碑变得很容易。",
                 "Console": "purpleamulet"
             },
@@ -1144,7 +1144,7 @@
                 "Need2Value": 1,
                 "Need3": "G_red_gem",
                 "Need3Value": 1,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "允许玩家远程点燃怪物，以及某些生物巢穴，可以用来焚烧胡蜂巢和蜘蛛巢，烧皮弗娄牛效果也不错。",
                 "Console": "firestaff"
             },
@@ -1156,7 +1156,7 @@
                 "Need1Value": 1,
                 "Need2": "G_blue_gem",
                 "Need2Value": 1,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "Introduction": "可以远程冻结怪物，怪物体型越大就需要越多的攻击来冻结。冰杖没有伤害，攻击冻结怪物会解冻。",
                 "Console": "icestaff"
             },
@@ -1170,7 +1170,7 @@
                 "Need2Value": 2,
                 "Need3": "G_purple_gem",
                 "Need3Value": 2,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "装备后右键即可传送，会到达随机位置，如果有已激活的传送点则传送到传送点。每次使用都会降低50精神。",
                 "Console": "telestaff"
             },
@@ -1184,7 +1184,7 @@
                 "Need2Value": 4,
                 "Need3": "G_gold_nugget",
                 "Need3Value": 8,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "Introduction": "放置三枚紫宝石后开始工作，使用传送法杖的时候就会固定传送到该位置，由于成本太高，不太常用。(三角传送点：gemsocket)",
                 "Console": "telebase"
             }
@@ -1202,7 +1202,7 @@
                 "Need2Value": 8,
                 "Need3": "G_hound's_tooth",
                 "Need3Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "可以修复非防御性的衣服和帽子，由于不同的装备耐久度最大值不一样，修复的百分比也不会相同。",
                 "Console": "sewing_kit"
             },
@@ -1223,7 +1223,7 @@
                 "Need1Value": 2,
                 "Need2": "G_twigs",
                 "Need2Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "做这个帽子要抓两只活的小兔兔，由于制作手法极其残忍，属性又不高，所以没有什么人用。",
                 "Console": "earmuffshat"
             },
@@ -1244,7 +1244,7 @@
                 "Need1Value": 8,
                 "Need2": "G_beefalo_horn",
                 "Need2Value": 1,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "这个厉害了，牛群发情期能保护你不受伤害。重要的是它在帽子中保暖系数是最高的。",
                 "Console": "beefalohat"
             },
@@ -1256,7 +1256,7 @@
                 "Need1Value": 8,
                 "Need2": "S_rope",
                 "Need2Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "只能防御蜜蜂攻击，和橄榄球头盔防御系数一样，由于1个猪皮不比8个蜘蛛网难找，所以不太常用。",
                 "Console": "beehat"
             },
@@ -1270,7 +1270,7 @@
                 "Need2Value": 2,
                 "Need3": "G_tentacle_spots",
                 "Need3Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "恢复少量精神，能吸引更多的鸟着陆，然而靠近鸟还是会飞走。",
                 "Console": "featherhat"
             },
@@ -1284,7 +1284,7 @@
                 "Need2Value": 1,
                 "Need3": "G_berry_bush",
                 "Need3Value": 1,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "右键变成浆果丛隐藏自己，对已经发现你的怪物没有作用，除了卖萌毫无用处的帽子，感觉在掩耳盗铃。",
                 "Console": "bushhat"
             },
@@ -1296,7 +1296,7 @@
                 "Need1Value": 4,
                 "Need2": "G_silk",
                 "Need2Value": 4,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "很多人喜欢用它过冬，难道只是因为它样子好看，保暖系数高吗？其实也不高，牛帽那才叫高。",
                 "Console": "winterhat"
             },
@@ -1306,7 +1306,7 @@
                 "EnName": "Top Hat",
                 "Need1": "G_silk",
                 "Need1Value": 6,
-                "Unlock": "S_science_machine",
+                "Unlock": ["S_science_machine"],
                 "Introduction": "前期可以稍微用来恢复点精神，但是太慢了，不如采花睡觉来得实在，因此它很少人用。",
                 "Console": "tophat"
             },
@@ -1320,7 +1320,7 @@
                 "Need2Value": 1,
                 "Need3": "G_twigs",
                 "Need3Value": 4,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "装备后增加25%移动速度。也可以拿来攻击，虽然伤害只有17，但是没有耐久度不必担心它会坏。",
                 "Console": "cane"
             },
@@ -1332,7 +1332,7 @@
                 "Need1Value": 8,
                 "Need2": "G_silk",
                 "Need2Value": 6,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "看上去很华丽，但是精神加成和保暖系数都不算很高，而且耐久度也比较低。",
                 "Console": "sweatervest"
             },
@@ -1344,7 +1344,7 @@
                 "Need1Value": 1,
                 "Need2": "G_silk",
                 "Need2Value": 8,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "素材要求不高，同时属性也比较中庸，如果我有一个象鼻肯定烤来吃爽快一点。注意虽然叫透风外套但却是冬天保暖用的。",
                 "Console": "trunkvest_summer"
             },
@@ -1358,7 +1358,7 @@
                 "Need2Value": 8,
                 "Need3": "G_beefalo_wool",
                 "Need3Value": 2,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "Introduction": "保暖效果比较优异，开了mod的话就不用担心装备栏不够的问题了，穿上它吧！",
                 "Console": "trunkvest_winter"
             }
@@ -1374,7 +1374,7 @@
                 "Need1Value": 6,
                 "Need2Value": 0,
                 "Need3Value": 0,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "制作大部分远古物品的基础材料，可在洞穴远古遗迹附近获得。",
                 "Console": "thulecite"
             },
@@ -1386,7 +1386,7 @@
                 "Need1Value": 6,
                 "Need2Value": 0,
                 "Need3Value": 0,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "可放置围墙，每份400生命，可叠加放置，最高800，生命最多的墙，素材难得，用锤子击破只能获得铥矿石碎片。",
                 "Console": "wall_ruins_item"
             },
@@ -1399,7 +1399,7 @@
                 "Need2": "G_nightmare_fuel",
                 "Need2Value": 2,
                 "Need3Value": 0,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "用于检查古代力量的徽章，颜色发红就代表力量觉醒，和指南针一样是同类别的废物。",
                 "Console": "nightmare_timepiece"
             },
@@ -1413,7 +1413,7 @@
                 "Need2Value": 3,
                 "Need3": "G_orange_gem",
                 "Need3Value": 1,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "自动拾取地上的物品，并不是瞬间拾取，有一点点间隔，由于有使用次数，一般情况就别用了。",
                 "Console": "orangeamulet"
             },
@@ -1427,7 +1427,7 @@
                 "Need2Value": 3,
                 "Need3": "G_yellow_gem",
                 "Need3Value": 1,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "装备后会发光，类似矿灯帽，解放双手和帽子。",
                 "Console": "yellowamulet"
             },
@@ -1441,7 +1441,7 @@
                 "Need2Value": 3,
                 "Need3": "G_green_gem",
                 "Need3Value": 1,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "装备后建设和制作需要的材料会减半，只能使用5次，自己斟酌着使用。",
                 "Console": "greenamulet"
             },
@@ -1455,7 +1455,7 @@
                 "Need2Value": 1,
                 "Need3": "G_orange_gem",
                 "Need3Value": 2,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "使用后会向目标瞬移，平常只会增加25%的移动速度，但是被怪物包围，或者被河道或者障碍阻挡道路，就好用了。每次使用消耗15点精神。",
                 "Console": "orangestaff"
             },
@@ -1469,7 +1469,7 @@
                 "Need2Value": 2,
                 "Need3": "G_yellow_gem",
                 "Need3Value": 2,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "向目标发射光球，持续照明一段时间，可以用来烹调食物。其实不太实用，施展需要吟唱时间，光球也无法移动。每次使用消耗20点精神。（召唤矮人之星：stafflight）",
                 "Console": "yellowstaff"
             },
@@ -1483,7 +1483,7 @@
                 "Need2Value": 2,
                 "Need3": "G_green_gem",
                 "Need3Value": 2,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "可以分解道具和建筑，但不会分解出宝石，如果被分解对象有折损，就无法获得100%原素材。每次使用消耗20点精神。",
                 "Console": "greenstaff"
             },
@@ -1497,7 +1497,7 @@
                 "Need2Value": 1,
                 "Need3": "S_thulecite",
                 "Need3Value": 2,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "奢侈金斧和华丽金镐的结合体，又能伐木又能采矿，攻击伤害和大部分农具一样，因此有点华而不实。",
                 "Console": "multitool_axe_pickaxe"
             },
@@ -1510,7 +1510,7 @@
                 "Need2": "G_nightmare_fuel",
                 "Need2Value": 4,
                 "Need3Value": 0,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "吸收90%的物理伤害，当被击中时有1/3几率创造一个持续4秒免疫火、雷电的力场，cd9秒。",
                 "Console": "ruinshat"
             },
@@ -1523,7 +1523,7 @@
                 "Need2": "G_nightmare_fuel",
                 "Need2Value": 4,
                 "Need3Value": 0,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "吸收90%的伤害并且每分钟恢复3.3精神。就是制作素材有点多，果断装备建设护符后制作。",
                 "Console": "armorruins"
             },
@@ -1537,7 +1537,7 @@
                 "Need2Value": 4,
                 "Need3": "G_nightmare_fuel",
                 "Need3Value": 4,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "攻击和耐久都非常优异，攻击有概率产出魂触手助攻，并且拥有10%的加速效果，但是铥矿石比较宝贵，要合理使用。",
                 "Console": "ruins_bat"
             },
@@ -1551,7 +1551,7 @@
                 "Need2Value": 1,
                 "Need3": "S_thulecite",
                 "Need3Value": 5,
-                "Unlock": "N_ancient_pseudoscience_station",
+                "Unlock": ["N_ancient_pseudoscience_station"],
                 "Introduction": "允许玩家部署眼球炮塔，它将是一个强大的防御型建筑，拥有1000点血量和65点攻击，每秒会自动恢复12点生命。靠得很近的时候会减少精神。",
                 "Console": "eyeturret_item"
             }
@@ -1595,7 +1595,7 @@
                 "Need2": "G_nightmare_fuel",
                 "Need2Value": 2,
                 "Need3Value": 0,
-                "Unlock": "S_prestihatitator",
+                "Unlock": ["S_prestihatitator"],
                 "UnlockCharcter": "C_wickerbottom",
                 "Introduction": "让周围生物进入梦乡，阅读书籍将会降低33精神，维克波顿专有，可使用5次。",
                 "Console": "book_sleep"
@@ -1609,7 +1609,7 @@
                 "Need2": "G_red_gem",
                 "Need2Value": 1,
                 "Need3Value": 0,
-                "Unlock": "S_shadow_manipulator",
+                "Unlock": ["S_shadow_manipulator"],
                 "UnlockCharcter": "C_wickerbottom",
                 "Introduction": "维克波顿周围将出现大量闪电，阅读书籍将会降低33精神，维克波顿专有，可使用5次。",
                 "Console": "book_brimstone"
@@ -1623,7 +1623,7 @@
                 "Need2": "G_tentacle_spots",
                 "Need2Value": 1,
                 "Need3Value": 0,
-                "Unlock": "S_alchemy_engine",
+                "Unlock": ["S_alchemy_engine"],
                 "UnlockCharcter": "C_wickerbottom",
                 "Introduction": "维克波顿周围将出现3只触手，阅读书籍将会降低50精神，维克波顿专有，可使用5次。",
                 "Console": "book_tentacles"

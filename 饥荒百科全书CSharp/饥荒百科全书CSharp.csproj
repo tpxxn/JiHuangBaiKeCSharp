@@ -1556,7 +1556,23 @@
   <ItemGroup>
     <Resource Include="Resources\GameResources\Creatures\A_yaarctopus.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ballphin_palace.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_buoyant_chiminea.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_coral_nubbin.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_encrusted_boat.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fish_farm.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_mussel_bed.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_quacken_drill.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_quackering_ram.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sea_chest.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sea_lab.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sea_wall.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sea_yard.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tar_extractor.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tar_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tar_suit.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GameResources\Foods\F_bacon_and_eggs.png" />
   </ItemGroup>
@@ -5384,6 +5400,47 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GameResources\Goods\Texture_wooden_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Natures\N_ballphin_palace.png" />
+    <Resource Include="Resources\GameResources\Natures\N_tar_trap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Creatures\A_cormorant.png" />
+    <Resource Include="Resources\GameResources\Creatures\A_rainbow_jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_coral_larva.png" />
+    <Resource Include="Resources\GameResources\Goods\G_quacken_beak.png" />
+    <Resource Include="Resources\GameResources\Goods\G_tar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Foods\F_caviar.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_neon_quattro.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_pierrot_fish.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_purple_grouper.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_rainbow_jellyfish.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_roe.png" />
+    <Resource Include="Resources\GameResources\Foods\F_dead_rainbow_jellyfish.png" />
+    <Resource Include="Resources\GameResources\Foods\F_neon_quattro.png" />
+    <Resource Include="Resources\GameResources\Foods\F_pierrot_fish.png" />
+    <Resource Include="Resources\GameResources\Foods\F_purple_grouper.png" />
+    <Resource Include="Resources\GameResources\Foods\F_rainbow_jellyfish.png" />
+    <Resource Include="Resources\GameResources\Foods\F_roe.png" />
+    <Resource Include="Resources\GameResources\Foods\F_tropical_bouillabaisse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_seaweed_stalk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_dorsal_fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Creatures\A_crocodog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Creatures\A_blue_crocodog.png" />
+    <Resource Include="Resources\GameResources\Creatures\A_yellow_crocodog.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

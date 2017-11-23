@@ -33,7 +33,7 @@
                 <uc:BarChart x:Name="FoodRecipeSanity" Label="精神" MaxValue="50"/>
                 <uc:BarChart x:Name="FoodRecipePerish" Label="保鲜" MaxValue="20"/>
                 <uc:BarChart x:Name="FoodRecipeCooktime" Label="烹饪" MaxValue="60"/>
-                <uc:BarChart x:Name="FoodRecipePriority" Label="优先" MaxValue="30"/>
+                <uc:BarChart x:Name="FoodRecipePriority" Label="优先" MaxValue="35"/>
                 <uc:BarChart x:Name="FoodTemperature" Label="温度" MaxValue="40"/>
                 <uc:BarChart x:Name="FoodTemperatureDuration" Label="温时" MaxValue="15"/>
             </StackPanel>

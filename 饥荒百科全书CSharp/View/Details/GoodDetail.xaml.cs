@@ -58,7 +58,7 @@ namespace 饥荒百科全书CSharp.View.Details
 
         private void Copy_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(ConsoleNum.Text))
+            if (string.IsNullOrEmpty(ConsoleNum.Text) || double.Parse(ConsoleNum.Text) == 0)
             {
                 ConsoleNum.Text = "1";
             }

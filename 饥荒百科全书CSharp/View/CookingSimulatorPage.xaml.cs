@@ -162,7 +162,7 @@ namespace 饥荒百科全书CSharp.View
         public string CsRecipe3 = "";
         public string CsRecipe4 = "";
         /// <summary>
-        /// 38种食材
+        /// 43种食材
         /// </summary>
         public double CsFtEggs = 0;
         public double CsFtVegetables = 0;
@@ -202,6 +202,11 @@ namespace 饥荒百科全书CSharp.View
         public double CsFtWatermelon = 0;
         public double CsFtWobster = 0;
         public double CsFtRoyalJelly = 0;
+        public double CsFtRoe = 0;
+        public double CsFtRoeCooked = 0;
+        public double CsFtNeonQuattro = 0;
+        public double CsFtPierrotFish = 0;
+        public double CsFtPurpleGrouper = 0;
 
         public byte FoodIndex = 0;
         public string CsFoodName = "";
@@ -474,9 +479,43 @@ namespace 饥荒百科全书CSharp.View
                 case "F_cooked_limpets":
                     CsFtFishes += 0.5;
                     break;
+                case "F_roe":
+                    CsFtMeats += 0.5;
+                    CsFtFishes += 1;
+                    CsFtRoe += 1;
+                    break;
+                case "F_cooked_roe":
+                    CsFtMeats += 0.5;
+                    CsFtFishes += 1;
+                    CsFtRoeCooked += 1;
+                    break;
                 case "F_tropical_fish":
                     CsFtMeats += 0.5;
                     CsFtFishes += 1;
+                    break;
+                case "F_neon_quattro":
+                    CsFtFishes += 1;
+                    CsFtNeonQuattro += 1;
+                    break;
+                case "F_cooked_neon_quattro":
+                    CsFtFishes += 1;
+                    CsFtNeonQuattro += 1;
+                    break;
+                case "F_pierrot_fish":
+                    CsFtFishes += 1;
+                    CsFtPierrotFish += 1;
+                    break;
+                case "F_cooked_pierrot_fish":
+                    CsFtFishes += 1;
+                    CsFtPierrotFish += 1;
+                    break;
+                case "F_purple_grouper":
+                    CsFtFishes += 1;
+                    CsFtPurpleGrouper += 1;
+                    break;
+                case "F_cooked_purple_grouper":
+                    CsFtFishes += 1;
+                    CsFtPurpleGrouper += 1;
                     break;
                 case "F_fish_morsel":
                     CsFtFishes += 0.5;
@@ -792,6 +831,11 @@ namespace 饥荒百科全书CSharp.View
             CsFtWatermelon = 0;
             CsFtWobster = 0;
             CsFtRoyalJelly = 0;
+            CsFtRoe = 0;
+            CsFtRoeCooked = 0;
+            CsFtNeonQuattro = 0;
+            CsFtPierrotFish = 0;
+            CsFtPurpleGrouper = 0;
             #endregion
             #region 属性统计
             CS_RecipeStatistics(CsRecipe1);
@@ -804,6 +848,8 @@ namespace 饥荒百科全书CSharp.View
             // 便携式烹饪锅的四种食物
             if (Global.GameVersion == 4)
             {
+                if (CsFtVegetables == 1 && CsFtNeonQuattro == 1 && CsFtPierrotFish == 1 && CsFtPurpleGrouper == 1)
+                    CS_CrockPotListAddFood("F_tropical_bouillabaisse", 40);
                 if (CrockpotComboBox.SelectedIndex == 1)
                 {
                     if (CsFtFruit >= 2 && CsFtButter >= 1 && CsFtHoney >= 1)
@@ -825,6 +871,8 @@ namespace 饥荒百科全书CSharp.View
                     CS_CrockPotListAddFood("F_surf_'n'_turf", 30);
                 if (CsFtWobster >= 1 && CsFtButter >= 1 && CsFtMeats == 0 && CsFtIce == 0)
                     CS_CrockPotListAddFood("F_lobster_dinner", 25);
+                if (CsFtVegetables >= 1 && (CsFtRoe >= 1 || CsFtRoeCooked >= 3))
+                    CS_CrockPotListAddFood("F_caviar", 20);
                 if (CsFtBanana >= 1 && CsFtIce >= 1 && CsFtTwigs >= 1 && CsFtMeats == 0 && CsFtFishes == 0)
                     CS_CrockPotListAddFood("F_banana_pop", 20);
                 if (CsFtFishes >= 1 && CsFtSeaweed == 2)
@@ -996,6 +1044,10 @@ namespace 饥荒百科全书CSharp.View
         {
             switch (source)
             {
+                case "F_tropical_bouillabaisse":
+                    return "热带鱼羹";
+                case "F_caviar":
+                    return "鱼子酱";
                 case "F_fresh_fruit_crepes":
                     return "新鲜水果薄饼";
                 case "F_monster_tartare":

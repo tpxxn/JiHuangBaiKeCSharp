@@ -176,6 +176,8 @@
           "S_feather_lite_sail",
           "S_trawl_net",
           "S_buoy",
+          "S_quackering_ram",
+          "S_tar_extractor",
           "S_palm_leaf_hut",
           "S_mussel_stick",
           "S_ice_maker_3000",
@@ -204,7 +206,7 @@
         "Console": "vine"
       },
       {
-        "Picture": "S_thick_fur",
+        "Picture": "G_palm_leaf",
         "Name": "椰树叶",
         "EnName": "Palm Leaf",
         "Science": [
@@ -215,7 +217,8 @@
           "S_palm_leaf_hut",
           "S_wildbore_house",
           "S_sand_castle",
-          "S_blubber_suit"
+          "S_blubber_suit",
+          "S_tar_suit"
         ],
         "Introduction": "砍倒椰子树获得。",
         "Console": "palmleaf"
@@ -232,6 +235,7 @@
           "S_log_raft",
           "S_snakeskin_sail",
           "S_boat_cannon",
+          "S_sea_yard",
           "S_basic_farm",
           "S_bucket-o-poop",
           "S_science_machine",
@@ -457,6 +461,7 @@
           "S_piggyback",
           "S_tent",
           "S_siesta_lean-to",
+          "S_fish_farm",
           "S_boomerang",
           "S_sewing_kit",
           "S_top_hat",
@@ -492,7 +497,8 @@
           "S_ice_box",
           "S_divining_rod",
           "S_ice_flingomatic",
-          "S_accomploshrine"
+          "S_accomploshrine",
+          "S_quacken_drill"
         ],
         "SourceCreature": [
           "A_floaty_boaty_knight"
@@ -621,6 +627,8 @@
         "EnName": "Sand",
         "Science": [
           "S_chiminea",
+          "S_buoyant_chiminea",
+          "S_sea_lab",
           "S_sandbag",
           "S_sand_castle",
           "S_empty_bottle"
@@ -680,6 +688,7 @@
         "Name": "贝壳",
         "EnName": "Seashell",
         "Science": [
+          "S_tar_lamp",
           "S_surfboard",
           "S_armoured_boat",
           "S_seashell_suit",
@@ -748,11 +757,53 @@
         "EnName": "Coral",
         "Science": [
           "S_anti_venom",
+          "S_mussel_bed",
           "S_particulate_purifier",
           "S_limestone"
         ],
         "Introduction": "挖珊瑚礁或在海洋用拖网获得，也可以用钓竿或拖网在潮湿的坟墓处获得。是制作石灰石的重要材料。",
         "Console": "coral"
+      },
+      {
+        "Picture": "G_coral_larva",
+        "Name": "珊瑚幼虫",
+        "EnName": "Coral Larva",
+        "Science": [
+          "S_coral_nubbin"
+        ],
+        "Introduction": "珊瑚幼虫可以通过锤珊瑚礁获得。它被用来制作珊瑚种子。",
+        "Console": "corallarve"
+      },
+      {
+        "Picture": "G_tar",
+        "Name": "焦油",
+        "EnName": "Tar",
+        "Science": [
+          "S_tar_lamp",
+          "S_buoyant_chiminea",
+          "S_sea_yard",
+          "S_sea_chest",
+          "S_tar_suit"
+        ],
+        "Introduction": "使用焦油提取器在焦油陷阱提取获得，种植在地面上产生易燃的焦油陷阱，可以减缓所有生物的速度(包括玩家)。可以给焦油陷阱添加焦油以恢复耐久度。焦油可以给各种篝火添加燃料，也可以给焦油提取器和海之基地加油。",
+        "Console": "tar"
+      },
+      {
+        "Picture": "G_seaweed_stalk",
+        "Name": "海藻茎",
+        "EnName": "Seaweed Stalk",
+        "Introduction": "使用拖网在海藻处捞取。可以用来在浅海种植新的海藻。",
+        "Console": "seaweed_stalk"
+      },
+      {
+        "Picture": "G_dorsal_fin",
+        "Name": "背鳍",
+        "EnName": "Dorsal Fin",
+        "Science": [
+          "S_ballphin_palace"
+        ],
+        "Introduction": "通过击杀宽吻海豚获得，制作海豚宫殿的必要材料。可以用来驯服野猪和其他海豚。",
+        "Console": "dorsalfin"
       },
       {
         "Picture": "G_obsidian",
@@ -847,6 +898,17 @@
         ],
         "Introduction": "击杀虎鲨和小虎鲨获得，用来制作海上麻袋和双层伞帽。",
         "Console": "shark_gills"
+      },
+      {
+        "Picture": "G_quacken_beak",
+        "Name": "呱肯乌贼的喙",
+        "EnName": "Quacken Beak",
+        "Science": [
+          "S_quacken_drill",
+          "S_quackering_ram"
+        ],
+        "Introduction": "击杀呱肯乌贼获得。可以用来制作海妖之钻和海妖之锤。",
+        "Console": "quackenbeak"
       }
     ]
   },
@@ -1106,6 +1168,15 @@
         "ColdResistance": 60,
         "Introduction": "无敌的防潮效果！",
         "Console": "blubbersuit"
+      },
+      {
+        "Picture": "S_tar_suit",
+        "Name": "焦油套装",
+        "EnName": "Tar Suit",
+        "Durability": "1天",
+        "Wet": 100,
+        "Introduction": "无敌的防潮、防雷电效果！",
+        "Console": "tarsuit"
       },
       {
         "Picture": "S_dumbrella",
@@ -1663,6 +1734,20 @@
         "Console": "jellyfish_dead"
       },
       {
+        "Picture": "F_rainbow_jellyfish",
+        "Name": "彩虹水母",
+        "EnName": "Rainbow Jellyfish",
+        "Fresh": 6,
+        "Console": "rainbowjellyfish_planted"
+      },
+      {
+        "Picture": "F_dead_rainbow_jellyfish",
+        "Name": "死水母",
+        "EnName": "Dead Rainbow Jellyfish",
+        "Fresh": 6,
+        "Console": "rainbowjellyfish_dead"
+      },
+      {
         "Picture": "A_butterfly_sw",
         "Name": "蝴蝶",
         "EnName": "Butterfly",
@@ -1726,6 +1811,17 @@
           "G_azure_feather|×1（50%）"
         ],
         "Console": "seagull"
+      },
+      {
+				"Picture": "A_cormorant",
+				"Name": "鸬鹚",
+				"EnName": "Cormorant",
+        "Fresh": 2,
+        "Goods": [
+          "F_morsel|×1（50%）",
+          "G_jet_feather|×1（50%）"
+        ],
+        "Console": "cormorant"
       }
     ]
   },

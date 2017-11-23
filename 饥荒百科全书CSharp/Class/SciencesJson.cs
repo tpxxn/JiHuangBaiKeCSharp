@@ -18,11 +18,16 @@ namespace 饥荒百科全书CSharp.Class
         public int Need2Value { get; set; }
         public string Need3 { get; set; }
         public int Need3Value { get; set; }
-        public string Unlock { get; set; }
+        public List<string> Unlock { get; set; }
         public string UnlockCharcter { get; set; }
         public string UnlockBlueprint { get; set; }
         public string Introduction { get; set; }
         public string Console { get; set; }
+
+        public Science()
+        {
+            Unlock = new List<string>();
+        }
     }
 
 

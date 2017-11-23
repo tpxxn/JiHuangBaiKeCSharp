@@ -27,12 +27,6 @@
         "Introduction": "海滩是船难版常见的生物群落之一，它们一般有多种类型的资源。玩家进入世界(船难版)总会出生在海滩。晚上临近海洋的区域会被淹没，月圆之夜是潮汐最强的时候。"
       },
       {
-        "Picture": "N_sacred",
-        "Name": "神圣",
-        "EnName": "Sacred",
-        "Introduction": ""
-      },
-      {
         "Picture": "N_jungle",
         "Name": "热带雨林",
         "EnName": "Jungle",

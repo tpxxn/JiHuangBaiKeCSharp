@@ -555,6 +555,26 @@
 				"Console": "jellyfish"
 			},
 			{
+				"Picture": "A_rainbow_jellyfish",
+				"Name": "彩虹水母",
+				"EnName": "Rainbow Jellyfish",
+				"Health": 50,
+				"MoveSpeed": 3,
+				"RunSpeed": 6,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_dead_rainbow_jellyfish|×1",
+					"F_rainbow_jellyfish|S_bug_net",
+					"F_rainbow_jellyfish|S_trawl_net"
+				],
+				"Ability": [
+					"发光"
+				],
+				"Introduction": "彩虹水母会发出光亮，它们新月时会从火山诞生并迁移至地图中央，到达之后再迁移回火山。不会攻击玩家，也不会逃跑。",
+				"Console": "rainbowjellyfish_planted"
+			},
+			{
 				"Picture": "A_bottenosed_ballphin",
 				"Name": "宽吻海豚",
 				"EnName": "Bottlenosed Ballphin",
@@ -856,6 +876,25 @@
 				],
 				"Introduction": "海鸥是杂食鸟类，会吃地上的肉和帽贝岩的帽贝。囚禁在鸟笼里时，喂食熟怪兽肉会得到蛋，喂食作物可以得到1-2个作物种子和0-1个种子。",
 				"Console": "seagull"
+			},
+			{
+				"Picture": "A_cormorant",
+				"Name": "鸬鹚",
+				"EnName": "Cormorant",
+				"Health": 25,
+				"IsActiveAttack": false,
+				"IsTeamWork": false,
+				"Goods": [
+					"F_morsel|×1（50%）",
+					"G_jet_feather|×1（50%）",
+					"A_cormorant|S_bird_trap"
+				],
+				"Ability": [
+					"掉落鱼子",
+					"吃鱼子"
+				],
+				"Introduction": "鸬鹚会在浅海掉落鱼子。",
+				"Console": "cormorant"
 			}
 		]
 	},
@@ -954,6 +993,82 @@
 				],
 				"Introduction": "在船难版里，如果猎犬进攻时间到了而玩家在海上的话，就会有海狗代替猎犬来发动进攻。其掉落的鱼翅可以做鱼翅汤和星芒头盔。",
 				"Console": "sharx"
+			},
+			{
+				"Picture": "A_crocodog",
+				"Name": "鳄狗",
+				"EnName": "Crocodog",
+				"Health": 150,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×1（12.5%）"
+				],
+				"Ability": [
+					"可以在陆地和水中活动"
+				],
+				"Introduction": "代替猎犬的生物，可以在陆地和水中活动，令人十分厌恶。",
+				"Console": "crocodog"
+			},
+			{
+				"Picture": "A_yellow_crocodog",
+				"Name": "黄色鳄狗",
+				"EnName": "Yellow Crocodog",
+				"Health": 150,
+				"Attack": 30,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×1",
+					"G_venom_gland|×1（20%）"
+				],
+				"Ability": [
+					"可以在陆地和水中活动",
+					"攻击带毒",
+					"免疫毒性攻击"
+				],
+				"Introduction": "代替猎犬的生物，可以在陆地和水中活动，令人十分厌恶。攻击会附带毒并且免疫毒性攻击，出现在干燥季节。",
+				"Console": "poisoncrocodog"
+			},
+			{
+				"Picture": "A_blue_crocodog",
+				"Name": "蓝色鳄狗",
+				"EnName": "Blue Crocodog",
+				"Health": 150,
+				"Attack": 30,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 10,
+				"RunSpeed": 10,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+					"F_monster_meat|×1",
+					"G_hound's_tooth|×2",
+					"F_seaweed|×1（20%）"
+				],
+				"Ability": [
+					"可以在陆地和水中活动"
+				],
+				"Introduction": "代替猎犬的生物，可以在陆地和水中活动，令人十分厌恶。抖水时会产生水坑，出现在飓风季节。",
+				"Console": "watercrocodog"
 			},
 			{
 				"Picture": "A_krampus_sw",

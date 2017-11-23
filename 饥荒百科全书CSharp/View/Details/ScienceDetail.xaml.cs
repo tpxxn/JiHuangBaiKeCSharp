@@ -65,10 +65,15 @@ namespace 饥荒百科全书CSharp.View.Details
             }
             else
             {
-                if (c.Unlock != null)
+                if (c.Unlock != null && c.Unlock.Count > 0)
                 {
                     UnlockPicButton.Visibility = Visibility.Visible;
-                    UnlockPicButton.Source = StringProcess.GetGameResourcePath(c.Unlock);
+                    UnlockPicButton.Source = StringProcess.GetGameResourcePath(c.Unlock[0]);
+                    if (c.Unlock.Count == 2)
+                    {
+                        Unlock2PicButton.Visibility = Visibility.Visible;
+                        Unlock2PicButton.Source = StringProcess.GetGameResourcePath(c.Unlock[1]);
+                    }
                 }
                 if (c.UnlockCharcter != null)
                 {
@@ -138,7 +143,7 @@ namespace 饥荒百科全书CSharp.View.Details
 
         private void Copy_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(ConsoleNum.Text))
+            if (string.IsNullOrEmpty(ConsoleNum.Text) || double.Parse(ConsoleNum.Text) == 0)
             {
                 ConsoleNum.Text = "1";
             }
