@@ -556,7 +556,7 @@
   <data name="D_mp_btn_dirselect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DedicatedServer\D_mp_btn_dirselect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <!--<data name="C_walani" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="C_walani" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Characters\C_walani.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="C_walani_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -724,6 +724,9 @@
   <data name="A_birchnutter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_birchnutter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="A_blue_crocodog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Creatures\A_blue_crocodog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="A_blue_hound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_blue_hound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -775,6 +778,9 @@
   <data name="A_clockwork_knight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_clockwork_knight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="A_cormorant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Creatures\A_cormorant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="A_crabbit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_crabbit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -786,6 +792,9 @@
   </data>
   <data name="A_crow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_crow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_crocodog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Creatures\A_crocodog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="A_damaged_bishop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_damaged_bishop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1018,6 +1027,9 @@
   <data name="A_rabbit_winter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_rabbit_winter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="A_rainbow_jellyfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Creatures\A_rainbow_jellyfish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="A_reanimated_skeleton_atrium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_reanimated_skeleton_atrium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1203,6 +1215,9 @@
   </data>
   <data name="A_yaarctopus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Creatures\A_yaarctopus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_yellow_crocodog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Creatures\A_yellow_crocodog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FC_Dairy_product" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Foods\FC_Dairy_product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1827,6 +1842,9 @@
   </data>
   <data name="N_atrium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Natures\N_atrium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N_ballphin_palace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Natures\N_ballphin_palace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="N_bamboo_patch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Natures\N_bamboo_patch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -2778,6 +2796,9 @@
   </data>
   <data name="N_tall_stalagmite_biomes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Natures\N_tall_stalagmite_biomes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N_tar_trap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Natures\N_tar_trap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="N_thulecite_wall_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Natures\N_thulecite_wall_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -4159,6 +4180,9 @@
   <data name="G_coral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_coral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="G_coral_larva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Goods\G_coral_larva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="G_crank_thing_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_crank_thing_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -4206,6 +4230,9 @@
   </data>
   <data name="G_desert_stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_desert_stone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="G_dorsal_fin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Goods\G_dorsal_fin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="G_down_feather" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_down_feather.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -4546,6 +4573,9 @@
   <data name="G_purple_moonlens" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_purple_moonlens.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="G_quacken_beak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Goods\G_quacken_beak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="G_raisins" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_raisins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -4629,6 +4659,9 @@
   </data>
   <data name="G_seashell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_seashell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="G_seaweed_stalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Goods\G_seaweed_stalk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="G_sea_worther" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_sea_worther.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -4719,6 +4752,9 @@
   </data>
   <data name="G_tam_o_shanter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_tam_o'shanter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="G_tar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameResources\Goods\G_tar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="G_tarnished_crown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\G_tarnished_crown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -5031,5 +5067,5 @@
   </data>
   <data name="T_wire_hanger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameResources\Goods\T_wire_hanger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>-->
+  </data>
 </root>
