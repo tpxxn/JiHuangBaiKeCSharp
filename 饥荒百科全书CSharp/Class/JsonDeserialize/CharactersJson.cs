@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace 饥荒百科全书CSharp.Class
+namespace 饥荒百科全书CSharp.Class.JsonDeserialize
 {
     public class Character
     {

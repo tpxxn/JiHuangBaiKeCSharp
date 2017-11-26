@@ -84,23 +84,17 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="Class\ArrayDelRepeatData.cs" />
-    <Compile Include="Class\brushConverter.cs" />
-    <Compile Include="Class\CharactersJson.cs" />
-    <Compile Include="Class\CreaturesJson.cs" />
-    <Compile Include="Class\FoodsJson.cs" />
+    <Compile Include="AppEntryPoint.cs" />
+    <Compile Include="Class\JsonDeserialize\CharactersJson.cs" />
+    <Compile Include="Class\JsonDeserialize\CreaturesJson.cs" />
+    <Compile Include="Class\JsonDeserialize\FoodsJson.cs" />
     <Compile Include="Class\Global.cs" />
-    <Compile Include="Class\GoodsJson.cs" />
+    <Compile Include="Class\JsonDeserialize\GoodsJson.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
-    <Compile Include="Class\NaturalJson.cs" />
-    <Compile Include="Class\PanelGeneration.cs" />
+    <Compile Include="Class\JsonDeserialize\NaturalJson.cs" />
     <Compile Include="MWUI.cs" />
     <Compile Include="Class\RegeditRW.cs" />
-    <Compile Include="Class\SciencesJson.cs" />
+    <Compile Include="Class\JsonDeserialize\SciencesJson.cs" />
     <Compile Include="Class\StringProcess.cs" />
     <Compile Include="Class\SuggestBoxItem.cs" />
     <Compile Include="Class\Update.cs" />
@@ -272,12 +266,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Class\Animation.cs" />
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Class\Visi.cs" />
-    <Compile Include="Class\ResourceShortName.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

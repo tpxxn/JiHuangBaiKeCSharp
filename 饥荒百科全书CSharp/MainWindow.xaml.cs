@@ -37,8 +37,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
-using Control = System.Windows.Forms.Control;
-using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace 饥荒百科全书CSharp
 {
@@ -150,7 +148,7 @@ namespace 饥荒百科全书CSharp
                 }
                 catch
                 {
-                    Visi.VisiCol(true, UiBackGroundBorder);
+                    UiBackGroundBorder.Visibility = Visibility.Collapsed;
                 }
             }
             //设置背景拉伸方式

@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Newtonsoft.Json;
+using 饥荒百科全书CSharp.Class.JsonDeserialize;
 using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp.Class
@@ -116,6 +117,19 @@ namespace 饥荒百科全书CSharp.Class
                 radioButton.IsChecked = false;
             }
             MainPageHamburgerButton[index].IsChecked = true;
+        }
+
+        /// <summary>
+        /// 控件可视性设置
+        /// </summary>
+        /// <param name="visibility">visibility</param>
+        /// <param name="obj">控件Name</param>
+        public static void UiElementVisibility(Visibility visibility, params UIElement[] obj)
+        {
+            foreach (UIElement uiElement in obj)
+            {
+                uiElement.Visibility = visibility;
+            }
         }
         #endregion
 

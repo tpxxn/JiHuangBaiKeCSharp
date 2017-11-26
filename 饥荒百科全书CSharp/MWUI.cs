@@ -11,7 +11,6 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
-using 饥荒百科全书CSharp.MyUserControl;
 using 饥荒百科全书CSharp.View;
 
 namespace 饥荒百科全书CSharp
@@ -180,7 +179,7 @@ namespace 饥荒百科全书CSharp
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             // 显示清除按钮
-            Visi.VisiCol(SearchTextBox.Text == "", SearchClearButton);
+            SearchClearButton.Visibility = SearchTextBox.Text == "" ? Visibility.Collapsed : Visibility.Visible;
             // 搜索
             Global.AutoSuggestBoxItem.Clear();
             foreach (var item in Global.AutoSuggestBoxItemSource)
@@ -214,7 +213,7 @@ namespace 饥荒百科全书CSharp
         private void UI_search_clear_Click(object sender, RoutedEventArgs e)
         {
             SearchTextBox.Text = "";
-            Visi.VisiCol(true, SearchClearButton);
+            SearchClearButton.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
@@ -300,14 +299,14 @@ namespace 饥荒百科全书CSharp
             if (Topmost == false)
             {
                 Topmost = true;
-                SeImageTopmost.Source = RSN.PictureShortName(RSN.ShortName("Setting_Top_T"));
+                SeImageTopmost.Source = new BitmapImage(new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Resources/Setting_Top_T.png", UriKind.Absolute));
                 SeTextblockTopmost.Text = "永远置顶";
                 RegeditRw.RegWrite("Topmost", 1);
             }
             else
             {
                 Topmost = false;
-                SeImageTopmost.Source = RSN.PictureShortName(RSN.ShortName("Setting_Top_F"));
+                SeImageTopmost.Source = new BitmapImage(new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Resources/Setting_Top_F.png", UriKind.Absolute));
                 SeTextblockTopmost.Text = "永不置顶";
                 RegeditRw.RegWrite("Topmost", 0);
             }
@@ -341,8 +340,7 @@ namespace 饥荒百科全书CSharp
                 Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png" //文件扩展名过滤器
             };
             var result = ofd.ShowDialog(); //显示打开文件对话框
-
-            Visi.VisiCol(false, UiBackGroundBorder);
+            UiBackGroundBorder.Visibility = Visibility.Visible;
             try
             {
                 var pictruePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\JiHuangBaiKeCSharp\Background\"; //设置文件夹位置
@@ -379,7 +377,7 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void Se_button_Background_Clear_Click(object sender, RoutedEventArgs e)
         {
-            Visi.VisiCol(true, UiBackGroundBorder);
+            UiBackGroundBorder.Visibility = Visibility.Collapsed;
             UiBackGroundBorder.Background = null;
             SeBgAlphaText.Foreground = Brushes.Silver;
             SeBgAlpha.IsEnabled = false;
@@ -413,7 +411,7 @@ namespace 饥荒百科全书CSharp
                 }
                 catch
                 {
-                    Visi.VisiCol(true, UiBackGroundBorder);
+                    UiBackGroundBorder.Visibility = Visibility.Collapsed;
                 }
             }
         }
@@ -476,8 +474,8 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void UI_btn_maximized_Click(object sender, RoutedEventArgs e)
         {
-            Visi.VisiCol(true, UiBtnMaximized);
-            Visi.VisiCol(false, UiBtnNormal);
+            UiBtnMaximized.Visibility = Visibility.Collapsed;
+            UiBtnNormal.Visibility = Visibility.Visible;
             Rcnormal = new Rect(Left, Top, Width, Height);//保存下当前位置与大小
             Left = 0;
             Top = 0;
@@ -491,8 +489,8 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void UI_btn_normal_Click(object sender, RoutedEventArgs e)
         {
-            Visi.VisiCol(false, UiBtnMaximized);
-            Visi.VisiCol(true, UiBtnNormal);
+            UiBtnMaximized.Visibility = Visibility.Visible;
+            UiBtnNormal.Visibility = Visibility.Collapsed;
             Left = Rcnormal.Left;
             Top = Rcnormal.Top;
             Width = Rcnormal.Width;
@@ -521,7 +519,7 @@ namespace 饥荒百科全书CSharp
 //            double MainGridWidth = MainGrid.ActualWidth;
             if (LeftMenuState == 0)
             {
-                Visi.VisiCol(false, UiVersion);
+                UiVersion.Visibility = Visibility.Visible;
                 Animation.Anim(LcWidth, 50, 150, WidthProperty);
                 Animation.Anim(HamburgerButtonCanvas, 50, 150, WidthProperty);
                 Animation.Anim(LeftWrapPanel, 50, 150, WidthProperty);
@@ -532,7 +530,7 @@ namespace 饥荒百科全书CSharp
             }
             else
             {
-                Visi.VisiCol(true, UiVersion);
+                UiVersion.Visibility = Visibility.Collapsed;
                 Animation.Anim(LcWidth, 150, 50, WidthProperty);
                 Animation.Anim(HamburgerButtonCanvas, 150, 50, WidthProperty);
                 Animation.Anim(LeftWrapPanel, 150, 50, WidthProperty);

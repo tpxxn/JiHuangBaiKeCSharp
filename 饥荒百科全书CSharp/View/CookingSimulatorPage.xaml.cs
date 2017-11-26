@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class;
+using 饥荒百科全书CSharp.Class.JsonDeserialize;
 
 namespace 饥荒百科全书CSharp.View
 {

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using 饥荒百科全书CSharp.Class;
+using 饥荒百科全书CSharp.Class.JsonDeserialize;
 using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp.View.Details

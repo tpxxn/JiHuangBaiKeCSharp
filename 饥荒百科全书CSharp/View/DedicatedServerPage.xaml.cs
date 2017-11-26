@@ -65,9 +65,9 @@ namespace 饥荒百科全书CSharp.View
         {
             foreach (UIElement vControl in DediButtomBg.Children)
             {
-                Visi.VisiCol(true, vControl);
+                vControl.Visibility = Visibility.Collapsed;
             }
-            Visi.VisiCol(false, DediButtomBorderH1, DediButtomBorderH2, DediButtomBorderV1, DediButtomBorderV4);
+            Global.UiElementVisibility(Visibility.Visible, DediButtomBorderH1, DediButtomBorderH2, DediButtomBorderV1, DediButtomBorderV4);
         }
 
         private void DediButtomPanelVisibility(string obj)
@@ -76,10 +76,10 @@ namespace 饥荒百科全书CSharp.View
             switch (obj)
             {
                 case "Setting":
-                    Visi.VisiCol(false, DediSetting);
+                    DediSetting.Visibility = Visibility.Visible;
                     break;
                 case "BaseSet":
-                    Visi.VisiCol(false, DediBaseSet);
+                    DediBaseSet.Visibility = Visibility.Visible;
                     break;
                 case "EditWorld":
 
@@ -117,7 +117,7 @@ namespace 饥荒百科全书CSharp.View
             DediBaseSetPvpSelect.Init(noYes);
             DediBaseSetMaxPlayerSelect.Init(maxPlayer, 5);
             DediBaseOfflineSelect.Init(offline);
-            Visi.VisiCol(false, DediBaseSet);
+            DediBaseSet.Visibility = Visibility.Visible;
             DediBaseSetRangeInitalize();
         }
 
@@ -185,7 +185,7 @@ namespace 饥荒百科全书CSharp.View
         private void DediIntention_Click(string intention)
         {
             DediButtomPanelVisibilityInitialize();
-            Visi.VisiCol(false, DediBaseSet);
+            DediBaseSet.Visibility = Visibility.Visible;
             switch (intention)
             {
                 case "social":
@@ -208,7 +208,7 @@ namespace 饥荒百科全书CSharp.View
         private void DediBaseSetIntentionButton_Click(object sender, RoutedEventArgs e)
         {
             DediButtomPanelVisibilityInitialize();
-            Visi.VisiCol(false, DediIntention);
+            DediIntention.Visibility = Visibility.Visible;
         }
 
 
@@ -229,12 +229,12 @@ namespace 饥荒百科全书CSharp.View
 
         private void DediBaseSetRangeSteamgroup_Click(object sender, RoutedEventArgs e)
         {
-            Visi.VisiCol(false, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
+            Global.UiElementVisibility(Visibility.Visible, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
         }
 
         private void DediBaseSetRangeInitalize()
         {
-            Visi.VisiCol(true, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
+            Global.UiElementVisibility(Visibility.Visible, DediBaseSetGroupid, DediBaseSetGrouponly, DediBaseSetGroupadmins);
         }
         #endregion
     }
