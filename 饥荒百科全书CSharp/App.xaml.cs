@@ -33,12 +33,12 @@ namespace 饥荒百科全书CSharp
 
             private static void App_Startup(object sender, StartupEventArgs e)
             {
-                Debug.WriteLine("App_Startup");
-                //游戏版本
-                double gameVersion = RegeditRw.RegRead("GameVersion");
-                Global.GameVersion = gameVersion;
-                // 设置AutoSuggestBox的数据源
-                Global.SetAutoSuggestBoxItem();
+                //Debug.WriteLine("App_Startup");
+                ////游戏版本
+                //double gameVersion = RegeditRw.RegRead("GameVersion");
+                //Global.GameVersion = gameVersion;
+                //// 设置AutoSuggestBox的数据源
+                //Global.SetAutoSuggestBoxItem();
                 //设置全局字体
                 var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
                 if (!string.IsNullOrEmpty(mainWindowFont))

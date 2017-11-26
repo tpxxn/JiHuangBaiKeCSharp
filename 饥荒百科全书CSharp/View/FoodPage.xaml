@@ -45,7 +45,14 @@
             <ColumnDefinition x:Name="SlWidth" Width="320" MinWidth="320" MaxWidth="400"/>
             <ColumnDefinition x:Name="SrWidth" Width="*" MinWidth="100"/>
         </Grid.ColumnDefinitions>
-        <Frame x:Name="LeftFrame"/>
+        <Popup x:Name="PopFoodAttribute" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Right" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White"  Cursor="{StaticResource CursorPointer}">
+                <ScrollViewer x:Name="ScrollViewerFoodAttribute" Template="{StaticResource MyScrollViewer}" Focusable="False" Height="350">
+                    <WrapPanel x:Name="WrapPanelFoodAttribute" Width="185"/>
+                </ScrollViewer>
+            </Border>
+        </Popup>
+        <Frame Grid.Column="0" x:Name="LeftFrame"/>
         <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource CursorHorz}" Style="{DynamicResource GridSplitterStyle}" />
         <ScrollViewer x:Name="ScrollViewerRight" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>

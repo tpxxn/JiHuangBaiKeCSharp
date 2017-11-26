@@ -96,10 +96,9 @@
     <Compile Include="Class\Global.cs" />
     <Compile Include="Class\GoodsJson.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
-    <Compile Include="Class\MainWindowClass\MWDedicatedServer.cs" />
     <Compile Include="Class\NaturalJson.cs" />
     <Compile Include="Class\PanelGeneration.cs" />
-    <Compile Include="Class\MainWindowClass\MWUI.cs" />
+    <Compile Include="MWUI.cs" />
     <Compile Include="Class\RegeditRW.cs" />
     <Compile Include="Class\SciencesJson.cs" />
     <Compile Include="Class\StringProcess.cs" />
@@ -140,6 +139,9 @@
     </Compile>
     <Compile Include="View\CreaturePage.xaml.cs">
       <DependentUpon>CreaturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DedicatedServerPage.xaml.cs">
+      <DependentUpon>DedicatedServerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Details\CharacterDetail.xaml.cs">
       <DependentUpon>CharacterDetail.xaml</DependentUpon>
@@ -194,6 +196,9 @@
     </Compile>
     <Compile Include="View\SciencePage.xaml.cs">
       <DependentUpon>SciencePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
@@ -309,6 +314,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\DedicatedServerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Details\CharacterDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -378,6 +387,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SciencePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -5442,6 +5455,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Newtonsoft.Json.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\DedicatedServer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

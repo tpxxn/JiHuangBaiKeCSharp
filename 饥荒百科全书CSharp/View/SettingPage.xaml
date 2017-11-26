@@ -1,0 +1,15 @@
+﻿<Page x:Class="饥荒百科全书CSharp.View.SettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:饥荒百科全书CSharp.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="888"
+      Title="SettingPage">
+
+    <Grid x:Name="RightGridSetting">
+        <TextBlock x:Name="SeBossKeyTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Top" Margin="73,139,0,0"/>
+        <Button x:Name="SeBossKeyKey" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="114,139,0,0" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False"/>
+    </Grid>
+</Page>
