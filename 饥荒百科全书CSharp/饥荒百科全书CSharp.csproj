@@ -59,6 +59,12 @@
     <StartupObject>饥荒百科全书CSharp.App.EntryPoint</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Neo.Lua, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\NeoLua.1.2.23\lib\net45\Neo.Lua.dll</HintPath>
+    </Reference>
+    <Reference Include="Neo.Lua.Desktop, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\NeoLua.1.2.23\lib\net45\Neo.Lua.Desktop.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -85,6 +91,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppEntryPoint.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\BaseSet.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\Leveldataoverride.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\Mod.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\Mods.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\ModXiJie.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\Player.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\Server.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\ShowWorld.cs" />
+    <Compile Include="Class\DedicatedServers\Tools\IniHelper.cs" />
+    <Compile Include="Class\DedicatedServers\Tools\LuaConfig.cs" />
+    <Compile Include="Class\DedicatedServers\Tools\PathAll.cs" />
+    <Compile Include="Class\DedicatedServers\Tools\SendMessage.cs" />
+    <Compile Include="Class\DedicatedServers\Tools\Tool.cs" />
+    <Compile Include="Class\DedicatedServers\Tools\XmlHelper.cs" />
     <Compile Include="Class\JsonDeserialize\CharactersJson.cs" />
     <Compile Include="Class\JsonDeserialize\CreaturesJson.cs" />
     <Compile Include="Class\JsonDeserialize\FoodsJson.cs" />
@@ -105,8 +125,11 @@
     <Compile Include="MyUserControl\BarChart.xaml.cs">
       <DependentUpon>BarChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\DedicatedServer\DediImageButton.xaml.cs">
-      <DependentUpon>DediImageButton.xaml</DependentUpon>
+    <Compile Include="MyUserControl\DedicatedServer\DediComboBox.cs" />
+    <Compile Include="MyUserControl\DedicatedServer\DediComboBoxWithImage.cs" />
+    <Compile Include="MyUserControl\DedicatedServer\DediImageButton.cs" />
+    <Compile Include="MyUserControl\DedicatedServer\DediModBox.xaml.cs">
+      <DependentUpon>DediModBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
@@ -209,9 +232,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dictionary\DedicatedServer\DediComboBoxDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediComboBoxWithImageDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediImageButtonDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Dictionary\DedicatedServer\DediLeftPanelRadioButtonDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DedicatedServer\DediModBoxDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Dictionary\DedicatedServer\DediScrollViewerDictionary.xaml">
       <SubType>Designer</SubType>
@@ -274,7 +313,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\DedicatedServer\DediImageButton.xaml">
+    <Page Include="MyUserControl\DedicatedServer\DediModBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -437,6 +476,13 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Server模板\Caves\leveldataoverride.lua" />
+    <None Include="Server模板\Caves\modoverrides.lua" />
+    <None Include="Server模板\Caves\server.ini" />
+    <None Include="Server模板\cluster.ini" />
+    <None Include="Server模板\Master\leveldataoverride.lua" />
+    <None Include="Server模板\Master\modoverrides.lua" />
+    <None Include="Server模板\Master\server.ini" />
     <None Include="VK值.xlsx" />
     <Resource Include="Resources\Cursor\Cursor_link.ani" />
     <Resource Include="Resources\Cursor\Cursor_workOrbusy.ani" />
@@ -5442,10 +5488,125 @@
     <Resource Include="Resources\GameResources\Creatures\A_yellow_crocodog.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="DynamicLinkLibrary\Newtonsoft.Json.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\DedicatedServer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DynamicLinkLibrary\Neo.Lua.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XML\ItemList.xml" />
+    <Resource Include="XML\ServerConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DedicatedServer\D_ComboBoxBackground.png" />
+    <Resource Include="Resources\DedicatedServer\D_ComboBoxBackGroundhui.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Left_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Left_Leave.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Right_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\D_jiantou2Right_Leave.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_bg.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_bg_unchecked.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_border.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_checked.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_checked_tobeclick.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_config.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_unchecked.png" />
+    <Resource Include="Resources\DedicatedServer\D_mp_mod_unchecked_tobeclick.png" />
+    <Resource Include="Resources\DedicatedServer\World\alternatehunt.png" />
+    <Resource Include="Resources\DedicatedServer\World\angrybees.png" />
+    <Resource Include="Resources\DedicatedServer\World\autumn.png" />
+    <Resource Include="Resources\DedicatedServer\World\banana.png" />
+    <Resource Include="Resources\DedicatedServer\World\bats.png" />
+    <Resource Include="Resources\DedicatedServer\World\bearger.png" />
+    <Resource Include="Resources\DedicatedServer\World\beefalo.png" />
+    <Resource Include="Resources\DedicatedServer\World\beefaloheat.png" />
+    <Resource Include="Resources\DedicatedServer\World\bees.png" />
+    <Resource Include="Resources\DedicatedServer\World\berrybush.png" />
+    <Resource Include="Resources\DedicatedServer\World\birds.png" />
+    <Resource Include="Resources\DedicatedServer\World\boons.png" />
+    <Resource Include="Resources\DedicatedServer\World\branching.png" />
+    <Resource Include="Resources\DedicatedServer\World\bunnymen.png" />
+    <Resource Include="Resources\DedicatedServer\World\butterfly.png" />
+    <Resource Include="Resources\DedicatedServer\World\buzzard.png" />
+    <Resource Include="Resources\DedicatedServer\World\cactus.png" />
+    <Resource Include="Resources\DedicatedServer\World\carrot.png" />
+    <Resource Include="Resources\DedicatedServer\World\catcoon.png" />
+    <Resource Include="Resources\DedicatedServer\World\cavelight.png" />
+    <Resource Include="Resources\DedicatedServer\World\cave_ponds.png" />
+    <Resource Include="Resources\DedicatedServer\World\cave_spiders.png" />
+    <Resource Include="Resources\DedicatedServer\World\chess.png" />
+    <Resource Include="Resources\DedicatedServer\World\day.png" />
+    <Resource Include="Resources\DedicatedServer\World\deciduousmonster.png" />
+    <Resource Include="Resources\DedicatedServer\World\deerclops.png" />
+    <Resource Include="Resources\DedicatedServer\World\disease_delay.png" />
+    <Resource Include="Resources\DedicatedServer\World\dragonfly.png" />
+    <Resource Include="Resources\DedicatedServer\World\earthquakes.png" />
+    <Resource Include="Resources\DedicatedServer\World\fern.png" />
+    <Resource Include="Resources\DedicatedServer\World\fissure.png" />
+    <Resource Include="Resources\DedicatedServer\World\flint.png" />
+    <Resource Include="Resources\DedicatedServer\World\flowers.png" />
+    <Resource Include="Resources\DedicatedServer\World\flower_cave.png" />
+    <Resource Include="Resources\DedicatedServer\World\frograin.png" />
+    <Resource Include="Resources\DedicatedServer\World\goosemoose.png" />
+    <Resource Include="Resources\DedicatedServer\World\grass.png" />
+    <Resource Include="Resources\DedicatedServer\World\houndmound.png" />
+    <Resource Include="Resources\DedicatedServer\World\hounds.png" />
+    <Resource Include="Resources\DedicatedServer\World\hunt.png" />
+    <Resource Include="Resources\DedicatedServer\World\krampus.png" />
+    <Resource Include="Resources\DedicatedServer\World\lichen.png" />
+    <Resource Include="Resources\DedicatedServer\World\liefs.png" />
+    <Resource Include="Resources\DedicatedServer\World\lightning.png" />
+    <Resource Include="Resources\DedicatedServer\World\lightninggoat.png" />
+    <Resource Include="Resources\DedicatedServer\World\loop.png" />
+    <Resource Include="Resources\DedicatedServer\World\lureplants.png" />
+    <Resource Include="Resources\DedicatedServer\World\marshbush.png" />
+    <Resource Include="Resources\DedicatedServer\World\merm.png" />
+    <Resource Include="Resources\DedicatedServer\World\meteorshowers.png" />
+    <Resource Include="Resources\DedicatedServer\World\meteorspawner.png" />
+    <Resource Include="Resources\DedicatedServer\World\moles.png" />
+    <Resource Include="Resources\DedicatedServer\World\monkey.png" />
+    <Resource Include="Resources\DedicatedServer\World\mushroom.png" />
+    <Resource Include="Resources\DedicatedServer\World\mushtree.png" />
+    <Resource Include="Resources\DedicatedServer\World\penguins.png" />
+    <Resource Include="Resources\DedicatedServer\World\perd.png" />
+    <Resource Include="Resources\DedicatedServer\World\petrification.png" />
+    <Resource Include="Resources\DedicatedServer\World\pigs.png" />
+    <Resource Include="Resources\DedicatedServer\World\ponds.png" />
+    <Resource Include="Resources\DedicatedServer\World\prefabswaps_start.png" />
+    <Resource Include="Resources\DedicatedServer\World\rabbits.png" />
+    <Resource Include="Resources\DedicatedServer\World\reeds.png" />
+    <Resource Include="Resources\DedicatedServer\World\regrowth.png" />
+    <Resource Include="Resources\DedicatedServer\World\rock.png" />
+    <Resource Include="Resources\DedicatedServer\World\rocky.png" />
+    <Resource Include="Resources\DedicatedServer\World\rock_ice.png" />
+    <Resource Include="Resources\DedicatedServer\World\sapling.png" />
+    <Resource Include="Resources\DedicatedServer\World\season_start.png" />
+    <Resource Include="Resources\DedicatedServer\World\slurper.png" />
+    <Resource Include="Resources\DedicatedServer\World\slurtles.png" />
+    <Resource Include="Resources\DedicatedServer\World\specialevent.png" />
+    <Resource Include="Resources\DedicatedServer\World\spiders.png" />
+    <Resource Include="Resources\DedicatedServer\World\spring.png" />
+    <Resource Include="Resources\DedicatedServer\World\start_location.png" />
+    <Resource Include="Resources\DedicatedServer\World\summer.png" />
+    <Resource Include="Resources\DedicatedServer\World\tallbirds.png" />
+    <Resource Include="Resources\DedicatedServer\World\task_set.png" />
+    <Resource Include="Resources\DedicatedServer\World\tentacles.png" />
+    <Resource Include="Resources\DedicatedServer\World\touchstone.png" />
+    <Resource Include="Resources\DedicatedServer\World\trees.png" />
+    <Resource Include="Resources\DedicatedServer\World\tumbleweed.png" />
+    <Resource Include="Resources\DedicatedServer\World\walrus.png" />
+    <Resource Include="Resources\DedicatedServer\World\weather.png" />
+    <Resource Include="Resources\DedicatedServer\World\wildfires.png" />
+    <Resource Include="Resources\DedicatedServer\World\winter.png" />
+    <Resource Include="Resources\DedicatedServer\World\world_size.png" />
+    <Resource Include="Resources\DedicatedServer\World\wormattacks.png" />
+    <Resource Include="Resources\DedicatedServer\World\wormlights.png" />
+    <Resource Include="Resources\DedicatedServer\World\worms.png" />
+    <Resource Include="Resources\DedicatedServer\设置1_Enter.png" />
+    <Resource Include="Resources\DedicatedServer\设置1_Leave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

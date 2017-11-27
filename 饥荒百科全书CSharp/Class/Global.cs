@@ -87,7 +87,7 @@ namespace 饥荒百科全书CSharp.Class
             for (var i = 0; i < count; i++)
             {
                 var current = VisualTreeHelper.GetChild(startNode, i);
-                if (current.GetType() == typeof(T) || (current.GetType().GetTypeInfo().IsSubclassOf(typeof(T))))
+                if (current.GetType() == typeof(T) || current.GetType().GetTypeInfo().IsSubclassOf(typeof(T)) || current.GetType().IsInstanceOfType(typeof(T)))
                 {
                     var asType = (T)current;
                     results.Add(asType);
@@ -103,6 +103,7 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>转换完成的PicButton</returns>
         public static PicButton ButtonToPicButton(Button button)
         {
+            FindChildren(new List<DependencyObject>(), RootGrid);
             return (PicButton)((StackPanel)button.Parent).Parent;
         }
 
@@ -138,7 +139,7 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         public static readonly Style Transparent = (Style)Application.Current.Resources["TransparentDialog"];
 
-        #region 自动搜索
+        #region 搜索
         /// <summary>
         /// 自动建议框Item集合
         /// </summary>

@@ -133,7 +133,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollBar}">
-                    <Grid Cursor="{DynamicResource CursorLink}" x:Name="Bg" SnapsToDevicePixels="true">
+                    <Grid Cursor="{DynamicResource Cursor_link}" x:Name="Bg" SnapsToDevicePixels="true">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="38"/>
                             <RowDefinition Height="*"/>

@@ -3,17 +3,14 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:饥荒百科全书CSharp.View"
-      xmlns:datetype="using:饥荒百科全书CSharp.Class"
-      xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
-      xmlns:charts="clr-namespace:饥荒百科全书CSharp.MyUserControl"
       xmlns:class="clr-namespace:饥荒百科全书CSharp.Class"
+      xmlns:jsonDeserialize="clr-namespace:饥荒百科全书CSharp.Class.JsonDeserialize"
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="888"
       Title="FoodPage" SizeChanged="Page_SizeChanged">
     
     <Page.Resources>
-        <DataTemplate x:Key="FoodRecipeDataTemplate" DataType="class:FoodRecipe2">
+        <DataTemplate x:Key="FoodRecipeDataTemplate" DataType="jsonDeserialize:FoodRecipe2">
             <Button Click="FoodRecipeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -26,7 +23,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="FoodDataTemplate" DataType="class:Food">
+        <DataTemplate x:Key="FoodDataTemplate" DataType="jsonDeserialize:Food">
             <Button Click="FoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>

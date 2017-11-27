@@ -3,15 +3,14 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:饥荒百科全书CSharp.View"
-      xmlns:class="clr-namespace:饥荒百科全书CSharp.Class"
       xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
+      xmlns:jsonDeserialize="clr-namespace:饥荒百科全书CSharp.Class.JsonDeserialize"
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="888"
       Title="CookingSimulatorPage" SizeChanged="Page_SizeChanged">
 
     <Page.Resources>
-        <DataTemplate x:Key="FoodDataTemplate" DataType="class:Food">
+        <DataTemplate x:Key="FoodDataTemplate" DataType="jsonDeserialize:Food">
             <Button Click="FoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -56,16 +55,16 @@
                     <Button x:Name="ResetButton" Content="重置" VerticalAlignment="Top" Width="64" Cursor="{StaticResource CursorLink}" Margin="0,7,0,0" HorizontalAlignment="Right" Grid.Column="1" Click="ResetButton_Click"/>
                 </Grid>
                 <StackPanel x:Name="FoodButtonStackPanel">
-                    <Button x:Name="Food1Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food1Button_Click" Background="{x:Null}">
+                    <Button x:Name="Food1Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="DeleteFood" Background="{x:Null}">
                         <Image x:Name="Food1Image" Height="52" Width="52"/>
                     </Button>
-                    <Button x:Name="Food2Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food2Button_Click" Background="{x:Null}">
+                    <Button x:Name="Food2Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="DeleteFood" Background="{x:Null}">
                         <Image x:Name="Food2Image" Height="52" Width="52"/>
                     </Button>
-                    <Button x:Name="Food3Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food3Button_Click" Background="{x:Null}">
+                    <Button x:Name="Food3Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="DeleteFood" Background="{x:Null}">
                         <Image x:Name="Food3Image" Height="52" Width="52"/>
                     </Button>
-                    <Button x:Name="Food4Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="Food4Button_Click" Background="{x:Null}">
+                    <Button x:Name="Food4Button" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Click="DeleteFood" Background="{x:Null}">
                         <Image x:Name="Food4Image" Height="52" Width="52"/>
                     </Button>
                 </StackPanel>

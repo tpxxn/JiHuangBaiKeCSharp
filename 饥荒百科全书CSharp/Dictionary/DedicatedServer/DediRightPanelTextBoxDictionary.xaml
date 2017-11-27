@@ -16,7 +16,7 @@
         <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
         <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="Cursor" Value="{DynamicResource CursorText}" />
+        <Setter Property="Cursor" Value="{DynamicResource Cursor_text}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">

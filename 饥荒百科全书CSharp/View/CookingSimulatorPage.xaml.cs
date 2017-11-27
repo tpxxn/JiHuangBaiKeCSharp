@@ -130,7 +130,7 @@ namespace 饥荒百科全书CSharp.View
         private void FoodButton_Click(object sender, RoutedEventArgs e)
         {
             var food = (Food)((Button)sender).DataContext;
-            CS_Add(food.Picture);
+            AddFood(food.Picture);
         }
 
         #region 变量初始化
@@ -139,10 +139,7 @@ namespace 饥荒百科全书CSharp.View
         /// </summary>
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            Food1Button_Click(null, null);
-            Food2Button_Click(null, null);
-            Food3Button_Click(null, null);
-            Food4Button_Click(null, null);
+            DeleteFood(null, null);
             FoodResultImage.Source = null;
             FoodResultTextBlock.Text = "";
             CrockPotList.Clear();
@@ -230,34 +227,34 @@ namespace 饥荒百科全书CSharp.View
         /// 添加食材
         /// </summary>
         /// <param name="foodName">食材名称</param>
-        private void CS_Add(string foodName)
+        private void AddFood(string foodName)
         {
-            if (CsRecipe1 == "" && CsRecipe2 == "" && CsRecipe3 == "" && CsRecipe4 == "")
+            if (string.IsNullOrEmpty(CsRecipe1) && string.IsNullOrEmpty(CsRecipe2) && string.IsNullOrEmpty(CsRecipe3) && string.IsNullOrEmpty(CsRecipe4))
             {
                 FoodHealth.Value = 0;
                 FoodHunger.Value = 0;
                 FoodSanity.Value = 0;
             }
-            if (CsRecipe1 == "" || CsRecipe2 == "" || CsRecipe3 == "" || CsRecipe4 == "")
+            if (string.IsNullOrEmpty(CsRecipe1) || string.IsNullOrEmpty(CsRecipe2) || string.IsNullOrEmpty(CsRecipe3) || string.IsNullOrEmpty(CsRecipe4))
             {
                 CS_Food_Property(foodName);
             }
-            if (CsRecipe1 == "")
+            if (string.IsNullOrEmpty(CsRecipe1))
             {
                 CsRecipe1 = StringProcess.GetFileName(foodName);
                 Food1Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
             }
-            else if (CsRecipe2 == "")
+            else if (string.IsNullOrEmpty(CsRecipe2))
             {
                 CsRecipe2 = StringProcess.GetFileName(foodName);
                 Food2Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
             }
-            else if (CsRecipe3 == "")
+            else if (string.IsNullOrEmpty(CsRecipe3))
             {
                 CsRecipe3 = StringProcess.GetFileName(foodName);
                 Food3Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
             }
-            else if (CsRecipe4 == "")
+            else if (string.IsNullOrEmpty(CsRecipe4))
             {
                 CsRecipe4 = StringProcess.GetFileName(foodName);
                 Food4Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
@@ -271,32 +268,51 @@ namespace 饥荒百科全书CSharp.View
         /// <summary>
         /// 删除食材
         /// </summary>
-        private void Food1Button_Click(object sender, RoutedEventArgs e)
+        private void DeleteFood(object sender, RoutedEventArgs e)
         {
-            CS_Food_Property(CsRecipe1, false);
-            CsRecipe1 = "";
-            Food1Image.Source = null;
-        }
-
-        private void Food2Button_Click(object sender, RoutedEventArgs e)
-        {
-            CS_Food_Property(CsRecipe2, false);
-            CsRecipe2 = "";
-            Food2Image.Source = null;
-        }
-
-        private void Food3Button_Click(object sender, RoutedEventArgs e)
-        {
-            CS_Food_Property(CsRecipe3, false);
-            CsRecipe3 = "";
-            Food3Image.Source = null;
-        }
-
-        private void Food4Button_Click(object sender, RoutedEventArgs e)
-        {
-            CS_Food_Property(CsRecipe4, false);
-            CsRecipe4 = "";
-            Food4Image.Source = null;
+            if (sender == null)
+            {
+                CS_Food_Property(CsRecipe1, false);
+                CsRecipe1 = "";
+                Food1Image.Source = null;
+                CS_Food_Property(CsRecipe2, false);
+                CsRecipe2 = "";
+                Food2Image.Source = null;
+                CS_Food_Property(CsRecipe3, false);
+                CsRecipe3 = "";
+                Food3Image.Source = null;
+                CS_Food_Property(CsRecipe4, false);
+                CsRecipe4 = "";
+                Food4Image.Source = null;
+            }
+            else
+            {
+                var foodButtonName = ((Button)sender).Name;
+                MessageBox.Show(foodButtonName);
+                switch (foodButtonName)
+                {
+                    case "Food1Button":
+                        CS_Food_Property(CsRecipe1, false);
+                        CsRecipe1 = "";
+                        Food1Image.Source = null;
+                        break;
+                    case "Food2Button":
+                        CS_Food_Property(CsRecipe2, false);
+                        CsRecipe2 = "";
+                        Food2Image.Source = null;
+                        break;
+                    case "Food3Button":
+                        CS_Food_Property(CsRecipe3, false);
+                        CsRecipe3 = "";
+                        Food3Image.Source = null;
+                        break;
+                    case "Food4Button":
+                        CS_Food_Property(CsRecipe4, false);
+                        CsRecipe4 = "";
+                        Food4Image.Source = null;
+                        break;
+                }
+            }
         }
 
         /// <summary>
@@ -308,94 +324,79 @@ namespace 饥荒百科全书CSharp.View
         {
             if (string.IsNullOrEmpty(source)) return;
             source = StringProcess.GetGameResourcePath(source);
-            foreach (var foodMeat in _foodMeatData)
+            foreach (var foodMeat in _foodMeatData.Where(temp => temp.Picture == source))
             {
-                if (source == foodMeat.Picture)
+                if (plus)
                 {
-                    if (plus)
-                    {
-                        FoodHealth.Value += foodMeat.Health;
-                        FoodHunger.Value += foodMeat.Hunger;
-                        FoodSanity.Value += foodMeat.Sanity;
-                    }
-                    else
-                    {
-                        FoodHealth.Value -= foodMeat.Health;
-                        FoodHunger.Value -= foodMeat.Hunger;
-                        FoodSanity.Value -= foodMeat.Sanity;
-                    }
+                    FoodHealth.Value += foodMeat.Health;
+                    FoodHunger.Value += foodMeat.Hunger;
+                    FoodSanity.Value += foodMeat.Sanity;
+                }
+                else
+                {
+                    FoodHealth.Value -= foodMeat.Health;
+                    FoodHunger.Value -= foodMeat.Hunger;
+                    FoodSanity.Value -= foodMeat.Sanity;
                 }
             }
-            foreach (var foodVegetable in _foodVegetableData)
+            foreach (var foodVegetable in _foodVegetableData.Where(temp => temp.Picture == source))
             {
-                if (source == foodVegetable.Picture)
+                if (plus)
                 {
-                    if (plus)
-                    {
-                        FoodHealth.Value += foodVegetable.Health;
-                        FoodHunger.Value += foodVegetable.Hunger;
-                        FoodSanity.Value += foodVegetable.Sanity;
-                    }
-                    else
-                    {
-                        FoodHealth.Value -= foodVegetable.Health;
-                        FoodHunger.Value -= foodVegetable.Hunger;
-                        FoodSanity.Value -= foodVegetable.Sanity;
-                    }
+                    FoodHealth.Value += foodVegetable.Health;
+                    FoodHunger.Value += foodVegetable.Hunger;
+                    FoodSanity.Value += foodVegetable.Sanity;
+                }
+                else
+                {
+                    FoodHealth.Value -= foodVegetable.Health;
+                    FoodHunger.Value -= foodVegetable.Hunger;
+                    FoodSanity.Value -= foodVegetable.Sanity;
                 }
             }
-            foreach (var foodFruit in _foodFruitData)
+            foreach (var foodFruit in _foodFruitData.Where(temp => temp.Picture == source))
             {
-                if (source == foodFruit.Picture)
+                if (plus)
                 {
-                    if (plus)
-                    {
-                        FoodHealth.Value += foodFruit.Health;
-                        FoodHunger.Value += foodFruit.Hunger;
-                        FoodSanity.Value += foodFruit.Sanity;
-                    }
-                    else
-                    {
-                        FoodHealth.Value -= foodFruit.Health;
-                        FoodHunger.Value -= foodFruit.Hunger;
-                        FoodSanity.Value -= foodFruit.Sanity;
-                    }
+                    FoodHealth.Value += foodFruit.Health;
+                    FoodHunger.Value += foodFruit.Hunger;
+                    FoodSanity.Value += foodFruit.Sanity;
+                }
+                else
+                {
+                    FoodHealth.Value -= foodFruit.Health;
+                    FoodHunger.Value -= foodFruit.Hunger;
+                    FoodSanity.Value -= foodFruit.Sanity;
                 }
             }
-            foreach (var foodEgg in _foodEggData)
+            foreach (var foodEgg in _foodEggData.Where(temp => temp.Picture == source))
             {
-                if (source == foodEgg.Picture)
+                if (plus)
                 {
-                    if (plus)
-                    {
-                        FoodHealth.Value += foodEgg.Health;
-                        FoodHunger.Value += foodEgg.Hunger;
-                        FoodSanity.Value += foodEgg.Sanity;
-                    }
-                    else
-                    {
-                        FoodHealth.Value -= foodEgg.Health;
-                        FoodHunger.Value -= foodEgg.Hunger;
-                        FoodSanity.Value -= foodEgg.Sanity;
-                    }
+                    FoodHealth.Value += foodEgg.Health;
+                    FoodHunger.Value += foodEgg.Hunger;
+                    FoodSanity.Value += foodEgg.Sanity;
+                }
+                else
+                {
+                    FoodHealth.Value -= foodEgg.Health;
+                    FoodHunger.Value -= foodEgg.Hunger;
+                    FoodSanity.Value -= foodEgg.Sanity;
                 }
             }
-            foreach (var foodOther in _foodOtherData)
+            foreach (var foodOther in _foodOtherData.Where(temp => temp.Picture == source))
             {
-                if (source == foodOther.Picture)
+                if (plus)
                 {
-                    if (plus)
-                    {
-                        FoodHealth.Value += foodOther.Health;
-                        FoodHunger.Value += foodOther.Hunger;
-                        FoodSanity.Value += foodOther.Sanity;
-                    }
-                    else
-                    {
-                        FoodHealth.Value -= foodOther.Health;
-                        FoodHunger.Value -= foodOther.Hunger;
-                        FoodSanity.Value -= foodOther.Sanity;
-                    }
+                    FoodHealth.Value += foodOther.Health;
+                    FoodHunger.Value += foodOther.Hunger;
+                    FoodSanity.Value += foodOther.Sanity;
+                }
+                else
+                {
+                    FoodHealth.Value -= foodOther.Health;
+                    FoodHunger.Value -= foodOther.Hunger;
+                    FoodSanity.Value -= foodOther.Sanity;
                 }
             }
         }

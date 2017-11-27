@@ -29,7 +29,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Cursor" Value="{DynamicResource CursorLink}" />
+        <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -80,7 +80,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Cursor" Value="{DynamicResource CursorLink}" />
+        <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -150,7 +150,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Cursor" Value="{DynamicResource CursorLink}" />
+        <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -211,7 +211,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style x:Key="DediButtonIntentionSelectStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -220,7 +220,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Cursor" Value="{DynamicResource CursorLink}" />
+        <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -272,7 +272,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Cursor" Value="{DynamicResource CursorLink}" />
+        <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>

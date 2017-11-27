@@ -3,14 +3,13 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:饥荒百科全书CSharp.View"
-      xmlns:class="clr-namespace:饥荒百科全书CSharp.Class"
+      xmlns:jsonDeserialize="clr-namespace:饥荒百科全书CSharp.Class.JsonDeserialize"
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="888"
       Title="CreaturePage" SizeChanged="Page_SizeChanged">
     
     <Page.Resources>
-        <DataTemplate x:Key="CreatureDataTemplate" DataType="class:Creature">
+        <DataTemplate x:Key="CreatureDataTemplate" DataType="jsonDeserialize:Creature">
             <Button Click="CreatureButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>

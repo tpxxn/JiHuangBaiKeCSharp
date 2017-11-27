@@ -170,13 +170,15 @@ namespace 饥荒百科全书CSharp
                         //加载DLL
                         AppDomain.CurrentDomain.AssemblyResolve += (sender, arguments) =>
                         {
-                            String projectName = Assembly.GetExecutingAssembly().GetName().Name.ToString();
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(projectName + ".Newtonsoft.Json.dll"))
+                            var projectName = Assembly.GetExecutingAssembly().GetName().Name.ToString();
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(projectName + ".DynamicLinkLibrary.Newtonsoft.Json.dll"))
                             {
-                                Byte[] bytes = new Byte[stream.Length];
+                                // ReSharper disable once PossibleNullReferenceException
+                                var bytes = new byte[stream.Length];
                                 stream.Read(bytes, 0, bytes.Length);
                                 return Assembly.Load(bytes);
                             }
+
                         };
                         //启动
                         var app = new App_Run();
