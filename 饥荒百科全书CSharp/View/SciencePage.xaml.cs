@@ -25,26 +25,6 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class SciencePage : Page
     {
-        private readonly ObservableCollection<Science> _scienceToolData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceLightData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceNauticalData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceSurvivalData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceFoodData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceTechnologyData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceFightData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceStructureData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceRefineData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceMagicData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceDressData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceAncientData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceBookData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceShadowData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceCritterData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceSculptData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceCartographyData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceOfferingsData = new ObservableCollection<Science>();
-        private readonly ObservableCollection<Science> _scienceVolcanoData = new ObservableCollection<Science>();
-
         private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
@@ -59,7 +39,7 @@ namespace 饥荒百科全书CSharp.View
             Deserialize();
             if (extraData == null)
             {
-                LeftFrame.NavigationService.Navigate(new ScienceDetail(), _scienceToolData[0]);
+                LeftFrame.NavigationService.Navigate(new ScienceDetail(), Global.ScienceToolData[0]);
             }
             else
             {
@@ -68,67 +48,67 @@ namespace 饥荒百科全书CSharp.View
                 switch (extraData[0])
                 {
                     case "ScienceTool":
-                        OnNavigatedToScienceDialog(_scienceToolData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceToolData, suggestBoxItemPicture);
                         break;
                     case "ScienceLight":
-                        OnNavigatedToScienceDialog(_scienceLightData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceLightData, suggestBoxItemPicture);
                         break;
                     case "ScienceNautical":
-                        OnNavigatedToScienceDialog(_scienceNauticalData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceNauticalData, suggestBoxItemPicture);
                         break;
                     case "ScienceSurvival":
-                        OnNavigatedToScienceDialog(_scienceSurvivalData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceSurvivalData, suggestBoxItemPicture);
                         break;
                     case "ScienceFood":
-                        OnNavigatedToScienceDialog(_scienceFoodData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceFoodData, suggestBoxItemPicture);
                         break;
                     case "ScienceTechnology":
-                        OnNavigatedToScienceDialog(_scienceTechnologyData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceTechnologyData, suggestBoxItemPicture);
                         break;
                     case "ScienceFight":
-                        OnNavigatedToScienceDialog(_scienceFightData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceFightData, suggestBoxItemPicture);
                         break;
                     case "ScienceStructure":
-                        OnNavigatedToScienceDialog(_scienceStructureData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceStructureData, suggestBoxItemPicture);
                         break;
                     case "ScienceRefine":
-                        OnNavigatedToScienceDialog(_scienceRefineData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceRefineData, suggestBoxItemPicture);
                         break;
                     case "ScienceMagic":
-                        OnNavigatedToScienceDialog(_scienceMagicData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceMagicData, suggestBoxItemPicture);
                         break;
                     case "ScienceDress":
-                        OnNavigatedToScienceDialog(_scienceDressData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceDressData, suggestBoxItemPicture);
                         break;
                     case "ScienceAncient":
-                        OnNavigatedToScienceDialog(_scienceAncientData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceAncientData, suggestBoxItemPicture);
                         break;
                     case "ScienceBook":
-                        OnNavigatedToScienceDialog(_scienceBookData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceBookData, suggestBoxItemPicture);
                         break;
                     case "ScienceShadow":
-                        OnNavigatedToScienceDialog(_scienceShadowData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceShadowData, suggestBoxItemPicture);
                         break;
                     case "ScienceCritter":
-                        OnNavigatedToScienceDialog(_scienceCritterData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceCritterData, suggestBoxItemPicture);
                         break;
                     case "ScienceSculpt":
-                        OnNavigatedToScienceDialog(_scienceSculptData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceSculptData, suggestBoxItemPicture);
                         break;
                     case "ScienceCartography":
-                        OnNavigatedToScienceDialog(_scienceCartographyData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceCartographyData, suggestBoxItemPicture);
                         break;
                     case "ScienceOfferings":
-                        OnNavigatedToScienceDialog(_scienceOfferingsData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceOfferingsData, suggestBoxItemPicture);
                         break;
                     case "ScienceVolcano":
-                        OnNavigatedToScienceDialog(_scienceVolcanoData, suggestBoxItemPicture);
+                        OnNavigatedToScienceDialog(Global.ScienceVolcanoData, suggestBoxItemPicture);
                         break;
                 }
             }
         }
 
-        private void OnNavigatedToScienceDialog(ObservableCollection<Science> scienceCollection, string suggestBoxItemPicture)
+        private void OnNavigatedToScienceDialog(List<Science> scienceCollection, string suggestBoxItemPicture)
         {
             foreach (var itemsControlItem in scienceCollection)
             {
@@ -175,197 +155,25 @@ namespace 饥荒百科全书CSharp.View
 
         public void Deserialize()
         {
-            _scienceToolData.Clear();
-            _scienceLightData.Clear();
-            _scienceNauticalData.Clear();
-            _scienceSurvivalData.Clear();
-            _scienceFoodData.Clear();
-            _scienceTechnologyData.Clear();
-            _scienceFightData.Clear();
-            _scienceStructureData.Clear();
-            _scienceRefineData.Clear();
-            _scienceMagicData.Clear();
-            _scienceDressData.Clear();
-            _scienceAncientData.Clear();
-            _scienceBookData.Clear();
-            _scienceShadowData.Clear();
-            _scienceCritterData.Clear();
-            _scienceSculptData.Clear();
-            _scienceCartographyData.Clear();
-            _scienceOfferingsData.Clear();
-            _scienceVolcanoData.Clear();
-            var science = JsonConvert.DeserializeObject<ScienceRootObject>(StringProcess.GetJsonString("Sciences.json"));
-            foreach (var scienceToolItems in science.Tool.Science)
-            {
-                _scienceToolData.Add(scienceToolItems);
-            }
-            foreach (var scienceToolItems in _scienceToolData)
-            {
-                scienceToolItems.Picture = StringProcess.GetGameResourcePath(scienceToolItems.Picture);
-            }
-            foreach (var scienceLightItems in science.Light.Science)
-            {
-                _scienceLightData.Add(scienceLightItems);
-            }
-            foreach (var scienceLightItems in _scienceLightData)
-            {
-                scienceLightItems.Picture = StringProcess.GetGameResourcePath(scienceLightItems.Picture);
-            }
-            foreach (var scienceNauticalItems in science.Nautical.Science)
-            {
-                _scienceNauticalData.Add(scienceNauticalItems);
-            }
-            foreach (var scienceNauticalItems in _scienceNauticalData)
-            {
-                scienceNauticalItems.Picture = StringProcess.GetGameResourcePath(scienceNauticalItems.Picture);
-            }
-            foreach (var scienceSurvivalItems in science.Survival.Science)
-            {
-                _scienceSurvivalData.Add(scienceSurvivalItems);
-            }
-            foreach (var scienceSurvivalItems in _scienceSurvivalData)
-            {
-                scienceSurvivalItems.Picture = StringProcess.GetGameResourcePath(scienceSurvivalItems.Picture);
-            }
-            foreach (var scienceFoodItems in science.Foods.Science)
-            {
-                _scienceFoodData.Add(scienceFoodItems);
-            }
-            foreach (var scienceFoodItems in _scienceFoodData)
-            {
-                scienceFoodItems.Picture = StringProcess.GetGameResourcePath(scienceFoodItems.Picture);
-            }
-            foreach (var scienceTechnologyItems in science.Technology.Science)
-            {
-                _scienceTechnologyData.Add(scienceTechnologyItems);
-            }
-            foreach (var scienceTechnologyItems in _scienceTechnologyData)
-            {
-                scienceTechnologyItems.Picture = StringProcess.GetGameResourcePath(scienceTechnologyItems.Picture);
-            }
-            foreach (var scienceFightItems in science.Fight.Science)
-            {
-                _scienceFightData.Add(scienceFightItems);
-            }
-            foreach (var scienceFightItems in _scienceFightData)
-            {
-                scienceFightItems.Picture = StringProcess.GetGameResourcePath(scienceFightItems.Picture);
-            }
-            foreach (var scienceStructureItems in science.Structure.Science)
-            {
-                _scienceStructureData.Add(scienceStructureItems);
-            }
-            foreach (var scienceStructureItems in _scienceStructureData)
-            {
-                scienceStructureItems.Picture = StringProcess.GetGameResourcePath(scienceStructureItems.Picture);
-            }
-            foreach (var scienceRefineItems in science.Refine.Science)
-            {
-                _scienceRefineData.Add(scienceRefineItems);
-            }
-            foreach (var scienceRefineItems in _scienceRefineData)
-            {
-                scienceRefineItems.Picture = StringProcess.GetGameResourcePath(scienceRefineItems.Picture);
-            }
-            foreach (var scienceMagicItems in science.Magic.Science)
-            {
-                _scienceMagicData.Add(scienceMagicItems);
-            }
-            foreach (var scienceMagicItems in _scienceMagicData)
-            {
-                scienceMagicItems.Picture = StringProcess.GetGameResourcePath(scienceMagicItems.Picture);
-            }
-            foreach (var scienceDressItems in science.Dress.Science)
-            {
-                _scienceDressData.Add(scienceDressItems);
-            }
-            foreach (var scienceDressItems in _scienceDressData)
-            {
-                scienceDressItems.Picture = StringProcess.GetGameResourcePath(scienceDressItems.Picture);
-            }
-            foreach (var scienceAncientItems in science.Ancient.Science)
-            {
-                _scienceAncientData.Add(scienceAncientItems);
-            }
-            foreach (var scienceAncientItems in _scienceAncientData)
-            {
-                scienceAncientItems.Picture = StringProcess.GetGameResourcePath(scienceAncientItems.Picture);
-            }
-            foreach (var scienceBookItems in science.Book.Science)
-            {
-                _scienceBookData.Add(scienceBookItems);
-            }
-            foreach (var scienceBookItems in _scienceBookData)
-            {
-                scienceBookItems.Picture = StringProcess.GetGameResourcePath(scienceBookItems.Picture);
-            }
-            foreach (var scienceShadowItems in science.Shadow.Science)
-            {
-                _scienceShadowData.Add(scienceShadowItems);
-            }
-            foreach (var scienceShadowItems in _scienceShadowData)
-            {
-                scienceShadowItems.Picture = StringProcess.GetGameResourcePath(scienceShadowItems.Picture);
-            }
-            foreach (var scienceCritterItems in science.Critter.Science)
-            {
-                _scienceCritterData.Add(scienceCritterItems);
-            }
-            foreach (var scienceCritterItems in _scienceCritterData)
-            {
-                scienceCritterItems.Picture = StringProcess.GetGameResourcePath(scienceCritterItems.Picture);
-            }
-            foreach (var scienceSculptItems in science.Sculpt.Science)
-            {
-                _scienceSculptData.Add(scienceSculptItems);
-            }
-            foreach (var scienceSculptItems in _scienceSculptData)
-            {
-                scienceSculptItems.Picture = StringProcess.GetGameResourcePath(scienceSculptItems.Picture);
-            }
-            foreach (var scienceCartographyItems in science.Cartography.Science)
-            {
-                _scienceCartographyData.Add(scienceCartographyItems);
-            }
-            foreach (var scienceCartographyItems in _scienceCartographyData)
-            {
-                scienceCartographyItems.Picture = StringProcess.GetGameResourcePath(scienceCartographyItems.Picture);
-            }
-            foreach (var scienceOfferingsItems in science.Offerings.Science)
-            {
-                _scienceOfferingsData.Add(scienceOfferingsItems);
-            }
-            foreach (var scienceOfferingsItems in _scienceOfferingsData)
-            {
-                scienceOfferingsItems.Picture = StringProcess.GetGameResourcePath(scienceOfferingsItems.Picture);
-            }
-            foreach (var scienceVolcanoItems in science.Volcano.Science)
-            {
-                _scienceVolcanoData.Add(scienceVolcanoItems);
-            }
-            foreach (var scienceVolcanoItems in _scienceVolcanoData)
-            {
-                scienceVolcanoItems.Picture = StringProcess.GetGameResourcePath(scienceVolcanoItems.Picture);
-            }
-            ToolExpander.DataContext = _scienceToolData;
-            LightExpander.DataContext = _scienceLightData;
-            NauticalExpander.DataContext = _scienceNauticalData;
-            SurvivalExpander.DataContext = _scienceSurvivalData;
-            FoodExpander.DataContext = _scienceFoodData;
-            TechnologyExpander.DataContext = _scienceTechnologyData;
-            FightExpander.DataContext = _scienceFightData;
-            StructuresExpander.DataContext = _scienceStructureData;
-            RefineExpander.DataContext = _scienceRefineData;
-            MagicExpander.DataContext = _scienceMagicData;
-            DressExpander.DataContext = _scienceDressData;
-            AncientExpander.DataContext = _scienceAncientData;
-            BooksExpander.DataContext = _scienceBookData;
-            ShadowExpander.DataContext = _scienceShadowData;
-            CritterExpaner.DataContext = _scienceCritterData;
-            SculptExpander.DataContext = _scienceSculptData;
-            CartographyExpander.DataContext = _scienceCartographyData;
-            OfferingsExpander.DataContext = _scienceOfferingsData;
-            VolcanoExpander.DataContext = _scienceVolcanoData;
+            ToolExpander.DataContext = Global.ScienceToolData;
+            LightExpander.DataContext = Global.ScienceLightData;
+            NauticalExpander.DataContext = Global.ScienceNauticalData;
+            SurvivalExpander.DataContext = Global.ScienceSurvivalData;
+            FoodExpander.DataContext = Global.ScienceFoodData;
+            TechnologyExpander.DataContext = Global.ScienceTechnologyData;
+            FightExpander.DataContext = Global.ScienceFightData;
+            StructuresExpander.DataContext = Global.ScienceStructureData;
+            RefineExpander.DataContext = Global.ScienceRefineData;
+            MagicExpander.DataContext = Global.ScienceMagicData;
+            DressExpander.DataContext = Global.ScienceDressData;
+            AncientExpander.DataContext = Global.ScienceAncientData;
+            BooksExpander.DataContext = Global.ScienceBookData;
+            ShadowExpander.DataContext = Global.ScienceShadowData;
+            CritterExpaner.DataContext = Global.ScienceCritterData;
+            SculptExpander.DataContext = Global.ScienceSculptData;
+            CartographyExpander.DataContext = Global.ScienceCartographyData;
+            OfferingsExpander.DataContext = Global.ScienceOfferingsData;
+            VolcanoExpander.DataContext = Global.ScienceVolcanoData;
         }
 
         private void ScienceButton_Click(object sender, RoutedEventArgs e)

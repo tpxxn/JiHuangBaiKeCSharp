@@ -26,180 +26,60 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
     {
 
         #region mod属性
+
         /// <summary>
         /// mod的文件夹名
         /// </summary>
-        private string dirName;
-
+        public string DirName { get; set; }
 
         /// <summary>
         /// mod的全路径
         /// </summary>
-        private string modinfoPath;
+        public string ModinfoPath { get; set; }
 
         /// <summary>
         /// mod的name名字
         /// </summary>
-        private string name;
+        public string Name { get; set; }
 
         /// <summary>
         /// mod的描述
         /// </summary>
-        private string description;
+        public string Description { get; set; }
 
         /// <summary>
         /// mod的作者
         /// </summary>
-        private string author;
+        public string Author { get; set; }
 
         /// <summary>
         /// mod的版本
         /// </summary>
-        private string version;
-
- 
+        public string Version { get; set; }
 
         /// <summary>
         /// mod的类型
         /// </summary>
-        private ModType tyype;
+        public ModType Tyype { get; set; }
 
         /// <summary>
-        /// mod的细节    <name,modxijie>
+        /// mod的细节
         /// </summary>
-        private Dictionary<string,ModXiJie> configuration_options;
+        internal Dictionary<string, ModXiJie> Configuration_options { get; set; }
 
         /// <summary>
         /// 这个是否开启了
         /// </summary>
-        private bool enabled;
-
-        public string DirName
-        {
-            get
-            {
-                return dirName;
-            }
-
-            set
-            {
-                dirName = value;
-            }
-        }
-
-        public string ModinfoPath
-        {
-            get
-            {
-                return modinfoPath;
-            }
-
-            set
-            {
-                modinfoPath = value;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-
-            set
-            {
-                name = value;
-            }
-        }
-
-        public string Description
-        {
-            get
-            {
-                return description;
-            }
-
-            set
-            {
-                description = value;
-            }
-        }
-
-        public string Author
-        {
-            get
-            {
-                return author;
-            }
-
-            set
-            {
-                author = value;
-            }
-        }
-
-        public string Version
-        {
-            get
-            {
-                return version;
-            }
-
-            set
-            {
-                version = value;
-            }
-        }
-
-        public ModType Tyype
-        {
-            get
-            {
-                return tyype;
-            }
-
-            set
-            {
-                tyype = value;
-            }
-        }
-
-        internal Dictionary<string, ModXiJie> Configuration_options
-        {
-            get
-            {
-                return configuration_options;
-            }
-
-            set
-            {
-                configuration_options = value;
-            }
-        }
-
-        public bool Enabled
-        {
-            get
-            {
-                return enabled;
-            }
-
-            set
-            {
-                enabled = value;
-            }
-        }
+        public bool Enabled { get; set; }
 
         #endregion
 
-        
         /// <summary>
         /// mod
         /// </summary> 
         /// <param name="modinfoPath">这个modinfo的路径</param>
         /// <param name="thisModConfig">这个mod的细节配置，可能为空，说明没有</param>
-        public Mod(string modinfoPath )
+        public Mod(string modinfoPath)
         {
             #region Mod除了细节的各种信息
             // 路径
@@ -207,46 +87,38 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
 
             //文件夹名字
 
-             DirectoryInfo dinfo =new DirectoryInfo(Path.GetDirectoryName(modinfoPath));
+            var dinfo = new DirectoryInfo(Path.GetDirectoryName(modinfoPath));
             this.DirName = dinfo.Name;
 
             // 读取modinfo文件,各种判断是否为空
-            LuaConfig luaReader = new LuaConfig();
-            LuaTable lt_modinfo= luaReader.ReadLua(modinfoPath, Encoding.UTF8, false);
+            var luaReader = new LuaConfig();
+            var ltModinfo = luaReader.ReadLua(modinfoPath, Encoding.UTF8, false);
 
-            this.Name = lt_modinfo["name"] == null ? "" : lt_modinfo["name"].ToString();
-            this.Description = lt_modinfo["description"] == null ? "" : lt_modinfo["description"].ToString();
-            this.Author = lt_modinfo["author"] == null ? "" : lt_modinfo["author"].ToString();
-            this.Version = lt_modinfo["version"] == null ? "" : lt_modinfo["version"].ToString();
+            this.Name = ltModinfo["name"]?.ToString() ?? "";
+            this.Description = ltModinfo["description"]?.ToString() ?? "";
+            this.Author = ltModinfo["author"]?.ToString() ?? "";
+            this.Version = ltModinfo["version"]?.ToString() ?? "";
 
             // mod类型，modType
-            if (lt_modinfo["client_only_mod"] == null || (lt_modinfo["client_only_mod"].ToString().Trim().ToLower() == "false"))
+            if (ltModinfo["client_only_mod"] == null || (ltModinfo["client_only_mod"].ToString().Trim().ToLower() == "false"))
             {
 
-                if (lt_modinfo["all_clients_require_mod"] == null)
+                if (ltModinfo["all_clients_require_mod"] == null)
                 {
 
-                    this.Tyype= ModType.所有人;
+                    Tyype = ModType.所有人;
 
                 }
                 else
                 {
-                    if (lt_modinfo["all_clients_require_mod"].ToString().Trim().ToLower() == "true")
-                    {
-                        this.Tyype = ModType.所有人;
-                    }
-                    else
-                    {
-                        this.Tyype = ModType.服务端;
-                    }
-
+                    Tyype = ltModinfo["all_clients_require_mod"].ToString().Trim().ToLower() == "true" ? ModType.所有人 : ModType.服务端;
                 }
             }
             else
             {
-                this.Tyype = ModType.客户端;
+                Tyype = ModType.客户端;
             }
-     
+
 
 
             #endregion
@@ -257,31 +129,32 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             Configuration_options = new Dictionary<string, ModXiJie>();
 
             // 如果没有细节。返回
-            if (lt_modinfo["configuration_options"] == null) { return; };
+            if (ltModinfo["configuration_options"] == null) { return; };
 
             // go
-            LuaTable lt_configuration_options = (LuaTable)lt_modinfo["configuration_options"];
+            var ltConfigurationOptions = (LuaTable)ltModinfo["configuration_options"];
 
             //    private Dictionary<string, ModXiJie> configuration_options;
             // lua下标从1开始
-            for (int i = 1; i <= lt_configuration_options.Length; i++)
+            for (var i = 1; i <= ltConfigurationOptions.Length; i++)
             {
 
                 // 获取name的值，如果name值为空，干脆不储存，直接到下一个循环,mod中经常会有这种空的东西，不知道是作者故意的还是什么
                 string name1;
-                var name = ((LuaTable)lt_configuration_options[i])["name"];
+                var name = ((LuaTable)ltConfigurationOptions[i])["name"];
                 if (name == null || name.ToString().Trim() == "")
                 {
                     continue;
                 }
-                else {
+                else
+                {
 
-                      name1 = name.ToString();
+                    name1 = name.ToString();
                 }
 
                 // label的值
                 string label1;
-                var label= ((LuaTable)lt_configuration_options[i])["label"];
+                var label = ((LuaTable)ltConfigurationOptions[i])["label"];
 
                 if (label == null || label.ToString().Trim() == "")
                 {
@@ -295,7 +168,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
 
                 // hover的值
                 string hover1;
-                var hover = ((LuaTable)lt_configuration_options[i])["hover"];
+                var hover = ((LuaTable)ltConfigurationOptions[i])["hover"];
 
                 if (hover == null || hover.ToString().Trim() == "")
                 {
@@ -310,7 +183,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                 // default的值
                 string default11;
                 string current11;
-                var default1 = ((LuaTable)lt_configuration_options[i])["default"];
+                var default1 = ((LuaTable)ltConfigurationOptions[i])["default"];
 
                 if (default1 == null || default1.ToString().Trim() == "")
                 {
@@ -321,13 +194,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                 {
 
                     default11 = default1.ToString();
-                    current11= default1.ToString(); 
+                    current11 = default1.ToString();
 
                 }
 
                 // options,每个细节的选项
-                List<Option> listOptions = new List<Option>();
-                var options = ((LuaTable)lt_configuration_options[i])["options"];
+                var listOptions = new List<Option>();
+                var options = ((LuaTable)ltConfigurationOptions[i])["options"];
 
 
                 if (options == null)
@@ -338,50 +211,53 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                 }
                 else
                 {
-                    LuaTable ltOptions = (LuaTable)options;
-                   
+                    var ltOptions = (LuaTable)options;
+
                     // lua从1开始
-                    for (int j = 1; j <= ltOptions.Length; j++)
+                    for (var j = 1; j <= ltOptions.Length; j++)
                     {
-                        Option option = new Option();
+                        var option = new Option
+                        {
+                            Description = ((LuaTable)ltOptions[j])["description"].ToString(),
+                            Data = ((LuaTable)ltOptions[j])["data"].ToString()
+                        };
                         // 标记，这里没有判断description是否为空，绝大多数都不会出错的，除非作者瞎写。
-                        option.description = ((LuaTable)ltOptions[j])["description"].ToString();
                         // 其实这个data值是有数据类型的，bool,int，string.但是这里全部都是string了，在保存到文件的时候要判断类型保存
-                        option.data = ((LuaTable)ltOptions[j])["data"].ToString();
 
                         listOptions.Add(option);
-                    } 
-                        
+                    }
+
                 }
 
                 // 判断default是否存在于data中，有的作者瞎写。。 只能判断下
-                bool isDefaultIndata = false;
-                for (int k = 0; k < listOptions.Count; k++)
+                var isDefaultIndata = false;
+                foreach (var option in listOptions)
                 {
-
-                    if (default11== listOptions[k].data)
+                    if (default11 == option.Data)
                     {
                         isDefaultIndata = true;
-                    } 
+                    }
                 }
 
                 // 标记（listOptions[0]没有判断是否为空） 如果不存在，赋值第一个data的值
                 if (!isDefaultIndata)
                 {
-                    default11 = listOptions[0].data;
-                    current11= listOptions[0].data;
+                    default11 = listOptions[0].Data;
+                    current11 = listOptions[0].Data;
                 }
 
                 // 赋值到mod细节中
-                ModXiJie modxijie = new ModXiJie();
-                modxijie.Current = current11;
-                modxijie.Default1 = default11;
-                modxijie.Name = name1;
-                modxijie.Label = label1;
-                modxijie.Options = listOptions;
+                var modxijie = new ModXiJie
+                {
+                    Current = current11,
+                    Default1 = default11,
+                    Name = name1,
+                    Label = label1,
+                    Options = listOptions
+                };
 
                 // 添加到总的configuration_options
-                Configuration_options[name1]= modxijie;
+                Configuration_options[name1] = modxijie;
 
 
             }
@@ -398,7 +274,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
 
         #region 读取modoverrides，赋值到current值中，用current覆盖default
 
-        public void  ReadModoverrides(LuaTable thisModConfig) {
+        public void ReadModoverrides(LuaTable thisModConfig)
+        {
 
             if (thisModConfig != null)
             {
@@ -415,17 +292,17 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             //if (this.Enabled == false) { return; }
 
 
-            var thisMod_configuration_options = thisModConfig["configuration_options"];
+            var thisModConfigurationOptions = thisModConfig["configuration_options"];
             // 如果没有细节配置，还是返回
-            if (thisMod_configuration_options == null) { return; }
+            if (thisModConfigurationOptions == null) { return; }
 
             // 格式转换
-            LuaTable lt_thisMod_configuration_options = (LuaTable)thisMod_configuration_options;
+            var ltThisModConfigurationOptions = (LuaTable)thisModConfigurationOptions;
 
             // 再转换成字典
-            IDictionary<string, object> d = (IDictionary<string, object>)lt_thisMod_configuration_options.Members;
+            var d = ltThisModConfigurationOptions.Members;
 
-            foreach (KeyValuePair<string, object> item in d)
+            foreach (var item in d)
             {
                 //  如果不存在，下一循环
                 if (!Configuration_options.ContainsKey(item.Key))
@@ -442,7 +319,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             }
 
         }
-            #endregion
+        #endregion
 
     }
 }

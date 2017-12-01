@@ -41,6 +41,12 @@ namespace 饥荒百科全书CSharp.Class
         public static Frame CreatureLeftFrame { get; set; }
         public static Frame NaturalLeftFrame { get; set; }
         public static Frame GoodLeftFrame { get; set; }
+
+        /// <summary>
+        /// 透明Style
+        /// </summary>
+        public static readonly Style Transparent = (Style)Application.Current.Resources["TransparentDialog"];
+
         #region 颜色常量
 
         public static SolidColorBrush ColorGreen = new SolidColorBrush(Color.FromArgb(255, 94, 182, 96));     //绿色
@@ -134,11 +140,6 @@ namespace 饥荒百科全书CSharp.Class
         }
         #endregion
 
-        /// <summary>
-        /// 透明Style
-        /// </summary>
-        public static readonly Style Transparent = (Style)Application.Current.Resources["TransparentDialog"];
-
         #region 搜索
         /// <summary>
         /// 自动建议框Item集合
@@ -151,54 +152,54 @@ namespace 饥荒百科全书CSharp.Class
         public static List<SuggestBoxItem> AutoSuggestBoxItemSource { get; set; } = new List<SuggestBoxItem>();
 
         #region 自动搜索List
-        private static readonly List<Character> CharacterData = new List<Character>();
-        private static readonly List<FoodRecipe2> FoodRecipeData = new List<FoodRecipe2>();
-        private static readonly List<Food> FoodMeatData = new List<Food>();
-        private static readonly List<Food> FoodVegetableData = new List<Food>();
-        private static readonly List<Food> FoodFruitData = new List<Food>();
-        private static readonly List<Food> FoodEggData = new List<Food>();
-        private static readonly List<Food> FoodOtherData = new List<Food>();
-        private static readonly List<Food> FoodNoFcData = new List<Food>();
-        private static readonly List<Science> ScienceToolData = new List<Science>();
-        private static readonly List<Science> ScienceLightData = new List<Science>();
-        private static readonly List<Science> ScienceNauticalData = new List<Science>();
-        private static readonly List<Science> ScienceSurvivalData = new List<Science>();
-        private static readonly List<Science> ScienceFoodData = new List<Science>();
-        private static readonly List<Science> ScienceTechnologyData = new List<Science>();
-        private static readonly List<Science> ScienceFightData = new List<Science>();
-        private static readonly List<Science> ScienceStructureData = new List<Science>();
-        private static readonly List<Science> ScienceRefineData = new List<Science>();
-        private static readonly List<Science> ScienceMagicData = new List<Science>();
-        private static readonly List<Science> ScienceDressData = new List<Science>();
-        private static readonly List<Science> ScienceAncientData = new List<Science>();
-        private static readonly List<Science> ScienceBookData = new List<Science>();
-        private static readonly List<Science> ScienceShadowData = new List<Science>();
-        private static readonly List<Science> ScienceCritterData = new List<Science>();
-        private static readonly List<Science> ScienceSculptData = new List<Science>();
-        private static readonly List<Science> ScienceCartographyData = new List<Science>();
-        private static readonly List<Science> ScienceOfferingsData = new List<Science>();
-        private static readonly List<Science> ScienceVolcanoData = new List<Science>();
-        private static readonly List<Creature> CreatureLandData = new List<Creature>();
-        private static readonly List<Creature> CreatureOceanData = new List<Creature>();
-        private static readonly List<Creature> CreatureFlyData = new List<Creature>();
-        private static readonly List<Creature> CreatureCaveData = new List<Creature>();
-        private static readonly List<Creature> CreatureEvilData = new List<Creature>();
-        private static readonly List<Creature> CreatureOthersData = new List<Creature>();
-        private static readonly List<Creature> CreatureBossData = new List<Creature>();
-        private static readonly List<Nature> NaturalBiomesData = new List<Nature>();
-        private static readonly List<GoodMaterial> GoodMaterialData = new List<GoodMaterial>();
-        private static readonly List<GoodEquipment> GoodEquipmentData = new List<GoodEquipment>();
-        private static readonly List<GoodSapling> GoodSaplingData = new List<GoodSapling>();
-        private static readonly List<GoodCreatures> GoodCreaturesData = new List<GoodCreatures>();
-        private static readonly List<Good> GoodTrinketsData = new List<Good>();
-        private static readonly List<GoodTurf> GoodTurfData = new List<GoodTurf>();
-        private static readonly List<GoodPet> GoodPetData = new List<GoodPet>();
-        private static readonly List<GoodUnlock> GoodUnlockData = new List<GoodUnlock>();
-        private static readonly List<Good> GoodHallowedNightsData = new List<Good>();
-        private static readonly List<Good> GoodWintersFeastData = new List<Good>();
-        private static readonly List<Good> GoodYearOfTheGobblerData = new List<Good>();
-        private static readonly List<Good> GoodComponentData = new List<Good>();
-        private static readonly List<Good> GoodOthersData = new List<Good>();
+        public static readonly List<Character> CharacterData = new List<Character>();
+        public static readonly List<FoodRecipe2> FoodRecipeData = new List<FoodRecipe2>();
+        public static readonly List<Food> FoodMeatData = new List<Food>();
+        public static readonly List<Food> FoodVegetableData = new List<Food>();
+        public static readonly List<Food> FoodFruitData = new List<Food>();
+        public static readonly List<Food> FoodEggData = new List<Food>();
+        public static readonly List<Food> FoodOtherData = new List<Food>();
+        public static readonly List<Food> FoodNoFcData = new List<Food>();
+        public static readonly List<Science> ScienceToolData = new List<Science>();
+        public static readonly List<Science> ScienceLightData = new List<Science>();
+        public static readonly List<Science> ScienceNauticalData = new List<Science>();
+        public static readonly List<Science> ScienceSurvivalData = new List<Science>();
+        public static readonly List<Science> ScienceFoodData = new List<Science>();
+        public static readonly List<Science> ScienceTechnologyData = new List<Science>();
+        public static readonly List<Science> ScienceFightData = new List<Science>();
+        public static readonly List<Science> ScienceStructureData = new List<Science>();
+        public static readonly List<Science> ScienceRefineData = new List<Science>();
+        public static readonly List<Science> ScienceMagicData = new List<Science>();
+        public static readonly List<Science> ScienceDressData = new List<Science>();
+        public static readonly List<Science> ScienceAncientData = new List<Science>();
+        public static readonly List<Science> ScienceBookData = new List<Science>();
+        public static readonly List<Science> ScienceShadowData = new List<Science>();
+        public static readonly List<Science> ScienceCritterData = new List<Science>();
+        public static readonly List<Science> ScienceSculptData = new List<Science>();
+        public static readonly List<Science> ScienceCartographyData = new List<Science>();
+        public static readonly List<Science> ScienceOfferingsData = new List<Science>();
+        public static readonly List<Science> ScienceVolcanoData = new List<Science>();
+        public static readonly List<Creature> CreatureLandData = new List<Creature>();
+        public static readonly List<Creature> CreatureOceanData = new List<Creature>();
+        public static readonly List<Creature> CreatureFlyData = new List<Creature>();
+        public static readonly List<Creature> CreatureCaveData = new List<Creature>();
+        public static readonly List<Creature> CreatureEvilData = new List<Creature>();
+        public static readonly List<Creature> CreatureOthersData = new List<Creature>();
+        public static readonly List<Creature> CreatureBossData = new List<Creature>();
+        public static readonly List<Nature> NaturalBiomesData = new List<Nature>();
+        public static readonly List<GoodMaterial> GoodMaterialData = new List<GoodMaterial>();
+        public static readonly List<GoodEquipment> GoodEquipmentData = new List<GoodEquipment>();
+        public static readonly List<GoodSapling> GoodSaplingData = new List<GoodSapling>();
+        public static readonly List<GoodCreatures> GoodCreaturesData = new List<GoodCreatures>();
+        public static readonly List<Good> GoodTrinketsData = new List<Good>();
+        public static readonly List<GoodTurf> GoodTurfData = new List<GoodTurf>();
+        public static readonly List<GoodPet> GoodPetData = new List<GoodPet>();
+        public static readonly List<GoodUnlock> GoodUnlockData = new List<GoodUnlock>();
+        public static readonly List<Good> GoodHallowedNightsData = new List<Good>();
+        public static readonly List<Good> GoodWintersFeastData = new List<Good>();
+        public static readonly List<Good> GoodYearOfTheGobblerData = new List<Good>();
+        public static readonly List<Good> GoodComponentData = new List<Good>();
+        public static readonly List<Good> GoodOthersData = new List<Good>();
         #endregion
 
         /// <summary>

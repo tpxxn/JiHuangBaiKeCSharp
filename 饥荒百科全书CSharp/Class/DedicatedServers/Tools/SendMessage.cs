@@ -45,13 +45,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         　/// 发送一个字符串
         　/// </summary>
         　/// <param name="myIntPtr">窗口句柄</param>
-        　/// <param name="Input">字符串</param>
-        public   void InputStr(IntPtr myIntPtr, string Input)
+        　/// <param name="input">字符串</param>
+        public void InputStr(IntPtr myIntPtr, string input)
         {
-            byte[] ch = (ASCIIEncoding.ASCII.GetBytes(Input));
-            for (int i = 0; i < ch.Length; i++)
+            var ch = (Encoding.ASCII.GetBytes(input));
+            for (var i = 0; i < ch.Length; i++)
             {
-                SendMessage(myIntPtr, WM_CHAR, ch[i], 0);
+                SendMessage(myIntPtr, WM_CHAR, i, 0);
             }
         }
 
@@ -60,42 +60,33 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         /// <param name="windowName"></param>
         /// <returns></returns>
-        public IntPtr getIntPtr(string windowName) {
+        public IntPtr GetIntPtr(string windowName)
+        {
             //  1、根据窗口的标题得到句柄
             IntPtr myIntPtr = FindWindow(null, windowName); //null为类名，可以用Spy++得到，也可以为空
-           // ShowWindow(myIntPtr, SW_RESTORE); //将窗口还原
-           // SetForegroundWindow(myIntPtr); //如果没有ShowWindow，此方法不能设置最小化的窗口
+                                                            // ShowWindow(myIntPtr, SW_RESTORE); //将窗口还原
+                                                            // SetForegroundWindow(myIntPtr); //如果没有ShowWindow，此方法不能设置最小化的窗口
             return myIntPtr;
-
-
         }
 
         // 发送回车
-        public void sendEnter(IntPtr myIntPtr) {
+        public void SendEnter(IntPtr myIntPtr)
+        {
             PostMessage(myIntPtr, WM_SYSKEYDOWN, VK_RETURN, 0); //输入ENTER（0x0d）
             PostMessage(myIntPtr, WM_SYSKEYUP, VK_RETURN, 0);
-
-   
-
         }
 
-
-        public void test() {
-
+        public void Test()
+        {
             //  1、根据窗口的标题得到句柄
-            IntPtr myIntPtr = getIntPtr("cmd");
-
-
+            IntPtr myIntPtr = GetIntPtr("cmd");
             // 2 利用发送消息API（SendMessage）向窗口发送数据
             InputStr(myIntPtr, "3333"); //输入游戏ID
             InputStr(myIntPtr, "44444"); //输入游戏密码
             SendMessage(myIntPtr, WM_SYSKEYDOWN, 0X0D, 0); //输入ENTER（0x0d）
             SendMessage(myIntPtr, WM_SYSKEYUP, 0X0D, 0);
 
-
             Console.Read();
-
         }
-
     }
 }

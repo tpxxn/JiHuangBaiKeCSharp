@@ -12,17 +12,17 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 小选项的描述，要显示的是这个
         /// </summary>
-        public string description;
+        public string Description;
 
         /// <summary>
         /// 小选项的数据
         /// </summary>
-        public string data;
+        public string Data;
 
         /// <summary>
         /// 小选项的解释
         /// </summary>
-        public string hover;
+        public string Hover;
 
     }
 
@@ -34,129 +34,52 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 小细节的名字
         /// </summary>
-        private string name;
+        public string Name { get; set; }
 
         /// <summary>
         /// 小细节的label
         /// </summary>
-        private string label;
+        public string Label { get; set; }
 
         /// <summary>
         /// 小细节的更多解释
         /// </summary>
-        private string hover;
+        public string Hover { get; set; }
 
         /// <summary>
         /// 小细节的默认值
         /// </summary>
-        private string default1;
+        public string Default1 { get; set; }
 
         /// <summary>
         /// 小细节的当前值（先读默认值，之后用读取的当前值覆盖）
         /// </summary>
-        private string current;
+        public string Current { get; set; }
 
         /// <summary>
         /// 小细节都有哪些选项
         /// </summary>
-        private List<Option> options;
+        internal List<Option> Options { get; set; }
 
         /// <summary>
         /// 小细节的当前值的翻译
         /// </summary>
-        private string currentDescription;
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-
-            set
-            {
-                name = value;
-            }
-        }
-
-        public string Label
-        {
-            get
-            {
-                return label;
-            }
-
-            set
-            {
-                label = value;
-            }
-        }
-
-        public string Hover
-        {
-            get
-            {
-                return hover;
-            }
-
-            set
-            {
-                hover = value;
-            }
-        }
-
-        public string Default1
-        {
-            get
-            {
-                return default1;
-            }
-
-            set
-            {
-                default1 = value;
-            }
-        }
-
-        public string Current
-        {
-            get
-            {
-                return current;
-            }
-
-            set
-            {
-                current = value;
-            }
-        }
-
-        internal List<Option> Options
-        {
-            get
-            {
-                return options;
-            }
-
-            set
-            {
-                options = value;
-            }
-        }
+        private string _currentDescription;
 
         public string CurrentDescription
         {
             get
             {
-                for (int i = 0; i < options.Count; i++)
+                foreach (var option in Options)
                 {
-                    if (options[i].data==current)
+                    if (option.Data == Current)
                     {
-                        return options[i].description;
+                        return option.Description;
                     }
                 }
-                return current;
+                return Current;
             }
- 
+
         }
     }
 }

@@ -3,7 +3,10 @@ using Microsoft.Win32;
 
 namespace 饥荒百科全书CSharp.Class
 {
-    static class RegeditRw
+    /// <summary>
+    /// 读写注册表
+    /// </summary>
+    internal static class RegeditRw 
     {
         /// <summary>
         /// 写入注册表(double值)
@@ -34,7 +37,7 @@ namespace 饥荒百科全书CSharp.Class
         public static double RegRead(string valueName)
         {
             double getValue = 0;
-            string getValueTemp = "";
+            var getValueTemp = "";
             try
             {
                 getValueTemp = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", valueName, 0).ToString();
@@ -44,7 +47,7 @@ namespace 饥荒百科全书CSharp.Class
             {
                 //MessageBox.Show(e.ToString());
             }
-            if (getValueTemp != "")
+            if (!string.IsNullOrEmpty(getValueTemp))
             {
                 getValue = double.Parse(getValueTemp);
             }
@@ -58,18 +61,21 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>值</returns>
         public static string RegReadString(string valueName)
         {
-            string GetValue = "";
-            string GetValueTemp = "";
+            var getValue = "";
+            var getValueTemp = "";
             try
             {
-                GetValueTemp = (string)Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", valueName, string.Empty);
+                getValueTemp = (string)Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\JiHuangBaiKeCSharp", valueName, string.Empty);
             }
-            catch { }
-            if (GetValueTemp != "")
+            catch
             {
-                GetValue = GetValueTemp;
+                // ignored
             }
-            return GetValue;
+            if (getValueTemp != "")
+            {
+                getValue = getValueTemp;
+            }
+            return getValue;
         }
 
         /// <summary>

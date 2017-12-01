@@ -25,14 +25,6 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class FoodPage : Page
     {
-        private readonly ObservableCollection<FoodRecipe2> _foodRecipeData = new ObservableCollection<FoodRecipe2>();
-        private readonly ObservableCollection<Food> _foodMeatData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodVegetableData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodFruitData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodEggData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodOtherData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodNoFcData = new ObservableCollection<Food>();
-
         private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
@@ -47,7 +39,7 @@ namespace 饥荒百科全书CSharp.View
             Deserialize();
             if (extraData == null)
             {
-                LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), _foodRecipeData[0]);
+                LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), Global.FoodRecipeData[0]);
             }
             else
             {
@@ -59,22 +51,22 @@ namespace 饥荒百科全书CSharp.View
                         OnNavigatedToFoodRecipeDialog(suggestBoxItemPicture);
                         break;
                     case "FoodMeats":
-                        OnNavigatedToFoodDialog(_foodMeatData, suggestBoxItemPicture);
+                        OnNavigatedToFoodDialog(Global.FoodMeatData, suggestBoxItemPicture);
                         break;
                     case "FoodVegetables":
-                        OnNavigatedToFoodDialog(_foodVegetableData, suggestBoxItemPicture);
+                        OnNavigatedToFoodDialog(Global.FoodVegetableData, suggestBoxItemPicture);
                         break;
                     case "FoodFruits":
-                        OnNavigatedToFoodDialog(_foodFruitData, suggestBoxItemPicture);
+                        OnNavigatedToFoodDialog(Global.FoodFruitData, suggestBoxItemPicture);
                         break;
                     case "FoodEggs":
-                        OnNavigatedToFoodDialog(_foodEggData, suggestBoxItemPicture);
+                        OnNavigatedToFoodDialog(Global.FoodEggData, suggestBoxItemPicture);
                         break;
                     case "FoodOthers":
-                        OnNavigatedToFoodDialog(_foodOtherData, suggestBoxItemPicture);
+                        OnNavigatedToFoodDialog(Global.FoodOtherData, suggestBoxItemPicture);
                         break;
                     case "FoodNoFc":
-                        OnNavigatedToFoodDialog(_foodNoFcData, suggestBoxItemPicture);
+                        OnNavigatedToFoodDialog(Global.FoodNoFcData, suggestBoxItemPicture);
                         break;
                 }
             }
@@ -82,7 +74,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToFoodRecipeDialog(string suggestBoxItemPicture)
         {
-            foreach (var itemsControlItem in _foodRecipeData)
+            foreach (var itemsControlItem in Global.FoodRecipeData)
             {
                 var food = itemsControlItem;
                 if (food == null || food.Picture != suggestBoxItemPicture) continue;
@@ -91,7 +83,7 @@ namespace 饥荒百科全书CSharp.View
             }
         }
 
-        private void OnNavigatedToFoodDialog(ObservableCollection<Food> foodCollection, string suggestBoxItemPicture)
+        private void OnNavigatedToFoodDialog(List<Food> foodCollection, string suggestBoxItemPicture)
         {
             foreach (var itemsControlItem in foodCollection)
             {
@@ -111,77 +103,13 @@ namespace 饥荒百科全书CSharp.View
 
         public void Deserialize()
         {
-            _foodRecipeData.Clear();
-            _foodMeatData.Clear();
-            _foodVegetableData.Clear();
-            _foodFruitData.Clear();
-            _foodEggData.Clear();
-            _foodOtherData.Clear();
-            _foodNoFcData.Clear();
-            var food = JsonConvert.DeserializeObject<FoodRootObject>(StringProcess.GetJsonString("Foods.json"));
-            foreach (var foodRecipeItems in food.FoodRecipe.FoodRecipes)
-            {
-                _foodRecipeData.Add(foodRecipeItems);
-            }
-            foreach (var foodRecipeItems in _foodRecipeData)
-            {
-                foodRecipeItems.Picture = StringProcess.GetGameResourcePath(foodRecipeItems.Picture);
-            }
-            foreach (var foodMeatsItems in food.FoodMeats.Foods)
-            {
-                _foodMeatData.Add(foodMeatsItems);
-            }
-            foreach (var foodMeatsItems in _foodMeatData)
-            {
-                foodMeatsItems.Picture = StringProcess.GetGameResourcePath(foodMeatsItems.Picture);
-            }
-            foreach (var foodVegetablesItems in food.FoodVegetables.Foods)
-            {
-                _foodVegetableData.Add(foodVegetablesItems);
-            }
-            foreach (var foodVegetablesItems in _foodVegetableData)
-            {
-                foodVegetablesItems.Picture = StringProcess.GetGameResourcePath(foodVegetablesItems.Picture);
-            }
-            foreach (var foodFruitItems in food.FoodFruit.Foods)
-            {
-                _foodFruitData.Add(foodFruitItems);
-            }
-            foreach (var foodFruitItems in _foodFruitData)
-            {
-                foodFruitItems.Picture = StringProcess.GetGameResourcePath(foodFruitItems.Picture);
-            }
-            foreach (var foodEggsItems in food.FoodEggs.Foods)
-            {
-                _foodEggData.Add(foodEggsItems);
-            }
-            foreach (var foodEggsItems in _foodEggData)
-            {
-                foodEggsItems.Picture = StringProcess.GetGameResourcePath(foodEggsItems.Picture);
-            }
-            foreach (var foodOthersItems in food.FoodOthers.Foods)
-            {
-                _foodOtherData.Add(foodOthersItems);
-            }
-            foreach (var foodOthersItems in _foodOtherData)
-            {
-                foodOthersItems.Picture = StringProcess.GetGameResourcePath(foodOthersItems.Picture);
-            }
-            foreach (var foodNoFcItems in food.FoodNoFc.Foods)
-            {
-                _foodNoFcData.Add(foodNoFcItems);
-            }
-            foreach (var foodNoFcItems in _foodNoFcData)
-            {
-                foodNoFcItems.Picture = StringProcess.GetGameResourcePath(foodNoFcItems.Picture);
-            }
-            RecipesExpander.DataContext = _foodRecipeData;
-            MeatsExpander.DataContext = _foodMeatData;
-            VegetablesExpander.DataContext = _foodVegetableData;
-            FruitsExpander.DataContext = _foodFruitData;
-            EggsExpander.DataContext = _foodEggData;
-            OtherExpander.DataContext = _foodOtherData;
-            NoFcExpander.DataContext = _foodNoFcData;
+                RecipesExpander.DataContext = Global.FoodRecipeData;
+                MeatsExpander.DataContext = Global.FoodMeatData;
+                VegetablesExpander.DataContext = Global.FoodVegetableData;
+                FruitsExpander.DataContext = Global.FoodFruitData;
+                EggsExpander.DataContext = Global.FoodEggData;
+                OtherExpander.DataContext = Global.FoodOtherData;
+                NoFcExpander.DataContext = Global.FoodNoFcData;
         }
 
         private void FoodRecipeButton_Click(object sender, RoutedEventArgs e)

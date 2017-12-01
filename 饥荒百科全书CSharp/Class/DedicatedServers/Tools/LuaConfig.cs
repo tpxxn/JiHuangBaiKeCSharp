@@ -21,15 +21,14 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <param name="encoding"></param>
         /// <param name="isReturn"></param>
         /// <returns></returns>
-        public LuaTable ReadLua(string path, Encoding encoding,bool isReturn) {
+        public LuaTable ReadLua(string path, Encoding encoding, bool isReturn)
+        {
 
             //lua读取
             using (var lua = new Lua())
             {
-               
                 // 创建环境
                 var g = lua.CreateEnvironment();
-   
                 // 读取文件
                 var reader = new StreamReader(path, encoding);
                 var luaResult = new LuaResult();
@@ -41,7 +40,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 {
                     // ignored
                 }
-
                 reader.Close();
                 // 如果有返回值
                 if (isReturn)
@@ -49,10 +47,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                     var luaTable = (LuaTable)luaResult[0];
                     return luaTable;
                 }
-                else {
-                    LuaTable lt = g;
-                    return lt;
-                }
+                LuaTable lt = g;
+                return lt;
             }
         }
     }

@@ -25,21 +25,6 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class GoodPage : Page
     {
-
-        private readonly ObservableCollection<GoodMaterial> _goodMaterialData = new ObservableCollection<GoodMaterial>();
-        private readonly ObservableCollection<GoodEquipment> _goodEquipmentData = new ObservableCollection<GoodEquipment>();
-        private readonly ObservableCollection<GoodSapling> _goodSaplingData = new ObservableCollection<GoodSapling>();
-        private readonly ObservableCollection<GoodCreatures> _goodCreaturesData = new ObservableCollection<GoodCreatures>();
-        private readonly ObservableCollection<Good> _goodTrinketsData = new ObservableCollection<Good>();
-        private readonly ObservableCollection<GoodTurf> _goodTurfData = new ObservableCollection<GoodTurf>();
-        private readonly ObservableCollection<GoodPet> _goodPetData = new ObservableCollection<GoodPet>();
-        private readonly ObservableCollection<GoodUnlock> _goodUnlockData = new ObservableCollection<GoodUnlock>();
-        private readonly ObservableCollection<Good> _goodHallowedNightsData = new ObservableCollection<Good>();
-        private readonly ObservableCollection<Good> _goodWintersFeastData = new ObservableCollection<Good>();
-        private readonly ObservableCollection<Good> _goodYearOfTheGobblerData = new ObservableCollection<Good>();
-        private readonly ObservableCollection<Good> _goodComponentData = new ObservableCollection<Good>();
-        private readonly ObservableCollection<Good> _goodOthersData = new ObservableCollection<Good>();
-
         private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
@@ -54,7 +39,7 @@ namespace 饥荒百科全书CSharp.View
             Deserialize();
             if (extraData == null)
             {
-                LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), _goodMaterialData[0]);
+                LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), Global.GoodMaterialData[0]);
             }
             else
             {
@@ -75,7 +60,7 @@ namespace 饥荒百科全书CSharp.View
                         OnNavigatedToGoodCreaturesDialog(suggestBoxItemPicture);
                         break;
                     case "GoodTrinkets":
-                        OnNavigatedToGoodDialog(_goodTrinketsData, suggestBoxItemPicture);
+                        OnNavigatedToGoodDialog(Global.GoodTrinketsData, suggestBoxItemPicture);
                         break;
                     case "GoodTurf":
                         OnNavigatedToGoodTurfDialog(suggestBoxItemPicture);
@@ -87,19 +72,19 @@ namespace 饥荒百科全书CSharp.View
                         OnNavigatedToGoodUnlockDialog(suggestBoxItemPicture);
                         break;
                     case "GoodHallowedNights":
-                        OnNavigatedToGoodDialog(_goodHallowedNightsData, suggestBoxItemPicture);
+                        OnNavigatedToGoodDialog(Global.GoodHallowedNightsData, suggestBoxItemPicture);
                         break;
                     case "GoodWintersFeast":
-                        OnNavigatedToGoodDialog(_goodWintersFeastData, suggestBoxItemPicture);
+                        OnNavigatedToGoodDialog(Global.GoodWintersFeastData, suggestBoxItemPicture);
                         break;
                     case "GoodYearOfTheGobbler":
-                        OnNavigatedToGoodDialog(_goodYearOfTheGobblerData, suggestBoxItemPicture);
+                        OnNavigatedToGoodDialog(Global.GoodYearOfTheGobblerData, suggestBoxItemPicture);
                         break;
                     case "GoodComponent":
-                        OnNavigatedToGoodDialog(_goodComponentData, suggestBoxItemPicture);
+                        OnNavigatedToGoodDialog(Global.GoodComponentData, suggestBoxItemPicture);
                         break;
                     case "GoodOthers":
-                        OnNavigatedToGoodDialog(_goodOthersData, suggestBoxItemPicture);
+                        OnNavigatedToGoodDialog(Global.GoodOthersData, suggestBoxItemPicture);
                         break;
                 }
             }
@@ -107,7 +92,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToGoodMaterialDialog(string suggestBoxItemPicture)
         {
-            foreach (var gridViewItem in _goodMaterialData)
+            foreach (var gridViewItem in Global.GoodMaterialData)
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
@@ -118,7 +103,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToGoodEquipmentDialog(string suggestBoxItemPicture)
         {
-            foreach (var gridViewItem in _goodEquipmentData)
+            foreach (var gridViewItem in Global.GoodEquipmentData)
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
@@ -129,7 +114,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToGoodSaplingDialog(string suggestBoxItemPicture)
         {
-            foreach (var gridViewItem in _goodSaplingData)
+            foreach (var gridViewItem in Global.GoodSaplingData)
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
@@ -140,7 +125,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToGoodCreaturesDialog(string suggestBoxItemPicture)
         {
-            foreach (var gridViewItem in _goodCreaturesData)
+            foreach (var gridViewItem in Global.GoodCreaturesData)
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
@@ -151,7 +136,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToGoodTurfDialog(string suggestBoxItemPicture)
         {
-            foreach (var gridViewItem in _goodTurfData)
+            foreach (var gridViewItem in Global.GoodTurfData)
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
@@ -162,7 +147,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToGoodPetDialog(string suggestBoxItemPicture)
         {
-            foreach (var gridViewItem in _goodPetData)
+            foreach (var gridViewItem in Global.GoodPetData)
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
@@ -173,7 +158,7 @@ namespace 饥荒百科全书CSharp.View
 
         private void OnNavigatedToGoodUnlockDialog(string suggestBoxItemPicture)
         {
-            foreach (var gridViewItem in _goodUnlockData)
+            foreach (var gridViewItem in Global.GoodUnlockData)
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
@@ -182,7 +167,7 @@ namespace 饥荒百科全书CSharp.View
             }
         }
 
-        private void OnNavigatedToGoodDialog(ObservableCollection<Good> goodCollection, string suggestBoxItemPicture)
+        private void OnNavigatedToGoodDialog(List<Good> goodCollection, string suggestBoxItemPicture)
         {
             foreach (var gridViewItem in goodCollection)
             {
@@ -214,137 +199,19 @@ namespace 饥荒百科全书CSharp.View
 
         public void Deserialize()
         {
-            _goodMaterialData.Clear();
-            _goodEquipmentData.Clear();
-            _goodSaplingData.Clear();
-            _goodCreaturesData.Clear();
-            _goodTrinketsData.Clear();
-            _goodTurfData.Clear();
-            _goodPetData.Clear();
-            _goodUnlockData.Clear();
-            _goodHallowedNightsData.Clear();
-            _goodWintersFeastData.Clear();
-            _goodYearOfTheGobblerData.Clear();
-            _goodComponentData.Clear();
-            _goodOthersData.Clear();
-            var good = JsonConvert.DeserializeObject<GoodsRootObject>(StringProcess.GetJsonString("Goods.json"));
-            foreach (var goodMaterialItems in good.Material.GoodMaterial)
-            {
-                _goodMaterialData.Add(goodMaterialItems);
-            }
-            foreach (var goodMaterialItems in _goodMaterialData)
-            {
-                goodMaterialItems.Picture = StringProcess.GetGameResourcePath(goodMaterialItems.Picture);
-            }
-            foreach (var goodEquipmentItems in good.Equipment.GoodEquipment)
-            {
-                _goodEquipmentData.Add(goodEquipmentItems);
-            }
-            foreach (var goodEquipmentItems in _goodEquipmentData)
-            {
-                goodEquipmentItems.Picture = StringProcess.GetGameResourcePath(goodEquipmentItems.Picture);
-            }
-            foreach (var goodSaplingItems in good.Sapling.GoodSapling)
-            {
-                _goodSaplingData.Add(goodSaplingItems);
-            }
-            foreach (var goodSaplingItems in _goodSaplingData)
-            {
-                goodSaplingItems.Picture = StringProcess.GetGameResourcePath(goodSaplingItems.Picture);
-            }
-            foreach (var goodCreaturesItems in good.Creatures.GoodCreatures)
-            {
-                _goodCreaturesData.Add(goodCreaturesItems);
-            }
-            foreach (var goodCreaturesItems in _goodCreaturesData)
-            {
-                goodCreaturesItems.Picture = StringProcess.GetGameResourcePath(goodCreaturesItems.Picture);
-            }
-            foreach (var goodTrinketsItems in good.Trinkets.GoodTrinkets)
-            {
-                _goodTrinketsData.Add(goodTrinketsItems);
-            }
-            foreach (var goodTrinketsItems in _goodTrinketsData)
-            {
-                goodTrinketsItems.Picture = StringProcess.GetGameResourcePath(goodTrinketsItems.Picture);
-            }
-            foreach (var goodTurfItems in good.Turf.GoodTurf)
-            {
-                _goodTurfData.Add(goodTurfItems);
-            }
-            foreach (var goodTurfItems in _goodTurfData)
-            {
-                goodTurfItems.Picture = StringProcess.GetGameResourcePath(goodTurfItems.Picture);
-            }
-            foreach (var goodPetItems in good.Pet.GoodPet)
-            {
-                _goodPetData.Add(goodPetItems);
-            }
-            foreach (var goodPetItems in _goodPetData)
-            {
-                goodPetItems.Picture = StringProcess.GetGameResourcePath(goodPetItems.Picture);
-            }
-            foreach (var goodUnlockItems in good.Unlock.GoodUnlock)
-            {
-                _goodUnlockData.Add(goodUnlockItems);
-            }
-            foreach (var goodUnlockItems in _goodUnlockData)
-            {
-                goodUnlockItems.Picture = StringProcess.GetGameResourcePath(goodUnlockItems.Picture);
-            }
-            foreach (var goodHallowedNightsItems in good.HallowedNights.Good)
-            {
-                _goodHallowedNightsData.Add(goodHallowedNightsItems);
-            }
-            foreach (var goodHallowedNightsItems in _goodHallowedNightsData)
-            {
-                goodHallowedNightsItems.Picture = StringProcess.GetGameResourcePath(goodHallowedNightsItems.Picture);
-            }
-            foreach (var goodWintersFeastItems in good.WintersFeast.Good)
-            {
-                _goodWintersFeastData.Add(goodWintersFeastItems);
-            }
-            foreach (var goodWintersFeastItems in _goodWintersFeastData)
-            {
-                goodWintersFeastItems.Picture = StringProcess.GetGameResourcePath(goodWintersFeastItems.Picture);
-            }
-            foreach (var goodYearOfTheGobblerItems in good.YearOfTheGobbler.Good)
-            {
-                _goodYearOfTheGobblerData.Add(goodYearOfTheGobblerItems);
-            }
-            foreach (var goodYearOfTheGobblerItems in _goodYearOfTheGobblerData)
-            {
-                goodYearOfTheGobblerItems.Picture = StringProcess.GetGameResourcePath(goodYearOfTheGobblerItems.Picture);
-            }
-            foreach (var goodComponentItems in good.Component.Good)
-            {
-                _goodComponentData.Add(goodComponentItems);
-            }
-            foreach (var goodComponentItems in _goodComponentData)
-            {
-                goodComponentItems.Picture = StringProcess.GetGameResourcePath(goodComponentItems.Picture);
-            }
-            foreach (var goodGoodOthersItems in good.GoodOthers.Good)
-            {
-                _goodOthersData.Add(goodGoodOthersItems);
-            }
-            foreach (var goodGoodOthersItems in _goodOthersData)
-            {
-                goodGoodOthersItems.Picture = StringProcess.GetGameResourcePath(goodGoodOthersItems.Picture);
-            }
-            MaterialExpander.DataContext = _goodMaterialData;
-            EquipmentExpander.DataContext = _goodEquipmentData;
-            SaplingExpander.DataContext = _goodSaplingData;
-            CreaturesExpander.DataContext = _goodCreaturesData;
-            TrinketsExpander.DataContext = _goodTrinketsData;
-            TurfExpander.DataContext = _goodTurfData;
-            PetExpander.DataContext = _goodPetData;
-            UnlockExpander.DataContext = _goodUnlockData;
-            HallowedNightsExpander.DataContext = _goodHallowedNightsData;
-            WintersFeastExpander.DataContext = _goodWintersFeastData;
-            YearOfTheGobblerExpander.DataContext = _goodYearOfTheGobblerData;
-            ComponentExpander.DataContext = _goodComponentData;
-            GoodOthersExpander.DataContext = _goodOthersData;
+            MaterialExpander.DataContext = Global.GoodMaterialData;
+            EquipmentExpander.DataContext = Global.GoodEquipmentData;
+            SaplingExpander.DataContext = Global.GoodSaplingData;
+            CreaturesExpander.DataContext = Global.GoodCreaturesData;
+            TrinketsExpander.DataContext = Global.GoodTrinketsData;
+            TurfExpander.DataContext = Global.GoodTurfData;
+            PetExpander.DataContext = Global.GoodPetData;
+            UnlockExpander.DataContext = Global.GoodUnlockData;
+            HallowedNightsExpander.DataContext = Global.GoodHallowedNightsData;
+            WintersFeastExpander.DataContext = Global.GoodWintersFeastData;
+            YearOfTheGobblerExpander.DataContext = Global.GoodYearOfTheGobblerData;
+            ComponentExpander.DataContext = Global.GoodComponentData;
+            GoodOthersExpander.DataContext = Global.GoodOthersData;
         }
 
 

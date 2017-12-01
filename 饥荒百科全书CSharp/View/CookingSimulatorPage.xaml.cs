@@ -24,13 +24,6 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class CookingSimulatorPage : Page
     {
-        private readonly ObservableCollection<FoodRecipe2> _foodRecipeData = new ObservableCollection<FoodRecipe2>();
-        private readonly ObservableCollection<Food> _foodMeatData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodVegetableData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodFruitData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodEggData = new ObservableCollection<Food>();
-        private readonly ObservableCollection<Food> _foodOtherData = new ObservableCollection<Food>();
-
         private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
@@ -74,57 +67,11 @@ namespace 饥荒百科全书CSharp.View
 
         public void Deserialize()
         {
-            var food = JsonConvert.DeserializeObject<FoodRootObject>(StringProcess.GetJsonString("Foods.json"));
-            foreach (var foodRecipeItems in food.FoodRecipe.FoodRecipes)
-            {
-                _foodRecipeData.Add(foodRecipeItems);
-            }
-
-            foreach (var foodMeatsItems in food.FoodMeats.Foods)
-            {
-                _foodMeatData.Add(foodMeatsItems);
-            }
-            foreach (var foodMeatsItems in _foodMeatData)
-            {
-                foodMeatsItems.Picture = StringProcess.GetGameResourcePath(foodMeatsItems.Picture);
-            }
-            foreach (var foodVegetablesItems in food.FoodVegetables.Foods)
-            {
-                _foodVegetableData.Add(foodVegetablesItems);
-            }
-            foreach (var foodVegetablesItems in _foodVegetableData)
-            {
-                foodVegetablesItems.Picture = StringProcess.GetGameResourcePath(foodVegetablesItems.Picture);
-            }
-            foreach (var foodFruitItems in food.FoodFruit.Foods)
-            {
-                _foodFruitData.Add(foodFruitItems);
-            }
-            foreach (var foodFruitItems in _foodFruitData)
-            {
-                foodFruitItems.Picture = StringProcess.GetGameResourcePath(foodFruitItems.Picture);
-            }
-            foreach (var foodEggsItems in food.FoodEggs.Foods)
-            {
-                _foodEggData.Add(foodEggsItems);
-            }
-            foreach (var foodEggsItems in _foodEggData)
-            {
-                foodEggsItems.Picture = StringProcess.GetGameResourcePath(foodEggsItems.Picture);
-            }
-            foreach (var foodOthersItems in food.FoodOthers.Foods)
-            {
-                _foodOtherData.Add(foodOthersItems);
-            }
-            foreach (var foodOthersItems in _foodOtherData)
-            {
-                foodOthersItems.Picture = StringProcess.GetGameResourcePath(foodOthersItems.Picture);
-            }
-            MeatsExpander.DataContext = _foodMeatData;
-            VegetablesExpander.DataContext = _foodVegetableData;
-            FruitsExpander.DataContext = _foodFruitData;
-            EggsExpander.DataContext = _foodEggData;
-            OtherExpander.DataContext = _foodOtherData;
+            MeatsExpander.DataContext = Global.FoodMeatData;
+            VegetablesExpander.DataContext = Global.FoodVegetableData;
+            FruitsExpander.DataContext = Global.FoodFruitData;
+            EggsExpander.DataContext = Global.FoodEggData;
+            OtherExpander.DataContext = Global.FoodOtherData;
         }
 
         private void FoodButton_Click(object sender, RoutedEventArgs e)
@@ -142,9 +89,9 @@ namespace 饥荒百科全书CSharp.View
             DeleteFood(null, null);
             FoodResultImage.Source = null;
             FoodResultTextBlock.Text = "";
-            CrockPotList.Clear();
-            CrockPotListIndex = -1;
-            CrockPotMaxPriority = -128;
+            _crockPotList.Clear();
+            _crockPotListIndex = -1;
+            _crockPotMaxPriority = -128;
             FoodHealth.Value = 0;
             FoodHunger.Value = 0;
             FoodSanity.Value = 0;
@@ -155,72 +102,72 @@ namespace 饥荒百科全书CSharp.View
         /// <summary>
         /// 四个位置
         /// </summary>
-        public string CsRecipe1 = "";
-        public string CsRecipe2 = "";
-        public string CsRecipe3 = "";
-        public string CsRecipe4 = "";
+        private string _csRecipe1 = "";
+        private string _csRecipe2 = "";
+        private string _csRecipe3 = "";
+        private string _csRecipe4 = "";
         /// <summary>
         /// 43种食材
         /// </summary>
-        public double CsFtEggs = 0;
-        public double CsFtVegetables = 0;
-        public double CsFtFruit = 0;
-        public double CsFtBanana = 0;
-        public double CsFtBerries = 0;
-        public double CsFtButter = 0;
-        public double CsFtButterflyWings = 0;
-        public double CsFtCactusFlesh = 0;
-        public double CsFtCactusFlower = 0;
-        public double CsFtCorn = 0;
-        public double CsFtDairyProduct = 0;
-        public double CsFtDragonFruit = 0;
-        public double CsFtDrumstick = 0;
-        public double CsFtEel = 0;
-        public double CsFtEggplant = 0;
-        public double CsFtFishes = 0;
-        public double CsFtFrogLegs = 0;
-        public double CsFtHoney = 0;
-        public double CsFtIce = 0;
-        public double CsFtJellyfish = 0;
-        public double CsFtLichen = 0;
-        public double CsFtLimpets = 0;
-        public double CsFtMandrake = 0;
-        public double CsFtMeats = 0;
-        public double CsFtMoleworm = 0;
-        public double CsFtMonsterFoods = 0;
-        public double CsFtMussel = 0;
-        public double CsFtPumpkin = 0;
-        public double CsFtRoastedBirchnut = 0;
-        public double CsFtRoastedCoffeeBeans = 0;
-        public double CsFtSeaweed = 0;
-        public double CsFtSharkFin = 0;
-        public double CsFtSweetener = 0;
-        public double CsFtSweetPotato = 0;
-        public double CsFtTwigs = 0;
-        public double CsFtWatermelon = 0;
-        public double CsFtWobster = 0;
-        public double CsFtRoyalJelly = 0;
-        public double CsFtRoe = 0;
-        public double CsFtRoeCooked = 0;
-        public double CsFtNeonQuattro = 0;
-        public double CsFtPierrotFish = 0;
-        public double CsFtPurpleGrouper = 0;
+        private double _csFtEggs;
+        private double _csFtVegetables;
+        private double _csFtFruit;
+        private double _csFtBanana;
+        private double _csFtBerries;
+        private double _csFtButter;
+        private double _csFtButterflyWings;
+        private double _csFtCactusFlesh;
+        private double _csFtCactusFlower;
+        private double _csFtCorn;
+        private double _csFtDairyProduct;
+        private double _csFtDragonFruit;
+        private double _csFtDrumstick;
+        private double _csFtEel;
+        private double _csFtEggplant;
+        private double _csFtFishes;
+        private double _csFtFrogLegs;
+        private double _csFtHoney;
+        private double _csFtIce;
+        private double _csFtJellyfish;
+        private double _csFtLichen;
+        private double _csFtLimpets;
+        private double _csFtMandrake;
+        private double _csFtMeats;
+        private double _csFtMoleworm;
+        private double _csFtMonsterFoods;
+        private double _csFtMussel;
+        private double _csFtPumpkin;
+        private double _csFtRoastedBirchnut;
+        private double _csFtRoastedCoffeeBeans;
+        private double _csFtSeaweed;
+        private double _csFtSharkFin;
+        private double _csFtSweetener;
+        private double _csFtSweetPotato;
+        private double _csFtTwigs;
+        private double _csFtWatermelon;
+        private double _csFtWobster;
+        private double _csFtRoyalJelly;
+        private double _csFtRoe;
+        private double _csFtRoeCooked;
+        private double _csFtNeonQuattro;
+        private double _csFtPierrotFish;
+        private double _csFtPurpleGrouper;
 
-        public byte FoodIndex = 0;
-        public string CsFoodName = "";
+        private byte _foodIndex;
+        private string _csFoodName = "";
 
         /// <summary>
         /// 食物列表
         /// </summary>
-        public List<string> CrockPotList = new List<string>();
+        private readonly List<string> _crockPotList = new List<string>();
         /// <summary>
         /// 食物列表下标
         /// </summary>
-        public sbyte CrockPotListIndex = -1;
+        private sbyte _crockPotListIndex = -1;
         /// <summary>
         /// 优先度最大值
         /// </summary>
-        public sbyte CrockPotMaxPriority = -128;
+        private sbyte _crockPotMaxPriority = -128;
         #endregion
 
         /// <summary>
@@ -229,37 +176,37 @@ namespace 饥荒百科全书CSharp.View
         /// <param name="foodName">食材名称</param>
         private void AddFood(string foodName)
         {
-            if (string.IsNullOrEmpty(CsRecipe1) && string.IsNullOrEmpty(CsRecipe2) && string.IsNullOrEmpty(CsRecipe3) && string.IsNullOrEmpty(CsRecipe4))
+            if (string.IsNullOrEmpty(_csRecipe1) && string.IsNullOrEmpty(_csRecipe2) && string.IsNullOrEmpty(_csRecipe3) && string.IsNullOrEmpty(_csRecipe4))
             {
                 FoodHealth.Value = 0;
                 FoodHunger.Value = 0;
                 FoodSanity.Value = 0;
             }
-            if (string.IsNullOrEmpty(CsRecipe1) || string.IsNullOrEmpty(CsRecipe2) || string.IsNullOrEmpty(CsRecipe3) || string.IsNullOrEmpty(CsRecipe4))
+            if (string.IsNullOrEmpty(_csRecipe1) || string.IsNullOrEmpty(_csRecipe2) || string.IsNullOrEmpty(_csRecipe3) || string.IsNullOrEmpty(_csRecipe4))
             {
                 CS_Food_Property(foodName);
             }
-            if (string.IsNullOrEmpty(CsRecipe1))
+            if (string.IsNullOrEmpty(_csRecipe1))
             {
-                CsRecipe1 = StringProcess.GetFileName(foodName);
+                _csRecipe1 = StringProcess.GetFileName(foodName);
                 Food1Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
             }
-            else if (string.IsNullOrEmpty(CsRecipe2))
+            else if (string.IsNullOrEmpty(_csRecipe2))
             {
-                CsRecipe2 = StringProcess.GetFileName(foodName);
+                _csRecipe2 = StringProcess.GetFileName(foodName);
                 Food2Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
             }
-            else if (string.IsNullOrEmpty(CsRecipe3))
+            else if (string.IsNullOrEmpty(_csRecipe3))
             {
-                CsRecipe3 = StringProcess.GetFileName(foodName);
+                _csRecipe3 = StringProcess.GetFileName(foodName);
                 Food3Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
             }
-            else if (string.IsNullOrEmpty(CsRecipe4))
+            else if (string.IsNullOrEmpty(_csRecipe4))
             {
-                CsRecipe4 = StringProcess.GetFileName(foodName);
+                _csRecipe4 = StringProcess.GetFileName(foodName);
                 Food4Image.Source = new BitmapImage(new Uri(foodName, UriKind.Relative));
             }
-            if (CsRecipe1 != "" && CsRecipe2 != "" && CsRecipe3 != "" && CsRecipe4 != "")
+            if (_csRecipe1 != "" && _csRecipe2 != "" && _csRecipe3 != "" && _csRecipe4 != "")
             {
                 CS_CrockPotCalculation();
             }
@@ -272,17 +219,17 @@ namespace 饥荒百科全书CSharp.View
         {
             if (sender == null)
             {
-                CS_Food_Property(CsRecipe1, false);
-                CsRecipe1 = "";
+                CS_Food_Property(_csRecipe1, false);
+                _csRecipe1 = "";
                 Food1Image.Source = null;
-                CS_Food_Property(CsRecipe2, false);
-                CsRecipe2 = "";
+                CS_Food_Property(_csRecipe2, false);
+                _csRecipe2 = "";
                 Food2Image.Source = null;
-                CS_Food_Property(CsRecipe3, false);
-                CsRecipe3 = "";
+                CS_Food_Property(_csRecipe3, false);
+                _csRecipe3 = "";
                 Food3Image.Source = null;
-                CS_Food_Property(CsRecipe4, false);
-                CsRecipe4 = "";
+                CS_Food_Property(_csRecipe4, false);
+                _csRecipe4 = "";
                 Food4Image.Source = null;
             }
             else
@@ -292,23 +239,23 @@ namespace 饥荒百科全书CSharp.View
                 switch (foodButtonName)
                 {
                     case "Food1Button":
-                        CS_Food_Property(CsRecipe1, false);
-                        CsRecipe1 = "";
+                        CS_Food_Property(_csRecipe1, false);
+                        _csRecipe1 = "";
                         Food1Image.Source = null;
                         break;
                     case "Food2Button":
-                        CS_Food_Property(CsRecipe2, false);
-                        CsRecipe2 = "";
+                        CS_Food_Property(_csRecipe2, false);
+                        _csRecipe2 = "";
                         Food2Image.Source = null;
                         break;
                     case "Food3Button":
-                        CS_Food_Property(CsRecipe3, false);
-                        CsRecipe3 = "";
+                        CS_Food_Property(_csRecipe3, false);
+                        _csRecipe3 = "";
                         Food3Image.Source = null;
                         break;
                     case "Food4Button":
-                        CS_Food_Property(CsRecipe4, false);
-                        CsRecipe4 = "";
+                        CS_Food_Property(_csRecipe4, false);
+                        _csRecipe4 = "";
                         Food4Image.Source = null;
                         break;
                 }
@@ -324,7 +271,7 @@ namespace 饥荒百科全书CSharp.View
         {
             if (string.IsNullOrEmpty(source)) return;
             source = StringProcess.GetGameResourcePath(source);
-            foreach (var foodMeat in _foodMeatData.Where(temp => temp.Picture == source))
+            foreach (var foodMeat in Global.FoodMeatData.Where(temp => temp.Picture == source))
             {
                 if (plus)
                 {
@@ -339,7 +286,7 @@ namespace 饥荒百科全书CSharp.View
                     FoodSanity.Value -= foodMeat.Sanity;
                 }
             }
-            foreach (var foodVegetable in _foodVegetableData.Where(temp => temp.Picture == source))
+            foreach (var foodVegetable in Global.FoodVegetableData.Where(temp => temp.Picture == source))
             {
                 if (plus)
                 {
@@ -354,7 +301,7 @@ namespace 饥荒百科全书CSharp.View
                     FoodSanity.Value -= foodVegetable.Sanity;
                 }
             }
-            foreach (var foodFruit in _foodFruitData.Where(temp => temp.Picture == source))
+            foreach (var foodFruit in Global.FoodFruitData.Where(temp => temp.Picture == source))
             {
                 if (plus)
                 {
@@ -369,7 +316,7 @@ namespace 饥荒百科全书CSharp.View
                     FoodSanity.Value -= foodFruit.Sanity;
                 }
             }
-            foreach (var foodEgg in _foodEggData.Where(temp => temp.Picture == source))
+            foreach (var foodEgg in Global.FoodEggData.Where(temp => temp.Picture == source))
             {
                 if (plus)
                 {
@@ -384,7 +331,7 @@ namespace 饥荒百科全书CSharp.View
                     FoodSanity.Value -= foodEgg.Sanity;
                 }
             }
-            foreach (var foodOther in _foodOtherData.Where(temp => temp.Picture == source))
+            foreach (var foodOther in Global.FoodOtherData.Where(temp => temp.Picture == source))
             {
                 if (plus)
                 {
@@ -411,373 +358,373 @@ namespace 饥荒百科全书CSharp.View
             {
                 #region 肉类
                 case "F_meat":
-                    CsFtMeats += 1;
+                    _csFtMeats += 1;
                     break;
                 case "F_cooked_meat":
-                    CsFtMeats += 1;
+                    _csFtMeats += 1;
                     break;
                 case "F_jerky":
-                    CsFtMeats += 1;
+                    _csFtMeats += 1;
                     break;
                 case "F_monster_meat":
-                    CsFtMeats += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtMeats += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_cooked_monster_meat":
-                    CsFtMeats += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtMeats += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_monster_jerky":
-                    CsFtMeats += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtMeats += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_morsel":
-                    CsFtMeats += 0.5;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_cooked_morsel":
-                    CsFtMeats += 0.5;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_small_jerky":
-                    CsFtMeats += 0.5;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_drumstick":
-                    CsFtMeats += 0.5;
-                    CsFtDrumstick += 1;
+                    _csFtMeats += 0.5;
+                    _csFtDrumstick += 1;
                     break;
                 case "F_fried_drumstick":
-                    CsFtMeats += 0.5;
-                    CsFtDrumstick += 1;
+                    _csFtMeats += 0.5;
+                    _csFtDrumstick += 1;
                     break;
                 case "F_frog_legs":
-                    CsFtMeats += 0.5;
-                    CsFtFrogLegs += 1;
+                    _csFtMeats += 0.5;
+                    _csFtFrogLegs += 1;
                     break;
                 case "F_cooked_frog_legs":
-                    CsFtMeats += 0.5;
-                    CsFtFrogLegs += 1;
+                    _csFtMeats += 0.5;
+                    _csFtFrogLegs += 1;
                     break;
                 case "F_fish":
-                    CsFtFishes += 1;
-                    CsFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_cooked_fish":
-                    CsFtFishes += 1;
-                    CsFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_eel":
-                    CsFtFishes += 1;
-                    CsFtEel += 1;
-                    CsFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtEel += 1;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_cooked_eel":
-                    CsFtFishes += 1;
-                    CsFtEel += 1;
-                    CsFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtEel += 1;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_limpets":
-                    CsFtFishes += 0.5;
-                    CsFtLimpets += 1;
+                    _csFtFishes += 0.5;
+                    _csFtLimpets += 1;
                     break;
                 case "F_cooked_limpets":
-                    CsFtFishes += 0.5;
+                    _csFtFishes += 0.5;
                     break;
                 case "F_roe":
-                    CsFtMeats += 0.5;
-                    CsFtFishes += 1;
-                    CsFtRoe += 1;
+                    _csFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtRoe += 1;
                     break;
                 case "F_cooked_roe":
-                    CsFtMeats += 0.5;
-                    CsFtFishes += 1;
-                    CsFtRoeCooked += 1;
+                    _csFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtRoeCooked += 1;
                     break;
                 case "F_tropical_fish":
-                    CsFtMeats += 0.5;
-                    CsFtFishes += 1;
+                    _csFtMeats += 0.5;
+                    _csFtFishes += 1;
                     break;
                 case "F_neon_quattro":
-                    CsFtFishes += 1;
-                    CsFtNeonQuattro += 1;
+                    _csFtFishes += 1;
+                    _csFtNeonQuattro += 1;
                     break;
                 case "F_cooked_neon_quattro":
-                    CsFtFishes += 1;
-                    CsFtNeonQuattro += 1;
+                    _csFtFishes += 1;
+                    _csFtNeonQuattro += 1;
                     break;
                 case "F_pierrot_fish":
-                    CsFtFishes += 1;
-                    CsFtPierrotFish += 1;
+                    _csFtFishes += 1;
+                    _csFtPierrotFish += 1;
                     break;
                 case "F_cooked_pierrot_fish":
-                    CsFtFishes += 1;
-                    CsFtPierrotFish += 1;
+                    _csFtFishes += 1;
+                    _csFtPierrotFish += 1;
                     break;
                 case "F_purple_grouper":
-                    CsFtFishes += 1;
-                    CsFtPurpleGrouper += 1;
+                    _csFtFishes += 1;
+                    _csFtPurpleGrouper += 1;
                     break;
                 case "F_cooked_purple_grouper":
-                    CsFtFishes += 1;
-                    CsFtPurpleGrouper += 1;
+                    _csFtFishes += 1;
+                    _csFtPurpleGrouper += 1;
                     break;
                 case "F_fish_morsel":
-                    CsFtFishes += 0.5;
+                    _csFtFishes += 0.5;
                     break;
                 case "F_cooked_fish_morsel":
-                    CsFtFishes += 0.5;
+                    _csFtFishes += 0.5;
                     break;
                 case "F_jellyfish":
-                    CsFtFishes += 1;
-                    CsFtMonsterFoods += 1;
-                    CsFtJellyfish += 1;
+                    _csFtFishes += 1;
+                    _csFtMonsterFoods += 1;
+                    _csFtJellyfish += 1;
                     break;
                 case "F_dead_jellyfish":
-                    CsFtFishes += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtFishes += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_cooked_jellyfish":
-                    CsFtFishes += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtFishes += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_dried_jellyfish":
-                    CsFtFishes += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtFishes += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_mussel":
-                    CsFtFishes += 0.5;
-                    CsFtMussel += 1;
+                    _csFtFishes += 0.5;
+                    _csFtMussel += 1;
                     break;
                 case "F_cooked_mussel":
-                    CsFtFishes += 0.5;
-                    CsFtMussel += 1;
+                    _csFtFishes += 0.5;
+                    _csFtMussel += 1;
                     break;
                 case "F_dead_dogfish":
-                    CsFtFishes += 1;
-                    CsFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_wobster":
-                    CsFtFishes += 2;
-                    CsFtWobster += 1;
+                    _csFtFishes += 2;
+                    _csFtWobster += 1;
                     break;
                 case "F_raw_fish":
-                    CsFtFishes += 1;
-                    CsFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_fish_steak":
-                    CsFtFishes += 1;
-                    CsFtMeats += 0.5;
+                    _csFtFishes += 1;
+                    _csFtMeats += 0.5;
                     break;
                 case "F_shark_fin":
-                    CsFtFishes += 1;
-                    CsFtMeats += 0.5;
-                    CsFtSharkFin += 1;
+                    _csFtFishes += 1;
+                    _csFtMeats += 0.5;
+                    _csFtSharkFin += 1;
                     break;
                 #endregion
                 #region 蔬菜
                 case "F_blue_cap":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 case "F_cooked_blue_cap":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 case "F_green_cap":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 case "F_cooked_green_cap":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 case "F_red_cap":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 case "F_cooked_red_cap":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 case "F_eggplant":
-                    CsFtVegetables += 1;
-                    CsFtEggplant += 1;
+                    _csFtVegetables += 1;
+                    _csFtEggplant += 1;
                     break;
                 case "F_braised_eggplant":
-                    CsFtVegetables += 1;
-                    CsFtEggplant += 1;
+                    _csFtVegetables += 1;
+                    _csFtEggplant += 1;
                     break;
                 case "F_carrot":
-                    CsFtVegetables += 1;
+                    _csFtVegetables += 1;
                     break;
                 case "F_roasted_carrot":
-                    CsFtVegetables += 1;
+                    _csFtVegetables += 1;
                     break;
                 case "F_corn":
-                    CsFtVegetables += 1;
-                    CsFtCorn += 1;
+                    _csFtVegetables += 1;
+                    _csFtCorn += 1;
                     break;
                 case "F_popcorn":
-                    CsFtVegetables += 1;
-                    CsFtCorn += 1;
+                    _csFtVegetables += 1;
+                    _csFtCorn += 1;
                     break;
                 case "F_pumpkin":
-                    CsFtVegetables += 1;
-                    CsFtPumpkin += 1;
+                    _csFtVegetables += 1;
+                    _csFtPumpkin += 1;
                     break;
                 case "F_hot_pumpkin":
-                    CsFtVegetables += 1;
-                    CsFtPumpkin += 1;
+                    _csFtVegetables += 1;
+                    _csFtPumpkin += 1;
                     break;
                 case "F_cactus_flesh":
-                    CsFtVegetables += 1;
-                    CsFtCactusFlesh += 1;
+                    _csFtVegetables += 1;
+                    _csFtCactusFlesh += 1;
                     break;
                 case "F_cooked_cactus_flesh":
-                    CsFtVegetables += 1;
+                    _csFtVegetables += 1;
                     break;
                 case "F_cactus_flower":
-                    CsFtVegetables += 0.5;
-                    CsFtCactusFlower += 1;
+                    _csFtVegetables += 0.5;
+                    _csFtCactusFlower += 1;
                     break;
                 case "F_sweet_potato":
-                    CsFtVegetables += 1;
-                    CsFtSweetPotato += 1;
+                    _csFtVegetables += 1;
+                    _csFtSweetPotato += 1;
                     break;
                 case "F_cooked_sweet_potato":
-                    CsFtVegetables += 1;
+                    _csFtVegetables += 1;
                     break;
                 case "F_seaweed":
-                    CsFtVegetables += 0.5;
-                    CsFtSeaweed += 1;
+                    _csFtVegetables += 0.5;
+                    _csFtSeaweed += 1;
                     break;
                 case "F_roasted_seaweed":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 case "F_dried_seaweed":
-                    CsFtVegetables += 0.5;
+                    _csFtVegetables += 0.5;
                     break;
                 #endregion
                 #region 水果
                 case "F_juicy_berries":
-                    CsFtFruit += 0.5;
+                    _csFtFruit += 0.5;
                     break;
                 case "F_roasted_juicy_berries":
-                    CsFtFruit += 0.5;
+                    _csFtFruit += 0.5;
                     break;
                 case "F_berries":
-                    CsFtFruit += 0.5;
-                    CsFtBerries += 1;
+                    _csFtFruit += 0.5;
+                    _csFtBerries += 1;
                     break;
                 case "F_roasted_berrie":
-                    CsFtFruit += 0.5;
-                    CsFtBerries += 1;
+                    _csFtFruit += 0.5;
+                    _csFtBerries += 1;
                     break;
                 case "F_banana":
-                    CsFtFruit += 1;
-                    CsFtBanana += 1;
+                    _csFtFruit += 1;
+                    _csFtBanana += 1;
                     break;
                 case "F_cooked_banana":
-                    CsFtFruit += 1;
+                    _csFtFruit += 1;
                     break;
                 case "F_dragon_fruit":
-                    CsFtFruit += 1;
-                    CsFtDragonFruit += 1;
+                    _csFtFruit += 1;
+                    _csFtDragonFruit += 1;
                     break;
                 case "F_prepared_dragon_fruit":
-                    CsFtFruit += 1;
-                    CsFtDragonFruit += 1;
+                    _csFtFruit += 1;
+                    _csFtDragonFruit += 1;
                     break;
                 case "F_durian":
-                    CsFtFruit += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtFruit += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_extra_smelly_durian":
-                    CsFtFruit += 1;
-                    CsFtMonsterFoods += 1;
+                    _csFtFruit += 1;
+                    _csFtMonsterFoods += 1;
                     break;
                 case "F_pomegranate":
-                    CsFtFruit += 1;
+                    _csFtFruit += 1;
                     break;
                 case "F_sliced_pomegranate":
-                    CsFtFruit += 1;
+                    _csFtFruit += 1;
                     break;
                 case "F_watermelon":
-                    CsFtFruit += 1;
-                    CsFtWatermelon += 1;
+                    _csFtFruit += 1;
+                    _csFtWatermelon += 1;
                     break;
                 case "F_grilled_watermelon":
-                    CsFtFruit += 1;
+                    _csFtFruit += 1;
                     break;
                 case "F_halved_coconut":
-                    CsFtFruit += 1;
+                    _csFtFruit += 1;
                     break;
                 case "F_roasted_coconut":
-                    CsFtFruit += 1;
+                    _csFtFruit += 1;
                     break;
                 case "F_coffee_beans":
-                    CsFtFruit += 0.5;
+                    _csFtFruit += 0.5;
                     break;
                 case "F_roasted_coffee_beans":
-                    CsFtFruit += 1;
-                    CsFtRoastedCoffeeBeans += 1;
+                    _csFtFruit += 1;
+                    _csFtRoastedCoffeeBeans += 1;
                     break;
                 #endregion
                 #region 蛋类
                 case "F_egg":
-                    CsFtEggs += 1;
+                    _csFtEggs += 1;
                     break;
                 case "F_cooked_egg":
-                    CsFtEggs += 1;
+                    _csFtEggs += 1;
                     break;
                 case "F_tallbird_egg":
-                    CsFtEggs += 4;
+                    _csFtEggs += 4;
                     break;
                 case "F_fried_tallbird_egg":
-                    CsFtEggs += 4;
+                    _csFtEggs += 4;
                     break;
                 case "F_doydoy_egg":
-                    CsFtEggs += 1;
+                    _csFtEggs += 1;
                     break;
                 case "F_fried_doydoy_egg":
-                    CsFtEggs += 1;
+                    _csFtEggs += 1;
                     break;
                 #endregion
                 #region 其他
                 case "F_butterfly_wing":
-                    CsFtButterflyWings += 1;
+                    _csFtButterflyWings += 1;
                     break;
                 case "F_butterfly_wing_sw":
-                    CsFtButterflyWings += 1;
+                    _csFtButterflyWings += 1;
                     break;
                 case "F_butter":
-                    CsFtDairyProduct += 1;
-                    CsFtButter += 1;
+                    _csFtDairyProduct += 1;
+                    _csFtButter += 1;
                     break;
                 case "F_honey":
-                    CsFtSweetener += 1;
-                    CsFtHoney += 1;
+                    _csFtSweetener += 1;
+                    _csFtHoney += 1;
                     break;
                 case "F_honeycomb":
-                    CsFtSweetener += 1;
+                    _csFtSweetener += 1;
                     break;
                 case "F_lichen":
-                    CsFtVegetables += 1;
-                    CsFtLichen += 1;
+                    _csFtVegetables += 1;
+                    _csFtLichen += 1;
                     break;
                 case "F_mandrake":
-                    CsFtVegetables += 1;
-                    CsFtMandrake += 1;
+                    _csFtVegetables += 1;
+                    _csFtMandrake += 1;
                     break;
                 case "F_electric_milk":
-                    CsFtDairyProduct += 1;
+                    _csFtDairyProduct += 1;
                     break;
                 case "F_ice":
-                    CsFtIce += 1;
+                    _csFtIce += 1;
                     break;
                 case "F_roasted_birchnut":
-                    CsFtRoastedBirchnut += 1;
+                    _csFtRoastedBirchnut += 1;
                     break;
                 case "F_royal_jelly":
-                    CsFtRoyalJelly += 1;
+                    _csFtRoyalJelly += 1;
                     break;
                 case "F_twigs":
-                    CsFtTwigs += 1;
+                    _csFtTwigs += 1;
                     break;
                 case "F_moleworm":
-                    CsFtMoleworm += 1;
+                    _csFtMoleworm += 1;
                     break;
                     #endregion
             }
@@ -788,170 +735,170 @@ namespace 饥荒百科全书CSharp.View
         /// </summary>
         private void CS_CrockPotCalculation()
         {
-            FoodIndex = 0;
+            _foodIndex = 0;
             #region 食物列表初始化
-            CrockPotList.Clear();
-            CrockPotListIndex = -1;
-            CrockPotMaxPriority = -128;
+            _crockPotList.Clear();
+            _crockPotListIndex = -1;
+            _crockPotMaxPriority = -128;
             #endregion
             #region 食材属性初始化
-            CsFtBanana = 0;
-            CsFtBerries = 0;
-            CsFtButter = 0;
-            CsFtButterflyWings = 0;
-            CsFtCactusFlesh = 0;
-            CsFtCactusFlower = 0;
-            CsFtCorn = 0;
-            CsFtDairyProduct = 0;
-            CsFtDragonFruit = 0;
-            CsFtDrumstick = 0;
-            CsFtEel = 0;
-            CsFtEggplant = 0;
-            CsFtEggs = 0;
-            CsFtFishes = 0;
-            CsFtFrogLegs = 0;
-            CsFtFruit = 0;
-            CsFtHoney = 0;
-            CsFtIce = 0;
-            CsFtJellyfish = 0;
-            CsFtLichen = 0;
-            CsFtLimpets = 0;
-            CsFtMandrake = 0;
-            CsFtMeats = 0;
-            CsFtMoleworm = 0;
-            CsFtMonsterFoods = 0;
-            CsFtMussel = 0;
-            CsFtPumpkin = 0;
-            CsFtRoastedBirchnut = 0;
-            CsFtRoastedCoffeeBeans = 0;
-            CsFtSeaweed = 0;
-            CsFtSharkFin = 0;
-            CsFtSweetener = 0;
-            CsFtSweetPotato = 0;
-            CsFtTwigs = 0;
-            CsFtVegetables = 0;
-            CsFtWatermelon = 0;
-            CsFtWobster = 0;
-            CsFtRoyalJelly = 0;
-            CsFtRoe = 0;
-            CsFtRoeCooked = 0;
-            CsFtNeonQuattro = 0;
-            CsFtPierrotFish = 0;
-            CsFtPurpleGrouper = 0;
+            _csFtBanana = 0;
+            _csFtBerries = 0;
+            _csFtButter = 0;
+            _csFtButterflyWings = 0;
+            _csFtCactusFlesh = 0;
+            _csFtCactusFlower = 0;
+            _csFtCorn = 0;
+            _csFtDairyProduct = 0;
+            _csFtDragonFruit = 0;
+            _csFtDrumstick = 0;
+            _csFtEel = 0;
+            _csFtEggplant = 0;
+            _csFtEggs = 0;
+            _csFtFishes = 0;
+            _csFtFrogLegs = 0;
+            _csFtFruit = 0;
+            _csFtHoney = 0;
+            _csFtIce = 0;
+            _csFtJellyfish = 0;
+            _csFtLichen = 0;
+            _csFtLimpets = 0;
+            _csFtMandrake = 0;
+            _csFtMeats = 0;
+            _csFtMoleworm = 0;
+            _csFtMonsterFoods = 0;
+            _csFtMussel = 0;
+            _csFtPumpkin = 0;
+            _csFtRoastedBirchnut = 0;
+            _csFtRoastedCoffeeBeans = 0;
+            _csFtSeaweed = 0;
+            _csFtSharkFin = 0;
+            _csFtSweetener = 0;
+            _csFtSweetPotato = 0;
+            _csFtTwigs = 0;
+            _csFtVegetables = 0;
+            _csFtWatermelon = 0;
+            _csFtWobster = 0;
+            _csFtRoyalJelly = 0;
+            _csFtRoe = 0;
+            _csFtRoeCooked = 0;
+            _csFtNeonQuattro = 0;
+            _csFtPierrotFish = 0;
+            _csFtPurpleGrouper = 0;
             #endregion
             #region 属性统计
-            CS_RecipeStatistics(CsRecipe1);
-            CS_RecipeStatistics(CsRecipe2);
-            CS_RecipeStatistics(CsRecipe3);
-            CS_RecipeStatistics(CsRecipe4);
+            CS_RecipeStatistics(_csRecipe1);
+            CS_RecipeStatistics(_csRecipe2);
+            CS_RecipeStatistics(_csRecipe3);
+            CS_RecipeStatistics(_csRecipe4);
             #endregion
             #region 烹饪
             // ------------------------SW------------------------
             // 便携式烹饪锅的四种食物
             if (Global.GameVersion == 4)
             {
-                if (CsFtVegetables == 1 && CsFtNeonQuattro == 1 && CsFtPierrotFish == 1 && CsFtPurpleGrouper == 1)
+                if (_csFtVegetables == 1 && _csFtNeonQuattro == 1 && _csFtPierrotFish == 1 && _csFtPurpleGrouper == 1)
                     CS_CrockPotListAddFood("F_tropical_bouillabaisse", 40);
                 if (CrockpotComboBox.SelectedIndex == 1)
                 {
-                    if (CsFtFruit >= 2 && CsFtButter >= 1 && CsFtHoney >= 1)
+                    if (_csFtFruit >= 2 && _csFtButter >= 1 && _csFtHoney >= 1)
                         CS_CrockPotListAddFood("F_fresh_fruit_crepes", 30);
-                    if (CsFtMonsterFoods >= 2 && CsFtEggs >= 1 && CsFtVegetables >= 0.5)
+                    if (_csFtMonsterFoods >= 2 && _csFtEggs >= 1 && _csFtVegetables >= 0.5)
                         CS_CrockPotListAddFood("F_monster_tartare", 30);
-                    if (CsFtMussel >= 2 && CsFtVegetables >= 2)
+                    if (_csFtMussel >= 2 && _csFtVegetables >= 2)
                         CS_CrockPotListAddFood("F_mussel_bouillabaise", 30);
-                    if (CsFtSweetPotato >= 2 && CsFtEggs >= 2)
+                    if (_csFtSweetPotato >= 2 && _csFtEggs >= 2)
                         CS_CrockPotListAddFood("F_sweet_potato_souffle", 30);
                 }
-                if (CsFtWobster >= 1 && CsFtIce >= 1)
+                if (_csFtWobster >= 1 && _csFtIce >= 1)
                     CS_CrockPotListAddFood("F_lobster_bisque", 30);
-                if (CsFtLimpets >= 3 && CsFtIce >= 1)
+                if (_csFtLimpets >= 3 && _csFtIce >= 1)
                     CS_CrockPotListAddFood("F_bisque", 30);
-                if (CsFtRoastedCoffeeBeans >= 3 && (CsFtRoastedCoffeeBeans == 4 || CsFtSweetener == 1 || CsFtDairyProduct == 1))
+                if (_csFtRoastedCoffeeBeans >= 3 && (_csFtRoastedCoffeeBeans == 4 || _csFtSweetener == 1 || _csFtDairyProduct == 1))
                     CS_CrockPotListAddFood("F_coffee", 30);
-                if (CsFtMeats >= 2.5 && CsFtFishes >= 1.5 && CsFtIce == 0)
+                if (_csFtMeats >= 2.5 && _csFtFishes >= 1.5 && _csFtIce == 0)
                     CS_CrockPotListAddFood("F_surf_'n'_turf", 30);
-                if (CsFtWobster >= 1 && CsFtButter >= 1 && CsFtMeats == 0 && CsFtIce == 0)
+                if (_csFtWobster >= 1 && _csFtButter >= 1 && _csFtMeats == 0 && _csFtIce == 0)
                     CS_CrockPotListAddFood("F_lobster_dinner", 25);
-                if (CsFtVegetables >= 1 && (CsFtRoe >= 1 || CsFtRoeCooked >= 3))
+                if (_csFtVegetables >= 1 && (_csFtRoe >= 1 || _csFtRoeCooked >= 3))
                     CS_CrockPotListAddFood("F_caviar", 20);
-                if (CsFtBanana >= 1 && CsFtIce >= 1 && CsFtTwigs >= 1 && CsFtMeats == 0 && CsFtFishes == 0)
+                if (_csFtBanana >= 1 && _csFtIce >= 1 && _csFtTwigs >= 1 && _csFtMeats == 0 && _csFtFishes == 0)
                     CS_CrockPotListAddFood("F_banana_pop", 20);
-                if (CsFtFishes >= 1 && CsFtSeaweed == 2)
+                if (_csFtFishes >= 1 && _csFtSeaweed == 2)
                     CS_CrockPotListAddFood("F_california_roll", 20);
-                if (CsFtJellyfish >= 1 && CsFtIce >= 1 && CsFtTwigs >= 1)
+                if (_csFtJellyfish >= 1 && _csFtIce >= 1 && _csFtTwigs >= 1)
                     CS_CrockPotListAddFood("F_jelly-O_pop", 20);
-                if (CsFtFishes >= 2 && CsFtIce >= 1)
+                if (_csFtFishes >= 2 && _csFtIce >= 1)
                     CS_CrockPotListAddFood("F_ceviche", 20);
-                if (CsFtSharkFin >= 1)
+                if (_csFtSharkFin >= 1)
                     CS_CrockPotListAddFood("F_shark_fin_soup", 20);
-                if (CsFtFishes >= 2.5)
+                if (_csFtFishes >= 2.5)
                     CS_CrockPotListAddFood("F_seafood_gumbo", 10);
             }
             // ------------------------其他------------------------
-            if (CsFtRoyalJelly >= 1 && CsFtTwigs == 0 && CsFtMonsterFoods == 0)
+            if (_csFtRoyalJelly >= 1 && _csFtTwigs == 0 && _csFtMonsterFoods == 0)
                 CS_CrockPotListAddFood("F_jellybeans", 12);
-            if (CsFtCactusFlesh >= 1 && CsFtMoleworm >= 1 && CsFtFruit == 0)
+            if (_csFtCactusFlesh >= 1 && _csFtMoleworm >= 1 && _csFtFruit == 0)
                 CS_CrockPotListAddFood("F_guacamole", 10);
-            if (CsFtCactusFlower >= 1 && CsFtVegetables >= 2 && CsFtFruit == 0 && CsFtMeats == 0 && CsFtEggs == 0 && CsFtSweetener == 0 && CsFtTwigs == 0)
+            if (_csFtCactusFlower >= 1 && _csFtVegetables >= 2 && _csFtFruit == 0 && _csFtMeats == 0 && _csFtEggs == 0 && _csFtSweetener == 0 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_flower_salad", 10);
-            if (CsFtDairyProduct >= 1 && CsFtIce >= 1 && CsFtSweetener >= 1 && CsFtMeats == 0 && CsFtEggs == 0 && CsFtVegetables == 0 && CsFtTwigs == 0)
+            if (_csFtDairyProduct >= 1 && _csFtIce >= 1 && _csFtSweetener >= 1 && _csFtMeats == 0 && _csFtEggs == 0 && _csFtVegetables == 0 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_ice_cream", 10);
-            if (CsFtWatermelon >= 1 && CsFtIce >= 1 && CsFtTwigs >= 1 && CsFtMeats == 0 && CsFtEggs == 0 && CsFtVegetables == 0)
+            if (_csFtWatermelon >= 1 && _csFtIce >= 1 && _csFtTwigs >= 1 && _csFtMeats == 0 && _csFtEggs == 0 && _csFtVegetables == 0)
                 CS_CrockPotListAddFood("F_melonsicle", 10);
-            if (CsFtRoastedBirchnut >= 1 && CsFtBerries >= 1 && CsFtFruit >= 1 && CsFtMeats == 0 && CsFtEggs == 0 && CsFtVegetables == 0 && CsFtSweetener == 0)
+            if (_csFtRoastedBirchnut >= 1 && _csFtBerries >= 1 && _csFtFruit >= 1 && _csFtMeats == 0 && _csFtEggs == 0 && _csFtVegetables == 0 && _csFtSweetener == 0)
                 CS_CrockPotListAddFood("F_trail_mix", 10);
-            if (CsFtVegetables >= 1.5 && CsFtMeats >= 1.5)
+            if (_csFtVegetables >= 1.5 && _csFtMeats >= 1.5)
                 CS_CrockPotListAddFood("F_spicy_chili", 10);
-            if (CsFtEel >= 1 && CsFtLichen >= 1)
+            if (_csFtEel >= 1 && _csFtLichen >= 1)
                 CS_CrockPotListAddFood("F_unagi", 20);
-            if (CsFtPumpkin >= 1 && CsFtSweetener >= 2)
+            if (_csFtPumpkin >= 1 && _csFtSweetener >= 2)
                 CS_CrockPotListAddFood("F_pumpkin_cookie", 10);
-            if (CsFtCorn >= 1 && CsFtHoney >= 1 && CsFtTwigs >= 1)
+            if (_csFtCorn >= 1 && _csFtHoney >= 1 && _csFtTwigs >= 1)
                 CS_CrockPotListAddFood("F_powdercake", 10);
-            if (CsFtMandrake >= 1)
+            if (_csFtMandrake >= 1)
                 CS_CrockPotListAddFood("F_mandrake_soup", 10);
-            if (CsFtFishes >= 0.5 && CsFtTwigs == 1)
+            if (_csFtFishes >= 0.5 && _csFtTwigs == 1)
                 CS_CrockPotListAddFood("F_fishsticks", 10);
-            if (CsFtFishes >= 0.5 && CsFtCorn >= 1)
+            if (_csFtFishes >= 0.5 && _csFtCorn >= 1)
                 CS_CrockPotListAddFood("F_fish_tacos", 10);
-            if (CsFtMeats >= 1.5 && CsFtEggs >= 2 && CsFtVegetables == 0)
+            if (_csFtMeats >= 1.5 && _csFtEggs >= 2 && _csFtVegetables == 0)
                 CS_CrockPotListAddFood("F_bacon_and_eggs", 10);
-            if (CsFtDrumstick >= 2 && CsFtMeats >= 1.5 && (CsFtVegetables >= 0.5 || CsFtFruit >= 0.5))
+            if (_csFtDrumstick >= 2 && _csFtMeats >= 1.5 && (_csFtVegetables >= 0.5 || _csFtFruit >= 0.5))
                 CS_CrockPotListAddFood("F_turkey_dinner", 10);
-            if (CsFtSweetener >= 3 && CsFtMeats == 0)
+            if (_csFtSweetener >= 3 && _csFtMeats == 0)
                 CS_CrockPotListAddFood("F_taffy", 10);
-            if (CsFtButter >= 1 && CsFtEggs >= 1 && CsFtBerries >= 1)
+            if (_csFtButter >= 1 && _csFtEggs >= 1 && _csFtBerries >= 1)
                 CS_CrockPotListAddFood("F_waffles", 10);
-            if (CsFtMonsterFoods >= 2 && CsFtTwigs == 0)
+            if (_csFtMonsterFoods >= 2 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_monster_lasagna", 10);
-            if (CsFtEggs >= 1 && CsFtMeats >= 0.5 && CsFtVegetables >= 0.5 && CsFtTwigs == 0)
+            if (_csFtEggs >= 1 && _csFtMeats >= 0.5 && _csFtVegetables >= 0.5 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_pierogi", 5);
-            if (CsFtMeats >= 0.5 && CsFtTwigs == 1 && CsFtMonsterFoods <= 1)
+            if (_csFtMeats >= 0.5 && _csFtTwigs == 1 && _csFtMonsterFoods <= 1)
                 CS_CrockPotListAddFood("F_kabobs", 5);
-            if (CsFtMeats >= 2 && CsFtHoney >= 1 && CsFtTwigs == 0)
+            if (_csFtMeats >= 2 && _csFtHoney >= 1 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_honey_ham", 2);
-            if (CsFtMeats >= 0.5 && CsFtMeats < 2 && CsFtHoney >= 1 && CsFtTwigs == 0)
+            if (_csFtMeats >= 0.5 && _csFtMeats < 2 && _csFtHoney >= 1 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_honey_nuggets", 2);
-            if (CsFtButterflyWings >= 1 && CsFtVegetables >= 0.5 && CsFtMeats == 0)
+            if (_csFtButterflyWings >= 1 && _csFtVegetables >= 0.5 && _csFtMeats == 0)
                 CS_CrockPotListAddFood("F_butter_muffin", 1);
-            if (CsFtFrogLegs >= 1 && CsFtVegetables >= 0.5)
+            if (_csFtFrogLegs >= 1 && _csFtVegetables >= 0.5)
                 CS_CrockPotListAddFood("F_froggle_bunwich", 1);
-            if (CsFtDragonFruit >= 1 && CsFtMeats == 0)
+            if (_csFtDragonFruit >= 1 && _csFtMeats == 0)
                 CS_CrockPotListAddFood("F_dragonpie", 1);
-            if (CsFtEggplant >= 1 && CsFtVegetables >= 0.5)
+            if (_csFtEggplant >= 1 && _csFtVegetables >= 0.5)
                 CS_CrockPotListAddFood("F_stuffed_eggplant", 1);
-            if (CsFtVegetables >= 0.5 && CsFtMeats == 0 && CsFtTwigs == 0)
+            if (_csFtVegetables >= 0.5 && _csFtMeats == 0 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_ratatouille", 0);
-            if (CsFtFruit >= 0.5 && CsFtMeats == 0 && CsFtVegetables == 0)
+            if (_csFtFruit >= 0.5 && _csFtMeats == 0 && _csFtVegetables == 0)
             {
-                if (CsFtFruit < 3)
+                if (_csFtFruit < 3)
                 {
                     CS_CrockPotListAddFood("F_fist_full_of_jam", 0);
                 }
                 else
                 {
-                    if (CsFtTwigs == 0)
+                    if (_csFtTwigs == 0)
                     {
                         CS_CrockPotListAddFood("F_fist_full_of_jam", 0);
                         CS_CrockPotListAddFood("F_fruit_medley", 0);
@@ -962,29 +909,29 @@ namespace 饥荒百科全书CSharp.View
                     }
                 }
             }
-            if (CsFtMeats >= 3 && CsFtTwigs == 0)
+            if (_csFtMeats >= 3 && _csFtTwigs == 0)
             {
                 CS_CrockPotListAddFood("F_meaty_stew", 0);
             }
 
-            if (CsFtMeats >= 0.5 && CsFtMeats < 3 && CsFtTwigs == 0)
+            if (_csFtMeats >= 0.5 && _csFtMeats < 3 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_meatballs", -1);
             #endregion
             #region 食物判断
-            if (CrockPotListIndex == -1)
+            if (_crockPotListIndex == -1)
             {
                 CS_CrockPotListAddFood("F_wet_goop", -2);
             }
-            CsFoodName = CrockPotList[0];
+            _csFoodName = _crockPotList[0];
             //显示食物图片
-            CS_image_Food_Result_Source(CsFoodName);
+            CS_image_Food_Result_Source(_csFoodName);
             //显示食物名称
-            FoodResultTextBlock.Text = CS_Food_Text(CsFoodName);
+            FoodResultTextBlock.Text = CS_Food_Text(_csFoodName);
             //显示食物属性
-            CS_FoodRecipe_Property(CsFoodName);
+            CS_FoodRecipe_Property(_csFoodName);
             #endregion
             #region 选择按钮显示判断
-            if (CrockPotListIndex < 1)
+            if (_crockPotListIndex < 1)
             {
                 SwitchLeftButton.Visibility = Visibility.Collapsed;
                 SwitchRightButton.Visibility = Visibility.Collapsed;
@@ -1000,10 +947,10 @@ namespace 饥荒百科全书CSharp.View
             #region 自动清空材料
             if (AutoCleanCheckBox.IsChecked == true)
             {
-                CsRecipe1 = "";
-                CsRecipe2 = "";
-                CsRecipe3 = "";
-                CsRecipe4 = "";
+                _csRecipe1 = "";
+                _csRecipe2 = "";
+                _csRecipe3 = "";
+                _csRecipe4 = "";
                 Food1Image.Source = null;
                 Food2Image.Source = null;
                 Food3Image.Source = null;
@@ -1019,11 +966,11 @@ namespace 饥荒百科全书CSharp.View
         /// <param name="foodPriority">食物优先度</param>
         private void CS_CrockPotListAddFood(string foodName, sbyte foodPriority)
         {
-            if (foodPriority >= CrockPotMaxPriority)
+            if (foodPriority >= _crockPotMaxPriority)
             {
-                CrockPotMaxPriority = foodPriority;
-                CrockPotListIndex += 1;
-                CrockPotList.Add(foodName);
+                _crockPotMaxPriority = foodPriority;
+                _crockPotListIndex += 1;
+                _crockPotList.Add(foodName);
             }
         }
 
@@ -1155,7 +1102,7 @@ namespace 饥荒百科全书CSharp.View
         /// <param name="source">食物代码</param>
         private void CS_FoodRecipe_Property(string source)
         {
-            foreach (var foodRecipe in _foodRecipeData)
+            foreach (var foodRecipe in Global.FoodRecipeData)
             {
                 if (source == foodRecipe.Picture)
                 {
@@ -1172,7 +1119,7 @@ namespace 饥荒百科全书CSharp.View
         private void ResultButton_Click(object sender, RoutedEventArgs e)
         {
             if (FoodResultImage.Source == null) return;
-            var picturePath = CrockPotList[FoodIndex];
+            var picturePath = _crockPotList[_foodIndex];
             var rightFrame = Global.RightFrame;
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
@@ -1191,35 +1138,35 @@ namespace 饥荒百科全书CSharp.View
         private void SwitchLeftButton_Click(object sender, RoutedEventArgs e)
         {
             SwitchRightButton.IsEnabled = true;
-            if (FoodIndex != 0)
+            if (_foodIndex != 0)
             {
-                FoodIndex -= 1;
-                if (FoodIndex == 0)
+                _foodIndex -= 1;
+                if (_foodIndex == 0)
                 {
                     SwitchLeftButton.IsEnabled = false;
                 }
-                CsFoodName = CrockPotList[FoodIndex];
-                CS_image_Food_Result_Source(CrockPotList[FoodIndex]);
-                CS_FoodRecipe_Property(CrockPotList[FoodIndex]);
+                _csFoodName = _crockPotList[_foodIndex];
+                CS_image_Food_Result_Source(_crockPotList[_foodIndex]);
+                CS_FoodRecipe_Property(_crockPotList[_foodIndex]);
             }
-            FoodResultTextBlock.Text = CS_Food_Text(CsFoodName);
+            FoodResultTextBlock.Text = CS_Food_Text(_csFoodName);
         }
 
         private void SwitchRightButton_Click(object sender, RoutedEventArgs e)
         {
             SwitchLeftButton.IsEnabled = true;
-            if (FoodIndex != CrockPotListIndex)
+            if (_foodIndex != _crockPotListIndex)
             {
-                FoodIndex += 1;
-                if (FoodIndex == CrockPotListIndex)
+                _foodIndex += 1;
+                if (_foodIndex == _crockPotListIndex)
                 {
                     SwitchRightButton.IsEnabled = false;
                 }
-                CsFoodName = CrockPotList[FoodIndex];
-                CS_image_Food_Result_Source(CrockPotList[FoodIndex]);
-                CS_FoodRecipe_Property(CrockPotList[FoodIndex]);
+                _csFoodName = _crockPotList[_foodIndex];
+                CS_image_Food_Result_Source(_crockPotList[_foodIndex]);
+                CS_FoodRecipe_Property(_crockPotList[_foodIndex]);
             }
-            FoodResultTextBlock.Text = CS_Food_Text(CsFoodName);
+            FoodResultTextBlock.Text = CS_Food_Text(_csFoodName);
         }
         #endregion
 

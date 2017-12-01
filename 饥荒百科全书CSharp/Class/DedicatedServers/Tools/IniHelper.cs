@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
@@ -37,11 +38,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 if (line.StartsWith("[") && line.EndsWith("]"))
                 {
                     // 添加到d
-                    if (title != String.Empty)
+                    if (title != string.Empty)
                     {
                         Dictionary.Add(title, f);
                         f = new Dictionary<string, string>();
-                        title = String.Empty;
+                        title = string.Empty;
                     }
                     // 截取[] 中间
                     title = line.Substring(1, line.Length - 2);
@@ -49,7 +50,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 //如果包含=号
                 if (Filecontext[i].Trim().Contains("="))
                 {
-                    string[] s = line.Split('=');
+                    var s = line.Split('=');
                     f.Add(s[0].Trim(), s[1].Trim());
                 }
                 //如果读到最后一行,添加进去
@@ -57,7 +58,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 {
                     Dictionary.Add(title, f);
                     f = new Dictionary<string, string>();
-                    title = String.Empty;
+                    title = string.Empty;
                 }
             }
         }
@@ -94,7 +95,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <param name="section"></param>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        public void write(string section, string key, string value, Encoding encoding)
+        public void Write(string section, string key, string value, Encoding encoding)
         {
 
             Dictionary[section][key] = value;
@@ -104,14 +105,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
 
         public List<string> GetListStr()
         {
-            List<string> listStr = new List<string>();
-            foreach (KeyValuePair<string, Dictionary<string, string>> kvp in Dictionary)
+            var listStr = new List<string>();
+            foreach (var kvp in Dictionary)
             {
                 listStr.Add("[" + kvp.Key + "]");
-                foreach (KeyValuePair<string, string> kvp1 in kvp.Value)
-                {
-                    listStr.Add(kvp1.Key + "=" + kvp1.Value);
-                }
+                listStr.AddRange(kvp.Value.Select(kvp1 => kvp1.Key + "=" + kvp1.Value));
             }
             return listStr;
         }

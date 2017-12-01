@@ -25,8 +25,6 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class CharacterPage : Page
     {
-        private readonly ObservableCollection<Character> _characterData = new ObservableCollection<Character>();
-
         private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
@@ -41,7 +39,7 @@ namespace 饥荒百科全书CSharp.View
             Deserialize();
             if (extraData == null) return;
             var suggestBoxItemPicture = extraData[1];
-            foreach (var itemsControlItem in _characterData)
+            foreach (var itemsControlItem in Global.CharacterData)
             {
                 var character = itemsControlItem;
                 if (character == null || character.Picture != suggestBoxItemPicture) continue;
@@ -59,18 +57,8 @@ namespace 饥荒百科全书CSharp.View
         
         public void Deserialize()
         {
-            _characterData.Clear();
-            var character = JsonConvert.DeserializeObject<CharacterRootObject>(StringProcess.GetJsonString("Characters.json"));
-            foreach (var characterItems in character.Character)
-            {
-                _characterData.Add(characterItems);
-            }
-            foreach (var characterItems in _characterData)
-            {
-                characterItems.Picture = StringProcess.GetGameResourcePath(characterItems.Picture);
-            }
-            CharacterItemsControl.DataContext = _characterData;
-            LeftFrame.NavigationService.Navigate(new CharacterDetail(), _characterData[0]);
+            CharacterItemsControl.DataContext = Global.CharacterData;
+            LeftFrame.NavigationService.Navigate(new CharacterDetail(), Global.CharacterData[0]);
         }
         
         private void CharacterButton_Click(object sender, RoutedEventArgs e)

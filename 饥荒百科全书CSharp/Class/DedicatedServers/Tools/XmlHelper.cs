@@ -13,10 +13,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 读取当前游戏版本[tgp,steam,youxia] 
         /// </summary>
-        public static String ReadGamePingTai( )
+        public static String ReadGamePingTai()
         {
 
-            string pingtai= RegeditRw.RegReadString("banben");
+            string pingtai = RegeditRw.RegReadString("banben");
             if (string.IsNullOrEmpty(pingtai))
             {
                 return "Steam";
@@ -50,7 +50,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 保存当前游戏平台[tgp,steam,youxia]
         /// </summary>
-        public static void WriteGamePingTai( String pingtai)
+        public static void WriteGamePingTai(String pingtai)
         {
             //xmlpath = "ServerConfig1.xml";
             //Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -73,7 +73,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 读取客户端路径
         /// </summary>
-        public static string ReadClientPath(  String pingtai)
+        public static string ReadClientPath(String pingtai)
         {
             return RegeditRw.RegReadString(pingtai + "_" + "client_path");
         }
@@ -81,15 +81,15 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 设置客户端路径
         /// </summary>
-        public static void WriteClientPath( string ClientPath, String pingtai)
+        public static void WriteClientPath(string clientPath, String pingtai)
         {
-            RegeditRw.RegWrite(pingtai + "_" + "client_path", ClientPath);
+            RegeditRw.RegWrite(pingtai + "_" + "client_path", clientPath);
         }
 
         /// <summary>
         /// 读取服务端路径
         /// </summary>
-        public static string ReadServerPath( String pingtai)
+        public static string ReadServerPath(string pingtai)
         {
             return RegeditRw.RegReadString(pingtai + "_" + "Server_path");
         }
@@ -97,9 +97,9 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 设置服务端路径
         /// </summary>
-        public static void WriteServerPath( string ServerPath, String pingtai)
+        public static void WriteServerPath(string serverPath, string pingtai)
         {
-            RegeditRw.RegWrite(pingtai + "_" + "Server_path", ServerPath);
+            RegeditRw.RegWrite(pingtai + "_" + "Server_path", serverPath);
         }
         #endregion
 
@@ -109,20 +109,20 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static Dictionary<string, string> ReadHanhua()
         {
-            System.Reflection.Assembly _assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            System.IO.Stream sStream = _assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ServerConfig.xml");
-            System.Xml.XmlDocument xmldoc = new XmlDocument();
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var sStream = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ServerConfig.xml");
+            var xmldoc = new XmlDocument();
             xmldoc.Load(sStream);
 
-            Dictionary<string, string> dic = new Dictionary<string, string>();
+            var dic = new Dictionary<string, string>();
             //XmlDocument xmldoc = new XmlDocument();
             //xmldoc.Load(xmlpath);
-            XmlNodeList details = xmldoc.SelectNodes("configuration/hanhua/details");
+            var details = xmldoc.SelectNodes("configuration/hanhua/details");
 
             foreach (XmlNode item in details)
             {
-                string english = ((XmlElement)item).GetAttribute("english").Trim();
-                string chinese = ((XmlElement)item).GetAttribute("chinese").Trim();
+                var english = ((XmlElement)item).GetAttribute("english").Trim();
+                var chinese = ((XmlElement)item).GetAttribute("chinese").Trim();
                 dic[english] = chinese;
             }
             return dic;
@@ -139,28 +139,20 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <returns></returns>
         public static List<string> ReadWorldSelect(bool isCave)
         {
-            System.Reflection.Assembly _assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            System.IO.Stream sStream = _assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ServerConfig.xml");
-            System.Xml.XmlDocument xmldoc = new XmlDocument();
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var sStream = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ServerConfig.xml");
+            var xmldoc = new XmlDocument();
             xmldoc.Load(sStream);
 
-
-            List<string> listStr = new List<string>();
+            var listStr = new List<string>();
             //XmlDocument xmldoc = new XmlDocument();
             //xmldoc.Load(xmlPath);
-            XmlNodeList details;
-            if (!isCave)
-            {
-                details = xmldoc.SelectNodes("configuration/master/details");
-            }
-            else {
-                details = xmldoc.SelectNodes("configuration/caves/details");
-            }
+            var details = xmldoc.SelectNodes(!isCave ? "configuration/master/details" : "configuration/caves/details");
 
             foreach (XmlNode item in details)
             {
-               string key= ((XmlElement)item).GetAttribute("key");
-               string value= ((XmlElement)item).GetAttribute("value");
+                var key = ((XmlElement)item).GetAttribute("key");
+                var value = ((XmlElement)item).GetAttribute("value");
                 listStr.Add(key.Trim() + "=" + value.Trim());
             }
             return listStr;
@@ -169,37 +161,31 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 读取世界分类,fenlei="foods","animals","world","monsters","resources"
         /// </summary>
-        public static Dictionary<string, string> ReadWorldFenLei(bool isCave) {
-
-            System.Reflection.Assembly _assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            System.IO.Stream sStream = _assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ServerConfig.xml");
-            System.Xml.XmlDocument xmldoc = new XmlDocument();
+        public static Dictionary<string, string> ReadWorldFenLei(bool isCave)
+        {
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var sStream = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ServerConfig.xml");
+            var xmldoc = new XmlDocument();
             xmldoc.Load(sStream);
 
+            var isCavestr = isCave ? "cave" : "master";
 
-
-
-            string isCavestr = isCave? "cave" : "master";
-
-            Dictionary<string, string> dic = new Dictionary<string, string>();
+            var dic = new Dictionary<string, string>();
             //XmlDocument xmldoc = new XmlDocument();
             //xmldoc.Load(xmlPath);
-            XmlNodeList details = xmldoc.SelectNodes("configuration/fenlei/"+isCavestr+"/details");
+            var details = xmldoc.SelectNodes("configuration/fenlei/" + isCavestr + "/details");
 
             foreach (var item in details)
             {
-                string key = ((XmlElement)item).GetAttribute("key");
-                string[] value = ((XmlElement)item).GetAttribute("value").Split(',');
+                var key = ((XmlElement)item).GetAttribute("key");
+                var value = ((XmlElement)item).GetAttribute("value").Split(',');
 
-                for (int i = 0; i < value.Length; i++)
+                foreach (var val in value)
                 {
-                    dic[value[i]] = key;
+                    dic[val] = key;
                 }
-
             }
-
             return dic;
-  
         }
         #endregion
     }

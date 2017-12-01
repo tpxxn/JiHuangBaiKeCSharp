@@ -25,8 +25,6 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class NaturalPage : Page
     {
-        private readonly ObservableCollection<Nature> _naturalBiomesData = new ObservableCollection<Nature>();
-
         private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
@@ -49,18 +47,8 @@ namespace 饥荒百科全书CSharp.View
 
         public void Deserialize()
         {
-            _naturalBiomesData.Clear();
-            var natural = JsonConvert.DeserializeObject<NaturalRootObject>(StringProcess.GetJsonString("Natural.json"));
-            foreach (var natureBiomesItems in natural.Biomes.Nature)
-            {
-                _naturalBiomesData.Add(natureBiomesItems);
-            }
-            foreach (var natureBiomesItems in _naturalBiomesData)
-            {
-                natureBiomesItems.Picture = StringProcess.GetGameResourcePath(natureBiomesItems.Picture);
-            }
-            BiomesExpander.DataContext = _naturalBiomesData;
-            LeftFrame.NavigationService.Navigate(new NaturalDetail(), _naturalBiomesData[0]);
+            BiomesExpander.DataContext = Global.NaturalBiomesData;
+            LeftFrame.NavigationService.Navigate(new NaturalDetail(), Global.NaturalBiomesData[0]);
         }
 
         private void NaturalButton_Click(object sender, RoutedEventArgs e)

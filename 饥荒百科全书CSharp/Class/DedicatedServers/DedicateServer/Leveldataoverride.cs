@@ -14,12 +14,12 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
     /// </summary>
     class Leveldataoverride
     {
-        System.Text.UTF8Encoding utf8 = new System.Text.UTF8Encoding(false);
+        private readonly UTF8Encoding _utf8 = new UTF8Encoding(false);
 
         #region 字段 
-        private PathAll pathall;
-        private bool isCave;
-        private Dictionary<string, ShowWorld> showWorldDic = new Dictionary<string, ShowWorld>();
+        private readonly PathAll _pathall;
+        private readonly bool _isCave;
+
         #endregion
 
         #region (public)构造,保存,showWorlddic
@@ -28,69 +28,57 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 最终的world
         /// </summary>
-        public Dictionary<string, ShowWorld> ShowWorldDic
-        {
-            get
-            {
-                return showWorldDic;
-            }
+        public Dictionary<string, ShowWorld> ShowWorldDic { get; set; } = new Dictionary<string, ShowWorld>();
 
-            set
-            {
-                showWorldDic = value;
-            }
-        }
         /// <summary>
         /// 保存
         /// </summary>
-        /// <param name="l">key的值,就是label的值</param>
-        /// <param name="n">select中的序号</param>
         public void SaveWorld()
         {
 
-            if (!Directory.Exists(pathall.YyServer_DirPath))
+            if (!Directory.Exists(_pathall.YyServerDirPath))
             {
                 return;
             }
             //   System.Text.UTF8Encoding utf8 = new System.Text.UTF8Encoding(false);
             // 保存到文件
             string savePath;
-            if (!isCave)
+            if (!_isCave)
             {
-                savePath = pathall.YyServer_DirPath + @"\Master\leveldataoverride.lua";
+                savePath = _pathall.YyServerDirPath + @"\Master\leveldataoverride.lua";
             }
             else
             {
-                savePath = pathall.YyServer_DirPath + @"\Caves\leveldataoverride.lua";
+                savePath = _pathall.YyServerDirPath + @"\Caves\leveldataoverride.lua";
 
             }
 
-            FileStream fs = new FileStream(savePath, FileMode.Create);
-            StreamWriter sw = new StreamWriter(fs, utf8);
+            var fs = new FileStream(savePath, FileMode.Create);
+            var sw = new StreamWriter(fs, _utf8);
             //开始写入
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             //   string sb = "";
 
             // 地上世界
             // 读取模板中地上世界配置的前半部分和后半部分dishangStrQ，dishangStrH，用于拼接字符串，保存用
-            string dishangWorld = Tool.ReadResources("Server模板.Master.leveldataoverride.lua");
+            var dishangWorld = Tool.ReadResources("Server模板.Master.leveldataoverride.lua");
 
             dishangWorld = dishangWorld.Replace("\r\n", "\n").Replace("\n", "\r\n");
-            Regex regex = new Regex(@".*overrides\s*=\s*{|random_set_pieces.*", RegexOptions.Singleline);
-            MatchCollection mcdishang = regex.Matches(dishangWorld);
-            string dishangStrQ = mcdishang[0].Value + "\r\n";
-            string dishangStrH = "\r\n},\r\n" + mcdishang[1].Value + "\r\n";
+            var regex = new Regex(@".*overrides\s*=\s*{|random_set_pieces.*", RegexOptions.Singleline);
+            var mcdishang = regex.Matches(dishangWorld);
+            var dishangStrQ = mcdishang[0].Value + "\r\n";
+            var dishangStrH = "\r\n},\r\n" + mcdishang[1].Value + "\r\n";
 
             // 地下
-            string caveWorld = Tool.ReadResources("Server模板.Caves.leveldataoverride.lua");
+            var caveWorld = Tool.ReadResources("Server模板.Caves.leveldataoverride.lua");
             caveWorld = caveWorld.Replace("\r\n", "\n").Replace("\n", "\r\n");
-            Regex regex1 = new Regex(@".*overrides\s*=\s*{|required_prefabs.*", RegexOptions.Singleline);
-            MatchCollection mcdixia = regex1.Matches(caveWorld);
-            string caveStrQ = mcdixia[0].Value + "\r\n";
-            string caveStrH = "\r\n},\r\n" + mcdixia[1].Value + "\r\n";
+            var regex1 = new Regex(@".*overrides\s*=\s*{|required_prefabs.*", RegexOptions.Singleline);
+            var mcdixia = regex1.Matches(caveWorld);
+            var caveStrQ = mcdixia[0].Value + "\r\n";
+            var caveStrH = "\r\n},\r\n" + mcdixia[1].Value + "\r\n";
 
 
-            if (!isCave)
+            if (!_isCave)
             {
                 sb.Append(dishangStrQ);
                 // sb += dishangStrQ;
@@ -104,7 +92,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             }
 
 
-            foreach (KeyValuePair<string, ShowWorld> kvp in ShowWorldDic)
+            foreach (var kvp in ShowWorldDic)
             {
                 // sb+= string.Format("{0}=\"{1}\",", kvp.Key, kvp.Value);
                 sb.AppendFormat("{0}=\"{1}\",", kvp.Key, kvp.Value.Worldconfig);
@@ -112,11 +100,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                 // sb += "\r\n";
             }
 
-            string s = sb.ToString();
+            var s = sb.ToString();
 
             s = s.Substring(0, s.Length - 3);
 
-            if (!isCave)
+            if (!_isCave)
             {
                 s += dishangStrH;
 
@@ -144,15 +132,15 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <param name="worldselectPath">世界的选项文件</param>
         public Leveldataoverride(PathAll pathall, bool isCave)
         {
-            this.pathall = pathall;
-            this.isCave = isCave;
+            this._pathall = pathall;
+            this._isCave = isCave;
 
 
             // 初始化，就是，读取地上地下世界，放到 Dictionary<string（世界的key）,List<string>（世界的value）> 类型中，
             // 但是以后如何在里面取值赋值 
 
             // init(worldconfigPath, worldselectPath);
-            init();
+            Init();
         }
 
         #endregion
@@ -161,63 +149,52 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 读取的选项文件
         /// </summary>
-        private Dictionary<string, List<string>> selectConfigWorld = new Dictionary<string, List<string>>();
+        private readonly Dictionary<string, List<string>> _selectConfigWorld = new Dictionary<string, List<string>>();
 
-
-
-        private string init()
+        private string Init()
         {
-
-
-            if (String.IsNullOrEmpty(pathall.Cave_config_FilePath))
+            if (string.IsNullOrEmpty(_pathall.CaveConfigFilePath))
             {
                 return "世界配置文件路径不对";
             }
-   
-
             //给【世界配置文件】初始化
-            readConfigWorld();
-
+            ReadConfigWorld();
             // 给【世界选项文件】初始化
-            readSelectConfigWorld();
-
+            ReadSelectConfigWorld();
             // 将上面读取到的两个融到一起，到world中
-            setWorld();
-
-
+            SetWorld();
             return "初始化成功";
         }
 
         /// <summary>
         /// 赋值world
         /// </summary>
-        private void setWorld()
+        private void SetWorld()
         {
             ShowWorldDic.Clear();
-            Dictionary<string, string> configWorld = readConfigWorld();
+            var configWorld = ReadConfigWorld();
 
             // 遍历configworld
-            foreach (KeyValuePair<string, string> item in configWorld)
+            foreach (var item in configWorld)
             {
 
-                string picPath = @"Resources/DedicatedServer/World/" + item.Key + ".png";
+                var picPath = @"Resources/DedicatedServer/World/" + item.Key + ".png";
 
                 // 如果包含，选项中有，则添加选项中的
-                if (selectConfigWorld.ContainsKey(item.Key))
+                if (_selectConfigWorld.ContainsKey(item.Key))
                 {
-                  
+
                     //string picPath = pathall.Pic_DirPath + @"\" + item.Key + ".png";
-                    ShowWorldDic[item.Key]= new ShowWorld(picPath, selectConfigWorld[item.Key], item.Value, item.Key);
+                    ShowWorldDic[item.Key] = new ShowWorld(picPath, _selectConfigWorld[item.Key], item.Value, item.Key);
 
                 }
                 //如果不包含，说明ServerConfig中没有写，没有配置，就用当前的值临时替代
                 else
                 {
 
-                    List<string> l = new List<string>();
-                    l.Add(item.Value);
+                    var l = new List<string> { item.Value };
                     //string picPath = pathall.Pic_DirPath + @"\" + item.Key + ".png";
-                    ShowWorldDic[item.Key] = new ShowWorld(picPath,l, item.Value, item.Key);
+                    ShowWorldDic[item.Key] = new ShowWorld(picPath, l, item.Value, item.Key);
 
                 }
             }
@@ -228,45 +205,45 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 读取世界选项的文件,赋值到selectConfigWorld，类型
         /// </summary>
-        private void readSelectConfigWorld()
+        private void ReadSelectConfigWorld()
         {
             // 先清空,再赋值
-            selectConfigWorld.Clear();
+            _selectConfigWorld.Clear();
 
             //读取文件,填入到字典
-            List<string> listStr= XmlHelper.ReadWorldSelect(isCave);
+            var listStr = XmlHelper.ReadWorldSelect(_isCave);
 
-            for (int i = 0; i < listStr.Count; i++)
+            foreach (var str in listStr)
             {
-                string[] a = listStr[i].Split('=');
-                List<string> b = a[1].Split(',').ToList<string>();
-                selectConfigWorld.Add(a[0], b);
+                var a = str.Split('=');
+                var b = a[1].Split(',').ToList();
+                _selectConfigWorld.Add(a[0], b);
             }
         }
 
         /// <summary>
         /// 读取世界配置文件，赋值到configWorld
         /// </summary>
-        private Dictionary<string,string> readConfigWorld()
+        private Dictionary<string, string> ReadConfigWorld()
         {
             // 清空
-            Dictionary<string, string> configWorld = new Dictionary<string, string>();
+            var configWorld = new Dictionary<string, string>();
             // 先读文件
-            LuaConfig luaconfig = new LuaConfig();
-            LuaTable lt = luaconfig.ReadLua(isCave ? pathall.Cave_config_FilePath:pathall.Overworld_config_FilePath, Encoding.UTF8, true);
+            var luaconfig = new LuaConfig();
+            var lt = luaconfig.ReadLua(_isCave ? _pathall.CaveConfigFilePath : _pathall.OverworldConfigFilePath, Encoding.UTF8, true);
 
 
             // 初始化override世界配置
-            LuaTable overridesLt = (LuaTable)lt["overrides"];
+            var overridesLt = (LuaTable)lt["overrides"];
 
-            IDictionary<string, object> worldDic = overridesLt.Members;
-
-
-            List<string> l = worldDic.Keys.ToList();
-            List<object> lc = worldDic.Values.ToList();
+            var worldDic = overridesLt.Members;
 
 
-            for (int j = 0; j < worldDic.Count; j++)
+            var l = worldDic.Keys.ToList();
+            var lc = worldDic.Values.ToList();
+
+
+            for (var j = 0; j < worldDic.Count; j++)
             {
                 configWorld.Add(l[j], lc[j].ToString());
             }

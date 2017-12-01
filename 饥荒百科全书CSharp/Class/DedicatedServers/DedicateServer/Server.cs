@@ -10,71 +10,25 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
     /// </summary>
     class Server
     {
-     
-        private string version;
-        private string session;
-        private string createTime;
-        List<Player> listPlayer = new List<Player>();
         /// <summary>
         ///  服务器版本
         /// </summary>
-        public string Version
-        {
-            get
-            {
-                return version;
-            }
+        public string Version { get; set; }
 
-            set
-            {
-                version = value;
-            }
-        }
         /// <summary>
         /// 服务器Session
         /// </summary>
-        public string Session
-        {
-            get
-            {
-                return session;
-            }
+        public string Session { get; set; }
 
-            set
-            {
-                session = value;
-            }
-        }
         /// <summary>
         /// 服务器创建时间
         /// </summary>
-        public string CreateTime
-        {
-            get
-            {
-                return createTime;
-            }
+        public string CreateTime { get; set; }
 
-            set
-            {
-                createTime = value;
-            }
-        }
         /// <summary>
         /// 玩家列表
         /// </summary>
-        internal List<Player> ListPlayer
-        {
-            get
-            {
-                return listPlayer;
-            }
-
-            set
-            {
-                listPlayer = value;
-            }
-        }
+        internal List<Player> ListPlayer { get; set; } = new List<Player>();
 
         /// <summary>
         /// 获取玩家
@@ -86,70 +40,67 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             try
             {
                 // 读文件
-                string[] str = File.ReadAllLines(path);
+                var str = File.ReadAllLines(path);
 
-                string ip = "";
-                string name = "";
-                string port = "";
-                string id = "";
-                string numOfId = "";
+                var ip = "";
+                var name = "";
+                var port = "";
+                var id = "";
+                var numOfId = "";
 
-                for (int i = 0; i < str.Length; i++)
+                foreach (var server in str)
                 {
-
-
                     // 服务器版本
-                    if (str[i].Contains(": Version: "))
+                    if (server.Contains(": Version: "))
                     {
-                        Version = str[i].Substring(str[i].Trim().Length - 6);
+                        Version = server.Substring(server.Trim().Length - 6);
                     }
                     // Session
-                    if (str[i].Contains(": Begin Session:"))
+                    if (server.Contains(": Begin Session:"))
                     {
-                        Session = str[i].Substring(str[i].Trim().Length - 16);
+                        Session = server.Substring(server.Trim().Length - 16);
                     }
                     // 服务器创建时间(英语)
-                    if (str[i].Contains(": Current time:"))
+                    if (server.Contains(": Current time:"))
                     {
-                        CreateTime = str[i].Replace("time:", "$").Split('$')[1];
+                        CreateTime = server.Replace("time:", "$").Split('$')[1];
                     }
                     // 玩家ip
-                    if (str[i].Contains(": New incoming connection"))
+                    if (server.Contains(": New incoming connection"))
                     {
-                        string RegexStr = @"\d+\.\d+\.\d+\.\d+";
-                        ip = Regex.Match(str[i], RegexStr).Value;
+                        const string regexStr = @"\d+\.\d+\.\d+\.\d+";
+                        ip = Regex.Match(server, regexStr).Value;
                     }
                     // 玩家端口
-                    if (str[i].Contains(": New incoming connection"))
+                    if (server.Contains(": New incoming connection"))
                     {
 
-                        port = str[i].Split('|')[1].Trim().Split(' ')[0];
+                        port = server.Split('|')[1].Trim().Split(' ')[0];
                     }
                     // name id
-                    if (str[i].Contains(": Client authenticated:"))
+                    if (server.Contains(": Client authenticated:"))
                     {
 
-                        id = str[i].Split('(', ')')[1].Trim();
-                        name = str[i].Split('(', ')')[2].Trim();
+                        id = server.Split('(', ')')[1].Trim();
+                        name = server.Split('(', ')')[2].Trim();
                     }
                     // numOfId
-                    if (str[i].Contains(": [Steam] Authenticated "))
+                    if (server.Contains(": [Steam] Authenticated "))
                     {
-                        string RegexStr = @"'\d+'";
-                        string ff = Regex.Match(str[i], RegexStr).Value;
+                        const string regexStr = @"'\d+'";
+                        var ff = Regex.Match(server, regexStr).Value;
                         numOfId = ff.Substring(1, ff.Length - 2);
                     }
                     if (ip != "" && name != "" && port != "" && id != "" && numOfId != "")
                     {
-                        Player p = new Player(name, ip, port, numOfId, id);
-                        bool isHave = false;
-                        for (int j = 0; j < ListPlayer.Count; j++)
+                        var p = new Player(name, ip, port, numOfId, id);
+                        var isHave = false;
+                        foreach (var player in ListPlayer)
                         {
-                            if (ListPlayer[j].Id == id)
+                            if (player.Id == id)
                             {
                                 isHave = true;
                             }
-
                         }
 
                         if (isHave == false)
@@ -164,8 +115,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                         numOfId = "";
 
                     }
-
-
                 }
                 ip = "";
                 name = "";
@@ -175,13 +124,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             }
             catch (Exception)
             {
-
-
+                // ignored
             }
-
-             
         }
-
-
     }
 }

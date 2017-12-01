@@ -25,14 +25,6 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class CreaturePage : Page
     {
-        private readonly ObservableCollection<Creature> _creatureLandData = new ObservableCollection<Creature>();
-        private readonly ObservableCollection<Creature> _creatureOceanData = new ObservableCollection<Creature>();
-        private readonly ObservableCollection<Creature> _creatureFlyData = new ObservableCollection<Creature>();
-        private readonly ObservableCollection<Creature> _creatureCaveData = new ObservableCollection<Creature>();
-        private readonly ObservableCollection<Creature> _creatureEvilData = new ObservableCollection<Creature>();
-        private readonly ObservableCollection<Creature> _creatureOthersData = new ObservableCollection<Creature>();
-        private readonly ObservableCollection<Creature> _creatureBossData = new ObservableCollection<Creature>();
-
         private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
@@ -47,7 +39,7 @@ namespace 饥荒百科全书CSharp.View
             Deserialize();
             if (extraData == null)
             {
-                LeftFrame.NavigationService.Navigate(new CreatureDetail(), _creatureLandData[0]);
+                LeftFrame.NavigationService.Navigate(new CreatureDetail(), Global.CreatureLandData[0]);
             }
             else
             {
@@ -56,31 +48,31 @@ namespace 饥荒百科全书CSharp.View
                 switch (extraData[0])
                 {
                     case "CreatureLand":
-                        OnNavigatedToCreatureDialog(_creatureLandData, suggestBoxItemPicture);
+                        OnNavigatedToCreatureDialog(Global.CreatureLandData, suggestBoxItemPicture);
                         break;
                     case "CreatureOcean":
-                        OnNavigatedToCreatureDialog(_creatureOceanData, suggestBoxItemPicture);
+                        OnNavigatedToCreatureDialog(Global.CreatureOceanData, suggestBoxItemPicture);
                         break;
                     case "CreatureFly":
-                        OnNavigatedToCreatureDialog(_creatureFlyData, suggestBoxItemPicture);
+                        OnNavigatedToCreatureDialog(Global.CreatureFlyData, suggestBoxItemPicture);
                         break;
                     case "CreatureCave":
-                        OnNavigatedToCreatureDialog(_creatureCaveData, suggestBoxItemPicture);
+                        OnNavigatedToCreatureDialog(Global.CreatureCaveData, suggestBoxItemPicture);
                         break;
                     case "CreatureEvil":
-                        OnNavigatedToCreatureDialog(_creatureEvilData, suggestBoxItemPicture);
+                        OnNavigatedToCreatureDialog(Global.CreatureEvilData, suggestBoxItemPicture);
                         break;
                     case "CreatureOther":
-                        OnNavigatedToCreatureDialog(_creatureOthersData, suggestBoxItemPicture);
+                        OnNavigatedToCreatureDialog(Global.CreatureOthersData, suggestBoxItemPicture);
                         break;
                     case "CreatureBoss":
-                        OnNavigatedToCreatureDialog(_creatureBossData, suggestBoxItemPicture);
+                        OnNavigatedToCreatureDialog(Global.CreatureBossData, suggestBoxItemPicture);
                         break;
                 }
             }
         }
 
-        private void OnNavigatedToCreatureDialog(ObservableCollection<Creature> creatureCollection, string suggestBoxItemPicture)
+        private void OnNavigatedToCreatureDialog(List<Creature> creatureCollection, string suggestBoxItemPicture)
         {
             foreach (var gridViewItem in creatureCollection)
             {
@@ -109,77 +101,13 @@ namespace 饥荒百科全书CSharp.View
 
         public void Deserialize()
         {
-            _creatureLandData.Clear();
-            _creatureOceanData.Clear();
-            _creatureFlyData.Clear();
-            _creatureCaveData.Clear();
-            _creatureEvilData.Clear();
-            _creatureOthersData.Clear();
-            _creatureBossData.Clear();
-            var creature = JsonConvert.DeserializeObject<CreaturesRootObject>(StringProcess.GetJsonString("Creatures.json"));
-            foreach (var creatureLandItems in creature.Land.Creature)
-            {
-                _creatureLandData.Add(creatureLandItems);
-            }
-            foreach (var creatureLandItems in _creatureLandData)
-            {
-                creatureLandItems.Picture = StringProcess.GetGameResourcePath(creatureLandItems.Picture);
-            }
-            foreach (var creatureOceanItems in creature.Ocean.Creature)
-            {
-                _creatureOceanData.Add(creatureOceanItems);
-            }
-            foreach (var creatureOceanItems in _creatureOceanData)
-            {
-                creatureOceanItems.Picture = StringProcess.GetGameResourcePath(creatureOceanItems.Picture);
-            }
-            foreach (var creatureFlyItems in creature.Fly.Creature)
-            {
-                _creatureFlyData.Add(creatureFlyItems);
-            }
-            foreach (var creatureFlyItems in _creatureFlyData)
-            {
-                creatureFlyItems.Picture = StringProcess.GetGameResourcePath(creatureFlyItems.Picture);
-            }
-            foreach (var creatureCaveItems in creature.Cave.Creature)
-            {
-                _creatureCaveData.Add(creatureCaveItems);
-            }
-            foreach (var creatureCaveItems in _creatureCaveData)
-            {
-                creatureCaveItems.Picture = StringProcess.GetGameResourcePath(creatureCaveItems.Picture);
-            }
-            foreach (var creatureEvilItems in creature.Evil.Creature)
-            {
-                _creatureEvilData.Add(creatureEvilItems);
-            }
-            foreach (var creatureEvilItems in _creatureEvilData)
-            {
-                creatureEvilItems.Picture = StringProcess.GetGameResourcePath(creatureEvilItems.Picture);
-            }
-            foreach (var creatureOthersItems in creature.Others.Creature)
-            {
-                _creatureOthersData.Add(creatureOthersItems);
-            }
-            foreach (var creatureOthersItems in _creatureOthersData)
-            {
-                creatureOthersItems.Picture = StringProcess.GetGameResourcePath(creatureOthersItems.Picture);
-            }
-            foreach (var creatureBossItems in creature.Boss.Creature)
-            {
-                _creatureBossData.Add(creatureBossItems);
-            }
-            foreach (var creatureBossItems in _creatureBossData)
-            {
-                creatureBossItems.Picture = StringProcess.GetGameResourcePath(creatureBossItems.Picture);
-            }
-            LandExpander.DataContext = _creatureLandData;
-            OceanExpander.DataContext = _creatureOceanData;
-            FlyExpander.DataContext = _creatureFlyData;
-            CaveExpander.DataContext = _creatureCaveData;
-            EvilExpander.DataContext = _creatureEvilData;
-            OthersExpander.DataContext = _creatureOthersData;
-            BossExpander.DataContext = _creatureBossData;
+            LandExpander.DataContext = Global.CreatureLandData;
+            OceanExpander.DataContext = Global.CreatureOceanData;
+            FlyExpander.DataContext = Global.CreatureFlyData;
+            CaveExpander.DataContext = Global.CreatureCaveData;
+            EvilExpander.DataContext = Global.CreatureEvilData;
+            OthersExpander.DataContext = Global.CreatureOthersData;
+            BossExpander.DataContext = Global.CreatureBossData;
         }
 
         private void CreatureButton_Click(object sender, RoutedEventArgs e)

@@ -509,7 +509,7 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "模拟SplitView按钮"
-        #region "左侧菜单按钮"
+        #region "汉堡菜单开关"
         //左侧菜单状态，0为关闭，1为打开
         public static byte LeftMenuState;
         //左侧菜单开关
@@ -540,7 +540,9 @@ namespace 饥荒百科全书CSharp
                 LeftMenuState = 0;
             }
         }
-        //左侧菜单按钮
+        #endregion
+
+        #region "页面切换"
         private void Sidebar_Welcome_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
@@ -602,7 +604,6 @@ namespace 饥荒百科全书CSharp
             RightFrame.NavigationService.Navigate(new SettingPage());
         }
         #endregion
-
         #endregion
     }
 }
