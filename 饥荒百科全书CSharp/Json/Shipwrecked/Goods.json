@@ -1029,7 +1029,7 @@
         "Name": "露西斧",
         "EnName": "Lucy the Axe",
         "Attack": 27.2,
-        "Durability": "1000",
+        "Durability": "10001",
         "Introduction": "除了用作工具还能用来打怪。",
         "Console": "lucy"
       },
@@ -1064,7 +1064,7 @@
         "Picture": "G_rawling",
         "Name": "罗林",
         "EnName": "Rawling",
-        "Durability": "1000",
+        "Durability": "10001",
         "Sanity": 2,
         "Introduction": "可以在深海发现它，带在身上有精神光环，每抛一次也会加1点精神。",
         "Console": "rawling"
@@ -1587,7 +1587,7 @@
         "Name": "坎普斯背包",
         "EnName": "Krampus Sack",
         "DropBy": "A_krampus_sw",
-        "Durability": "1000",
+        "Durability": "10001",
         "Introduction": "击杀坎普斯极小几率获得。",
         "Console": "krampus_sack"
       },
@@ -1716,7 +1716,7 @@
         "Picture": "G_bioluminescence",
         "Name": "海洋生物",
         "EnName": "Bioluminescence",
-        "Fresh": 1000,
+        "Fresh": 10001,
         "Console": "bioluminescence"
       },
       {
@@ -1742,7 +1742,7 @@
       },
       {
         "Picture": "F_dead_rainbow_jellyfish",
-        "Name": "死彩虹水母",
+        "Name": "死水母",
         "EnName": "Dead Rainbow Jellyfish",
         "Fresh": 6,
         "Console": "rainbowjellyfish_dead"

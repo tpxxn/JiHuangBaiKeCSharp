@@ -109,7 +109,6 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>转换完成的PicButton</returns>
         public static PicButton ButtonToPicButton(Button button)
         {
-            FindChildren(new List<DependencyObject>(), RootGrid);
             return (PicButton)((StackPanel)button.Parent).Parent;
         }
 

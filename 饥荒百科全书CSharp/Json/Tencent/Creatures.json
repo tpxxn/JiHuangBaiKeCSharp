@@ -1112,7 +1112,7 @@
 				"Picture": "A_cave_spider",
 				"Name": "洞穴蜘蛛",
 				"EnName": "Cave Spider",
-				"Health": 150,
+				"Health": 225,
 				"Attack": 20,
 				"AttackInterval": 3,
 				"MoveSpeed": 3,

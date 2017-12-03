@@ -523,9 +523,6 @@ namespace 饥荒百科全书CSharp
                 Animation.Anim(LcWidth, 50, 150, WidthProperty);
                 Animation.Anim(HamburgerButtonCanvas, 50, 150, WidthProperty);
                 Animation.Anim(LeftWrapPanel, 50, 150, WidthProperty);
-                LcWidth.Width = new GridLength(150);
-                HamburgerButtonCanvas.Width = 150;
-                LeftWrapPanel.Width = 150;
                 LeftMenuState = 1;
             }
             else
@@ -534,9 +531,6 @@ namespace 饥荒百科全书CSharp
                 Animation.Anim(LcWidth, 150, 50, WidthProperty);
                 Animation.Anim(HamburgerButtonCanvas, 150, 50, WidthProperty);
                 Animation.Anim(LeftWrapPanel, 150, 50, WidthProperty);
-                LcWidth.Width = new GridLength(50);
-                HamburgerButtonCanvas.Width = 50;
-                LeftWrapPanel.Width = 50;
                 LeftMenuState = 0;
             }
         }

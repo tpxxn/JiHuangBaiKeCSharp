@@ -114,7 +114,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
                 barChart.ValueTextBlock.Foreground = new SolidColorBrush(Colors.Black);
                 barChart.ValueRectangle.Width = (double)e.NewValue / barChart.MaxValue * 300;
             }
-            if ((double)e.NewValue == 1000)
+            if ((double)e.NewValue == 10001)
             {
                 barChart.ValueTextBlock.Text = "∞";
             }

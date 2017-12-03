@@ -1379,7 +1379,7 @@
         "Name": "露西斧",
         "EnName": "Lucy the Axe",
         "Attack": 27.2,
-        "Durability": "1000",
+        "Durability": "10001",
         "Introduction": "除了用作工具还能用来打怪。",
         "Console": "lucy"
       },
@@ -1406,7 +1406,7 @@
         "Name": "步行手杖",
         "EnName": "Walking Cane",
         "Attack": 17,
-        "Durability": "1000",
+        "Durability": "10001",
         "Introduction": "除了用作工具还能用来打怪。",
         "Console": "cane"
       },
@@ -2002,7 +2002,7 @@
         "Ability": [
           "14格背包"
         ],
-        "Durability": "1000",
+        "Durability": "10001",
         "Introduction": "击杀坎普斯极小几率获得。",
         "Console": "krampus_sack"
       },
@@ -2292,28 +2292,28 @@
         "Picture": "G_fireflies",
         "Name": "萤火虫",
         "EnName": "Fireflies",
-        "Fresh": 1000,
+        "Fresh": 10001,
         "Console": "fireflies"
       },
       {
         "Picture": "A_blue_spore",
         "Name": "蓝色孢子",
         "EnName": "Blue Spore",
-        "Fresh": 1000,
+        "Fresh": 10001,
         "Console": "spore_tall"
       },
       {
         "Picture": "A_green_spore",
         "Name": "绿色孢子",
         "EnName": "Green Spore",
-        "Fresh": 1000,
+        "Fresh": 10001,
         "Console": "spore_small"
       },
       {
         "Picture": "A_red_spore",
         "Name": "红色孢子",
         "EnName": "Red Spore",
-        "Fresh": 1000,
+        "Fresh": 10001,
         "Console": "spore_medium"
       }
     ]
