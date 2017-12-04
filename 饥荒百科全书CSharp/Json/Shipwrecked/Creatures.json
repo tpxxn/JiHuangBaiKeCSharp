@@ -901,78 +901,6 @@
 	"Evil": {
 		"Creature": [
 			{
-				"Picture": "A_hound",
-				"Name": "猎犬",
-				"EnName": "Hound",
-				"Health": 150,
-				"Attack": 20,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 10,
-				"RunSpeed": 10,
-				"Dangerous": 3,
-				"SanityEffect": -40,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_hound's_tooth|×1（12.5%）"
-				],
-				"Introduction": "猎犬通常出生在猎犬丘，它们速度极快，成群结队，是新手的噩梦。除了猎犬丘，还会有周期性的野生猎犬全世界范围内搜寻并攻击玩家(在进攻前会有咆哮声警告)，必须在猎犬到来前做好应敌准备，每一波猎犬都会比前一波更猛烈，并且提前咆哮警告时间越来越短，直到猎犬数量达到最大值。夏季和秋季的猎犬进攻会伴随着红色猎犬，冬季和春季的猎犬进攻会伴随着蓝色猎犬。",
-				"Console": "hound"
-			},
-			{
-				"Picture": "A_red_hound",
-				"Name": "红色猎犬",
-				"EnName": "Red Hound",
-				"Health": 100,
-				"Attack": 30,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 10,
-				"RunSpeed": 10,
-				"Dangerous": 10,
-				"SanityEffect": -40,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_hound's_tooth|×1",
-					"G_ash|×3",
-					"G_red_gem|×1（20%）"
-				],
-				"Ability": [
-					"被杀死后燃烧周围可燃物"
-				],
-				"Introduction": "红色猎犬死亡时会燃烧周围的可燃物，如果这些可燃物在雪球发射器的范围内就不会被烧毁，并且不会掉落灰烬。有时候会看到4、5只睡着的红色猎犬围着一个火魔杖睡觉，若直接捡起火魔杖，这些猎犬会醒来并攻击玩家，建议单独消灭每一只红色猎犬，因为攻击其中一只其他的红色猎犬并不会醒来。",
-				"Console": "firehound"
-			},
-			{
-				"Picture": "A_blue_hound",
-				"Name": "蓝色猎犬",
-				"EnName": "Blue Hound",
-				"Health": 100,
-				"Attack": 30,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 10,
-				"RunSpeed": 10,
-				"Dangerous": 4,
-				"SanityEffect": -40,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_hound's_tooth|×2",
-					"G_blue_gem|×1（20%）"
-				],
-				"Ability": [
-					"被杀死后冰冻周围可冻物体"
-				],
-				"Introduction": "蓝色猎犬死亡时会冰冻周围生物，持续约5秒。海象总是会带着两只蓝色猎犬。和火魔杖陷阱一样有几率可以找到冰魔杖陷阱。",
-				"Console": "icehound"
-			},
-			{
 				"Picture": "A_sea_hound",
 				"Name": "海狗",
 				"EnName": "Sea Hound",
@@ -991,85 +919,85 @@
 					"G_hound's_tooth|×1（12.5%）",
 					"F_shark_fin|×1（12.5%）"
 				],
-				"Introduction": "在船难版里，如果猎犬进攻时间到了而玩家在海上的话，就会有海狗代替猎犬来发动进攻。其掉落的鱼翅可以做鱼翅汤和星芒头盔。",
+				"Introduction": "在海上航行有可能会遇到一只或几只海狗，如果掉落在海里的肉类越多，海狗会来得越多。钓鱼也有20%的几率召来海狗。其掉落的鱼翅可以做鱼翅汤和星芒头盔。",
 				"Console": "sharx"
 			},
-			{
-				"Picture": "A_crocodog",
-				"Name": "鳄狗",
-				"EnName": "Crocodog",
-				"Health": 150,
-				"Attack": 20,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 10,
-				"RunSpeed": 10,
-				"Dangerous": 4,
-				"SanityEffect": -40,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_hound's_tooth|×1（12.5%）"
-				],
-				"Ability": [
-					"可以在陆地和水中活动"
-				],
-				"Introduction": "代替猎犬的生物，可以在陆地和水中活动，令人十分厌恶。",
-				"Console": "crocodog"
-			},
-			{
-				"Picture": "A_yellow_crocodog",
-				"Name": "黄色鳄狗",
-				"EnName": "Yellow Crocodog",
-				"Health": 150,
-				"Attack": 30,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 10,
-				"RunSpeed": 10,
-				"Dangerous": 4,
-				"SanityEffect": -40,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_hound's_tooth|×1",
-					"G_venom_gland|×1（20%）"
-				],
-				"Ability": [
-					"可以在陆地和水中活动",
-					"攻击带毒",
-					"免疫毒性攻击"
-				],
-				"Introduction": "代替猎犬的生物，可以在陆地和水中活动，令人十分厌恶。攻击会附带毒并且免疫毒性攻击，出现在干燥季节。",
-				"Console": "poisoncrocodog"
-			},
-			{
-				"Picture": "A_blue_crocodog",
-				"Name": "蓝色鳄狗",
-				"EnName": "Blue Crocodog",
-				"Health": 150,
-				"Attack": 30,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 10,
-				"RunSpeed": 10,
-				"Dangerous": 4,
-				"SanityEffect": -40,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_hound's_tooth|×2",
-					"F_seaweed|×1（20%）"
-				],
-				"Ability": [
-					"可以在陆地和水中活动"
-				],
-				"Introduction": "代替猎犬的生物，可以在陆地和水中活动，令人十分厌恶。抖水时会产生水坑，出现在飓风季节。",
-				"Console": "watercrocodog"
-			},
+      {
+        "Picture": "A_crocodog",
+        "Name": "鳄狗",
+        "EnName": "Crocodog",
+        "Health": 150,
+        "Attack": 20,
+        "AttackInterval": 2,
+        "AttackScope": 3,
+        "MoveSpeed": 10,
+        "RunSpeed": 10,
+        "Dangerous": 4,
+        "SanityEffect": -40,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_monster_meat|×1",
+          "G_hound's_tooth|×1（12.5%）"
+        ],
+        "Ability": [
+          "可以在陆地和水中活动"
+        ],
+        "Introduction": "代替猎犬的生物，在猎犬进攻时间出现，可以在陆地和水中活动，令人十分厌恶。",
+        "Console": "crocodog"
+      },
+      {
+        "Picture": "A_yellow_crocodog",
+        "Name": "黄色鳄狗",
+        "EnName": "Yellow Crocodog",
+        "Health": 150,
+        "Attack": 30,
+        "AttackInterval": 2,
+        "AttackScope": 3,
+        "MoveSpeed": 10,
+        "RunSpeed": 10,
+        "Dangerous": 4,
+        "SanityEffect": -40,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_monster_meat|×1",
+          "G_hound's_tooth|×1",
+          "G_venom_gland|×1（20%）"
+        ],
+        "Ability": [
+          "可以在陆地和水中活动",
+          "攻击带毒",
+          "免疫毒性攻击"
+        ],
+        "Introduction": "代替猎犬的生物，在猎犬进攻时间出现，可以在陆地和水中活动，令人十分厌恶。攻击会附带毒并且免疫毒性攻击，出现在干燥季节。",
+        "Console": "poisoncrocodog"
+      },
+      {
+        "Picture": "A_blue_crocodog",
+        "Name": "蓝色鳄狗",
+        "EnName": "Blue Crocodog",
+        "Health": 150,
+        "Attack": 30,
+        "AttackInterval": 2,
+        "AttackScope": 3,
+        "MoveSpeed": 10,
+        "RunSpeed": 10,
+        "Dangerous": 4,
+        "SanityEffect": -40,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_monster_meat|×1",
+          "G_hound's_tooth|×2",
+          "F_seaweed|×1（20%）"
+        ],
+        "Ability": [
+          "可以在陆地和水中活动"
+        ],
+        "Introduction": "代替猎犬的生物，在猎犬进攻时间出现，可以在陆地和水中活动，令人十分厌恶。抖水时会产生水坑，出现在飓风季节。",
+        "Console": "watercrocodog"
+      },
 			{
 				"Picture": "A_krampus_sw",
 				"Name": "坎普斯",

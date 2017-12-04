@@ -235,7 +235,6 @@ namespace 饥荒百科全书CSharp.View
             else
             {
                 var foodButtonName = ((Button)sender).Name;
-                MessageBox.Show(foodButtonName);
                 switch (foodButtonName)
                 {
                     case "Food1Button":
@@ -797,7 +796,7 @@ namespace 饥荒百科全书CSharp.View
             // 便携式烹饪锅的四种食物
             if (Global.GameVersion == 4)
             {
-                if (_csFtVegetables == 1 && _csFtNeonQuattro == 1 && _csFtPierrotFish == 1 && _csFtPurpleGrouper == 1)
+                if (_csFtJellyfish == 1 && _csFtNeonQuattro == 1 && _csFtPierrotFish == 1 && _csFtPurpleGrouper == 1)
                     CS_CrockPotListAddFood("F_tropical_bouillabaisse", 40);
                 if (CrockpotComboBox.SelectedIndex == 1)
                 {
@@ -1104,7 +1103,7 @@ namespace 饥荒百科全书CSharp.View
         {
             foreach (var foodRecipe in Global.FoodRecipeData)
             {
-                if (source == foodRecipe.Picture)
+                if (StringProcess.GetGameResourcePath(source) == foodRecipe.Picture)
                 {
                     FoodRecipeHealth.Value = foodRecipe.Health;
                     FoodRecipeHunger.Value = foodRecipe.Hunger;
