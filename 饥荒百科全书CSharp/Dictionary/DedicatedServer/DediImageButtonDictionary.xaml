@@ -1,25 +1,21 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:饥荒百科全书CSharp.Dictionary.DedicatedServer"
     xmlns:dedicatedServer="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer">
 
-
-
     <!--ImageButton4的样式 x:Key="ImageButton4Style"-->
-    <Style  TargetType="dedicatedServer:DediImageButton">
+    <Style TargetType="dedicatedServer:DediImageButton">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
                     <!--ImageButton4控件模板-->
-                    <ControlTemplate  TargetType="dedicatedServer:DediImageButton">
+                    <ControlTemplate TargetType="dedicatedServer:DediImageButton">
                         <!--image/text-->
                         <!--背景色，透明-->
                         <Grid Background="Transparent">
                             <Image x:Name="image" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ImageMouseLeave}"/>
                             <Label x:Name="label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Text}"/>
                         </Grid>
-
                         <!--触发器-->
                         <ControlTemplate.Triggers>
                             <!--鼠标滑过-->
@@ -33,15 +29,12 @@
                             </Trigger>
                             <!--按钮失效-->
                             <!--<Trigger Property="IsEnabled" Value="false">
-                <Setter TargetName="image" Property="Source" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ImageCurrent}" />
-            </Trigger>-->
+                                <Setter TargetName="image" Property="Source" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ImageCurrent}" />
+                            </Trigger>-->
                         </ControlTemplate.Triggers>
-
-
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style.Setters>
     </Style>
-
 </ResourceDictionary>

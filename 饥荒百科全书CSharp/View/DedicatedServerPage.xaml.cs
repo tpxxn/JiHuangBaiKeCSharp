@@ -9,7 +9,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -19,17 +18,12 @@ using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer;
 using 饥荒百科全书CSharp.Class.DedicatedServers.Tools;
 using 饥荒百科全书CSharp.MyUserControl.DedicatedServer;
-using Button = System.Windows.Controls.Button;
-using CheckBox = System.Windows.Controls.CheckBox;
-using Label = System.Windows.Controls.Label;
-using MessageBox = System.Windows.MessageBox;
-using MouseEventArgs = System.Windows.Input.MouseEventArgs;
-using Orientation = System.Windows.Controls.Orientation;
-using RadioButton = System.Windows.Controls.RadioButton;
 
 namespace 饥荒百科全书CSharp.View
 {
-
+    /// <summary>
+    /// 枚举类型 Message
+    /// </summary>
     public enum Message
     {
         保存,
@@ -37,417 +31,14 @@ namespace 饥荒百科全书CSharp.View
         回档,
         重置世界
     }
+
     /// <summary>
     /// DedicatedServerPage.xaml 的交互逻辑
     /// </summary>
     public partial class DedicatedServerPage : Page
     {
-        public DedicatedServerPage()
-        {
-            InitializeComponent();
-        }
-
-        #region "DedicatedServer"
-        #region "主菜单按钮"
-        private void DediTitleSetting_Click(object sender, RoutedEventArgs e)
-        {
-            DediButtomPanelVisibility("Setting");
-        }
-
-        private void DediTitleBaseSet_Click(object sender, RoutedEventArgs e)
-        {
-            DediButtomPanelVisibility("BaseSet");
-        }
-
-        private void DediTitleEditWorld_Click(object sender, RoutedEventArgs e)
-        {
-            DediButtomPanelVisibility("EditWorld");
-        }
-
-        private void DediTitleMod_Click(object sender, RoutedEventArgs e)
-        {
-            DediButtomPanelVisibility("Mod");
-        }
-
-        private void DediTitleRollback_Click(object sender, RoutedEventArgs e)
-        {
-            DediButtomPanelVisibility("Rollback");
-        }
-
-        private void DediTitleBlacklist_Click(object sender, RoutedEventArgs e)
-        {
-            DediButtomPanelVisibility("Blacklist");
-        }
-        #endregion
-
-        #region "下侧面板Visibility属性设置"
-        private void DediButtomPanelVisibilityInitialize()
-        {
-            foreach (UIElement vControl in DediButtomBg.Children)
-            {
-                vControl.Visibility = Visibility.Collapsed;
-            }
-
-            Global.UiElementVisibility(Visibility.Visible, DediButtomBorderH1, DediButtomBorderH2, DediButtomBorderV1, DediButtomBorderV4);
-        }
-
-        private void DediButtomPanelVisibility(string obj)
-        {
-            DediButtomPanelVisibilityInitialize();
-            switch (obj)
-            {
-                case "Setting":
-                    DediSetting.Visibility = Visibility.Visible;
-                    break;
-                case "BaseSet":
-                    DediBaseSet.Visibility = Visibility.Visible;
-                    break;
-                case "EditWorld":
-                    DediWorldSet.Visibility = Visibility.Visible;
-                    break;
-                case "Mod":
-                    DediModSet.Visibility = Visibility.Visible;
-                    break;
-                case "Rollback":
-                    DediModRollBack.Visibility = Visibility.Visible;
-                    break;
-                case "Blacklist":
-                    DediModManager.Visibility = Visibility.Visible;
-                    break;
-            }
-        }
-        #endregion
-
-        private void DediButtomPanelInitalize()
-        {
-            //DediBaseSetRangeInitalize();
-
-
-
-            string[] gameVersion = { "Steam", "TGP", "youxia" };
-            DediSettingGameVersionSelect.ItemsSource = gameVersion;
-            DediButtomPanelVisibilityInitialize();
-
-
-            string[] noYes = { "否", "是" };
-            string[] gamemode = { "生存", "荒野", "无尽" };
-            var maxPlayer = new string[64];
-            for (int i = 1; i <= 64; i++)
-            {
-                maxPlayer[i - 1] = i.ToString();
-            }
-            string[] offline = { "在线", "离线" };
-            DediBaseSetGamemodeSelect.ItemsSource = gamemode;
-            DediBaseSetPvpSelect.ItemsSource = noYes;
-            DediBaseSetMaxPlayerSelect.ItemsSource = maxPlayer;
-            DediBaseOfflineSelect.ItemsSource = offline;
-            DediBaseIsPause.ItemsSource = noYes;
-            DediBaseIsCave.ItemsSource = noYes;
-            DediBaseSet.Visibility = Visibility.Visible;
-
-        }
-
-        #region "Intention"
-        private void DediIntention_social_Click(object sender, RoutedEventArgs e)
-        {
-            DediIntention_Click("social");
-        }
-
-        private void DediIntention_social_MouseEnter(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
-        }
-
-        private void DediIntention_social_MouseLeave(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = "";
-        }
-
-        private void DediIntention_cooperative_Click(object sender, RoutedEventArgs e)
-        {
-            DediIntention_Click("cooperative");
-        }
-
-        private void DediIntention_cooperative_MouseEnter(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
-        }
-
-        private void DediIntention_cooperative_MouseLeave(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = "";
-        }
-
-        private void DediIntention_competitive_Click(object sender, RoutedEventArgs e)
-        {
-            DediIntention_Click("competitive");
-        }
-
-        private void DediIntention_competitive_MouseEnter(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
-        }
-
-        private void DediIntention_competitive_MouseLeave(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = "";
-        }
-
-        private void DediIntention_madness_Click(object sender, RoutedEventArgs e)
-        {
-            DediIntention_Click("madness");
-        }
-
-        private void DediIntention_madness_MouseEnter(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = (string)(((Button)sender).Tag);
-        }
-
-        private void DediIntention_madness_MouseLeave(object sender, MouseEventArgs e)
-        {
-            DidiIntentionTextBlock.Text = "";
-        }
-
-        private void DediIntention_Click(string intention)
-        {
-            DediButtomPanelVisibilityInitialize();
-            DediBaseSet.Visibility = Visibility.Visible;
-            switch (intention)
-            {
-                case "social":
-                    DediBaseSetIntentionButton.Content = "交际";
-                    break;
-                case "cooperative":
-                    DediBaseSetIntentionButton.Content = "合作";
-                    break;
-                case "competitive":
-                    DediBaseSetIntentionButton.Content = "竞争";
-                    break;
-                case "madness":
-                    DediBaseSetIntentionButton.Content = "疯狂";
-                    break;
-            }
-        }
-        #endregion
-
-        #region "BaseSet"
-
-        private void DediBaseSetHouseName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            DediMainTopWorldName.Text = DediBaseSetHouseName.Text;
-            if (((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao))?.IsChecked == true)
-            {
-                ((RadioButton)DediLeftStackPanel.FindName(name: $"DediRadioButton{CunDangCao}")).Content = DediBaseSetHouseName.Text;
-
-            }
-        }
-
-        private void DediBaseSetIntentionButton_Click(object sender, RoutedEventArgs e)
-        {
-            DediButtomPanelVisibilityInitialize();
-
-            DediIntention.Visibility = Visibility.Visible;
-        }
-
-        #endregion
-        #endregion
-
-        #region "服务器面板"
-
-        // 游戏平台改变,初始化一切
-        private void DediSettingGameVersionSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // 赋值
-
-            GamePingTai = e.AddedItems[0].ToString();
-            if (GamePingTai == "TGP")
-            {
-                DediCtrateOpenGame.Visibility = Visibility.Collapsed;
-                DediCtrateWorldButton.Content = "保存世界";
-            }
-            else
-            {
-                DediCtrateOpenGame.Visibility = Visibility.Visible;
-                DediCtrateWorldButton.Content = "创建世界";
-            }
-            if (e.RemovedItems.Count != 0)
-            {
-                InitServer();
-            }
-        }
-
-        // 选择游戏exe文件
-        private void DediSettingGameDirSelect_Click(object sender, RoutedEventArgs e)
-        {
-
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            // fileDialog.InitialDirectory = "d:\\";
-            fileDialog.Title = "选择游戏exe文件";
-            if (_gamePingTai == "TGP")
-            {
-                fileDialog.Filter = "饥荒游戏exe文件(*.exe)|dontstarve_rail.exe";
-            }
-            else
-            {
-                fileDialog.Filter = "饥荒游戏exe文件(*.exe)|dontstarve_steam.exe";
-            }
-            fileDialog.FilterIndex = 1;
-            fileDialog.RestoreDirectory = true;
-
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                String fileName = fileDialog.FileName;
-                if (string.IsNullOrEmpty(fileName) || !fileName.Contains("dontstarve_"))
-                {
-                    System.Windows.MessageBox.Show("文件选择错误,请选择正确文件,以免出错");
-                    return;
-                }
-                _pathAll.ClientFilePath = fileName;
-                DediSettingGameDirSelectTextBox.Text = fileName;
-                XmlHelper.WriteClientPath(fileName, GamePingTai);
-
-            }
-        }
-
-        // 选择服务器文件
-        private void DediSettingDediDirSelect_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            // fileDialog.InitialDirectory = "d:\\";
-            fileDialog.Title = "选择服务器exe文件";
-
-            fileDialog.Filter = "饥荒服务器exe文件(*.exe)|dontstarve_dedicated_server_nullrenderer.exe";
-
-
-            fileDialog.FilterIndex = 1;
-            fileDialog.RestoreDirectory = true;
-
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                String fileName = fileDialog.FileName;
-                if (string.IsNullOrEmpty(fileName) || !fileName.Contains("dontstarve_dedicated_server_nullrenderer"))
-                {
-                    System.Windows.MessageBox.Show("文件选择错误,请选择正确文件,以免出错");
-                    return;
-                }
-                _pathAll.ServerFilePath = fileName;
-                DediSettingDediDirSelectTextBox.Text = fileName;
-                XmlHelper.WriteServerPath(fileName, GamePingTai);
-
-                // 读取mods
-                _mods = null;
-                if (!string.IsNullOrEmpty(_pathAll.ServerModsDirPath))
-                {
-                    _mods = new Mods(_pathAll.ServerModsDirPath);
-                }
-                SetModSet();
-
-
-            }
-
-        }
-
-        // 双击打开所在文件夹"客户端"
-        private void DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(_pathAll.ClientFilePath) && File.Exists(_pathAll.ClientFilePath))
-            {
-                Process.Start(Path.GetDirectoryName(_pathAll.ClientFilePath));
-            }
-        }
-        // 双击打开所在文件夹"服务端"
-        private void DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(_pathAll.ServerFilePath) && File.Exists(_pathAll.ServerFilePath))
-            {
-                Process.Start(Path.GetDirectoryName(_pathAll.ServerFilePath));
-            }
-        }
-
-        // 删除当前存档按钮
-        private void DediMainTop_Delete_Click(object sender, RoutedEventArgs e)
-        {
-
-            // 0. 关闭服务器
-
-            Process[] ps = Process.GetProcesses();
-            foreach (Process item in ps)
-            {
-                if (item.ProcessName == "dontstarve_dedicated_server_nullrenderer")
-                {
-                    item.Kill();
-                }
-            }
-
-            // 1. radioBox 写 创建世界
-            ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{CunDangCao}")).Content = "创建世界";
-            // 2. 删除当前存档
-            if (Directory.Exists(_pathAll.YyServerDirPath))
-            {
-                Directory.Delete(_pathAll.YyServerDirPath, true);
-            }
-
-           // 2.1 取消选择,谁都不选
-           ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{CunDangCao}")).IsChecked = false;
-
-            // 2.2 
-
-            // DediMainBorder.IsEnabled = false;
-            Jinyong(false);
-            //// 3. 复制一份新的过来                 
-            //ServerTools.Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
-
-
-            //if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao))
-            //{
-            //    Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao);
-            //}
-            //// 4. 读取新的存档
-            //SetBaseSet();
-
-        }
-
-        // 创建世界按钮
-        private void DediCtrateWorldButton_Click(object sender, RoutedEventArgs e)
-        {
-            RunServer();
-        }
-        // 打开游戏
-        private void DediOpenGameButton_Click(object sender, RoutedEventArgs e)
-        {
-            RunClient();
-        }
-
-
-
-
-        private void DediSettingSaveCluster_Click(object sender, RoutedEventArgs e)
-        {
-            var flag = string.IsNullOrEmpty(DediSettingClusterTokenTextBox.Text);
-            if (flag)
-            {
-                MessageBox.Show("cluster没填写，不能保存");
-            }
-            else
-            {
-                bool flag2 = this.DediSettingClusterTokenTextBox.Text.Trim() == "";
-                if (flag2)
-                {
-                    MessageBox.Show("cluster没填写，不能保存");
-                }
-                else
-                {
-                    RegeditRw.RegWrite("cluster", this.DediSettingClusterTokenTextBox.Text.Trim());
-                    MessageBox.Show("保存完毕！");
-                }
-            }
-        }
-
-        #endregion
-
         #region 字段、属性
-
-        private int _cunDangCao = 0; // 存档槽
+        private int _cunDangCao; // 存档槽
         private string _gamePingTai; // 游戏平台
         private readonly UTF8Encoding _utf8NoBom = new UTF8Encoding(false); // 编码
         private Dictionary<string, string> _hanhua;  // 汉化
@@ -479,6 +70,411 @@ namespace 饥荒百科全书CSharp.View
         }
         #endregion
 
+        public DedicatedServerPage()
+        {
+            InitializeComponent();
+            DedicatedServerPanelInitalize();
+        }
+
+        /// <summary>
+        /// 初始化服务器面板
+        /// </summary>
+        private void DedicatedServerPanelInitalize()
+        {
+            string[] gameVersion = { "Steam", "TGP", "youxia" };
+            DediSettingGameVersionSelect.ItemsSource = gameVersion;
+            DediButtomPanelVisibilityInitialize();
+
+            string[] noYes = { "否", "是" };
+            string[] gamemode = { "生存", "荒野", "无尽" };
+            var maxPlayer = new string[64];
+            for (var i = 1; i <= 64; i++)
+            {
+                maxPlayer[i - 1] = i.ToString();
+            }
+            string[] offline = { "在线", "离线" };
+            DediBaseSetGamemodeSelect.ItemsSource = gamemode;
+            DediBaseSetPvpSelect.ItemsSource = noYes;
+            DediBaseSetMaxPlayerSelect.ItemsSource = maxPlayer;
+            DediBaseOfflineSelect.ItemsSource = offline;
+            DediBaseIsPause.ItemsSource = noYes;
+            DediBaseIsCave.ItemsSource = noYes;
+            DediBaseSet.Visibility = Visibility.Visible;
+        }
+
+        #region "DedicatedServer"
+        #region "顶部菜单按钮"
+        private void TitleMenuBaseSet_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("BaseSet");
+        }
+
+        private void TitleMenuEditWorld_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("EditWorld");
+        }
+
+        private void TitleMenuMod_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Mod");
+        }
+
+        private void TitleMenuRollback_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Rollback");
+        }
+
+        private void DediTitleBlacklist_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Blacklist");
+        }
+        #endregion
+
+        #region "主面板Visibility属性设置"
+        private void DediButtomPanelVisibilityInitialize()
+        {
+            foreach (UIElement vControl in ButtomGrid.Children)
+            {
+                vControl.Visibility = Visibility.Collapsed;
+            }
+            Global.UiElementVisibility(Visibility.Visible, DediButtomBorderH1, DediButtomBorderH2, DediButtomBorderV1, DediButtomBorderV4, DediSettingGameVersionSelect);
+        }
+
+        private void DediButtomPanelVisibility(string obj)
+        {
+            DediButtomPanelVisibilityInitialize();
+            switch (obj)
+            {
+                case "Setting":
+                    DediSetting.Visibility = Visibility.Visible;
+                    TitleMenuBaseSet.IsChecked = false;
+                    TitleMenuEditWorld.IsChecked = false;
+                    TitleMenuMod.IsChecked = false;
+                    TitleMenuRollback.IsChecked = false;
+                    break;
+                case "BaseSet":
+                    DediBaseSet.Visibility = Visibility.Visible;
+                    break;
+                case "EditWorld":
+                    DediWorldSet.Visibility = Visibility.Visible;
+                    break;
+                case "Mod":
+                    DediModSet.Visibility = Visibility.Visible;
+                    break;
+                case "Rollback":
+                    DediModRollBack.Visibility = Visibility.Visible;
+                    break;
+                case "Blacklist":
+                    DediModManager.Visibility = Visibility.Visible;
+                    break;
+            }
+        }
+        #endregion
+
+        #region "Intention"
+        private void DediIntention_social_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("social");
+        }
+
+        private void DediIntention_social_MouseEnter(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)((Button)sender).Tag;
+        }
+
+        private void DediIntention_social_MouseLeave(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_cooperative_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("cooperative");
+        }
+
+        private void DediIntention_cooperative_MouseEnter(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)((Button)sender).Tag;
+        }
+
+        private void DediIntention_cooperative_MouseLeave(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_competitive_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("competitive");
+        }
+
+        private void DediIntention_competitive_MouseEnter(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)((Button)sender).Tag;
+        }
+
+        private void DediIntention_competitive_MouseLeave(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_madness_Click(object sender, RoutedEventArgs e)
+        {
+            DediIntention_Click("madness");
+        }
+
+        private void DediIntention_madness_MouseEnter(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = (string)((Button)sender).Tag;
+        }
+
+        private void DediIntention_madness_MouseLeave(object sender, MouseEventArgs e)
+        {
+            DidiIntentionTextBlock.Text = "";
+        }
+
+        private void DediIntention_Click(string intention)
+        {
+            DediButtomPanelVisibilityInitialize();
+            DediBaseSet.Visibility = Visibility.Visible;
+            switch (intention)
+            {
+                case "social":
+                    DediBaseSetIntentionButton.Content = "交际";
+                    break;
+                case "cooperative":
+                    DediBaseSetIntentionButton.Content = "合作";
+                    break;
+                case "competitive":
+                    DediBaseSetIntentionButton.Content = "竞争";
+                    break;
+                case "madness":
+                    DediBaseSetIntentionButton.Content = "疯狂";
+                    break;
+            }
+        }
+        #endregion
+
+        #region "基本设置面板"
+        private void DediBaseSetHouseName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DediMainTopWorldName.Text = DediBaseSetHouseName.Text;
+            if (((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao))?.IsChecked == true)
+            {
+                ((RadioButton)DediLeftStackPanel.FindName(name: $"DediRadioButton{CunDangCao}")).Content = DediBaseSetHouseName.Text;
+
+            }
+        }
+
+        private void DediBaseSetIntentionButton_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibilityInitialize();
+
+            DediIntention.Visibility = Visibility.Visible;
+        }
+        #endregion
+
+        #region "服务器面板"
+
+        // 游戏平台改变,初始化一切
+        private void DediSettingGameVersionSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // 赋值
+
+            GamePingTai = e.AddedItems[0].ToString();
+            if (GamePingTai == "TGP")
+            {
+                CtrateRunGame.Visibility = Visibility.Collapsed;
+                CtrateWorldButton.Content = "保存世界";
+            }
+            else
+            {
+                CtrateRunGame.Visibility = Visibility.Visible;
+                CtrateWorldButton.Content = "创建世界";
+            }
+            if (e.RemovedItems.Count != 0)
+            {
+                InitServer();
+            }
+        }
+
+        // 选择游戏exe文件
+        private void DediSettingGameDirSelect_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Title = "选择游戏exe文件",
+                FileName = _gamePingTai == "TGP"
+                    ? "dontstarve_rail"
+                    : "dontstarve_steam", //默认文件名
+                DefaultExt = ".exe",// 默认文件扩展名
+                Filter = _gamePingTai == "TGP"
+                    ? "饥荒游戏exe文件(*.exe)|dontstarve_rail.exe"
+                    : "饥荒游戏exe文件(*.exe)|dontstarve_steam.exe",
+                FilterIndex = 1,
+                RestoreDirectory = true
+            };
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var fileName = openFileDialog.FileName;
+                if (string.IsNullOrEmpty(fileName) || !fileName.Contains("dontstarve_"))
+                {
+                    MessageBox.Show("文件选择错误,请选择正确文件,以免出错");
+                    return;
+                }
+                _pathAll.ClientFilePath = fileName;
+                DediSettingGameDirSelectTextBox.Text = fileName;
+                XmlHelper.WriteClientPath(fileName, GamePingTai);
+
+            }
+        }
+
+        // 选择服务器文件
+        private void DediSettingDediDirSelect_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Title = "选择服务器exe文件",
+                FileName = "dontstarve_dedicated_server_nullrenderer", //默认文件名
+                DefaultExt = ".exe",// 默认文件扩展名
+                Filter = "饥荒服务器exe文件(*.exe)|dontstarve_dedicated_server_nullrenderer.exe",
+                FilterIndex = 1,
+                RestoreDirectory = true
+            };
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var fileName = openFileDialog.FileName;
+                if (string.IsNullOrEmpty(fileName) || !fileName.Contains("dontstarve_dedicated_server_nullrenderer"))
+                {
+                    MessageBox.Show("文件选择错误,请选择正确文件,以免出错");
+                    return;
+                }
+                _pathAll.ServerFilePath = fileName;
+                DediSettingDediDirSelectTextBox.Text = fileName;
+                XmlHelper.WriteServerPath(fileName, GamePingTai);
+                // 读取mods
+                _mods = null;
+                if (!string.IsNullOrEmpty(_pathAll.ServerModsDirPath))
+                {
+                    _mods = new Mods(_pathAll.ServerModsDirPath);
+                }
+                SetModSet();
+
+
+            }
+
+        }
+
+        /// <summary>
+        /// 双击打开所在文件夹"客户端"
+        /// </summary>
+        private void DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(_pathAll.ClientFilePath) && File.Exists(_pathAll.ClientFilePath))
+            {
+                Process.Start(Path.GetDirectoryName(_pathAll.ClientFilePath));
+            }
+        }
+
+        /// <summary>
+        /// 双击打开所在文件夹"服务端"
+        /// </summary>
+        private void DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(_pathAll.ServerFilePath) && File.Exists(_pathAll.ServerFilePath))
+            {
+                Process.Start(Path.GetDirectoryName(_pathAll.ServerFilePath));
+            }
+        }
+
+        // 删除当前存档按钮
+        private void DediMainTop_Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+            // 0. 关闭服务器
+            var ps = Process.GetProcesses();
+            foreach (var item in ps)
+            {
+                if (item.ProcessName == "dontstarve_dedicated_server_nullrenderer")
+                {
+                    item.Kill();
+                }
+            }
+
+            // 1. radioBox 写 创建世界
+            ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{CunDangCao}")).Content = "创建世界";
+            // 2. 删除当前存档
+            if (Directory.Exists(_pathAll.YyServerDirPath))
+            {
+                Directory.Delete(_pathAll.YyServerDirPath, true);
+            }
+
+           // 2.1 取消选择,谁都不选
+           ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{CunDangCao}")).IsChecked = false;
+
+            // 2.2 
+
+            // DediMainBorder.IsEnabled = false;
+            JinYong(false);
+            //// 3. 复制一份新的过来                 
+            //ServerTools.Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
+
+
+            //if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao))
+            //{
+            //    Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao);
+            //}
+            //// 4. 读取新的存档
+            //SetBaseSet();
+
+        }
+
+        /// <summary>
+        /// 通用设置
+        /// </summary>
+        private void CommonSettingButton_Click(object sender, RoutedEventArgs e)
+        {
+            DediButtomPanelVisibility("Setting");
+        }
+        /// <summary>
+        /// 打开游戏
+        /// </summary>
+        private void OpenGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            RunClient();
+        }
+        /// <summary>
+        /// 创建世界按钮
+        /// </summary>
+        private void CtrateWorldButton_Click(object sender, RoutedEventArgs e)
+        {
+            RunServer();
+        }
+
+        private void DediSettingSaveCluster_Click(object sender, RoutedEventArgs e)
+        {
+            var flag = string.IsNullOrEmpty(DediSettingClusterTokenTextBox.Text);
+            if (flag)
+            {
+                MessageBox.Show("cluster没填写，不能保存");
+            }
+            else
+            {
+                bool flag2 = this.DediSettingClusterTokenTextBox.Text.Trim() == "";
+                if (flag2)
+                {
+                    MessageBox.Show("cluster没填写，不能保存");
+                }
+                else
+                {
+                    RegeditRw.RegWrite("cluster", this.DediSettingClusterTokenTextBox.Text.Trim());
+                    MessageBox.Show("保存完毕！");
+                }
+            }
+        }
+
+        #endregion
+        #endregion
+
         #region 设置
         // 初始化
         public void InitServer()
@@ -493,20 +489,14 @@ namespace 饥荒百科全书CSharp.View
                     RegeditRw.RegWrite("banben", "youxia");
                 }
             }
-
-
             //-1.游戏平台
             SetPingTai();
-
             // 0.路径信息
             SetPath();
-
             // 1.检查存档Server是否存在 
             CheckServer();
-
             // 2.汉化
             _hanhua = XmlHelper.ReadHanhua();
-
             // 3.读取服务器mods文件夹下所有信息.mod多的话,读取时间也多
             //   此时的mod没有被current覆盖
             _mods = null;
@@ -521,6 +511,7 @@ namespace 饥荒百科全书CSharp.View
             // 3."基本设置" 等在 点击radioButton后设置
 
         }
+
         //点击radioButton 时
         private void DediRadioButton_Checked(object sender, RoutedEventArgs e)
         {
@@ -533,11 +524,8 @@ namespace 饥荒百科全书CSharp.View
                 _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Master\modoverrides.lua", _utf8NoBom);
                 _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Caves\modoverrides.lua", _utf8NoBom);
             }
-
-
             // 1.存档槽
             CunDangCao = (int)((RadioButton)sender).Tag;
-
             // 1.5 创建世界
             if (((RadioButton)sender).Content.ToString() == "创建世界")
             {
@@ -554,22 +542,15 @@ namespace 饥荒百科全书CSharp.View
 
             }
             // 1.6 复活
-            Jinyong(true);
-
+            JinYong(true);
             // 2.【基本设置】
             SetBaseSet();
-
             // 3. "世界设置"
             SetOverWorldSet();
             // 3. "世界设置"
             SetCavesSet();
             // 4. "Mod"
-
             SetModSet();
-
-
-
-
         }
 
         // 设置 "Mod"
@@ -591,7 +572,6 @@ namespace 饥荒百科全书CSharp.View
                     }
 
                 }
-
                 // 重新读取
                 _mods.ReadModsOverrides(_pathAll.ServerModsDirPath, _pathAll.YyServerDirPath + @"\Master\modoverrides.lua");
             }
@@ -612,8 +592,8 @@ namespace 饥荒百科全书CSharp.View
                     {
                         Width = 200,
                         Height = 70,
-                        UCTitle = {Content = _mods.ListMod[i].Name},
-                        UCCheckBox = {Tag = i}
+                        UCTitle = { Content = _mods.ListMod[i].Name },
+                        UCCheckBox = { Tag = i }
                     };
                     if (_mods.ListMod[i].Configuration_options.Count != 0)
                     {
@@ -628,15 +608,11 @@ namespace 饥荒百科全书CSharp.View
                     dod.UCCheckBox.Unchecked += CheckBox_Unchecked;
                     dod.PreviewMouseLeftButtonDown += Dod_MouseLeftButtonDown;
                     dod.UCEnableLabel.Content = _mods.ListMod[i].Tyype;
-
-
                     DediModList.Children.Add(dod);
                 }
-
-
             }
-
         }
+
         // 设置 "Mod" "MouseLeftButtonDown"
         private void Dod_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
@@ -650,8 +626,6 @@ namespace 饥荒百科全书CSharp.View
             DediModDescription.FontSize = 12;
             DediModDescription.TextWrapping = TextWrapping.WrapWithOverflow;
             DediModDescription.Text = strName + author + description + version + fileName;
-
-
             if (_mods.ListMod[n].Configuration_options.Count == 0)
             {
                 // 没有细节配置项
@@ -689,7 +663,6 @@ namespace 饥荒百科全书CSharp.View
                         FontWeight = FontWeights.Bold,
                         Content = string.IsNullOrEmpty(item.Value.Label) ? item.Value.Name : item.Value.Label
                     };
-
                     // dediComboBox
                     var dod = new DediComboBox
                     {
@@ -709,11 +682,10 @@ namespace 饥荒百科全书CSharp.View
                     stackPanel.Children.Add(labelModXiJie);
                     stackPanel.Children.Add(dod);
                     DediModXiJie.Children.Add(stackPanel);
-
                 }
-
             }
         }
+
         // 设置 "Mod" "SelectionChanged"
         private void Dod_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -728,25 +700,20 @@ namespace 饥荒百科全书CSharp.View
                     _mods.ListMod[n].Configuration_options[name].Options[((DediComboBox)sender).SelectedIndex].Data;
 
             }
-
         }
+
         // 设置 "Mod" "CheckBox_Unchecked"
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-
             _mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = false;
-
             //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
-
         }
+
         // 设置 "Mod" "CheckBox_Checked"
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-
             _mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = true;
-
             //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
-
         }
 
         // 设置"路径"
@@ -773,9 +740,9 @@ namespace 饥荒百科全书CSharp.View
                 _pathAll.ServerFilePath = "";
 
             }
-
             Debug.WriteLine("路径读取-完");
         }
+
         // 设置"平台"
         private void SetPingTai()
         {
@@ -783,6 +750,7 @@ namespace 饥荒百科全书CSharp.View
             DediSettingGameVersionSelect.Text = _gamePingTai;
             Debug.WriteLine("游戏平台-完");
         }
+
         // 设置"基本"
         private void SetBaseSet()
         {
@@ -807,6 +775,7 @@ namespace 饥荒百科全书CSharp.View
             DediBaseIsCave.DataContext = _baseSet;
             Debug.WriteLine("基本设置-完");
         }
+
         // 设置"地上世界"
         private void SetOverWorldSet()
         {
@@ -958,6 +927,7 @@ namespace 饥荒百科全书CSharp.View
             #endregion
 
         }
+
         // 设置"地上世界"
         private void DiOverWorld_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -1139,6 +1109,7 @@ namespace 饥荒百科全书CSharp.View
 
 
         }
+
         // 设置"地下世界"
         private void DiCaves_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -1218,7 +1189,7 @@ namespace 饥荒百科全书CSharp.View
             }
 
             // 禁用
-            Jinyong(false);
+            JinYong(false);
             DediSettingGameVersionSelect.IsEnabled = true;
             // 不选择任何一项
             ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).IsChecked = false;
@@ -1231,7 +1202,9 @@ namespace 饥荒百科全书CSharp.View
         #endregion
 
         #region 打开
-        // 打开"客户端"
+        /// <summary>
+        /// 打开客户端
+        /// </summary>
         private void RunClient()
         {
 
@@ -1240,7 +1213,7 @@ namespace 饥荒百科全书CSharp.View
                 MessageBox.Show("客户端路径没有设置");
                 return;
             }
-            var p = new Process
+            var process = new Process
             {
                 StartInfo =
                 {
@@ -1250,17 +1223,18 @@ namespace 饥荒百科全书CSharp.View
                 }
             };
             // 目录,这个必须设置
-            p.Start();
+            process.Start();
         }
-        // 打开"服务器"
+
+        /// <summary>
+        /// 打开服务器
+        /// </summary>
         private void RunServer()
         {
-
             if (_pathAll.ServerFilePath == null || _pathAll.ServerFilePath.Trim() == "")
             {
                 MessageBox.Show("服务器路径不对,请重新设置服务器路径"); return;
             }
-
             // 保存世界
             if (_overWorld != null && _caves != null && _mods != null)
             {
@@ -1289,12 +1263,10 @@ namespace 饥荒百科全书CSharp.View
                 //ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
                 ini1.Write("NETWORK", "lan_only_cluster", "false", _utf8NoBom);
             }
-
             // 打开服务器
             var p = new Process();
             if (GamePingTai != "TGP")
             {
-
                 p.StartInfo.UseShellExecute = false; // 是否
                 p.StartInfo.WorkingDirectory = Path.GetDirectoryName(_pathAll.ServerFilePath); // 目录,这个必须设置
                 p.StartInfo.FileName = _pathAll.ServerFilePath; ;  // 服务器名字
@@ -1307,10 +1279,8 @@ namespace 饥荒百科全书CSharp.View
             {
                 MessageBox.Show("保存完毕! 请通过TGP启动,存档文件名为" + GamePingTai + "_" + CunDangCao.ToString());
             }
-
             if (GamePingTai != "TGP")
             {
-
                 // 是否开启洞穴
                 if (DediBaseIsCave.Text == "是")
                 {
@@ -1318,21 +1288,19 @@ namespace 饥荒百科全书CSharp.View
                     p.Start();
                 }
             }
-
-
-
         }
         #endregion
 
         #region 控制台
-        // 发送"消息"
+        /// <summary>
+        /// 发送“消息”
+        /// </summary>
+        /// <param name="messageStr">消息字符串</param>
         private static void SsendMessage(string messageStr)
         {
             var mySendMessage = new mySendMessage();
-
             // 得到句柄
             var pstr = Process.GetProcessesByName("dontstarve_dedicated_server_nullrenderer");
-
             // 根据句柄,发送消息
             foreach (var t in pstr)
             {
@@ -1443,9 +1411,9 @@ namespace 饥荒百科全书CSharp.View
 
         #region 其他
         // 获取房间名
-        private string GetHouseName(int d_cundangcao)
+        private string GetHouseName(int dCundangcao)
         {
-            var clusterIniPath = _pathAll.DoNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + d_cundangcao.ToString() + @"\cluster.ini";
+            var clusterIniPath = _pathAll.DoNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + dCundangcao.ToString() + @"\cluster.ini";
             if (!File.Exists(clusterIniPath))
             {
                 return "创建世界";
@@ -1455,20 +1423,27 @@ namespace 饥荒百科全书CSharp.View
             var houseName = iniTool.ReadValue("NETWORK", "cluster_name");
             return houseName;
         }
-        // 禁用
-        private void Jinyong(bool b)
+
+        /// <summary>
+        /// 禁用
+        /// </summary>
+        /// <param name="b"></param>
+        private void JinYong(bool b)
         {
             // DediMainBorder.IsEnabled = b;
-            DediTitleBaseSet.IsEnabled = b;
-            DediTitleEditWorld.IsEnabled = b;
-            DediTitleMod.IsEnabled = b;
-            DediTitleRollback.IsEnabled = b;
+            TitleMenuBaseSet.IsEnabled = b;
+            TitleMenuEditWorld.IsEnabled = b;
+            TitleMenuMod.IsEnabled = b;
+            TitleMenuRollback.IsEnabled = b;
 
             DediMainTopDelete.IsEnabled = b;
-            DediCtrateWorldButton.IsEnabled = b;
+            CtrateWorldButton.IsEnabled = b;
             DediBaseSet.IsEnabled = b;
         }
-        // 汉化
+
+        /// <summary>
+        /// 汉化
+        /// </summary>
         private string HanHua(string s)
         {
             return _hanhua.ContainsKey(s) ? _hanhua[s] : s;
@@ -1512,6 +1487,5 @@ namespace 饥荒百科全书CSharp.View
                 _utf8NoBom);
         }
         #endregion
-        
     }
 }

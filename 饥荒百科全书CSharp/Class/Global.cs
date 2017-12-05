@@ -137,6 +137,22 @@ namespace 饥荒百科全书CSharp.Class
                 uiElement.Visibility = visibility;
             }
         }
+
+        /// <summary>
+        /// 在对程序集的解析失败时发生(嵌入DLL)
+        /// </summary>
+        public static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            var projectName = Assembly.GetExecutingAssembly().GetName().Name;
+            var resourceName = projectName + ".DynamicLinkLibrary." + new AssemblyName(args.Name).Name + ".dll";
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+            {
+                // ReSharper disable once PossibleNullReferenceException
+                var assemblyData = new byte[stream.Length];
+                stream.Read(assemblyData, 0, assemblyData.Length);
+                return Assembly.Load(assemblyData);
+            }
+        }
         #endregion
 
         #region 搜索

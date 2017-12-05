@@ -40,11 +40,11 @@
         <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}"/>
         <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}"/>
         <Setter Property="Foreground" Value="#FFC5AA74"/>
+        <Setter Property="Cursor" Value="{DynamicResource CursorLink}"/>
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
@@ -113,7 +113,7 @@
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Focusable" Value="False"/>
-        <Setter Property="Cursor" Value="{DynamicResource Cursor_link}" />
+        <Setter Property="Cursor" Value="{DynamicResource CursorLink}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
@@ -123,7 +123,7 @@
                             <ColumnDefinition Width="77*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="radioButtonBorder" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="/Resources/DedicatedServer/D_set_border.png" Visibility="Collapsed" Stretch="Fill" Margin="0,3"/>
-                        <Image x:Name="radioButtonSelect" Source="/Resources/DedicatedServer/D_baseset_radiobutton.png" Width="Auto" Height="Auto" Margin="3,3,0,3" />
+                        <Image Grid.Column="0" x:Name="radioButtonSelect" Source="/Resources/DedicatedServer/D_baseset_radiobutton.png" Width="Auto" Height="Auto" Margin="3,3,0,3" />
                         <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="Left" Margin="2,0,0,0"/>
                     </Grid>
                     <ControlTemplate.Triggers>

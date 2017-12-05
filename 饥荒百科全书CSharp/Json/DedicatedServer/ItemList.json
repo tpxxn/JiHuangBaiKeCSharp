@@ -1,0 +1,1537 @@
+{
+  "items": {
+    "other": {
+      "chinese": "其他",
+      "details": [
+        {
+          "chinese": "保存",
+          "code": "c_save()"
+        },
+        {
+          "chinese": "重置世界",
+          "code": "c_regenerateworld()"
+        },
+        {
+          "chinese": "回档",
+          "code": "c_rollback(1)"
+        },
+        {
+          "chinese": "复活",
+          "code": "for k, v in pairs(AllPlayers) do v: PushEvent('respawnfromghost') end"
+        },
+        {
+          "chinese": "全物品直接制造",
+          "code": "GetPlayer().components.builder:GiveAllRecipes()"
+        },
+        {
+          "chinese": "跳过一天",
+          "code": "GetClock():MakeNextDay()"
+        },
+        {
+          "chinese": "开始春天",
+          "code": "GetSeasonManager():StartSpring()"
+        },
+        {
+          "chinese": "开始秋天",
+          "code": "GetSeasonManager():StartAutumn()"
+        },
+        {
+          "chinese": "开始冬天",
+          "code": "GetSeasonManager():StartWinter()"
+        },
+        {
+          "chinese": "开始夏天",
+          "code": "GetSeasonManager():StartSummer()"
+        },
+        {
+          "chinese": "开始下雨",
+          "code": "GetSeasonManager():StartPrecip()"
+        },
+        {
+          "chinese": "停止下雨",
+          "code": "GetSeasonManager():StopPrecip()"
+        }
+      ]
+    },
+    "food": {
+      "chinese": "食物",
+      "details": [
+        {
+          "code": "acorn",
+          "chinese": "橡果"
+        },
+        {
+          "code": "acorn_cooked",
+          "chinese": "熟橡果"
+        },
+        {
+          "code": "baconeggs",
+          "chinese": "鸡蛋火腿"
+        },
+        {
+          "code": "batwing",
+          "chinese": "蝙蝠翅膀"
+        },
+        {
+          "code": "batwing_cooked",
+          "chinese": "熟蝙蝠翅膀"
+        },
+        {
+          "code": "berries",
+          "chinese": "浆果"
+        },
+        {
+          "code": "berries_cooked",
+          "chinese": "熟浆果"
+        },
+        { "code": "berries_juicy" },
+        { "code": "berries_juicy_cooked" },
+        {
+          "code": "bird_egg",
+          "chinese": "鸡蛋"
+        },
+        {
+          "code": "bird_egg_cooked",
+          "chinese": "煮熟的鸡蛋"
+        },
+        {
+          "code": "blue_cap",
+          "chinese": "采摘的蓝蘑菇"
+        },
+        {
+          "code": "blue_cap_cooked",
+          "chinese": "煮熟的蓝蘑菇"
+        },
+        {
+          "code": "bonestew",
+          "chinese": "肉汤"
+        },
+        {
+          "code": "butter",
+          "chinese": "黄油"
+        },
+        {
+          "code": "butterflymuffin",
+          "chinese": "奶油松饼"
+        },
+        {
+          "code": "butterflywings",
+          "chinese": "蝴蝶翅膀"
+        },
+        {
+          "code": "cactus_flower",
+          "chinese": "仙人掌花"
+        },
+        {
+          "code": "cactus_meat",
+          "chinese": "仙人掌肉"
+        },
+        { "code": "cactus_meat_cooked" },
+        {
+          "code": "carrot",
+          "chinese": "胡萝卜"
+        },
+        {
+          "code": "carrot_cooked",
+          "chinese": "熟胡萝卜"
+        },
+        {
+          "code": "carrot_seeds",
+          "chinese": "胡萝卜种子"
+        },
+        {
+          "code": "cave_banana",
+          "chinese": "洞穴香蕉"
+        },
+        {
+          "code": "cave_banana_cooked",
+          "chinese": "熟洞穴香蕉"
+        },
+        {
+          "code": "cookedmandrake",
+          "chinese": "熟曼特拉草"
+        },
+        {
+          "code": "cookedmeat",
+          "chinese": "大熟肉"
+        },
+        {
+          "code": "cookedmonstermeat",
+          "chinese": "熟疯肉"
+        },
+        {
+          "code": "cookedsmallmeat",
+          "chinese": "小熟肉"
+        },
+        {
+          "code": "corn",
+          "chinese": "玉米"
+        },
+        {
+          "code": "corn_cooked",
+          "chinese": "熟玉米"
+        },
+        {
+          "code": "corn_seeds",
+          "chinese": "玉米种子"
+        },
+        {
+          "code": "dragonfruit",
+          "chinese": "火龙果"
+        },
+        {
+          "code": "dragonfruit_cooked",
+          "chinese": "熟火龙果"
+        },
+        {
+          "code": "dragonfruit_seeds",
+          "chinese": "火龙果种子"
+        },
+        {
+          "code": "dragonpie",
+          "chinese": "龙馅饼"
+        },
+        {
+          "code": "drumstick",
+          "chinese": "鸡腿"
+        },
+        {
+          "code": "drumstick_cooked",
+          "chinese": "熟鸡腿"
+        },
+        {
+          "code": "durian",
+          "chinese": "榴莲"
+        },
+        {
+          "code": "durian_cooked",
+          "chinese": "熟榴莲"
+        },
+        {
+          "code": "durian_seeds",
+          "chinese": "榴莲种子"
+        },
+        {
+          "code": "eel",
+          "chinese": "鳗鱼"
+        },
+        {
+          "code": "eel_cooked",
+          "chinese": "熟鳗鱼"
+        },
+        {
+          "code": "eggplant",
+          "chinese": "茄子"
+        },
+        {
+          "code": "eggplant_cooked",
+          "chinese": "熟茄子"
+        },
+        {
+          "code": "eggplant_seeds",
+          "chinese": "茄子种子"
+        },
+        {
+          "code": "fish",
+          "chinese": "鱼"
+        },
+        {
+          "code": "fish_cooked",
+          "chinese": "熟鱼"
+        },
+        {
+          "code": "fishsticks",
+          "chinese": "鱼肉条"
+        },
+        {
+          "code": "fishtacos",
+          "chinese": "玉米饼包炸鱼"
+        },
+        {
+          "code": "flowersalad",
+          "chinese": "花沙拉"
+        },
+        {
+          "code": "frogglebunwich",
+          "chinese": "青蛙圆面包三明治"
+        },
+        {
+          "code": "froglegs",
+          "chinese": "蛙腿"
+        },
+        {
+          "code": "froglegs_cooked",
+          "chinese": "熟蛙腿"
+        },
+        {
+          "code": "fruitmedley",
+          "chinese": "水果拼盘"
+        },
+        {
+          "code": "goatmilk",
+          "chinese": "羊奶"
+        },
+        {
+          "code": "green_cap",
+          "chinese": "采摘的绿蘑菇"
+        },
+        {
+          "code": "green_cap_cooked",
+          "chinese": "煮熟的绿蘑菇"
+        },
+        {
+          "code": "guacamole",
+          "chinese": "鳄梨酱"
+        },
+        {
+          "code": "honey",
+          "chinese": "蜂蜜"
+        },
+        {
+          "code": "honeyham",
+          "chinese": "蜜汁火腿"
+        },
+        {
+          "code": "honeynuggets",
+          "chinese": "甜蜜金砖"
+        },
+        {
+          "code": "hotchili",
+          "chinese": "咖喱"
+        },
+        {
+          "code": "icecream",
+          "chinese": "冰激淋"
+        },
+        {
+          "code": "jammypreserves",
+          "chinese": "果酱蜜饯"
+        },
+        {
+          "code": "kabobs",
+          "chinese": "肉串"
+        },
+        {
+          "code": "mandrake",
+          "chinese": "曼德拉草"
+        },
+        {
+          "code": "mandrakesoup",
+          "chinese": "曼德拉草汤"
+        },
+        {
+          "code": "meat",
+          "chinese": "大肉"
+        },
+        {
+          "code": "meat_dried",
+          "chinese": "大干肉"
+        },
+        {
+          "code": "meatballs",
+          "chinese": "肉丸"
+        },
+        {
+          "code": "minotaurhorn",
+          "chinese": "远古守护者角"
+        },
+        {
+          "code": "monsterlasagna",
+          "chinese": "怪物千层饼"
+        },
+        {
+          "code": "monstermeat",
+          "chinese": "疯肉"
+        },
+        {
+          "code": "monstermeat_dried",
+          "chinese": "干疯肉"
+        },
+        {
+          "code": "perogies",
+          "chinese": "半圆小酥饼"
+        },
+        {
+          "code": "petals",
+          "chinese": "花瓣"
+        },
+        {
+          "code": "petals_evil",
+          "chinese": "噩梦花瓣"
+        },
+        { "code": "phlegm" },
+        {
+          "code": "plantmeat",
+          "chinese": "食人花肉"
+        },
+        {
+          "code": "plantmeat_cooked",
+          "chinese": "熟食人花肉"
+        },
+        {
+          "code": "pomegranate",
+          "chinese": "石榴"
+        },
+        {
+          "code": "pomegranate_cooked",
+          "chinese": "熟石榴"
+        },
+        {
+          "code": "pomegranate_seeds",
+          "chinese": "石榴种子"
+        },
+        {
+          "code": "powcake",
+          "chinese": "芝士蛋糕"
+        },
+        {
+          "code": "pumpkin",
+          "chinese": "南瓜"
+        },
+        {
+          "code": "pumpkin_cooked",
+          "chinese": "熟南瓜"
+        },
+        {
+          "code": "pumpkin_seeds",
+          "chinese": "南瓜种子"
+        },
+        {
+          "code": "pumpkincookie",
+          "chinese": "南瓜饼"
+        },
+        {
+          "code": "ratatouille",
+          "chinese": "蹩脚的炖菜"
+        },
+        {
+          "code": "red_cap",
+          "chinese": "采摘的红蘑菇"
+        },
+        {
+          "code": "red_cap_cooked",
+          "chinese": "煮熟的红蘑菇"
+        },
+        {
+          "code": "rottenegg",
+          "chinese": "烂鸡蛋"
+        },
+        {
+          "code": "seeds",
+          "chinese": "种子"
+        },
+        {
+          "code": "seeds_cooked",
+          "chinese": "熟种子"
+        },
+        {
+          "code": "smallmeat",
+          "chinese": "小肉"
+        },
+        {
+          "code": "smallmeat_dried",
+          "chinese": "小干肉"
+        },
+        {
+          "code": "spoiled_food",
+          "chinese": "腐烂食物"
+        },
+        {
+          "code": "stuffedeggplant",
+          "chinese": "香酥茄盒"
+        },
+        {
+          "code": "taffy",
+          "chinese": "太妃糖"
+        },
+        {
+          "code": "tallbirdegg",
+          "chinese": "高鸟蛋"
+        },
+        {
+          "code": "tallbirdegg_cooked",
+          "chinese": "熟高鸟蛋"
+        },
+        {
+          "code": "tallbirdegg_cracked",
+          "chinese": "孵化的高鸟蛋"
+        },
+        {
+          "code": "trailmix",
+          "chinese": "干果"
+        },
+        {
+          "code": "trunk_cooked",
+          "chinese": "熟象鼻"
+        },
+        {
+          "code": "trunk_summer",
+          "chinese": "夏象鼻"
+        },
+        {
+          "code": "trunk_winter",
+          "chinese": "冬象鼻"
+        },
+        {
+          "code": "turkeydinner",
+          "chinese": "火鸡正餐"
+        },
+        {
+          "code": "unagi",
+          "chinese": "鳗鱼料理"
+        },
+        {
+          "code": "waffles",
+          "chinese": "华夫饼"
+        },
+        {
+          "code": "watermelon",
+          "chinese": "西瓜"
+        },
+        { "code": "watermelon_cooked" },
+        { "code": "watermelon_seeds" },
+        {
+          "code": "watermelonicle",
+          "chinese": "西瓜冰"
+        },
+        {
+          "code": "wetgoop",
+          "chinese": "湿腻焦糊"
+        },
+        {
+          "code": "wormlight",
+          "chinese": "发光浆果"
+        }
+      ]
+    },
+    "resources": {
+      "chinese": "资源",
+      "details": [
+        {
+          "code": "acorn",
+          "chinese": "橡果"
+        },
+        {
+          "code": "ash",
+          "chinese": "灰"
+        },
+        {
+          "code": "batwing",
+          "chinese": "蝙蝠翅膀"
+        },
+        {
+          "code": "beardhair",
+          "chinese": "胡子"
+        },
+        {
+          "code": "bearger_fur",
+          "chinese": "熊皮"
+        },
+        {
+          "code": "bee",
+          "chinese": "蜜蜂"
+        },
+        {
+          "code": "beefalowool",
+          "chinese": "牛毛"
+        },
+        {
+          "code": "bluegem",
+          "chinese": "蓝宝石"
+        },
+        {
+          "code": "boards",
+          "chinese": "木板"
+        },
+        {
+          "code": "boneshard",
+          "chinese": "硬骨头"
+        },
+        {
+          "code": "butter",
+          "chinese": "黄油"
+        },
+        {
+          "code": "butterfly",
+          "chinese": "蝴蝶"
+        },
+        {
+          "code": "butterflywings",
+          "chinese": "蝴蝶翅膀"
+        },
+        {
+          "code": "charcoal",
+          "chinese": "木炭"
+        },
+        {
+          "code": "coontail",
+          "chinese": "浣熊尾巴"
+        },
+        {
+          "code": "crow",
+          "chinese": "乌鸦"
+        },
+        {
+          "code": "cutgrass",
+          "chinese": "草"
+        },
+        {
+          "code": "cutlichen",
+          "chinese": "摘下的苔藓"
+        },
+        {
+          "code": "cutreeds",
+          "chinese": "采下的芦苇"
+        },
+        {
+          "code": "cutstone",
+          "chinese": "石砖"
+        },
+        {
+          "code": "deerclops_eyeball",
+          "chinese": "巨鹿眼球"
+        },
+        {
+          "code": "dragon_scales",
+          "chinese": "蜻蜓鳞片"
+        },
+        {
+          "code": "dug_berrybush",
+          "chinese": "可种的果树丛"
+        },
+        {
+          "code": "dug_berrybush2",
+          "chinese": "可种的果树丛2"
+        },
+        {
+          "code": "dug_grass",
+          "chinese": "长草簇"
+        },
+        {
+          "code": "dug_marsh_bush",
+          "chinese": "可种的尖刺灌木"
+        },
+        {
+          "code": "dug_sapling",
+          "chinese": "可种的树苗"
+        },
+        { "code": "dug_berrybush_juicy" },
+        {
+          "code": "feather_crow",
+          "chinese": "乌鸦羽毛"
+        },
+        {
+          "code": "feather_robin",
+          "chinese": "红雀羽毛"
+        },
+        {
+          "code": "feather_robin_winter",
+          "chinese": "雪雀羽毛"
+        },
+        {
+          "code": "flint",
+          "chinese": "燧石"
+        },
+        {
+          "code": "foliage",
+          "chinese": "叶子"
+        },
+        {
+          "code": "fireflies",
+          "chinese": "萤火虫"
+        },
+        {
+          "code": "gears",
+          "chinese": "齿轮"
+        },
+        {
+          "code": "glommerwings",
+          "chinese": "格罗门翅膀"
+        },
+        {
+          "code": "goldnugget",
+          "chinese": "黄金"
+        },
+        {
+          "code": "goose_feather",
+          "chinese": "鹿鸭羽毛"
+        },
+        {
+          "code": "greengem",
+          "chinese": "绿宝石"
+        },
+        {
+          "code": "guano",
+          "chinese": "鸟粪"
+        },
+        {
+          "code": "honeycomb",
+          "chinese": "蜂巢"
+        },
+        {
+          "code": "horn",
+          "chinese": "牛角"
+        },
+        {
+          "code": "houndstooth",
+          "chinese": "犬牙"
+        },
+        {
+          "code": "ice",
+          "chinese": "冰"
+        },
+        {
+          "code": "killerbee",
+          "chinese": "杀人蜂"
+        },
+        { "code": "lavae_egg" },
+        { "code": "lavae_egg_cracked" },
+        { "code": "lavae_tooth" },
+        {
+          "code": "lightbulb",
+          "chinese": "荧光果"
+        },
+        {
+          "code": "lightninggoathorn",
+          "chinese": "闪电羊角"
+        },
+        {
+          "code": "livinglog",
+          "chinese": "活木头"
+        },
+        {
+          "code": "log",
+          "chinese": "木头"
+        },
+        {
+          "code": "lureplantbulb",
+          "chinese": "食人花种子"
+        },
+        {
+          "code": "marble",
+          "chinese": "大理石"
+        },
+        {
+          "code": "manrabbit_tail",
+          "chinese": "兔人尾巴"
+        },
+        {
+          "code": "minotaurhorn",
+          "chinese": "远古守护者角"
+        },
+        {
+          "code": "mole",
+          "chinese": "鼹鼠"
+        },
+        {
+          "code": "mosquito",
+          "chinese": "蚊子"
+        },
+        {
+          "code": "mosquitosack",
+          "chinese": "蚊子血囊"
+        },
+        {
+          "code": "nightmarefuel",
+          "chinese": "噩梦燃料"
+        },
+        {
+          "code": "nitre",
+          "chinese": "硝石"
+        },
+        {
+          "code": "nitre",
+          "chinese": "硝石"
+        },
+        {
+          "code": "orangegem",
+          "chinese": "橙宝石"
+        },
+        {
+          "code": "papyrus",
+          "chinese": "纸"
+        },
+        { "code": "phlegm" },
+        {
+          "code": "pigskin",
+          "chinese": "猪皮"
+        },
+        {
+          "code": "pinecone",
+          "chinese": "松果"
+        },
+        {
+          "code": "purplegem",
+          "chinese": "紫宝石"
+        },
+        {
+          "code": "poop",
+          "chinese": "便便"
+        },
+        {
+          "code": "pumpkin",
+          "chinese": "南瓜"
+        },
+        {
+          "code": "seeds",
+          "chinese": "种子"
+        },
+        {
+          "code": "rabbit",
+          "chinese": "兔子"
+        },
+        { "code": "redgem" },
+        {
+          "code": "robin",
+          "chinese": "红雀"
+        },
+        {
+          "code": "robin_winter",
+          "chinese": "雪雀"
+        },
+        {
+          "code": "rocks",
+          "chinese": "岩石"
+        },
+        {
+          "code": "rope",
+          "chinese": "绳子"
+        },
+        {
+          "code": "silk",
+          "chinese": "蜘蛛丝"
+        },
+        {
+          "code": "slurper_pelt",
+          "chinese": "啜食者皮"
+        },
+        {
+          "code": "slurtleslime",
+          "chinese": "蜗牛龟粘液"
+        },
+        {
+          "code": "spidereggsack",
+          "chinese": "蜘蛛卵"
+        },
+        {
+          "code": "spidergland",
+          "chinese": "蜘蛛腺体"
+        },
+        { "code": "steelwool" },
+        {
+          "code": "stinger",
+          "chinese": "蜂刺"
+        },
+        {
+          "code": "tentaclespots",
+          "chinese": "触手皮"
+        },
+        {
+          "code": "thulecite",
+          "chinese": "铥矿石"
+        },
+        {
+          "code": "thulecite_pieces",
+          "chinese": "铥矿碎片"
+        },
+        { "code": "twiggy_nut" },
+        {
+          "code": "transistor",
+          "chinese": "晶体管"
+        },
+        {
+          "code": "trunk_summer",
+          "chinese": "夏象鼻"
+        },
+        {
+          "code": "trunk_winter",
+          "chinese": "冬象鼻"
+        },
+        {
+          "code": "turf_carpetfloor",
+          "chinese": "地毯地板"
+        },
+        { "code": "turf_cave" },
+        {
+          "code": "turf_checkerfloor",
+          "chinese": "棋盘地板"
+        },
+        { "code": "turf_deciduous" },
+        { "code": "turf_desertdirt" },
+        { "code": "turf_dragonfly" },
+        { "code": "turf_forest" },
+        { "code": "turf_fungus" },
+        { "code": "turf_fungus_green" },
+        { "code": "turf_fungus_red" },
+        { "code": "turf_grass" },
+        { "code": "turf_marsh" },
+        { "code": "turf_mud" },
+        { "code": "turf_road" },
+        { "code": "turf_rocky" },
+        { "code": "turf_savanna" },
+        { "code": "turf_sinkhole" },
+        { "code": "turf_underrock" },
+        {
+          "code": "turf_woodfloor",
+          "chinese": "木地板"
+        },
+        {
+          "code": "twigs",
+          "chinese": "树枝"
+        },
+        {
+          "code": "wall_hay_item",
+          "chinese": "草墙"
+        },
+        { "code": "moonrocknugget" },
+        { "code": "wall_moonrock_item" },
+        {
+          "code": "wall_ruins_item",
+          "chinese": "铥墙"
+        },
+        {
+          "code": "wall_stone_item",
+          "chinese": "石墙"
+        },
+        {
+          "code": "wall_wood_item",
+          "chinese": "木墙"
+        },
+        {
+          "code": "walrus_tusk",
+          "chinese": "海象牙"
+        },
+        {
+          "code": "wormlight",
+          "chinese": "虫子果"
+        },
+        { "code": "wormlight_lesser" },
+        {
+          "code": "yellowgem",
+          "chinese": "黄宝石"
+        },
+        { "code": "opalpreciousgem" },
+        { "code": "shroom_skin" },
+        { "code": "canary" },
+        { "code": "feather_canary" },
+        { "code": "spore_medium" },
+        { "code": "spore_small" },
+        { "code": "spore_tall" },
+        {
+          
+        },
+        { "code": "canary_poisoned" },
+        { "code": "fossil_piece" },
+        { "code": "shadowheart" },
+        { "code": "fence_item" },
+        { "code": "fence_gate_item" },
+        { "code": "lavae_cocoon" },
+        { "code": "marblebean" },
+        {
+          
+        },
+        { "code": "beeswax" },
+        { "code": "deer_antler1" },
+        { "code": "deer_antler2" },
+        { "code": "deer_antler3" },
+        { "code": "giftwrap" },
+        { "code": "waxpaper" },
+        { "code": "klaussackkey" },
+        { "code": "minisign_item" },
+        { "code": "winter_ornament_fancy1" },
+        { "code": "winter_ornament_fancy2" },
+        { "code": "winter_ornament_fancy3" },
+        { "code": "winter_ornament_fancy4" },
+        { "code": "winter_ornament_light1" },
+        { "code": "winter_ornament_light2" },
+        { "code": "winter_ornament_light3" },
+        { "code": "winter_ornament_light4" },
+        { "code": "winter_ornament_plain1" },
+        { "code": "winter_ornament_plain2" },
+        { "code": "winter_ornament_plain3" },
+        { "code": "winter_ornament_plain4" },
+        { "code": "winter_ornament_plain5" },
+        { "code": "winter_ornament_plain6" },
+        { "code": "winter_ornament_plain7" },
+        { "code": "winter_ornament_plain8" }
+      ]
+    },
+    "tools": {
+      "chinese": "工具",
+      "details": [
+        {
+          "code": "abigail_flower",
+          "chinese": "阿比盖尔之花"
+        },
+        {
+          "code": "axe",
+          "chinese": "斧子"
+        },
+        {
+          "code": "balloons_empty",
+          "chinese": "空气球"
+        },
+        {
+          "code": "bandage",
+          "chinese": "蜂蜜绷带"
+        },
+        {
+          "code": "bedroll_furry",
+          "chinese": "毛皮铺盖"
+        },
+        {
+          "code": "bedroll_straw",
+          "chinese": "草席卷"
+        },
+        {
+          "code": "birdtrap",
+          "chinese": "鸟陷阱"
+        },
+        {
+          "code": "book_birds",
+          "chinese": "召唤鸟的书"
+        },
+        {
+          "code": "book_brimstone",
+          "chinese": "召唤闪电的书"
+        },
+        {
+          "code": "book_gardening",
+          "chinese": "催生植物的书"
+        },
+        {
+          "code": "book_sleep",
+          "chinese": "催眠的书"
+        },
+        {
+          "code": "book_tentacles",
+          "chinese": "召唤触手的书"
+        },
+        {
+          "code": "bugnet",
+          "chinese": "捕虫网"
+        },
+        {
+          "code": "cane",
+          "chinese": "行走手杖"
+        },
+        {
+          "code": "chester_eyebone",
+          "chinese": "切斯特骨眼"
+        },
+        {
+          "code": "compass",
+          "chinese": "指南针"
+        },
+        {
+          "code": "diviningrod",
+          "chinese": "探矿杖"
+        },
+        {
+          "code": "featherfan",
+          "chinese": "羽毛扇"
+        },
+        {
+          "code": "fertilizer",
+          "chinese": "化肥"
+        },
+        {
+          "code": "fishingrod",
+          "chinese": "鱼竿"
+        },
+        {
+          "code": "glommerflower",
+          "chinese": "格罗门花"
+        },
+        {
+          "code": "goldenaxe",
+          "chinese": "黄金斧头"
+        },
+        {
+          "code": "goldenpickaxe",
+          "chinese": "黄金镐"
+        },
+        {
+          "code": "goldenshovel",
+          "chinese": "黄金铲子"
+        },
+        {
+          "code": "grass_umbrella",
+          "chinese": "草伞"
+        },
+        {
+          "code": "hammer",
+          "chinese": "锤子"
+        },
+        {
+          "code": "healingsalve",
+          "chinese": "治疗药膏"
+        },
+        {
+          "code": "heatrock",
+          "chinese": "保温石"
+        },
+        {
+          "code": "horn",
+          "chinese": "牛角"
+        },
+        { "code": "hutch_fishbowl" },
+        {
+          "code": "lantern",
+          "chinese": "提灯"
+        },
+        { "code": "lifeinjector" },
+        {
+          "code": "lighter",
+          "chinese": "薇洛的打火机"
+        },
+        {
+          "code": "lucy",
+          "chinese": "露西斧子"
+        },
+        {
+          "code": "minerhat",
+          "chinese": "矿工帽"
+        },
+        { "code": "minifan" },
+        {
+          "code": "multitool_axe_pickaxe",
+          "chinese": "多功能工具"
+        },
+        {
+          "code": "onemanband",
+          "chinese": "独奏乐器"
+        },
+        {
+          "code": "pickaxe",
+          "chinese": "镐"
+        },
+        {
+          "code": "pitchfork",
+          "chinese": "草叉"
+        },
+        {
+          "code": "pumpkin_lantern",
+          "chinese": "南瓜灯"
+        },
+        {
+          "code": "razor",
+          "chinese": "剃刀"
+        },
+        { "code": "reviver" },
+        {
+          "code": "saddle_basic",
+          "chinese": "基础鞍"
+        },
+        {
+          "code": "saddle_race",
+          "chinese": "race鞍"
+        },
+        {
+          "code": "saddle_war",
+          "chinese": "战斗鞍"
+        },
+        {
+          "code": "saddlehorn",
+          "chinese": "鞍角"
+        },
+        {
+          "code": "brush",
+          "chinese": "刷子"
+        },
+        {
+          "code": "sewing_kit",
+          "chinese": "缝纫工具包"
+        },
+        {
+          "code": "shovel",
+          "chinese": "铲子"
+        },
+        {
+          "code": "torch",
+          "chinese": "火炬"
+        },
+        {
+          "code": "trap",
+          "chinese": "陷阱"
+        },
+        {
+          "code": "umbrella",
+          "chinese": "雨伞"
+        },
+        { "code": "waterballoon" },
+        {
+          "code": "waxwelljournal",
+          "chinese": "麦斯威尔的日志"
+        },
+        {
+          "code": "yellowstaff",
+          "chinese": "黄色魔杖"
+        },
+        { "code": "redmooneye" },
+        { "code": "purplemooneye" },
+        { "code": "greenmooneye" },
+        { "code": "orangemooneye" },
+        { "code": "yellowmooneye" },
+        { "code": "bluemooneye" },
+        { "code": "featherpencil" },
+        { "code": "mapscroll" },
+        { "code": "opalstaff" },
+        { "code": "moonrockcrater" },
+        { "code": "bundlewrap" }
+      ]
+    },
+    "weapons": {
+      "chinese": "武器",
+      "details": [
+        {
+          "code": "armor_sanity",
+          "chinese": "夜魔盔甲"
+        },
+        {
+          "code": "armorgrass",
+          "chinese": "草盔甲"
+        },
+        {
+          "code": "armormarble",
+          "chinese": "大理石盔甲"
+        },
+        {
+          "code": "armorruins",
+          "chinese": "远古盔甲"
+        },
+        {
+          "code": "armorslurper",
+          "chinese": "饥饿腰带"
+        },
+        {
+          "code": "armorwood",
+          "chinese": "木盔甲"
+        },
+        {
+          "code": "batbat",
+          "chinese": "蝙蝠棒"
+        },
+        {
+          "code": "beemine",
+          "chinese": "蜜蜂地雷"
+        },
+        {
+          "code": "blowdart_fire",
+          "chinese": "燃烧吹箭"
+        },
+        {
+          "code": "blowdart_pipe",
+          "chinese": "吹箭"
+        },
+        {
+          "code": "blowdart_sleep",
+          "chinese": "麻醉吹箭"
+        },
+        {
+          "code": "boomerang",
+          "chinese": "回旋镖"
+        },
+        {
+          "code": "eyeturret_item",
+          "chinese": "可带走的眼睛炮塔"
+        },
+        {
+          "code": "featherhat",
+          "chinese": "羽毛帽"
+        },
+        {
+          "code": "firestaff",
+          "chinese": "火魔杖"
+        },
+        {
+          "code": "footballhat",
+          "chinese": "猪皮帽"
+        },
+        {
+          "code": "greenstaff",
+          "chinese": "绿色魔杖"
+        },
+        {
+          "code": "gunpowder",
+          "chinese": "火药"
+        },
+        {
+          "code": "hambat",
+          "chinese": "火腿短棍"
+        },
+        {
+          "code": "icestaff",
+          "chinese": "冰魔杖"
+        },
+        {
+          "code": "nightstick",
+          "chinese": "夜棍"
+        },
+        {
+          "code": "nightsword",
+          "chinese": "暗影剑"
+        },
+        {
+          "code": "orangestaff",
+          "chinese": "橙色魔杖"
+        },
+        {
+          "code": "panflute",
+          "chinese": "排箫"
+        },
+        {
+          "code": "ruins_bat",
+          "chinese": "远古短棒"
+        },
+        {
+          "code": "ruinshat",
+          "chinese": "远古王冠"
+        },
+        {
+          "code": "slurtlehat",
+          "chinese": "蜗牛帽子"
+        },
+        { "code": "spear" },
+        {
+          "code": "spear_wathgrithr",
+          "chinese": "瓦丝格雷斯矛"
+        },
+        {
+          "code": "staff_tornado",
+          "chinese": "龙卷风魔杖"
+        },
+        {
+          "code": "telestaff",
+          "chinese": "传送魔杖"
+        },
+        {
+          "code": "tentaclespike",
+          "chinese": "狼牙棒"
+        },
+        {
+          "code": "trap_teeth",
+          "chinese": "牙齿陷阱"
+        },
+        {
+          "code": "wathgrithrhat",
+          "chinese": "瓦丝格雷斯帽"
+        },
+        { "code": "whip" },
+        { "code": "blowdart_yellow" }
+      ]
+    },
+    "gifts": {
+      "chinese": "礼物",
+      "details": [
+        {
+          "code": "nightmare_timepiece",
+          "chinese": "铥矿奖章"
+        },
+        {
+          "code": "teleportato_box",
+          "chinese": "盒状传送机零件"
+        },
+        {
+          "code": "teleportato_crank",
+          "chinese": "曲柄状传送机零件"
+        },
+        {
+          "code": "teleportato_potato",
+          "chinese": "球状传送机零件"
+        },
+        {
+          "code": "teleportato_ring",
+          "chinese": "环状传送机零件"
+        },
+        { "code": "trinket_1" },
+        { "code": "trinket_10" },
+        { "code": "trinket_11" },
+        { "code": "trinket_12" },
+        { "code": "trinket_13" },
+        { "code": "trinket_14" },
+        { "code": "trinket_15" },
+        { "code": "trinket_16" },
+        { "code": "trinket_17" },
+        { "code": "trinket_18" },
+        { "code": "trinket_19" },
+        { "code": "trinket_2" },
+        { "code": "trinket_20" },
+        { "code": "trinket_21" },
+        { "code": "trinket_22" },
+        { "code": "trinket_23" },
+        { "code": "trinket_24" },
+        { "code": "trinket_25" },
+        { "code": "trinket_26" },
+        { "code": "trinket_27" },
+        { "code": "trinket_3" },
+        { "code": "trinket_4" },
+        { "code": "trinket_5" },
+        { "code": "trinket_6" },
+        { "code": "trinket_7" },
+        { "code": "trinket_8" },
+        { "code": "trinket_9" },
+        { "code": "trinket_28" },
+        { "code": "trinket_29" },
+        { "code": "trinket_30" },
+        { "code": "trinket_31" },
+        { "code": "trinket_32" },
+        { "code": "trinket_33" },
+        { "code": "trinket_34" },
+        { "code": "trinket_35" },
+        { "code": "trinket_36" },
+        { "code": "trinket_37" }
+      ]
+    },
+    "clothes": {
+      "chinese": "衣物",
+      "details": [
+        {
+          "code": "amulet",
+          "chinese": "红色护身符"
+        },
+        {
+          "code": "armordragonfly",
+          "chinese": "蜻蜓盔甲"
+        },
+        {
+          "code": "armorsnurtleshell",
+          "chinese": "蜗牛龟盔甲"
+        },
+        {
+          "code": "backpack",
+          "chinese": "背包"
+        },
+        {
+          "code": "beargervest",
+          "chinese": "熊背心"
+        },
+        {
+          "code": "beehat",
+          "chinese": "蜂帽"
+        },
+        {
+          "code": "beefalohat",
+          "chinese": "牛毛帽"
+        },
+        {
+          "code": "blueamulet",
+          "chinese": "蓝色护身符"
+        },
+        {
+          "code": "bushhat",
+          "chinese": "丛林帽"
+        },
+        {
+          "code": "catcoonhat",
+          "chinese": "浣熊帽"
+        },
+        {
+          "code": "earmuffshat",
+          "chinese": "兔耳罩"
+        },
+        {
+          "code": "eyebrellahat",
+          "chinese": "眼睛帽"
+        },
+        {
+          "code": "flowerhat",
+          "chinese": "花环"
+        },
+        {
+          "code": "greenamulet",
+          "chinese": "绿色护身符"
+        },
+        {
+          "code": "hawaiianshirt",
+          "chinese": "夏威夷衬衫"
+        },
+        {
+          "code": "icehat",
+          "chinese": "冰帽"
+        },
+        {
+          "code": "icepack",
+          "chinese": "冰包"
+        },
+        {
+          "code": "krampus_sack",
+          "chinese": "坎普斯背包"
+        },
+        {
+          "code": "molehat",
+          "chinese": "鼹鼠帽"
+        },
+        {
+          "code": "orangeamulet",
+          "chinese": "橙色护身符"
+        },
+        {
+          "code": "piggyback",
+          "chinese": "猪皮包"
+        },
+        {
+          "code": "purpleamulet",
+          "chinese": "紫色护身符"
+        },
+        {
+          "code": "raincoat",
+          "chinese": "雨衣"
+        },
+        {
+          "code": "rainhat",
+          "chinese": "防雨帽"
+        },
+        {
+          "code": "reflectivevest",
+          "chinese": "反射背心"
+        },
+        {
+          "code": "spiderhat",
+          "chinese": "蜘蛛帽"
+        },
+        {
+          "code": "strawhat",
+          "chinese": "草帽"
+        },
+        {
+          "code": "sweatervest",
+          "chinese": "小巧背心"
+        },
+        {
+          "code": "tophat",
+          "chinese": "高礼帽"
+        },
+        {
+          "code": "trunkvest_summer",
+          "chinese": "夏日背心"
+        },
+        {
+          "code": "trunkvest_winter",
+          "chinese": "寒冬背心"
+        },
+        {
+          "code": "watermelonhat",
+          "chinese": "西瓜帽"
+        },
+        {
+          "code": "walrushat",
+          "chinese": "海象帽"
+        },
+        {
+          "code": "winterhat",
+          "chinese": "冬帽"
+        },
+        {
+          "code": "yellowamulet",
+          "chinese": "黄色护身符"
+        },
+        { "code": "red_mushroomhat" },
+        { "code": "green_mushroomhat" },
+        { "code": "blue_mushroomhat" },
+        { "code": "candybag" },
+        { "code": "hivehat" }
+      ]
+    }
+  }
+}

@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using 饥荒百科全书CSharp.Class.DedicatedServers.Tools;
 
-
 namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
 
 {
@@ -15,8 +14,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// DoNotStarveTogether
         /// </summary>
-        private string doNotStarveTogether_DirPath;
-
+        private string _doNotStarveTogetherDirPath;
 
         /// <summary>
         /// 我的文档路径
@@ -27,7 +25,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// 当前路径
         /// </summary>
         public string CurrentDirPath { get; set; }
-
 
         /// <summary>
         /// 客户端exe文件路径
@@ -151,13 +148,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public string DoNotStarveTogetherDirPath
         {
-            get => doNotStarveTogether_DirPath;
+            get => _doNotStarveTogetherDirPath;
             set
             {
-                doNotStarveTogether_DirPath = value;
-                if (!string.IsNullOrEmpty(doNotStarveTogether_DirPath))
+                _doNotStarveTogetherDirPath = value;
+                if (!string.IsNullOrEmpty(_doNotStarveTogetherDirPath))
                 {
-                    YyServerDirPath = doNotStarveTogether_DirPath + @"\Server_" + GamePingTai + "_" + CunDangCao;
+                    YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + CunDangCao;
                 }
             }
         }
@@ -180,7 +177,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
             set
             {
                 _cunDangCao = value;
-                YyServerDirPath = doNotStarveTogether_DirPath + @"\Server_" + GamePingTai + "_" + value;
+                YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + value;
             }
         }
 

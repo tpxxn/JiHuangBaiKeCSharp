@@ -19,8 +19,8 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
     public class DediComboBoxWithImage : DediComboBox
     {
 
-        private Image image;
-        private DediComboBox dediComboBox;
+        private Image _image;
+        private DediComboBox _dediComboBox;
         static DediComboBoxWithImage()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DediComboBoxWithImage), new FrameworkPropertyMetadata(typeof(DediComboBoxWithImage)));
@@ -29,19 +29,18 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            image = GetTemplateChild("PART_Image") as Image;
-            dediComboBox = GetTemplateChild("PART_DediComboBox") as DediComboBox;
-            this.SelectionChanged += DediComboBoxWithImage_SelectionChanged;
+            _image = GetTemplateChild("PART_Image") as Image;
+            _dediComboBox = GetTemplateChild("PART_DediComboBox") as DediComboBox;
+            SelectionChanged += DediComboBoxWithImage_SelectionChanged;
 
         }
 
         private void DediComboBoxWithImage_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (dediComboBox != null)
+            if (_dediComboBox != null)
             {
-                this.SelectedIndex = dediComboBox.SelectedIndex;
+                SelectedIndex = _dediComboBox.SelectedIndex;
             }
-
         }
 
         // 图片uri
@@ -50,20 +49,17 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
 
         private static void OnImageSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-
             //DediComboBoxWithImage dediComboBoxWithImage = d as DediComboBoxWithImage;
             //if (dediComboBoxWithImage.image!=null)
             //{
             //    dediComboBoxWithImage.image.Source = (ImageSource)e.NewValue;
             //}
-
-
         }
 
         public ImageSource ImageSource
         {
-            set { SetValue(ImageSourceProperty, value); }
-            get { return (ImageSource)GetValue(ImageSourceProperty); }
+            set => SetValue(ImageSourceProperty, value);
+            get => (ImageSource)GetValue(ImageSourceProperty);
         }
 
         // ImageToolTip
@@ -71,8 +67,8 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
 
         public string ImageToolTip
         {
-            set { SetValue(ImageToolTipProperty, value); }
-            get { return (string)GetValue(ImageToolTipProperty); }
+            set => SetValue(ImageToolTipProperty, value);
+            get => (string)GetValue(ImageToolTipProperty);
         }
     }
 }

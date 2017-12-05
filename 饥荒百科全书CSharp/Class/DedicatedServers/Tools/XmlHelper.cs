@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Xml;
 
 namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
@@ -13,10 +14,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 读取当前游戏版本[tgp,steam,youxia] 
         /// </summary>
-        public static String ReadGamePingTai()
+        public static string ReadGamePingTai()
         {
 
-            string pingtai = RegeditRw.RegReadString("banben");
+            var pingtai = RegeditRw.RegReadString("banben");
             if (string.IsNullOrEmpty(pingtai))
             {
                 return "Steam";
@@ -50,18 +51,15 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 保存当前游戏平台[tgp,steam,youxia]
         /// </summary>
-        public static void WriteGamePingTai(String pingtai)
+        public static void WriteGamePingTai(string pingtai)
         {
             //xmlpath = "ServerConfig1.xml";
             //Dictionary<string, string> dic = new Dictionary<string, string>();
             //XmlDocument xmldoc = new XmlDocument();
             //xmldoc.Load(xmlpath);
             //XmlNode details = xmldoc.SelectSingleNode("configuration/banben/details");
-
             //((XmlElement)details).SetAttribute("value", pingtai.ToString());
-
             //xmldoc.Save(xmlpath);
-
             RegeditRw.RegWrite("banben", pingtai);
 
 
@@ -75,7 +73,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static string ReadClientPath(String pingtai)
         {
-            return RegeditRw.RegReadString(pingtai + "_" + "client_path");
+            return RegeditRw.RegReadString(pingtai + "_client_path");
         }
 
         /// <summary>
@@ -83,7 +81,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static void WriteClientPath(string clientPath, String pingtai)
         {
-            RegeditRw.RegWrite(pingtai + "_" + "client_path", clientPath);
+            RegeditRw.RegWrite(pingtai + "_client_path", clientPath);
         }
 
         /// <summary>
@@ -91,7 +89,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static string ReadServerPath(string pingtai)
         {
-            return RegeditRw.RegReadString(pingtai + "_" + "Server_path");
+            return RegeditRw.RegReadString(pingtai + "_Server_path");
         }
 
         /// <summary>
@@ -99,7 +97,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static void WriteServerPath(string serverPath, string pingtai)
         {
-            RegeditRw.RegWrite(pingtai + "_" + "Server_path", serverPath);
+            RegeditRw.RegWrite(pingtai + "_Server_path", serverPath);
         }
         #endregion
 
@@ -109,8 +107,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static Dictionary<string, string> ReadHanhua()
         {
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            var sStream = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ServerConfig.xml");
+            var projectName = Assembly.GetExecutingAssembly().GetName().Name;
+            var sStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(projectName+".XML.ServerConfig.xml");
             var xmldoc = new XmlDocument();
             xmldoc.Load(sStream);
 

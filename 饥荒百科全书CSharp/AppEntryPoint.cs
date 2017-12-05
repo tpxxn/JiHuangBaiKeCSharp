@@ -18,7 +18,7 @@ namespace 饥荒百科全书CSharp
     /// <summary>
     /// App.xaml 的交互逻辑
     /// </summary>
-    public partial class App : Application
+    public class App : Application
     {
         /// <summary>
         /// Interaction logic for App.xaml
@@ -33,19 +33,21 @@ namespace 饥荒百科全书CSharp
 
             private static void App_Startup(object sender, StartupEventArgs e)
             {
-                //Debug.WriteLine("App_Startup");
                 ////游戏版本
                 //double gameVersion = RegeditRw.RegRead("GameVersion");
                 //Global.GameVersion = gameVersion;
                 //// 设置AutoSuggestBox的数据源
                 //Global.SetAutoSuggestBoxItem();
-                //设置全局字体
+
+                #region 设置全局字体
                 var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
                 if (!string.IsNullOrEmpty(mainWindowFont))
                 {
                     Global.FontFamily = new FontFamily(mainWindowFont);
                 }
-                //读取资源字典
+                #endregion
+
+                #region 读取资源字典
                 var resourceDictionaries = new Collection<ResourceDictionary>
                 {
                     new ResourceDictionary
@@ -105,13 +107,31 @@ namespace 饥荒百科全书CSharp
                     new ResourceDictionary
                     {
                         Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediComboBoxDictionary.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediComboBoxWithImageDictionary.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediImageButtonDictionary.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediLeftPanelRadioButtonDictionary.xaml",
                             UriKind.Absolute)
                     },
                     new ResourceDictionary
                     {
                         Source = new Uri(
-                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediScrollViewerDictionary.xaml",
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediModBoxDictionary.xaml",
                             UriKind.Absolute)
                     },
                     new ResourceDictionary
@@ -131,12 +151,25 @@ namespace 饥荒百科全书CSharp
                         Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediRightPanelTextBoxDictionary.xaml",
                             UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediScrollViewerDictionary.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DedicatedServer/DediSelectBoxDictionary.xaml",
+                            UriKind.Absolute)
                     }
                 };
-                foreach (var t in resourceDictionaries)
+                foreach (var resourceDictionary in resourceDictionaries)
                 {
-                    Current.Resources.MergedDictionaries.Add(t);
+                    Current.Resources.MergedDictionaries.Add(resourceDictionary);
                 }
+                #endregion
 
                 var splashWindow = new SplashScreen();
                 splashWindow.InitializeComponent();
@@ -158,28 +191,14 @@ namespace 饥荒百科全书CSharp
             {
                 if (args.Length == 0)
                 {
-                    //Console.WriteLine("Main");
-                    //Console.ReadLine();
-                    // 确保不存在程序的其他实例
-                    SingleInstanceWatcher = new Semaphore(
-                        0, // Initial count.
-                        1, // Maximum count.
-                        Assembly.GetExecutingAssembly().GetName().Name, out _createdNew);
+                    // 工程名("饥荒百科全书CSharp")
+                    var projectName = Assembly.GetExecutingAssembly().GetName().Name;
+                    // 单实例监视
+                    SingleInstanceWatcher = new Semaphore(0, 1, projectName, out _createdNew);
                     if (_createdNew)
                     {
                         //加载DLL
-                        AppDomain.CurrentDomain.AssemblyResolve += (sender, arguments) =>
-                        {
-                            var projectName = Assembly.GetExecutingAssembly().GetName().Name.ToString();
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(projectName + ".DynamicLinkLibrary.Newtonsoft.Json.dll"))
-                            {
-                                // ReSharper disable once PossibleNullReferenceException
-                                var bytes = new byte[stream.Length];
-                                stream.Read(bytes, 0, bytes.Length);
-                                return Assembly.Load(bytes);
-                            }
-
-                        };
+                        AppDomain.CurrentDomain.AssemblyResolve += Global.CurrentDomain_AssemblyResolve;
                         //启动
                         var app = new App_Run();
                         app.Run();

@@ -14,7 +14,6 @@
     <details chinese="开始夏天" code="GetSeasonManager():StartSummer()" image= ""/>
     <details chinese="开始下雨" code="GetSeasonManager():StartPrecip()" image= ""/>
     <details chinese="停止下雨" code="GetSeasonManager():StopPrecip()" image= ""/>
-
   </other>
   <!--食物-->
   <food chinese="食物">
@@ -496,5 +495,4 @@
     <details code="candybag" chinese="" image="" />
     <details code="hivehat" chinese="" image="" />
   </clothes>
-
 </items>

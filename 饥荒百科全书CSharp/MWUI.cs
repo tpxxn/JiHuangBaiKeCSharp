@@ -20,19 +20,6 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class MainWindow : Window
     {
-        #region "颜色常量"
-        public const string PbcGreen = "5EB660";  //绿色
-        public const string PbcKhaki = "EDB660";  //卡其布色/土黄色
-        public const string PbcBlue = "337AB8";   //蓝色
-        public const string PbcCyan = "15E3EA";   //青色
-        public const string PbcOrange = "F6A60B"; //橙色
-        public const string PbcPink = "F085D3";   //粉色
-        public const string PbcYellow = "EEE815"; //黄色
-        public const string PbcRed = "D8524F";    //红色
-        public const string PbcPurple = "A285F0"; //紫色
-        public const string PbcBorderCyan = "B2ECED"; //紫色
-        #endregion
-
         #region "窗口尺寸/拖动窗口"
         //引用光标资源字典
         private static readonly ResourceDictionary CursorDictionary = new ResourceDictionary();
@@ -60,6 +47,7 @@ namespace 饥荒百科全书CSharp
                 Cursor = (Cursor)CursorDictionary["CursorPointer"];
             }
         }
+
         private void ResizePressed(object sender, MouseEventArgs e)
         {
             if (!(sender is FrameworkElement element)) return;
@@ -108,7 +96,6 @@ namespace 饥荒百科全书CSharp
             var positionRightGridFrame = e.GetPosition(RightFrame);
             var inUiGrid = false;
             var inFrame = false;
-            var inSetting = false;
             if (positionUiGrid.X >= 0 && positionUiGrid.X < UiGrid.ActualWidth && positionUiGrid.Y >= 0 && positionUiGrid.Y < UiGrid.ActualHeight)
             {
                 inUiGrid = true;
@@ -118,7 +105,7 @@ namespace 饥荒百科全书CSharp
                 inFrame = true;
             }
             // 如果鼠标位置在标题栏内，允许拖动  
-            if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inFrame && !inSetting)) return;
+            if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inFrame)) return;
             Cursor = (Cursor)CursorDictionary["CursorMove"];
             DragMove();
         }
@@ -267,7 +254,9 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "游戏版本"
-        //游戏版本选择
+        /// <summary>
+        /// 游戏版本选择
+        /// </summary>
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!MwInit) return;
@@ -281,19 +270,27 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "设置菜单"
-        //设置
+        /// <summary>
+        /// 设置
+        /// </summary>
         private void UI_btn_setting_Click(object sender, RoutedEventArgs e)
         {
             UiPopSetting.IsOpen = true;
         }
-        //检查更新
+
+        /// <summary>
+        /// 检查更新
+        /// </summary>
         private void Se_button_Update_Click(object sender, RoutedEventArgs e)
         {
             UiPopSetting.IsOpen = false;
             MwVisivility = false;
             UpdatePan.UpdateNow();
         }
-        //窗口置顶
+
+        /// <summary>
+        /// 窗口置顶
+        /// </summary>
         private void Se_button_Topmost_Click(object sender, RoutedEventArgs e)
         {
             if (Topmost == false)
@@ -314,13 +311,18 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "皮肤菜单"
-        //皮肤菜单
+        /// <summary>
+        /// 皮肤菜单
+        /// </summary>
         private void UI_btn_bg_Click(object sender, RoutedEventArgs e)
         {
             UiPopBg.IsOpen = true;
         }
-        
-        //获取字体函数
+
+        /// <summary>
+        /// 获取字体函数
+        /// </summary>
+        /// <returns>字体列表</returns>
         private static IEnumerable<string> ReadFont()
         {
             var installedFontCollectionFont = new InstalledFontCollection();
@@ -333,13 +335,15 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void Se_button_Background_Click(object sender, RoutedEventArgs e)
         {
-            var ofd = new Microsoft.Win32.OpenFileDialog()
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog()
             {
+                Title = "选择背景图片",
                 FileName = "", //默认文件名
                 DefaultExt = ".png", // 默认文件扩展名
                 Filter = "图像文件 (*.bmp;*.gif;*.jpg;*.jpeg;*.png)|*.bmp;*.gif;*.jpg;*.jpeg;*.png" //文件扩展名过滤器
             };
-            var result = ofd.ShowDialog(); //显示打开文件对话框
+            // ReSharper disable once UnusedVariable
+            var result = openFileDialog.ShowDialog(); //显示打开文件对话框
             UiBackGroundBorder.Visibility = Visibility.Visible;
             try
             {
@@ -348,16 +352,16 @@ namespace 饥荒百科全书CSharp
                 {
                     Directory.CreateDirectory(pictruePath);
                 }
-                var filename = Path.GetFileName(ofd.FileName); //设置文件名
+                var filename = Path.GetFileName(openFileDialog.FileName); //设置文件名
                 try
                 {
-                    File.Copy(ofd.FileName, pictruePath + filename, true);
+                    File.Copy(openFileDialog.FileName, pictruePath + filename, true);
                 }
                 catch (Exception)
                 {
                     // ignored
                 }
-                var brush = new ImageBrush()
+                var brush = new ImageBrush
                 {
                     ImageSource = new BitmapImage(new Uri(pictruePath + filename))
                 };
@@ -368,7 +372,7 @@ namespace 饥荒百科全书CSharp
             }
             catch (Exception)
             {
-                MessageBox.Show("没有选择正确的图片");
+                MessageBox.Show("没有选择正确的图片ヽ(ﾟДﾟ)ﾉ");
             }
         }
 
@@ -589,7 +593,10 @@ namespace 饥荒百科全书CSharp
         {
             RightFrame.Visibility = Visibility.Collapsed;
             DedicatedServerFrame.Visibility = Visibility.Visible;
-            DedicatedServerFrame.NavigationService.Navigate(new DedicatedServerPage());
+            if (DedicatedServerFrame.Content == null)
+            {
+                DedicatedServerFrame.NavigationService.Navigate(new DedicatedServerPage());
+            }
         }
         private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
         {
