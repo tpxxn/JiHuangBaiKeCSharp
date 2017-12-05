@@ -14,8 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Xml;
+using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer;
+using 饥荒百科全书CSharp.Class.DedicatedServers.JsonDeserialize;
 using 饥荒百科全书CSharp.Class.DedicatedServers.Tools;
 using 饥荒百科全书CSharp.MyUserControl.DedicatedServer;
 
@@ -38,8 +40,8 @@ namespace 饥荒百科全书CSharp.View
     public partial class DedicatedServerPage : Page
     {
         #region 字段、属性
-        private int _cunDangCao; // 存档槽
-        private string _gamePingTai; // 游戏平台
+        private int _saveSlot; // 存档槽
+        private string _gamePlatform; // 游戏平台
         private readonly UTF8Encoding _utf8NoBom = new UTF8Encoding(false); // 编码
         private Dictionary<string, string> _hanhua;  // 汉化
 
@@ -49,23 +51,23 @@ namespace 饥荒百科全书CSharp.View
         private Leveldataoverride _caves;     // 地下世界
         private Mods _mods;  // mods
 
-        public string GamePingTai
+        public string GamePlatform
         {
-            get => _gamePingTai;
+            get => _gamePlatform;
             set
             {
-                XmlHelper.WriteGamePingTai(value);
-                _gamePingTai = value;
+                JsonHelper.WriteGamePlatform(value);
+                _gamePlatform = value;
             }
         }
 
-        public int CunDangCao
+        public int SaveSlot
         {
-            get => _cunDangCao;
+            get => _saveSlot;
             set
             {
-                _cunDangCao = value;
-                _pathAll.CunDangCao = value;
+                _saveSlot = value;
+                _pathAll.SaveSlot = value;
             }
         }
         #endregion
@@ -171,7 +173,7 @@ namespace 饥荒百科全书CSharp.View
         }
         #endregion
 
-        #region "Intention"
+        #region "游戏风格"
         private void DediIntention_social_Click(object sender, RoutedEventArgs e)
         {
             DediIntention_Click("social");
@@ -258,9 +260,9 @@ namespace 饥荒百科全书CSharp.View
         private void DediBaseSetHouseName_TextChanged(object sender, TextChangedEventArgs e)
         {
             DediMainTopWorldName.Text = DediBaseSetHouseName.Text;
-            if (((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao))?.IsChecked == true)
+            if (((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + SaveSlot))?.IsChecked == true)
             {
-                ((RadioButton)DediLeftStackPanel.FindName(name: $"DediRadioButton{CunDangCao}")).Content = DediBaseSetHouseName.Text;
+                ((RadioButton)DediLeftStackPanel.FindName(name: $"DediRadioButton{SaveSlot}")).Content = DediBaseSetHouseName.Text;
 
             }
         }
@@ -280,8 +282,8 @@ namespace 饥荒百科全书CSharp.View
         {
             // 赋值
 
-            GamePingTai = e.AddedItems[0].ToString();
-            if (GamePingTai == "TGP")
+            GamePlatform = e.AddedItems[0].ToString();
+            if (GamePlatform == "TGP")
             {
                 CtrateRunGame.Visibility = Visibility.Collapsed;
                 CtrateWorldButton.Content = "保存世界";
@@ -303,11 +305,11 @@ namespace 饥荒百科全书CSharp.View
             var openFileDialog = new Microsoft.Win32.OpenFileDialog
             {
                 Title = "选择游戏exe文件",
-                FileName = _gamePingTai == "TGP"
+                FileName = _gamePlatform == "TGP"
                     ? "dontstarve_rail"
                     : "dontstarve_steam", //默认文件名
                 DefaultExt = ".exe",// 默认文件扩展名
-                Filter = _gamePingTai == "TGP"
+                Filter = _gamePlatform == "TGP"
                     ? "饥荒游戏exe文件(*.exe)|dontstarve_rail.exe"
                     : "饥荒游戏exe文件(*.exe)|dontstarve_steam.exe",
                 FilterIndex = 1,
@@ -323,7 +325,7 @@ namespace 饥荒百科全书CSharp.View
                 }
                 _pathAll.ClientFilePath = fileName;
                 DediSettingGameDirSelectTextBox.Text = fileName;
-                XmlHelper.WriteClientPath(fileName, GamePingTai);
+                JsonHelper.WriteClientPath(fileName, GamePlatform);
 
             }
         }
@@ -350,7 +352,7 @@ namespace 饥荒百科全书CSharp.View
                 }
                 _pathAll.ServerFilePath = fileName;
                 DediSettingDediDirSelectTextBox.Text = fileName;
-                XmlHelper.WriteServerPath(fileName, GamePingTai);
+                JsonHelper.WriteServerPath(fileName, GamePlatform);
                 // 读取mods
                 _mods = null;
                 if (!string.IsNullOrEmpty(_pathAll.ServerModsDirPath))
@@ -401,7 +403,7 @@ namespace 饥荒百科全书CSharp.View
             }
 
             // 1. radioBox 写 创建世界
-            ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{CunDangCao}")).Content = "创建世界";
+            ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{SaveSlot}")).Content = "创建世界";
             // 2. 删除当前存档
             if (Directory.Exists(_pathAll.YyServerDirPath))
             {
@@ -409,7 +411,7 @@ namespace 饥荒百科全书CSharp.View
             }
 
            // 2.1 取消选择,谁都不选
-           ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{CunDangCao}")).IsChecked = false;
+           ((RadioButton)DediLeftStackPanel.FindName($"DediRadioButton{SaveSlot}")).IsChecked = false;
 
             // 2.2 
 
@@ -419,9 +421,9 @@ namespace 饥荒百科全书CSharp.View
             //ServerTools.Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
 
 
-            //if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao))
+            //if (!Directory.Exists(pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePlatform + "_" + SaveSlot))
             //{
-            //    Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePingTai + "_" + CunDangCao);
+            //    Directory.Move(pathAll.DoNotStarveTogether_DirPath + "\\Server", pathAll.DoNotStarveTogether_DirPath + "\\Server_" + GamePlatform + "_" + SaveSlot);
             //}
             //// 4. 读取新的存档
             //SetBaseSet();
@@ -496,7 +498,7 @@ namespace 饥荒百科全书CSharp.View
             // 1.检查存档Server是否存在 
             CheckServer();
             // 2.汉化
-            _hanhua = XmlHelper.ReadHanhua();
+            _hanhua = JsonHelper.ReadHanhua();
             // 3.读取服务器mods文件夹下所有信息.mod多的话,读取时间也多
             //   此时的mod没有被current覆盖
             _mods = null;
@@ -525,7 +527,7 @@ namespace 饥荒百科全书CSharp.View
                 _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Caves\modoverrides.lua", _utf8NoBom);
             }
             // 1.存档槽
-            CunDangCao = (int)((RadioButton)sender).Tag;
+            SaveSlot = (int)((RadioButton)sender).Tag;
             // 1.5 创建世界
             if (((RadioButton)sender).Content.ToString() == "创建世界")
             {
@@ -533,12 +535,12 @@ namespace 饥荒百科全书CSharp.View
                 //Tool.CopyDirectory(pathAll.ServerMoBanPath, pathAll.DoNotStarveTogether_DirPath);
                 CopyServerModel(_pathAll.DoNotStarveTogetherDirPath);
                 // 改名字
-                if (!Directory.Exists(_pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePingTai + "_" + CunDangCao))
+                if (!Directory.Exists(_pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePlatform + "_" + SaveSlot))
                 {
-                    Directory.Move(_pathAll.DoNotStarveTogetherDirPath + "\\Server", _pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePingTai + "_" + CunDangCao);
+                    Directory.Move(_pathAll.DoNotStarveTogetherDirPath + "\\Server", _pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePlatform + "_" + SaveSlot);
 
                 }
-               ((RadioButton)sender).Content = GetHouseName(CunDangCao);
+               ((RadioButton)sender).Content = GetHouseName(SaveSlot);
 
             }
             // 1.6 复活
@@ -719,7 +721,7 @@ namespace 饥荒百科全书CSharp.View
         // 设置"路径"
         private void SetPath()
         {
-            _pathAll = new PathAll(GamePingTai, 0);
+            _pathAll = new PathAll(GamePlatform, 0);
             DediSettingGameDirSelectTextBox.Text = "";
             if (!string.IsNullOrEmpty(_pathAll.ClientFilePath) && File.Exists(_pathAll.ClientFilePath))
             {
@@ -746,8 +748,8 @@ namespace 饥荒百科全书CSharp.View
         // 设置"平台"
         private void SetPingTai()
         {
-            _gamePingTai = XmlHelper.ReadGamePingTai();
-            DediSettingGameVersionSelect.Text = _gamePingTai;
+            _gamePlatform = JsonHelper.ReadGamePlatform();
+            DediSettingGameVersionSelect.Text = _gamePlatform;
             Debug.WriteLine("游戏平台-完");
         }
 
@@ -788,7 +790,7 @@ namespace 饥荒百科全书CSharp.View
             DediOverWorldResources.Children.Clear();
             // 地上 分类
 
-            var overWorldFenLei = XmlHelper.ReadWorldFenLei(false);
+            var overWorldFenLei = JsonHelper.ReadWorldFenLei(false);
 
             var foods = new Dictionary<string, ShowWorld>();
             var animals = new Dictionary<string, ShowWorld>();
@@ -971,7 +973,7 @@ namespace 饥荒百科全书CSharp.View
             DediCavesResources.Children.Clear();
             // 地下 分类
 
-            var fenleil = XmlHelper.ReadWorldFenLei(true);
+            var fenleil = JsonHelper.ReadWorldFenLei(true);
 
             var foods = new Dictionary<string, ShowWorld>();
             var animals = new Dictionary<string, ShowWorld>();
@@ -1143,7 +1145,7 @@ namespace 饥荒百科全书CSharp.View
             var serverTgpPathList = new List<string>();
             foreach (var t in dinfostr)
             {
-                if (t.Name.StartsWith("Server_" + GamePingTai + "_"))
+                if (t.Name.StartsWith("Server_" + GamePlatform + "_"))
                 {
                     serverTgpPathList.Add(t.FullName);
                 }
@@ -1167,9 +1169,9 @@ namespace 饥荒百科全书CSharp.View
                 CopyServerModel(_pathAll.DoNotStarveTogetherDirPath);
 
                 // 改名字
-                if (!Directory.Exists(_pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePingTai + "_0"))
+                if (!Directory.Exists(_pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePlatform + "_0"))
                 {
-                    Directory.Move(_pathAll.DoNotStarveTogetherDirPath + "\\Server", _pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePingTai + "_0");
+                    Directory.Move(_pathAll.DoNotStarveTogetherDirPath + "\\Server", _pathAll.DoNotStarveTogetherDirPath + "\\Server_" + GamePlatform + "_0");
                 }
             }
             else
@@ -1192,11 +1194,11 @@ namespace 饥荒百科全书CSharp.View
             JinYong(false);
             DediSettingGameVersionSelect.IsEnabled = true;
             // 不选择任何一项
-            ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + CunDangCao)).IsChecked = false;
+            ((RadioButton)DediLeftStackPanel.FindName("DediRadioButton" + SaveSlot)).IsChecked = false;
 
             //// 选择第0个存档
             //((RadioButton)DediLeftStackPanel.FindName("DediRadioButton0")).IsChecked = true;
-            //CunDangCao = 0;
+            //SaveSlot = 0;
 
         }
         #endregion
@@ -1244,20 +1246,20 @@ namespace 饥荒百科全书CSharp.View
                 _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Caves\modoverrides.lua", _utf8NoBom);
             }
             // 如果是youxia,强行设置为 离线,局域网
-            if (GamePingTai == "youxia")
+            if (GamePlatform == "youxia")
             {
                 var ini1 = new IniHelper(_pathAll.YyServerDirPath + @"\cluster.ini", _utf8NoBom);
                 ini1.Write("NETWORK", "offline_cluster", "true", _utf8NoBom);
                 ini1.Write("NETWORK", "lan_only_cluster", "true", _utf8NoBom);
 
             }
-            if (GamePingTai == "TGP")
+            if (GamePlatform == "TGP")
             {
                 var ini1 = new IniHelper(_pathAll.YyServerDirPath + @"\cluster.ini", _utf8NoBom);
                 //ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
                 ini1.Write("NETWORK", "lan_only_cluster", "false", _utf8NoBom);
             }
-            if (GamePingTai == "Steam")
+            if (GamePlatform == "Steam")
             {
                 var ini1 = new IniHelper(_pathAll.YyServerDirPath + @"\cluster.ini", _utf8NoBom);
                 //ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
@@ -1265,26 +1267,26 @@ namespace 饥荒百科全书CSharp.View
             }
             // 打开服务器
             var p = new Process();
-            if (GamePingTai != "TGP")
+            if (GamePlatform != "TGP")
             {
                 p.StartInfo.UseShellExecute = false; // 是否
                 p.StartInfo.WorkingDirectory = Path.GetDirectoryName(_pathAll.ServerFilePath); // 目录,这个必须设置
                 p.StartInfo.FileName = _pathAll.ServerFilePath; ;  // 服务器名字
 
-                p.StartInfo.Arguments = "-console -cluster Server_" + GamePingTai + "_" + CunDangCao.ToString() + " -shard Master";
+                p.StartInfo.Arguments = "-console -cluster Server_" + GamePlatform + "_" + SaveSlot.ToString() + " -shard Master";
                 p.Start();
             }
             // 打开服务器
-            if (GamePingTai == "TGP")
+            if (GamePlatform == "TGP")
             {
-                MessageBox.Show("保存完毕! 请通过TGP启动,存档文件名为" + GamePingTai + "_" + CunDangCao.ToString());
+                MessageBox.Show("保存完毕! 请通过TGP启动,存档文件名为" + GamePlatform + "_" + SaveSlot.ToString());
             }
-            if (GamePingTai != "TGP")
+            if (GamePlatform != "TGP")
             {
                 // 是否开启洞穴
                 if (DediBaseIsCave.Text == "是")
                 {
-                    p.StartInfo.Arguments = "-console -cluster Server_" + GamePingTai + "_" + CunDangCao.ToString() + " -shard Caves";
+                    p.StartInfo.Arguments = "-console -cluster Server_" + GamePlatform + "_" + SaveSlot.ToString() + " -shard Caves";
                     p.Start();
                 }
             }
@@ -1315,77 +1317,210 @@ namespace 饥荒百科全书CSharp.View
         private void CreateConsoleButton()
         {
             DediConsoleFenLei.Children.Clear();
-            // 读取分类信息
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            var sStream = assembly.GetManifestResourceStream("饥荒百科全书CSharp.XML.ItemList.xml");
-            var xmldoc = new XmlDocument();
-            xmldoc.Load(sStream);
-
-            var details = xmldoc.SelectNodes("/items/*");
-
-            foreach (XmlNode item in details)
+            // otherRadioButton
+            var otherRadioButton = new RadioButton
             {
-
-                var chinese = ((XmlElement)item).GetAttribute("chinese");
-                // RadioButton
-                var b = new RadioButton()
-                {
-                    Content = chinese,
-                    Width = 140,
-                    Height = 40,
-                    Foreground = new SolidColorBrush(Colors.Black),
-                    Tag = ((XmlElement)item),
-                    FontWeight = FontWeights.Bold,
-                    Style = (Style)this.FindResource("RadioButtonStyle")
-
-                };
-                b.Checked += B_Click;
-                if (b.Content.ToString() == "其他")
-                {
-                    b.IsChecked = true;
-                }
-
-                DediConsoleFenLei.Children.Add(b);
-            }
-
-
+                Content = "其他",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            otherRadioButton.Checked += B_Click;
+            otherRadioButton.IsChecked = true;
+            DediConsoleFenLei.Children.Add(otherRadioButton);
+            // foodRadioButton
+            var foodRadioButton = new RadioButton
+            {
+                Content = "食物",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            foodRadioButton.Checked += B_Click;
+            foodRadioButton.IsChecked = true;
+            DediConsoleFenLei.Children.Add(foodRadioButton);
+            // resourcesRadioButton
+            var resourcesRadioButton = new RadioButton
+            {
+                Content = "资源",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            resourcesRadioButton.Checked += B_Click;
+            resourcesRadioButton.IsChecked = true;
+            DediConsoleFenLei.Children.Add(resourcesRadioButton);
+            // toolsRadioButton
+            var toolsRadioButton = new RadioButton
+            {
+                Content = "工具",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            toolsRadioButton.Checked += B_Click;
+            toolsRadioButton.IsChecked = true;
+            DediConsoleFenLei.Children.Add(toolsRadioButton);
+            // weaponsRadioButton
+            var weaponsRadioButton = new RadioButton
+            {
+                Content = "武器",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            weaponsRadioButton.Checked += B_Click;
+            weaponsRadioButton.IsChecked = true;
+            DediConsoleFenLei.Children.Add(weaponsRadioButton);
+            // giftsRadioButton
+            var giftsRadioButton = new RadioButton
+            {
+                Content = "礼物",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            giftsRadioButton.Checked += B_Click;
+            giftsRadioButton.IsChecked = true;
+            DediConsoleFenLei.Children.Add(giftsRadioButton);
+            // clothesRadioButton
+            var clothesRadioButton = new RadioButton
+            {
+                Content = "衣物",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            clothesRadioButton.Checked += B_Click;
+            clothesRadioButton.IsChecked = true;
+            DediConsoleFenLei.Children.Add(clothesRadioButton);
         }
 
-        // 显示具体分类信息
+        /// <summary>
+        /// 显示具体分类信息
+        /// </summary>
         private void B_Click(object sender, RoutedEventArgs e)
         {
+            // 读取分类信息
+            var itemList = JsonConvert.DeserializeObject<ItemListRootObject>(StringProcess.GetJsonStringDedicatedServer("ItemList.json"));
             // 把当前选择的值放到这里了
             DediConsoleFenLei.Tag = ((RadioButton)sender).Content;
-            var item = (XmlElement)((RadioButton)sender).Tag;
-            DediConsoleDetails.Children.Clear();
             // 显示具体分类信息
-            var xnl = item.ChildNodes;
-            foreach (XmlNode x in xnl)
+            switch (DediConsoleFenLei.Tag)
             {
-                var codestr = ((XmlElement)x).GetAttribute("code");
-                var chinesestr = ((XmlElement)x).GetAttribute("chinese");
-                if (string.IsNullOrEmpty(chinesestr))
-                {
-                    continue;
-                }
-                // 按钮
-                Button bx = new Button()
-                {
-                    Content = chinesestr,
-                    Width = 115,
-                    Height = 35,
-                    Tag = codestr,
-                    FontWeight = FontWeights.Bold,
-                    Style = (Style)this.FindResource("DediButtonCreateWorldStyle")
-
-                };
-                bx.Click += Bx_Click;
-                DediConsoleDetails.Children.Add(bx);
-
-
+                case "其他":
+                    foreach (var detail in itemList.Items.Other.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateBxButton(detail);
+                    }
+                    break;
+                case "食物":
+                    foreach (var detail in itemList.Items.Food.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateBxButton(detail);
+                    }
+                    break;
+                case "资源":
+                    foreach (var detail in itemList.Items.Resources.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateBxButton(detail);
+                    }
+                    break;
+                case "工具":
+                    foreach (var detail in itemList.Items.Tools.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateBxButton(detail);
+                    }
+                    break;
+                case "武器":
+                    foreach (var detail in itemList.Items.Weapons.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateBxButton(detail);
+                    }
+                    break;
+                case "礼物":
+                    foreach (var detail in itemList.Items.Gifts.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateBxButton(detail);
+                    }
+                    break;
+                case "衣物":
+                    foreach (var detail in itemList.Items.Clothes.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateBxButton(detail);
+                    }
+                    break;
             }
         }
 
+        /// <summary>
+        /// 创建Bx按钮
+        /// </summary>
+        /// <param name="detail"></param>
+        private void CreateBxButton(Detail3 detail)
+        {
+            DediConsoleDetails.Children.Clear();
+            var codeString = detail.Code;
+            var chineseString = detail.Chinese;
+            // 按钮
+            var button = new Button
+            {
+                Content = chineseString,
+                Width = 115,
+                Height = 35,
+                Tag = codeString,
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("DediButtonCreateWorldStyle")
+            };
+            button.Click += Bx_Click;
+            DediConsoleDetails.Children.Add(button);
+        }
+
+        /// <summary>
+        /// Bx按钮Click事件
+        /// </summary>
         private void Bx_Click(object sender, RoutedEventArgs e)
         {
             var code = ((Button)sender).Tag.ToString();
@@ -1401,19 +1536,14 @@ namespace 饥荒百科全书CSharp.View
                 SsendMessage("c_give(\"" + code + "\", 1)");
                 System.Windows.Forms.Clipboard.SetDataObject("c_give(\"" + code + "\", 1)");
             }
-
-
-
-
-
         }
         #endregion
 
         #region 其他
         // 获取房间名
-        private string GetHouseName(int dCundangcao)
+        private string GetHouseName(int dSaveSlot)
         {
-            var clusterIniPath = _pathAll.DoNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + dCundangcao.ToString() + @"\cluster.ini";
+            var clusterIniPath = _pathAll.DoNotStarveTogetherDirPath + @"\Server_" + GamePlatform + "_" + dSaveSlot.ToString() + @"\cluster.ini";
             if (!File.Exists(clusterIniPath))
             {
                 return "创建世界";

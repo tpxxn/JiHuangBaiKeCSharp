@@ -27,6 +27,11 @@ namespace 饥荒百科全书CSharp.Class
         public static string ErrorStackString { get; set; }
 
         /// <summary>
+        /// 工程名 [饥荒百科全书CSharp]
+        /// </summary>
+        public static string ProjectName = Assembly.GetExecutingAssembly().GetName().Name;
+
+        /// <summary>
         /// MainPage需要保存在Global里额几个控件对象
         /// </summary>
         public static FontFamily FontFamily { get; set; }
@@ -143,8 +148,7 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         public static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
-            var projectName = Assembly.GetExecutingAssembly().GetName().Name;
-            var resourceName = projectName + ".DynamicLinkLibrary." + new AssemblyName(args.Name).Name + ".dll";
+            var resourceName = ProjectName + ".DynamicLinkLibrary." + new AssemblyName(args.Name).Name + ".dll";
             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
                 // ReSharper disable once PossibleNullReferenceException

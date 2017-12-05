@@ -98,17 +98,19 @@
     <Compile Include="Class\DedicatedServers\DedicateServer\Player.cs" />
     <Compile Include="Class\DedicatedServers\DedicateServer\Server.cs" />
     <Compile Include="Class\DedicatedServers\DedicateServer\ShowWorld.cs" />
+    <Compile Include="Class\DedicatedServers\JsonDeserialize\ItemListJson.cs" />
     <Compile Include="Class\DedicatedServers\Tools\IniHelper.cs" />
+    <Compile Include="Class\DedicatedServers\Tools\JsonHelper.cs" />
     <Compile Include="Class\DedicatedServers\Tools\LuaConfig.cs" />
     <Compile Include="Class\DedicatedServers\Tools\PathAll.cs" />
     <Compile Include="Class\DedicatedServers\Tools\SendMessage.cs" />
     <Compile Include="Class\DedicatedServers\Tools\Tool.cs" />
-    <Compile Include="Class\DedicatedServers\Tools\XmlHelper.cs" />
     <Compile Include="Class\JsonDeserialize\CharactersJson.cs" />
     <Compile Include="Class\JsonDeserialize\CreaturesJson.cs" />
     <Compile Include="Class\JsonDeserialize\FoodsJson.cs" />
     <Compile Include="Class\Global.cs" />
     <Compile Include="Class\JsonDeserialize\GoodsJson.cs" />
+    <Compile Include="Class\DedicatedServers\JsonDeserialize\ServerConfigJson.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\JsonDeserialize\NaturalJson.cs" />
     <Compile Include="MWUI.cs" />
@@ -5498,10 +5500,6 @@
     <EmbeddedResource Include="DynamicLinkLibrary\Neo.Lua.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="XML\ItemList.xml" />
-    <EmbeddedResource Include="XML\ServerConfig.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_ComboBoxBackground.png" />
     <Resource Include="Resources\DedicatedServer\D_ComboBoxBackGroundhui.png" />
     <Resource Include="Resources\DedicatedServer\D_jiantou2Left_Enter.png" />
@@ -5608,6 +5606,9 @@
     <Resource Include="Resources\DedicatedServer\World\worms.png" />
     <Resource Include="Resources\DedicatedServer\设置1_Enter.png" />
     <Resource Include="Resources\DedicatedServer\设置1_Leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DedicatedServer\D_mp_btn_save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

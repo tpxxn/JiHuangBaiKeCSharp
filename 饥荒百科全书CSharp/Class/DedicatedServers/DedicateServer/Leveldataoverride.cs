@@ -211,7 +211,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             _selectConfigWorld.Clear();
 
             //读取文件,填入到字典
-            var listStr = XmlHelper.ReadWorldSelect(_isCave);
+            var listStr = JsonHelper.ReadWorldSelect(_isCave);
 
             foreach (var str in listStr)
             {

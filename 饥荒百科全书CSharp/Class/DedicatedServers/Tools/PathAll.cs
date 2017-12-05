@@ -43,11 +43,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 {
                     _clientFilePath = null;
                     ClientModsDirPath = null;
-                    XmlHelper.WriteClientPath("", GamePingTai);
+                    JsonHelper.WriteClientPath("", GamePingTai);
                     return;
                 }
                 _clientFilePath = value.Trim();
-                XmlHelper.WriteClientPath(_clientFilePath, GamePingTai);
+                JsonHelper.WriteClientPath(_clientFilePath, GamePingTai);
                 // 客户端mods路径 
                 if (!string.IsNullOrEmpty(_clientFilePath))
                 {
@@ -76,7 +76,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 {
                     _serverFilePath = null;
                     ServerModsDirPath = null;
-                    XmlHelper.WriteServerPath("", GamePingTai);
+                    JsonHelper.WriteServerPath("", GamePingTai);
 
                     return;
                 }
@@ -84,7 +84,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 if (value.Contains("dontstarve_dedicated_server_nullrenderer.exe"))
                 {
                     _serverFilePath = value.Trim();
-                    XmlHelper.WriteServerPath(_serverFilePath, GamePingTai);
+                    JsonHelper.WriteServerPath(_serverFilePath, GamePingTai);
 
 
                 }
@@ -154,7 +154,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 _doNotStarveTogetherDirPath = value;
                 if (!string.IsNullOrEmpty(_doNotStarveTogetherDirPath))
                 {
-                    YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + CunDangCao;
+                    YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + SaveSlot;
                 }
             }
         }
@@ -170,13 +170,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         public string ServerModsDirPath { get; set; }
 
         public string GamePingTai { get; set; }
-        private int _cunDangCao;
-        public int CunDangCao
+        private int _saveSlot;
+        public int SaveSlot
         {
-            get => _cunDangCao;
+            get => _saveSlot;
             set
             {
-                _cunDangCao = value;
+                _saveSlot = value;
                 YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + value;
             }
         }
@@ -187,23 +187,23 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         ///
         /// </summary>
         /// <param name="gamePingTai">游戏平台</param>
-        /// <param name="cunDangCao">存档槽</param>
-        public PathAll(string gamePingTai, int cunDangCao)
+        /// <param name="SaveSlot">存档槽</param>
+        public PathAll(string gamePingTai, int SaveSlot)
         {
             GamePingTai = gamePingTai;
-            CunDangCao = cunDangCao;
-            SetAllPath(gamePingTai, cunDangCao);
+            SaveSlot = SaveSlot;
+            SetAllPath(gamePingTai, SaveSlot);
         }
 
         /// <summary>
         /// 设置所有路径
         /// </summary>
         /// <param name="gamePingTai">游戏平台</param>
-        /// <param name="cunDangCao">第几个存档槽,从0开始</param>
-        public void SetAllPath(string gamePingTai, int cunDangCao = 0)
+        /// <param name="SaveSlot">第几个存档槽,从0开始</param>
+        public void SetAllPath(string gamePingTai, int SaveSlot = 0)
         {
             GamePingTai = gamePingTai;
-            CunDangCao = cunDangCao;
+            SaveSlot = SaveSlot;
             // 我的文档
             DocumentDirPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             // 当前路径
@@ -221,8 +221,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 DoNotStarveTogetherDirPath = DocumentDirPath + @"\Klei\DoNotStarveTogether";
             }
             // 客户端服务器路径
-            ClientFilePath = XmlHelper.ReadClientPath(gamePingTai);
-            ServerFilePath = XmlHelper.ReadServerPath(gamePingTai);
+            ClientFilePath = JsonHelper.ReadClientPath(gamePingTai);
+            ServerFilePath = JsonHelper.ReadServerPath(gamePingTai);
         }
     }
 }

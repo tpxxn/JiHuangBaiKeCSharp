@@ -73,7 +73,7 @@
                         <ColumnDefinition Width="12*"/>
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
-                    <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
+                    <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" d:IsHidden="True" >
                         <StackPanel>
                             <Grid x:Name="DediSettingGameVersion" Height="40">
                                 <Grid.Background>
@@ -90,43 +90,49 @@
                                 <Grid.Background>
                                     <ImageBrush ImageSource="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_set_bg.png"/>
                                 </Grid.Background>
-                                <Viewbox Margin="0,2">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Content="游戏exe地址:" FontWeight="Bold" FontSize="16"/>
-                                        <TextBox x:Name="DediSettingGameDirSelectTextBox" Style="{StaticResource DediTextBoxStyle}" Height="30" Width="500" IsReadOnly="True" Cursor="{StaticResource CursorLink}" PreviewMouseDoubleClick="DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick"/>
-                                        <Button x:Name="DediSettingGameDirSelect" Tag="选择文件" Width="30" Height="30" Style="{StaticResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingGameDirSelect_Click">
-                                            <Image Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
-                                        </Button>
-                                    </StackPanel>
-                                </Viewbox>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="107.2"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="27.2"/>
+                                    <ColumnDefinition Width="5"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="游戏exe地址:" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" x:Name="DediSettingGameDirSelectTextBox" Tag="双击打开目录" Style="{StaticResource DediTextBoxStyle}" Height="30" IsReadOnly="True" Cursor="{StaticResource CursorLink}" PreviewMouseDoubleClick="DediSettingGameDirSelectTextBox_PreviewMouseDoubleClick" VerticalAlignment="Center"/>
+                                <Button Grid.Column="2" x:Name="DediSettingGameDirSelect" Tag="选择文件" Width="30" Height="30" Style="{StaticResource DediLittleButtonMainPanelStyle}" Click="DediSettingGameDirSelect_Click" VerticalAlignment="Center" Margin="0,3,0,0">
+                                    <Image Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
+                                </Button>
                             </Grid>
                             <Grid x:Name="DediSettingDediDir" Height="40">
                                 <Grid.Background>
                                     <ImageBrush ImageSource="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_set_bg.png"/>
                                 </Grid.Background>
-                                <Viewbox Margin="0,2">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Content="服务器exe地址:" FontWeight="Bold" FontSize="16"/>
-                                        <TextBox x:Name="DediSettingDediDirSelectTextBox" Style="{StaticResource DediTextBoxStyle}" Height="30" Width="500" IsReadOnly="True" Cursor="{StaticResource CursorLink}" PreviewMouseDoubleClick="DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick"/>
-                                        <Button x:Name="DediSettingDediDirSelect" Tag="选择文件" Width="30" Height="30" Style="{StaticResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingDediDirSelect_Click">
-                                            <Image Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
-                                        </Button>
-                                    </StackPanel>
-                                </Viewbox>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="123.2"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="27.2"/>
+                                    <ColumnDefinition Width="5"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="服务器exe地址:" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" x:Name="DediSettingDediDirSelectTextBox" Tag="双击打开目录" Style="{StaticResource DediTextBoxStyle}" Height="30" IsReadOnly="True" Cursor="{StaticResource CursorLink}" PreviewMouseDoubleClick="DediSettingDediDirSelectTextBox_PreviewMouseDoubleClick" VerticalAlignment="Center"/>
+                                <Button Grid.Column="2" x:Name="DediSettingDediDirSelect" Tag="选择文件" Width="30" Height="30" Style="{StaticResource DediLittleButtonMainPanelStyle}" Click="DediSettingDediDirSelect_Click" VerticalAlignment="Center" Margin="0,3,0,0">
+                                    <Image Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
+                                </Button>
                             </Grid>
                             <Grid x:Name="DediSettingDediCluster" Height="40">
                                 <Grid.Background>
                                     <ImageBrush ImageSource="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_set_bg.png"/>
                                 </Grid.Background>
-                                <Viewbox Margin="0,2">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Content="ClusterToken:" FontWeight="Bold" FontSize="16"/>
-                                        <TextBox x:Name="DediSettingClusterTokenTextBox" Style="{StaticResource DediTextBoxStyle}" Height="30" Width="500"  Cursor="{StaticResource CursorLink}"  />
-                                        <Button x:Name="DediSettingSaveCluster" Tag="保存" Width="30" Height="30" Style="{StaticResource DediLittleButtonMainPanelStyle}" Margin="0,3,0,0" Click="DediSettingSaveCluster_Click">
-                                            <Image Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_btn_dirselect.png"/>
-                                        </Button>
-                                    </StackPanel>
-                                </Viewbox>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="121.6"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="27.2"/>
+                                    <ColumnDefinition Width="5"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="ClusterToken:" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" x:Name="DediSettingClusterTokenTextBox" Tag="输入ClusterToken" Style="{StaticResource DediTextBoxStyle}" Height="30"  Cursor="{StaticResource CursorLink}" VerticalAlignment="Center"  />
+                                <Button Grid.Column="2" x:Name="DediSettingSaveCluster" Tag="保存" Width="30" Height="30" Style="{StaticResource DediLittleButtonMainPanelStyle}" Click="DediSettingSaveCluster_Click" VerticalAlignment="Center" Margin="0,3,0,0">
+                                    <Image Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_btn_save.png"/>
+                                </Button>
                             </Grid>
                         </StackPanel>
                     </ScrollViewer>
@@ -335,13 +341,12 @@
                             <TextBlock x:Name="DediModDescription"  />
                         </ScrollViewer>
                     </Grid>
-                    <Grid x:Name="DediModRollBack" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
+                    <Grid x:Name="DediModRollBack" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="10*"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel x:Name="DediConsoleFenLei" Orientation="Vertical"  Margin="0" Grid.Column="0"  >
-                        </StackPanel>
+                        <StackPanel x:Name="DediConsoleFenLei" Orientation="Vertical"  Margin="0" Grid.Column="0"/>
                         <ScrollViewer Grid.Column="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
                             <WrapPanel x:Name="DediConsoleDetails" Orientation="Horizontal" Margin="0"/>
                         </ScrollViewer>

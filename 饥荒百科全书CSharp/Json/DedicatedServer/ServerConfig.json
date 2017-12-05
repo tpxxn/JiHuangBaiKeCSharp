@@ -1,1379 +1,1379 @@
 {
-  "configuration": {
-    "hanhua": {
-      "details": [
+  "Configuration": {
+    "Hanhua": {
+      "Details": [
         {
-          "english": "unprepared",
-          "chinese": "食物"
+          "English": "unprepared",
+          "Chinese": "食物"
         },
         {
-          "english": "banana",
-          "chinese": "香蕉"
+          "English": "banana",
+          "Chinese": "香蕉"
         },
         {
-          "english": "berrybush",
-          "chinese": "浆果丛"
+          "English": "berrybush",
+          "Chinese": "浆果丛"
         },
         {
-          "english": "cactus",
-          "chinese": "仙人掌"
+          "English": "cactus",
+          "Chinese": "仙人掌"
         },
         {
-          "english": "carrot",
-          "chinese": "胡萝卜"
+          "English": "carrot",
+          "Chinese": "胡萝卜"
         },
         {
-          "english": "lichen",
-          "chinese": "苔藓"
+          "English": "lichen",
+          "Chinese": "苔藓"
         },
         {
-          "english": "mushroom",
-          "chinese": "蘑菇"
+          "English": "mushroom",
+          "Chinese": "蘑菇"
         },
         {
-          "english": "misc",
-          "chinese": "杂项"
+          "English": "misc",
+          "Chinese": "杂项"
         },
         {
-          "english": "preset",
-          "chinese": "预设"
+          "English": "preset",
+          "Chinese": "预设"
         },
         {
-          "english": "autumn",
-          "chinese": "秋天"
+          "English": "autumn",
+          "Chinese": "秋天"
         },
         {
-          "english": "boons",
-          "chinese": "彩蛋"
+          "English": "boons",
+          "Chinese": "彩蛋"
         },
         {
-          "english": "branching",
-          "chinese": "岔路地形"
+          "English": "branching",
+          "Chinese": "岔路地形"
         },
         {
-          "english": "cavelight",
-          "chinese": "洞穴光照"
+          "English": "cavelight",
+          "Chinese": "洞穴光照"
         },
         {
-          "english": "day",
-          "chinese": "昼夜长短"
+          "English": "day",
+          "Chinese": "昼夜长短"
         },
         {
-          "english": "earthquakes",
-          "chinese": "地震频率"
+          "English": "earthquakes",
+          "Chinese": "地震频率"
         },
         {
-          "english": "frograin",
-          "chinese": "青蛙雨"
+          "English": "frograin",
+          "Chinese": "青蛙雨"
         },
         {
-          "english": "lightning",
-          "chinese": "闪电"
+          "English": "lightning",
+          "Chinese": "闪电"
         },
         {
-          "english": "loop",
-          "chinese": "环状地形"
+          "English": "loop",
+          "Chinese": "环状地形"
         },
         {
-          "english": "regrowth",
-          "chinese": "再生速度"
+          "English": "regrowth",
+          "Chinese": "再生速度"
         },
         {
-          "english": "season_start",
-          "chinese": "开始季节"
+          "English": "season_start",
+          "Chinese": "开始季节"
         },
         {
-          "english": "spring",
-          "chinese": "春天"
+          "English": "spring",
+          "Chinese": "春天"
         },
         {
-          "english": "start_location",
-          "chinese": "初始环境"
+          "English": "start_location",
+          "Chinese": "初始环境"
         },
         {
-          "english": "summer",
-          "chinese": "夏天"
+          "English": "summer",
+          "Chinese": "夏天"
         },
         {
-          "english": "task_set",
-          "chinese": "生物群落"
+          "English": "task_set",
+          "Chinese": "生物群落"
         },
         {
-          "english": "touchstone",
-          "chinese": "复活台"
+          "English": "touchstone",
+          "Chinese": "复活台"
         },
         {
-          "english": "weather",
-          "chinese": "天气"
+          "English": "weather",
+          "Chinese": "天气"
         },
         {
-          "english": "wildfires",
-          "chinese": "自燃"
+          "English": "wildfires",
+          "Chinese": "自燃"
         },
         {
-          "english": "winter",
-          "chinese": "冬天"
+          "English": "winter",
+          "Chinese": "冬天"
         },
         {
-          "english": "world_size",
-          "chinese": "地图大小"
+          "English": "world_size",
+          "Chinese": "地图大小"
         },
         {
-          "english": "animals",
-          "chinese": "动物"
+          "English": "animals",
+          "Chinese": "动物"
         },
         {
-          "english": "alternatehunt",
-          "chinese": "足迹"
+          "English": "alternatehunt",
+          "Chinese": "足迹"
         },
         {
-          "english": "angrybees",
-          "chinese": "杀人蜂巢穴"
+          "English": "angrybees",
+          "Chinese": "杀人蜂巢穴"
         },
         {
-          "english": "beefalo",
-          "chinese": "牛"
+          "English": "beefalo",
+          "Chinese": "牛"
         },
         {
-          "english": "beefaloheat",
-          "chinese": "红屁股牛"
+          "English": "beefaloheat",
+          "Chinese": "红屁股牛"
         },
         {
-          "english": "bees",
-          "chinese": "蜜蜂巢穴"
+          "English": "bees",
+          "Chinese": "蜜蜂巢穴"
         },
         {
-          "english": "birds",
-          "chinese": "鸟"
+          "English": "birds",
+          "Chinese": "鸟"
         },
         {
-          "english": "bunnymen",
-          "chinese": "兔人"
+          "English": "bunnymen",
+          "Chinese": "兔人"
         },
         {
-          "english": "butterfly",
-          "chinese": "蝴蝶"
+          "English": "butterfly",
+          "Chinese": "蝴蝶"
         },
         {
-          "english": "buzzard",
-          "chinese": "秃鹫"
+          "English": "buzzard",
+          "Chinese": "秃鹫"
         },
         {
-          "english": "catcoon",
-          "chinese": "浣猫"
+          "English": "catcoon",
+          "Chinese": "浣猫"
         },
         {
-          "english": "frogs",
-          "chinese": "青蛙"
+          "English": "frogs",
+          "Chinese": "青蛙"
         },
         {
-          "english": "foods",
-          "chinese": "食物"
+          "English": "foods",
+          "Chinese": "食物"
         },
         {
-          "english": "hunt",
-          "chinese": "大象"
+          "English": "hunt",
+          "Chinese": "大象"
         },
         {
-          "english": "lightninggoat",
-          "chinese": "电羊"
+          "English": "lightninggoat",
+          "Chinese": "电羊"
         },
         {
-          "english": "moles",
-          "chinese": "鼹鼠"
+          "English": "moles",
+          "Chinese": "鼹鼠"
         },
         {
-          "english": "monkey",
-          "chinese": "猴子"
+          "English": "monkey",
+          "Chinese": "猴子"
         },
         {
-          "english": "penguins",
-          "chinese": "企鹅"
+          "English": "penguins",
+          "Chinese": "企鹅"
         },
         {
-          "english": "perd",
-          "chinese": "火鸡"
+          "English": "perd",
+          "Chinese": "火鸡"
         },
         {
-          "english": "pigs",
-          "chinese": "猪人"
+          "English": "pigs",
+          "Chinese": "猪人"
         },
         {
-          "english": "rabbits",
-          "chinese": "兔子"
+          "English": "rabbits",
+          "Chinese": "兔子"
         },
         {
-          "english": "rocky",
-          "chinese": "石虾"
+          "English": "rocky",
+          "Chinese": "石虾"
         },
         {
-          "english": "slurtles",
-          "chinese": "蜗牛"
+          "English": "slurtles",
+          "Chinese": "蜗牛"
         },
         {
-          "english": "slurper",
-          "chinese": "啜食者"
+          "English": "slurper",
+          "Chinese": "啜食者"
         },
         {
-          "english": "tallbirds",
-          "chinese": "高脚鸟"
+          "English": "tallbirds",
+          "Chinese": "高脚鸟"
         },
         {
-          "english": "monsters",
-          "chinese": "怪物"
+          "English": "monsters",
+          "Chinese": "怪物"
         },
         {
-          "english": "bats",
-          "chinese": "蝙蝠"
+          "English": "bats",
+          "Chinese": "蝙蝠"
         },
         {
-          "english": "bearger",
-          "chinese": "狂暴熊灌"
+          "English": "bearger",
+          "Chinese": "狂暴熊灌"
         },
         {
-          "english": "chess",
-          "chinese": "齿轮马"
+          "English": "chess",
+          "Chinese": "齿轮马"
         },
         {
-          "english": "deciduousmonster",
-          "chinese": "树精"
+          "English": "deciduousmonster",
+          "Chinese": "树精"
         },
         {
-          "english": "deerclops",
-          "chinese": "巨鹿"
+          "English": "deerclops",
+          "Chinese": "巨鹿"
         },
         {
-          "english": "dragonfly",
-          "chinese": "龙蝇"
+          "English": "dragonfly",
+          "Chinese": "龙蝇"
         },
         {
-          "english": "fissure",
-          "chinese": "裂缝"
+          "English": "fissure",
+          "Chinese": "裂缝"
         },
         {
-          "english": "goosemoose",
-          "chinese": "魔角驼鸭"
+          "English": "goosemoose",
+          "Chinese": "魔角驼鸭"
         },
         {
-          "english": "houndmound",
-          "chinese": "猎犬丘"
+          "English": "houndmound",
+          "Chinese": "猎犬丘"
         },
         {
-          "english": "hounds",
-          "chinese": "猎狗"
+          "English": "hounds",
+          "Chinese": "猎狗"
         },
         {
-          "english": "krampus",
-          "chinese": "坎普斯"
+          "English": "krampus",
+          "Chinese": "坎普斯"
         },
         {
-          "english": "liefs",
-          "chinese": "树人"
+          "English": "liefs",
+          "Chinese": "树人"
         },
         {
-          "english": "lurepofflinets",
-          "chinese": "食人花"
+          "English": "lurepofflinets",
+          "Chinese": "食人花"
         },
         {
-          "english": "merm",
-          "chinese": "鱼人"
+          "English": "merm",
+          "Chinese": "鱼人"
         },
         {
-          "english": "spiders",
-          "chinese": "蜘蛛"
+          "English": "spiders",
+          "Chinese": "蜘蛛"
         },
         {
-          "english": "rentaclles",
-          "chinese": "出售"
+          "English": "rentaclles",
+          "Chinese": "出售"
         },
         {
-          "english": "walrus",
-          "chinese": "海象巢穴"
+          "English": "walrus",
+          "Chinese": "海象巢穴"
         },
         {
-          "english": "worms",
-          "chinese": "蠕虫"
+          "English": "worms",
+          "Chinese": "蠕虫"
         },
         {
-          "english": "resources",
-          "chinese": "资源"
+          "English": "resources",
+          "Chinese": "资源"
         },
         {
-          "english": "fern",
-          "chinese": "蕨类植物"
+          "English": "fern",
+          "Chinese": "蕨类植物"
         },
         {
-          "english": "flint",
-          "chinese": "燧石"
+          "English": "flint",
+          "Chinese": "燧石"
         },
         {
-          "english": "flower_cave",
-          "chinese": "荧光花"
+          "English": "flower_cave",
+          "Chinese": "荧光花"
         },
         {
-          "english": "flowers",
-          "chinese": "花"
+          "English": "flowers",
+          "Chinese": "花"
         },
         {
-          "english": "grass",
-          "chinese": "干草"
+          "English": "grass",
+          "Chinese": "干草"
         },
         {
-          "english": "marshbush",
-          "chinese": "尖刺灌木"
+          "English": "marshbush",
+          "Chinese": "尖刺灌木"
         },
         {
-          "english": "meteorshowers",
-          "chinese": "陨石"
+          "English": "meteorshowers",
+          "Chinese": "陨石"
         },
         {
-          "english": "meteorspawner",
-          "chinese": "陨石坑"
+          "English": "meteorspawner",
+          "Chinese": "陨石坑"
         },
         {
-          "english": "mushtree",
-          "chinese": "蘑菇树"
+          "English": "mushtree",
+          "Chinese": "蘑菇树"
         },
         {
-          "english": "reeds",
-          "chinese": "芦苇"
+          "English": "reeds",
+          "Chinese": "芦苇"
         },
         {
-          "english": "rock",
-          "chinese": "岩石"
+          "English": "rock",
+          "Chinese": "岩石"
         },
         {
-          "english": "rock_ice",
-          "chinese": "冰块"
+          "English": "rock_ice",
+          "Chinese": "冰块"
         },
         {
-          "english": "sapling",
-          "chinese": "小树枝"
+          "English": "sapling",
+          "Chinese": "小树枝"
         },
         {
-          "english": "trees",
-          "chinese": "树"
+          "English": "trees",
+          "Chinese": "树"
         },
         {
-          "english": "tumbleweed",
-          "chinese": "风滚草"
+          "English": "tumbleweed",
+          "Chinese": "风滚草"
         },
         {
-          "english": "wormlights",
-          "chinese": "发光浆果"
+          "English": "wormlights",
+          "Chinese": "发光浆果"
         },
         {
-          "english": "default",
-          "chinese": "默认"
+          "English": "default",
+          "Chinese": "默认"
         },
         {
-          "english": "noseason",
-          "chinese": "无"
+          "English": "noseason",
+          "Chinese": "无"
         },
         {
-          "english": "veryshortseason",
-          "chinese": "非常短"
+          "English": "veryshortseason",
+          "Chinese": "非常短"
         },
         {
-          "english": "shortseason",
-          "chinese": "短"
+          "English": "shortseason",
+          "Chinese": "短"
         },
         {
-          "english": "longseason",
-          "chinese": "长"
+          "English": "longseason",
+          "Chinese": "长"
         },
         {
-          "english": "verylongseason",
-          "chinese": "非常长"
+          "English": "verylongseason",
+          "Chinese": "非常长"
         },
         {
-          "english": "random",
-          "chinese": "随机"
+          "English": "random",
+          "Chinese": "随机"
         },
         {
-          "english": "never",
-          "chinese": "无"
+          "English": "never",
+          "Chinese": "无"
         },
         {
-          "english": "rare",
-          "chinese": "较少"
+          "English": "rare",
+          "Chinese": "较少"
         },
         {
-          "english": "often",
-          "chinese": "较多"
+          "English": "often",
+          "Chinese": "较多"
         },
         {
-          "english": "always",
-          "chinese": "大量"
+          "English": "always",
+          "Chinese": "大量"
         },
         {
-          "english": "veryslow",
-          "chinese": "极慢"
+          "English": "veryslow",
+          "Chinese": "极慢"
         },
         {
-          "english": "slow",
-          "chinese": "慢"
+          "English": "slow",
+          "Chinese": "慢"
         },
         {
-          "english": "fast",
-          "chinese": "快"
+          "English": "fast",
+          "Chinese": "快"
         },
         {
-          "english": "veryfast",
-          "chinese": "极快"
+          "English": "veryfast",
+          "Chinese": "极快"
         },
         {
-          "english": "longday",
-          "chinese": "长白天"
+          "English": "longday",
+          "Chinese": "长白天"
         },
         {
-          "english": "longdusk",
-          "chinese": "长夜晚"
+          "English": "longdusk",
+          "Chinese": "长夜晚"
         },
         {
-          "english": "longnight",
-          "chinese": "长傍晚"
+          "English": "longnight",
+          "Chinese": "长傍晚"
         },
         {
-          "english": "noday",
-          "chinese": "无白天"
+          "English": "noday",
+          "Chinese": "无白天"
         },
         {
-          "english": "caves",
-          "chinese": "洞穴"
+          "English": "caves",
+          "Chinese": "洞穴"
         },
         {
-          "english": "plus",
-          "chinese": "plus"
+          "English": "plus",
+          "Chinese": "plus"
         },
         {
-          "english": "darkness",
-          "chinese": "黑天"
+          "English": "darkness",
+          "Chinese": "黑天"
         },
         {
-          "english": "layout_mode",
-          "chinese": "载入模式"
+          "English": "layout_mode",
+          "Chinese": "载入模式"
         },
         {
-          "english": "lureplants",
-          "chinese": "食人花"
+          "English": "lureplants",
+          "Chinese": "食人花"
         },
         {
-          "english": "ponds",
-          "chinese": "池塘"
+          "English": "ponds",
+          "Chinese": "池塘"
         },
         {
-          "english": "tentacles",
-          "chinese": "触手怪"
+          "English": "tentacles",
+          "Chinese": "触手怪"
         },
         {
-          "english": "prefabswaps",
-          "chinese": "资源变化"
+          "English": "prefabswaps",
+          "Chinese": "资源变化"
         },
         {
-          "english": "prefabswaps_start",
-          "chinese": "初始资源多样"
+          "English": "prefabswaps_start",
+          "Chinese": "初始资源多样"
         },
         {
-          "english": "cave_ponds",
-          "chinese": "池塘"
+          "English": "cave_ponds",
+          "Chinese": "池塘"
         },
         {
-          "english": "wormhole_prefab",
-          "chinese": "虫洞"
+          "English": "wormhole_prefab",
+          "Chinese": "虫洞"
         },
         {
-          "english": "cave_spiders",
-          "chinese": "蜘蛛"
+          "English": "cave_spiders",
+          "Chinese": "蜘蛛"
         },
         {
-          "english": "cave_default",
-          "chinese": "默认"
+          "English": "cave_default",
+          "Chinese": "默认"
         },
         {
-          "english": "classic",
-          "chinese": "古典的"
+          "English": "classic",
+          "Chinese": "古典的"
         },
         {
-          "english": "highly random",
-          "chinese": "高度随机"
+          "English": "highly random",
+          "Chinese": "高度随机"
         },
         {
-          "english": "most",
-          "chinese": "最多"
+          "English": "most",
+          "Chinese": "最多"
         },
         {
-          "english": "least",
-          "chinese": "最少"
+          "English": "least",
+          "Chinese": "最少"
         },
         {
-          "english": "small",
-          "chinese": "小"
+          "English": "small",
+          "Chinese": "小"
         },
         {
-          "english": "medium",
-          "chinese": "中"
+          "English": "medium",
+          "Chinese": "中"
         },
         {
-          "english": "huge",
-          "chinese": "大"
+          "English": "huge",
+          "Chinese": "大"
         },
         {
-          "english": "none",
-          "chinese": "无"
+          "English": "none",
+          "Chinese": "无"
         },
         {
-          "english": "few",
-          "chinese": "少"
+          "English": "few",
+          "Chinese": "少"
         },
         {
-          "english": "many",
-          "chinese": "多"
+          "English": "many",
+          "Chinese": "多"
         },
         {
-          "english": "maximum",
-          "chinese": "最多"
+          "English": "maximum",
+          "Chinese": "最多"
         },
         {
-          "english": "autumnorspring",
-          "chinese": "春或秋"
+          "English": "autumnorspring",
+          "Chinese": "春或秋"
         },
         {
-          "english": "winterorsummer",
-          "chinese": "冬或夏"
+          "English": "winterorsummer",
+          "Chinese": "冬或夏"
         },
         {
-          "english": "roads",
-          "chinese": "卵石路"
+          "English": "roads",
+          "Chinese": "卵石路"
         },
         {
-          "english": "disease_delay",
-          "chinese": "疾病"
+          "English": "disease_delay",
+          "Chinese": "疾病"
         },
         {
-          "english": "specialevent",
-          "chinese": "特殊事件"
+          "English": "specialevent",
+          "Chinese": "特殊事件"
         },
         {
-          "english": "petrification",
-          "chinese": "石化树"
+          "English": "petrification",
+          "Chinese": "石化树"
         }
       ]
     },
-    "master": {
-      "details": [
+    "Master": {
+      "Details": [
         {
-          "key": "banana",
-          "value": "never,rare,default,often,always"
+          "Key": "banana",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "berrybush",
-          "value": "never,rare,default,often,always"
+          "Key": "berrybush",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "cactus",
-          "value": "never,rare,default,often,always"
+          "Key": "cactus",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "carrot",
-          "value": "never,rare,default,often,always"
+          "Key": "carrot",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lichen",
-          "value": "never,rare,default,often,always"
+          "Key": "lichen",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "mushroom",
-          "value": "never,rare,default,often,always"
+          "Key": "mushroom",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "autumn",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "autumn",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "boons",
-          "value": "never,rare,default,often,always"
+          "Key": "boons",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "branching",
-          "value": "never,least,default,most"
+          "Key": "branching",
+          "Value": "never,least,default,most"
         },
         {
-          "key": "cavelight",
-          "value": "veryslow,slow,default,fast,veryfast"
+          "Key": "cavelight",
+          "Value": "veryslow,slow,default,fast,veryfast"
         },
         {
-          "key": "day",
-          "value": "default,longday,longdusk,longnight,noday,nodusk,nonight,onlyday,onlydusk,onlynight"
+          "Key": "day",
+          "Value": "default,longday,longdusk,longnight,noday,nodusk,nonight,onlyday,onlydusk,onlynight"
         },
         {
-          "key": "earthquakes",
-          "value": "never,rare,default,often,always"
+          "Key": "earthquakes",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "frograin",
-          "value": "never,rare,default,often,always"
+          "Key": "frograin",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lightning",
-          "value": "never,rare,default,often,always"
+          "Key": "lightning",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "loop",
-          "value": "never,default,always"
+          "Key": "loop",
+          "Value": "never,default,always"
         },
         {
-          "key": "regrowth",
-          "value": "veryslow,slow,default,fast,veryfast"
+          "Key": "regrowth",
+          "Value": "veryslow,slow,default,fast,veryfast"
         },
         {
-          "key": "season_start",
-          "value": "default,winter,spring,summer,autumnorspring,winterorsummer,random"
+          "Key": "season_start",
+          "Value": "default,winter,spring,summer,autumnorspring,winterorsummer,random"
         },
         {
-          "key": "spring",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "spring",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "start_location",
-          "value": "default,plus,darkness"
+          "Key": "start_location",
+          "Value": "default,plus,darkness"
         },
         {
-          "key": "summer",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "summer",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "task_set",
-          "value": "classic,default"
+          "Key": "task_set",
+          "Value": "classic,default"
         },
         {
-          "key": "touchstone",
-          "value": "never,rare,default,often,always"
+          "Key": "touchstone",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "weather",
-          "value": "never,rare,default,often,always"
+          "Key": "weather",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "wildfires",
-          "value": "never,rare,default,often,always"
+          "Key": "wildfires",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "winter",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "winter",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "world_size",
-          "value": "small,medium,default,huge"
+          "Key": "world_size",
+          "Value": "small,medium,default,huge"
         },
         {
-          "key": "alternatehunt",
-          "value": "never,rare,default,often,always"
+          "Key": "alternatehunt",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "angrybees",
-          "value": "never,rare,default,often,always"
+          "Key": "angrybees",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "beefalo",
-          "value": "never,rare,default,often,always"
+          "Key": "beefalo",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "beefaloheat",
-          "value": "never,rare,default,often,always"
+          "Key": "beefaloheat",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bees",
-          "value": "never,rare,default,often,always"
+          "Key": "bees",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "birds",
-          "value": "never,rare,default,often,always"
+          "Key": "birds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bunnymen",
-          "value": "never,rare,default,often,always"
+          "Key": "bunnymen",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "butterfly",
-          "value": "never,rare,default,often,always"
+          "Key": "butterfly",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "buzzard",
-          "value": "never,rare,default,often,always"
+          "Key": "buzzard",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "catcoon",
-          "value": "never,rare,default,often,always"
+          "Key": "catcoon",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "frogs",
-          "value": "never,rare,default,often,always"
+          "Key": "frogs",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "hunt",
-          "value": "never,rare,default,often,always"
+          "Key": "hunt",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lightninggoat",
-          "value": "never,rare,default,often,always"
+          "Key": "lightninggoat",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "moles",
-          "value": "never,rare,default,often,always"
+          "Key": "moles",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "monkey",
-          "value": "never,rare,default,often,always"
+          "Key": "monkey",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "penguins",
-          "value": "never,rare,default,often,always"
+          "Key": "penguins",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "perd",
-          "value": "never,rare,default,often,always"
+          "Key": "perd",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "pigs",
-          "value": "never,rare,default,often,always"
+          "Key": "pigs",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rabbits",
-          "value": "never,rare,default,often,always"
+          "Key": "rabbits",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rocky",
-          "value": "never,rare,default,often,always"
+          "Key": "rocky",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "slurper",
-          "value": "never,rare,default,often,always"
+          "Key": "slurper",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "slurtles",
-          "value": "never,rare,default,often,always"
+          "Key": "slurtles",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "tallbirds",
-          "value": "never,rare,default,often,always"
+          "Key": "tallbirds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bats",
-          "value": "never,rare,default,often,always"
+          "Key": "bats",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bearger",
-          "value": "never,rare,default,often,always"
+          "Key": "bearger",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "chess",
-          "value": "never,rare,default,often,always"
+          "Key": "chess",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "deciduousmonster",
-          "value": "never,rare,default,often,always"
+          "Key": "deciduousmonster",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "deerclops",
-          "value": "never,rare,default,often,always"
+          "Key": "deerclops",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "dragonfly",
-          "value": "never,rare,default,often,always"
+          "Key": "dragonfly",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "fissure",
-          "value": "never,rare,default,often,always"
+          "Key": "fissure",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "goosemoose",
-          "value": "never,rare,default,often,always"
+          "Key": "goosemoose",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "houndmound",
-          "value": "never,rare,default,often,always"
+          "Key": "houndmound",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "hounds",
-          "value": "never,rare,default,often,always"
+          "Key": "hounds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "krampus",
-          "value": "never,rare,default,often,always"
+          "Key": "krampus",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "liefs",
-          "value": "never,rare,default,often,always"
+          "Key": "liefs",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lurepofflinets",
-          "value": "never,rare,default,often,always"
+          "Key": "lurepofflinets",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "merm",
-          "value": "never,rare,default,often,always"
+          "Key": "merm",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "spiders",
-          "value": "never,rare,default,often,always"
+          "Key": "spiders",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "tentacles",
-          "value": "never,rare,default,often,always"
+          "Key": "tentacles",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "walrus",
-          "value": "never,rare,default,often,always"
+          "Key": "walrus",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "worms",
-          "value": "never,rare,default,often,always"
+          "Key": "worms",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "fern",
-          "value": "never,rare,default,often,always"
+          "Key": "fern",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "flint",
-          "value": "never,rare,default,often,always"
+          "Key": "flint",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "flower_cave",
-          "value": "never,rare,default,often,always"
+          "Key": "flower_cave",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "flowers",
-          "value": "never,rare,default,often,always"
+          "Key": "flowers",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "grass",
-          "value": "never,rare,default,often,always"
+          "Key": "grass",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "marshbush",
-          "value": "never,rare,default,often,always"
+          "Key": "marshbush",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "meteorshowers",
-          "value": "never,rare,default,often,always"
+          "Key": "meteorshowers",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "meteorspawner",
-          "value": "never,rare,default,often,always"
+          "Key": "meteorspawner",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "mushtree",
-          "value": "never,rare,default,often,always"
+          "Key": "mushtree",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "reeds",
-          "value": "never,rare,default,often,always"
+          "Key": "reeds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rock",
-          "value": "never,rare,default,often,always"
+          "Key": "rock",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rock_ice",
-          "value": "never,rare,default,often,always"
+          "Key": "rock_ice",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "sapling",
-          "value": "never,rare,default,often,always"
+          "Key": "sapling",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "trees",
-          "value": "never,rare,default,often,always"
+          "Key": "trees",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "tumbleweed",
-          "value": "never,rare,default,often,always"
+          "Key": "tumbleweed",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "wormlights",
-          "value": "never,rare,default,often,always"
+          "Key": "wormlights",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lureplants",
-          "value": "never,rare,default,often,always"
+          "Key": "lureplants",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "ponds",
-          "value": "never,rare,default,often,always"
+          "Key": "ponds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "prefabswaps",
-          "value": "none,few,medium,many,maximum,default"
+          "Key": "prefabswaps",
+          "Value": "none,few,medium,many,maximum,default"
         },
         {
-          "key": "prefabswaps_start",
-          "value": "classic,default,highly random"
+          "Key": "prefabswaps_start",
+          "Value": "classic,default,highly random"
         },
         {
-          "key": "roads",
-          "value": "default"
+          "Key": "roads",
+          "Value": "default"
         },
         {
-          "key": "layout_mode",
-          "value": "LinkNodesByKeys"
+          "Key": "layout_mode",
+          "Value": "LinkNodesByKeys"
         },
         {
-          "key": "wormhole_prefab",
-          "value": "wormhole"
+          "Key": "wormhole_prefab",
+          "Value": "wormhole"
         },
         {
-          "key": "disease_delay",
-          "value": "none,slow,default,fast,random"
+          "Key": "disease_delay",
+          "Value": "none,slow,default,fast,random"
         },
         {
-          "key": "petrification",
-          "value": "none,few,default,many,max"
+          "Key": "petrification",
+          "Value": "none,few,default,many,max"
         },
         {
-          "key": "specialevent",
-          "value": "none,default,hallowed_nights,winters_feast"
+          "Key": "specialevent",
+          "Value": "none,default,hallowed_nights,winters_feast"
         },
         {
-          "key": "wormattacks",
-          "value": "never,rare,default,often,always"
+          "Key": "wormattacks",
+          "Value": "never,rare,default,often,always"
         }
       ]
     },
-    "caves": {
-      "details": [
+    "Caves": {
+      "Details": [
         {
-          "key": "banana",
-          "value": "never,rare,default,often,always"
+          "Key": "banana",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "berrybush",
-          "value": "never,rare,default,often,always"
+          "Key": "berrybush",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "cactus",
-          "value": "never,rare,default,often,always"
+          "Key": "cactus",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "carrot",
-          "value": "never,rare,default,often,always"
+          "Key": "carrot",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lichen",
-          "value": "never,rare,default,often,always"
+          "Key": "lichen",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "mushroom",
-          "value": "never,rare,default,often,always"
+          "Key": "mushroom",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "autumn",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "autumn",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "boons",
-          "value": "never,rare,default,often,always"
+          "Key": "boons",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "branching",
-          "value": "never,least,default,most"
+          "Key": "branching",
+          "Value": "never,least,default,most"
         },
         {
-          "key": "cavelight",
-          "value": "veryslow,slow,default,fast,veryfast"
+          "Key": "cavelight",
+          "Value": "veryslow,slow,default,fast,veryfast"
         },
         {
-          "key": "day",
-          "value": "default,longday,longdusk,longnight,noday,nodusk,nonight,onlyday,onlydusk,onlynight"
+          "Key": "day",
+          "Value": "default,longday,longdusk,longnight,noday,nodusk,nonight,onlyday,onlydusk,onlynight"
         },
         {
-          "key": "earthquakes",
-          "value": "never,rare,default,often,always"
+          "Key": "earthquakes",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "frograin",
-          "value": "never,rare,default,often,always"
+          "Key": "frograin",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lightning",
-          "value": "never,rare,default,often,always"
+          "Key": "lightning",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "loop",
-          "value": "never,default,always"
+          "Key": "loop",
+          "Value": "never,default,always"
         },
         {
-          "key": "regrowth",
-          "value": "veryslow,slow,default,fast,veryfast"
+          "Key": "regrowth",
+          "Value": "veryslow,slow,default,fast,veryfast"
         },
         {
-          "key": "season_start",
-          "value": "default,winter,spring,summer,autumnorspring,winterorsummer,random"
+          "Key": "season_start",
+          "Value": "default,winter,spring,summer,autumnorspring,winterorsummer,random"
         },
         {
-          "key": "spring",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "spring",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "start_location",
-          "value": "caves"
+          "Key": "start_location",
+          "Value": "caves"
         },
         {
-          "key": "summer",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "summer",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "task_set",
-          "value": "cave_default"
+          "Key": "task_set",
+          "Value": "cave_default"
         },
         {
-          "key": "touchstone",
-          "value": "never,rare,default,often,always"
+          "Key": "touchstone",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "weather",
-          "value": "never,rare,default,often,always"
+          "Key": "weather",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "wildfires",
-          "value": "never,rare,default,often,always"
+          "Key": "wildfires",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "winter",
-          "value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
+          "Key": "winter",
+          "Value": "noseason,veryshortseason,shortseason,default,longseason,verylongseason,random"
         },
         {
-          "key": "world_size",
-          "value": "small,medium,default,huge"
+          "Key": "world_size",
+          "Value": "small,medium,default,huge"
         },
         {
-          "key": "alternatehunt",
-          "value": "never,rare,default,often,always"
+          "Key": "alternatehunt",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "angrybees",
-          "value": "never,rare,default,often,always"
+          "Key": "angrybees",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "beefalo",
-          "value": "never,rare,default,often,always"
+          "Key": "beefalo",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "beefaloheat",
-          "value": "never,rare,default,often,always"
+          "Key": "beefaloheat",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bees",
-          "value": "never,rare,default,often,always"
+          "Key": "bees",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "birds",
-          "value": "never,rare,default,often,always"
+          "Key": "birds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bunnymen",
-          "value": "never,rare,default,often,always"
+          "Key": "bunnymen",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "butterfly",
-          "value": "never,rare,default,often,always"
+          "Key": "butterfly",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "buzzard",
-          "value": "never,rare,default,often,always"
+          "Key": "buzzard",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "catcoon",
-          "value": "never,rare,default,often,always"
+          "Key": "catcoon",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "frogs",
-          "value": "never,rare,default,often,always"
+          "Key": "frogs",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "hunt",
-          "value": "never,rare,default,often,always"
+          "Key": "hunt",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lightninggoat",
-          "value": "never,rare,default,often,always"
+          "Key": "lightninggoat",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "moles",
-          "value": "never,rare,default,often,always"
+          "Key": "moles",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "monkey",
-          "value": "never,rare,default,often,always"
+          "Key": "monkey",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "penguins",
-          "value": "never,rare,default,often,always"
+          "Key": "penguins",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "perd",
-          "value": "never,rare,default,often,always"
+          "Key": "perd",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "pigs",
-          "value": "never,rare,default,often,always"
+          "Key": "pigs",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rabbits",
-          "value": "never,rare,default,often,always"
+          "Key": "rabbits",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rocky",
-          "value": "never,rare,default,often,always"
+          "Key": "rocky",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "slurper",
-          "value": "never,rare,default,often,always"
+          "Key": "slurper",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "slurtles",
-          "value": "never,rare,default,often,always"
+          "Key": "slurtles",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "tallbirds",
-          "value": "never,rare,default,often,always"
+          "Key": "tallbirds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bats",
-          "value": "never,rare,default,often,always"
+          "Key": "bats",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "bearger",
-          "value": "never,rare,default,often,always"
+          "Key": "bearger",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "chess",
-          "value": "never,rare,default,often,always"
+          "Key": "chess",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "deciduousmonster",
-          "value": "never,rare,default,often,always"
+          "Key": "deciduousmonster",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "deerclops",
-          "value": "never,rare,default,often,always"
+          "Key": "deerclops",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "dragonfly",
-          "value": "never,rare,default,often,always"
+          "Key": "dragonfly",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "fissure",
-          "value": "never,rare,default,often,always"
+          "Key": "fissure",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "goosemoose",
-          "value": "never,rare,default,often,always"
+          "Key": "goosemoose",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "houndmound",
-          "value": "never,rare,default,often,always"
+          "Key": "houndmound",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "hounds",
-          "value": "never,rare,default,often,always"
+          "Key": "hounds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "krampus",
-          "value": "never,rare,default,often,always"
+          "Key": "krampus",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "liefs",
-          "value": "never,rare,default,often,always"
+          "Key": "liefs",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lurepofflinets",
-          "value": "never,rare,default,often,always"
+          "Key": "lurepofflinets",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "merm",
-          "value": "never,rare,default,often,always"
+          "Key": "merm",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "spiders",
-          "value": "never,rare,default,often,always"
+          "Key": "spiders",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "tentacles",
-          "value": "never,rare,default,often,always"
+          "Key": "tentacles",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "walrus",
-          "value": "never,rare,default,often,always"
+          "Key": "walrus",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "worms",
-          "value": "never,rare,default,often,always"
+          "Key": "worms",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "fern",
-          "value": "never,rare,default,often,always"
+          "Key": "fern",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "flint",
-          "value": "never,rare,default,often,always"
+          "Key": "flint",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "flower_cave",
-          "value": "never,rare,default,often,always"
+          "Key": "flower_cave",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "flowers",
-          "value": "never,rare,default,often,always"
+          "Key": "flowers",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "grass",
-          "value": "never,rare,default,often,always"
+          "Key": "grass",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "marshbush",
-          "value": "never,rare,default,often,always"
+          "Key": "marshbush",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "meteorshowers",
-          "value": "never,rare,default,often,always"
+          "Key": "meteorshowers",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "meteorspawner",
-          "value": "never,rare,default,often,always"
+          "Key": "meteorspawner",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "mushtree",
-          "value": "never,rare,default,often,always"
+          "Key": "mushtree",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "reeds",
-          "value": "never,rare,default,often,always"
+          "Key": "reeds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rock",
-          "value": "never,rare,default,often,always"
+          "Key": "rock",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "rock_ice",
-          "value": "never,rare,default,often,always"
+          "Key": "rock_ice",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "sapling",
-          "value": "never,rare,default,often,always"
+          "Key": "sapling",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "trees",
-          "value": "never,rare,default,often,always"
+          "Key": "trees",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "tumbleweed",
-          "value": "never,rare,default,often,always"
+          "Key": "tumbleweed",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "wormlights",
-          "value": "never,rare,default,often,always"
+          "Key": "wormlights",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "lureplants",
-          "value": "never,rare,default,often,always"
+          "Key": "lureplants",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "ponds",
-          "value": "never,rare,,often,always"
+          "Key": "ponds",
+          "Value": "never,rare,,often,always"
         },
         {
-          "key": "prefabswaps",
-          "value": "none,few,medium,many,maximum,default"
+          "Key": "prefabswaps",
+          "Value": "none,few,medium,many,maximum,default"
         },
         {
-          "key": "prefabswaps_start",
-          "value": "classic,default,highlyrandom"
+          "Key": "prefabswaps_start",
+          "Value": "classic,default,highlyrandom"
         },
         {
-          "key": "cave_ponds",
-          "value": "never,rare,default,often,always"
+          "Key": "cave_ponds",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "cave_spiders",
-          "value": "never,rare,default,often,always"
+          "Key": "cave_spiders",
+          "Value": "never,rare,default,often,always"
         },
         {
-          "key": "roads",
-          "value": "never"
+          "Key": "roads",
+          "Value": "never"
         },
         {
-          "key": "layout_mode",
-          "value": "RestrictNodesByKey"
+          "Key": "layout_mode",
+          "Value": "RestrictNodesByKey"
         },
         {
-          "key": "wormhole_prefab",
-          "value": "tentacle_pillar"
+          "Key": "wormhole_prefab",
+          "Value": "tentacle_pillar"
         },
         {
-          "key": "disease_delay",
-          "value": "none,slow,default,fast,random"
+          "Key": "disease_delay",
+          "Value": "none,slow,default,fast,random"
         },
         {
-          "key": "petrification",
-          "value": "none,few,default,many,max"
+          "Key": "petrification",
+          "Value": "none,few,default,many,max"
         },
         {
-          "key": "specialevent",
-          "value": "none,default,hallowed_nights,winters_feast"
+          "Key": "specialevent",
+          "Value": "none,default,hallowed_nights,winters_feast"
         },
         {
-          "key": "wormattacks",
-          "value": "never,rare,default,often,always"
+          "Key": "wormattacks",
+          "Value": "never,rare,default,often,always"
         }
       ]
     },
-    "fenlei": {
-      "master": {
-        "details": [
+    "Fenlei": {
+      "Master": {
+        "Details": [
           {
-            "key": "animals",
-            "value": "alternatehunt,angrybees,beefalo,beefaloheat,bees,birds,butterfly,buzzard,catcoon,hunt,lightninggoat,moles,penguins,perd,pigs,ponds,rabbits,tallbirds"
+            "Key": "animals",
+            "Value": "alternatehunt,angrybees,beefalo,beefaloheat,bees,birds,butterfly,buzzard,catcoon,hunt,lightninggoat,moles,penguins,perd,pigs,ponds,rabbits,tallbirds"
           },
           {
-            "key": "foods",
-            "value": "berrybush,cactus,carrot,mushroom"
+            "Key": "foods",
+            "Value": "berrybush,cactus,carrot,mushroom"
           },
           {
-            "key": "monsters",
-            "value": "bearger,chess,deciduousmonster,deerclops,dragonfly,goosemoose,houndmound,hounds,krampus,liefs,lureplants,merm,spiders,tentacles,walrus"
+            "Key": "monsters",
+            "Value": "bearger,chess,deciduousmonster,deerclops,dragonfly,goosemoose,houndmound,hounds,krampus,liefs,lureplants,merm,spiders,tentacles,walrus"
           },
           {
-            "key": "resources",
-            "value": "flint,flowers,grass,marshbush,meteorshowers,meteorspawner,reeds,rock,rock_ice,sapling,trees,tumbleweed"
+            "Key": "resources",
+            "Value": "flint,flowers,grass,marshbush,meteorshowers,meteorspawner,reeds,rock,rock_ice,sapling,trees,tumbleweed"
           },
           {
-            "key": "world",
-            "value": "autumn,boons,branching,day,disease_delay,frograin,lightning,loop,petrification,prefabswaps_start,regrowth,season_start,specialevent,spring,start_location,summer,task_set,touchstone,weather,wildfires,winter,world_size"
+            "Key": "world",
+            "Value": "autumn,boons,branching,day,disease_delay,frograin,lightning,loop,petrification,prefabswaps_start,regrowth,season_start,specialevent,spring,start_location,summer,task_set,touchstone,weather,wildfires,winter,world_size"
           }
         ]
       },
-      "cave": {
-        "details": [
+      "Cave": {
+        "Details": [
           {
-            "key": "animals",
-            "value": "bunnymen,cave_ponds,monkey,rocky,slurper,slurtles"
+            "Key": "animals",
+            "Value": "bunnymen,cave_ponds,monkey,rocky,slurper,slurtles"
           },
           {
-            "key": "foods",
-            "value": "banana,berrybush,lichen,mushroom"
+            "Key": "foods",
+            "Value": "banana,berrybush,lichen,mushroom"
           },
           {
-            "key": "monsters",
-            "value": "bats,cave_spiders,chess,deciduousmonster,fissure,tentacles,wormattacks,worms"
+            "Key": "monsters",
+            "Value": "bats,cave_spiders,chess,deciduousmonster,fissure,tentacles,wormattacks,worms"
           },
           {
-            "key": "resources",
-            "value": "fern,flint,flower_cave,grass,marshbush,mushtree,reeds,rock,sapling,trees,wormlights"
+            "Key": "resources",
+            "Value": "fern,flint,flower_cave,grass,marshbush,mushtree,reeds,rock,sapling,trees,wormlights"
           },
           {
-            "key": "world",
-            "value": "boons,branching,cavelight,disease_delay,earthquakes,loop,petrification,prefabswaps_start,regrowth,start_location,task_set,touchstone,weather,world_size"
+            "Key": "world",
+            "Value": "boons,branching,cavelight,disease_delay,earthquakes,loop,petrification,prefabswaps_start,regrowth,start_location,task_set,touchstone,weather,world_size"
           }
         ]
       }

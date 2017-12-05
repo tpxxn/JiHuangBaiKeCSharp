@@ -39,7 +39,7 @@ namespace 饥荒百科全书CSharp
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 
-        void Window_MouseMove(object sender, MouseEventArgs e)
+        private void Window_MouseMove(object sender, MouseEventArgs e)
         {
             if (Mouse.LeftButton == MouseButtonState.Pressed) return;
             if (e.OriginalSource is FrameworkElement element && !element.Name.Contains("Resize"))
@@ -94,18 +94,24 @@ namespace 饥荒百科全书CSharp
         {
             var positionUiGrid = e.GetPosition(UiGrid);
             var positionRightGridFrame = e.GetPosition(RightFrame);
+            var positionDedicatedServerFrame = e.GetPosition(DedicatedServerFrame);
             var inUiGrid = false;
-            var inFrame = false;
+            var inRightGridFrame = false;
+            var inDedicatedServerFrame = false;
             if (positionUiGrid.X >= 0 && positionUiGrid.X < UiGrid.ActualWidth && positionUiGrid.Y >= 0 && positionUiGrid.Y < UiGrid.ActualHeight)
             {
                 inUiGrid = true;
             }
             if (positionRightGridFrame.X >= 0 && positionRightGridFrame.X < RightFrame.ActualWidth && positionRightGridFrame.Y >= 0 && positionRightGridFrame.Y < RightFrame.ActualHeight)
             {
-                inFrame = true;
+                inRightGridFrame = true;
+            }
+            if (positionDedicatedServerFrame.X >= 0 && positionDedicatedServerFrame.X < DedicatedServerFrame.ActualWidth && positionDedicatedServerFrame.Y >= 0 && positionDedicatedServerFrame.Y < DedicatedServerFrame.ActualHeight)
+            {
+                inDedicatedServerFrame = true;
             }
             // 如果鼠标位置在标题栏内，允许拖动  
-            if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inFrame)) return;
+            if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inRightGridFrame && !inDedicatedServerFrame)) return;
             Cursor = (Cursor)CursorDictionary["CursorMove"];
             DragMove();
         }

@@ -13,7 +13,8 @@ namespace 饥荒百科全书CSharp.ValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double width = (double)value;
+            // ReSharper disable once PossibleNullReferenceException
+            var width = (double)value;
             if (width >= 50)
             {
                 return -(width - 50) / 2 + 2;
