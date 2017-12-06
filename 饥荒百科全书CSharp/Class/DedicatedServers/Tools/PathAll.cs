@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using 饥荒百科全书CSharp.Class.DedicatedServers.Tools;
 
 namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
@@ -41,9 +42,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         private static string _clientFilePath;
 
-        /// <summary>
-        /// 客户端exe文件路径
-        /// </summary>
         public static string ClientFilePath
         {
             get => _clientFilePath;
@@ -52,11 +50,12 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 if (string.IsNullOrEmpty(value))
                 {
                     _clientFilePath = null;
-                    JsonHelper.WriteClientPath("", JsonHelper.ReadGamePlatform());
+                    //JsonHelper.WriteClientPath("", JsonHelper.ReadGamePlatform());
                     return;
                 }
                 _clientFilePath = value.Trim();
                 JsonHelper.WriteClientPath(_clientFilePath, JsonHelper.ReadGamePlatform());
+                ClientModsDirPath = _clientFilePath.Substring(0, _clientFilePath.Length - 25) + "\\mods";
             }
         }
 
@@ -65,9 +64,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         private static string _serverFilePath;
 
-        /// <summary>
-        /// 服务器exe文件路径
-        /// </summary>
         public static string ServerFilePath
         {
             get => _serverFilePath;
@@ -76,7 +72,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 if (string.IsNullOrEmpty(value))
                 {
                     _serverFilePath = null;
-                    JsonHelper.WriteServerPath("", JsonHelper.ReadGamePlatform());
+                    //JsonHelper.WriteServerPath("", JsonHelper.ReadGamePlatform());
                     return;
                 }
                 // 判断文件名对不对
@@ -84,30 +80,42 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 {
                     _serverFilePath = value.Trim();
                     JsonHelper.WriteServerPath(_serverFilePath, JsonHelper.ReadGamePlatform());
+                    ServerModsDirPath = _serverFilePath.Substring(0, _serverFilePath.Length - 49) + "\\mods";
                 }
             }
         }
+
+        /// <summary>
+        /// 客户端mods路径
+        /// </summary>
+        public static string ClientModsDirPath { get; set; }
+
+        /// <summary>
+        /// 服务器mods路径
+        /// </summary>
+        public static string ServerModsDirPath { get; set; }
+
     }
 
     internal class PathAll
     {
         /// <summary>
-        /// yyServer路径
+        /// Server路径
         /// </summary>
-        private string _yyServerDirPath;
+        private string _serverDirPath;
 
-        public string YyServerDirPath
+        public string ServerDirPath
         {
-            get => _yyServerDirPath;
+            get => _serverDirPath;
             set
             {
-                _yyServerDirPath = value;
-                if (!string.IsNullOrEmpty(_yyServerDirPath))
+                _serverDirPath = value;
+                if (!string.IsNullOrEmpty(_serverDirPath))
                 {
-                    ModConfigOverworldFilePath = _yyServerDirPath + "\\Master\\modoverrides.lua";
-                    ModConfigCaveFilePath = _yyServerDirPath + "\\Caves\\modoverrides.lua";
-                    OverworldConfigFilePath = _yyServerDirPath + "\\Master\\leveldataoverride.lua";
-                    CaveConfigFilePath = _yyServerDirPath + "\\Caves\\leveldataoverride.lua";
+                    ModConfigOverworldFilePath = _serverDirPath + "\\Master\\modoverrides.lua";
+                    ModConfigCaveFilePath = _serverDirPath + "\\Caves\\modoverrides.lua";
+                    OverworldConfigFilePath = _serverDirPath + "\\Master\\leveldataoverride.lua";
+                    CaveConfigFilePath = _serverDirPath + "\\Caves\\leveldataoverride.lua";
                 }
             }
         }
@@ -145,20 +153,10 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 _doNotStarveTogetherDirPath = value;
                 if (!string.IsNullOrEmpty(_doNotStarveTogetherDirPath))
                 {
-                    YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + SaveSlot;
+                    ServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + SaveSlot;
                 }
             }
         }
-
-        /// <summary>
-        /// 客户端mods路径
-        /// </summary>
-        public string ClientModsDirPath { get; set; }
-
-        /// <summary>
-        /// 服务器mods路径
-        /// </summary>
-        public string ServerModsDirPath { get; set; }
 
         private int _saveSlot;
         public int SaveSlot
@@ -167,7 +165,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
             set
             {
                 _saveSlot = value;
-                YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + value;
+                ServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + value;
             }
         }
 
@@ -188,8 +186,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <param name="saveSlot">第几个存档槽,从0开始</param>
         public void SetAllPath(string gamePlatform, int saveSlot = 0)
         {
-            //GamePlatform = gamePlatform;
-            //SaveSlot = saveSlot;
+            // GamePlatform = gamePlatform;
+            // SaveSlot = saveSlot;
             // DoNotStarveTogether
             switch (PathCommon.GamePlatform)
             {

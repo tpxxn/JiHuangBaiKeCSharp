@@ -9,8 +9,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
 {
     internal class Tool
     {
-
-
         #region 读取资源文件
         /// <summary>
         /// 读取资源文件

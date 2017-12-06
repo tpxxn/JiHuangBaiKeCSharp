@@ -48,17 +48,9 @@ namespace 饥荒百科全书CSharp.View
         private Leveldataoverride _overWorld; // 地上世界
         private Leveldataoverride _caves;     // 地下世界
         private Mods _mods;  // mods
-        
-        private int _saveSlot; // 存档槽
-        public int SaveSlot
-        {
-            get => _saveSlot;
-            set
-            {
-                _saveSlot = value;
-                _pathAll.SaveSlot = value;
-            }
-        }
+
+        public int SaveSlot { get; set; }
+
         #endregion
 
         /// <summary>
@@ -72,9 +64,11 @@ namespace 饥荒百科全书CSharp.View
             PathCommon.CurrentDirPath = Environment.CurrentDirectory;
             // 我的文档
             PathCommon.DocumentDirPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            // 客户端服务器路径
-            PathCommon.ClientFilePath = JsonHelper.ReadClientPath(RegeditRw.RegReadString("platform"));
-            PathCommon.ServerFilePath = JsonHelper.ReadServerPath(RegeditRw.RegReadString("platform"));
+            // 客户端/服务器路径
+            PathCommon.ClientFilePath = JsonHelper.ReadClientPath(RegeditRw.RegReadString("Platform"));
+            GameDirSelectTextBox.Text = PathCommon.ClientFilePath;
+            PathCommon.ServerFilePath = JsonHelper.ReadServerPath(RegeditRw.RegReadString("Platform"));
+            DediDirSelectTextBox.Text = PathCommon.ServerFilePath;
             #endregion
             //初始化左侧选择存档RadioButton
             for (var i = 0; i < 20; i++)
@@ -91,7 +85,7 @@ namespace 饥荒百科全书CSharp.View
         /// </summary>
         private void DedicatedServerPanelInitalize()
         {
-            string[] gameVersion = { "Steam", "WeGame"};
+            string[] gameVersion = { "Steam", "WeGame" };
             DediSettingGameVersionSelect.ItemsSource = gameVersion;
             PathCommon.GamePlatform = JsonHelper.ReadGamePlatform();
             DediSettingGameVersionSelect.Text = PathCommon.GamePlatform;
@@ -110,13 +104,11 @@ namespace 饥荒百科全书CSharp.View
             DediBaseSetMaxPlayerSelect.ItemsSource = maxPlayer;
             DediBaseOfflineSelect.ItemsSource = offline;
             DediBaseIsPause.ItemsSource = noYes;
-            DediBaseIsCave.ItemsSource = noYes;
             DediBaseSet.Visibility = Visibility.Visible;
+            IsCaveComboBox.ItemsSource = noYes;
         }
 
-        #region "DedicatedServer"
-
-        #region 面板菜单
+        #region 主面板菜单
 
         #region "面板菜单按钮"
         private void TitleMenuBaseSet_Click(object sender, RoutedEventArgs e)
@@ -152,7 +144,7 @@ namespace 饥荒百科全书CSharp.View
         private void RunClient()
         {
 
-            if (string.IsNullOrEmpty(_pathAll.ClientModsDirPath))
+            if (string.IsNullOrEmpty(PathCommon.ClientModsDirPath))
             {
                 MessageBox.Show("客户端路径没有设置");
                 return;
@@ -184,18 +176,18 @@ namespace 饥荒百科全书CSharp.View
             {
                 _overWorld.SaveWorld();
                 _caves.SaveWorld();
-                _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Master\modoverrides.lua", _utf8NoBom);
-                _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Caves\modoverrides.lua", _utf8NoBom);
+                _mods.SaveListmodsToFile(_pathAll.ServerDirPath + @"\Master\modoverrides.lua", _utf8NoBom);
+                _mods.SaveListmodsToFile(_pathAll.ServerDirPath + @"\Caves\modoverrides.lua", _utf8NoBom);
             }
             if (PathCommon.GamePlatform == "WeGame")
             {
-                var ini1 = new IniHelper(_pathAll.YyServerDirPath + @"\cluster.ini", _utf8NoBom);
+                var ini1 = new IniHelper(_pathAll.ServerDirPath + @"\cluster.ini", _utf8NoBom);
                 //ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
                 ini1.Write("NETWORK", "lan_only_cluster", "false", _utf8NoBom);
             }
             if (PathCommon.GamePlatform == "Steam")
             {
-                var ini1 = new IniHelper(_pathAll.YyServerDirPath + @"\cluster.ini", _utf8NoBom);
+                var ini1 = new IniHelper(_pathAll.ServerDirPath + @"\cluster.ini", _utf8NoBom);
                 //ini1.write("NETWORK", "offline_cluster", "false", utf8NoBom);
                 ini1.Write("NETWORK", "lan_only_cluster", "false", _utf8NoBom);
             }
@@ -218,7 +210,7 @@ namespace 饥荒百科全书CSharp.View
             if (PathCommon.GamePlatform != "WeGame")
             {
                 // 是否开启洞穴
-                if (DediBaseIsCave.Text == "是")
+                if (IsCaveComboBox.Text == "是")
                 {
                     p.StartInfo.Arguments = "-console -cluster Server_" + PathCommon.GamePlatform + "_" + SaveSlot.ToString() + " -shard Caves";
                     p.Start();
@@ -259,7 +251,7 @@ namespace 饥荒百科全书CSharp.View
                     DediModSet.Visibility = Visibility.Visible;
                     break;
                 case "Rollback":
-                    DediModRollBack.Visibility = Visibility.Visible;
+                    DediConsole.Visibility = Visibility.Visible;
                     break;
                 case "Blacklist":
                     DediModManager.Visibility = Visibility.Visible;
@@ -297,7 +289,7 @@ namespace 饥荒百科全书CSharp.View
         }
 
         /// <summary>
-        /// 初始化
+        /// 初始化服务器
         /// </summary>
         public void InitServer()
         {
@@ -314,12 +306,12 @@ namespace 饥荒百科全书CSharp.View
             // 3.读取服务器mods文件夹下所有信息.mod多的话,读取时间也多
             //   此时的mod没有被current覆盖
             _mods = null;
-            if (!string.IsNullOrEmpty(_pathAll.ServerModsDirPath))
+            if (!string.IsNullOrEmpty(PathCommon.ServerModsDirPath))
             {
-                _mods = new Mods(_pathAll.ServerModsDirPath);
+                _mods = new Mods(PathCommon.ServerModsDirPath);
             }
             // 4. "控制台"
-            CreateConsoleButton();
+            CreateConsoleClassificationButton();
             // 5.clusterToken
             this.DediSettingClusterTokenTextBox.Text = RegeditRw.RegReadString("ClusterToken");
             // 3."基本设置" 等在 点击radioButton后设置
@@ -339,7 +331,6 @@ namespace 饥荒百科全书CSharp.View
             else
             {
                 PathCommon.ClientFilePath = "";
-
             }
             DediDirSelectTextBox.Text = "";
             if (!string.IsNullOrEmpty(PathCommon.ServerFilePath) && File.Exists(PathCommon.ServerFilePath))
@@ -421,23 +412,25 @@ namespace 饥荒百科全书CSharp.View
         /// <param name="e"></param>
         private void SaveSlotRadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            //汉化
+            // 汉化
             _hanhua = JsonHelper.ReadHanhua();
-            //存档
+            // 存档
             var saveSlot = int.Parse(((RadioButton)sender).Name.Remove(0, 19));
+            // 存档槽
+            SaveSlot = saveSlot;
             if (_pathAll == null)
                 _pathAll = new PathAll(SaveSlot);
-            // 0.保存之前的
-            if (_overWorld != null & _caves != null & _mods != null & Directory.Exists(_pathAll.YyServerDirPath))
+            // -1.保存之前的
+            if (_overWorld != null && _caves != null && _mods != null && Directory.Exists(_pathAll.ServerDirPath))
             {
                 _overWorld.SaveWorld();
                 _caves.SaveWorld();
 
-                _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Master\modoverrides.lua", _utf8NoBom);
-                _mods.SaveListmodsToFile(_pathAll.YyServerDirPath + @"\Caves\modoverrides.lua", _utf8NoBom);
+                _mods.SaveListmodsToFile(_pathAll.ServerDirPath + @"\Master\modoverrides.lua", _utf8NoBom);
+                _mods.SaveListmodsToFile(_pathAll.ServerDirPath + @"\Caves\modoverrides.lua", _utf8NoBom);
             }
-            // 1.存档槽
-            SaveSlot = saveSlot;
+            // 1.路径信息
+            SetPath();
             // 1.5 创建世界
             if (((RadioButton)sender).Content.ToString() == "创建世界")
             {
@@ -457,12 +450,18 @@ namespace 饥荒百科全书CSharp.View
             JinYong(true);
             // 2.【基本设置】
             SetBaseSet();
-            // 3. "世界设置"
+            // 3. "地面世界设置"
             SetOverWorldSet();
-            // 3. "世界设置"
+            // 3. "洞穴世界设置"
             SetCavesSet();
             // 4. "Mod"
+            if (!string.IsNullOrEmpty(PathCommon.ServerModsDirPath))
+            {
+                _mods = new Mods(PathCommon.ServerModsDirPath);
+            }
             SetModSet();
+            // 5. "控制台"
+            CreateConsoleClassificationButton();
         }
 
         /// <summary>
@@ -480,7 +479,6 @@ namespace 饥荒百科全书CSharp.View
             Directory.CreateDirectory(path + @"\Server");
             Directory.CreateDirectory(path + @"\Server\Caves");
             Directory.CreateDirectory(path + @"\Server\Master");
-
             // 填文件
             File.WriteAllText(path + @"\Server\cluster.ini", Tool.ReadResources("Server模板.cluster.ini"), _utf8NoBom);
             File.WriteAllText(path + @"\Server\Caves\leveldataoverride.lua", Tool.ReadResources("Server模板.Caves.leveldataoverride.lua"), _utf8NoBom);
@@ -489,7 +487,6 @@ namespace 饥荒百科全书CSharp.View
             File.WriteAllText(path + @"\Server\Master\leveldataoverride.lua", Tool.ReadResources("Server模板.Master.leveldataoverride.lua"), _utf8NoBom);
             File.WriteAllText(path + @"\Server\Master\modoverrides.lua", Tool.ReadResources("Server模板.Master.modoverrides.lua"), _utf8NoBom);
             File.WriteAllText(path + @"\Server\Master\server.ini", Tool.ReadResources("Server模板.Master.server.ini"), _utf8NoBom);
-
             // clusterToken
             var flag2 = !string.IsNullOrEmpty(RegeditRw.RegReadString("ClusterToken"));
             File.WriteAllText(path + "\\Server\\cluster_token.txt", flag2 ? RegeditRw.RegReadString("ClusterToken") : "",
@@ -556,9 +553,9 @@ namespace 饥荒百科全书CSharp.View
                 JsonHelper.WriteServerPath(fileName, PathCommon.GamePlatform);
                 // 读取mods
                 _mods = null;
-                if (!string.IsNullOrEmpty(_pathAll.ServerModsDirPath))
+                if (!string.IsNullOrEmpty(PathCommon.ServerModsDirPath))
                 {
-                    _mods = new Mods(_pathAll.ServerModsDirPath);
+                    _mods = new Mods(PathCommon.ServerModsDirPath);
                 }
                 SetModSet();
             }
@@ -636,7 +633,7 @@ namespace 饥荒百科全书CSharp.View
                     break;
             }
         }
-        
+
         private void DediIntention_MouseLeave(object sender, MouseEventArgs e)
         {
             DidiIntentionTextBlock.Text = "";
@@ -684,12 +681,12 @@ namespace 饥荒百科全书CSharp.View
             // ReSharper disable once PossibleNullReferenceException
             ((RadioButton)DediLeftStackPanel.FindName($"SaveSlotRadioButton{SaveSlot}")).Content = "创建世界";
             // 2. 删除当前存档
-            if (Directory.Exists(_pathAll.YyServerDirPath))
+            if (Directory.Exists(_pathAll.ServerDirPath))
             {
-                Directory.Delete(_pathAll.YyServerDirPath, true);
+                Directory.Delete(_pathAll.ServerDirPath, true);
             }
            // 2.1 取消选择,谁都不选
-            // ReSharper disable once PossibleNullReferenceException
+           // ReSharper disable once PossibleNullReferenceException
            ((RadioButton)DediLeftStackPanel.FindName($"SaveSlotRadioButton{SaveSlot}")).IsChecked = false;
             // 2.2 
             // DediMainBorder.IsEnabled = false;
@@ -742,187 +739,12 @@ namespace 饥荒百科全书CSharp.View
             }
         }
 
-        #endregion
-        #endregion
-
-
-        /// <summary>
-        /// 设置 "Mod"
-        /// </summary>
-        private void SetModSet()
-        {   // 设置
-            if (!string.IsNullOrEmpty(_pathAll.ServerModsDirPath))
-            {
-                // 清空,Enabled变成默认值
-                foreach (var item in _mods.ListMod)
-                {
-                    item.Enabled = false;
-                }
-                // 细节也要变成默认值,之后再重新读取1
-                foreach (var item in _mods.ListMod)
-                {
-                    foreach (var item1 in item.ConfigurationOptions)
-                    {
-                        item1.Value.Current = item1.Value.Default1;
-                    }
-                }
-                // 重新读取
-                _mods.ReadModsOverrides(_pathAll.ServerModsDirPath, _pathAll.YyServerDirPath + @"\Master\modoverrides.lua");
-            }
-            // 显示 
-            DediModList.Children.Clear();
-            DediModXiJie.Children.Clear();
-            DediModDescription.Text = "";
-            if (_mods != null)
-            {
-                for (var i = 0; i < _mods.ListMod.Count; i++)
-                {
-                    // 屏蔽 客户端MOD
-                    if (_mods.ListMod[i].ModType == ModType.客户端)
-                    {
-                        continue;
-                    }
-                    var dod = new DediModBox
-                    {
-                        Width = 200,
-                        Height = 70,
-                        UCTitle = {Content = _mods.ListMod[i].Name},
-                        UCCheckBox = {Tag = i},
-                        UCConfig =
-                        {
-                            Source = _mods.ListMod[i].ConfigurationOptions.Count != 0
-                                ? new BitmapImage(new Uri(
-                                    "/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_config.png",
-                                    UriKind.Relative))
-                                : null
-                        }
-                    };
-                    dod.UCCheckBox.IsChecked = _mods.ListMod[i].Enabled;
-                    dod.UCCheckBox.Checked += CheckBox_Checked;
-                    dod.UCCheckBox.Unchecked += CheckBox_Unchecked;
-                    dod.PreviewMouseLeftButtonDown += Dod_MouseLeftButtonDown;
-                    dod.UCEnableLabel.Content = _mods.ListMod[i].ModType;
-                    DediModList.Children.Add(dod);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 设置 "Mod" "MouseLeftButtonDown"
-        /// </summary>
-        private void Dod_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            // 左边显示
-            var n = (int)(((DediModBox)sender).UCCheckBox.Tag);
-            var author = "作者:\r\n" + _mods.ListMod[n].Author + "\r\n\r\n";
-            var description = "描述:\r\n" + _mods.ListMod[n].Description + "\r\n\r\n";
-            var strName = "Mod名字:\r\n" + _mods.ListMod[n].Name + "\r\n\r\n";
-            var version = "版本:\r\n" + _mods.ListMod[n].Version + "\r\n\r\n";
-            var fileName = "文件夹:\r\n" + _mods.ListMod[n].DirName + "\r\n\r\n";
-            DediModDescription.FontSize = 12;
-            DediModDescription.TextWrapping = TextWrapping.WrapWithOverflow;
-            DediModDescription.Text = strName + author + description + version + fileName;
-            if (_mods.ListMod[n].ConfigurationOptions.Count == 0)
-            {
-                // 没有细节配置项
-                Debug.WriteLine(n);
-                DediModXiJie.Children.Clear();
-                var labelModXiJie = new Label
-                {
-                    Height = 300,
-                    Width = 300,
-                    Content = "QQ群: 580332268 \r\n mod类型:\r\n 所有人: 所有人都必须有.\r\n 服务器:只要服务器有就行",
-                    FontWeight = FontWeights.Bold,
-                    FontSize = 20
-                };
-                DediModXiJie.Children.Add(labelModXiJie);
-            }
-            else
-            {
-                // 有,显示细节配置项
-                Debug.WriteLine(n);
-                DediModXiJie.Children.Clear();
-                foreach (var item in _mods.ListMod[n].ConfigurationOptions)
-                {
-                    // stackPanel
-                    var stackPanel = new StackPanel
-                    {
-                        Height = 40,
-                        Width = 330,
-                        Orientation = Orientation.Horizontal
-                    };
-                    var labelModXiJie = new Label
-                    {
-                        Height = stackPanel.Height,
-                        Width = 180,
-                        FontWeight = FontWeights.Bold,
-                        Content = string.IsNullOrEmpty(item.Value.Label) ? item.Value.Name : item.Value.Label
-                    };
-                    // dediComboBox
-                    var dod = new DediComboBox
-                    {
-                        Height = stackPanel.Height,
-                        Width = 150,
-                        FontSize = 12,
-                        Tag = n + "$" + item.Key
-                    };
-                    // 把当前选择mod的第n个,放到tag里
-                    foreach (var item1 in item.Value.Options)
-                    {
-                        dod.Items.Add(item1.Description);
-                    }
-                    dod.SelectedValue = item.Value.CurrentDescription;
-                    dod.SelectionChanged += Dod_SelectionChanged;
-                    // 添加
-                    stackPanel.Children.Add(labelModXiJie);
-                    stackPanel.Children.Add(dod);
-                    DediModXiJie.Children.Add(stackPanel);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 设置 "Mod" "SelectionChanged"
-        /// </summary>
-        private void Dod_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Debug.WriteLine(((DediComboBox)sender).Tag);
-            var str = ((DediComboBox)sender).Tag.ToString().Split('$');
-            if (str.Length != 0)
-            {
-                var n = int.Parse(str[0]);
-                var name = str[1];
-                // 好复杂
-                _mods.ListMod[n].ConfigurationOptions[name].Current =
-                    _mods.ListMod[n].ConfigurationOptions[name].Options[((DediComboBox)sender).SelectedIndex].Data;
-
-            }
-        }
-
-        /// <summary>
-        /// 设置 "Mod" "CheckBox_Unchecked"
-        /// </summary>
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            _mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = false;
-            //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
-        }
-
-        /// <summary>
-        /// 设置 "Mod" "CheckBox_Checked"
-        /// </summary>
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            _mods.ListMod[(int)((CheckBox)sender).Tag].Enabled = true;
-            //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
-        }
-
         /// <summary>
         /// 设置"基本"
         /// </summary>
         private void SetBaseSet()
         {
-            var clusterIniFilePath = _pathAll.YyServerDirPath + @"\cluster.ini";
+            var clusterIniFilePath = _pathAll.ServerDirPath + @"\cluster.ini";
             if (!File.Exists(clusterIniFilePath))
             {
                 //MessageBox.Show("cluster.ini不存在");
@@ -940,8 +762,19 @@ namespace 饥荒百科全书CSharp.View
             DediBaseOfflineSelect.DataContext = _baseSet;
             DediBaseIsPause.DataContext = _baseSet;
             DediBaseSetIntentionButton.DataContext = _baseSet;
-            DediBaseIsCave.DataContext = _baseSet;
+            IsCaveComboBox.DataContext = _baseSet;
             Debug.WriteLine("基本设置-完");
+        }
+
+        #endregion
+        #region 编辑世界面板
+        /// <summary>
+        /// 是否开启洞穴的
+        /// </summary>
+        private void DediBaseIsCave_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selected = e.AddedItems[0].ToString();
+            CaveSettingColumnDefinition.Width = selected == "否" ? new GridLength(0) : new GridLength(1, GridUnitType.Star);
         }
 
         /// <summary>
@@ -1287,27 +1120,412 @@ namespace 饥荒百科全书CSharp.View
                 //Debug.WriteLine("保存地上世界");
             }
         }
+        #endregion
 
-        #region 汉化
+        #region Mods面板
 
-        private string HanHua(string s)
-        {
-            return _hanhua.ContainsKey(s) ? _hanhua[s] : s;
-        }
-
-        private IEnumerable<string> HanHua(IEnumerable<string> s)
-        {
-            var r = new List<string>();
-            foreach (var item in s)
+        /// <summary>
+        /// 设置 "Mod集"
+        /// </summary>
+        private void SetModSet()
+        {   // 设置
+            if (!string.IsNullOrEmpty(PathCommon.ServerModsDirPath))
             {
-                r.Add(_hanhua.ContainsKey(item) ? _hanhua[item] : item);
+                // 清空,Enabled变成默认值
+                foreach (var item in _mods.ListMod)
+                {
+                    item.Enabled = false;
+                }
+                // 细节也要变成默认值,之后再重新读取1
+                foreach (var item in _mods.ListMod)
+                {
+                    foreach (var item1 in item.ConfigurationOptions)
+                    {
+                        item1.Value.Current = item1.Value.Default1;
+                    }
+                }
+                // 重新读取
+                _mods.ReadModsOverrides(PathCommon.ServerModsDirPath, _pathAll.ServerDirPath + @"\Master\modoverrides.lua");
             }
-            return r;
+            // 显示 
+            ModListStackPanel.Children.Clear();
+            ModSettingStackPanel.Children.Clear();
+            ModDescriptionStackPanel.Text = "";
+            if (_mods != null)
+            {
+                for (var i = 0; i < _mods.ListMod.Count; i++)
+                {
+                    // 屏蔽 客户端MOD
+                    if (_mods.ListMod[i].ModType == ModType.客户端)
+                    {
+                        continue;
+                    }
+                    var dod = new DediModBox
+                    {
+                        Width = 200,
+                        Height = 70,
+                        UCTitle = { Content = _mods.ListMod[i].Name },
+                        UCCheckBox = { Tag = i },
+                        UCConfig =
+                        {
+                            Source = _mods.ListMod[i].ConfigurationOptions.Count != 0
+                                ? new BitmapImage(new Uri(
+                                    "/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_mod_config.png",
+                                    UriKind.Relative))
+                                : null
+                        }
+                    };
+                    dod.UCCheckBox.IsChecked = _mods.ListMod[i].Enabled;
+                    dod.UCCheckBox.Checked += CheckBox_Checked;
+                    dod.UCCheckBox.Unchecked += CheckBox_Unchecked;
+                    dod.PreviewMouseLeftButtonDown += Dod_MouseLeftButtonDown;
+                    dod.UCEnableLabel.Content = _mods.ListMod[i].ModType;
+                    ModListStackPanel.Children.Add(dod);
+                }
+            }
         }
+
+        /// <summary>
+        /// 设置 "Mod" "MouseLeftButtonDown"
+        /// </summary>
+        private void Dod_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // 左边显示
+            var n = (int)((DediModBox)sender).UCCheckBox.Tag;
+            var author = "作者:\r\n" + _mods.ListMod[n].Author + "\r\n\r\n";
+            var description = "描述:\r\n" + _mods.ListMod[n].Description + "\r\n\r\n";
+            var strName = "Mod名字:\r\n" + _mods.ListMod[n].Name + "\r\n\r\n";
+            var version = "版本:\r\n" + _mods.ListMod[n].Version + "\r\n\r\n";
+            var fileName = "文件夹:\r\n" + _mods.ListMod[n].DirName + "\r\n\r\n";
+            ModDescriptionStackPanel.FontSize = 12;
+            ModDescriptionStackPanel.TextWrapping = TextWrapping.WrapWithOverflow;
+            ModDescriptionStackPanel.Text = strName + author + description + version + fileName;
+            if (_mods.ListMod[n].ConfigurationOptions.Count == 0)
+            {
+                // 没有细节配置项
+                Debug.WriteLine(n);
+                ModSettingStackPanel.Children.Clear();
+                var labelModXiJie = new Label
+                {
+                    Height = 300,
+                    Width = 300,
+                    Content = "QQ群: 580332268 \r\n mod类型:\r\n 所有人: 所有人都必须有.\r\n 服务器:只要服务器有就行",
+                    FontWeight = FontWeights.Bold,
+                    FontSize = 20
+                };
+                ModSettingStackPanel.Children.Add(labelModXiJie);
+            }
+            else
+            {
+                // 有,显示细节配置项
+                Debug.WriteLine(n);
+                ModSettingStackPanel.Children.Clear();
+                foreach (var item in _mods.ListMod[n].ConfigurationOptions)
+                {
+                    // stackPanel
+                    var stackPanel = new StackPanel
+                    {
+                        Height = 40,
+                        Width = 330,
+                        Orientation = Orientation.Horizontal
+                    };
+                    var labelModXiJie = new Label
+                    {
+                        Height = stackPanel.Height,
+                        Width = 180,
+                        FontWeight = FontWeights.Bold,
+                        Content = string.IsNullOrEmpty(item.Value.Label) ? item.Value.Name : item.Value.Label
+                    };
+                    // dediComboBox
+                    var dod = new DediComboBox
+                    {
+                        Height = stackPanel.Height,
+                        Width = 150,
+                        FontSize = 12,
+                        Tag = n + "$" + item.Key
+                    };
+                    // 把当前选择mod的第n个,放到tag里
+                    foreach (var item1 in item.Value.Options)
+                    {
+                        dod.Items.Add(item1.Description);
+                    }
+                    dod.SelectedValue = item.Value.CurrentDescription;
+                    dod.SelectionChanged += Dod_SelectionChanged;
+                    // 添加
+                    stackPanel.Children.Add(labelModXiJie);
+                    stackPanel.Children.Add(dod);
+                    ModSettingStackPanel.Children.Add(stackPanel);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 设置 "Mod" "SelectionChanged"
+        /// </summary>
+        private void Dod_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Debug.WriteLine(((DediComboBox)sender).Tag);
+            var str = ((DediComboBox)sender).Tag.ToString().Split('$');
+            if (str.Length != 0)
+            {
+                var n = int.Parse(str[0]);
+                var name = str[1];
+                // 好复杂
+                _mods.ListMod[n].ConfigurationOptions[name].Current =
+                    _mods.ListMod[n].ConfigurationOptions[name].Options[((DediComboBox)sender).SelectedIndex].Data;
+
+            }
+        }
+
+        /// <summary>
+        /// 设置 "Mod" "CheckBox_Unchecked"
+        /// </summary>
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _mods.ListMod[(int)(((CheckBox)sender).Tag)].Enabled = false;
+            //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
+        }
+
+        /// <summary>
+        /// 设置 "Mod" "CheckBox_Checked"
+        /// </summary>
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            _mods.ListMod[(int)((CheckBox)sender).Tag].Enabled = true;
+            //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
+        }
+
 
         #endregion
 
-        #region 控制台
+        #region 控制台面板
+        /// <summary>
+        /// 根据分类生产RadioButton
+        /// </summary>
+        private void CreateConsoleClassificationButton()
+        {
+            ConsoleClassificationStackPanel.Children.Clear();
+            // otherRadioButton
+            var otherRadioButton = new RadioButton
+            {
+                Content = "其他",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            otherRadioButton.Checked += ConsoleRadioButton_Click;
+            otherRadioButton.IsChecked = true;
+            ConsoleClassificationStackPanel.Children.Add(otherRadioButton);
+            // foodRadioButton
+            var foodRadioButton = new RadioButton
+            {
+                Content = "食物",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            foodRadioButton.Checked += ConsoleRadioButton_Click;
+            foodRadioButton.IsChecked = false;
+            ConsoleClassificationStackPanel.Children.Add(foodRadioButton);
+            // resourcesRadioButton
+            var resourcesRadioButton = new RadioButton
+            {
+                Content = "资源",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            resourcesRadioButton.Checked += ConsoleRadioButton_Click;
+            resourcesRadioButton.IsChecked = false;
+            ConsoleClassificationStackPanel.Children.Add(resourcesRadioButton);
+            // toolsRadioButton
+            var toolsRadioButton = new RadioButton
+            {
+                Content = "工具",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            toolsRadioButton.Checked += ConsoleRadioButton_Click;
+            toolsRadioButton.IsChecked = false;
+            ConsoleClassificationStackPanel.Children.Add(toolsRadioButton);
+            // weaponsRadioButton
+            var weaponsRadioButton = new RadioButton
+            {
+                Content = "武器",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            weaponsRadioButton.Checked += ConsoleRadioButton_Click;
+            weaponsRadioButton.IsChecked = false;
+            ConsoleClassificationStackPanel.Children.Add(weaponsRadioButton);
+            // giftsRadioButton
+            var giftsRadioButton = new RadioButton
+            {
+                Content = "礼物",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            giftsRadioButton.Checked += ConsoleRadioButton_Click;
+            giftsRadioButton.IsChecked = false;
+            ConsoleClassificationStackPanel.Children.Add(giftsRadioButton);
+            // clothesRadioButton
+            var clothesRadioButton = new RadioButton
+            {
+                Content = "衣物",
+                Width = 140,
+                Height = 40,
+                Foreground = new SolidColorBrush(Colors.Black),
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("RadioButtonStyle")
+            };
+            clothesRadioButton.Checked += ConsoleRadioButton_Click;
+            clothesRadioButton.IsChecked = false;
+            ConsoleClassificationStackPanel.Children.Add(clothesRadioButton);
+        }
+
+        /// <summary>
+        /// 显示具体分类信息
+        /// </summary>
+        private void ConsoleRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            ConsoleDetailsWrapPanel.Children.Clear();
+            // 读取分类信息
+            var itemList = JsonConvert.DeserializeObject<ItemListRootObject>(StringProcess.GetJsonStringDedicatedServer("ItemList.json"));
+            // 把当前选择的值放到这里了
+            ConsoleClassificationStackPanel.Tag = ((RadioButton)sender).Content;
+            // 显示具体分类信息
+            switch (ConsoleClassificationStackPanel.Tag)
+            {
+                case "其他":
+                    foreach (var detail in itemList.Items.Other.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateConsoleButton(detail);
+                    }
+                    break;
+                case "食物":
+                    foreach (var detail in itemList.Items.Food.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateConsoleButton(detail);
+                    }
+                    break;
+                case "资源":
+                    foreach (var detail in itemList.Items.Resources.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateConsoleButton(detail);
+                    }
+                    break;
+                case "工具":
+                    foreach (var detail in itemList.Items.Tools.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateConsoleButton(detail);
+                    }
+                    break;
+                case "武器":
+                    foreach (var detail in itemList.Items.Weapons.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateConsoleButton(detail);
+                    }
+                    break;
+                case "礼物":
+                    foreach (var detail in itemList.Items.Gifts.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateConsoleButton(detail);
+                    }
+                    break;
+                case "衣物":
+                    foreach (var detail in itemList.Items.Clothes.Details)
+                    {
+                        if (string.IsNullOrEmpty(detail.Chinese))
+                        {
+                            continue;
+                        }
+                        CreateConsoleButton(detail);
+                    }
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 创建Console按钮
+        /// </summary>
+        /// <param name="detail"></param>
+        private void CreateConsoleButton(Detail3 detail)
+        {
+            var codeString = detail.Code;
+            var chineseString = detail.Chinese;
+            // 按钮
+            var button = new Button
+            {
+                Content = chineseString,
+                Width = 115,
+                Height = 35,
+                Tag = codeString,
+                FontWeight = FontWeights.Bold,
+                Style = (Style)FindResource("DediButtonCreateWorldStyle")
+            };
+            button.Click += ConsoleButton_Click;
+            ConsoleDetailsWrapPanel.Children.Add(button);
+        }
+
+        /// <summary>
+        /// Console按钮Click事件
+        /// </summary>
+        private void ConsoleButton_Click(object sender, RoutedEventArgs e)
+        {
+            var code = ((Button)sender).Tag.ToString();
+            // 如果是其他分类,则直接运行code
+            if (ConsoleClassificationStackPanel.Tag.ToString() == "其他")
+            {
+                SsendMessage(code);
+                System.Windows.Forms.Clipboard.SetDataObject(code);
+            }
+            // 如果不是其他
+            else
+            {
+                SsendMessage("c_give(\"" + code + "\", 1)");
+                System.Windows.Forms.Clipboard.SetDataObject("c_give(\"" + code + "\", 1)");
+            }
+        }
+
         /// <summary>
         /// 发送“消息”
         /// </summary>
@@ -1325,238 +1543,37 @@ namespace 饥荒百科全书CSharp.View
             }
         }
 
-        /// <summary>
-        /// 根据分类生产RadioButton
-        /// </summary>
-        private void CreateConsoleButton()
-        {
-            DediConsoleFenLei.Children.Clear();
-            // otherRadioButton
-            var otherRadioButton = new RadioButton
-            {
-                Content = "其他",
-                Width = 140,
-                Height = 40,
-                Foreground = new SolidColorBrush(Colors.Black),
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("RadioButtonStyle")
-            };
-            otherRadioButton.Checked += B_Click;
-            otherRadioButton.IsChecked = true;
-            DediConsoleFenLei.Children.Add(otherRadioButton);
-            // foodRadioButton
-            var foodRadioButton = new RadioButton
-            {
-                Content = "食物",
-                Width = 140,
-                Height = 40,
-                Foreground = new SolidColorBrush(Colors.Black),
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("RadioButtonStyle")
-            };
-            foodRadioButton.Checked += B_Click;
-            foodRadioButton.IsChecked = true;
-            DediConsoleFenLei.Children.Add(foodRadioButton);
-            // resourcesRadioButton
-            var resourcesRadioButton = new RadioButton
-            {
-                Content = "资源",
-                Width = 140,
-                Height = 40,
-                Foreground = new SolidColorBrush(Colors.Black),
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("RadioButtonStyle")
-            };
-            resourcesRadioButton.Checked += B_Click;
-            resourcesRadioButton.IsChecked = true;
-            DediConsoleFenLei.Children.Add(resourcesRadioButton);
-            // toolsRadioButton
-            var toolsRadioButton = new RadioButton
-            {
-                Content = "工具",
-                Width = 140,
-                Height = 40,
-                Foreground = new SolidColorBrush(Colors.Black),
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("RadioButtonStyle")
-            };
-            toolsRadioButton.Checked += B_Click;
-            toolsRadioButton.IsChecked = true;
-            DediConsoleFenLei.Children.Add(toolsRadioButton);
-            // weaponsRadioButton
-            var weaponsRadioButton = new RadioButton
-            {
-                Content = "武器",
-                Width = 140,
-                Height = 40,
-                Foreground = new SolidColorBrush(Colors.Black),
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("RadioButtonStyle")
-            };
-            weaponsRadioButton.Checked += B_Click;
-            weaponsRadioButton.IsChecked = true;
-            DediConsoleFenLei.Children.Add(weaponsRadioButton);
-            // giftsRadioButton
-            var giftsRadioButton = new RadioButton
-            {
-                Content = "礼物",
-                Width = 140,
-                Height = 40,
-                Foreground = new SolidColorBrush(Colors.Black),
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("RadioButtonStyle")
-            };
-            giftsRadioButton.Checked += B_Click;
-            giftsRadioButton.IsChecked = true;
-            DediConsoleFenLei.Children.Add(giftsRadioButton);
-            // clothesRadioButton
-            var clothesRadioButton = new RadioButton
-            {
-                Content = "衣物",
-                Width = 140,
-                Height = 40,
-                Foreground = new SolidColorBrush(Colors.Black),
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("RadioButtonStyle")
-            };
-            clothesRadioButton.Checked += B_Click;
-            clothesRadioButton.IsChecked = true;
-            DediConsoleFenLei.Children.Add(clothesRadioButton);
-        }
-
-        /// <summary>
-        /// 显示具体分类信息
-        /// </summary>
-        private void B_Click(object sender, RoutedEventArgs e)
-        {
-            // 读取分类信息
-            var itemList = JsonConvert.DeserializeObject<ItemListRootObject>(StringProcess.GetJsonStringDedicatedServer("ItemList.json"));
-            // 把当前选择的值放到这里了
-            DediConsoleFenLei.Tag = ((RadioButton)sender).Content;
-            // 显示具体分类信息
-            switch (DediConsoleFenLei.Tag)
-            {
-                case "其他":
-                    foreach (var detail in itemList.Items.Other.Details)
-                    {
-                        if (string.IsNullOrEmpty(detail.Chinese))
-                        {
-                            continue;
-                        }
-                        CreateBxButton(detail);
-                    }
-                    break;
-                case "食物":
-                    foreach (var detail in itemList.Items.Food.Details)
-                    {
-                        if (string.IsNullOrEmpty(detail.Chinese))
-                        {
-                            continue;
-                        }
-                        CreateBxButton(detail);
-                    }
-                    break;
-                case "资源":
-                    foreach (var detail in itemList.Items.Resources.Details)
-                    {
-                        if (string.IsNullOrEmpty(detail.Chinese))
-                        {
-                            continue;
-                        }
-                        CreateBxButton(detail);
-                    }
-                    break;
-                case "工具":
-                    foreach (var detail in itemList.Items.Tools.Details)
-                    {
-                        if (string.IsNullOrEmpty(detail.Chinese))
-                        {
-                            continue;
-                        }
-                        CreateBxButton(detail);
-                    }
-                    break;
-                case "武器":
-                    foreach (var detail in itemList.Items.Weapons.Details)
-                    {
-                        if (string.IsNullOrEmpty(detail.Chinese))
-                        {
-                            continue;
-                        }
-                        CreateBxButton(detail);
-                    }
-                    break;
-                case "礼物":
-                    foreach (var detail in itemList.Items.Gifts.Details)
-                    {
-                        if (string.IsNullOrEmpty(detail.Chinese))
-                        {
-                            continue;
-                        }
-                        CreateBxButton(detail);
-                    }
-                    break;
-                case "衣物":
-                    foreach (var detail in itemList.Items.Clothes.Details)
-                    {
-                        if (string.IsNullOrEmpty(detail.Chinese))
-                        {
-                            continue;
-                        }
-                        CreateBxButton(detail);
-                    }
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// 创建Bx按钮
-        /// </summary>
-        /// <param name="detail"></param>
-        private void CreateBxButton(Detail3 detail)
-        {
-            DediConsoleDetails.Children.Clear();
-            var codeString = detail.Code;
-            var chineseString = detail.Chinese;
-            // 按钮
-            var button = new Button
-            {
-                Content = chineseString,
-                Width = 115,
-                Height = 35,
-                Tag = codeString,
-                FontWeight = FontWeights.Bold,
-                Style = (Style)FindResource("DediButtonCreateWorldStyle")
-            };
-            button.Click += Bx_Click;
-            DediConsoleDetails.Children.Add(button);
-        }
-
-        /// <summary>
-        /// Bx按钮Click事件
-        /// </summary>
-        private void Bx_Click(object sender, RoutedEventArgs e)
-        {
-            var code = ((Button)sender).Tag.ToString();
-            // 如果是其他分类,则直接运行code
-            if (DediConsoleFenLei.Tag.ToString() == "其他")
-            {
-                SsendMessage(code);
-                System.Windows.Forms.Clipboard.SetDataObject(code);
-            }
-            // 如果不是其他
-            else
-            {
-                SsendMessage("c_give(\"" + code + "\", 1)");
-                System.Windows.Forms.Clipboard.SetDataObject("c_give(\"" + code + "\", 1)");
-            }
-        }
         #endregion
 
-        // 获取房间名
-        private string GetHouseName(int dSaveSlot)
+        #region 其他方法
+        /// <summary>
+        /// 汉化(字符串)
+        /// </summary>
+        /// <param name="str">字符串str</param>
+        /// <returns>汉化文本</returns>
+        private string HanHua(string str)
         {
-            var clusterIniPath = _pathAll.DoNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + dSaveSlot.ToString() + @"\cluster.ini";
+            return _hanhua.ContainsKey(str) ? _hanhua[str] : str;
+        }
+
+        /// <summary>
+        /// 汉化(字符串公开枚举数)
+        /// </summary>
+        /// <param name="str">字符串str</param>
+        /// <returns>汉化文本(List)</returns>
+        private IEnumerable<string> HanHua(IEnumerable<string> str)
+        {
+            return str.Select(item => _hanhua.ContainsKey(item) ? _hanhua[item] : item).ToList();
+        }
+
+        /// <summary>
+        /// 获取房间名
+        /// </summary>
+        /// <param name="saveSlot">存档槽</param>
+        /// <returns>房间名</returns>
+        private string GetHouseName(int saveSlot)
+        {
+            var clusterIniPath = _pathAll.DoNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + saveSlot + @"\cluster.ini";
             if (!File.Exists(clusterIniPath))
             {
                 return "创建世界";
@@ -1584,10 +1601,7 @@ namespace 饥荒百科全书CSharp.View
             DediBaseSet.IsEnabled = isDisable;
         }
 
-        private void DediBaseIsCave_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var selected = e.AddedItems[0].ToString();
-            CaveSettingColumnDefinition.Width = selected == "否" ? new GridLength(0) : new GridLength(1, GridUnitType.Star);
-        }
+        #endregion
+
     }
 }

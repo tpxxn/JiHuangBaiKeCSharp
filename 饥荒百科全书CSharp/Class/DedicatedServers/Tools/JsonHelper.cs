@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Xml;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class.DedicatedServers.JsonDeserialize;
@@ -18,7 +19,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static string ReadGamePlatform()
         {
-            var platform = RegeditRw.RegReadString("platform");
+            var platform = RegeditRw.RegReadString("Platform");
             return string.IsNullOrEmpty(platform) ? "Steam" : platform;
         }
 
@@ -27,7 +28,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public static void WriteGamePlatform(string platform)
         {
-            RegeditRw.RegWrite("platform", platform);
+            RegeditRw.RegWrite("Platform", platform);
         }
 
         #endregion

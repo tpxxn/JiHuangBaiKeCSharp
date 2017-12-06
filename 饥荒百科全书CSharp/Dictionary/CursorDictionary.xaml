@@ -27,6 +27,6 @@
     <Cursor x:Key="CursorDgn2">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_dgn2.cur</Cursor>
     <!--移动-->
     <Cursor x:Key="CursorMove">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_move.cur</Cursor>
-    <!--alternate(交替?WeGame-->
+    <!--alternate(交替?)-->
     <Cursor x:Key="CursorAlternate">/饥荒百科全书CSharp;component/Resources/Cursor/Cursor_alternate.cur</Cursor>
 </ResourceDictionary>

@@ -36,7 +36,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         public void SaveWorld()
         {
 
-            if (!Directory.Exists(_pathall.YyServerDirPath))
+            if (!Directory.Exists(_pathall.ServerDirPath))
             {
                 return;
             }
@@ -45,11 +45,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             string savePath;
             if (!_isCave)
             {
-                savePath = _pathall.YyServerDirPath + @"\Master\leveldataoverride.lua";
+                savePath = _pathall.ServerDirPath + @"\Master\leveldataoverride.lua";
             }
             else
             {
-                savePath = _pathall.YyServerDirPath + @"\Caves\leveldataoverride.lua";
+                savePath = _pathall.ServerDirPath + @"\Caves\leveldataoverride.lua";
 
             }
 

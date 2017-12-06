@@ -73,7 +73,7 @@
                         <ColumnDefinition Width="12*"/>
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
-                    <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" d:IsHidden="True" >
+                    <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
                         <StackPanel>
                             <Grid x:Name="DediSettingGameVersion" Height="40">
                                 <Grid.Background>
@@ -280,7 +280,7 @@
                             </Grid>
                         </StackPanel>
                     </ScrollViewer>
-                    <Grid x:Name="DediWorldSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1">
+                    <Grid x:Name="DediWorldSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition x:Name="CaveSettingColumnDefinition" Width="*"/>
@@ -296,7 +296,7 @@
                             <Viewbox Margin="0,2">
                                 <StackPanel Orientation="Horizontal">
                                     <Label Content="开启洞穴" FontWeight="Bold" FontSize="16"/>
-                                    <dedicatedServer:DediComboBox x:Name="DediBaseIsCave" Text="{Binding IsCave, Mode=TwoWay}" Height="35" Width="140" SelectionChanged="DediBaseIsCave_OnSelectionChanged"/>
+                                    <dedicatedServer:DediComboBox x:Name="IsCaveComboBox" Text="{Binding IsCave, Mode=TwoWay}" Height="35" Width="140" SelectionChanged="DediBaseIsCave_SelectionChanged"/>
                                 </StackPanel>
                             </Viewbox>
                         </Grid>
@@ -336,23 +336,23 @@
                             <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
                         <ScrollViewer Grid.Column="0" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
-                            <StackPanel x:Name="DediModList"/>
+                            <StackPanel x:Name="ModListStackPanel"/>
                         </ScrollViewer>
                         <ScrollViewer Grid.Column="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
-                            <StackPanel  x:Name="DediModXiJie" Orientation="Vertical"></StackPanel>
+                            <StackPanel  x:Name="ModSettingStackPanel" Orientation="Vertical"></StackPanel>
                         </ScrollViewer>
                         <ScrollViewer Grid.Column="2" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
-                            <TextBlock x:Name="DediModDescription"  />
+                            <TextBlock x:Name="ModDescriptionStackPanel"  />
                         </ScrollViewer>
                     </Grid>
-                    <Grid x:Name="DediModRollBack" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
+                    <Grid x:Name="DediConsole" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="10*"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel x:Name="DediConsoleFenLei" Orientation="Vertical"  Margin="0" Grid.Column="0"/>
+                        <StackPanel x:Name="ConsoleClassificationStackPanel" Orientation="Vertical"  Margin="0" Grid.Column="0"/>
                         <ScrollViewer Grid.Column="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
-                            <WrapPanel x:Name="DediConsoleDetails" Orientation="Horizontal" Margin="0"/>
+                            <WrapPanel x:Name="ConsoleDetailsWrapPanel" Orientation="Horizontal" Margin="0"/>
                         </ScrollViewer>
                     </Grid>
                     <Grid x:Name="DediModManager" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
