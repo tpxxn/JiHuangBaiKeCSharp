@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
 {
     // 发送消息
-    class mySendMessage
+    internal class MySendMessage
     {
         [DllImport("user32.dll")]
         private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);

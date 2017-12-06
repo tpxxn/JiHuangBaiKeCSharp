@@ -9,32 +9,42 @@ using 饥荒百科全书CSharp.Class.DedicatedServers.Tools;
 namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
 
 {
-    class PathAll
+    internal static class PathCommon
     {
         /// <summary>
-        /// DoNotStarveTogether
+        /// 游戏平台
         /// </summary>
-        private string _doNotStarveTogetherDirPath;
+        private static string _gamePlatform; 
+
+        public static string GamePlatform
+        {
+            get => _gamePlatform;
+            set
+            {
+                JsonHelper.WriteGamePlatform(value);
+                _gamePlatform = value;
+            }
+        }
 
         /// <summary>
         /// 我的文档路径
         /// </summary>
-        public string DocumentDirPath { get; set; }
+        public static string DocumentDirPath { get; set; }
 
         /// <summary>
         /// 当前路径
         /// </summary>
-        public string CurrentDirPath { get; set; }
+        public static string CurrentDirPath { get; set; }
 
         /// <summary>
         /// 客户端exe文件路径
         /// </summary>
-        private string _clientFilePath;
+        private static string _clientFilePath;
 
         /// <summary>
         /// 客户端exe文件路径
         /// </summary>
-        public string ClientFilePath
+        public static string ClientFilePath
         {
             get => _clientFilePath;
             set
@@ -42,32 +52,23 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 if (string.IsNullOrEmpty(value))
                 {
                     _clientFilePath = null;
-                    ClientModsDirPath = null;
-                    JsonHelper.WriteClientPath("", GamePingTai);
+                    JsonHelper.WriteClientPath("", JsonHelper.ReadGamePlatform());
                     return;
                 }
                 _clientFilePath = value.Trim();
-                JsonHelper.WriteClientPath(_clientFilePath, GamePingTai);
-                // 客户端mods路径 
-                if (!string.IsNullOrEmpty(_clientFilePath))
-                {
-
-                    ClientModsDirPath = Path.GetDirectoryName(Path.GetDirectoryName(_clientFilePath)) + @"\mods";
-
-
-                }
+                JsonHelper.WriteClientPath(_clientFilePath, JsonHelper.ReadGamePlatform());
             }
         }
 
         /// <summary>
         /// 服务端exe文件路径
         /// </summary>
-        private string _serverFilePath;
+        private static string _serverFilePath;
 
         /// <summary>
         /// 服务器exe文件路径
         /// </summary>
-        public string ServerFilePath
+        public static string ServerFilePath
         {
             get => _serverFilePath;
             set
@@ -75,37 +76,26 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 if (string.IsNullOrEmpty(value))
                 {
                     _serverFilePath = null;
-                    ServerModsDirPath = null;
-                    JsonHelper.WriteServerPath("", GamePingTai);
-
+                    JsonHelper.WriteServerPath("", JsonHelper.ReadGamePlatform());
                     return;
                 }
                 // 判断文件名对不对
                 if (value.Contains("dontstarve_dedicated_server_nullrenderer.exe"))
                 {
                     _serverFilePath = value.Trim();
-                    JsonHelper.WriteServerPath(_serverFilePath, GamePingTai);
-
-
-                }
-                // 服务端mods路径 
-                if (!string.IsNullOrEmpty(_serverFilePath))
-                {
-
-                    ServerModsDirPath = Path.GetDirectoryName(Path.GetDirectoryName(_serverFilePath)) + @"\mods";
-
+                    JsonHelper.WriteServerPath(_serverFilePath, JsonHelper.ReadGamePlatform());
                 }
             }
         }
+    }
 
+    internal class PathAll
+    {
         /// <summary>
         /// yyServer路径
         /// </summary>
         private string _yyServerDirPath;
 
-        /// <summary>
-        /// yyServer路径
-        /// </summary>
         public string YyServerDirPath
         {
             get => _yyServerDirPath;
@@ -132,20 +122,21 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public string CaveConfigFilePath { get; set; }
 
-
         /// <summary>
-        /// mod-设置-地上
+        /// 地上世界-mod-设置
         /// </summary>
         public string ModConfigOverworldFilePath { get; set; }
 
         /// <summary>
-        /// mod-设置-地下
+        /// 地下世界-mod-设置
         /// </summary>
         public string ModConfigCaveFilePath { get; set; }
 
         /// <summary>
         /// DoNotStarveTogether
         /// </summary>
+        private string _doNotStarveTogetherDirPath;
+
         public string DoNotStarveTogetherDirPath
         {
             get => _doNotStarveTogetherDirPath;
@@ -154,7 +145,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 _doNotStarveTogetherDirPath = value;
                 if (!string.IsNullOrEmpty(_doNotStarveTogetherDirPath))
                 {
-                    YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + SaveSlot;
+                    YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + SaveSlot;
                 }
             }
         }
@@ -169,7 +160,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public string ServerModsDirPath { get; set; }
 
-        public string GamePingTai { get; set; }
         private int _saveSlot;
         public int SaveSlot
         {
@@ -177,52 +167,39 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
             set
             {
                 _saveSlot = value;
-                YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + GamePingTai + "_" + value;
+                YyServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + value;
             }
         }
 
-        public string PicDirPath { get; set; }
-
         /// <summary>
-        ///
+        /// 构造函数
         /// </summary>
-        /// <param name="gamePingTai">游戏平台</param>
-        /// <param name="SaveSlot">存档槽</param>
-        public PathAll(string gamePingTai, int SaveSlot)
+        /// <param name="saveSlot">存档槽</param>
+        public PathAll(int saveSlot)
         {
-            GamePingTai = gamePingTai;
-            SaveSlot = SaveSlot;
-            SetAllPath(gamePingTai, SaveSlot);
+            SaveSlot = saveSlot;
+            SetAllPath(PathCommon.GamePlatform, SaveSlot);
         }
 
         /// <summary>
         /// 设置所有路径
         /// </summary>
-        /// <param name="gamePingTai">游戏平台</param>
-        /// <param name="SaveSlot">第几个存档槽,从0开始</param>
-        public void SetAllPath(string gamePingTai, int SaveSlot = 0)
+        /// <param name="gamePlatform">游戏平台</param>
+        /// <param name="saveSlot">第几个存档槽,从0开始</param>
+        public void SetAllPath(string gamePlatform, int saveSlot = 0)
         {
-            GamePingTai = gamePingTai;
-            SaveSlot = SaveSlot;
-            // 我的文档
-            DocumentDirPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            // 当前路径
-            CurrentDirPath = Environment.CurrentDirectory;
-            // 世界图片路径
-            PicDirPath = CurrentDirPath + "\\世界图片";
+            //GamePlatform = gamePlatform;
+            //SaveSlot = saveSlot;
             // DoNotStarveTogether
-            if (gamePingTai.ToLower() == "tgp")
+            switch (PathCommon.GamePlatform)
             {
-                DoNotStarveTogetherDirPath = DocumentDirPath + @"\Klei\DoNotStarveTogetherRail";
-
+                case "WeGame":
+                    DoNotStarveTogetherDirPath = PathCommon.DocumentDirPath + @"\Klei\DoNotStarveTogetherRail";
+                    break;
+                case "Steam":
+                    DoNotStarveTogetherDirPath = PathCommon.DocumentDirPath + @"\Klei\DoNotStarveTogether";
+                    break;
             }
-            if (gamePingTai.ToLower() == "youxia" || gamePingTai.ToLower() == "steam")
-            {
-                DoNotStarveTogetherDirPath = DocumentDirPath + @"\Klei\DoNotStarveTogether";
-            }
-            // 客户端服务器路径
-            ClientFilePath = JsonHelper.ReadClientPath(gamePingTai);
-            ServerFilePath = JsonHelper.ReadServerPath(gamePingTai);
         }
     }
 }

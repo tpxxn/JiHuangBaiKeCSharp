@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,14 +18,14 @@ namespace 饥荒百科全书CSharp.MyUserControl.DedicatedServer
 {
     public class DediComboBox : ComboBox
     {
-        static DediComboBox()
+        public DediComboBox()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(DediComboBox), new FrameworkPropertyMetadata(typeof(DediComboBox)));
+            //DefaultStyleKeyProperty.OverrideMetadata(typeof(DediComboBox), new FrameworkPropertyMetadata(typeof(DediComboBox)));
         }
 
         public DediImageButton LeftButton;
         public DediImageButton RightButton;
-
+         
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();

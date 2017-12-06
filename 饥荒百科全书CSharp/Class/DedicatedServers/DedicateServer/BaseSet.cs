@@ -24,24 +24,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         private readonly UTF8Encoding _utf8NoBom = new UTF8Encoding(false);
 
         private bool _isFileToProperty;
-        private List<string> _gameStyle;
-        private string _gameStyleText;
-        private string _houseName;
-        private string _describe;
-        private List<string> _gameMode;
-        private string _gameModeText;
-        private int _maxPlayers;
-        private string _secret;
-        private string _isCave;
-        private string _isConsole;
-        private string _isPause;
-        private string _isPvp;
-        private string _serverMode;
         private readonly string _clusterIniFilePath;
 
         /// <summary>
         /// 房间名称
         /// </summary>
+        private string _houseName;
+
         public string HouseName
         {
             get => _houseName;
@@ -56,6 +45,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 描述
         /// </summary>
+        private string _describe;
+
         public string Describe
         {
             get => _describe;
@@ -71,6 +62,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 人数限制
         /// </summary>
+        private int _maxPlayers;
+
         public int MaxPlayers
         {
             get => _maxPlayers;
@@ -85,6 +78,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 密码
         /// </summary>
+        private string _secret;
+
         public string Secret
         {
             get => _secret;
@@ -99,6 +94,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 是否开启洞穴
         /// </summary>
+        private string _isCave;
+
         public string IsCave
         {
             get => _isCave;
@@ -113,6 +110,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 是否开启控制台
         /// </summary>
+        private string _isConsole;
+
         public string IsConsole
         {
             get => _isConsole;
@@ -127,6 +126,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 是否无人时暂停
         /// </summary>
+        private string _isPause;
+
         public string IsPause
         {
             get => _isPause;
@@ -141,6 +142,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 是否开启PVP
         /// </summary>
+        private string _isPvp;
+
         public string IsPvp
         {
             get => _isPvp;
@@ -155,6 +158,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 【当前显示的】游戏风格
         /// </summary>
+        private string _gameStyleText;
+
         public string GameStyleText
         {
             get => _gameStyleText;
@@ -169,6 +174,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 【当前显示的】游戏模式
         /// </summary>
+        private string _gameModeText;
+
         public string GameModeText
         {
             get => _gameModeText;
@@ -183,6 +190,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 游戏模式
         /// </summary>
+        private List<string> _gameMode;
+
         public List<string> GameMode
         {
             get => _gameMode;
@@ -196,6 +205,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// <summary>
         /// 游戏风格
         /// </summary>
+        private List<string> _gameStyle;
+
         public List<string> GameStyle
         {
             get => _gameStyle;
@@ -205,6 +216,8 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                 //NotifyPropertyChange("GameStyle");
             }
         }
+
+        private string _serverMode;
 
         public string ServerMode
         {
@@ -237,7 +250,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             _gameModeText = "无尽";
             //NotifyPropertyChange("GameMode");
 
-
             // 其他先全部赋值，防止为空
             //houseName = "qq群：351765204";
             //describe = "qq群：351765204";
@@ -247,7 +259,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             //isConsole = "是";
             //isPause = "是";
             //isPVP = "否";
-
 
             if (File.Exists(clusterIniFilePath))
             {
@@ -270,7 +281,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         /// </summary>
         private void FileToProperty(string clusterIniPath)
         {
-
             // 改变记号（这个记号可能以后保存的时候会有用）
             _isFileToProperty = true;
 

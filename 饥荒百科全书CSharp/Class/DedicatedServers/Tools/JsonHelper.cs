@@ -14,7 +14,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
     {
         #region 读写当前游戏平台
         /// <summary>
-        /// 读取当前游戏版本[tgp,steam] 
+        /// 读取当前游戏版本[WeGame,Steam] 
         /// </summary>
         public static string ReadGamePlatform()
         {
@@ -23,7 +23,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         }
 
         /// <summary>
-        /// 保存当前游戏平台[tgp,steam]
+        /// 保存当前游戏平台[WeGame,Steam]
         /// </summary>
         public static void WriteGamePlatform(string platform)
         {
@@ -36,33 +36,33 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 读取客户端路径
         /// </summary>
-        public static string ReadClientPath(string pingtai)
+        public static string ReadClientPath(string platform)
         {
-            return RegeditRw.RegReadString(pingtai + "_client_path");
+            return RegeditRw.RegReadString(platform + "_client_path");
         }
 
         /// <summary>
         /// 设置客户端路径
         /// </summary>
-        public static void WriteClientPath(string clientPath, String pingtai)
+        public static void WriteClientPath(string clientPath, string platform)
         {
-            RegeditRw.RegWrite(pingtai + "_client_path", clientPath);
+            RegeditRw.RegWrite(platform + "_client_path", clientPath);
         }
 
         /// <summary>
         /// 读取服务端路径
         /// </summary>
-        public static string ReadServerPath(string pingtai)
+        public static string ReadServerPath(string platform)
         {
-            return RegeditRw.RegReadString(pingtai + "_Server_path");
+            return RegeditRw.RegReadString(platform + "_Server_path");
         }
 
         /// <summary>
         /// 设置服务端路径
         /// </summary>
-        public static void WriteServerPath(string serverPath, string pingtai)
+        public static void WriteServerPath(string serverPath, string platform)
         {
-            RegeditRw.RegWrite(pingtai + "_Server_path", serverPath);
+            RegeditRw.RegWrite(platform + "_Server_path", serverPath);
         }
         #endregion
 

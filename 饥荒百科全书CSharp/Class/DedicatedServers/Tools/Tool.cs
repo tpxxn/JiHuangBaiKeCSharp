@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
 {
-    class Tool
+    internal class Tool
     {
 
 
@@ -22,9 +22,9 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
             var utf8Encoding = new UTF8Encoding(false);
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            var sStream = assembly.GetManifestResourceStream("饥荒百科全书CSharp." + path);
-            var sr = new StreamReader(sStream, Encoding.UTF8);
-            return sr.ReadToEnd();
+            var stream = assembly.GetManifestResourceStream(Global.ProjectName + "." + path);
+            var streamReader = new StreamReader(stream, Encoding.UTF8);
+            return streamReader.ReadToEnd();
         }
         #endregion
 

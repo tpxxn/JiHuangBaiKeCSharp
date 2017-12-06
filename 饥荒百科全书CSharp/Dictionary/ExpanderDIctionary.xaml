@@ -231,19 +231,19 @@
                 <ControlTemplate TargetType="{x:Type Expander}">
                     <ControlTemplate.Resources>
                         <Storyboard x:Key="ExpandSiteHide">
-                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="ExpandSite">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransformWeGame.(TransformGroup.ChildrenWeGame[0].(ScaleTransform.ScaleYWeGame" Storyboard.TargetName="ExpandSite">
                                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ExpandSite">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityWeGame" Storyboard.TargetName="ExpandSite">
                                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                         <Storyboard x:Key="ExpandSiteShow">
-                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="ExpandSite">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransformWeGame.(TransformGroup.ChildrenWeGame[0].(ScaleTransform.ScaleYWeGame" Storyboard.TargetName="ExpandSite">
                                 <EasingDoubleKeyFrame KeyTime="0" Value="0" />
                                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ExpandSite">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityWeGame" Storyboard.TargetName="ExpandSite">
                                 <EasingDoubleKeyFrame KeyTime="0" Value="0" />
                                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
                             </DoubleAnimationUsingKeyFrames>

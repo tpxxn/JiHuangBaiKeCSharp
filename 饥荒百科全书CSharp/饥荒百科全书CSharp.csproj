@@ -94,7 +94,7 @@
     <Compile Include="Class\DedicatedServers\DedicateServer\Leveldataoverride.cs" />
     <Compile Include="Class\DedicatedServers\DedicateServer\Mod.cs" />
     <Compile Include="Class\DedicatedServers\DedicateServer\Mods.cs" />
-    <Compile Include="Class\DedicatedServers\DedicateServer\ModXiJie.cs" />
+    <Compile Include="Class\DedicatedServers\DedicateServer\ModSetting.cs" />
     <Compile Include="Class\DedicatedServers\DedicateServer\Player.cs" />
     <Compile Include="Class\DedicatedServers\DedicateServer\Server.cs" />
     <Compile Include="Class\DedicatedServers\DedicateServer\ShowWorld.cs" />
@@ -479,13 +479,13 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Server模板\Caves\leveldataoverride.lua" />
-    <None Include="Server模板\Caves\modoverrides.lua" />
-    <None Include="Server模板\Caves\server.ini" />
-    <None Include="Server模板\cluster.ini" />
-    <None Include="Server模板\Master\leveldataoverride.lua" />
-    <None Include="Server模板\Master\modoverrides.lua" />
-    <None Include="Server模板\Master\server.ini" />
+    <EmbeddedResource Include="Server模板\Caves\leveldataoverride.lua" />
+    <EmbeddedResource Include="Server模板\Caves\modoverrides.lua" />
+    <EmbeddedResource Include="Server模板\Caves\server.ini" />
+    <EmbeddedResource Include="Server模板\cluster.ini" />
+    <EmbeddedResource Include="Server模板\Master\leveldataoverride.lua" />
+    <EmbeddedResource Include="Server模板\Master\modoverrides.lua" />
+    <EmbeddedResource Include="Server模板\Master\server.ini" />
     <None Include="VK值.xlsx" />
     <Resource Include="Resources\Cursor\Cursor_link.ani" />
     <Resource Include="Resources\Cursor\Cursor_workOrbusy.ani" />
@@ -782,9 +782,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\HamburgerMenu\HamburgerMenu_DedicatedServer_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\DedicatedServer\D_background.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\D_leftpanel.png" />

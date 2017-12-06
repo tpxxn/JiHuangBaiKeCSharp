@@ -229,8 +229,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             // 清空
             var configWorld = new Dictionary<string, string>();
             // 先读文件
-            var luaconfig = new LuaConfig();
-            var lt = luaconfig.ReadLua(_isCave ? _pathall.CaveConfigFilePath : _pathall.OverworldConfigFilePath, Encoding.UTF8, true);
+            var lt = LuaConfig.ReadLua(_isCave ? _pathall.CaveConfigFilePath : _pathall.OverworldConfigFilePath, Encoding.UTF8, true);
 
 
             // 初始化override世界配置
