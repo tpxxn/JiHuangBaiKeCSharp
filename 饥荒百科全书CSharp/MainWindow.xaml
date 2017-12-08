@@ -17,7 +17,7 @@
         WindowStartupLocation="CenterScreen" SizeChanged="MainWindow_SizeChanged" Loaded="MainWindow_Loaded" 
         Cursor="{StaticResource CursorPointer}" WindowStyle="None" 
         AllowsTransparency="True" MouseDoubleClick="MainWindow_MouseDoubleClick">
-
+    
     <Window.Resources>
         <DataTemplate x:Key="AutoSuggestBoxDataTemplate" DataType="class:SuggestBoxItem">
             <Button Click="SearchResultButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">

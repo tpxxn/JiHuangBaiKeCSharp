@@ -34,7 +34,7 @@
                         <Border.Background>
                             <ImageBrush ImageSource="/Resources/DedicatedServer/D_baseset_textbox.png"/>
                         </Border.Background>
-                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="3,0"/>
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">

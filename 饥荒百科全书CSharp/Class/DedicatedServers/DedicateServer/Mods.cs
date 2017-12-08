@@ -14,7 +14,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
     {
 
         #region 字段和属性
-        private UTF8Encoding _utf8NoBom = new UTF8Encoding(false);
+        private UTF8Encoding _utf8WithoutBom = new UTF8Encoding(false);
 
         /// <summary>
         /// Mod目录路径

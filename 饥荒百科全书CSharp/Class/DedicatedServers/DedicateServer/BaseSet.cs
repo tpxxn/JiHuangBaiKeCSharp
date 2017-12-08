@@ -21,7 +21,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
     {
         #region 字段和属性
 
-        private readonly UTF8Encoding _utf8NoBom = new UTF8Encoding(false);
+        private readonly UTF8Encoding _utf8WithoutBom = new UTF8Encoding(false);
 
         private bool _isFileToProperty;
         private readonly string _clusterIniFilePath;
@@ -287,7 +287,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             // 标记！：这里没有判断文件是否存在，在外面判断了，以后再看用不用修改
 
             //读取基本设置
-            var iniTool = new IniHelper(clusterIniPath, _utf8NoBom);
+            var iniTool = new IniHelper(clusterIniPath, _utf8WithoutBom);
 
             //读取游戏风格
             var yxFengge = iniTool.ReadValue("NETWORK", "cluster_intention");
@@ -350,48 +350,48 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             // 保存
             if (_isFileToProperty == false)
             {
-                var ini1 = new IniHelper(_clusterIniFilePath, _utf8NoBom);
+                var ini1 = new IniHelper(_clusterIniFilePath, _utf8WithoutBom);
 
                 switch (propertyName)
                 {
                     case "HouseName":
-                        ini1.Write("NETWORK", "cluster_name", HouseName, _utf8NoBom);
+                        ini1.Write("NETWORK", "cluster_name", HouseName, _utf8WithoutBom);
                         break;
                     case "Describe":
-                        ini1.Write("NETWORK", "cluster_description", Describe, _utf8NoBom);
+                        ini1.Write("NETWORK", "cluster_description", Describe, _utf8WithoutBom);
                         break;
                     case "MaxPlayers":
-                        ini1.Write("GAMEPLAY", "max_players", MaxPlayers.ToString(), _utf8NoBom);
+                        ini1.Write("GAMEPLAY", "max_players", MaxPlayers.ToString(), _utf8WithoutBom);
                         break;
                     case "Secret":
-                        ini1.Write("NETWORK", "cluster_password", Secret, _utf8NoBom);
+                        ini1.Write("NETWORK", "cluster_password", Secret, _utf8WithoutBom);
                         break;
                     case "IsCave":
-                        ini1.Write("SHARD", "shard_enabled", IsCave == "是" ? "true" : "false", _utf8NoBom);
+                        ini1.Write("SHARD", "shard_enabled", IsCave == "是" ? "true" : "false", _utf8WithoutBom);
                         break;
                     case "IsConsole":
-                        ini1.Write("MISC", "console_enabled", IsConsole == "是" ? "true" : "false", _utf8NoBom);
+                        ini1.Write("MISC", "console_enabled", IsConsole == "是" ? "true" : "false", _utf8WithoutBom);
                         break;
                     case "IsPause":
-                        ini1.Write("GAMEPLAY", "pause_when_empty", IsPause == "是" ? "true" : "false", _utf8NoBom);
+                        ini1.Write("GAMEPLAY", "pause_when_empty", IsPause == "是" ? "true" : "false", _utf8WithoutBom);
                         break;
                     case "IsPVP":
-                        ini1.Write("GAMEPLAY", "pvp", IsPvp == "是" ? "true" : "false", _utf8NoBom);
+                        ini1.Write("GAMEPLAY", "pvp", IsPvp == "是" ? "true" : "false", _utf8WithoutBom);
                         break;
                     case "GameStyleText":
-                        if (GameStyleText == "合作") { ini1.Write("NETWORK", "cluster_intention", "cooperative", _utf8NoBom); };
-                        if (GameStyleText == "交际") { ini1.Write("NETWORK", "cluster_intention", "social", _utf8NoBom); };
-                        if (GameStyleText == "竞争") { ini1.Write("NETWORK", "cluster_intention", "competitive", _utf8NoBom); };
-                        if (GameStyleText == "疯狂") { ini1.Write("NETWORK", "cluster_intention", "madness", _utf8NoBom); };
+                        if (GameStyleText == "合作") { ini1.Write("NETWORK", "cluster_intention", "cooperative", _utf8WithoutBom); };
+                        if (GameStyleText == "交际") { ini1.Write("NETWORK", "cluster_intention", "social", _utf8WithoutBom); };
+                        if (GameStyleText == "竞争") { ini1.Write("NETWORK", "cluster_intention", "competitive", _utf8WithoutBom); };
+                        if (GameStyleText == "疯狂") { ini1.Write("NETWORK", "cluster_intention", "madness", _utf8WithoutBom); };
                         break;
                     case "GameModeText":
-                        if (GameModeText == "无尽") { ini1.Write("GAMEPLAY", "game_mode", "endless", _utf8NoBom); };
-                        if (GameModeText == "生存") { ini1.Write("GAMEPLAY", "game_mode", "survival", _utf8NoBom); };
-                        if (GameModeText == "荒野") { ini1.Write("GAMEPLAY", "game_mode", "wilderness", _utf8NoBom); };
+                        if (GameModeText == "无尽") { ini1.Write("GAMEPLAY", "game_mode", "endless", _utf8WithoutBom); };
+                        if (GameModeText == "生存") { ini1.Write("GAMEPLAY", "game_mode", "survival", _utf8WithoutBom); };
+                        if (GameModeText == "荒野") { ini1.Write("GAMEPLAY", "game_mode", "wilderness", _utf8WithoutBom); };
                         break;
                     case "ServerMode":
-                        if (ServerMode == "离线") { ini1.Write("NETWORK", "offline_cluster", "true", _utf8NoBom); };
-                        if (ServerMode == "在线") { ini1.Write("NETWORK", "offline_cluster", "false", _utf8NoBom); };
+                        if (ServerMode == "离线") { ini1.Write("NETWORK", "offline_cluster", "true", _utf8WithoutBom); };
+                        if (ServerMode == "在线") { ini1.Write("NETWORK", "offline_cluster", "false", _utf8WithoutBom); };
                         break;
                 }
             }

@@ -12,6 +12,84 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
 {
     internal static class PathCommon
     {
+
+        #region 读写当前游戏平台、客户端、服务器路径、ClusterToken
+        /// <summary>
+        /// 读取当前游戏版本[WeGame,Steam] 
+        /// </summary>
+        public static string ReadGamePlatform()
+        {
+            var platform = RegeditRw.RegReadString("Platform");
+            return string.IsNullOrEmpty(platform) ? "Steam" : platform;
+        }
+
+        /// <summary>
+        /// 保存当前游戏平台[WeGame,Steam]
+        /// </summary>
+        public static void WriteGamePlatform(string platform)
+        {
+            RegeditRw.RegWrite("Platform", platform);
+        }
+
+        /// <summary>
+        /// 读取客户端路径
+        /// </summary>
+        public static string ReadClientPath(string platform)
+        {
+            return RegeditRw.RegReadString(platform + "_client_path");
+        }
+
+        /// <summary>
+        /// 设置客户端路径
+        /// </summary>
+        public static void WriteClientPath(string clientPath, string platform)
+        {
+            RegeditRw.RegWrite(platform + "_client_path", clientPath);
+        }
+
+        /// <summary>
+        /// 读取服务端路径
+        /// </summary>
+        public static string ReadServerPath(string platform)
+        {
+            return RegeditRw.RegReadString(platform + "_Server_path");
+        }
+
+        /// <summary>
+        /// 设置服务端路径
+        /// </summary>
+        public static void WriteServerPath(string serverPath, string platform)
+        {
+            RegeditRw.RegWrite(platform + "_Server_path", serverPath);
+        }
+
+        /// <summary>
+        /// 读取ClusterToken
+        /// </summary>
+        public static string ReadClusterTokenPath(string platform)
+        {
+            return RegeditRw.RegReadString(platform + "_ClusterToken");
+        }
+
+        /// <summary>
+        /// 设置ClusterToken
+        /// </summary>
+        public static void WriteClusterTokenPath(string clusterToken, string platform)
+        {
+            RegeditRw.RegWrite(platform + "_ClusterToken", clusterToken);
+        }
+        #endregion
+
+        /// <summary>
+        /// 我的文档路径
+        /// </summary>
+        public static string DocumentDirPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+        /// <summary>
+        /// 存档根目录
+        /// </summary>
+        public static string SaveRootDirPath { get; set; }
+
         /// <summary>
         /// 游戏平台
         /// </summary>
@@ -22,15 +100,19 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
             get => _gamePlatform;
             set
             {
-                JsonHelper.WriteGamePlatform(value);
+                WriteGamePlatform(value);
+                switch (value)
+                {
+                    case "WeGame":
+                        SaveRootDirPath = DocumentDirPath + @"\Klei\DoNotStarveTogetherRail";
+                        break;
+                    case "Steam":
+                        SaveRootDirPath = DocumentDirPath + @"\Klei\DoNotStarveTogether";
+                        break;
+                }
                 _gamePlatform = value;
             }
         }
-
-        /// <summary>
-        /// 我的文档路径
-        /// </summary>
-        public static string DocumentDirPath { get; set; }
 
         /// <summary>
         /// 当前路径
@@ -54,7 +136,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                     return;
                 }
                 _clientFilePath = value.Trim();
-                JsonHelper.WriteClientPath(_clientFilePath, JsonHelper.ReadGamePlatform());
+                WriteClientPath(_clientFilePath, ReadGamePlatform());
                 ClientModsDirPath = _clientFilePath.Substring(0, _clientFilePath.Length - 25) + "\\mods";
             }
         }
@@ -79,9 +161,30 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
                 if (value.Contains("dontstarve_dedicated_server_nullrenderer.exe"))
                 {
                     _serverFilePath = value.Trim();
-                    JsonHelper.WriteServerPath(_serverFilePath, JsonHelper.ReadGamePlatform());
+                    WriteServerPath(_serverFilePath, ReadGamePlatform());
                     ServerModsDirPath = _serverFilePath.Substring(0, _serverFilePath.Length - 49) + "\\mods";
                 }
+            }
+        }
+
+        /// <summary>
+        /// ClusterToken
+        /// </summary>
+        private static string _clusterToken;
+
+        public static string ClusterToken
+        {
+            get => _clusterToken;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    _clusterToken = null;
+                    //JsonHelper.WriteClientPath("", JsonHelper.ReadGamePlatform());
+                    return;
+                }
+                _clusterToken = value.Trim();
+                WriteClusterTokenPath(_clusterToken, ReadGamePlatform());
             }
         }
 
@@ -94,6 +197,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// 服务器mods路径
         /// </summary>
         public static string ServerModsDirPath { get; set; }
+
 
     }
 
@@ -140,24 +244,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// </summary>
         public string ModConfigCaveFilePath { get; set; }
 
-        /// <summary>
-        /// DoNotStarveTogether
-        /// </summary>
-        private string _doNotStarveTogetherDirPath;
-
-        public string DoNotStarveTogetherDirPath
-        {
-            get => _doNotStarveTogetherDirPath;
-            set
-            {
-                _doNotStarveTogetherDirPath = value;
-                if (!string.IsNullOrEmpty(_doNotStarveTogetherDirPath))
-                {
-                    ServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + SaveSlot;
-                }
-            }
-        }
-
         private int _saveSlot;
         public int SaveSlot
         {
@@ -165,7 +251,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
             set
             {
                 _saveSlot = value;
-                ServerDirPath = _doNotStarveTogetherDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + value;
+                ServerDirPath = PathCommon.SaveRootDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + value;
             }
         }
 
@@ -186,17 +272,9 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <param name="saveSlot">第几个存档槽,从0开始</param>
         public void SetAllPath(string gamePlatform, int saveSlot = 0)
         {
-            // GamePlatform = gamePlatform;
-            // SaveSlot = saveSlot;
-            // DoNotStarveTogether
-            switch (PathCommon.GamePlatform)
+            if (!string.IsNullOrEmpty(PathCommon.SaveRootDirPath))
             {
-                case "WeGame":
-                    DoNotStarveTogetherDirPath = PathCommon.DocumentDirPath + @"\Klei\DoNotStarveTogetherRail";
-                    break;
-                case "Steam":
-                    DoNotStarveTogetherDirPath = PathCommon.DocumentDirPath + @"\Klei\DoNotStarveTogether";
-                    break;
+                ServerDirPath = PathCommon.SaveRootDirPath + @"\Server_" + PathCommon.GamePlatform + "_" + SaveSlot;
             }
         }
     }
