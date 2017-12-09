@@ -8,11 +8,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.JsonDeserialize
         public string Chinese { get; set; }
     }
 
-    public class Hanhua
+    public class Hanization
     {
         public List<Detail> Details { get; set; }
 
-        public Hanhua()
+        public Hanization()
         {
             Details = new List<Detail>();
         }
@@ -64,12 +64,12 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.JsonDeserialize
         }
     }
 
-    public class Fenlei
+    public class Classification
     {
         public Master2 Master { get; set; }
         public Cave Cave { get; set; }
 
-        public Fenlei()
+        public Classification()
         {
             Master = new Master2();
             Cave = new Cave();
@@ -78,17 +78,17 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.JsonDeserialize
 
     public class Configuration
     {
-        public Hanhua Hanhua { get; set; }
+        public Hanization Hanization { get; set; }
         public Master Master { get; set; }
         public Caves Caves { get; set; }
-        public Fenlei Fenlei { get; set; }
+        public Classification Classification { get; set; }
 
         public Configuration()
         {
-            Hanhua = new Hanhua();
+            Hanization = new Hanization();
             Master = new Master();
             Caves = new Caves();
-            Fenlei = new Fenlei();
+            Classification = new Classification();
         }
     }
 

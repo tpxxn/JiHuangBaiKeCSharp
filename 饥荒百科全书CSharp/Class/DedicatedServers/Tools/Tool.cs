@@ -18,7 +18,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         public static string ReadResources(string path)
         {
             var utf8Encoding = new UTF8Encoding(false);
-
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var stream = assembly.GetManifestResourceStream(Global.ProjectName + "." + path);
             var streamReader = new StreamReader(stream, Encoding.UTF8);

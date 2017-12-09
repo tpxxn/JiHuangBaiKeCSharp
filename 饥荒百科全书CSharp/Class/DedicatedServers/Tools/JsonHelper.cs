@@ -17,11 +17,11 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 读取汉化
         /// </summary>
-        public static Dictionary<string, string> ReadHanhua()
+        public static Dictionary<string, string> ReadHanization()
         {
             var serverConfig = JsonConvert.DeserializeObject<ServerConfigRootObject>(StringProcess.GetJsonStringDedicatedServer("ServerConfig.json"));
             var dictionary = new Dictionary<string, string>();
-            foreach (var detail in serverConfig.Configuration.Hanhua.Details)
+            foreach (var detail in serverConfig.Configuration.Hanization.Details)
             {
                 dictionary[detail.English] = detail.Chinese;
             }
@@ -34,7 +34,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// 读取世界选项,返回 x=xx,xx,xx
         /// </summary>
         /// <param name="isCave"></param>
-        /// <returns></returns>
+        /// <returns>x=xx,xx,xx</returns>
         public static List<string> ReadWorldSelect(bool isCave)
         {
             var serverConfig = JsonConvert.DeserializeObject<ServerConfigRootObject>(StringProcess.GetJsonStringDedicatedServer("ServerConfig.json"));
@@ -50,13 +50,13 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
         /// <summary>
         /// 读取世界分类,Fenlei="foods","animals","world","monsters","resources"
         /// </summary>
-        public static Dictionary<string, string> ReadWorldFenLei(bool isCave)
+        public static Dictionary<string, string> ReadWorldClassification(bool isCave)
         {
             var serverConfig = JsonConvert.DeserializeObject<ServerConfigRootObject>(StringProcess.GetJsonStringDedicatedServer("ServerConfig.json"));
             var dictionary = new Dictionary<string, string>();
             if (!isCave)
             {
-                foreach (var detail in serverConfig.Configuration.Fenlei.Master.Details)
+                foreach (var detail in serverConfig.Configuration.Classification.Master.Details)
                 {
                     var values = detail.Value.Split(',');
                     foreach (var value in values)
@@ -67,7 +67,7 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.Tools
             }
             else
             {
-                foreach (var detail in serverConfig.Configuration.Fenlei.Cave.Details)
+                foreach (var detail in serverConfig.Configuration.Classification.Cave.Details)
                 {
                     var values = detail.Value.Split(',');
                     foreach (var value in values)

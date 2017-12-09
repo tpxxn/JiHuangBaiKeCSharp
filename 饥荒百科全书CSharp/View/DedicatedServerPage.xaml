@@ -305,28 +305,28 @@
                             <StackPanel HorizontalAlignment="Center">
                                 <Label Content="地上世界" Margin="0,10,0,10" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
                                 <WrapPanel x:Name="DediOverWorldWorld" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                                <WrapPanel x:Name="DediOverWorldResources" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <Label Content="食物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                 <WrapPanel x:Name="DediOverWolrdFoods" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <Label Content="动物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                 <WrapPanel x:Name="DediOverWorldAnimals" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <Label Content="怪物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                 <WrapPanel x:Name="DediOverWorldMonsters" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                                <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
-                                <WrapPanel x:Name="DediOverWorldResources" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                             </StackPanel>
                         </ScrollViewer>
                         <ScrollViewer Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Grid.Row="1" Grid.Column="1"  >
                             <StackPanel HorizontalAlignment="Center">
                                 <Label Content="地下世界" Margin="0,10,0,10" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
                                 <WrapPanel x:Name="DediCavesWorld" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                                <WrapPanel x:Name="DediCavesResources" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <Label Content="食物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                 <WrapPanel x:Name="DediCavesFoods" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <Label Content="动物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                 <WrapPanel x:Name="DediCavesAnimals" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <Label Content="怪物" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
                                 <WrapPanel x:Name="DediCavesMonsters" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                                <Label Content="资源" Margin="0,10,0,10"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
-                                <WrapPanel x:Name="DediCavesResources" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                             </StackPanel>
                         </ScrollViewer>
                     </Grid>

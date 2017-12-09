@@ -41,7 +41,7 @@ namespace 饥荒百科全书CSharp.View
     {
         #region 字段、属性
         private readonly UTF8Encoding _utf8WithoutBom = new UTF8Encoding(false); // 编码
-        private Dictionary<string, string> _hanhua;  // 汉化
+        private Dictionary<string, string> _Hanization;  // 汉化
         private PathAll _pathAll; // 路径
         private BaseSet _baseSet; // 基本设置
         private Leveldataoverride _overWorld; // 地上世界
@@ -51,6 +51,7 @@ namespace 饥荒百科全书CSharp.View
         public int SaveSlot { get; set; } // 存档槽
         #endregion
 
+        #region 构造事件及初始化
         /// <summary>
         /// 构造事件
         /// </summary>
@@ -101,6 +102,7 @@ namespace 饥荒百科全书CSharp.View
             // 显示通用设置面板
             DediButtomPanelVisibility("Setting");
         }
+        #endregion
 
         #region 主面板菜单
 
@@ -355,7 +357,7 @@ namespace 饥荒百科全书CSharp.View
             // 1.检查存档Server是否存在 
             CheckServer();
             // 2.汉化
-            _hanhua = JsonHelper.ReadHanhua();
+            _Hanization = JsonHelper.ReadHanization();
             // 3.读取服务器mods文件夹下所有信息.mod多的话,读取时间也多
             //   此时的mod没有被current覆盖
             _mods = null;
@@ -609,6 +611,7 @@ namespace 饥荒百科全书CSharp.View
         #endregion
 
         #region "游戏风格"
+
         private void DediIntention_Click(object sender, RoutedEventArgs e)
         {
             DediButtomPanelVisibilityInitialize();
@@ -784,22 +787,25 @@ namespace 饥荒百科全书CSharp.View
             DediOverWorldMonsters.Children.Clear();
             DediOverWorldResources.Children.Clear();
             // 地上 分类
-
-            var overWorldFenLei = JsonHelper.ReadWorldFenLei(false);
-
+            var worldClassification = JsonHelper.ReadWorldClassification(false);
             var foods = new Dictionary<string, ShowWorld>();
             var animals = new Dictionary<string, ShowWorld>();
             var monsters = new Dictionary<string, ShowWorld>();
             var resources = new Dictionary<string, ShowWorld>();
             var world = new Dictionary<string, ShowWorld>();
-
             #region 地上分类方法
-            foreach (var item in _overWorld.ShowWorldDic)
+            foreach (var item in _overWorld.FinalWorldDictionary)
             {
-                if (overWorldFenLei.ContainsKey(item.Key))
+                if (worldClassification.ContainsKey(item.Key))
                 {
-                    switch (overWorldFenLei[item.Key])
+                    switch (worldClassification[item.Key])
                     {
+                        case "world":
+                            world[item.Key] = item.Value;
+                            break;
+                        case "resources":
+                            resources[item.Key] = item.Value;
+                            break;
                         case "foods":
                             foods[item.Key] = item.Value;
                             break;
@@ -809,112 +815,100 @@ namespace 饥荒百科全书CSharp.View
                         case "monsters":
                             monsters[item.Key] = item.Value;
                             break;
-                        case "resources":
-                            resources[item.Key] = item.Value;
-                            break;
-                        case "world":
-                            world[item.Key] = item.Value;
-                            break;
                     }
                 }
                 else
                 {
                     world[item.Key] = item.Value;
                 }
-
             }
             #endregion
-
             #region "显示" 地上
-            //  
             foreach (var item in world)
             {
                 if (item.Value.ToolTip == "roads" || item.Value.ToolTip == "layout_mode" || item.Value.ToolTip == "wormhole_prefab")
                 {
                     continue;
                 }
-
-                var di = new DediComboBoxWithImage()
+                var comboBoxWithImage = new DediComboBoxWithImage()
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
 
                 };
-                di.SelectionChanged += DiOverWorld_SelectionChanged;
-                DediOverWorldWorld.Children.Add(di);
-
+                comboBoxWithImage.SelectionChanged += DiOverWorld_SelectionChanged;
+                DediOverWorldWorld.Children.Add(comboBoxWithImage);
             }
             foreach (var item in foods)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiOverWorld_SelectionChanged;
-                DediOverWolrdFoods.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiOverWorld_SelectionChanged;
+                DediOverWolrdFoods.Children.Add(comboBoxWithImage);
 
             }
             foreach (var item in animals)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiOverWorld_SelectionChanged;
-                DediOverWorldAnimals.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiOverWorld_SelectionChanged;
+                DediOverWorldAnimals.Children.Add(comboBoxWithImage);
 
             }
             foreach (var item in monsters)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiOverWorld_SelectionChanged;
-                DediOverWorldMonsters.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiOverWorld_SelectionChanged;
+                DediOverWorldMonsters.Children.Add(comboBoxWithImage);
 
             }
             foreach (var item in resources)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiOverWorld_SelectionChanged;
-                DediOverWorldResources.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiOverWorld_SelectionChanged;
+                DediOverWorldResources.Children.Add(comboBoxWithImage);
 
             }
             #endregion
-
         }
 
         /// <summary>
@@ -936,10 +930,10 @@ namespace 饥荒百科全书CSharp.View
             //}
 
             // 此时说明修改
-            if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == HanHua(_overWorld.ShowWorldDic[dedi.Tag.ToString()].WorldconfigList[dedi.SelectedIndex]))
+            if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == Hanization(_overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex]))
             {
-                _overWorld.ShowWorldDic[dedi.Tag.ToString()].Worldconfig = _overWorld.ShowWorldDic[dedi.Tag.ToString()].WorldconfigList[dedi.SelectedIndex];
-                Debug.WriteLine(dedi.Tag + "选项变为:" + _overWorld.ShowWorldDic[dedi.Tag.ToString()].Worldconfig);
+                _overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig = _overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex];
+                Debug.WriteLine(dedi.Tag + "选项变为:" + _overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig);
 
                 // 保存,这样保存有点卡,换为每次点击radioButton或创建世界时
                 //OverWorld.SaveWorld();
@@ -960,23 +954,25 @@ namespace 饥荒百科全书CSharp.View
             DediCavesMonsters.Children.Clear();
             DediCavesResources.Children.Clear();
             // 地下 分类
-
-            var fenleil = JsonHelper.ReadWorldFenLei(true);
-
+            var worldClassification = JsonHelper.ReadWorldClassification(true);
             var foods = new Dictionary<string, ShowWorld>();
             var animals = new Dictionary<string, ShowWorld>();
             var monsters = new Dictionary<string, ShowWorld>();
             var resources = new Dictionary<string, ShowWorld>();
             var world = new Dictionary<string, ShowWorld>();
-
-
             #region  地下分类方法
-            foreach (var item in _caves.ShowWorldDic)
+            foreach (var item in _caves.FinalWorldDictionary)
             {
-                if (fenleil.ContainsKey(item.Key))
+                if (worldClassification.ContainsKey(item.Key))
                 {
-                    switch (fenleil[item.Key])
+                    switch (worldClassification[item.Key])
                     {
+                        case "world":
+                            world[item.Key] = item.Value;
+                            break;
+                        case "resources":
+                            resources[item.Key] = item.Value;
+                            break;
                         case "foods":
                             foods[item.Key] = item.Value;
                             break;
@@ -986,21 +982,13 @@ namespace 饥荒百科全书CSharp.View
                         case "monsters":
                             monsters[item.Key] = item.Value;
                             break;
-                        case "resources":
-                            resources[item.Key] = item.Value;
-                            break;
-                        case "world":
-                            world[item.Key] = item.Value;
-                            break;
                     }
                 }
                 else
                 {
                     world[item.Key] = item.Value;
                 }
-
             }
-
             #endregion
 
             #region "显示" 地下
@@ -1012,87 +1000,85 @@ namespace 饥荒百科全书CSharp.View
                     continue;
                 }
 
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiCaves_SelectionChanged;
-                DediCavesWorld.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiCaves_SelectionChanged;
+                DediCavesWorld.Children.Add(comboBoxWithImage);
 
             }
             foreach (var item in foods)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiCaves_SelectionChanged;
-                DediCavesFoods.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiCaves_SelectionChanged;
+                DediCavesFoods.Children.Add(comboBoxWithImage);
 
             }
             foreach (var item in animals)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiCaves_SelectionChanged;
-                DediCavesAnimals.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiCaves_SelectionChanged;
+                DediCavesAnimals.Children.Add(comboBoxWithImage);
 
             }
             foreach (var item in monsters)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiCaves_SelectionChanged;
-                DediCavesMonsters.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiCaves_SelectionChanged;
+                DediCavesMonsters.Children.Add(comboBoxWithImage);
 
             }
             foreach (var item in resources)
             {
-                var di = new DediComboBoxWithImage
+                var comboBoxWithImage = new DediComboBoxWithImage
                 {
-                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicPath, UriKind.Relative)),
-                    ItemsSource = HanHua(item.Value.WorldconfigList),
-                    SelectedValue = HanHua(item.Value.Worldconfig),
-                    ImageToolTip = HanHua(item.Value.ToolTip),
+                    ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
+                    ItemsSource = Hanization(item.Value.WorldConfigList),
+                    SelectedValue = Hanization(item.Value.WorldConfig),
+                    ImageToolTip = Hanization(item.Value.ToolTip),
                     Tag = item.Key,
                     Width = 200,
                     Height = 60
                 };
-                di.SelectionChanged += DiCaves_SelectionChanged;
-                DediCavesResources.Children.Add(di);
+                comboBoxWithImage.SelectionChanged += DiCaves_SelectionChanged;
+                DediCavesResources.Children.Add(comboBoxWithImage);
 
             }
             #endregion
-
-
         }
 
         /// <summary>
@@ -1104,10 +1090,10 @@ namespace 饥荒百科全书CSharp.View
             var dedi = (DediComboBoxWithImage)sender;
 
             // 此时说明修改
-            if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == HanHua(_caves.ShowWorldDic[dedi.Tag.ToString()].WorldconfigList[dedi.SelectedIndex]))
+            if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == Hanization(_caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex]))
             {
-                _caves.ShowWorldDic[dedi.Tag.ToString()].Worldconfig = _caves.ShowWorldDic[dedi.Tag.ToString()].WorldconfigList[dedi.SelectedIndex];
-                Debug.WriteLine(dedi.Tag + "选项变为:" + _caves.ShowWorldDic[dedi.Tag.ToString()].Worldconfig);
+                _caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig = _caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex];
+                Debug.WriteLine(dedi.Tag + "选项变为:" + _caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig);
 
                 // 保存,这样保存有点卡,换为每次点击radioButton或创建世界时
                 //Caves.SaveWorld();
@@ -1545,9 +1531,9 @@ namespace 饥荒百科全书CSharp.View
         /// </summary>
         /// <param name="str">字符串str</param>
         /// <returns>汉化文本</returns>
-        private string HanHua(string str)
+        private string Hanization(string str)
         {
-            return _hanhua.ContainsKey(str) ? _hanhua[str] : str;
+            return _Hanization.ContainsKey(str) ? _Hanization[str] : str;
         }
 
         /// <summary>
@@ -1555,9 +1541,9 @@ namespace 饥荒百科全书CSharp.View
         /// </summary>
         /// <param name="str">字符串str</param>
         /// <returns>汉化文本(List)</returns>
-        private IEnumerable<string> HanHua(IEnumerable<string> str)
+        private IEnumerable<string> Hanization(IEnumerable<string> str)
         {
-            return str.Select(item => _hanhua.ContainsKey(item) ? _hanhua[item] : item).ToList();
+            return str.Select(item => _Hanization.ContainsKey(item) ? _Hanization[item] : item).ToList();
         }
 
         /// <summary>
