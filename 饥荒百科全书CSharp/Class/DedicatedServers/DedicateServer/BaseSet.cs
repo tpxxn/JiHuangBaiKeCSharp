@@ -58,6 +58,64 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             }
         }
 
+        /// <summary>
+        /// 游戏风格
+        /// </summary>
+        private List<string> _gameStyle;
+
+        public List<string> GameStyle
+        {
+            get => _gameStyle;
+            set
+            {
+                _gameStyle = value;
+                //NotifyPropertyChange("GameStyle");
+            }
+        }
+
+        private string _serverMode;
+
+        public string ServerMode
+        {
+            get => _serverMode;
+            set
+            {
+                _serverMode = value;
+                if (!_isFileToProperty) { SavePropertyToFile("ServerMode"); }
+            }
+        }
+
+        /// <summary>
+        /// 【当前显示的】游戏风格
+        /// </summary>
+        private string _gameStyleText;
+
+        public string GameStyleText
+        {
+            get => _gameStyleText;
+            set
+            {
+                _gameStyleText = value;
+                //NotifyPropertyChange("GameStyleText");
+                if (!_isFileToProperty) { SavePropertyToFile("GameStyleText"); }
+            }
+        }
+
+        /// <summary>
+        /// 是否开启PVP
+        /// </summary>
+        private string _isPvp;
+
+        public string IsPvp
+        {
+            get => _isPvp;
+            set
+            {
+                _isPvp = value;
+                //NotifyPropertyChange("IsPVP");
+                if (!_isFileToProperty) { SavePropertyToFile("IsPVP"); }
+            }
+        }
 
         /// <summary>
         /// 人数限制
@@ -88,86 +146,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                 _secret = value;
                 //NotifyPropertyChange("Secret");
                 if (!_isFileToProperty) { SavePropertyToFile("Secret"); }
-            }
-        }
-
-        /// <summary>
-        /// 是否开启洞穴
-        /// </summary>
-        private string _isCave;
-
-        public string IsCave
-        {
-            get => _isCave;
-            set
-            {
-                _isCave = value;
-                //NotifyPropertyChange("IsCave");
-                if (!_isFileToProperty) { SavePropertyToFile("IsCave"); }
-            }
-        }
-
-        /// <summary>
-        /// 是否开启控制台
-        /// </summary>
-        private string _isConsole;
-
-        public string IsConsole
-        {
-            get => _isConsole;
-            set
-            {
-                _isConsole = value;
-                //NotifyPropertyChange("IsConsole");
-                if (!_isFileToProperty) { SavePropertyToFile("IsConsole"); }
-            }
-        }
-
-        /// <summary>
-        /// 是否无人时暂停
-        /// </summary>
-        private string _isPause;
-
-        public string IsPause
-        {
-            get => _isPause;
-            set
-            {
-                _isPause = value;
-                //NotifyPropertyChange("IsPause");
-                if (!_isFileToProperty) { SavePropertyToFile("IsPause"); }
-            }
-        }
-
-        /// <summary>
-        /// 是否开启PVP
-        /// </summary>
-        private string _isPvp;
-
-        public string IsPvp
-        {
-            get => _isPvp;
-            set
-            {
-                _isPvp = value;
-                //NotifyPropertyChange("IsPVP");
-                if (!_isFileToProperty) { SavePropertyToFile("IsPVP"); }
-            }
-        }
-
-        /// <summary>
-        /// 【当前显示的】游戏风格
-        /// </summary>
-        private string _gameStyleText;
-
-        public string GameStyleText
-        {
-            get => _gameStyleText;
-            set
-            {
-                _gameStyleText = value;
-                //NotifyPropertyChange("GameStyleText");
-                if (!_isFileToProperty) { SavePropertyToFile("GameStyleText"); }
             }
         }
 
@@ -203,29 +181,50 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
         }
 
         /// <summary>
-        /// 游戏风格
+        /// 是否无人时暂停
         /// </summary>
-        private List<string> _gameStyle;
+        private string _isPause;
 
-        public List<string> GameStyle
+        public string IsPause
         {
-            get => _gameStyle;
+            get => _isPause;
             set
             {
-                _gameStyle = value;
-                //NotifyPropertyChange("GameStyle");
+                _isPause = value;
+                //NotifyPropertyChange("IsPause");
+                if (!_isFileToProperty) { SavePropertyToFile("IsPause"); }
             }
         }
 
-        private string _serverMode;
+        /// <summary>
+        /// 是否开启洞穴
+        /// </summary>
+        private string _isCave;
 
-        public string ServerMode
+        public string IsCave
         {
-            get => _serverMode;
+            get => _isCave;
             set
             {
-                _serverMode = value;
-                if (!_isFileToProperty) { SavePropertyToFile("ServerMode"); }
+                _isCave = value;
+                //NotifyPropertyChange("IsCave");
+                if (!_isFileToProperty) { SavePropertyToFile("IsCave"); }
+            }
+        }
+
+        /// <summary>
+        /// 是否开启控制台
+        /// </summary>
+        private string _isConsole;
+
+        public string IsConsole
+        {
+            get => _isConsole;
+            set
+            {
+                _isConsole = value;
+                //NotifyPropertyChange("IsConsole");
+                if (!_isFileToProperty) { SavePropertyToFile("IsConsole"); }
             }
         }
 
@@ -268,7 +267,6 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             }
             else
             {
-
                 Debug.WriteLine("cluster.ini文件不存在");
             }
 
@@ -299,45 +297,49 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
             //读取房间名称
             var fjName = iniTool.ReadValue("NETWORK", "cluster_name");
             HouseName = fjName;
+
             //读取描述
             var fjMiaoshu = iniTool.ReadValue("NETWORK", "cluster_description");
             Describe = fjMiaoshu;
+
             //读取游戏模式
             var yxMoshi = iniTool.ReadValue("GAMEPLAY", "game_mode");
             if (yxMoshi == "endless") { GameModeText = "无尽"; };
             if (yxMoshi == "survival") { GameModeText = "生存"; };
             if (yxMoshi == "wilderness") { GameModeText = "荒野"; };
+
+            //读取PVP[标记：这里没有变成小写]
+            var yxPvp = iniTool.ReadValue("GAMEPLAY", "pvp");
+            if (yxPvp == "true") { IsPvp = "是"; };
+            if (yxPvp == "false") { IsPvp = "否"; };
+
             //读取人数限制
             var yxRenshu = iniTool.ReadValue("GAMEPLAY", "max_players");
             MaxPlayers = int.Parse(yxRenshu);
+
             //读取密码
             var yxMima = iniTool.ReadValue("NETWORK", "cluster_password");
             Secret = yxMima;
 
-
-            //读取是否启用控制台[标记：这里没有变成小写]
-            var yxKongzhitai = iniTool.ReadValue("MISC", "console_enabled");
-            if (yxKongzhitai == "true") { IsConsole = "是"; };
-            if (yxKongzhitai == "false") { IsConsole = "否"; };
+            // 读取服务器模式 offline_cluster=true
+            var yxServerMode = iniTool.ReadValue("NETWORK", "offline_cluster");
+            if (yxServerMode == "true") { ServerMode = "离线"; };
+            if (yxServerMode == "false") { ServerMode = "在线"; };
 
             //读取无人时暂停[标记：这里没有变成小写]
             var yxZhanting = iniTool.ReadValue("GAMEPLAY", "pause_when_empty");
             if (yxZhanting == "true") { IsPause = "是"; };
             if (yxZhanting == "false") { IsPause = "否"; };
-            //读取PVP[标记：这里没有变成小写]
-            var yxPvp = iniTool.ReadValue("GAMEPLAY", "pvp");
-            if (yxPvp == "true") { IsPvp = "是"; };
-            if (yxPvp == "false") { IsPvp = "否"; };
 
             // 读取是否开启洞穴[标记：这里没有变成小写]
             var yxCave = iniTool.ReadValue("SHARD", "shard_enabled");
             if (yxCave == "true") { IsCave = "是"; };
             if (yxCave == "false") { IsCave = "否"; };
 
-            // 读取服务器模式 offline_cluster=true
-            var yxServerMode = iniTool.ReadValue("NETWORK", "offline_cluster");
-            if (yxServerMode == "true") { ServerMode = "离线"; };
-            if (yxServerMode == "false") { ServerMode = "在线"; };
+            //读取是否启用控制台[标记：这里没有变成小写]
+            var yxKongzhitai = iniTool.ReadValue("MISC", "console_enabled");
+            if (yxKongzhitai == "true") { IsConsole = "是"; };
+            if (yxKongzhitai == "false") { IsConsole = "否"; };
 
             _isFileToProperty = false;
         }
@@ -354,11 +356,25 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
 
                 switch (propertyName)
                 {
+                    case "GameStyleText":
+                        if (GameStyleText == "合作") { ini1.Write("NETWORK", "cluster_intention", "cooperative", _utf8WithoutBom); };
+                        if (GameStyleText == "交际") { ini1.Write("NETWORK", "cluster_intention", "social", _utf8WithoutBom); };
+                        if (GameStyleText == "竞争") { ini1.Write("NETWORK", "cluster_intention", "competitive", _utf8WithoutBom); };
+                        if (GameStyleText == "疯狂") { ini1.Write("NETWORK", "cluster_intention", "madness", _utf8WithoutBom); };
+                        break;
                     case "HouseName":
                         ini1.Write("NETWORK", "cluster_name", HouseName, _utf8WithoutBom);
                         break;
                     case "Describe":
                         ini1.Write("NETWORK", "cluster_description", Describe, _utf8WithoutBom);
+                        break;
+                    case "GameModeText":
+                        if (GameModeText == "无尽") { ini1.Write("GAMEPLAY", "game_mode", "endless", _utf8WithoutBom); };
+                        if (GameModeText == "生存") { ini1.Write("GAMEPLAY", "game_mode", "survival", _utf8WithoutBom); };
+                        if (GameModeText == "荒野") { ini1.Write("GAMEPLAY", "game_mode", "wilderness", _utf8WithoutBom); };
+                        break;
+                    case "IsPVP":
+                        ini1.Write("GAMEPLAY", "pvp", IsPvp == "是" ? "true" : "false", _utf8WithoutBom);
                         break;
                     case "MaxPlayers":
                         ini1.Write("GAMEPLAY", "max_players", MaxPlayers.ToString(), _utf8WithoutBom);
@@ -366,36 +382,21 @@ namespace 饥荒百科全书CSharp.Class.DedicatedServers.DedicateServer
                     case "Secret":
                         ini1.Write("NETWORK", "cluster_password", Secret, _utf8WithoutBom);
                         break;
+                    case "ServerMode":
+                        if (ServerMode == "离线") { ini1.Write("NETWORK", "offline_cluster", "true", _utf8WithoutBom); };
+                        if (ServerMode == "在线") { ini1.Write("NETWORK", "offline_cluster", "false", _utf8WithoutBom); };
+                        break;
+                    case "IsPause":
+                        ini1.Write("GAMEPLAY", "pause_when_empty", IsPause == "是" ? "true" : "false", _utf8WithoutBom);
+                        break;
                     case "IsCave":
                         ini1.Write("SHARD", "shard_enabled", IsCave == "是" ? "true" : "false", _utf8WithoutBom);
                         break;
                     case "IsConsole":
                         ini1.Write("MISC", "console_enabled", IsConsole == "是" ? "true" : "false", _utf8WithoutBom);
                         break;
-                    case "IsPause":
-                        ini1.Write("GAMEPLAY", "pause_when_empty", IsPause == "是" ? "true" : "false", _utf8WithoutBom);
-                        break;
-                    case "IsPVP":
-                        ini1.Write("GAMEPLAY", "pvp", IsPvp == "是" ? "true" : "false", _utf8WithoutBom);
-                        break;
-                    case "GameStyleText":
-                        if (GameStyleText == "合作") { ini1.Write("NETWORK", "cluster_intention", "cooperative", _utf8WithoutBom); };
-                        if (GameStyleText == "交际") { ini1.Write("NETWORK", "cluster_intention", "social", _utf8WithoutBom); };
-                        if (GameStyleText == "竞争") { ini1.Write("NETWORK", "cluster_intention", "competitive", _utf8WithoutBom); };
-                        if (GameStyleText == "疯狂") { ini1.Write("NETWORK", "cluster_intention", "madness", _utf8WithoutBom); };
-                        break;
-                    case "GameModeText":
-                        if (GameModeText == "无尽") { ini1.Write("GAMEPLAY", "game_mode", "endless", _utf8WithoutBom); };
-                        if (GameModeText == "生存") { ini1.Write("GAMEPLAY", "game_mode", "survival", _utf8WithoutBom); };
-                        if (GameModeText == "荒野") { ini1.Write("GAMEPLAY", "game_mode", "wilderness", _utf8WithoutBom); };
-                        break;
-                    case "ServerMode":
-                        if (ServerMode == "离线") { ini1.Write("NETWORK", "offline_cluster", "true", _utf8WithoutBom); };
-                        if (ServerMode == "在线") { ini1.Write("NETWORK", "offline_cluster", "false", _utf8WithoutBom); };
-                        break;
                 }
             }
-
         }
         #endregion
 

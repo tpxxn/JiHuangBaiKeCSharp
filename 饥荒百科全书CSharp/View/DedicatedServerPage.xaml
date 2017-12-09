@@ -73,7 +73,7 @@
                         <ColumnDefinition Width="12*"/>
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
-                    <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" >
+                    <ScrollViewer x:Name="DediSetting" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" VerticalAlignment="Stretch" VerticalContentAlignment="Top" d:IsHidden="True" >
                         <StackPanel>
                             <Grid x:Name="DediSettingGameVersion" Height="40">
                                 <Grid.Background>
@@ -134,7 +134,7 @@
                                     <Image Source="/饥荒百科全书CSharp;component/Resources/DedicatedServer/D_mp_btn_save.png"/>
                                 </Button>
                             </Grid>
-                            <TextBlock x:Name="CommonSettingSetOverTextBlock" Text="通用设置设定完毕，现在可以在左侧选择存档开启服务器" HorizontalAlignment="Center" Margin="0,10,0,0" Visibility="Collapsed" FontSize="14" FontWeight="Bold" Foreground="Green"/>
+                            <TextBlock x:Name="CommonSettingSetOverTextBlock" Text="通用设置设定完毕，现在可以在左侧选择存档开启服务器" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="14" FontWeight="Bold" Foreground="Green"/>
                         </StackPanel>
                     </ScrollViewer>
                     <Grid x:Name="DediIntention" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
@@ -178,7 +178,7 @@
                         </Button>
                         <TextBlock x:Name="DidiIntentionTextBlock" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Center"/>
                     </Grid>
-                    <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" d:IsHidden="True" >
+                    <ScrollViewer x:Name="DediBaseSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}" Margin="30,0" Focusable="False" >
                         <StackPanel>
                             <Grid x:Name="DediBaseSetIntention" Height="40">
                                 <Grid.Background>
@@ -231,7 +231,7 @@
                                 <Viewbox Margin="0,2">
                                     <StackPanel Orientation="Horizontal">
                                         <Label Content="PvP:" FontWeight="Bold" FontSize="16"/>
-                                        <dedicatedServer:DediComboBox x:Name="DediBaseSetPvpSelect" Text="{Binding IsPVP, Mode=TwoWay}" Height="35" Width="140"/>
+                                        <dedicatedServer:DediComboBox x:Name="DediBaseSetPvpSelect" Text="{Binding IsPvp, Mode=TwoWay}" Height="35" Width="140"/>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>

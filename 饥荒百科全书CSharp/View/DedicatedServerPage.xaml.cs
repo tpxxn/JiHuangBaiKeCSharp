@@ -307,9 +307,7 @@ namespace 饥荒百科全书CSharp.View
                 _mods.SaveListmodsToFile(_pathAll.ServerDirPath + @"\Master\modoverrides.lua", _utf8WithoutBom);
                 _mods.SaveListmodsToFile(_pathAll.ServerDirPath + @"\Caves\modoverrides.lua", _utf8WithoutBom);
             }
-            // 1.初始化服务器
-            InitServer();
-            // 1.5 创建世界
+            // 1.复制文件
             if (((RadioButton)sender).Content.ToString() == "创建世界")
             {
                 // 复制一份过去                  
@@ -326,15 +324,17 @@ namespace 饥荒百科全书CSharp.View
                 }
                 ((RadioButton)sender).Content = GetHouseName(SaveSlot);
             }
-            // 1.6 禁用
+            // 2.初始化服务器
+            InitServer();
+            // 3 禁用
             JinYong(false);
-            // 2.读取并设定基本设置
+            // 4.读取并设定基本设置
             SetBaseSet();
-            // 3. "地面世界设置"
+            // 5. "地面世界设置"
             SetOverWorldSet();
-            // 3. "洞穴世界设置"
+            // 5. "洞穴世界设置"
             SetCavesSet();
-            // 4.打开基本设置页面
+            // 6.打开基本设置页面
             TitleMenuBaseSet.IsChecked = true;
             TitleMenuBaseSet_Click(null, null);
         }
@@ -545,13 +545,6 @@ namespace 饥荒百科全书CSharp.View
                 PathCommon.WriteServerPath(fileName, PathCommon.GamePlatform);
                 // 检查通用设置
                 CheckCommonSetting(true);
-                //// 读取mods
-                //_mods = null;
-                //if (!string.IsNullOrEmpty(PathCommon.ServerModsDirPath))
-                //{
-                //    _mods = new Mods(PathCommon.ServerModsDirPath);
-                //}
-                //SetModSet();
             }
         }
 
@@ -578,16 +571,34 @@ namespace 饥荒百科全书CSharp.View
         }
 
         // 保存ClusterToken
-        // TODO 判断ClusterToken有效性
         private void DediSettingSaveCluster_Click(object sender, RoutedEventArgs e)
         {
             var clusterToken = DediSettingClusterTokenTextBox.Text.Trim();
             if (string.IsNullOrEmpty(clusterToken))
             {
-                MessageBox.Show("cluster没填写，不能保存");
+                MessageBox.Show("clusterToken没填写，不能保存");
             }
             else
             {
+                // 判断ClusterToken有效性
+                if (clusterToken.Length < 6)
+                {
+                    MessageBox.Show("clusterToken过短，不能保存");
+                    return;
+                }
+                var flag = clusterToken.Length != 32;
+                if (clusterToken.Substring(0, 6) == "pds-g^" && clusterToken.Length == 62)
+                {
+                    flag = false;
+
+                }
+                if (flag)
+                {
+                    if (MessageBox.Show("clusterToken格式不正确，确定依然要保存吗？", "出错了唉",
+                            MessageBoxButton.YesNo) == MessageBoxResult.No)
+                        return;
+                }
+                // 确定有效↓
                 PathCommon.ClusterToken = clusterToken;
                 PathCommon.WriteClusterTokenPath(clusterToken, PathCommon.ReadGamePlatform());
                 MessageBox.Show("保存完毕！");
@@ -735,7 +746,7 @@ namespace 饥荒百科全书CSharp.View
             _baseSet = new BaseSet(clusterIniFilePath);
 
             DediBaseSetGamemodeSelect.DataContext = _baseSet;
-            DediBaseSetPvpSelect.DataContext = _baseSet;// TODO Pvp属性无法读取
+            DediBaseSetPvpSelect.DataContext = _baseSet;
             DediBaseSetMaxPlayerSelect.DataContext = _baseSet;
             DediBaseOfflineSelect.DataContext = _baseSet;
             DediBaseSetHouseName.DataContext = _baseSet;
@@ -1567,6 +1578,10 @@ namespace 饥荒百科全书CSharp.View
             return houseName;
         }
 
+        /// <summary>
+        /// 检查通用设置
+        /// </summary>
+        /// <param name="onCommonSettingPanel">是否已经在通用设置面板</param>
         private void CheckCommonSetting(bool onCommonSettingPanel = false)
         {
             // 读取通用设置
@@ -1574,15 +1589,19 @@ namespace 饥荒百科全书CSharp.View
             if (string.IsNullOrEmpty(PathCommon.ClientFilePath) || string.IsNullOrEmpty(PathCommon.ServerFilePath) || string.IsNullOrEmpty(PathCommon.ClusterToken))
             {
                 if (onCommonSettingPanel == false)
-                    MessageBox.Show("请先设定好通用设置");
+                {
+                    CommonSettingSetOverTextBlock.Text = "请先设定好通用设置！";
+                    CommonSettingSetOverTextBlock.Foreground = new SolidColorBrush(Colors.Red);
+                }
                 JinYong(true);
                 SaveSlotScrollViewer.IsEnabled = false;
-                CommonSettingSetOverTextBlock.Visibility = Visibility.Collapsed;
                 DediButtomPanelVisibility("Setting");
             }
             else
             {
-                CommonSettingSetOverTextBlock.Visibility = Visibility.Visible;
+                SaveSlotScrollViewer.IsEnabled = true;
+                CommonSettingSetOverTextBlock.Foreground = new SolidColorBrush(Colors.Green);
+                CommonSettingSetOverTextBlock.Text = "通用设置设定完毕，现在可以在左侧选择存档开启服务器";
             }
         }
 
@@ -1605,8 +1624,6 @@ namespace 饥荒百科全书CSharp.View
             // 创建世界按钮
             CtrateWorldButton.IsEnabled = !isDisable;
         }
-
         #endregion
-
     }
 }
