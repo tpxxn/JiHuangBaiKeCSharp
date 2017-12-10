@@ -482,7 +482,7 @@ namespace 饥荒百科全书CSharp.View
             File.WriteAllText(path + @"\Server\Master\leveldataoverride.lua", Tool.ReadResources("Server模板.Master.leveldataoverride.lua"), _utf8WithoutBom);
             File.WriteAllText(path + @"\Server\Master\modoverrides.lua", Tool.ReadResources("Server模板.Master.modoverrides.lua"), _utf8WithoutBom);
             File.WriteAllText(path + @"\Server\Master\server.ini", Tool.ReadResources("Server模板.Master.server.ini"), _utf8WithoutBom);
-            // clusterToken
+            // ClusterToken
             File.WriteAllText(path + @"\Server\cluster_token.txt", !string.IsNullOrEmpty(RegeditRw.RegReadString("ClusterToken")) ? RegeditRw.RegReadString("ClusterToken") : "", _utf8WithoutBom);
         }
 
@@ -542,6 +542,12 @@ namespace 饥荒百科全书CSharp.View
                     MessageBox.Show("文件选择错误,请选择正确文件");
                     return;
                 }
+                // 判断是否选择了客户端目录下的的服务器程序
+                if (!fileName.Contains("Don't Starve Together Dedicated Server") && !fileName.Contains("饥荒联机版专用服务器"))
+                {
+                    if (MessageBox.Show("似乎选择了客户端目录的程序，请确认！如果确定没有问题仍然保存点击“是”(判断出错的情况一般只出现在WeGame版)！", "似乎选错了呢...", MessageBoxButton.YesNo) != MessageBoxResult.Yes)
+                        return;
+                }
                 PathCommon.ServerFilePath = fileName;
                 DediDirSelectTextBox.Text = fileName;
                 PathCommon.WriteServerPath(fileName, PathCommon.GamePlatform);
@@ -572,7 +578,9 @@ namespace 饥荒百科全书CSharp.View
             }
         }
 
-        // 保存ClusterToken
+        /// <summary>
+        /// 保存ClusterToken
+        /// </summary>
         private void DediSettingSaveCluster_Click(object sender, RoutedEventArgs e)
         {
             var clusterToken = DediSettingClusterTokenTextBox.Text.Trim();
@@ -912,29 +920,26 @@ namespace 饥荒百科全书CSharp.View
         }
 
         /// <summary>
-        /// 设置"地上世界"
+        /// 设置"地上世界"(测试 用)
         /// </summary>
         private void DiOverWorld_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //// 测试 用
             var dedi = (DediComboBoxWithImage)sender;
-            //List<string> s = new List<string>();
-            //s.Add("tag:" + Dedi.Tag.ToString());
-            //s.Add("e.source:" + e.Source.ToString());
-            //s.Add(e.AddedItems.Count.ToString());
-            //s.Add(e.RemovedItems.Count.ToString());
-            //s.Add(Dedi.SelectedIndex.ToString());
-            //foreach (var item in s)
-            //{
-            //    Debug.WriteLine(item);
-            //}
-
+            // List<string> s = new List<string>();
+            // s.Add("tag:" + Dedi.Tag.ToString());
+            // s.Add("e.source:" + e.Source.ToString());
+            // s.Add(e.AddedItems.Count.ToString());
+            // s.Add(e.RemovedItems.Count.ToString());
+            // s.Add(Dedi.SelectedIndex.ToString());
+            // foreach (var item in s)
+            // {
+            //     Debug.WriteLine(item);
+            // }
             // 此时说明修改
             if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == Hanization(_overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex]))
             {
                 _overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig = _overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex];
                 Debug.WriteLine(dedi.Tag + "选项变为:" + _overWorld.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig);
-
                 // 保存,这样保存有点卡,换为每次点击radioButton或创建世界时
                 //OverWorld.SaveWorld();
                 //Debug.WriteLine("保存地上世界");
@@ -990,7 +995,6 @@ namespace 饥荒百科全书CSharp.View
                 }
             }
             #endregion
-
             #region "显示" 地下
             // animals
             foreach (var item in world)
@@ -999,7 +1003,6 @@ namespace 饥荒百科全书CSharp.View
                 {
                     continue;
                 }
-
                 var comboBoxWithImage = new DediComboBoxWithImage
                 {
                     ImageSource = new BitmapImage(new Uri("/" + item.Value.PicturePath, UriKind.Relative)),
@@ -1012,7 +1015,6 @@ namespace 饥荒百科全书CSharp.View
                 };
                 comboBoxWithImage.SelectionChanged += DiCaves_SelectionChanged;
                 DediCavesWorld.Children.Add(comboBoxWithImage);
-
             }
             foreach (var item in foods)
             {
@@ -1082,19 +1084,16 @@ namespace 饥荒百科全书CSharp.View
         }
 
         /// <summary>
-        /// 设置"地下世界"
+        /// 设置"地下世界"(测试 用)
         /// </summary>
         private void DiCaves_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //// 测试 用
             var dedi = (DediComboBoxWithImage)sender;
-
             // 此时说明修改
             if (e.RemovedItems.Count != 0 && e.AddedItems[0].ToString() == Hanization(_caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex]))
             {
                 _caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig = _caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfigList[dedi.SelectedIndex];
                 Debug.WriteLine(dedi.Tag + "选项变为:" + _caves.FinalWorldDictionary[dedi.Tag.ToString()].WorldConfig);
-
                 // 保存,这样保存有点卡,换为每次点击radioButton或创建世界时
                 //Caves.SaveWorld();
                 //Debug.WriteLine("保存地上世界");
@@ -1140,7 +1139,7 @@ namespace 饥荒百科全书CSharp.View
                     {
                         continue;
                     }
-                    var dod = new DediModBox
+                    var dediModBox = new DediModBox
                     {
                         Width = 200,
                         Height = 70,
@@ -1155,12 +1154,12 @@ namespace 饥荒百科全书CSharp.View
                                 : null
                         }
                     };
-                    dod.UCCheckBox.IsChecked = _mods.ListMod[i].Enabled;
-                    dod.UCCheckBox.Checked += CheckBox_Checked;
-                    dod.UCCheckBox.Unchecked += CheckBox_Unchecked;
-                    dod.PreviewMouseLeftButtonDown += Dod_MouseLeftButtonDown;
-                    dod.UCEnableLabel.Content = _mods.ListMod[i].ModType;
-                    ModListStackPanel.Children.Add(dod);
+                    dediModBox.UCCheckBox.IsChecked = _mods.ListMod[i].Enabled;
+                    dediModBox.UCCheckBox.Checked += CheckBox_Checked;
+                    dediModBox.UCCheckBox.Unchecked += CheckBox_Unchecked;
+                    dediModBox.PreviewMouseLeftButtonDown += DediModBox_MouseLeftButtonDown;
+                    dediModBox.UCEnableLabel.Content = _mods.ListMod[i].ModType;
+                    ModListStackPanel.Children.Add(dediModBox);
                 }
             }
         }
@@ -1168,7 +1167,7 @@ namespace 饥荒百科全书CSharp.View
         /// <summary>
         /// 设置 "Mod" "MouseLeftButtonDown"
         /// </summary>
-        private void Dod_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void DediModBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // 左边显示
             var n = (int)((DediModBox)sender).UCCheckBox.Tag;
@@ -1211,13 +1210,13 @@ namespace 饥荒百科全书CSharp.View
                     };
                     var labelModXiJie = new Label
                     {
-                        Height = stackPanel.Height,
-                        Width = 180,
+                        VerticalAlignment = VerticalAlignment.Center,
+                        Width = 150,
                         FontWeight = FontWeights.Bold,
                         Content = string.IsNullOrEmpty(item.Value.Label) ? item.Value.Name : item.Value.Label
                     };
                     // dediComboBox
-                    var dod = new DediComboBox
+                    var dediComboBox = new DediComboBox
                     {
                         Height = stackPanel.Height,
                         Width = 150,
@@ -1225,15 +1224,15 @@ namespace 饥荒百科全书CSharp.View
                         Tag = n + "$" + item.Key
                     };
                     // 把当前选择mod的第n个,放到tag里
-                    foreach (var item1 in item.Value.Options)
+                    foreach (var option in item.Value.Options)
                     {
-                        dod.Items.Add(item1.Description);
+                        dediComboBox.Items.Add(option.Description);
                     }
-                    dod.SelectedValue = item.Value.CurrentDescription;
-                    dod.SelectionChanged += Dod_SelectionChanged;
+                    dediComboBox.SelectedValue = item.Value.CurrentDescription;
+                    dediComboBox.SelectionChanged += DediComboBox_SelectionChanged;
                     // 添加
                     stackPanel.Children.Add(labelModXiJie);
-                    stackPanel.Children.Add(dod);
+                    stackPanel.Children.Add(dediComboBox);
                     ModSettingStackPanel.Children.Add(stackPanel);
                 }
             }
@@ -1242,7 +1241,7 @@ namespace 饥荒百科全书CSharp.View
         /// <summary>
         /// 设置 "Mod" "SelectionChanged"
         /// </summary>
-        private void Dod_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void DediComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Debug.WriteLine(((DediComboBox)sender).Tag);
             var str = ((DediComboBox)sender).Tag.ToString().Split('$');
@@ -1274,8 +1273,6 @@ namespace 饥荒百科全书CSharp.View
             _mods.ListMod[(int)((CheckBox)sender).Tag].Enabled = true;
             //Debug.WriteLine(((CheckBox)sender).Tag.ToString());
         }
-
-
         #endregion
 
         #region 控制台面板

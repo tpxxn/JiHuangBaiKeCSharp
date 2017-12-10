@@ -12,7 +12,7 @@
         },
         {
           "English": "banana",
-          "Chinese": "香蕉"
+          "Chinese": "洞穴香蕉"
         },
         {
           "English": "berrybush",
@@ -24,7 +24,7 @@
         },
         {
           "English": "carrot",
-          "Chinese": "胡萝卜"
+          "Chinese": "萝卜"
         },
         {
           "English": "lichen",
@@ -44,27 +44,27 @@
         },
         {
           "English": "autumn",
-          "Chinese": "秋天"
+          "Chinese": "秋季"
         },
         {
           "English": "boons",
-          "Chinese": "彩蛋"
+          "Chinese": "失败的幸存者"
         },
         {
           "English": "branching",
-          "Chinese": "岔路地形"
+          "Chinese": "分支路"
         },
         {
           "English": "cavelight",
-          "Chinese": "洞穴光照"
+          "Chinese": "洞穴透光"
         },
         {
           "English": "day",
-          "Chinese": "昼夜长短"
+          "Chinese": "时间设置"
         },
         {
           "English": "earthquakes",
-          "Chinese": "地震频率"
+          "Chinese": "地震"
         },
         {
           "English": "frograin",
@@ -76,11 +76,11 @@
         },
         {
           "English": "loop",
-          "Chinese": "环状地形"
+          "Chinese": "环形路"
         },
         {
           "English": "regrowth",
-          "Chinese": "再生速度"
+          "Chinese": "世界再生"
         },
         {
           "English": "season_start",
@@ -88,27 +88,27 @@
         },
         {
           "English": "spring",
-          "Chinese": "春天"
+          "Chinese": "春季"
         },
         {
           "English": "start_location",
-          "Chinese": "初始环境"
+          "Chinese": "出生区域"
         },
         {
           "English": "summer",
-          "Chinese": "夏天"
+          "Chinese": "夏季"
         },
         {
           "English": "task_set",
-          "Chinese": "生物群落"
+          "Chinese": "生物群系"
         },
         {
           "English": "touchstone",
-          "Chinese": "复活台"
+          "Chinese": "复活石"
         },
         {
           "English": "weather",
-          "Chinese": "天气"
+          "Chinese": "降雨"
         },
         {
           "English": "wildfires",
@@ -116,11 +116,11 @@
         },
         {
           "English": "winter",
-          "Chinese": "冬天"
+          "Chinese": "冬季"
         },
         {
           "English": "world_size",
-          "Chinese": "地图大小"
+          "Chinese": "世界大小"
         },
         {
           "English": "animals",
@@ -128,23 +128,23 @@
         },
         {
           "English": "alternatehunt",
-          "Chinese": "足迹"
+          "Chinese": "狩猎惊喜"
         },
         {
           "English": "angrybees",
-          "Chinese": "杀人蜂巢穴"
+          "Chinese": "杀人蜂"
         },
         {
           "English": "beefalo",
-          "Chinese": "牛"
+          "Chinese": "皮弗娄牛"
         },
         {
           "English": "beefaloheat",
-          "Chinese": "红屁股牛"
+          "Chinese": "皮弗娄牛发情频率"
         },
         {
           "English": "bees",
-          "Chinese": "蜜蜂巢穴"
+          "Chinese": "蜜蜂"
         },
         {
           "English": "birds",
@@ -176,7 +176,7 @@
         },
         {
           "English": "hunt",
-          "Chinese": "大象"
+          "Chinese": "脚印"
         },
         {
           "English": "lightninggoat",
@@ -192,7 +192,7 @@
         },
         {
           "English": "penguins",
-          "Chinese": "企鹅"
+          "Chinese": "企鸥"
         },
         {
           "English": "perd",
@@ -212,15 +212,15 @@
         },
         {
           "English": "slurtles",
-          "Chinese": "蜗牛"
+          "Chinese": "龟壳蜗牛"
         },
         {
           "English": "slurper",
-          "Chinese": "啜食者"
+          "Chinese": "吞噬者"
         },
         {
           "English": "tallbirds",
-          "Chinese": "高脚鸟"
+          "Chinese": "高鸟"
         },
         {
           "English": "monsters",
@@ -232,19 +232,19 @@
         },
         {
           "English": "bearger",
-          "Chinese": "狂暴熊灌"
+          "Chinese": "熊獾"
         },
         {
           "English": "chess",
-          "Chinese": "齿轮马"
+          "Chinese": "发条生物"
         },
         {
           "English": "deciduousmonster",
-          "Chinese": "树精"
+          "Chinese": "毒桦树"
         },
         {
           "English": "deerclops",
-          "Chinese": "巨鹿"
+          "Chinese": "独眼巨鹿"
         },
         {
           "English": "dragonfly",
@@ -252,19 +252,19 @@
         },
         {
           "English": "fissure",
-          "Chinese": "裂缝"
+          "Chinese": "梦魇裂缝"
         },
         {
           "English": "goosemoose",
-          "Chinese": "魔角驼鸭"
+          "Chinese": "鹿角鹅"
         },
         {
           "English": "houndmound",
-          "Chinese": "猎犬丘"
+          "Chinese": "猎犬窝"
         },
         {
           "English": "hounds",
-          "Chinese": "猎狗"
+          "Chinese": "猎犬突袭"
         },
         {
           "English": "krampus",
@@ -272,7 +272,7 @@
         },
         {
           "English": "liefs",
-          "Chinese": "树人"
+          "Chinese": "树人守卫"
         },
         {
           "English": "lurepofflinets",
@@ -292,11 +292,11 @@
         },
         {
           "English": "walrus",
-          "Chinese": "海象巢穴"
+          "Chinese": "海象营地"
         },
         {
           "English": "worms",
-          "Chinese": "蠕虫"
+          "Chinese": "洞穴蠕虫"
         },
         {
           "English": "resources",
@@ -304,7 +304,7 @@
         },
         {
           "English": "fern",
-          "Chinese": "蕨类植物"
+          "Chinese": "洞穴蕨菜"
         },
         {
           "English": "flint",
@@ -312,27 +312,27 @@
         },
         {
           "English": "flower_cave",
-          "Chinese": "荧光花"
+          "Chinese": "灯笼花"
         },
         {
           "English": "flowers",
-          "Chinese": "花"
+          "Chinese": "花&恶魔花"
         },
         {
           "English": "grass",
-          "Chinese": "干草"
+          "Chinese": "草"
         },
         {
           "English": "marshbush",
-          "Chinese": "尖刺灌木"
+          "Chinese": "荆棘丛"
         },
         {
           "English": "meteorshowers",
-          "Chinese": "陨石"
+          "Chinese": "陨石降落频率"
         },
         {
           "English": "meteorspawner",
-          "Chinese": "陨石坑"
+          "Chinese": "陨石生成区域"
         },
         {
           "English": "mushtree",
@@ -348,7 +348,7 @@
         },
         {
           "English": "rock_ice",
-          "Chinese": "冰块"
+          "Chinese": "小型冰川"
         },
         {
           "English": "sapling",
@@ -356,7 +356,7 @@
         },
         {
           "English": "trees",
-          "Chinese": "树"
+          "Chinese": "树（所有种类）"
         },
         {
           "English": "tumbleweed",
@@ -460,7 +460,7 @@
         },
         {
           "English": "lureplants",
-          "Chinese": "食人花"
+          "Chinese": "诱饵草"
         },
         {
           "English": "ponds",
@@ -468,15 +468,15 @@
         },
         {
           "English": "tentacles",
-          "Chinese": "触手怪"
+          "Chinese": "触手"
         },
         {
           "English": "prefabswaps",
-          "Chinese": "资源变化"
+          "Chinese": "资源转换开始"
         },
         {
           "English": "prefabswaps_start",
-          "Chinese": "初始资源多样"
+          "Chinese": "开始资源种类"
         },
         {
           "English": "cave_ponds",
@@ -496,7 +496,7 @@
         },
         {
           "English": "classic",
-          "Chinese": "古典的"
+          "Chinese": "经典"
         },
         {
           "English": "highly random",
@@ -556,11 +556,11 @@
         },
         {
           "English": "specialevent",
-          "Chinese": "特殊事件"
+          "Chinese": "活动"
         },
         {
           "English": "petrification",
-          "Chinese": "石化树"
+          "Chinese": "森林石化"
         }
       ]
     },
