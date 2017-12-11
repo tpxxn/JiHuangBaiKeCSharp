@@ -333,17 +333,16 @@
                     <Grid x:Name="DediModSet" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="240"/>
-                            <ColumnDefinition Width="4*"/>
-                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <ScrollViewer Grid.Column="0" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
                             <StackPanel x:Name="ModListStackPanel"/>
                         </ScrollViewer>
                         <ScrollViewer Grid.Column="1" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
-                            <StackPanel  x:Name="ModSettingStackPanel" Orientation="Vertical"></StackPanel>
-                        </ScrollViewer>
-                        <ScrollViewer Grid.Column="2" Template="{StaticResource DediRightPanelScrollViewerControlTemplate}">
-                            <TextBlock x:Name="ModDescriptionStackPanel"  />
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock x:Name="ModDescriptionStackPanel"/>
+                                <StackPanel x:Name="ModSettingStackPanel" Orientation="Vertical"/>
+                            </StackPanel>
                         </ScrollViewer>
                     </Grid>
                     <Grid x:Name="DediConsole" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="1" d:IsHidden="True">
