@@ -172,7 +172,7 @@
 				"Ability": [
 					"吃地上的水果和蔬菜"
 				],
-				"Introduction": "鱼人通常能在沼泽发现，不同的是，它们不会攻击，遇到玩家会逃跑。定期从潮汐池中捞出热带鱼但是并不吃。",
+				"Introduction": "鱼人通常能在沼泽的鱼族废墟发现，它们会主动攻击靠近鱼族废墟的生物。经常可以发现它们和触手打起来，可以方便地获得触手尖刺等资源。",
 				"Console": "merm"
 			},
 			{
@@ -777,7 +777,7 @@
 				"Console": "butterfly"
 			},
 			{
-				"Picture": "A_mosquito",
+				"Picture": "A_mosquito_sw",
 				"Name": "毒蚊子",
 				"EnName": "Poison Mosquito",
 				"Health": 100,

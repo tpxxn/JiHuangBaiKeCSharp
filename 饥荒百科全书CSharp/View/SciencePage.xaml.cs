@@ -114,6 +114,21 @@ namespace 饥荒百科全书CSharp.View
             {
                 var science = itemsControlItem;
                 if (science == null || science.Picture != suggestBoxItemPicture) continue;
+                ScrollViewerRight.UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, ScrollViewerRight);
+                foreach (var button in resultList)
+                {
+                    var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
+                    var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
+                    if (imageSourceShort != science.Picture) continue;
+                    var scienceButton = button;
+                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var point = new Point(0, currentScrollPosition);
+                    var targetPosition = scienceButton.TransformToVisual(ScrollViewerRight).Transform(point);
+                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    break;
+                }
                 LeftFrame.NavigationService.Navigate(new ScienceDetail(), science);
                 break;
             }

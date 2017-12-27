@@ -15,7 +15,8 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\35176\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,9 +26,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>0.7.5.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -578,9 +578,9 @@
     <Resource Include="Resources\Cursor\Cursor_vert.cur" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -5609,6 +5609,49 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DedicatedServer\World\antliontribute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Creatures\A_canary_volatile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_binoculars.png" />
+    <Resource Include="Resources\GameResources\Goods\G_broken_hairdryer.png" />
+    <Resource Include="Resources\GameResources\Goods\G_broken_terrarium.png" />
+    <Resource Include="Resources\GameResources\Goods\G_crocodile_toy.png" />
+    <Resource Include="Resources\GameResources\Goods\G_goop_canister.png" />
+    <Resource Include="Resources\GameResources\Goods\G_lone_glove.png" />
+    <Resource Include="Resources\GameResources\Goods\G_odd_radio.png" />
+    <Resource Include="Resources\GameResources\Goods\G_snail_scale.png" />
+    <Resource Include="Resources\GameResources\Goods\G_toy_cobra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_candy_lice.png" />
+    <Resource Include="Resources\GameResources\Goods\G_lava_pepper.png" />
+    <Resource Include="Resources\GameResources\Goods\G_otherworldly_jawbreaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_blue_festive_light_2.png" />
+    <Resource Include="Resources\GameResources\Goods\G_green_festive_light_2.png" />
+    <Resource Include="Resources\GameResources\Goods\G_red_festive_light_2.png" />
+    <Resource Include="Resources\GameResources\Goods\G_white_festive_light_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_10.png" />
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_11.png" />
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_12.png" />
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_9.png" />
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_fancy_5.png" />
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_fancy_6.png" />
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_fancy_7.png" />
+    <Resource Include="Resources\GameResources\Goods\G_festive_bauble_fancy_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_antlion.png" />
+    <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_fuelweaver.png" />
+    <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_klaus.png" />
+    <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_krampus.png" />
+    <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_noeyeblue.png" />
+    <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_noeyered.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

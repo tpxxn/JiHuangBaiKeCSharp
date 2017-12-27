@@ -20,8 +20,8 @@
                 <RowDefinition Height="20" />
             </Grid.RowDefinitions>
             <Image Grid.Row="0" x:Name="GoodImage" Stretch="Uniform" Height="85" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="1" x:Name="GoodName" FontSize="26" HorizontalAlignment="Center" />
-            <TextBlock Grid.Row="2" x:Name="GoodEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" />
+            <TextBlock Grid.Row="1" x:Name="GoodName" FontSize="26" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"/>
+            <TextBlock Grid.Row="2" x:Name="GoodEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" TextWrapping="Wrap" TextAlignment="Center"/>
             <TextBlock Grid.Row="3" x:Name="GoodIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" />
             <Grid Grid.Row="4" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>

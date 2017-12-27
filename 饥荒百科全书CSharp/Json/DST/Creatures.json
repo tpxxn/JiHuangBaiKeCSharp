@@ -495,7 +495,7 @@
 				"Ability": [
 					"吃地上的水果和蔬菜"
 				],
-				"Introduction": "鱼人通常能在沼泽发现，不同的是，它们不会攻击，遇到玩家会逃跑。定期从潮汐池中捞出热带鱼但是并不吃。",
+				"Introduction": "鱼人通常能在沼泽的鱼族废墟发现，它们会主动攻击靠近鱼族废墟的生物。经常可以发现它们和触手打起来，可以方便地获得触手尖刺等资源。",
 				"Console": "merm"
 			},
 			{
@@ -529,8 +529,8 @@
 				"IsActiveAttack": true,
 				"IsTeamWork": true,
 				"Goods": [
-					"F_meat|×2",
-					"S_blow_dart|×1.5",
+					"F_meat|×1",
+					"S_blow_dart|×1",
 					"G_walrus_tusk|×1（50%）",
 					"G_tam_o'shanter|×1（25%）"
 				],
@@ -700,22 +700,6 @@
 					"受到惊吓掉草"
 				],
 				"Introduction": "联机版中新型的草的来源，生存于岩石区域。睡觉的时候靠近它会惊醒后逃跑，并丢下尾巴(一个草)，过几天尾巴又会重生。",
-				"Console": "grassgekko"
-			},
-			{
-				"Picture": "A_grass_gekko_disease",
-				"Name": "患病的草丛壁虎",
-				"EnName": "Diseased Grass Gekko",
-				"Health": 150,
-				"MoveSpeed": 1,
-				"RunSpeed": 10,
-				"Dangerous": 1,
-				"IsActiveAttack": false,
-				"IsTeamWork": false,
-				"Goods": [
-					"F_rot|×1"
-				],
-				"Introduction": "击杀患病的草丛壁虎没有草，而且患病的草丛壁虎两天后就会死亡。",
 				"Console": "grassgekko"
 			},
 			{
@@ -1139,7 +1123,7 @@
 				"Picture": "A_spitter",
 				"Name": "喷吐蜘蛛",
 				"EnName": "Spitter",
-				"Health": 175,
+				"Health": 350,
 				"Attack": 20,
 				"AttackInterval": 6,
 				"AttackScope": 8,
@@ -2465,7 +2449,7 @@
 				"Goods": [
 					"G_shadow_atrium|×1",
 					"G_fossil_fragment|×8",
-					"G_nightmare_fuel|×2-4"
+					"G_nightmare_fuel|×1(50%)"
 				],
 				"Ability": [
 					"经过的路上会生成发光浆果、荧光草和蕨类植物"

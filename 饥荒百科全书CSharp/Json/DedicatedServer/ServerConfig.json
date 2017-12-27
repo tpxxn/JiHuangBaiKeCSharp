@@ -155,6 +155,18 @@
           "Chinese": "兔人"
         },
         {
+          "English": "hallowed_nights",
+          "Chinese": "万圣节之夜"
+        },
+        {
+          "English": "winters_feast",
+          "Chinese": "冬季盛宴"
+        },
+        {
+          "English": "year_of_the_gobbler",
+          "Chinese": "火鸡之年"
+        },
+        {
           "English": "butterfly",
           "Chinese": "蝴蝶"
         },
@@ -448,11 +460,11 @@
         },
         {
           "English": "plus",
-          "Chinese": "plus"
+          "Chinese": "增强"
         },
         {
           "English": "darkness",
-          "Chinese": "黑天"
+          "Chinese": "黑暗的"
         },
         {
           "English": "layout_mode",
@@ -504,7 +516,7 @@
         },
         {
           "English": "most",
-          "Chinese": "最多"
+          "Chinese": "大部分"
         },
         {
           "English": "least",
@@ -516,11 +528,11 @@
         },
         {
           "English": "medium",
-          "Chinese": "中"
+          "Chinese": "中等"
         },
         {
           "English": "huge",
-          "Chinese": "大"
+          "Chinese": "巨大"
         },
         {
           "English": "none",
@@ -572,7 +584,7 @@
         },
         {
           "Key": "start_location",
-          "Value": "default,plus,darkness"
+          "Value": "plus,darkness,default"
         },
         {
           "Key": "world_size",
@@ -588,7 +600,7 @@
         },
         {
           "Key": "specialevent",
-          "Value": "none,default,hallowed_nights,winters_feast"
+          "Value": "none,default,hallowed_nights,winters_feast,year_of_the_gobbler"
         },
         {
           "Key": "autumn",

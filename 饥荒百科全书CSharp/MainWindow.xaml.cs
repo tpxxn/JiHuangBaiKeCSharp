@@ -188,6 +188,9 @@ namespace 饥荒百科全书CSharp
             #endregion
             // 右侧面板导航到欢迎界面
             RightFrame.Navigate(new WelcomePage());
+            // 是否显示开服工具
+            if (Global.TestMode)
+                SidebarDedicatedServer.Visibility = Visibility.Visible;
         }
 
         /// <summary>

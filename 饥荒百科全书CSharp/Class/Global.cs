@@ -32,6 +32,11 @@ namespace 饥荒百科全书CSharp.Class
         public static string ProjectName = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>
+        /// 测试模式
+        /// </summary>
+        public static bool TestMode { get; set; }
+
+        /// <summary>
         /// MainPage需要保存在Global里额几个控件对象
         /// </summary>
         public static FontFamily FontFamily { get; set; }

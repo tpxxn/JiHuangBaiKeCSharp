@@ -470,7 +470,7 @@
                 "Need2Value": 4,
                 "Need3": "G_rocks",
                 "Need3Value": 4,
-                "Introduction": "靠近后为玩家解锁一级科技，制作成功后，当前科技将永久解锁。",
+                "Introduction": "靠近后将暂时解锁玩家一级科技，完成对应物品制作将永久解锁该物品科技。",
                 "Console": "researchlab"
             },
             {
@@ -484,7 +484,7 @@
                 "Need3": "G_gold_nugget",
                 "Need3Value": 6,
                 "Unlock": ["S_science_machine"],
-                "Introduction": "靠近后为玩家解锁二级科技，制作成功后，当前科技将永久解锁。",
+                "Introduction": "靠近后将暂时解锁玩家二级科技，完成对应物品制作将永久解锁该物品科技。",
                 "Console": "researchlab2"
             },
             {
@@ -969,7 +969,7 @@
                 "Need3": "S_top_hat",
                 "Need3Value": 1,
                 "Unlock": ["S_science_machine"],
-                "Introduction": "靠近后为玩家解锁一级魔法，制作成功后，当前魔法将永久解锁。",
+                "Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。",
                 "Console": "researchlab4"
             },
             {
@@ -983,7 +983,7 @@
                 "Need3": "G_nightmare_fuel",
                 "Need3Value": 7,
                 "Unlock": ["S_prestihatitator"],
-                "Introduction": "靠近后为玩家解锁二级魔法，制作成功后，当前魔法将永久解锁。",
+                "Introduction": "靠近后将暂时解锁玩家二级魔法，完成对应物品制作将永久解锁该物品科技。",
                 "Console": "researchlab3"
             },
             {

@@ -172,6 +172,7 @@ namespace 饥荒百科全书CSharp.View.Details
                     }
                     else
                     {
+                        // 使用工具
                         if (goodText.Substring(0, 1) == "S")
                         {
                             var stackPanel = new StackPanel
@@ -1097,6 +1098,10 @@ namespace 饥荒百科全书CSharp.View.Details
                             rightFrame.NavigationService.Navigate(new SciencePage(), extraData);
                             return;
                         case "A":
+                            extraData[0] = "GoodCreatures";
+                            Global.PageJump(7);
+                            rightFrame.NavigationService.Navigate(new GoodPage(), extraData);
+                            return;
                         case "G":
                             Global.PageJump(7);
                             rightFrame.NavigationService.Navigate(new GoodPage(), extraData);

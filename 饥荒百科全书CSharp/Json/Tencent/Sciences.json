@@ -775,7 +775,7 @@
 				"Need2Value": 4,
 				"Need3": "G_rocks",
 				"Need3Value": 4,
-				"Introduction": "靠近后为玩家解锁一级科技，制作成功后，当前科技将永久解锁。",
+				"Introduction": "靠近后将暂时解锁玩家一级科技，完成对应物品制作将永久解锁该物品科技。",
 				"Console": "researchlab"
 			}, {
 				"Picture": "S_alchemy_engine",
@@ -788,7 +788,7 @@
 				"Need3": "S_electrical_doodad",
 				"Need3Value": 2,
 				"Unlock": ["S_science_machine"],
-				"Introduction": "靠近后为玩家解锁二级科技，制作成功后，当前科技将永久解锁。",
+				"Introduction": "靠近后将暂时解锁玩家二级科技，完成对应物品制作将永久解锁该物品科技。",
 				"Console": "researchlab2"
 			}, {
 				"Picture": "S_electrical_doodad",
@@ -1018,7 +1018,7 @@
 				"EnName": "Napsack",
 				"Need1": "G_shroom_skin",
 				"Need1Value": 1,
-				"Need2": "G_canary_feather",
+				"Need2": "A_canary_volatile",
 				"Need2Value": 1,
 				"UnlockBlueprint": "G_rare_blueprint",
 				"Introduction": "抛出后会创造一片持续20s的催眠区域，生物进入就会睡着。可以用4次。",
@@ -1663,7 +1663,7 @@
 				"Need3": "S_top_hat",
 				"Need3Value": 1,
 				"Unlock": ["S_science_machine"],
-				"Introduction": "靠近后为玩家解锁一级魔法，制作成功后，当前魔法将永久解锁。",
+				"Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。",
 				"Console": "researchlab4"
 			}, {
 				"Picture": "S_shadow_manipulator",
@@ -1676,7 +1676,7 @@
 				"Need3": "G_nightmare_fuel",
 				"Need3Value": 7,
 				"Unlock": ["S_prestihatitator"],
-				"Introduction": "靠近后为玩家解锁二级魔法，制作成功后，当前魔法将永久解锁。",
+				"Introduction": "靠近后将暂时解锁玩家二级魔法，完成对应物品制作将永久解锁该物品科技。",
 				"Console": "researchlab3"
 			}, {
 				"Picture": "S_meat_effigy",

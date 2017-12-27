@@ -39,6 +39,10 @@ namespace 饥荒百科全书CSharp
                 //// 设置AutoSuggestBox的数据源
                 //Global.SetAutoSuggestBoxItem();
 
+                // 测试模式
+                if (_testMode)
+                    Global.TestMode = true;
+
                 #region 设置全局字体
                 var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
                 if (!string.IsNullOrEmpty(mainWindowFont))
@@ -183,13 +187,14 @@ namespace 饥荒百科全书CSharp
         public static Semaphore SingleInstanceWatcher { get; private set; }
 
         private static bool _createdNew;
+        private static bool _testMode;
 
         public static class EntryPoint
         {
             [STAThread]
             public static void Main(string[] args)
             {
-                if (args.Length == 0)
+                if (args.Length == 0 || args[0].ToLower() == "-testmode")
                 {
                     // 工程名("饥荒百科全书CSharp")
                     var projectName = Assembly.GetExecutingAssembly().GetName().Name;
@@ -200,6 +205,11 @@ namespace 饥荒百科全书CSharp
                         //加载DLL
                         AppDomain.CurrentDomain.AssemblyResolve += Global.CurrentDomain_AssemblyResolve;
                         //启动
+                        if (args.Length != 0 && args[0].ToLower() == "-testmode")
+                        {
+                            MessageBox.Show("您正在以测试模式运行饥荒百科全书，测试模式可能会导致部分BUG，请酌情使用!!!∑(ﾟДﾟノ)ノ");
+                            _testMode = true;
+                        }
                         var app = new App_Run();
                         app.Run();
                     }
@@ -211,7 +221,7 @@ namespace 饥荒百科全书CSharp
                 }
                 else
                 {
-                    if (args[0] == "-clear")
+                    if (args[0].ToLower() == "-clear")
                     {
                         if (MessageBox.Show("警告：您将会删除所有注册表设置，点“确定”立即清除，点“取消”取消清除！", "Σ(っ°Д°;)っ", MessageBoxButton.OKCancel) ==
                             MessageBoxResult.OK)

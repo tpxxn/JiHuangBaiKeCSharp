@@ -191,8 +191,8 @@
                     <RadioButton x:Name="SidebarAnimal" Height="50" Width="150" Cursor="{StaticResource CursorLink}" Style="{StaticResource Sidebar_Animal_Style}" Focusable="False" Click="Sidebar_Animal_Click" />
                     <RadioButton x:Name="SidebarNatural" Height="50" Width="150" Cursor="{StaticResource CursorLink}" Style="{StaticResource Sidebar_Natural_Style}" Focusable="False" Click="Sidebar_Natural_Click" />
                     <RadioButton x:Name="SidebarGoods" Height="50" Width="150" Cursor="{StaticResource CursorLink}" Style="{StaticResource Sidebar_Goods_Style}" Focusable="False" Click="Sidebar_Goods_Click" />
-                    <RadioButton x:Name="SidebarDedicatedServer" Height="50" Width="150" Margin="0" Cursor="{StaticResource CursorLink}" Style="{StaticResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" />
-                    <RadioButton x:Name="SidebarSetting" Height="50" Width="150" Margin="0" Cursor="{StaticResource CursorLink}" Style="{StaticResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" Visibility="Collapsed" />
+                    <RadioButton x:Name="SidebarDedicatedServer" Height="50" Width="150" Margin="0" Cursor="{StaticResource CursorLink}" Style="{StaticResource Sidebar_DedicatedServer_Style}" Focusable="False" Click="Sidebar_DedicatedServer_Click" Visibility="Collapsed"/>
+                    <RadioButton x:Name="SidebarSetting" Height="50" Width="150" Margin="0" Cursor="{StaticResource CursorLink}" Style="{StaticResource Sidebar_Setting_Style}" Focusable="False" Click="Sidebar_Setting_Click" Visibility="Collapsed"/>
                 </WrapPanel>
                 <TextBlock x:Name="UiVersion" TextWrapping="Wrap" Text="v0.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,10" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Canvas>
