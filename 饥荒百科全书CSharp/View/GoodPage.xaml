@@ -23,7 +23,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="GoodEquipmentDataTemplate" DataType="class:GoodEquipment">
+        <DataTemplate x:Key="GoodEquipmentDataTemplate" DataType="jsonDeserialize:GoodEquipment">
             <Button Click="GoodEquipmentButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -36,7 +36,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="GoodSaplingDataTemplate" DataType="class:GoodSapling">
+        <DataTemplate x:Key="GoodSaplingDataTemplate" DataType="jsonDeserialize:GoodSapling">
             <Button Click="GoodSaplingButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -49,7 +49,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="GoodCreaturesDataTemplate" DataType="class:GoodCreatures">
+        <DataTemplate x:Key="GoodCreaturesDataTemplate" DataType="jsonDeserialize:GoodCreatures">
             <Button Click="GoodCreaturesButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -62,7 +62,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="GoodTurfDataTemplate" DataType="class:GoodTurf">
+        <DataTemplate x:Key="GoodTurfDataTemplate" DataType="jsonDeserialize:GoodTurf">
             <Button Click="GoodTurfButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -75,7 +75,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="GoodPetDataTemplate" DataType="class:GoodPet">
+        <DataTemplate x:Key="GoodPetDataTemplate" DataType="jsonDeserialize:GoodPet">
             <Button Click="GoodPetButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -88,7 +88,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="GoodUnlockDataTemplate" DataType="class:GoodUnlock">
+        <DataTemplate x:Key="GoodUnlockDataTemplate" DataType="jsonDeserialize:GoodUnlock">
             <Button Click="GoodUnlockButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
@@ -101,7 +101,7 @@
             </Button>
         </DataTemplate>
 
-        <DataTemplate x:Key="GoodDataTemplate" DataType="class:Good">
+        <DataTemplate x:Key="GoodDataTemplate" DataType="jsonDeserialize:Good">
             <Button Click="GoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>

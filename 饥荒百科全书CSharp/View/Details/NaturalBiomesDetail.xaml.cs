@@ -21,7 +21,7 @@ namespace 饥荒百科全书CSharp.View.Details
     /// <summary>
     /// NaturalDetail.xaml 的交互逻辑
     /// </summary>
-    public partial class NaturalDetail : Page
+    public partial class NaturalBiomesDetail : Page
     {
         private int _loadedTime;
 
@@ -29,22 +29,22 @@ namespace 饥荒百科全书CSharp.View.Details
         {
             if (e.ExtraData == null || _loadedTime != 0) return;
             _loadedTime++;
-            LoadData((Nature)e.ExtraData);
+            LoadData((NatureBiomes)e.ExtraData);
             if (Global.FontFamily != null)
             {
                 FontFamily = Global.FontFamily;
             }
         }
 
-        public NaturalDetail()
+        public NaturalBiomesDetail()
         {
             InitializeComponent();
             Global.NaturalLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
 
-        private void LoadData(Nature c)
+        private void LoadData(NatureBiomes c)
         {
-            NatureImage.Source = new BitmapImage(new Uri(c.Picture,UriKind.Relative));
+            NatureImage.Source = new BitmapImage(new Uri(c.Picture, UriKind.Relative));
             NatureName.Text = c.Name;
             NatureEnName.Text = c.EnName;
             // 富含/偶尔/稀有

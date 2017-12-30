@@ -1,4 +1,4 @@
-﻿<Page x:Class="饥荒百科全书CSharp.View.Details.NaturalDetail"
+﻿<Page x:Class="饥荒百科全书CSharp.View.Details.NaturalBiomesDetail"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,7 +9,7 @@
       Title="NaturalDetail">
 
     <ScrollViewer x:Name="NaturalLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
-        <Grid x:Name="NaturesRootGrid">
+        <Grid x:Name="NaturesRootGrid" Margin="0,10,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />

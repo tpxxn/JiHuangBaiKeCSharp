@@ -10,7 +10,7 @@
       Title="CharacterDetail">
 
     <ScrollViewer x:Name="CharacterLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
-        <Grid x:Name="CharacterLeftGrid">
+        <Grid x:Name="CharacterLeftGrid" Margin="0,10,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />

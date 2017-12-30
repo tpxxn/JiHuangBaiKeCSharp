@@ -50,6 +50,7 @@ namespace 饥荒百科全书CSharp.View.Details
             CreatureImage.Source = new BitmapImage(new Uri(c.Picture, UriKind.Relative));
             CreatureName.Text = c.Name;
             CreatureEnName.Text = c.EnName;
+            // 属性
             if (c.Health != 0)
             {
                 CreatureHealth.Value = c.Health;
@@ -1123,7 +1124,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 ConsoleNum.Text = "1";
             }
-            Clipboard.SetText(ConsolePre.Text + ConsoleNum.Text + ")");
+            Clipboard.SetText(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
         }
     }
 }

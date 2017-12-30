@@ -48,13 +48,27 @@ namespace 饥荒百科全书CSharp.View
         public void Deserialize()
         {
             BiomesExpander.DataContext = Global.NaturalBiomesData;
-            LeftFrame.NavigationService.Navigate(new NaturalDetail(), Global.NaturalBiomesData[0]);
+            SmallPlantsExpander.DataContext = Global.NaturalSmallPlantsData;
+            TreesExpander.DataContext = Global.NaturalSmallPlantsData;
+            LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), Global.NaturalBiomesData[0]);
         }
 
-        private void NaturalButton_Click(object sender, RoutedEventArgs e)
+        private void NaturalBiomesButton_Click(object sender, RoutedEventArgs e)
         {
-            var nature = (Nature)((Button)sender).DataContext;
-            LeftFrame.NavigationService.Navigate(new NaturalDetail(), nature);
+            var nature = (NatureBiomes)((Button)sender).DataContext;
+            LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), nature);
+        }
+
+        private void NaturalSmallPlantButton_Click(object sender, RoutedEventArgs e)
+        {
+            var nature = (NatureSmallPlant)((Button)sender).DataContext;
+            LeftFrame.NavigationService.Navigate(new NaturalSmallPlantDetail(), nature);
+        }
+
+        private void NaturalTreeButton_Click(object sender, RoutedEventArgs e)
+        {
+            //var nature = (NatureBiomes)((Button)sender).DataContext;
+            //LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), nature);
         }
 
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)

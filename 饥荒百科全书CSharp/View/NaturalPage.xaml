@@ -9,8 +9,34 @@
       Title="NaturalPage" SizeChanged="Page_SizeChanged">
     
     <Page.Resources>
-        <DataTemplate x:Key="NaturalDataTemplate" DataType="jsonDeserialize:Nature">
-            <Button Click="NaturalButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+        <DataTemplate x:Key="NaturalBiomesDataTemplate" DataType="jsonDeserialize:NatureBiomes">
+            <Button Click="NaturalBiomesButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+                <Grid Margin="5" Width="100" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image x:Name="Image" Source="{Binding Picture}" Stretch="Uniform" />
+                    <TextBlock Grid.Row="1" Text="{Binding Name}" HorizontalAlignment="Center" />
+                </Grid>
+            </Button>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="NaturalSmallPlantsDataTemplate" DataType="jsonDeserialize:NatureSmallPlant">
+            <Button Click="NaturalSmallPlantButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+                <Grid Margin="5" Width="100" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image x:Name="Image" Source="{Binding Picture}" Stretch="Uniform" />
+                    <TextBlock Grid.Row="1" Text="{Binding Name}" HorizontalAlignment="Center" />
+                </Grid>
+            </Button>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="NaturalTreesDataTemplate" DataType="jsonDeserialize:NaturalTree">
+            <Button Click="NaturalTreeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -38,7 +64,35 @@
                             <TextBlock Text="生物群落" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Expander.Header>
-                    <ItemsControl ItemTemplate="{StaticResource NaturalDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                    <ItemsControl ItemTemplate="{StaticResource NaturalBiomesDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="SmallPlantsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="小型植物" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource NaturalSmallPlantsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="TreesExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="树" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource NaturalTreesDataTemplate}" ItemsSource="{Binding}" Margin="10">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Horizontal"/>

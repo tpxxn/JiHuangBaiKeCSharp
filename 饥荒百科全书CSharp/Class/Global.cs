@@ -210,7 +210,8 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Creature> CreatureEvilData = new List<Creature>();
         public static readonly List<Creature> CreatureOthersData = new List<Creature>();
         public static readonly List<Creature> CreatureBossData = new List<Creature>();
-        public static readonly List<Nature> NaturalBiomesData = new List<Nature>();
+        public static readonly List<NatureBiomes> NaturalBiomesData = new List<NatureBiomes>();
+        public static readonly List<NatureSmallPlant> NaturalSmallPlantsData = new List<NatureSmallPlant>();
         public static readonly List<GoodMaterial> GoodMaterialData = new List<GoodMaterial>();
         public static readonly List<GoodEquipment> GoodEquipmentData = new List<GoodEquipment>();
         public static readonly List<GoodSapling> GoodSaplingData = new List<GoodSapling>();
@@ -269,6 +270,7 @@ namespace 饥荒百科全书CSharp.Class
             CreatureOthersData.Clear();
             CreatureBossData.Clear();
             NaturalBiomesData.Clear();
+            NaturalSmallPlantsData.Clear();
             GoodMaterialData.Clear();
             GoodEquipmentData.Clear();
             GoodSaplingData.Clear();
@@ -705,17 +707,29 @@ namespace 饥荒百科全书CSharp.Class
             #endregion
             #region 自然
             var natural = JsonConvert.DeserializeObject<NaturalRootObject>(StringProcess.GetJsonString("Natural.json"));
-            foreach (var naturalLandItems in natural.Biomes.Nature)
+            foreach (var naturalBiomesItems in natural.Biomes.NatureBiomes)
             {
-                NaturalBiomesData.Add(naturalLandItems);
+                NaturalBiomesData.Add(naturalBiomesItems);
             }
-            foreach (var naturalLandItems in NaturalBiomesData)
+            foreach (var naturalBiomesItems in NaturalBiomesData)
+            {
+                naturalBiomesItems.Picture = StringProcess.GetGameResourcePath(naturalBiomesItems.Picture);
+            }
+            foreach (var naturalLandItems in natural.SmallPlant.NatureSmallPlant)
+            {
+                NaturalSmallPlantsData.Add(naturalLandItems);
+            }
+            foreach (var naturalLandItems in NaturalSmallPlantsData)
             {
                 naturalLandItems.Picture = StringProcess.GetGameResourcePath(naturalLandItems.Picture);
             }
             foreach (var naturalItems in NaturalBiomesData)
             {
                 AutoSuggestBoxItemSourceAdd(naturalItems, "NaturalBiomes");
+            }
+            foreach (var naturalItems in NaturalSmallPlantsData)
+            {
+                AutoSuggestBoxItemSourceAdd(naturalItems, "NaturalSmallPlants");
             }
             #endregion
             #region 物品
@@ -929,11 +943,18 @@ namespace 饥荒百科全书CSharp.Class
                 suggestBoxItem.EnName = ((Creature)obj).EnName;
                 suggestBoxItem.Category = "生物";
             }
-            else if (type == typeof(Nature))
+            else if (type == typeof(NatureBiomes))
             {
-                suggestBoxItem.Picture = ((Nature)obj).Picture;
-                suggestBoxItem.Name = ((Nature)obj).Name;
-                suggestBoxItem.EnName = ((Nature)obj).EnName;
+                suggestBoxItem.Picture = ((NatureBiomes)obj).Picture;
+                suggestBoxItem.Name = ((NatureBiomes)obj).Name;
+                suggestBoxItem.EnName = ((NatureBiomes)obj).EnName;
+                suggestBoxItem.Category = "自然";
+            }
+            else if (type == typeof(NatureSmallPlant))
+            {
+                suggestBoxItem.Picture = ((NatureSmallPlant)obj).Picture;
+                suggestBoxItem.Name = ((NatureSmallPlant)obj).Name;
+                suggestBoxItem.EnName = ((NatureSmallPlant)obj).EnName;
                 suggestBoxItem.Category = "自然";
             }
             else if (type == typeof(GoodMaterial))

@@ -10,7 +10,7 @@
       Title="GoodCreaturesDetail">
     
     <ScrollViewer x:Name="GoodCreatureLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
-        <Grid>
+        <Grid Margin="0,10,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />

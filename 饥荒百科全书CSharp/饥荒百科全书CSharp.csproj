@@ -197,8 +197,11 @@
     <Compile Include="View\Details\GoodUnlockDetail.xaml.cs">
       <DependentUpon>GoodUnlockDetail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Details\NaturalDetail.xaml.cs">
-      <DependentUpon>NaturalDetail.xaml</DependentUpon>
+    <Compile Include="View\Details\NaturalBiomesDetail.xaml.cs">
+      <DependentUpon>NaturalBiomesDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details\NaturalSmallPlantDetail.xaml.cs">
+      <DependentUpon>NaturalSmallPlantDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Details\ScienceDetail.xaml.cs">
       <DependentUpon>ScienceDetail.xaml</DependentUpon>
@@ -394,7 +397,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Details\NaturalDetail.xaml">
+    <Page Include="View\Details\NaturalBiomesDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\NaturalSmallPlantDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

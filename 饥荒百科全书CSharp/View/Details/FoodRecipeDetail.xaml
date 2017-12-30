@@ -10,7 +10,7 @@
       Title="FoodRecipeDetail">
 
     <ScrollViewer x:Name="FoodRecipeLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
-        <Grid x:Name="RootGrid">
+        <Grid x:Name="RootGrid" Margin="0,10,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
