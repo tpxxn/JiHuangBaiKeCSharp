@@ -1437,11 +1437,11 @@
         "Introduction": "患病后一段时间消失，患病无法治疗，但是用铲子铲起可以得到全新的浆果灌木丛。"
       },
       {
-        "Picture": "N_juicy_berry_bush",
+        "Picture": "N_juicy_berry_bush_diseased",
         "Pictures": [
-          "N_juicy_berry_bush",
-          "N_juicy_berry_bush_empty",
-          "N_juicy_berry_bush_dead"
+          "N_juicy_berry_bush_diseased",
+          "N_juicy_berry_bush_diseased_empty",
+          "N_juicy_berry_bush_diseased_dead"
         ],
         "Name": "患病的蜜汁浆果丛",
         "EnName": "Diseased Juicy Berry Bush",
