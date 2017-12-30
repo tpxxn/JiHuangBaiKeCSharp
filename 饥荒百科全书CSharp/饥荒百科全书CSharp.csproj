@@ -5133,7 +5133,7 @@
     <Resource Include="Resources\GameResources\Goods\G_straw_hat.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\GameResources\Goods\G_succulent.png" />
+    <Resource Include="Resources\GameResources\Foods\F_succulent.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GameResources\Goods\G_sugar_cookie.png" />
@@ -5659,6 +5659,17 @@
     <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_krampus.png" />
     <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_noeyeblue.png" />
     <Resource Include="Resources\GameResources\Goods\G_magnificent_adornment_noeyered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Natures\N_oasis_cactus_empty.png" />
+    <Resource Include="Resources\GameResources\Natures\N_oasis_cactus_flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Natures\N_succulent_1.png" />
+    <Resource Include="Resources\GameResources\Natures\N_succulent_2.png" />
+    <Resource Include="Resources\GameResources\Natures\N_succulent_3.png" />
+    <Resource Include="Resources\GameResources\Natures\N_succulent_4.png" />
+    <Resource Include="Resources\GameResources\Natures\N_succulent_5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

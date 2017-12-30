@@ -228,6 +228,10 @@ namespace 饥荒百科全书CSharp.View.Details
             Clipboard.SetText(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
         }
 
+        /// <summary>
+        /// 显示资源
+        /// </summary>
+        /// <param name="index">索引序号</param>
         private void ShowResources(int index)
         {
             NaturalResourceStackPanel.Children.Clear();

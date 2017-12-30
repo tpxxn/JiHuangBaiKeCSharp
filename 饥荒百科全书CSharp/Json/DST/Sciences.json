@@ -1518,7 +1518,7 @@
         "Picture": "S_potted_succulent",
         "Name": "盆栽的肉质植物",
         "EnName": "Potted Succulent",
-        "Need1": "G_succulent",
+        "Need1": "F_succulent",
         "Need1Value": 5,
         "Need2": "S_cut_stone",
         "Need2Value": 1,

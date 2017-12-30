@@ -1878,6 +1878,18 @@
         "Console": "foliage"
       },
       {
+        "Picture": "F_succulent",
+        "Name": "肉质植物",
+        "EnName": "Foliage",
+        "Health": 1,
+        "Hunger": 0,
+        "Sanity": 0,
+        "Perish": 6,
+        "Attribute": "荤",
+        "Introduce": "绿洲采摘肉质植物获得。",
+        "Console": "succulent_picked"
+      },
+      {
         "Picture": "F_gears",
         "Name": "齿轮(仅机器人)",
         "EnName": "Gears",

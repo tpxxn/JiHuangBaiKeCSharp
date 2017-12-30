@@ -556,7 +556,7 @@
       {
         "Picture": "N_flower_1",
         "Pictures": [
-          "N_flower_|11"
+          "N_flower_|10"
         ],
         "Name": "花",
         "EnName": "Flower",
@@ -578,6 +578,28 @@
         ],
         "Introduction": "花的用途多种多样。采集12朵花可以做花环，每次采集花都会增加5点精神，这在游戏前期十分有用。花还是产生蝴蝶的地方，捕捉的蝴蝶可以右键种植成花，这使得花可以重生。无家可归的蜜蜂也可以随着时间的推移产生新的花。许多花种在一起建立一个蝴蝶农场用以获取蝴蝶翅膀，也可以用来增加蜂蜜的产蜜速度。",
         "Console": "flower"
+      },
+      {
+        "Picture": "N_flower_11",
+        "Name": "玫瑰",
+        "EnName": "Rose",
+        "Resources": [
+          [ "G_petals|×1&" ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_butterfly",
+          "拾取时精神+5，生命-1"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "联机版特有的玫瑰花，采摘时会被刺痛。",
+        "Console": "flower_rose"
       },
       {
         "Picture": "N_evil_flower_1",
@@ -781,8 +803,8 @@
         "Name": "芦苇",
         "EnName": "Reeds",
         "Resources": [
-          [ 
-            "G_cut_reeds|×1&" 
+          [
+            "G_cut_reeds|×1&"
           ],
           [
           ]
@@ -852,11 +874,64 @@
         "IsRegenerate": false,
         "IsCombustible": true,
         "Biomes": [
-          "N_grasslands",
-          "N_forest"
+          "N_desert"
         ],
         "Introduction": "仙人掌只能在沙漠找到，采摘时受到6点伤害(可以穿防御型装备抵挡伤害)。不能移植。生长需要3天时间(冬天不受影响)，只有在夏天才能收获仙人掌花。",
         "Console": "cactus"
+      },
+      {
+        "Picture": "N_oasis_cactus",
+        "Pictures": [
+          "N_oasis_cactus",
+          "N_oasis_cactus_flower",
+          "N_oasis_cactus_empty"
+        ],
+        "Name": "仙人掌",
+        "EnName": "Cactus",
+        "Resources": [
+          [
+            "F_cactus_flesh|×1&"
+          ],
+          [
+            "F_cactus_flesh|×1&",
+            "F_cactus_flower|×1(仅夏天)&"
+          ],
+          [
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_desert"
+        ],
+        "Introduction": "联机版特有的仙人掌，只能在有绿洲和蚁狮的沙漠找到，采摘时受到6点伤害(可以穿防御型装备抵挡伤害)。不能移植。生长需要3天时间(冬天不受影响)，只有在夏天才能收获仙人掌花。",
+        "Console": "cactus"
+      },
+      {
+        "Picture": "N_succulent_1",
+        "Pictures": [
+          "N_succulent_|5"
+        ],
+        "Name": "肉质植物",
+        "EnName": "Succulent",
+        "Resources": [
+          [
+            "F_succulent|×1&"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_desert"
+        ],
+        "Introduction": "联机版特有，可以在绿洲旁边发现，并且只有夏天会再生，采摘的肉质植物可以做盆栽的肉质植物。",
+        "Console": "succulent_plant"
       },
       {
         "Picture": "N_plant",
@@ -1049,7 +1124,7 @@
         "EnName": "Flower",
         "Resources": [
           [
-            "G_foliage|×1&" 
+            "G_foliage|×1&"
           ]
         ],
         "ResourcesBurned": [
@@ -1072,8 +1147,8 @@
         "Name": "洞穴苔藓",
         "EnName": "Cave Lichen",
         "Resources": [
-          [ 
-            "F_lichen|×1&" 
+          [
+            "F_lichen|×1&"
           ],
           [
           ]
@@ -1199,8 +1274,8 @@
         "Name": "海藻",
         "EnName": "Seaweed",
         "Resources": [
-          [ 
-            "F_seaweed|×1&" 
+          [
+            "F_seaweed|×1&"
           ],
           [
           ]
@@ -1255,11 +1330,11 @@
           [
             "G_cactus_spike|×1&"
           ],
-          [ 
+          [
             "G_twigs|×2&Shovel"
           ],
-          [ 
-            "G_elephant_cactus_stump|×1&Shovel" 
+          [
+            "G_elephant_cactus_stump|×1&Shovel"
           ]
         ],
         "IsRegenerate": false,
