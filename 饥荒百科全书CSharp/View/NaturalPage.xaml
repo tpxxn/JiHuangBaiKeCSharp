@@ -86,7 +86,7 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-                <Expander x:Name="TreesExpander" Style="{StaticResource ExpanderStyle}" >
+                <Expander Visibility="Collapsed" x:Name="TreesExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="树" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>

@@ -210,7 +210,14 @@ namespace 饥荒百科全书CSharp.View.Details
             // 介绍
             NatureIntroduction.Text = c.Introduction;
             // 控制台
-            ConsolePre.Text = $"c_give(\"{c.Console}\",";
+            if (c.EnName.Contains("Diseased"))
+            {
+                CopyGrid.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                ConsolePre.Text = $"c_spawn(\"{c.Console}\",";
+            }
         }
 
         private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)

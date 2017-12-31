@@ -1,6 +1,6 @@
 ﻿{
   "Biomes": {
-    "Nature": [
+    "NatureBiomes": [
       {
         "Picture": "N_beach",
         "Name": "海滩",
@@ -43,7 +43,7 @@
           "N_berry_bush_2",
           "N_boulder_2",
           "N_wildbore_house",
-          "N_spider_den",
+          "N_spider_den_3",
           "N_blue_mushroom",
           "N_green_mushroom",
           "N_red_mushroom",
@@ -246,6 +246,410 @@
           "N_woodlegs'_cage"
         ],
         "Introduction": "围绕火山口的生物群落，中间是含有大量熔岩的区域，靠近会过热。在这里可以找到大量咖啡树、熔岩矿熔岩金矿、黑曜岩和煤矿，也有不少象仙人掌和龙人巢，必定有一个火山祭坛和黑曜石工作台。如果没有解锁伍德莱格那么在这里会发现伍德莱格的笼子。"
+      }
+    ]
+  },
+  "SmallPlant": {
+    "NatureSmallPlant": [
+      {
+        "Picture": "N_flower_1",
+        "Pictures": [
+          "N_flower_|10"
+        ],
+        "Name": "花",
+        "EnName": "Flower",
+        "Resources": [
+          [ "G_petals|×1&" ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_butterfly",
+          "拾取时精神+5"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach",
+          "N_jungle"
+        ],
+        "Introduction": "花的用途多种多样。采集12朵花可以做花环，每次采集花都会增加5点精神，这在游戏前期十分有用。花还是产生蝴蝶的地方，捕捉的蝴蝶可以右键种植成花，这使得花可以重生。无家可归的蜜蜂也可以随着时间的推移产生新的花。许多花种在一起建立一个蝴蝶农场用以获取蝴蝶翅膀，也可以用来增加蜂蜜的产蜜速度。",
+        "Console": "flower"
+      },
+      {
+        "Picture": "N_evil_flower_1",
+        "Pictures": [
+          "N_evil_flower_|8"
+        ],
+        "Name": "恶魔之花",
+        "EnName": "Evil Flower",
+        "Resources": [
+          [ "G_dark_petals|×1&" ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_butterfly",
+          "拾取时精神-5"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "恶魔之花通常存在于传送机零件、完全正常的树和麦斯威尔之门附近。拾取恶魔之花会减少5点精神。恶魔之花同样可以产生蝴蝶，并且吸引蝴蝶与蜜蜂。",
+        "Console": "flower_evil"
+      },
+      {
+        "Picture": "N_sapling",
+        "Pictures": [
+          "N_sapling",
+          "N_sapling_empty"
+        ],
+        "Name": "树苗",
+        "EnName": "Sapling",
+        "Resources": [
+          [
+            "G_twigs|×1&",
+            "G_sapling|×1&Shovel"
+          ],
+          [
+            "G_sapling|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "树苗常见于海滩，它可以提供一个树枝。树苗可以移植，但是不能种植在方格地板、木质地板、卵石路、地毯地板、岩石草皮、沙地、洞穴石地上。不像草和浆果灌木丛，它不需要施肥，生长需要4天时间(冬天不会生长)。尽管叫树苗，但是永远不会长成树。在夏天树苗会枯萎，需要施肥或者在旁边建造雪球发射器防止这一情况的发生。在联机版里，开局两个季节之后树苗会患病，并且无法治愈。",
+        "Console": "sapling"
+      },
+      {
+        "Picture": "N_grass_sw",
+        "Pictures": [
+          "N_grass_sw",
+          "N_grass_empty_sw",
+          "N_grass_dead"
+        ],
+        "Name": "草",
+        "EnName": "Grass",
+        "Resources": [
+          [
+            "G_cut_grass_SW|×1&",
+            "G_grass_tuft_SW|×1&Shovel"
+          ],
+          [
+            "G_grass_tuft_SW|×1&Shovel"
+          ],
+          [
+            "G_grass_tuft_SW|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach",
+          "N_meadow"
+        ],
+        "Introduction": "草常见于海滩，它可以提供一个干草。草可以移植，但是不能种植在方格地板、木质地板、卵石路、地毯地板、岩石草皮、沙地、洞穴石地上。移植的草需要施肥(便便、鸟屎、便便篮)，生长需要3天时间(下雨会减少生长时间。",
+        "Console": "grass"
+      },
+      {
+        "Picture": "N_reeds",
+        "Pictures": [
+          "N_reeds",
+          "N_reeds_empty"
+        ],
+        "Name": "芦苇",
+        "EnName": "Reeds",
+        "Resources": [
+          [
+            "G_cut_reeds|×1&"
+          ],
+          [
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_tidal_marsh"
+        ],
+        "Introduction": "芦苇常见于潮汐沼泽，它可以提供一个割好的芦苇。芦苇不能移植。生长需要3天时间(冬天不会生长)。有一种芦苇陷阱：沼泽地里一大片芦苇，并且伴随着一大片的触手，十分危险。",
+        "Console": "reeds"
+      },
+      {
+        "Picture": "N_plant",
+        "Name": "种植",
+        "EnName": "Plant",
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_tidal_marsh"
+        ],
+        "Introduction": "随着池塘的生成而生成2-4株，不能捡起，但是会被火烧，每到夏天就会长回来。",
+        "Console": "marsh_plant"
+      },
+      {
+        "Picture": "N_blue_mushroom",
+        "Pictures": [
+          "N_blue_mushroom",
+          "N_mushroom_inground",
+          "N_mushroom_picked"
+        ],
+        "Name": "蓝蘑菇",
+        "EnName": "Blue Mushroom",
+        "Resources": [
+          [
+            "F_blue_cap|×1&",
+            "F_blue_cap|×1&Shovel"
+          ],
+          [
+            "F_blue_cap|×1&",
+            "F_blue_cap|×1&Shovel"
+          ],
+          [
+            "F_blue_cap|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "蓝蘑菇夜晚才会长出来，也可以砍蓝色蘑菇树获取。蓝蘑菇炒烤蓝蘑菇，味道一定不错！",
+        "Console": "blue_mushroom"
+      },
+      {
+        "Picture": "N_green_mushroom",
+        "Pictures": [
+          "N_green_mushroom",
+          "N_mushroom_inground",
+          "N_mushroom_picked"
+        ],
+        "Name": "绿蘑菇",
+        "EnName": "Green Mushroom",
+        "Resources": [
+          [
+            "F_green_cap|×1&",
+            "F_green_cap|×1&Shovel"
+          ],
+          [
+            "F_green_cap|×1&",
+            "F_green_cap|×1&Shovel"
+          ],
+          [
+            "F_green_cap|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "绿蘑菇黄昏才会长出来，也可以砍绿色蘑菇树获取。直接食用降低50点精神，所以要烤了吃。",
+        "Console": "green_mushroom"
+      },
+      {
+        "Picture": "N_red_mushroom",
+        "Pictures": [
+          "N_red_mushroom",
+          "N_mushroom_inground",
+          "N_mushroom_picked"
+        ],
+        "Name": "红蘑菇",
+        "EnName": "Red Mushroom",
+        "Resources": [
+          [
+            "F_red_cap|×1&",
+            "F_red_cap|×1&Shovel"
+          ],
+          [
+            "F_red_cap|×1&",
+            "F_red_cap|×1&Shovel"
+          ],
+          [
+            "F_red_cap|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "红蘑菇白天才会长出来，也可以砍红色蘑菇树获取。放在地上可以间接地让怪物吃它而受到伤害。",
+        "Console": "red_mushroom"
+      },
+      {
+        "Picture": "N_bamboo_patch",
+        "Pictures": [
+          "N_bamboo_patch",
+          "N_bamboo_patch_empty",
+          "N_bamboo_patch_dead"
+        ],
+        "Name": "竹子",
+        "EnName": "Bamboo Patch",
+        "Resources": [
+          [
+            "G_bamboo_patch|×1&Machete",
+            "G_bamboo_root|×1&Shovel"
+          ],
+          [
+            "G_bamboo_root|×1&Shovel"
+          ],
+          [
+            "G_bamboo_root|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "用砍刀砍可以得到竹子，可以移植，需要施肥。",
+        "Console": "bambootree"
+      },
+      {
+        "Picture": "N_viney_bush",
+        "Pictures": [
+          "N_viney_bush",
+          "N_viney_bush_empty",
+          "N_viney_bush_dead"
+        ],
+        "Name": "藤蔓丛",
+        "EnName": "Viney Bush",
+        "Resources": [
+          [
+            "G_vine|×1&Machete",
+            "G_viney_bush_root|×1&Shovel"
+          ],
+          [
+            "G_viney_bush_root|×1&Shovel"
+          ],
+          [
+            "G_viney_bush_root|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_snake",
+          "A_poison_snake"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "用砍刀砍可以得到藤蔓，生长需要4天时间。一些藤蔓丛会有蛇出没(有蛇的藤蔓丛会发生声音和周期性震动)。蛇会在黄昏离开藤蔓丛，整个晚上在外面游荡，并且在白天回来。每个藤蔓丛最多含有三条蛇，击杀后每90秒重新生成一条。可以移植，移植的藤蔓丛不会产生蛇。",
+        "Console": "bush_vine"
+      },
+      {
+        "Picture": "N_seaweed",
+        "Pictures": [
+          "N_seaweed",
+          "N_seaweed_empty"
+        ],
+        "Name": "海藻",
+        "EnName": "Seaweed",
+        "Resources": [
+          [
+            "F_seaweed|×1&"
+          ],
+          [
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_ocean_shallow"
+        ],
+        "Introduction": "海藻可以在浅海中找到，有时候会成片出现。采集的海藻可以做一些食物。",
+        "Console": "seaweed"
+      },
+      {
+        "Picture": "N_coffee_plant",
+        "Pictures": [
+          "N_coffee_plant",
+          "N_coffee_plant_empty",
+          "N_coffee_plant_dead"
+        ],
+        "Name": "咖啡树",
+        "EnName": "Coffee Plant",
+        "Resources": [
+          [
+            "F_coffee_beans|×1&",
+            "G_coffee_plant|×1&Shovel"
+          ],
+          [
+            "G_coffee_plant|×1&Shovel"
+          ],
+          [
+            "G_coffee_plant|×1&Shovel"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_volcano_bio"
+        ],
+        "Introduction": "咖啡树只生长在火山里，采摘可以得到一个咖啡豆，生长需要4-5天(不受下雨影响)。咖啡树可以移植，但是只能种在火山地皮上，移植的咖啡树生长只需要3-5天。给咖啡树施肥需要灰烬而不是便便。那些没有移植的咖啡树只会在干燥季节生长。咖啡树不会被火烧，不会被雷劈。",
+        "Console": "coffeebush"
+      },
+      {
+        "Picture": "N_elephant_cactus",
+        "Pictures": [
+          "N_elephant_cactus",
+          "N_elephant_cactus_dead",
+          "N_elephant_cactus_stump"
+        ],
+        "Name": "象仙人掌",
+        "EnName": "Elephant Cactus",
+        "Resources": [
+          [
+            "G_cactus_spike|×1&"
+          ],
+          [
+            "G_twigs|×2&Shovel"
+          ],
+          [
+            "G_elephant_cactus_stump|×1&Shovel"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_volcano_bio"
+        ],
+        "Introduction": "象仙人掌只生长在火山里，它们只在干燥季节活跃。靠近象仙人掌会受到20点AOE伤害，每次攻击象仙人掌，它将使攻击者受到10点伤害。穿着象仙人掌盔甲尽管可以免疫象仙人掌的AOE攻击，但是无法抵挡反击伤害。象仙人掌死亡后会掉落象仙人掌刺并且缩小，这时可以用铲子挖起移植，象仙人掌只能种植在岩浆地皮、灰色地皮和火山地皮上。象仙人掌不会被火烧。",
+        "Console": "elephantcactus_active"
       }
     ]
   }

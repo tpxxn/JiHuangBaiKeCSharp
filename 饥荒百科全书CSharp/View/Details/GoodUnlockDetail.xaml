@@ -31,7 +31,7 @@
             <WrapPanel Grid.Row="5" x:Name="GoodDropByWrapPanel" Orientation="Horizontal"/>
             <TextBlock Grid.Row="6" x:Name="GoodUnlockCharacterTextBlock" Text="解锁人物：" Margin="10" Background="#55B2ECED"/>
             <uc:PicButton Grid.Row="7" x:Name="GoodUnlockCharacterWrapPicButton" PictureSize="90"/>
-            <Grid Grid.Row="7" HorizontalAlignment="Center">
+            <Grid Grid.Row="8" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -43,7 +43,7 @@
                 <TextBlock Grid.Column="2" x:Name="ConsolePos" Text=")" Margin="0,5,15,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
                 <Button Grid.Column="3" HorizontalAlignment="Left" Content="复制" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
             </Grid>
-            <Grid Grid.Row="8"/>
+            <Grid Grid.Row="9"/>
         </Grid>
     </ScrollViewer>
 </Page>

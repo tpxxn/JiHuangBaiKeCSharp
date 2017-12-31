@@ -35,8 +35,80 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            var extraData = (string[])e.ExtraData;
+            Deserialize();
+            if (extraData == null)
+            {
+                LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), Global.NaturalBiomesData[0]);
+            }
+            else
+            {
+                var suggestBoxItemPicture = extraData[1];
+                //导航到指定页面
+                switch (extraData[0])
+                {
+                    case "NaturalBiomes":
+                        OnNavigatedToBiomesDialog(Global.NaturalBiomesData, suggestBoxItemPicture);
+                        break;
+                    case "NaturalSmallPlants":
+                        OnNavigatedToSmallPlantDialog(Global.NaturalSmallPlantsData, suggestBoxItemPicture);
+                        break;
+                }
+            }
         }
 
+        private void OnNavigatedToBiomesDialog(List<NatureBiomes> naturalCollection, string suggestBoxItemPicture)
+        {
+            foreach (var itemsControlItem in naturalCollection)
+            {
+                var naturalBiomes = itemsControlItem;
+                if (naturalBiomes == null || naturalBiomes.Picture != suggestBoxItemPicture) continue;
+                ScrollViewerRight.UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, ScrollViewerRight);
+                foreach (var button in resultList)
+                {
+                    var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
+                    var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
+                    if (imageSourceShort != naturalBiomes.Picture) continue;
+                    var naturalBiomesButton = button;
+                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var point = new Point(0, currentScrollPosition);
+                    var targetPosition = naturalBiomesButton.TransformToVisual(ScrollViewerRight).Transform(point);
+                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    break;
+                }
+                LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), naturalBiomes);
+                break;
+            }
+        }
+
+        private void OnNavigatedToSmallPlantDialog(List<NatureSmallPlant> naturalCollection, string suggestBoxItemPicture)
+        {
+            foreach (var itemsControlItem in naturalCollection)
+            {
+                var naturalSmallPlant = itemsControlItem;
+                if (naturalSmallPlant == null || naturalSmallPlant.Picture != suggestBoxItemPicture) continue;
+                ScrollViewerRight.UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, ScrollViewerRight);
+                foreach (var button in resultList)
+                {
+                    var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
+                    var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
+                    if (imageSourceShort != naturalSmallPlant.Picture) continue;
+                    var naturalSmallPlantButton = button;
+                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var point = new Point(0, currentScrollPosition);
+                    var targetPosition = naturalSmallPlantButton.TransformToVisual(ScrollViewerRight).Transform(point);
+                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    break;
+                }
+                LeftFrame.NavigationService.Navigate(new NaturalSmallPlantDetail(), naturalSmallPlant);
+                break;
+            }
+        }
+        
         public NaturalPage()
         {
             InitializeComponent();
@@ -49,8 +121,7 @@ namespace 饥荒百科全书CSharp.View
         {
             BiomesExpander.DataContext = Global.NaturalBiomesData;
             SmallPlantsExpander.DataContext = Global.NaturalSmallPlantsData;
-            TreesExpander.DataContext = Global.NaturalSmallPlantsData;
-            LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), Global.NaturalBiomesData[0]);
+            //TreesExpander.DataContext = Global.NaturalSmallPlantsData;
         }
 
         private void NaturalBiomesButton_Click(object sender, RoutedEventArgs e)
