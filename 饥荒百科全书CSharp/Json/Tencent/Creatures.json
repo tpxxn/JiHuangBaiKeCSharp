@@ -2079,26 +2079,26 @@
 				],
 				"Introduction": "生成自小型常青树。世界天数3天后，砍倒常青树时，附近的常青树就有1.33%的可能性变成树精守卫，根据常青树的大小分为小、中、大三种。树精守卫刚生成时会对砍倒树的玩家产生永久性敌对关系，但是可以通过种植松果使其平静下来，在16单位以内种植有15%的可能性，在5单位以内种植有33%的可能性。"
 			},
-			{
-				"Picture": "A_treeguard",
-				"Name": "树精守卫(中)",
-				"EnName": "Treeguard",
-				"Health": 3000,
-				"Attack": 50,
-				"AttackInterval": 3,
-				"AttackScope": 3,
-				"MoveSpeed": 1.5,
-				"RunSpeed": 1.5,
-				"Dangerous": 6,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_living_log|×6"
-				],
-				"Introduction": "生成自大型常青树。"
-			},
+      {
+        "Picture": "A_treeguard",
+        "Name": "树精守卫(中)",
+        "EnName": "Treeguard",
+        "Health": 3000,
+        "Attack": 50,
+        "AttackInterval": 3,
+        "AttackScope": 3,
+        "MoveSpeed": 1.5,
+        "RunSpeed": 1.5,
+        "Dangerous": 6,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_monster_meat|×1",
+          "G_living_log|×6"
+        ],
+        "Introduction": "生成自中型常青树。"
+      },
 			{
 				"Picture": "A_treeguard",
 				"Name": "树精守卫(大)",
@@ -2117,50 +2117,50 @@
 					"F_monster_meat|×1",
 					"G_living_log|×6"
 				],
-				"Introduction": "生成自大型常青树。(leif_sparse)",
+				"Introduction": "生成自大型常青树。",
 				"Console": "leif"
 			},
-			{
-				"Picture": "A_poison_birchnut_trees",
-				"Name": "有毒的桦树",
-				"EnName": "Poison Birchnut Trees",
-				"Attack": 40,
-				"AttackInterval": 1.5,
-				"AttackScope": 2,
-				"Dangerous": 5,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_birchnut|×3",
-					"G_living_log|×1-2",
-					"G_living_log|S_shovel",
-					"G_nightmare_fuel|×1（20%）"
-				],
-				"Introduction": "生成自桦树。世界天数3天后，除了冬天，砍倒桦树时，附近的桦树就有一定的可能性变成桦树精。桦树精会用它的树根(远程)攻击靠近它的所有生物，并且每过一小段时间就会生成一个坚果辅助攻击。经过足够长的时间桦树精会变回桦树。可以用斧头砍倒桦树。",
-				"Console": "deciduoustree",
-				"ConsoleStateValue": "StartMonster(true)"
-			},
-			{
-				"Picture": "A_birchnutter",
-				"Name": "桦木果精",
-				"EnName": "Birchnutter",
-				"Health": 50,
-				"Attack": 5,
-				"AttackInterval": 2,
-				"AttackScope": 2.5,
-				"MoveSpeed": 3.5,
-				"RunSpeed": 3.5,
-				"Dangerous": 2,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_twigs|×1（60%）",
-					"G_birchnut|×1（40%）"
-				],
-				"Introduction": "坚果是桦树精生成的保护它的小生物，血量和攻击力不高，但胜在数量多，如果不理会它们直接去砍桦树精的话会吃不少苦头，如果有强力护甲就可以无视掉了。",
-				"Console": "birchnutdrake"
-			},
+      {
+        "Picture": "A_poison_birchnut_trees",
+        "Name": "有毒的桦树",
+        "EnName": "Poison Birchnut Trees",
+        "Attack": 40,
+        "AttackInterval": 1.5,
+        "AttackScope": 2,
+        "Dangerous": 5,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_birchnut|×3",
+          "G_living_log|×1-2",
+          "G_living_log|S_shovel",
+          "G_nightmare_fuel|×1（20%）"
+        ],
+        "Introduction": "生成自桦树。世界天数3天后，除了冬天，砍倒桦树时，附近的桦树就有一定的可能性变成桦树精。桦树精会用它的树根(远程)攻击靠近它的所有生物，并且每过一小段时间就会生成一个桦木果精辅助攻击。经过足够长的时间桦树精会变回桦树。可以用斧头砍倒桦树。",
+        "Console": "deciduoustree",
+        "ConsoleStateValue": "StartMonster(true)"
+      },
+      {
+        "Picture": "A_birchnutter",
+        "Name": "桦木果精",
+        "EnName": "Birchnutter",
+        "Health": 50,
+        "Attack": 5,
+        "AttackInterval": 2,
+        "AttackScope": 2.5,
+        "MoveSpeed": 3.5,
+        "RunSpeed": 3.5,
+        "Dangerous": 2,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_twigs|×1（60%）",
+          "G_birchnut|×1（40%）"
+        ],
+        "Introduction": "桦木果精是桦树精生成的保护它的小生物，血量和攻击力不高，但胜在数量多，如果不理会它们直接去砍桦树精的话会吃不少苦头，如果有强力护甲就可以无视掉了。",
+        "Console": "birchnutdrake"
+      },
 			{
 				"Picture": "A_spider_queen",
 				"Name": "蜘蛛女王",

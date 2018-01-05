@@ -1695,7 +1695,7 @@
         "EnName": "Tail o' Three Cats",
         "Attack": 27.2,
         "Durability": "175次",
-        "Introduction": "驯牛神器。",
+        "Introduction": "攻击生物有可能产生小火花或大火花，如果打出大火花会平息生物对你的仇恨(例如牛)。",
         "Console": "whip"
       },
       {

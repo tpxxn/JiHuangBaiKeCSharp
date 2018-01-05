@@ -58,7 +58,15 @@ namespace 饥荒百科全书CSharp.View.Details
             //草皮纹理
             GoodSourceTextureWrapPanel.Source = new BitmapImage(new Uri(StringProcess.GetGameResourcePath(c.Texture), UriKind.Relative));
             GoodIntroduction.Text = c.Introduction;
-            ConsolePre.Text = $"c_give(\"{c.Console}\",";
+
+            if (c.Console != null)
+            {
+                ConsolePre.Text = $"c_give(\"{c.Console}\",";
+            }
+            else
+            {
+                CopyGrid.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void Good_Jump_Click(object sender, RoutedEventArgs e)

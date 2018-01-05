@@ -2100,7 +2100,7 @@
           "F_monster_meat|×1",
           "G_living_log|×6"
         ],
-        "Introduction": "生成自大型常青树。"
+        "Introduction": "生成自中型常青树。"
       },
       {
         "Picture": "A_treeguard",
@@ -2120,7 +2120,7 @@
           "F_monster_meat|×1",
           "G_living_log|×6"
         ],
-        "Introduction": "生成自大型常青树。(leif_sparse)",
+        "Introduction": "生成自大型常青树。",
         "Console": "leif"
       },
       {
@@ -2140,7 +2140,7 @@
           "G_living_log|S_shovel",
           "G_nightmare_fuel|×1（20%）"
         ],
-        "Introduction": "生成自桦树。世界天数3天后，除了冬天，砍倒桦树时，附近的桦树就有一定的可能性变成毒桦树。毒桦树会用它的树根(远程)攻击靠近它的所有生物，并且每过一小段时间就会生成一个坚果辅助攻击。经过足够长的时间毒桦树会变回桦树。可以用斧头砍倒桦树。",
+        "Introduction": "生成自桦树。世界天数3天后，除了冬天，砍倒桦树时，附近的桦树就有一定的可能性变成毒桦树。毒桦树会用它的树根(远程)攻击靠近它的所有生物，并且每过一小段时间就会生成一个桦树果人辅助攻击。经过足够长的时间毒桦树会变回桦树。可以用斧头砍倒桦树。",
         "Console": "deciduoustree",
         "ConsoleStateValue": "StartMonster(true)"
       },
@@ -2161,7 +2161,7 @@
           "G_twigs|×1（60%）",
           "G_birchnut|×1（40%）"
         ],
-        "Introduction": "坚果是毒桦树生成的保护它的小生物，血量和攻击力不高，但胜在数量多，如果不理会它们直接去砍毒桦树的话会吃不少苦头，如果有强力护甲就可以无视掉了。",
+        "Introduction": "桦树果人是毒桦树生成的保护它的小生物，血量和攻击力不高，但胜在数量多，如果不理会它们直接去砍毒桦树的话会吃不少苦头，如果有强力护甲就可以无视掉了。",
         "Console": "birchnutdrake"
       },
       {

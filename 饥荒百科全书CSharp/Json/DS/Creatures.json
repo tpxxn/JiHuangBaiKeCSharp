@@ -1528,7 +1528,7 @@
 					"F_monster_meat|×1",
 					"G_living_log|×6"
 				],
-				"Introduction": "生成自大型常青树。"
+				"Introduction": "生成自中型常青树。"
 			},
 			{
 				"Picture": "A_treeguard",
@@ -1548,7 +1548,7 @@
 					"F_monster_meat|×1",
 					"G_living_log|×6"
 				],
-				"Introduction": "生成自大型常青树。(leif_sparse)",
+				"Introduction": "生成自大型常青树。",
 				"Console": "leif"
 			},
 			{

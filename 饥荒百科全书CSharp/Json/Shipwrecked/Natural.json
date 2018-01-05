@@ -303,6 +303,46 @@
         "Console": "flower_evil"
       },
       {
+        "Picture": "N_planted_carrot",
+        "Name": "胡萝卜",
+        "EnName": "Carrot",
+        "Resources": [
+          [
+            "F_carrot|×1&"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "胡萝卜常见于草原，野生的胡萝卜不会重生，但是可以通过种子种植出来。",
+        "Console": "carrot_planted"
+      },
+      {
+        "Picture": "N_planted_sweet_potato",
+        "Name": "甘薯",
+        "EnName": "Sweet Potato",
+        "Resources": [
+          [
+            "F_sweet_potato|×1&"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_meadow"
+        ],
+        "Introduction": "甘薯只能在草甸地形找到，野生的甘薯不会重生，但是可以通过种子种植出来。",
+        "Console": "sweet_potato_planted"
+      },
+      {
         "Picture": "N_sapling",
         "Pictures": [
           "N_sapling",
@@ -388,6 +428,26 @@
         ],
         "Introduction": "芦苇常见于潮汐沼泽，它可以提供一个割好的芦苇。芦苇不能移植。生长需要3天时间(冬天不会生长)。有一种芦苇陷阱：沼泽地里一大片芦苇，并且伴随着一大片的触手，十分危险。",
         "Console": "reeds"
+      },
+      {
+        "Picture": "N_planted_mandrake",
+        "Name": "曼德拉草",
+        "EnName": "Mandrake",
+        "Resources": [
+          [
+            "F_mandrake|×1&"
+          ]
+        ],
+        "Ability": [
+          "在黄昏和夜晚捡起会跟随玩家"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_mosaic"
+        ],
+        "Introduction": "曼德拉草全图只有三只，可以在草甸地形发现它。在黄昏和夜晚捡起会跟随玩家，在白天捡起会直接死亡。",
+        "Console": "mandrake_planted"
       },
       {
         "Picture": "N_plant",
@@ -592,7 +652,7 @@
           "N_ocean_shallow"
         ],
         "Introduction": "海藻可以在浅海中找到，有时候会成片出现。采集的海藻可以做一些食物。",
-        "Console": "seaweed"
+        "Console": "seaweed_planted"
       },
       {
         "Picture": "N_coffee_plant",

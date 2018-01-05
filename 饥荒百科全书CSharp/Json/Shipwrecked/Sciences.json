@@ -1147,7 +1147,7 @@
         "Need3": "S_electrical_doodad",
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "靠近后为玩家解锁二级科技，制作成功后，当前科技将永久解锁。只能在海上建造。",
+        "Introduction": "靠近后将暂时解锁玩家二级科技，完成对应物品制作将永久解锁该物品科技。只能在海上建造。",
         "Console": "researchlab5"
       },
       {
@@ -1935,7 +1935,7 @@
         "Need3": "G_pirate_hat",
         "Need3Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。",
+        "Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。解锁物品科技有10%的几率产生兔子，由于它们无家可归，所以很容易在夜晚捕捉。",
         "Console": "researchlab4"
       },
       {

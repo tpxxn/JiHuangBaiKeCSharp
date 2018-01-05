@@ -1,30 +1,4 @@
-﻿//控件计数例子
-//int sum = 0;
-//foreach (Control vControl in WrapPanel_Right.Children)
-//{
-//    if (vControl is ButtonWithText)
-//    {
-//        sum += 1;
-//    }
-//}
-
-//#region "删除旧版本文件"
-//string oldVersionPath = RegeditRW.RegReadString("OldVersionPath");
-//if (oldVersionPath != System.Windows.Forms.Application.ExecutablePath && oldVersionPath != "")
-//{
-//    try
-//    {
-//        File.Delete(oldVersionPath);
-//    }
-//    catch (Exception ex)
-//    {
-//        System.Windows.Forms.MessageBox.Show("删除旧版本错误，请手动删除：" + ex);
-//    }
-//}
-//RegeditRW.RegWrite("OldVersionPath", "");
-//#endregion
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
@@ -221,3 +195,29 @@ namespace 饥荒百科全书CSharp
         
     }
 }
+
+//控件计数例子
+//int sum = 0;
+//foreach (Control vControl in WrapPanel_Right.Children)
+//{
+//    if (vControl is ButtonWithText)
+//    {
+//        sum += 1;
+//    }
+//}
+
+//#region "删除旧版本文件"
+//string oldVersionPath = RegeditRW.RegReadString("OldVersionPath");
+//if (oldVersionPath != System.Windows.Forms.Application.ExecutablePath && oldVersionPath != "")
+//{
+//    try
+//    {
+//        File.Delete(oldVersionPath);
+//    }
+//    catch (Exception ex)
+//    {
+//        System.Windows.Forms.MessageBox.Show("删除旧版本错误，请手动删除：" + ex);
+//    }
+//}
+//RegeditRW.RegWrite("OldVersionPath", "");
+//#endregion

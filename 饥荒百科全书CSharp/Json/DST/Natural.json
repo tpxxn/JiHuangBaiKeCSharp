@@ -628,6 +628,26 @@
         "Console": "flower_evil"
       },
       {
+        "Picture": "N_planted_carrot",
+        "Name": "胡萝卜",
+        "EnName": "Carrot",
+        "Resources": [
+          [
+            "F_carrot|×1&"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "胡萝卜常见于草原，野生的胡萝卜不会重生，但是可以通过种子种植出来。",
+        "Console": "carrot_planted"
+      },
+      {
         "Picture": "N_sapling",
         "Pictures": [
           "N_sapling",
@@ -856,9 +876,6 @@
           [
             "F_mandrake|×1&"
           ]
-        ],
-        "ResourcesBurned": [
-          "G_ash|×1"
         ],
         "Ability": [
           "在黄昏和夜晚捡起会跟随玩家"
