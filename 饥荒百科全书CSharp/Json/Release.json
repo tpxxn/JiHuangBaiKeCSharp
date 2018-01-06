@@ -1,0 +1,310 @@
+﻿{
+  "Release": [
+    {
+      "Version": "0.7.5.8",
+      "Data": "2018年1月6日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "增加“字体加粗”选项"
+        },
+        {
+          "Label": "新增",
+          "Content": "增加“已复制”提示"
+        },
+        {
+          "Label": "新增",
+          "Content": "小型植物增加胡萝卜、甘薯"
+        },
+        {
+          "Label": "改进",
+          "Content": "现在搜索框点击自然类可以正确跳转"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正物品-材料肉质植物图片不显示的BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正物品-装备耐久小数数值显示不正确的BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正物品-装备-三猫尾之鞭描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正黏蛛网控制台代码BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正有关桦树果人的描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正曼德拉草相关BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正树人守卫(中、大)的描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正所有有关韦伯的描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正海洋实验室、灵子分解机的描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正海藻(小型植物)控制台代码"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5.7",
+      "Data": "2017年12月31日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "自然页面添加小型植物"
+        },
+        {
+          "Label": "新增",
+          "Content": "食物添加肉质植物"
+        },
+        {
+          "Label": "新增",
+          "Content": "WeGame版加入女修理工"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正部分详情页图片过大及图片置顶的问题"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正复制桦树精控制台代码不正确的BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正物品-解锁解锁人物和控制台代码重合的BUG"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5.6",
+      "Data": "2017年12月27日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "新增“万圣节之夜”、“冬季盛宴”更新内容"
+        },
+        {
+          "Label": "新增",
+          "Content": "添加命令行-testmode选项(不区分大小写)开启测试模式，用法示例：饥荒百科全书.exe -TestMode"
+        },
+        {
+          "Label": "改进",
+          "Content": "现在跳转会跳转到相应位置"
+        },
+        {
+          "Label": "改进",
+          "Content": "更新“月岩石”图片、“造冰机 3000/装甲船/硬壳船”的翻译"
+        },
+        {
+          "Label": "改进",
+          "Content": "更新一/二级科技/魔法描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "移除“患病的草壁虎”"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正“毒蚊子”贴图"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正“海象”战利品"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正“喷吐蜘蛛”生命属性"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正“鱼人”的描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正“昏睡之袋”合成材料"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正“复活之骨”的战利品"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正“不朽的水果蛋糕”描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正桦树精控制台代码"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正物品生物部分无法显示的BUG"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5.5",
+      "Data": "2017年12月3日",
+      "UpdataContent": [
+        {
+          "Label": "修复",
+          "Content": "修正鱼子酱的推荐食谱、热带鱼羮的烹饪需求"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正烹饪模拟器的相关BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正暗影战斗者生命值，去除SW版的三种猎犬，修正海狗和三种鳄狗的描述"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5.4",
+      "Data": "2017年12月3日",
+      "UpdataContent": [
+        {
+          "Label": "修复",
+          "Content": "修正点击跳转按钮卡死的BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正SW版科技栏合成材料中干草的贴图"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5.3",
+      "Data": "2017年12月2日",
+      "UpdataContent": [
+        {
+          "Label": "改进",
+          "Content": "优化资料读取速度"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正生物里部分1000生命的生物生命值显示为∞的BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正联机版洞穴蜘蛛的血量"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正单机版里WX-78的三围属性"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正科技-石灰石盔甲图片"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5.2",
+      "Data": "2017年11月23日",
+      "UpdataContent": [
+        {
+          "Label": "修复",
+          "Content": "修正点击搜索结果后无法显示详情的BUG以及切换游戏版本搜索不到结果的BUG"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5.1",
+      "Data": "2017年11月23日",
+      "UpdataContent": [
+        {
+          "Label": "修复",
+          "Content": "修正程序无法打开的Bug"
+        }
+      ]
+    },
+    {
+      "Version": "0.7.5",
+      "Data": "2017年11月23日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "添加搜索框、添加跳转"
+        },
+        {
+          "Label": "新增",
+          "Content": "增加SHIPWRECKED版HOME SEA HOME更新内容"
+        },
+        {
+          "Label": "改进",
+          "Content": "追加沃利关于吃重复食物造成负面影响的相关说明"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正象仙人掌盔甲、椰树叶图片不显示的BUG"
+        }
+      ]
+    },
+    {
+      "Version": "0.6.0",
+      "Data": "2017年11月22日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "迁移烹饪模拟器界面(依然没有跳转)"
+        },
+        {
+          "Label": "新增",
+          "Content": "添加命令行-clear选项清除注册表设置，用法示例：饥荒百科全书.exe -clear"
+        },
+        {
+          "Label": "新增",
+          "Content": "增加面板透明度设置，调整字体设置选项的作用范围"
+        }
+      ]
+    },
+    {
+      "Version": "0.5.0",
+      "Data": "2017年11月21日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "迁移所有内容(暂时移除烹饪模拟器，没有做跳转按钮)"
+        }
+      ]
+    },
+    {
+      "Version": "0.2.0",
+      "Data": "2016年",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "完成食物、模拟"
+        }
+      ]
+    },
+    {
+      "Version": "0.1.0",
+      "Data": "2016年",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "完成人物"
+        }
+      ]
+    }
+  ]
+}

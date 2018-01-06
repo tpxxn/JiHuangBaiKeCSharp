@@ -42,16 +42,16 @@ namespace 饥荒百科全书CSharp
             // ReSharper disable once PossibleNullReferenceException
             Left = mainWindow.Left + mainWindow.Width / 2 - Width / 2;
             Top = mainWindow.Top + mainWindow.Height / 2 - Height / 2;
-            if (_flag < 33)
+            if (_flag < 26)
             {
                 Opacity += 0.03;
             }
-            if (_flag > 66)
+            if (_flag > 59)
             {
                 Opacity -= 0.03;
             }
             _flag += 1;
-            if (_flag < 99) return;
+            if (_flag < 85) return;
             _splashTimer.Enabled = false;
             Close();
         }

@@ -1,0 +1,75 @@
+﻿<Page x:Class="饥荒百科全书CSharp.View.SettingChildPage.AboutChildPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:饥荒百科全书CSharp.View.SettingChildPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="888"
+      Title="AboutChildPage">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Template="{StaticResource MyScrollViewer}">
+        <StackPanel x:Name="RootStackPanel" Background="{x:Null}">
+            <StackPanel x:Name="HeaderStackPanel" VerticalAlignment="Center" Background="#55B2ECED" Height="250">
+                <Ellipse Height="120" Width="120" StrokeThickness="4" Margin="0,15,0,0" Stroke="Black">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/饥荒百科全书CSharp;component/Resources/DST.ico" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock x:Name="AppNameTextBlock" Text="饥荒百科" Foreground="Black" FontSize="30" Margin="0,10,0,0" HorizontalAlignment="Center" />
+                <TextBlock x:Name="VersionTextBlock" HorizontalAlignment="Center" Foreground="Black" Margin="0,5,0,0" />
+                <TextBlock x:Name="PublisherTextBlock" Text="tpxxn" HorizontalAlignment="Center" Foreground="Black" Margin="0,5,0,0" />
+                <Button x:Name="GuanWangButton" Focusable="False" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,0,102" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="GuanWangButton_Click" Cursor="{DynamicResource CursorLink}">
+                    <TextBlock TextWrapping="Wrap" Text="www.jihuangbaike.com" VerticalAlignment="Top" TextDecorations="Underline" HorizontalAlignment="Left"/>
+                </Button>
+            </StackPanel>
+            <StackPanel x:Name="ContentStackPanel">
+                <!--请客-->
+                <TextBlock x:Name="DonationTextBlock" Text="请作者姐姐吃点东西~" FontSize="22" Margin="20,20,0,0"/>
+                <StackPanel Margin="20,5,0,5" Orientation="Horizontal">
+                    <RadioButton x:Name="ZfbRadioButton" Content="支付宝" Click="ZfbRadioButton_Click" IsChecked="True" Cursor="{StaticResource CursorLink}"/>
+                    <RadioButton x:Name="WxRadioButton" Content="微信" Click="WxRadioButton_Click" Margin="10,0,0,0" Cursor="{StaticResource CursorLink}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20,5,0,0">
+                    <StackPanel>
+                        <Image x:Name="Donation1Image" Source="/饥荒百科全书CSharp;component/Resources/Pic/QRCode_zfb1.png" Height="128" />
+                        <TextBlock Text="请一包咪咪(1元)" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Margin="50,0,0,0">
+                        <Image x:Name="Donation2Image" Source="/饥荒百科全书CSharp;component/Resources/Pic/QRCode_zfb2.png" Height="128" />
+                        <TextBlock Text="请一农夫山泉(2元)" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Margin="50,0,0,0">
+                        <Image x:Name="Donation5Image" Source="/饥荒百科全书CSharp;component/Resources/Pic/QRCode_zfb5.png" Height="128" />
+                        <TextBlock Text="请一瓶小茗同学(5元)" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <!--反馈-->
+                <TextBlock x:Name="Feedback" Text="发送反馈" FontSize="22" Margin="20,20,0,0" />
+                <StackPanel Orientation="Horizontal" Margin="20,5,0,0">
+                    <TextBlock x:Uid="EMail" VerticalAlignment="Center">
+                    <Run Text="发送邮件至："/>
+                    </TextBlock>
+                    <Button x:Name="EmailButton" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="EmailButton_Click" Cursor="{DynamicResource CursorLink}">
+                        <TextBlock TextWrapping="Wrap" Text="351765204@qq.com" VerticalAlignment="Top" TextDecorations="Underline" HorizontalAlignment="Left"/>
+                    </Button>
+                </StackPanel>
+                <!--数据来源-->
+                <TextBlock Text="数据来源" FontSize="22" Margin="20,20,0,0" />
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="WikiButton" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="WikiButton_Click" Cursor="{DynamicResource CursorLink}">
+                        <Image Source="/饥荒百科全书CSharp;component/Resources/Pic/Wiki-wordmark.png" Height="45" />
+                    </Button>
+                </StackPanel>
+                <!--其他-->
+                <TextBlock Text="其他" FontSize="22" Margin="20,20,0,0" />
+                <TextBlock FontSize="14" Margin="20,5,0,0">
+                <Run Text="本应用使用 MIT 许可开源"/>
+                </TextBlock>
+                <Button x:Name="GithubButton" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="GithubButton_Click" Cursor="{DynamicResource CursorLink}">
+                    <Image Source="/饥荒百科全书CSharp;component/Resources/Pic/github.png" Height="45" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

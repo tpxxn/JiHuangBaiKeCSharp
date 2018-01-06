@@ -120,6 +120,7 @@
     <Compile Include="Class\Global.cs" />
     <Compile Include="Class\JsonDeserialize\GoodsJson.cs" />
     <Compile Include="Class\DedicatedServers\JsonDeserialize\ServerConfigJson.cs" />
+    <Compile Include="Class\JsonDeserialize\ReleaseJson.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\JsonDeserialize\NaturalJson.cs" />
     <Compile Include="CopySplashScreen.xaml.cs">
@@ -230,6 +231,15 @@
     <Compile Include="View\SciencePage.xaml.cs">
       <DependentUpon>SciencePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SettingChildPage\AboutChildPage.xaml.cs">
+      <DependentUpon>AboutChildPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingChildPage\ReleaseChildPage.xaml.cs">
+      <DependentUpon>ReleaseChildPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingChildPage\SettingChildPage.xaml.cs">
+      <DependentUpon>SettingChildPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SettingPage.xaml.cs">
       <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
@@ -309,6 +319,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dictionary\ScrollViewerDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\TabControlDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -441,6 +455,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SettingChildPage\AboutChildPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingChildPage\ReleaseChildPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingChildPage\SettingChildPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SettingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -496,6 +522,7 @@
     <Resource Include="Json\Tencent\Sciences.json" />
     <Resource Include="Json\DedicatedServer\ItemList.json" />
     <Resource Include="Json\DedicatedServer\ServerConfig.json" />
+    <Resource Include="Json\Release.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -5699,6 +5726,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Copied.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Pic\github.png" />
+    <Resource Include="Resources\Pic\QRCode_Qun.png" />
+    <Resource Include="Resources\Pic\QRCode_wx1.png" />
+    <Resource Include="Resources\Pic\QRCode_wx2.png" />
+    <Resource Include="Resources\Pic\QRCode_wx5.png" />
+    <Resource Include="Resources\Pic\QRCode_zfb1.png" />
+    <Resource Include="Resources\Pic\QRCode_zfb2.png" />
+    <Resource Include="Resources\Pic\QRCode_zfb5.png" />
+    <Resource Include="Resources\Pic\Wiki-wordmark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

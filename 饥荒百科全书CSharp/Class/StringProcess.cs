@@ -47,13 +47,6 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>string类型文本</returns>
         public static string GetJsonString(string fileName)
         {
-            //            var folderExists = await ApplicationFolder.TryGetItemAsync(BuiltInGameVersionJsonFolder[GameVersion]);
-            //            var uri = folderExists == null ? new Uri("ms-appx:///Json/" + BuiltInGameVersionJsonFolder[GameVersion] + "/" + fileName) : new Uri(ApplicationFolder.Path + "/" + BuiltInGameVersionJsonFolder[GameVersion] + "/" + fileName);
-
-            //            var uri = new Uri("ms-appx:///Json/" + Global.BuiltInGameVersionJsonFolder[Global.GameVersion] + "/" + fileName);
-            //            var storageFile = await StorageFile.GetFileFromApplicationUriAsync(uri);
-            //            var str = await FileIO.ReadTextAsync(storageFile);
-
             var src2 = Application.GetResourceStream(new Uri("/饥荒百科全书CSharp;component/Json/"+ Global.BuiltInGameVersionJsonFolder[(int)Global.GameVersion]+ "/" + fileName, UriKind.Relative))?.Stream;
             var str = new StreamReader(src2 ?? throw new InvalidOperationException(), Encoding.UTF8).ReadToEnd();
             return str;
@@ -66,13 +59,6 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>string类型文本</returns>
         public static string GetJsonStringDedicatedServer(string fileName)
         {
-            //            var folderExists = await ApplicationFolder.TryGetItemAsync(BuiltInGameVersionJsonFolder[GameVersion]);
-            //            var uri = folderExists == null ? new Uri("ms-appx:///Json/" + BuiltInGameVersionJsonFolder[GameVersion] + "/" + fileName) : new Uri(ApplicationFolder.Path + "/" + BuiltInGameVersionJsonFolder[GameVersion] + "/" + fileName);
-
-            //            var uri = new Uri("ms-appx:///Json/" + Global.BuiltInGameVersionJsonFolder[Global.GameVersion] + "/" + fileName);
-            //            var storageFile = await StorageFile.GetFileFromApplicationUriAsync(uri);
-            //            var str = await FileIO.ReadTextAsync(storageFile);
-
             var src2 = Application.GetResourceStream(new Uri("/饥荒百科全书CSharp;component/Json/DedicatedServer/" + fileName, UriKind.Relative))?.Stream;
             var str = new StreamReader(src2 ?? throw new InvalidOperationException(), Encoding.UTF8).ReadToEnd();
             return str;
