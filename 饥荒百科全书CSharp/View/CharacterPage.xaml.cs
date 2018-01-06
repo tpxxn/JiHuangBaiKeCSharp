@@ -35,6 +35,7 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            RightScrollViewer.FontWeight = Global.FontWeight;
             var extraData = (string[])e.ExtraData;
             Deserialize();
             if (extraData == null) return;

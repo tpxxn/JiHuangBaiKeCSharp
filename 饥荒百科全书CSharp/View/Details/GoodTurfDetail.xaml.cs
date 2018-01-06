@@ -33,6 +33,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 FontFamily = Global.FontFamily;
             }
+            GoodTurfLeftScrollViewer.FontWeight = Global.FontWeight;
         }
 
         public GoodTurfDetail()
@@ -95,7 +96,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 ConsoleNum.Text = "1";
             }
-            Clipboard.SetText(ConsolePre.Text + ConsoleNum.Text + ")");
+            Global.SetClipboard(ConsolePre.Text + ConsoleNum.Text + ")");
         }
     }
 }

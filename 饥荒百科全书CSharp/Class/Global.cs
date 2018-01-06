@@ -40,6 +40,7 @@ namespace 饥荒百科全书CSharp.Class
         /// MainPage需要保存在Global里额几个控件对象
         /// </summary>
         public static FontFamily FontFamily { get; set; }
+        public static FontWeight FontWeight { get; set; }
         public static Grid RootGrid { get; set; }
         public static TextBlock FrameTitle { get; set; }
         public static Frame RootFrame { get; set; }
@@ -91,6 +92,18 @@ namespace 饥荒百科全书CSharp.Class
         #endregion
 
         #region 方法
+        /// <summary>
+        /// 设置剪贴板
+        /// </summary>
+        /// <param name="text">文本</param>
+        public static void SetClipboard(string text)
+        {
+            Clipboard.SetText(text);
+            var copySplashWindow = new CopySplashScreen();
+            copySplashWindow.InitializeComponent();
+            copySplashWindow.Show();
+        }
+
         /// <summary>
         /// 遍历视觉树
         /// </summary>

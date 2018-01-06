@@ -32,6 +32,11 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            WButtonOfficialWebsite.FontWeight = Global.FontWeight;
+            WButtonMods.FontWeight = Global.FontWeight;
+            WButtonDsNews.FontWeight = Global.FontWeight;
+            WButtonDstNewS.FontWeight = Global.FontWeight;
+            TipTextBlock.FontWeight = Global.FontWeight;
         }
 
         public WelcomePage()
@@ -46,21 +51,25 @@ namespace 饥荒百科全书CSharp.View
         {
             Process.Start("http://www.jihuangbaike.com");
         }
+
         //Mod
         private void W_button_Mods_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://steamcommunity.com/sharedfiles/filedetails/?id=635215011");
         }
+
         //DS新闻
         private void W_button_DSNews_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://store.steampowered.com/news/?appids=219740");
         }
+
         //DST新闻
         private void W_button_DSTNewS_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://store.steampowered.com/news/?appids=322330");
         }
+
         //群二维码
         private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
         {

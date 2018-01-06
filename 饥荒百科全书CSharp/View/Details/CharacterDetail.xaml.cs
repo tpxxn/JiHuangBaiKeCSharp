@@ -33,6 +33,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 FontFamily = Global.FontFamily;
             }
+            CharacterLeftScrollViewer.FontWeight = Global.FontWeight;
         }
 
         public CharacterDetail()

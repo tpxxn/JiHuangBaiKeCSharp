@@ -35,6 +35,7 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            RightScrollViewer.FontWeight = Global.FontWeight;
             var extraData = (string[])e.ExtraData;
             Deserialize();
             if (extraData == null)
@@ -96,19 +97,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), good);
@@ -122,19 +123,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodEquipmentDetail(), good);
@@ -148,19 +149,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodSaplingDetail(), good);
@@ -174,19 +175,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodCreaturesDetail(), good);
@@ -200,19 +201,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodTurfDetail(), good);
@@ -226,19 +227,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodPetDetail(), good);
@@ -252,19 +253,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodUnlockDetail(), good);
@@ -278,19 +279,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var good = gridViewItem;
                 if (good == null || good.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != good.Picture) continue;
                     var goodButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = goodButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = goodButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new GoodDetail(), good);

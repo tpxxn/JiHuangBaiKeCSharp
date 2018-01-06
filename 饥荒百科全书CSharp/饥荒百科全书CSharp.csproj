@@ -122,6 +122,9 @@
     <Compile Include="Class\DedicatedServers\JsonDeserialize\ServerConfigJson.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\JsonDeserialize\NaturalJson.cs" />
+    <Compile Include="CopySplashScreen.xaml.cs">
+      <DependentUpon>CopySplashScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MWUI.cs" />
     <Compile Include="Class\RegeditRW.cs" />
     <Compile Include="Class\JsonDeserialize\SciencesJson.cs" />
@@ -233,6 +236,10 @@
     <Compile Include="View\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
+    <Page Include="CopySplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dictionary\ComboBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -5689,6 +5696,9 @@
   <ItemGroup>
     <Resource Include="Resources\GameResources\Natures\N_planted_carrot.png" />
     <Resource Include="Resources\GameResources\Natures\N_planted_sweet_potato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Copied.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

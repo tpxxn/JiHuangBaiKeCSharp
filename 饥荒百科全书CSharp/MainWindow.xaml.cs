@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
+using Application = System.Windows.Application;
 
 namespace 饥荒百科全书CSharp
 {
@@ -45,6 +47,7 @@ namespace 饥荒百科全书CSharp
         //MainWindow构造函数
         public MainWindow()
         {
+            Application.Current.MainWindow = this;
             #region "读取注册表(必须在初始化之前读取)"
             // 背景图片
             var bg = RegeditRw.RegReadString("Background");
@@ -58,6 +61,7 @@ namespace 饥荒百科全书CSharp
             var mainWindowWidth = RegeditRw.RegRead("MainWindowWidth");
             // 字体
             var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
+            var mainWindowFontWeight = RegeditRw.RegReadString("MainWindowFontWeight");
             // 设置菜单
             var winTopmost = RegeditRw.RegRead("Topmost");
             // 游戏版本
@@ -85,6 +89,13 @@ namespace 饥荒百科全书CSharp
                 mainWindowFont = "微软雅黑";
             }
             mainWindow.FontFamily = new FontFamily(mainWindowFont);
+            // 设置字体加粗
+            if (string.IsNullOrEmpty(mainWindowFontWeight))
+            {
+                RegeditRw.RegWrite("MainWindowFontWeight", "False");
+            }
+            mainWindow.FontWeight = mainWindowFontWeight == "True" ? FontWeights.Bold : FontWeights.Normal;
+            Global.FontWeight = mainWindow.FontWeight;
             // 版本初始化
             UiVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version;
             // 窗口可视化计时器
@@ -183,16 +194,13 @@ namespace 饥荒百科全书CSharp
                 SeComboBoxFont.Items.Add(textBlock);
             }
             var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
-            var stringList = new List<string>();
-            foreach (TextBlock textBlock in SeComboBoxFont.Items)
-            {
-                stringList.Add(textBlock.Text);
-            }
+            var stringList = (from TextBlock textBlock in SeComboBoxFont.Items select textBlock.Text).ToList();
             SeComboBoxFont.SelectedIndex = stringList.IndexOf(mainWindowFont);
+            var mainWindowFontWeight = RegeditRw.RegReadString("MainWindowFontWeight");
+            SeCheckBoxFontWeight.IsChecked = mainWindowFontWeight == "True";
             LoadFont = true;
         }
         #endregion
-        
     }
 }
 

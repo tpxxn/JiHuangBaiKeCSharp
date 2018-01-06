@@ -56,7 +56,7 @@
         </Grid.ColumnDefinitions>
         <Frame x:Name="LeftFrame"/>
         <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource CursorHorz}" Style="{DynamicResource GridSplitterStyle}" />
-        <ScrollViewer x:Name="ScrollViewerRight" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
+        <ScrollViewer x:Name="RightScrollViewer" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>
                 <Expander x:Name="BiomesExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>

@@ -34,6 +34,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 FontFamily = Global.FontFamily;
             }
+            NaturalLeftScrollViewer.FontWeight = Global.FontWeight;
         }
 
         public NaturalBiomesDetail()

@@ -35,6 +35,7 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            RightScrollViewer.FontWeight = Global.FontWeight;
             var extraData = (string[])e.ExtraData;
             Deserialize();
             if (extraData == null)
@@ -63,19 +64,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var naturalBiomes = itemsControlItem;
                 if (naturalBiomes == null || naturalBiomes.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != naturalBiomes.Picture) continue;
                     var naturalBiomesButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = naturalBiomesButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = naturalBiomesButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), naturalBiomes);
@@ -89,19 +90,19 @@ namespace 饥荒百科全书CSharp.View
             {
                 var naturalSmallPlant = itemsControlItem;
                 if (naturalSmallPlant == null || naturalSmallPlant.Picture != suggestBoxItemPicture) continue;
-                ScrollViewerRight.UpdateLayout();
+                RightScrollViewer.UpdateLayout();
                 var resultList = new List<Button>();
-                Global.FindChildren(resultList, ScrollViewerRight);
+                Global.FindChildren(resultList, RightScrollViewer);
                 foreach (var button in resultList)
                 {
                     var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
                     var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
                     if (imageSourceShort != naturalSmallPlant.Picture) continue;
                     var naturalSmallPlantButton = button;
-                    var currentScrollPosition = ScrollViewerRight.VerticalOffset;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
                     var point = new Point(0, currentScrollPosition);
-                    var targetPosition = naturalSmallPlantButton.TransformToVisual(ScrollViewerRight).Transform(point);
-                    ScrollViewerRight.ScrollToVerticalOffset(targetPosition.Y);
+                    var targetPosition = naturalSmallPlantButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
                 LeftFrame.NavigationService.Navigate(new NaturalSmallPlantDetail(), naturalSmallPlant);

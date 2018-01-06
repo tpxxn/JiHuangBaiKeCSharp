@@ -34,6 +34,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 FontFamily = Global.FontFamily;
             }
+            NaturalLeftScrollViewer.FontWeight = Global.FontWeight;
         }
 
         public NaturalSmallPlantDetail()
@@ -220,21 +221,6 @@ namespace 饥荒百科全书CSharp.View.Details
             }
         }
 
-        private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var textbox = (TextBox)sender;
-            StringProcess.ConsoleNumTextCheck(textbox);
-        }
-
-        private void Copy_Click(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(ConsoleNum.Text) || double.Parse(ConsoleNum.Text) == 0)
-            {
-                ConsoleNum.Text = "1";
-            }
-            Clipboard.SetText(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
-        }
-
         /// <summary>
         /// 显示资源
         /// </summary>
@@ -366,5 +352,21 @@ namespace 饥荒百科全书CSharp.View.Details
                 ShowResources(_smallPlantIndex);
             }
         }
+
+        private void ConsoleNum_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            StringProcess.ConsoleNumTextCheck(textbox);
+        }
+
+        private void Copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(ConsoleNum.Text) || double.Parse(ConsoleNum.Text) == 0)
+            {
+                ConsoleNum.Text = "1";
+            }
+            Global.SetClipboard(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
+        }
+
     }
 }

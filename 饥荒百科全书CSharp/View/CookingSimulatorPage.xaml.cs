@@ -34,6 +34,8 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
+            CookingSimulatorLeftScrollViewer.FontWeight = Global.FontWeight;
+            RightScrollViewer.FontWeight = Global.FontWeight;
         }
 
         public CookingSimulatorPage()

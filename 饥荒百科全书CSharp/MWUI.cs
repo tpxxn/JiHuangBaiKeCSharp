@@ -436,9 +436,23 @@ namespace 饥荒百科全书CSharp
             mainWindow.FontFamily = new FontFamily(textList[SeComboBoxFont.SelectedIndex]);
             Global.FontFamily = mainWindow.FontFamily;
             RightFrame.NavigationService.Navigate(new WelcomePage());
+            SidebarWelcome.IsChecked = true;
             RegeditRw.RegWrite("MainWindowFont", textList[SeComboBoxFont.SelectedIndex]);
         }
 
+        /// <summary>
+        /// 修改字体加粗
+        /// </summary>
+        private void Se_CheckBox_FontWeight_Click(object sender, RoutedEventArgs e)
+        {
+            if (!LoadFont) return;
+            mainWindow.FontWeight = SeCheckBoxFontWeight.IsChecked == true ? FontWeights.Bold : FontWeights.Normal;
+            Global.FontWeight = mainWindow.FontWeight;
+            RightFrame.NavigationService.Navigate(new WelcomePage());
+            SidebarWelcome.IsChecked = true;
+            RegeditRw.RegWrite("MainWindowFontWeight", SeCheckBoxFontWeight.IsChecked.ToString());
+        }
+        
         /// <summary>
         /// 设置背景透明度
         /// </summary>

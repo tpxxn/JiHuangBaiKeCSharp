@@ -28,6 +28,5 @@ namespace 饥荒百科全书CSharp
             mainWindowShow.Activate();
             Close();
         }
-
     }
 }
