@@ -116,8 +116,8 @@
 				"IsTeamWork": true,
 				"Goods": [
 					"F_monster_meat|×1（50%）",
-					"G_silk|×1（50%）",
-					"G_spider_gland|×1（50%）"
+					"G_silk|×1（25%）",
+					"G_spider_gland|×1（25%）"
 				],
 				"Introduction": "蜘蛛出生在蜘蛛巢或由蜘蛛女王孵化，当玩家经过蜘蛛网时，会有少量蜘蛛来巡查。黄昏和夜晚蜘蛛会主动出来行动。若攻击了一只蜘蛛，周围的蜘蛛都会来帮忙，蜘蛛的攻击间隔较长，很容易风筝。用陷阱可以直接杀害蜘蛛。",
 				"Console": "spider"

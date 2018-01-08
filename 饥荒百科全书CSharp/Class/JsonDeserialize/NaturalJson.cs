@@ -59,25 +59,64 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
-    public class SmallPlant
+    public class SmallPlants
     {
         public List<NatureSmallPlant> NatureSmallPlant { get; set; }
 
-        public SmallPlant()
+        public SmallPlants()
         {
             NatureSmallPlant = new List<NatureSmallPlant>();
+        }
+    }
+
+    public class NatureTree
+    {
+        public string Picture { get; set; }
+        public List<string> Pictures { get; set; }
+        public string Name { get; set; }
+        public string EnName { get; set; }
+        public string CutDownTools { get; set; }
+        public List<List<string>> Resources { get; set; }
+        public List<List<string>> ResourcesBurned { get; set; }
+        public List<string> Ability { get; set; }
+        public bool IsRegenerate { get; set; }
+        public bool IsCombustible { get; set; }
+        public List<string> Biomes { get; set; }
+        public string Introduction { get; set; }
+        public List<string> Console { get; set; }
+
+        public NatureTree()
+        {
+            Pictures = new List<string>();
+            Resources = new List<List<string>>();
+            ResourcesBurned = new List<List<string>>();
+            Ability = new List<string>();
+            Biomes = new List<string>();
+            Console = new List<string>();
+        }
+    }
+
+    public class Trees
+    {
+        public List<NatureTree> NatureTree { get; set; }
+
+        public Trees()
+        {
+            NatureTree = new List<NatureTree>();
         }
     }
 
     public class NaturalRootObject
     {
         public Biomes Biomes { get; set; }
-        public SmallPlant SmallPlant { get; set; }
+        public SmallPlants SmallPlants { get; set; }
+        public Trees Trees { get; set; }
 
         public NaturalRootObject()
         {
             Biomes = new Biomes();
-            SmallPlant = new SmallPlant();
+            SmallPlants = new SmallPlants();
+            Trees = new Trees();
         }
     }
 }

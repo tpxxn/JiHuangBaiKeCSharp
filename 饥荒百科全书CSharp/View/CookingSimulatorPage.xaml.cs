@@ -720,6 +720,7 @@ namespace 饥荒百科全书CSharp.View
                     break;
                 case "F_royal_jelly":
                     _csFtRoyalJelly += 1;
+                    _csFtSweetener += 3;
                     break;
                 case "F_twigs":
                     _csFtTwigs += 1;

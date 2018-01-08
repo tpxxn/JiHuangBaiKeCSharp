@@ -244,7 +244,7 @@ namespace 饥荒百科全书CSharp
                     RightFrame.NavigationService.Navigate(new SciencePage(), extraData);
                     break;
                 case "生物":
-                    SidebarAnimal.IsChecked = true;
+                    SidebarCreature.IsChecked = true;
                     RightFrame.NavigationService.Navigate(new CreaturePage(), extraData);
                     break;
                 case "自然":
@@ -591,7 +591,7 @@ namespace 饥荒百科全书CSharp
             RightFrame.Visibility = Visibility.Visible;
             RightFrame.NavigationService.Navigate(new SciencePage());
         }
-        private void Sidebar_Animal_Click(object sender, RoutedEventArgs e)
+        private void Sidebar_Creature_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;

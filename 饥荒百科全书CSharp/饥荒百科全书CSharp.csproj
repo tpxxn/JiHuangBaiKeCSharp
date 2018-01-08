@@ -216,6 +216,9 @@
     <Compile Include="View\Details\NaturalSmallPlantDetail.xaml.cs">
       <DependentUpon>NaturalSmallPlantDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Details\NaturalTreesDetail.xaml.cs">
+      <DependentUpon>NaturalTreesDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Details\ScienceDetail.xaml.cs">
       <DependentUpon>ScienceDetail.xaml</DependentUpon>
     </Compile>
@@ -299,6 +302,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dictionary\DedicatedServer\DediSelectBoxDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\ListBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -432,6 +439,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Details\NaturalSmallPlantDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\NaturalTreesDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -5737,6 +5748,22 @@
     <Resource Include="Resources\Pic\QRCode_zfb2.png" />
     <Resource Include="Resources\Pic\QRCode_zfb5.png" />
     <Resource Include="Resources\Pic\Wiki-wordmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Medium_Cubic.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Medium_Pyramid.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Medium_Round.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Small_Cubic.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Small_Pyramid.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Small_Round.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Tall_Cubic.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Tall_Pyramid.png" />
+    <Resource Include="Resources\GameResources\Natures\N_Marble_Shrub_Tall_Round.png" />
+    <Resource Include="Resources\GameResources\Natures\N_marble_sprout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CheckBoxChecked.png" />
+    <Resource Include="Resources\CheckBoxUnChecked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using 饥荒百科全书CSharp.Class;
 
 namespace 饥荒百科全书CSharp.View.SettingChildPage
 {
@@ -22,9 +23,19 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
     /// </summary>
     public partial class AboutChildPage : Page
     {
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+            RootScrollViewer.FontWeight = Global.FontWeight;
+        }
+
         public AboutChildPage()
         {
             InitializeComponent();
+            Global.SettingRootFrame.NavigationService.LoadCompleted += LoadCompleted;
             VersionTextBlock.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 

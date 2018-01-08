@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
 
 namespace 饥荒百科全书CSharp.View.SettingChildPage
@@ -24,9 +25,19 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
     /// </summary>
     public partial class ReleaseChildPage : Page
     {
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+            RootScrollViewer.FontWeight = Global.FontWeight;
+        }
+
         public ReleaseChildPage()
         {
             InitializeComponent();
+            Global.SettingRootFrame.NavigationService.LoadCompleted += LoadCompleted;
             Deserialize();
         }
 

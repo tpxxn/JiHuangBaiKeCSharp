@@ -8,7 +8,7 @@
       d:DesignHeight="660" d:DesignWidth="888"
       Title="SettingChildPage">
 
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Template="{StaticResource MyScrollViewer}">
+    <ScrollViewer x:Name="RootScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Template="{StaticResource MyScrollViewer}">
         <StackPanel Orientation="Vertical" Margin="10">
             <!--老板键-->
             <StackPanel Orientation="Horizontal">

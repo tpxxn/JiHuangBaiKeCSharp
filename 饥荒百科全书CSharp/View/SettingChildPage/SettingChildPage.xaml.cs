@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using 饥荒百科全书CSharp.Class;
 using Control = System.Windows.Forms.Control;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
@@ -23,13 +24,23 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
     /// </summary>
     public partial class SettingChildPage : Page
     {
+        public void LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            if (Global.FontFamily != null)
+            {
+                FontFamily = Global.FontFamily;
+            }
+            RootScrollViewer.FontWeight = Global.FontWeight;
+        }
+
         public SettingChildPage()
         {
             InitializeComponent();
+            Global.SettingRootFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
 
         //老板键
-        private void Se_BossKey_Key_KeyDown(Object sender, KeyEventArgs e)
+        private void Se_BossKey_Key_KeyDown(object sender, KeyEventArgs e)
         {
             byte pressAlt; //Alt
             byte pressCtrl; //Ctrl

@@ -100,6 +100,12 @@ namespace 饥荒百科全书CSharp
                     new ResourceDictionary
                     {
                         Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/ListBoxDictionary.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/ScrollViewerDictionary.xaml",
                             UriKind.Absolute)
                     },

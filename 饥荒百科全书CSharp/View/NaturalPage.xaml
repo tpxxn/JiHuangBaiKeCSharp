@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="888"
       Title="NaturalPage" SizeChanged="Page_SizeChanged">
-    
+
     <Page.Resources>
         <DataTemplate x:Key="NaturalBiomesDataTemplate" DataType="jsonDeserialize:NatureBiomes">
             <Button Click="NaturalBiomesButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
@@ -21,7 +21,7 @@
                 </Grid>
             </Button>
         </DataTemplate>
-        
+
         <DataTemplate x:Key="NaturalSmallPlantsDataTemplate" DataType="jsonDeserialize:NatureSmallPlant">
             <Button Click="NaturalSmallPlantButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="100" Height="100">
@@ -34,8 +34,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-        
-        <DataTemplate x:Key="NaturalTreesDataTemplate" DataType="jsonDeserialize:NaturalTree">
+
+        <DataTemplate x:Key="NaturalTreesDataTemplate" DataType="jsonDeserialize:NatureTree">
             <Button Click="NaturalTreeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>
@@ -86,7 +86,7 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-                <Expander Visibility="Collapsed" x:Name="TreesExpander" Style="{StaticResource ExpanderStyle}" >
+                <Expander x:Name="TreesExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="树" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>

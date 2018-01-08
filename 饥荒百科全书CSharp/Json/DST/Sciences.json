@@ -1701,7 +1701,7 @@
         "Need1": "G_marble",
         "Need1Value": 1,
         "Unlock": [ "S_alchemy_engine" ],
-        "Introduction": "种大理石树。",
+        "Introduction": "种大理石灌木。",
         "Console": "marblebean"
       },
       {

@@ -8,7 +8,7 @@
       d:DesignHeight="660" d:DesignWidth="888"
       Title="AboutChildPage">
 
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Template="{StaticResource MyScrollViewer}">
+    <ScrollViewer x:Name="RootScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Template="{StaticResource MyScrollViewer}">
         <StackPanel x:Name="RootStackPanel" Background="{x:Null}">
             <StackPanel x:Name="HeaderStackPanel" VerticalAlignment="Center" Background="#55B2ECED" Height="250">
                 <Ellipse Height="120" Width="120" StrokeThickness="4" Margin="0,15,0,0" Stroke="Black">

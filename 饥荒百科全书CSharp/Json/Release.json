@@ -1,6 +1,36 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.5.9",
+      "Data": "2018年1月8日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "增加设置页面(通用、更新日志、关于)"
+        },
+        {
+          "Label": "新增",
+          "Content": "自然页面添加树"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正烹饪模拟器蜂王浆相关BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正联机版树枝可制作物品(去除魔杖)"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正蜘蛛战利品"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正大理石豆描述"
+        }
+      ]
+    },
+    {
       "Version": "0.7.5.8",
       "Data": "2018年1月6日",
       "UpdataContent": [

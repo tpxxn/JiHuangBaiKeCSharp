@@ -249,7 +249,7 @@
       }
     ]
   },
-  "SmallPlant": {
+  "SmallPlants": {
     "NatureSmallPlant": [
       {
         "Picture": "N_flower_1",
@@ -710,6 +710,201 @@
         ],
         "Introduction": "象仙人掌只生长在火山里，它们只在干燥季节活跃。靠近象仙人掌会受到20点AOE伤害，每次攻击象仙人掌，它将使攻击者受到10点伤害。穿着象仙人掌盔甲尽管可以免疫象仙人掌的AOE攻击，但是无法抵挡反击伤害。象仙人掌死亡后会掉落象仙人掌刺并且缩小，这时可以用铲子挖起移植，象仙人掌只能种植在岩浆地皮、灰色地皮和火山地皮上。象仙人掌不会被火烧。",
         "Console": "elephantcactus_active"
+      }
+    ]
+  },
+  "Trees": {
+    "NatureTree": [
+      {
+        "Picture": "N_palm_tree_1",
+        "Pictures": [
+          "N_palm_tree_|3"
+        ],
+        "Name": "椰子树",
+        "EnName": "Palm Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_log|×1&",
+            "G_palm_leaf|×1&"
+          ],
+          [
+            "G_log|×2&",
+            "G_palm_leaf|×1&"
+          ],
+          [
+            "G_log|×2&",
+            "G_palm_leaf|×1&",
+            "F_coconut|×1&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "Ability": [
+          "A_palm_treeguard"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "椰子树通常可以在海滩找到。椰子树是椰子和木材的主要来源，可以被猪人随从砍伐。砍伐椰子树的次数为5(小)/10(中)/15(大)次。椰子树会随着时间变化在小、中、大这个生长周期中不断循环。一旦砍伐，树墩不会长成椰子树。第四天开始，每次砍伐椰子树都有1/75的几率产生椰树守卫(包括自己种的)。每次砍伐椰子树都有1%的几率砸下一个椰子造成20点伤害，掉落的椰子可以收集。",
+        "Console": [
+          "palmtree"
+        ]
+      },
+      {
+        "Picture": "N_jungle_tree_1",
+        "Pictures": [
+          "N_jungle_tree_|3"
+        ],
+        "Name": "丛林树",
+        "EnName": "Jungle Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_log|×1&"
+          ],
+          [
+            "G_log|×2&",
+            "G_jungle_tree_seed|×1&",
+            "F_egg|×1(50%)&"
+          ],
+          [
+            "G_log|×3&",
+            "G_jungle_tree_seed|×2&",
+            "F_egg|×1(25%)&",
+            "F_egg|×1(25%)&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "Ability": [
+          "A_snake",
+          "A_poison_snake"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "丛林树只能在热带雨林找到，它们是迄今为止最大的树。每次砍伐丛林树都有50%的几率产生蛇。",
+        "Console": [
+          "jungletree"
+        ]
+      },
+      {
+        "Picture": "N_mangrove_1",
+        "Pictures": [
+          "N_mangrove_|3"
+        ],
+        "Name": "红树林",
+        "EnName": "Mangrove",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_log|×1&",
+            "G_twigs|×1&"
+          ],
+          [
+            "G_log|×1&",
+            "G_twigs|×2&"
+          ],
+          [
+            "G_log|×2&",
+            "G_twigs|×3&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_mangrove_bio"
+        ],
+        "Introduction": "红树林生长在红树林生物群落，只能坐船拜访它们。截至目前，没有种植红树林的方法，但是只要没有完全摧毁它们，就会很快恢复。",
+        "Console": [
+          "mangrovetree"
+        ]
+      },
+      {
+        "Picture": "N_regular_jungle_tree",
+        "Name": "正常的丛林树",
+        "EnName": "Regular Jungle Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_living_log|×2&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "船难版的完全正常的树。需要砍伐20次，可以获得两个活木，挖起树墩也可以获得一个活木。正常的丛林树周围通常有一些恶魔之花。",
+        "Console": [
+          "livingjungletree"
+        ]
+      },
+      {
+        "Picture": "N_burnt_ash_tree",
+        "Name": "烧焦的灰树",
+        "EnName": "Burnt Ash Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_volcano_bio"
+        ],
+        "Introduction": "生长在火山的树，砍伐后获得一个灰烬。",
+        "Console": [
+          "volcano_shrub"
+        ]
+      },
+      {
+        "Picture": "N_brainy_sprout",
+        "Name": "聪明芽",
+        "EnName": "Brainy Sprout",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "F_brainy_matter|×1&",
+            "S_limestone|×1&Hammer"
+          ]
+        ],
+        "Ability": [
+          "+25精神/分",
+          "发光"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_coral_reef_bio"
+        ],
+        "Introduction": "聪明芽生长在珊瑚礁生物群落。采摘获得聪明豆，生长需要20天。如果没有采摘，在黄昏和夜晚会发光，发光的时候有25精神/分的光环存在。",
+        "Console": [
+          "coral_brain_rock"
+        ]
       }
     ]
   }

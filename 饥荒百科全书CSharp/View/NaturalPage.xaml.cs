@@ -54,6 +54,9 @@ namespace 饥荒百科全书CSharp.View
                     case "NaturalSmallPlants":
                         OnNavigatedToSmallPlantDialog(Global.NaturalSmallPlantsData, suggestBoxItemPicture);
                         break;
+                    case "NaturalTrees":
+                        OnNavigatedToTreeDialog(Global.NaturalTreesData, suggestBoxItemPicture);
+                        break;
                 }
             }
         }
@@ -109,7 +112,32 @@ namespace 饥荒百科全书CSharp.View
                 break;
             }
         }
-        
+
+        private void OnNavigatedToTreeDialog(List<NatureTree> naturalCollection, string suggestBoxItemPicture)
+        {
+            foreach (var itemsControlItem in naturalCollection)
+            {
+                var naturalSmallPlant = itemsControlItem;
+                if (naturalSmallPlant == null || naturalSmallPlant.Picture != suggestBoxItemPicture) continue;
+                RightScrollViewer.UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, RightScrollViewer);
+                foreach (var button in resultList)
+                {
+                    var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
+                    var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
+                    if (imageSourceShort != naturalSmallPlant.Picture) continue;
+                    var naturalSmallPlantButton = button;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
+                    var point = new Point(0, currentScrollPosition);
+                    var targetPosition = naturalSmallPlantButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
+                    break;
+                }
+                LeftFrame.NavigationService.Navigate(new NaturalTreesDetail(), naturalSmallPlant);
+                break;
+            }
+        }
         public NaturalPage()
         {
             InitializeComponent();
@@ -122,7 +150,7 @@ namespace 饥荒百科全书CSharp.View
         {
             BiomesExpander.DataContext = Global.NaturalBiomesData;
             SmallPlantsExpander.DataContext = Global.NaturalSmallPlantsData;
-            //TreesExpander.DataContext = Global.NaturalSmallPlantsData;
+            TreesExpander.DataContext = Global.NaturalTreesData;
         }
 
         private void NaturalBiomesButton_Click(object sender, RoutedEventArgs e)
@@ -139,8 +167,8 @@ namespace 饥荒百科全书CSharp.View
 
         private void NaturalTreeButton_Click(object sender, RoutedEventArgs e)
         {
-            //var nature = (NatureBiomes)((Button)sender).DataContext;
-            //LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), nature);
+            var nature = (NatureTree)((Button)sender).DataContext;
+            LeftFrame.NavigationService.Navigate(new NaturalTreesDetail(), nature);
         }
 
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)

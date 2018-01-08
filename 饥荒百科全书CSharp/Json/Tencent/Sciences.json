@@ -1534,72 +1534,78 @@
 	},
 	"Refine": {
 		"Science": [
-			{
-				"Picture": "S_rope",
-				"Name": "绳子",
-				"EnName": "Rope",
-				"Need1": "G_cut_grass",
-				"Need1Value": 3,
-				"Unlock": ["S_science_machine"],
-				"Introduction": "高级素材，可进一步合成更多道具装备。",
-				"Console": "rope"
-			}, {
-				"Picture": "S_boards",
-				"Name": "木板",
-				"EnName": "Boards",
-				"Need1": "G_log",
-				"Need1Value": 4,
-				"Unlock": ["S_science_machine"],
-				"Introduction": "高级素材，可进一步合成更多道具，或者建造建筑。",
-				"Console": "boards"
-			}, {
-				"Picture": "S_cut_stone",
-				"Name": "石砖",
-				"EnName": "Cut Stone",
-				"Need1": "G_rocks",
-				"Need1Value": 3,
-				"Unlock": ["S_science_machine"],
-				"Introduction": "高级素材，一些建造需要用到石砖。",
-				"Console": "cutstone"
-			}, {
-				"Picture": "S_papyrus",
-				"Name": "莎草纸",
-				"EnName": "Papyrus",
-				"Need1": "G_cut_reeds",
-				"Need1Value": 4,
-				"Unlock": ["S_science_machine"],
-				"Introduction": "高级素材，可进一步合成其他道具。维克波顿制作书籍必备素材。",
-				"Console": "papyrus"
-			}, {
-				"Picture": "S_wax_paper",
-				"Name": "蜡纸",
-				"EnName": "Wax Paper",
-				"Need1": "S_beeswax",
-				"Need1Value": 1,
-				"Need2": "S_papyrus",
-				"Need2Value": 1,
-				"Unlock": ["S_science_machine"],
-				"Introduction": "可用作包装。",
-				"Console": "waxpaper"
-			}, {
-				"Picture": "S_beeswax",
-				"Name": "蜂蜡",
-				"EnName": "Beeswax",
-				"Need1": "F_honeycomb",
-				"Need1Value": 1,
-				"Unlock": ["S_science_machine"],
-				"Introduction": "夏天或热源附近放在地面，蜂蜡会融化并消失。",
-				"Console": "beeswax"
-			}, {
-				"Picture": "S_marble_bean",
-				"Name": "大理石豆子",
-				"EnName": "Marble Bean",
-				"Need1": "G_marble",
-				"Need1Value": 1,
-				"Unlock": ["S_alchemy_engine"],
-				"Introduction": "种大理石树。",
-				"Console": "marblebean"
-			}, {
+      {
+        "Picture": "S_rope",
+        "Name": "绳子",
+        "EnName": "Rope",
+        "Need1": "G_cut_grass",
+        "Need1Value": 3,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "高级素材，可进一步合成更多道具装备。",
+        "Console": "rope"
+      },
+      {
+        "Picture": "S_boards",
+        "Name": "木板",
+        "EnName": "Boards",
+        "Need1": "G_log",
+        "Need1Value": 4,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "高级素材，可进一步合成更多道具，或者建造建筑。",
+        "Console": "boards"
+      },
+      {
+        "Picture": "S_cut_stone",
+        "Name": "石砖",
+        "EnName": "Cut Stone",
+        "Need1": "G_rocks",
+        "Need1Value": 3,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "高级素材，一些建造需要用到石砖。",
+        "Console": "cutstone"
+      },
+      {
+        "Picture": "S_papyrus",
+        "Name": "莎草纸",
+        "EnName": "Papyrus",
+        "Need1": "G_cut_reeds",
+        "Need1Value": 4,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "高级素材，可进一步合成其他道具。维克波顿制作书籍必备素材。",
+        "Console": "papyrus"
+      },
+      {
+        "Picture": "S_wax_paper",
+        "Name": "蜡纸",
+        "EnName": "Wax Paper",
+        "Need1": "S_beeswax",
+        "Need1Value": 1,
+        "Need2": "S_papyrus",
+        "Need2Value": 1,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "可用作包装。",
+        "Console": "waxpaper"
+      },
+      {
+        "Picture": "S_beeswax",
+        "Name": "蜂蜡",
+        "EnName": "Beeswax",
+        "Need1": "F_honeycomb",
+        "Need1Value": 1,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "夏天或热源附近放在地面，蜂蜡会融化并消失。",
+        "Console": "beeswax"
+      },
+      {
+        "Picture": "S_marble_bean",
+        "Name": "大理石豆子",
+        "EnName": "Marble Bean",
+        "Need1": "G_marble",
+        "Need1Value": 1,
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "种大理石灌木。",
+        "Console": "marblebean"
+      }, {
 				"Picture": "S_thick_fur",
 				"Name": "厚重的皮毛",
 				"EnName": "Thick Fur",
