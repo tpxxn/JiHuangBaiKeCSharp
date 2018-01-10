@@ -114,7 +114,7 @@
     "Science": [
       {
         "Picture": "S_campfire",
-        "Name": "萤火",
+        "Name": "营火",
         "EnName": "Campfire",
         "Need1": "G_cut_grass",
         "Need1Value": 3,
@@ -719,7 +719,7 @@
         "Need3": "G_gold_nugget",
         "Need3Value": 2,
         "UnlockCharcter": "C_wathgrithr",
-        "Introduction": "威戈芙瑞德出生自带的战斗长矛，攻击力比长矛要高一些，制作材料也比较简单，适合人手一把。",
+        "Introduction": "维格弗里德出生自带的战斗长矛，攻击力比长矛要高一些，制作材料也比较简单，适合人手一把。",
         "Console": "spear_wathgrithr"
       },
       {
@@ -731,7 +731,7 @@
         "Need2": "G_rocks",
         "Need2Value": 2,
         "UnlockCharcter": "C_wathgrithr",
-        "Introduction": "威戈芙瑞德出生自带的战斗头盔，防御力不错，建议人手一个并多备一些，消耗得比较快。",
+        "Introduction": "维格弗里德出生自带的战斗头盔，防御力不错，建议人手一个并多备一些，消耗得比较快。",
         "Console": "wathgrithrhat"
       },
       {
@@ -745,7 +745,7 @@
         "Need3": "G_flint",
         "Need3Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "若小伙伴中没有威戈芙瑞德，就只能用长矛将就一下了，比较不错的前期武器。",
+        "Introduction": "若小伙伴中没有维格弗里德，就只能用长矛将就一下了，比较不错的前期武器。",
         "Console": "spear"
       },
       {
@@ -1274,7 +1274,7 @@
       {
         "Picture": "S_night_armour",
         "Name": "暗影盔甲",
-        "EnName": "Night Armour",
+        "EnName": "Night Armor",
         "Need1": "G_nightmare_fuel",
         "Need1Value": 5,
         "Need2": "S_papyrus",

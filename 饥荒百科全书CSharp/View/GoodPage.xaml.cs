@@ -315,6 +315,11 @@ namespace 饥荒百科全书CSharp.View
                 WintersFeastExpander.Visibility = Visibility.Collapsed;
                 YearOfTheGobblerExpander.Visibility = Visibility.Collapsed;
             }
+            // DS版隐藏解锁
+            if (Global.GameVersion == 2)
+            {
+                UnlockExpander.Visibility = Visibility.Collapsed;
+            }
             Deserialize();
         }
 

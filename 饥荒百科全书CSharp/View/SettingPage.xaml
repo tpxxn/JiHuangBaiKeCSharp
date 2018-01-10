@@ -7,19 +7,19 @@
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="888"
       Title="SettingPage">
-    
-    <Grid x:Name="RootGrid" >
+
+    <Grid x:Name="RootGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <ListBox x:Name="TopListBox" Grid.Row="0" SelectionMode="Single" Background="{x:Null}" SelectionChanged="TopListBox_SelectionChanged">
+        <ListBox FocusVisualStyle="{x:Null}" x:Name="TopListBox" Grid.Row="0" SelectionMode="Single" Background="{x:Null}" SelectionChanged="TopListBox_SelectionChanged">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
-            <ListBoxItem x:Name="SettingBoxItem" IsSelected="True" Style="{StaticResource ListBoxItemStyle}" RenderTransformOrigin="0.5,0.5">
+            <ListBoxItem x:Name="SettingBoxItem" IsSelected="True" Style="{StaticResource ListBoxItemStyle}">
                 <TextBlock Text="通用" FontSize="18" VerticalAlignment="Center" Margin="20,0"/>
             </ListBoxItem>
             <ListBoxItem x:Name="ReleaseBoxItem" Style="{StaticResource ListBoxItemStyle}">
@@ -32,6 +32,6 @@
                 <TextBlock Text="关于" FontSize="18" VerticalAlignment="Center" Margin="20,0"/>
             </ListBoxItem>
         </ListBox>
-        <Frame x:Name="RootFrame" Grid.Row="1" Margin="0"/>
+        <Frame x:Name="RootFrame" Grid.Row="1" Margin="0" FocusVisualStyle="{x:Null}"/>
     </Grid>
 </Page>

@@ -1069,7 +1069,7 @@
             },
             {
                 "Picture": "F_mussel_bouillabaise",
-                "Name": "浓味黔贝汤",
+                "Name": "贻贝浓汤",
                 "EnName": "Mussel Bouillabaise",
                 "PortableCrockPot": true,
                 "Health": 20,
@@ -1189,11 +1189,11 @@
             "NeedPictureOr": "F_cooked_roe",
             "NeedOr": "×3",
             "NeedPicture2": "FC_Vegetables",
-            "Need2": "×1",
+            "Need2": "×0.5",
             "Recommend1": "F_roe",
             "Recommend2": "F_seaweed",
-            "Recommend3": "F_seaweed",
-            "Recommend4": "F_seaweed",
+            "Recommend3": "F_twigs",
+            "Recommend4": "F_twigs",
             "Introduce": "回复精神的食物。",
             "Console": "caviar"
           },
@@ -1213,12 +1213,12 @@
             "NeedOr": "×1",
             "NeedPicture2": "F_purple_grouper",
             "Need2": "×1",
-            "NeedPicture3": "F_jellyfish",
-            "Need3": "×1",
+            "NeedPicture3": "FC_Vegetables",
+            "Need3": "×0.5",
             "Recommend1": "F_neon_quattro",
             "Recommend2": "F_pierrot_fish",
             "Recommend3": "F_purple_grouper",
-            "Recommend4": "F_jellyfish",
+            "Recommend4": "F_seaweed",
             "Introduce": "材料不是很容易找，但是能提高移动速度30秒。",
             "Console": "tropicalbouillabaisse"
           },
@@ -1720,7 +1720,7 @@
                 "Perish": 3,
                 "Attribute": "FC_Fishes",
                 "AttributeValue": "×0.5",
-                "Introduce": "用采贝器插在青口贝上过几天即可收获。",
+                "Introduce": "用采贝器插在贻贝上过几天即可收获。",
                 "Console": "mussel"
             },
             {
@@ -2030,7 +2030,7 @@
                 "Sanity": -10,
                 "Perish": 6,
                 "Attribute": "FC_Vegetables",
-                "AttributeValue": "×0.5",
+                "AttributeValue": "×1",
                 "Introduce": "海上采摘。",
                 "Console": "seaweed"
             },
@@ -2043,7 +2043,7 @@
                 "Sanity": 0,
                 "Perish": 10,
                 "Attribute": "FC_Vegetables",
-                "AttributeValue": "×0.5",
+                "AttributeValue": "×1",
                 "Introduce": "把海藻放在篝火上烤制。",
                 "Console": "seaweed_cooked"
             },
@@ -2056,7 +2056,7 @@
                 "Sanity": 0,
                 "Perish": 20,
                 "Attribute": "FC_Vegetables",
-                "AttributeValue": "×0.5",
+                "AttributeValue": "×1",
                 "Introduce": "把海藻挂在晒肉架上风干制成。",
                 "Console": "seaweed_dried"
             },
@@ -2159,7 +2159,7 @@
                 "Picture": "F_durian",
                 "Name": "榴莲",
                 "EnName": "Durian",
-                "Health": 3,
+                "Health": -3,
                 "Hunger": 25,
                 "Sanity": -5,
                 "Perish": 10,
@@ -2450,7 +2450,7 @@
                 "Perish": 10001,
                 "Attribute": "F_twigs",
                 "AttributeValue": "×1",
-                "Introduce": "砍伐多枝的树、红树林或采集树苗获得。",
+                "Introduce": "砍伐多枝的树、红树或采集树苗获得。",
                 "Console": "twigs"
             }
         ]

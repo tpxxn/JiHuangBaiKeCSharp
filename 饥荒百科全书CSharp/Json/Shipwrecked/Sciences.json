@@ -137,7 +137,7 @@
     "Science": [
       {
         "Picture": "S_campfire",
-        "Name": "萤火",
+        "Name": "营火",
         "EnName": "Campfire",
         "Need1": "G_cut_grass_SW",
         "Need1Value": 3,
@@ -220,7 +220,7 @@
       },
       {
         "Picture": "S_obsidian_fire_pit",
-        "Name": "黑曜石火堆",
+        "Name": "黑曜石火坑",
         "EnName": "Obsidian Fire Pit",
         "Need1": "G_log",
         "Need1Value": 3,
@@ -388,7 +388,7 @@
       {
         "Picture": "S_armoured_boat",
         "Name": "装甲船",
-        "EnName": "Armoured Boat",
+        "EnName": "Armored Boat",
         "Need1": "S_boards",
         "Need1Value": 6,
         "Need2": "S_rope",
@@ -554,7 +554,7 @@
       {
         "Picture": "S_super_spyglass",
         "Name": "EX望远镜",
-        "EnName": "Lucky Hat",
+        "EnName": "Super Spyglass",
         "Need1": "S_spyglass",
         "Need1Value": 1,
         "Need2": "F_eye_of_the_tiger_shark",
@@ -604,7 +604,7 @@
         "Need3": "S_empty_bottle",
         "Need3Value": 3,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "穿上救生衣，不怕翻船！当船的耐久度降为0后，屏幕会逐渐变黑，玩家出现在最近的船难上，并且拥有足够的草和木头制作木筏。",
+        "Introduction": "穿上救生衣，不怕翻船！当船的耐久度降为0后，屏幕会逐渐变黑，玩家出现在最近的岛屿上，并且拥有足够的草和木头制作木筏。",
         "Console": "armor_lifejacket"
       },
       {
@@ -728,7 +728,7 @@
       },
       {
         "Picture": "S_bug_net",
-        "Name": "捕虫网",
+        "Name": "网",
         "EnName": "Net",
         "Need1": "G_twigs",
         "Need1Value": 4,
@@ -795,7 +795,7 @@
       },
       {
         "Picture": "S_anti_venom",
-        "Name": "抗蛇毒血清",
+        "Name": "抗毒血清",
         "EnName": "Anti Venom",
         "Need1": "G_venom_gland",
         "Need1Value": 1,
@@ -804,7 +804,7 @@
         "Need3": "G_coral",
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "中毒了用什么？抗蛇毒血清！治疗那种不舒服的中毒感。",
+        "Introduction": "中毒了用什么？抗毒血清！治疗那种不舒服的中毒感。",
         "Console": "antivenom"
       },
       {
@@ -834,7 +834,7 @@
       },
       {
         "Picture": "S_thatch_pack",
-        "Name": "茅草包",
+        "Name": "椰叶包",
         "EnName": "Thatch Pack",
         "Need1": "G_palm_leaf",
         "Need1Value": 4,
@@ -1302,7 +1302,7 @@
         "Need3": "S_gold_nugget",
         "Need3Value": 2,
         "UnlockCharcter": "C_wathgrithr",
-        "Introduction": "威戈芙瑞德出生自带的战斗长矛，攻击力比长矛要高一些，制作材料也比较简单，适合人手一把。",
+        "Introduction": "维格弗里德出生自带的战斗长矛，攻击力比长矛要高一些，制作材料也比较简单，适合人手一把。",
         "Console": "spear_wathgrithr"
       },
       {
@@ -1314,7 +1314,7 @@
         "Need2": "G_rocks",
         "Need2Value": 2,
         "UnlockCharcter": "C_wathgrithr",
-        "Introduction": "威戈芙瑞德出生自带的战斗头盔，防御力不错，建议人手一个并多备一些，消耗得比较快。",
+        "Introduction": "维格弗里德出生自带的战斗头盔，防御力不错，建议人手一个并多备一些，消耗得比较快。",
         "Console": "wathgrithrhat"
       },
       {
@@ -1328,7 +1328,7 @@
         "Need3": "G_flint",
         "Need3Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "若小伙伴中没有威戈芙瑞德，就只能用长矛将就一下了，比较不错的前期武器。",
+        "Introduction": "若小伙伴中没有维格弗里德，就只能用长矛将就一下了，比较不错的前期武器。",
         "Console": "spear"
       },
       {
@@ -1380,7 +1380,7 @@
         "Need3": "S_rope",
         "Need3Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "吸收大部分的伤害，防止被毒蛇、毒蚊、蜘蛛战士攻击时中毒。",
+        "Introduction": "吸收大部分的伤害，防止被毒蛇、毒蚊、毒蜘蛛战士攻击时中毒。",
         "Console": "armorseashell"
       },
       {
@@ -1398,7 +1398,7 @@
       {
         "Picture": "S_cactus_armour",
         "Name": "象仙人掌盔甲",
-        "EnName": "Cactus Armour",
+        "EnName": "Cactus Armor",
         "Need1": "G_cactus_spike",
         "Need1Value": 3,
         "Need2": "S_log_suit",
@@ -1752,7 +1752,7 @@
         "Need1": "S_boards",
         "Need1Value": 1,
         "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
-        "Introduction": "可放置地皮，仅有装饰性。",
+        "Introduction": "可放置地皮，不会产生水坑，然而无法阻止潮汐和洪水。",
         "Console": "turf_woodfloor"
       },
       {
@@ -1963,7 +1963,7 @@
         "Need3": "F_cooked_meat",
         "Need3Value": 4,
         "Unlock": [ "S_prestihatitator" ],
-        "Introduction": "死亡后点击右上角 激活雕像 即可在此复活，每造一个都会减少40生命上限，一般造一个在家里就好了。",
+        "Introduction": "死亡后在附近的岛屿复活，每造一个都会减少40生命上限，一般造一个在家里就好了。",
         "Console": "resurrectionstatue"
       },
       {
@@ -2025,7 +2025,7 @@
       {
         "Picture": "S_night_armour",
         "Name": "暗影盔甲",
-        "EnName": "Night Armour",
+        "EnName": "Night Armor",
         "Need1": "G_nightmare_fuel",
         "Need1Value": 5,
         "Need2": "S_papyrus",
@@ -2215,7 +2215,7 @@
       {
         "Picture": "S_brain_of_thought",
         "Name": "智慧帽",
-        "EnName": "Ice Cube",
+        "EnName": "Brain of Thought",
         "Need1": "F_brainy_matter",
         "Need1Value": 1,
         "Need2": "A_jellyfish",
@@ -2280,7 +2280,7 @@
       },
       {
         "Picture": "S_snakeskin_hat",
-        "Name": "蛇鳞帽",
+        "Name": "蛇皮帽",
         "EnName": "Snakeskin Hat",
         "Need1": "G_snakeskin",
         "Need1Value": 1,
@@ -2294,7 +2294,7 @@
       },
       {
         "Picture": "S_snakeskin_jacket",
-        "Name": "蛇鳞上衣",
+        "Name": "蛇皮上衣",
         "EnName": "Snakeskin Jacket",
         "Need1": "G_snakeskin",
         "Need1Value": 2,
@@ -2303,7 +2303,7 @@
         "Need3": "G_boneshard",
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "和蛇鳞帽效果一样，另外还具有较差的保暖功能，和兔子耳罩差不多。",
+        "Introduction": "和蛇皮帽效果一样，另外还具有较差的保暖功能，和兔子耳罩差不多。",
         "Console": "armor_snakeskin"
       },
       {
@@ -2554,7 +2554,7 @@
       {
         "Picture": "S_obsidian_armour",
         "Name": "黑曜石盔甲",
-        "EnName": "Obsidian Armour",
+        "EnName": "Obsidian Armor",
         "Need1": "S_log_suit",
         "Need1Value": 1,
         "Need2": "G_obsidian",

@@ -184,10 +184,10 @@
 				"RunSpeed": 5,
 				"IsActiveAttack": false,
 				"IsTeamWork": false,
-				"Goods": [
-					"F_fish_morsel|×1",
-					"A_beardling_sw|S_trap"
-				],
+        "Goods": [
+          "F_fish_morsel|×1",
+          "A_crabbit|S_trap"
+        ],
 				"Introduction": "船难版的兔子。与兔子不同的是，被追击太久不会优先回家，而是创造一个流沙把自己埋起来，保护自己免受伤害。",
 				"Console": "crab"
 			},
@@ -238,7 +238,7 @@
 			},
 			{
 				"Picture": "A_spider_warrior_sw",
-				"Name": "毒蜘蛛",
+				"Name": "毒蜘蛛战士",
 				"EnName": "Spider Warrior",
 				"Health": 200,
 				"Attack": 20,
@@ -259,7 +259,7 @@
 					"跳跃攻击",
 					"攻击带毒"
 				],
-				"Introduction": "船难版的战斗蜘蛛，除了攻击带毒没有什么两样。",
+				"Introduction": "船难版的蜘蛛战士，除了攻击带毒没有什么两样。",
 				"Console": "spider_warrior"
 			},
 			{
@@ -519,7 +519,7 @@
 			},
 			{
 				"Picture": "A_bioluminescence",
-				"Name": "海洋生物",
+				"Name": "发光生物",
 				"EnName": "Bioluminescence",
 				"IsActiveAttack": false,
 				"IsTeamWork": false,
@@ -789,11 +789,11 @@
 				"Dangerous": 1,
 				"IsActiveAttack": true,
 				"IsTeamWork": false,
-				"Goods": [
-					"G_yellow_mosquito_sack|×1（50%）",
-					"G_venom_gland|×1",
-					"A_mosquito|S_bug_net"
-				],
+        "Goods": [
+          "G_yellow_mosquito_sack|×1（50%）",
+          "G_venom_gland|×1",
+          "A_mosquito_sw|S_bug_net"
+        ],
 				"Ability": [
 					"吸完血后爆炸",
 					"攻击带毒"
@@ -1252,7 +1252,7 @@
 				"Goods": [
 					"G_living_log|×6",
 					"F_coconut|×2",
-					"F_monster_meat|×1（一定几率）"
+					"F_monster_meat|×1"
 				],
 				"Ability": [
 					"抛椰子远程攻击"

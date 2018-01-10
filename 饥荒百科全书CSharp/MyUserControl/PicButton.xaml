@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     
     <StackPanel Orientation="Horizontal">
-        <Button x:Name="PictureButton" Click="Button_Click" Height="35" Width="35" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top">
+        <Button x:Name="PictureButton" Click="Button_Click" Height="35" Width="35" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" FocusVisualStyle="{x:Null}">
             <Image x:Name="PictureButtonImage" Height="32" Width="32" Margin="-10,-6"/>
         </Button>
         <TextBlock x:Name="PictureButtonTextBlock" FontSize="15" VerticalAlignment="Center"/>

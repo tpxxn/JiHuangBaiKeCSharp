@@ -1170,6 +1170,19 @@
         "Console": "red_cap_cooked"
       },
       {
+        "Picture": "F_lichen",
+        "Name": "苔藓",
+        "EnName": "Lichen",
+        "Health": 3,
+        "Hunger": 12,
+        "Sanity": -5,
+        "Perish": 2,
+        "Attribute": "FC_Vegetables",
+        "AttributeValue": "×1",
+        "Introduce": "洞穴采摘。",
+        "Console": "cutlichen"
+      },
+      {
         "Picture": "F_eggplant",
         "Name": "茄子",
         "EnName": "Eggplant",
@@ -1641,19 +1654,6 @@
         "Console": "honeycomb"
       },
       {
-        "Picture": "F_lichen",
-        "Name": "苔藓",
-        "EnName": "Lichen",
-        "Health": 3,
-        "Hunger": 12,
-        "Sanity": -5,
-        "Perish": 2,
-        "Attribute": "FC_Vegetables",
-        "AttributeValue": "×1",
-        "Introduce": "洞穴采摘。",
-        "Console": "cutlichen"
-      },
-      {
         "Picture": "F_electric_milk",
         "Name": "电羊奶",
         "EnName": "Electric Milk",
@@ -1701,7 +1701,7 @@
         "Perish": 10001,
         "Attribute": "F_twigs",
         "AttributeValue": "×1",
-        "Introduce": "砍伐多枝的树、红树林或采集树苗获得。",
+        "Introduce": "砍伐多枝的树或采集树苗获得。",
         "Console": "twigs"
       },
       {
@@ -1880,12 +1880,12 @@
       {
         "Picture": "F_succulent",
         "Name": "肉质植物",
-        "EnName": "Foliage",
+        "EnName": "Succulent",
         "Health": 1,
         "Hunger": 0,
         "Sanity": 0,
         "Perish": 6,
-        "Attribute": "荤",
+        "Attribute": "素",
         "Introduce": "绿洲采摘肉质植物获得。",
         "Console": "succulent_picked"
       },

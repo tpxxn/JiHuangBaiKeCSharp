@@ -588,14 +588,14 @@ namespace 饥荒百科全书CSharp.View
                     _csFtVegetables += 1;
                     break;
                 case "F_seaweed":
-                    _csFtVegetables += 0.5;
+                    _csFtVegetables += 1;
                     _csFtSeaweed += 1;
                     break;
                 case "F_roasted_seaweed":
-                    _csFtVegetables += 0.5;
+                    _csFtVegetables += 1;
                     break;
                 case "F_dried_seaweed":
-                    _csFtVegetables += 0.5;
+                    _csFtVegetables += 1;
                     break;
                 #endregion
                 #region 水果
@@ -799,7 +799,7 @@ namespace 饥荒百科全书CSharp.View
             // 便携式烹饪锅的四种食物
             if (Global.GameVersion == 4)
             {
-                if (_csFtJellyfish == 1 && _csFtNeonQuattro == 1 && _csFtPierrotFish == 1 && _csFtPurpleGrouper == 1)
+                if (_csFtVegetables >= 0.5 && _csFtNeonQuattro == 1 && _csFtPierrotFish == 1 && _csFtPurpleGrouper == 1)
                     CS_CrockPotListAddFood("F_tropical_bouillabaisse", 40);
                 if (CrockpotComboBox.SelectedIndex == 1)
                 {
@@ -1004,7 +1004,7 @@ namespace 饥荒百科全书CSharp.View
                 case "F_monster_tartare":
                     return "怪物鞑靼";
                 case "F_mussel_bouillabaise":
-                    return "贝类淡菜汤";
+                    return "贻贝浓汤";
                 case "F_sweet_potato_souffle":
                     return "薯蛋奶酥";
                 case "F_lobster_bisque":

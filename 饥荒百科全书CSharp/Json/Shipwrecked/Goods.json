@@ -140,7 +140,7 @@
           "S_prime_ape_hut",
           "S_fashion_melon"
         ],
-        "Introduction": "采集树苗、尖刺灌木或砍多枝的树、针叶树、红树林获得，用铲子挖没有灌溉的浆果灌木丛也会得到两个树枝，树枝是可以制作科技种类最多的材料。",
+        "Introduction": "采集树苗、尖刺灌木或砍多枝的树、针叶树、红树获得，用铲子挖没有灌溉的浆果灌木丛也会得到两个树枝，树枝是可以制作科技种类最多的材料。",
         "Console": "twigs"
       },
       {
@@ -287,7 +287,6 @@
         "EnName": "Petals",
         "Science": [
           "S_tropical_parasol",
-          "S_whirly_fan",
           "S_garland"
         ],
         "Introduction": "一般草原和森林里比较多。",
@@ -344,12 +343,10 @@
           "S_shark_tooth_crown"
         ],
         "SourceCreature": [
-          "A_hound",
-          "A_red_hound",
-          "A_blue_hound",
+          "A_crocodog",
           "A_sea_hound"
         ],
-        "Introduction": "击杀三种猎犬、海狗可以获得。",
+        "Introduction": "击杀鳄狗、海狗可以获得。",
         "Console": "houndstooth"
       },
       {
@@ -384,7 +381,7 @@
       },
       {
         "Picture": "G_jet_feather",
-        "Name": "乌鸦羽毛",
+        "Name": "墨黑羽毛",
         "EnName": "Jet Feather",
         "Science": [
           "S_saddlehorn",
@@ -393,7 +390,8 @@
           "S_feather_hat"
         ],
         "SourceCreature": [
-          "A_toucan"
+          "A_toucan",
+          "A_cormorant"
         ],
         "Introduction": "击杀大嘴鸟获得。",
         "Console": "feather_crow"
@@ -587,10 +585,7 @@
           "S_the_end_is_nigh!",
           "S_purple_gem"
         ],
-        "SourceCreature": [
-          "A_red_hound"
-        ],
-        "Introduction": "击杀红色猎犬，挖熔岩金矿、沙堆，敲沉船获得。",
+        "Introduction": "挖熔岩金矿、沙堆，敲沉船获得。",
         "Console": "redgem"
       },
       {
@@ -602,10 +597,7 @@
           "S_ice_staff",
           "S_purple_gem"
         ],
-        "SourceCreature": [
-          "A_blue_hound"
-        ],
-        "Introduction": "击杀红色猎犬，挖熔岩金矿、沙堆，敲沉船获得。",
+        "Introduction": "挖熔岩金矿、沙堆，敲沉船获得。",
         "Console": "bluegem"
       },
       {
@@ -618,7 +610,7 @@
           "S_telelocator_staff",
           "S_howling_conch"
         ],
-        "Introduction": "击杀红色猎犬，挖熔岩金矿、沙堆，敲沉船获得。",
+        "Introduction": "挖熔岩金矿、沙堆，敲沉船获得。",
         "Console": "purplegem"
       },
       {
@@ -667,7 +659,7 @@
       },
       {
         "Picture": "G_venom_gland",
-        "Name": "毒蛇腺体",
+        "Name": "毒腺体",
         "EnName": "Venom Gland",
         "Science": [
           "S_anti_venom",
@@ -1143,7 +1135,7 @@
       },
       {
         "Picture": "S_snakeskin_hat",
-        "Name": "蛇鳞帽",
+        "Name": "蛇皮帽",
         "EnName": "Snakeskin Hat",
         "Durability": "10天",
         "Wet": 70,
@@ -1152,7 +1144,7 @@
       },
       {
         "Picture": "S_snakeskin_jacket",
-        "Name": "蛇鳞上衣",
+        "Name": "蛇皮上衣",
         "EnName": "Snakeskin Jacket",
         "Durability": "8天",
         "Wet": 70,
@@ -1291,7 +1283,7 @@
         "EnName": "Battle Spear",
         "Attack": 42.5,
         "Durability": "200次",
-        "Introduction": "威戈芙瑞德专属武器，联机版可以给别人用。",
+        "Introduction": "维格弗里德专属武器，联机版可以给别人用。",
         "Console": "spear_wathgrithr"
       },
       {
@@ -1480,7 +1472,7 @@
         "Durability": "750HP",
         "Wet": 20,
         "Defense": 80,
-        "Introduction": "威戈芙瑞德专属防具，联机版可以给别人用。",
+        "Introduction": "维格弗里德专属防具，联机版可以给别人用。",
         "Console": "wathgrithrhat"
       },
       {
@@ -1501,7 +1493,7 @@
         ],
         "Durability": "750HP",
         "Defense": 75,
-        "Introduction": "接近无敌的防御装备，不过会减速30%，而且材料不好找。",
+        "Introduction": "防御力还行，特点是免疫毒。",
         "Console": "armorseashell"
       },
       {
@@ -1514,13 +1506,13 @@
         "Durability": "825HP",
         "Sanity": 2,
         "Defense": 70,
-        "Introduction": "防御力还行，特点是免疫毒。",
+        "Introduction": "接近无敌的防御装备，不过会减速30%，而且材料不好找。",
         "Console": "armorlimestone"
       },
       {
         "Picture": "S_cactus_armour",
         "Name": "象仙人掌盔甲",
-        "EnName": "Cactus Armour",
+        "EnName": "Cactus Armor",
         "Ability": [
           "对攻击者造成17点伤害"
         ],
@@ -1556,7 +1548,7 @@
       {
         "Picture": "S_night_armour",
         "Name": "暗影盔甲",
-        "EnName": "Night Armour",
+        "EnName": "Night Armor",
         "Durability": "750HP",
         "Sanity": -10,
         "Defense": 95,
@@ -1566,7 +1558,7 @@
       {
         "Picture": "S_obsidian_armour",
         "Name": "黑曜石盔甲",
-        "EnName": "Obsidian Armour",
+        "EnName": "Obsidian Armor",
         "Durability": "1350HP",
         "Defense": 70,
         "Introduction": "耐久只有鳞甲的四分之三，免疫火，并且攻击你的敌人会燃烧，防御力也一般。",
@@ -1607,6 +1599,16 @@
   "Sapling": {
     "GoodSapling": [
       {
+        "Picture": "G_bamboo_root",
+        "Name": "竹根",
+        "EnName": "Bamboo Root",
+        "Plants": [
+          "N_bamboo_patch"
+        ],
+        "Introduction": "挖取竹子获得。",
+        "Console": "dug_bambootree"
+      },
+      {
         "Picture": "G_grass_tuft_SW",
         "Name": "长草簇",
         "EnName": "Grass Tuft",
@@ -1615,6 +1617,27 @@
         ],
         "Introduction": "挖取草获得。",
         "Console": "dug_grass"
+      },
+      {
+        "Picture": "G_sapling",
+        "Name": "小树苗根",
+        "EnName": "Sapling",
+        "Plants": [
+          "N_sapling",
+          "N_sapling_diseased"
+        ],
+        "Introduction": "挖取小树苗根或患病的小树苗根获得。",
+        "Console": "dug_sapling"
+      },
+      {
+        "Picture": "G_berry_bush_2",
+        "Name": "浆果丛",
+        "EnName": "Berry Bush",
+        "Plants": [
+          "N_berry_bush_2"
+        ],
+        "Introduction": "挖取浆果灌木丛获得。",
+        "Console": "dug_berrybush2"
       },
       {
         "Picture": "F_coconut",
@@ -1714,7 +1737,7 @@
       },
       {
         "Picture": "G_bioluminescence",
-        "Name": "海洋生物",
+        "Name": "发光生物",
         "EnName": "Bioluminescence",
         "Fresh": 10001,
         "Console": "bioluminescence"
@@ -1926,11 +1949,11 @@
       },
       {
         "Picture": "S_wooden_flooring",
-        "Name": "木地板",
+        "Name": "木质地板",
         "EnName": "Wooden Flooring",
         "Make": "S_wooden_flooring",
         "Texture": "Texture_wooden_flooring",
-        "Introduction": "猪王和试金石所在地的地皮，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的木质地板足够大时，附近只会出现乌鸦。",
+        "Introduction": "猪王和试金石所在地的地皮，不能在上面种植植物，阻止食人花和眼球草的生长，不会产生水坑，当铺设的木质地板足够大时，附近只会出现乌鸦。",
         "Console": "turf_woodfloor"
       },
       {

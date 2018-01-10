@@ -404,6 +404,42 @@
         "Console": "grass"
       },
       {
+        "Picture": "N_berry_bush_2",
+        "Pictures": [
+          "N_berry_bush_2",
+          "N_berry_bush_empty_2",
+          "N_berry_bush_dead_2"
+        ],
+        "Name": "浆果灌木丛",
+        "EnName": "Berry Bush",
+        "Resources": [
+          [
+            "F_berries|×1&",
+            "G_berry_bush_2|×1&"
+          ],
+          [
+            "G_berry_bush_2|×1&"
+          ],
+          [
+            "G_twigs|×2&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_gobbler",
+          "A_snake"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "浆果灌木丛常见于热带雨林，它可以提供一个浆果。浆果灌木丛可以移植，但是不能种植在方格地板、木质地板、卵石路、地毯地板、岩石草皮、沙地、洞穴石地上。移植的浆果灌木丛需要施肥(便便、鸟屎、便便篮)，生长需要3-5天时间(下雨会减少生长时间，冬天不会生长)。采摘浆果的时候会出现火鸡，如果不击杀或驱逐它，它就会把周围可以收获的浆果全部吃光！在夏天浆果灌木丛会枯萎，需要施肥或者在旁边建造雪球发射器防止这一情况的发生。注意！这种浆果灌木丛不能制作丛林帽！",
+        "Console": "berrybush2"
+      },
+      {
         "Picture": "N_reeds",
         "Pictures": [
           "N_reeds",
@@ -451,7 +487,7 @@
       },
       {
         "Picture": "N_plant",
-        "Name": "种植",
+        "Name": "水草",
         "EnName": "Plant",
         "ResourcesBurned": [
           "G_ash|×1"
@@ -607,13 +643,16 @@
         "Resources": [
           [
             "G_vine|×1&Machete",
-            "G_viney_bush_root|×1&Shovel"
+            "G_viney_bush_root|×1&Shovel",
+            "G_snakeskin|×1(含有蛇穴的藤蔓从)&Shovel"
           ],
           [
-            "G_viney_bush_root|×1&Shovel"
+            "G_viney_bush_root|×1&Shovel",
+            "G_snakeskin|×1(含有蛇穴的藤蔓从)&Shovel"
           ],
           [
-            "G_viney_bush_root|×1&Shovel"
+            "G_viney_bush_root|×1&Shovel",
+            "G_snakeskin|×1(含有蛇穴的藤蔓从)&Shovel"
           ]
         ],
         "ResourcesBurned": [
@@ -641,12 +680,14 @@
         "EnName": "Seaweed",
         "Resources": [
           [
-            "F_seaweed|×1&"
+            "F_seaweed|×1&",
+            "G_seaweed_stalk|×1&TrawlNet"
           ],
           [
+            "G_seaweed_stalk|×1&TrawlNet"
           ]
         ],
-        "IsRegenerate": true,
+        "IsRegenerate": false,
         "IsCombustible": false,
         "Biomes": [
           "N_ocean_shallow"
@@ -735,7 +776,8 @@
           [
             "G_log|×2&",
             "G_palm_leaf|×1&",
-            "F_coconut|×1&"
+            "F_coconut|×1&",
+            "F_coconut|×1(33%)&"
           ]
         ],
         "ResourcesBurned": [
@@ -804,7 +846,7 @@
         "Pictures": [
           "N_mangrove_|3"
         ],
-        "Name": "红树林",
+        "Name": "红树",
         "EnName": "Mangrove",
         "CutDownTools": "Axe",
         "Resources": [
@@ -831,7 +873,7 @@
         "Biomes": [
           "N_mangrove_bio"
         ],
-        "Introduction": "红树林生长在红树林生物群落，只能坐船拜访它们。截至目前，没有种植红树林的方法，但是只要没有完全摧毁它们，就会很快恢复。",
+        "Introduction": "红树生长在红树林生物群落，只能坐船拜访它们。截至目前，没有种植红树的方法，但是只要没有完全摧毁它们，就会很快恢复。",
         "Console": [
           "mangrovetree"
         ]

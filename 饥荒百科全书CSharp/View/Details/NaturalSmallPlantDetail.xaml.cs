@@ -300,6 +300,15 @@ namespace 饥荒百科全书CSharp.View.Details
                             stackPanel.Children.Add(picButton3);
                             stackPanel.Children.Add(picButton4);
                         }
+                        else if (toolText == "TrawlNet")
+                        {
+                            picButton2 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_trawl_net"),
+                                Text = "）"
+                            };
+                            stackPanel.Children.Add(picButton2);
+                        }
                         //picButton1.Click += Creature_Jump_Click;
                         //picButton2.Click += Creature_Jump_Click;
                         NaturalResourceStackPanel.Children.Add(stackPanel);

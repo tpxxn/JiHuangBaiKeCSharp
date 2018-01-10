@@ -736,7 +736,7 @@
         "Ability": [
           "A_gobbler"
         ],
-        "IsRegenerate": false,
+        "IsRegenerate": true,
         "IsCombustible": true,
         "Biomes": [
           "N_grasslands",
@@ -770,10 +770,9 @@
           "G_ash|×1"
         ],
         "Ability": [
-          "A_gobbler",
-          "A_snake"
+          "A_gobbler"
         ],
-        "IsRegenerate": false,
+        "IsRegenerate": true,
         "IsCombustible": true,
         "Biomes": [
           "N_grasslands"
@@ -975,7 +974,7 @@
       },
       {
         "Picture": "N_plant",
-        "Name": "种植",
+        "Name": "水草",
         "EnName": "Plant",
         "ResourcesBurned": [
           "G_ash|×1"

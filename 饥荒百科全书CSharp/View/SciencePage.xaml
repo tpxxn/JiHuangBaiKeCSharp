@@ -215,7 +215,7 @@
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_books.png" />
-                            <TextBlock Text="书" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBlock Text="书籍" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Expander.Header>
                     <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
@@ -230,7 +230,7 @@
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_shadow.png" />
-                            <TextBlock x:Name="ShadowExpanderTextBolck" Text="暗影巫术" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="ShadowExpanderTextBolck" Text="暗影" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Expander.Header>
                     <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">

@@ -923,6 +923,7 @@ namespace 饥荒百科全书CSharp.View.Details
             // 1
             var rTs1StackPanel = new StackPanel
             {
+                Margin = new Thickness(5, 0, 0, 0),
                 Orientation = Orientation.Horizontal
             };
             var recipe1PicButton = new PicButton

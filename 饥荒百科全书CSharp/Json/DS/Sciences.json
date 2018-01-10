@@ -115,7 +115,7 @@
     "Science": [
       {
         "Picture": "S_campfire",
-        "Name": "萤火",
+        "Name": "营火",
         "EnName": "Campfire",
         "Need1": "G_cut_grass",
         "Need1Value": 3,
@@ -584,7 +584,7 @@
         "Need3": "G_flint",
         "Need3Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "若小伙伴中没有威戈芙瑞德，就只能用长矛将就一下了，比较不错的前期武器。",
+        "Introduction": "比较不错的前期武器。",
         "Console": "spear"
       },
       {
@@ -1045,7 +1045,7 @@
       {
         "Picture": "S_night_armour",
         "Name": "暗影盔甲",
-        "EnName": "Night Armour",
+        "EnName": "Night Armor",
         "Need1": "G_nightmare_fuel",
         "Need1Value": 5,
         "Need2": "S_papyrus",

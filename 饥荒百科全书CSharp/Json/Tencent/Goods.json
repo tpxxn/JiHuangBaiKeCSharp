@@ -1655,7 +1655,7 @@
         "EnName": "Battle Spear",
         "Attack": 42.5,
         "Durability": "200次",
-        "Introduction": "威戈芙瑞德专属武器，联机版可以给别人用。",
+        "Introduction": "薇格弗德专属武器，联机版可以给别人用。",
         "Console": "spear_wathgrithr"
       },
       {
@@ -1817,7 +1817,7 @@
         "Durability": "750HP",
         "Wet": 20,
         "Defense": 80,
-        "Introduction": "威戈芙瑞德专属防具，联机版可以给别人用。",
+        "Introduction": "薇格弗德专属防具，联机版可以给别人用。",
         "Console": "wathgrithrhat"
       },
       {
@@ -1877,7 +1877,7 @@
       {
         "Picture": "S_night_armour",
         "Name": "暗影护甲",
-        "EnName": "Night Armour",
+        "EnName": "Night Armor",
         "Ability": [
           "降低所受伤害10%的精神"
         ],

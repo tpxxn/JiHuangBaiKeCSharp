@@ -1739,7 +1739,7 @@
 			}, {
 				"Picture": "S_night_armour",
 				"Name": "暗影护甲",
-				"EnName": "Night Armour",
+				"EnName": "Night Armor",
 				"Need1": "G_nightmare_fuel",
 				"Need1Value": 5,
 				"Need2": "S_papyrus",
