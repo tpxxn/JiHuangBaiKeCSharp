@@ -33,7 +33,8 @@ namespace 饥荒百科全书CSharp
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
-            MainWindow.MwVisivility = true;
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.MwVisivility = true;
         }
     }
 }

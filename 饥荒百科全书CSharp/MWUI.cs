@@ -1,17 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
+using 饥荒百科全书CSharp.View.Dialog;
+using Application = System.Windows.Application;
+using Button = System.Windows.Controls.Button;
+using Cursor = System.Windows.Input.Cursor;
+using MessageBox = System.Windows.MessageBox;
+using MouseEventArgs = System.Windows.Input.MouseEventArgs;
+using TextBox = System.Windows.Controls.TextBox;
 
 namespace 饥荒百科全书CSharp
 {
@@ -21,7 +30,7 @@ namespace 饥荒百科全书CSharp
     public partial class MainWindow : Window
     {
         #region "窗口尺寸/拖动窗口"
-        //引用光标资源字典
+        // 引用光标资源字典
         private static readonly ResourceDictionary CursorDictionary = new ResourceDictionary();
         private const int WmSyscommand = 0x112;
         private HwndSource _hwndSource;
@@ -89,7 +98,9 @@ namespace 饥荒百科全书CSharp
             SendMessage(_hwndSource.Handle, WmSyscommand, (IntPtr)(61440 + direction), IntPtr.Zero);
         }
 
-        //MainWindow拖动窗口
+        /// <summary>
+        /// MainWindow拖动窗口
+        /// </summary>
         private void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var positionUiGrid = e.GetPosition(UiGrid);
@@ -493,6 +504,7 @@ namespace 饥荒百科全书CSharp
         {
             WindowState = WindowState.Minimized;
         }
+
         /// <summary>
         /// 最大化按钮
         /// </summary>
@@ -508,6 +520,7 @@ namespace 饥荒百科全书CSharp
             Height = rc.Height;
             //WindowState = WindowState.Maximized;
         }
+
         /// <summary>
         /// 还原按钮
         /// </summary>
@@ -521,14 +534,43 @@ namespace 饥荒百科全书CSharp
             Height = Rcnormal.Height;
             //WindowState = WindowState.Normal;
         }
+
         /// <summary>
         /// 关闭按钮
         /// </summary>
         private void UI_btn_close_Click(object sender, RoutedEventArgs e)
         {
-
-            Environment.Exit(0);
+            if (Settings.HideToNotifyIconPrompt == false)
+            {
+                var notifyIconMessageBox = new NotifyIconMessageBox();
+                notifyIconMessageBox.ShowDialog();
+            }
+            else
+            {
+                if (Settings.HideToNotifyIcon)
+                {
+                    NotifyIcon.ShowBalloonTip(1000);
+                    MwVisivility = false;
+                }
+                else
+                {
+                    DisposeNotifyIcon();
+                    Application.Current.Shutdown();
+                }
+            }
         }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+
+        }
+
+        private void DisposeNotifyIcon()
+        {
+            NotifyIcon.Visible = false;
+            NotifyIcon.Dispose();
+        }
+
         #endregion
         #endregion
 

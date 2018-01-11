@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using 饥荒百科全书CSharp.Class;
 using Application = System.Windows.Application;
-using MessageBox = System.Windows.MessageBox;
 
 namespace 饥荒百科全书CSharp
 {
@@ -26,9 +25,10 @@ namespace 饥荒百科全书CSharp
         private readonly Timer _splashTimer = new Timer();
         private int _flag;
 
-        public CopySplashScreen()
+        public CopySplashScreen(string content)
         {
             InitializeComponent();
+            ContentTextBlock.Text = content;
             if (Global.FontFamily != null)
                 FontFamily = Global.FontFamily;
             _splashTimer.Interval = 1;

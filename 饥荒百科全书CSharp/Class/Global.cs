@@ -100,7 +100,7 @@ namespace 饥荒百科全书CSharp.Class
         public static void SetClipboard(string text)
         {
             Clipboard.SetText(text);
-            var copySplashWindow = new CopySplashScreen();
+            var copySplashWindow = new CopySplashScreen("已复制");
             copySplashWindow.InitializeComponent();
             copySplashWindow.Show();
         }

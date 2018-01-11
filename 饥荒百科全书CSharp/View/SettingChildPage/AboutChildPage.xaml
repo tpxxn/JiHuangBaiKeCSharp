@@ -37,7 +37,7 @@
                     </StackPanel>
                     <StackPanel Margin="50,0,0,0">
                         <Image x:Name="Donation2Image" Source="/饥荒百科全书CSharp;component/Resources/Pic/QRCode_zfb2.png" Height="128" />
-                        <TextBlock Text="请一农夫山泉(2元)" HorizontalAlignment="Center"/>
+                        <TextBlock Text="请一瓶农夫山泉(2元)" HorizontalAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Margin="50,0,0,0">
                         <Image x:Name="Donation5Image" Source="/饥荒百科全书CSharp;component/Resources/Pic/QRCode_zfb5.png" Height="128" />

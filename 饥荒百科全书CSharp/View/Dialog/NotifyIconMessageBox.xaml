@@ -1,0 +1,27 @@
+﻿<Window x:Class="饥荒百科全书CSharp.View.Dialog.NotifyIconMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:饥荒百科全书CSharp.View.Dialog"
+        mc:Ignorable="d"
+        Title="饥荒百科全书 - 确认" Height="120" Width="250" WindowStartupLocation="CenterScreen" 
+        Cursor="{DynamicResource CursorPointer}" 
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" 
+        Topmost="False" 
+        Icon="/饥荒百科全书CSharp;component/Resources/DST.ico">
+
+    <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FF2B2B2B">
+        <Grid>
+            <TextBlock x:Name="WindowTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒百科全书" VerticalAlignment="Top" Margin="10,10,0,0"/>
+            <StackPanel Width="180" Margin="0,40,0,0" VerticalAlignment="Top">
+                <RadioButton x:Name="HideToNotifyIconRadioButton" Content="最小化到系统托盘" IsChecked="True" Cursor="{StaticResource CursorLink}"/>
+                <RadioButton x:Name="ExitRadioButton" Content="退出饥荒百科全书" Margin="0,10,0,0" Cursor="{StaticResource CursorLink}"/>
+            </StackPanel>
+            <CheckBox x:Name="DoNotShowAgain" Content="不再提示" IsChecked="True" Margin="20,0,0,11.6" Cursor="{StaticResource CursorLink}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Button Content="确认" Width="50" Margin="0,0,20,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" Cursor="{StaticResource CursorLink}" Click="ButtonBase_OnClick"/>
+        </Grid>
+    </Border>
+</Window>

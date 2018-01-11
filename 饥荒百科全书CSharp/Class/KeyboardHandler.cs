@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Interop;
+using Application = System.Windows.Application;
 
 namespace 饥荒百科全书CSharp.Class
 {
@@ -49,7 +50,9 @@ namespace 饥荒百科全书CSharp.Class
         {
             if (msg.message == WM_HOTKEY)
             {
-                MainWindow.MwVisivility = !MainWindow.MwVisivility;
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                mainWindow.MwVisivility = !mainWindow.MwVisivility;
+                mainWindow.NotifyIcon.Visible = !mainWindow.NotifyIcon.Visible;
             }
         }
 

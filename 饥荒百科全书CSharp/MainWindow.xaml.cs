@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
 using Application = System.Windows.Application;
+using MenuItem = System.Windows.Forms.MenuItem;
 
 namespace 饥荒百科全书CSharp
 {
@@ -28,7 +29,7 @@ namespace 饥荒百科全书CSharp
 
         private readonly Timer _visiTimer = new Timer();
 
-        public static bool MwVisivility { get; set; }
+        public bool MwVisivility { get; set; }
 
         private void VisiTimerEvent(object sender, EventArgs e)
         {
@@ -41,7 +42,9 @@ namespace 饥荒百科全书CSharp
         public static bool MwInit { get; set; }
 
         #endregion
-
+        // 托盘区图标
+        public NotifyIcon NotifyIcon;
+        // 是否加载字体
         public static bool LoadFont;
         #region "MainWindow"
         //MainWindow构造函数
@@ -66,6 +69,9 @@ namespace 饥荒百科全书CSharp
             var winTopmost = RegeditRw.RegRead("Topmost");
             // 游戏版本
             var gameVersion = RegeditRw.RegRead("GameVersion");
+            // 设置
+            Settings.HideToNotifyIcon = RegeditRw.RegReadString("HideToNotifyIcon") == "True";
+            Settings.HideToNotifyIconPrompt = RegeditRw.RegReadString("HideToNotifyIconPrompt") == "True";
             #endregion
             // 初始化
             InitializeComponent();
@@ -104,9 +110,7 @@ namespace 饥荒百科全书CSharp
             _visiTimer.Tick += VisiTimerEvent;
             _visiTimer.Start();
             // 设置光标资源字典路径
-            CursorDictionary.Source = new Uri(
-                "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
-                UriKind.Absolute);
+            CursorDictionary.Source = new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml", UriKind.Absolute);
             // 显示窗口
             MwVisivility = true;
             // 窗口置顶
@@ -171,11 +175,75 @@ namespace 饥荒百科全书CSharp
             // 设置游戏版本
             UiGameversion.SelectedIndex = (int)gameVersion;
             #endregion
+            #region 设定通知图标
+            NotifyIcon = new NotifyIcon
+            {
+                BalloonTipText = "饥荒百科全书躲起来了~",
+                Text = "饥荒百科全书",
+                // ReSharper disable once PossibleNullReferenceException
+                Icon = new System.Drawing.Icon(Application.GetResourceStream(new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Resources/DST.ico")).Stream),
+                Visible = true
+            };
+            NotifyIcon.MouseClick += NotifyIcon_MouseClick;
+
+            //设置菜单项  
+            var fengexian = new MenuItem("-");
+
+            //退出菜单项  
+            var exit = new MenuItem("退出");
+            exit.Click += Exit_Click;
+
+            var childen = new[] { fengexian, exit };
+            NotifyIcon.ContextMenu = new System.Windows.Forms.ContextMenu(childen);
+            //窗体状态改变时候触发  
+            StateChanged += SysTray_StateChanged;
+            #endregion
             // 右侧面板导航到欢迎界面
             RightFrame.Navigate(new WelcomePage());
             // 是否显示开服工具
             if (Global.TestMode)
                 SidebarDedicatedServer.Visibility = Visibility.Visible;
+        }
+
+        /// <summary>  
+        /// 退出选项  
+        /// </summary>  
+        /// <param name="sender"></param>  
+        /// <param name="e"></param>  
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            DisposeNotifyIcon();
+            Application.Current.Shutdown();
+        }
+
+        /// <summary>  
+        /// 窗体状态改变时候触发  
+        /// </summary>  
+        /// <param name="sender"></param>  
+        /// <param name="e"></param>  
+        private void SysTray_StateChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == WindowState.Minimized)
+            {
+                MwVisivility = false;
+            }
+        }
+
+        /// <summary>  
+        /// 鼠标单击  
+        /// </summary>  
+        /// <param name="sender"></param>  
+        /// <param name="e"></param>  
+        private void NotifyIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (MwVisivility)
+                {
+                    NotifyIcon.ShowBalloonTip(1000);
+                }
+                MwVisivility = !MwVisivility;
+            }
         }
 
         /// <summary>
@@ -203,29 +271,3 @@ namespace 饥荒百科全书CSharp
         #endregion
     }
 }
-
-//控件计数例子
-//int sum = 0;
-//foreach (Control vControl in WrapPanel_Right.Children)
-//{
-//    if (vControl is ButtonWithText)
-//    {
-//        sum += 1;
-//    }
-//}
-
-//#region "删除旧版本文件"
-//string oldVersionPath = RegeditRW.RegReadString("OldVersionPath");
-//if (oldVersionPath != System.Windows.Forms.Application.ExecutablePath && oldVersionPath != "")
-//{
-//    try
-//    {
-//        File.Delete(oldVersionPath);
-//    }
-//    catch (Exception ex)
-//    {
-//        System.Windows.Forms.MessageBox.Show("删除旧版本错误，请手动删除：" + ex);
-//    }
-//}
-//RegeditRW.RegWrite("OldVersionPath", "");
-//#endregion

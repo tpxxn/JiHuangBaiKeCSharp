@@ -123,6 +123,7 @@
     <Compile Include="Class\JsonDeserialize\ReleaseJson.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\JsonDeserialize\NaturalJson.cs" />
+    <Compile Include="Class\Settings.cs" />
     <Compile Include="CopySplashScreen.xaml.cs">
       <DependentUpon>CopySplashScreen.xaml</DependentUpon>
     </Compile>
@@ -227,6 +228,9 @@
     </Compile>
     <Compile Include="View\GoodPage.xaml.cs">
       <DependentUpon>GoodPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\NotifyIconMessageBox.xaml.cs">
+      <DependentUpon>NotifyIconMessageBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NaturalPage.xaml.cs">
       <DependentUpon>NaturalPage.xaml</DependentUpon>
@@ -455,6 +459,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\GoodPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dialog\NotifyIconMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

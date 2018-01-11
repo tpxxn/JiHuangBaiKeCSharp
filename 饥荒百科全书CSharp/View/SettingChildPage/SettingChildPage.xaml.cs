@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using 饥荒百科全书CSharp.Class;
 using Control = System.Windows.Forms.Control;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using MessageBox = System.Windows.MessageBox;
 
 namespace 饥荒百科全书CSharp.View.SettingChildPage
 {
@@ -37,6 +38,21 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
         {
             InitializeComponent();
             Global.SettingRootFrame.NavigationService.LoadCompleted += LoadCompleted;
+            if (string.IsNullOrEmpty(RegeditRw.RegReadString("HideToNotifyIconPrompt")))
+            {
+                HideToNotifyIconRadioButton.IsChecked = true;
+            }
+            else
+            {
+                if (Settings.HideToNotifyIcon)
+                {
+                    HideToNotifyIconRadioButton.IsChecked = true;
+                }
+                else
+                {
+                    ExitRadioButton.IsChecked = true;
+                }
+            }
         }
 
         //老板键
@@ -113,6 +129,23 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             {
                 SeBossKeyKey.Content = "Ctrl + Alt + B";
             }
+        }
+
+        private void NotifyIconRadioButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (HideToNotifyIconRadioButton.IsChecked == true)
+            {
+                Settings.HideToNotifyIcon = true;
+                RegeditRw.RegWrite("HideToNotifyIcon", "True");
+            }
+            else if (ExitRadioButton.IsChecked == true)
+            {
+                Settings.HideToNotifyIcon = false;
+                RegeditRw.RegWrite("HideToNotifyIcon", "False");
+            }
+            var copySplashWindow = new CopySplashScreen("已保存");
+            copySplashWindow.InitializeComponent();
+            copySplashWindow.Show();
         }
     }
 }
