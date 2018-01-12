@@ -107,7 +107,7 @@
         "EnName": "Froggle Bunwich",
         "Health": 20,
         "Hunger": 37.5,
-        "Sanity": 0,
+        "Sanity": 5,
         "Perish": 10,
         "Cooktime": 10,
         "Priority": 1,
@@ -372,9 +372,7 @@
         "NeedPicture1": "FC_Monster_Meats",
         "Need1": "或",
         "NeedPictureOr": "F_durian",
-        "NeedOr": "或",
-        "NeedPicture2": "FC_Jellyfish",
-        "Need2": "×2",
+        "NeedOr": "×2",
         "Restrictions1": {
           "Pre": "无",
           "Text": "F_twigs"
@@ -803,7 +801,7 @@
         "Recommend1": "F_roasted_birchnut",
         "Recommend2": "F_berries",
         "Recommend3": "F_berries",
-        "Recommend4": "F_berries",
+        "Recommend4": "F_twigs",
         "Introduce": "在猪王旁建家的话烤桦树果是不会缺的，回复不少血量的神器。",
         "Console": "trailmix"
       },
@@ -1197,7 +1195,7 @@
       },
       {
         "Picture": "F_braised_eggplant",
-        "Name": "炖茄子",
+        "Name": "焖茄子",
         "EnName": "Braised Eggplant",
         "Health": 20,
         "Hunger": 25,
@@ -1522,7 +1520,7 @@
         "Health": 1,
         "Hunger": 12.5,
         "Sanity": 7.5,
-        "Perish": 8,
+        "Perish": 3,
         "Attribute": "FC_Fruit",
         "AttributeValue": "×1",
         "Introduce": "把西瓜放在篝火上烤制。食用后5秒降低40温度。",

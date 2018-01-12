@@ -1344,7 +1344,7 @@
                     "N_grass",
                     "N_grass_diseased"
                 ],
-                "Introduction": "挖取草或患病的草获得。",
+                "Introduction": "挖取草获得。",
                 "Console": "dug_grass"
             },
             {
@@ -1355,7 +1355,7 @@
                     "N_sapling",
                     "N_sapling_diseased"
                 ],
-                "Introduction": "挖取小树苗根或患病的小树苗根获得。",
+                "Introduction": "挖取小树苗根获得。",
                 "Console": "dug_sapling"
             },
             {
@@ -1366,7 +1366,7 @@
                     "N_berry_bush_1",
                     "N_berry_bush_diseased"
                 ],
-                "Introduction": "挖取浆果灌木丛或患病的浆果灌木丛获得。",
+                "Introduction": "挖取浆果灌木丛获得。",
                 "Console": "dug_berrybush"
             },
             {

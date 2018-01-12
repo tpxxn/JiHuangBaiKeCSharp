@@ -51,8 +51,16 @@ namespace 饥荒百科全书CSharp.Class
             if (msg.message == WM_HOTKEY)
             {
                 var mainWindow = (MainWindow)Application.Current.MainWindow;
-                mainWindow.MwVisivility = !mainWindow.MwVisivility;
-                mainWindow.NotifyIcon.Visible = !mainWindow.NotifyIcon.Visible;
+                if (mainWindow.NotifyIcon.Visible)
+                {
+                    mainWindow.MwVisivility = false;
+                    mainWindow.NotifyIcon.Visible = false;
+                }
+                else
+                {
+                    mainWindow.MwVisivility = true;
+                    mainWindow.NotifyIcon.Visible = true;
+                }
             }
         }
 

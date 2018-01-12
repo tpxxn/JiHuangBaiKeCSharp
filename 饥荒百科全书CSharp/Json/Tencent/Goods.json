@@ -1722,6 +1722,19 @@
         "Console": "blowdart_fire"
       },
       {
+        "Picture": "S_electric_dart",
+        "Name": "电箭",
+        "EnName": "Electric Dart",
+        "Attack": 90,
+        "AttackWet": 150,
+        "Durability": "1次",
+        "Ability": [
+          "电击目标"
+        ],
+        "Introduction": "具有较高攻击力，在攻击潮湿生物时效果拔群。",
+        "Console": "blowdart_yellow"
+      },
+      {
         "Picture": "S_boomerang",
         "Name": "回旋镖",
         "EnName": "Boomerang",
@@ -2072,7 +2085,7 @@
           "N_grass",
           "N_grass_diseased"
         ],
-        "Introduction": "挖取草或患病的草获得。",
+        "Introduction": "挖取草或未完全患病的草获得。",
         "Console": "dug_grass"
       },
       {
@@ -2083,7 +2096,7 @@
           "N_sapling",
           "N_sapling_diseased"
         ],
-        "Introduction": "挖取树苗或患病的树苗获得。",
+        "Introduction": "挖取树苗或未完全患病的树苗获得。",
         "Console": "dug_sapling"
       },
       {
@@ -2094,7 +2107,7 @@
           "N_berry_bush_1",
           "N_berry_bush_diseased"
         ],
-        "Introduction": "挖取浆果灌木丛或患病的浆果灌木丛获得。",
+        "Introduction": "挖取浆果灌木丛或未完全患病的浆果灌木丛获得。",
         "Console": "dug_berrybush"
       },
       {
@@ -2125,7 +2138,7 @@
           "N_juicy_berry_bush",
           "N_juicy_berry_bush_diseased"
         ],
-        "Introduction": "挖取蜜汁浆果丛或患病的蜜汁浆果丛获得。",
+        "Introduction": "挖取多汁浆果丛或未完全患病的多汁浆果丛获得。",
         "Console": "dug_berrybush_juicy"
       },
       {

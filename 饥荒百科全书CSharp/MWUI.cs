@@ -17,7 +17,10 @@ using 饥荒百科全书CSharp.View;
 using 饥荒百科全书CSharp.View.Dialog;
 using Application = System.Windows.Application;
 using Button = System.Windows.Controls.Button;
+using ContextMenu = System.Windows.Controls.ContextMenu;
 using Cursor = System.Windows.Input.Cursor;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using MenuItem = System.Windows.Controls.MenuItem;
 using MessageBox = System.Windows.MessageBox;
 using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 using TextBox = System.Windows.Controls.TextBox;
@@ -562,8 +565,41 @@ namespace 饥荒百科全书CSharp
 
         protected override void OnClosing(CancelEventArgs e)
         {
-
+            base.OnClosing(e);
+            e.Cancel = true;
         }
+
+        #region 自定义Alt+F4 和 屏蔽Alt+Space
+        private bool _altDown;
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.SystemKey == Key.LeftAlt || e.SystemKey == Key.RightAlt)
+            {
+                _altDown = true;
+            }
+            // 调用自定义Alt+F4事件
+            else if (e.SystemKey == Key.F4 && _altDown)
+            {
+                e.Handled = true;
+                UI_btn_close_Click(null, null);
+            }
+            // Alt+Space直接屏蔽
+            else if (e.SystemKey == Key.Space && _altDown)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.SystemKey == Key.LeftAlt || e.SystemKey == Key.RightAlt)
+            {
+                _altDown = false;
+            }
+        }
+        #endregion
 
         private void DisposeNotifyIcon()
         {
@@ -667,6 +703,109 @@ namespace 饥荒百科全书CSharp
             RightFrame.NavigationService.Navigate(new SettingPage());
         }
         #endregion
+        #endregion
+
+        #region 托盘区图标
+        /// <summary>
+        /// 托盘区图标
+        /// </summary>
+        public NotifyIcon NotifyIcon;
+
+        /// <summary>
+        /// 设置托盘区图标
+        /// </summary>
+        private void SetNotifyIcon()
+        {
+            NotifyIcon = new NotifyIcon
+            {
+                BalloonTipText = "饥荒百科全书躲起来了~",
+                Text = "饥荒百科全书",
+                // ReSharper disable once PossibleNullReferenceException
+                Icon = new System.Drawing.Icon(Application.GetResourceStream(new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Resources/DST.ico")).Stream),
+                Visible = true
+            };
+            NotifyIcon.MouseClick += NotifyIcon_MouseClick;
+        }
+
+        private void NotifyIcon_Navigated(object sender, EventArgs e)
+        {
+            MwVisivility = true;
+            switch (((Button)sender).Name)
+            {
+                case "CharacterButton":
+                    SidebarCharacter.IsChecked = true;
+                    Sidebar_Character_Click(null, null);
+                    break;
+                case "FoodButton":
+                    SidebarFood.IsChecked = true;
+                    Sidebar_Food_Click(null, null);
+                    break;
+                case "CookingSimulatorButton":
+                    SidebarCookingSimulator.IsChecked = true;
+                    Sidebar_Cooking_Simulator_Click(null, null);
+                    break;
+                case "ScienceButton":
+                    SidebarScience.IsChecked = true;
+                    Sidebar_Science_Click(null, null);
+                    break;
+                case "CreatureButton":
+                    SidebarCreature.IsChecked = true;
+                    Sidebar_Creature_Click(null, null);
+                    break;
+                case "NaturalButton":
+                    SidebarNatural.IsChecked = true;
+                    Sidebar_Natural_Click(null, null);
+                    break;
+                case "GoodButton":
+                    SidebarGoods.IsChecked = true;
+                    Sidebar_Goods_Click(null, null);
+                    break;
+                case "SettingButton":
+                    SidebarSetting.IsChecked = true;
+                    Sidebar_Setting_Click(null, null);
+                    break;
+                case "ExitButton":
+                    DisposeNotifyIcon();
+                    Application.Current.Shutdown();
+                    break;
+            }
+            ((ContextMenu)GetParent((MenuItem)GetParent((WrapPanel)GetParent((Button)sender)))).IsOpen = false;
+        }
+
+        /// <summary>
+        /// 寻找逻辑树上的父控件
+        /// </summary>
+        /// <param name="dependencyObject">控件对象</param>
+        /// <returns>父控件对象</returns>
+        private static DependencyObject GetParent(DependencyObject dependencyObject)
+        {
+            return LogicalTreeHelper.GetParent(dependencyObject);
+        }
+
+        /// <summary>  
+        /// 鼠标单击  
+        /// </summary>  
+        /// <param name="sender"></param>  
+        /// <param name="e"></param>  
+        private void NotifyIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            // 左键显示隐藏界面
+            if (e.Button == MouseButtons.Left)
+            {
+                if (MwVisivility)
+                {
+                    NotifyIcon.ShowBalloonTip(1000);
+                }
+                MwVisivility = !MwVisivility;
+            }
+            //右键打开菜单
+            else if (e.Button == MouseButtons.Right)
+            {
+                var notifyIconMenu = (ContextMenu)FindResource("NotifyIconMenu");
+                notifyIconMenu.IsOpen = true;
+            }
+        }
+
         #endregion
     }
 }

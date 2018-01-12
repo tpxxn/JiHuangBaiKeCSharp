@@ -1233,10 +1233,12 @@
         "Resources": [
           [
             "F_rot|×1&",
-            "G_sapling|×1&Shovel"
+            "G_sapling|×1(未完全患病)&Shovel",
+            "G_twigs|×1&Shovel"
           ],
           [
-            "G_sapling|×1&Shovel"
+            "G_sapling|×1(未完全患病)&Shovel",
+            "G_twigs|×1&Shovel"
           ]
         ],
         "ResourcesBurned": [
@@ -1248,7 +1250,7 @@
           "N_grasslands",
           "N_forest"
         ],
-        "Introduction": "患病后一段时间消失，患病无法治疗，但是用铲子铲起可以得到全新的树苗。"
+        "Introduction": "患病后一段时间消失，患病无法治疗，但如果未完全患病，就可以用铲子铲起来得到全新的树苗。"
       },
       {
         "Picture": "N_grass_diseased",
@@ -1262,13 +1264,16 @@
         "Resources": [
           [
             "F_rot|×1&",
-            "G_grass_tuft|×1&Shovel"
+            "G_grass_tuft|×1(未完全患病)&Shovel",
+            "G_cut_grass|×1&Shovel"
           ],
           [
-            "G_grass_tuft|×1&Shovel"
+            "G_grass_tuft|×1(未完全患病)&Shovel",
+            "G_cut_grass|×1&Shovel"
           ],
           [
-            "G_grass_tuft|×1&Shovel"
+            "G_grass_tuft|×1(未完全患病)&Shovel",
+            "G_cut_grass|×1&Shovel"
           ]
         ],
         "ResourcesBurned": [
@@ -1279,7 +1284,7 @@
         "Biomes": [
           "N_grasslands"
         ],
-        "Introduction": "患病后一段时间消失，患病无法治疗，但是用铲子铲起可以得到全新的长草簇。"
+        "Introduction": "患病后一段时间消失，患病无法治疗，但如果未完全患病，就可以用铲子铲起来得到全新的长草簇。"
       },
       {
         "Picture": "N_berry_bush_diseased",
@@ -1293,12 +1298,15 @@
         "Resources": [
           [
             "F_rot|×1&",
-            "G_berry_bush|×1&Shovel"
+            "G_berry_bush|×1(未完全患病)&Shovel",
+            "G_twigs|×2&Shovel"
           ],
           [
-            "G_berry_bush|×1&Shovel"
+            "G_berry_bush|×1(未完全患病)&Shovel",
+            "G_twigs|×2&Shovel"
           ],
           [
+            "G_berry_bush|×1(未完全患病)&Shovel",
             "G_twigs|×2&Shovel"
           ]
         ],
@@ -1311,7 +1319,7 @@
           "N_grasslands",
           "N_forest"
         ],
-        "Introduction": "患病后一段时间消失，患病无法治疗，但是用铲子铲起可以得到全新的浆果灌木丛。"
+        "Introduction": "患病后一段时间消失，患病无法治疗。但如果未完全患病，就可以用铲子铲起来得到全新的浆果灌木丛。"
       },
       {
         "Picture": "N_juicy_berry_bush_diseased",
@@ -1325,12 +1333,15 @@
         "Resources": [
           [
             "F_rot|×1&",
-            "G_juicy_berry_bush|×1&Shovel"
+            "G_juicy_berry_bush|×1(未完全患病)&Shovel",
+            "G_twigs|×2&Shovel"
           ],
           [
-            "G_juicy_berry_bush|×1&Shovel"
+            "G_juicy_berry_bush|×1(未完全患病)&Shovel",
+            "G_twigs|×2&Shovel"
           ],
           [
+            "G_juicy_berry_bush|×1(未完全患病)&Shovel",
             "G_twigs|×2&Shovel"
           ]
         ],
@@ -1343,7 +1354,7 @@
           "N_grasslands",
           "N_forest"
         ],
-        "Introduction": "患病后一段时间消失，患病无法治疗，但是用铲子铲起可以得到全新的蜜汁浆果丛。"
+        "Introduction": "患病后一段时间消失，患病无法治疗，但如果未完全患病，就可以用铲子铲起来得到全新的蜜汁浆果丛。"
       }
     ]
   },

@@ -1477,7 +1477,7 @@
       },
       {
         "Picture": "S_poison_dart",
-        "Name": "毒镖",
+        "Name": "淬毒吹箭",
         "EnName": "Poison Dart",
         "Need1": "G_cut_reeds",
         "Need1Value": 2,
@@ -1587,7 +1587,7 @@
       },
       {
         "Picture": "S_sea_chest",
-        "Name": "海底阀箱",
+        "Name": "海上箱子",
         "EnName": "Sea Chest",
         "Need1": "G_tar",
         "Need1Value": 1,

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
 using Application = System.Windows.Application;
-using MenuItem = System.Windows.Forms.MenuItem;
+using System.Runtime.InteropServices;
 
 namespace 饥荒百科全书CSharp
 {
@@ -22,11 +22,26 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class MainWindow : Window
     {
-        //检查更新实例 update(网盘)
+        /***************************禁用关闭按钮需要***********************/
+        //[DllImport("USER32.DLL")]
+        //public static extern int GetSystemMenu(int hwnd, int bRevert);
+        //[DllImport("USER32.DLL")]
+        //public static extern int RemoveMenu(int hMenu, int nPosition, int wFlags);
+        //const int MF_REMOVE = 0x1000;
+        //const int SC_RESTORE = 0xF120; //还原 
+        //const int SC_MOVE = 0xF010; //移动 
+        //const int SC_SIZE = 0xF000; //大小 
+        //const int SC_MINIMIZE = 0xF020; //最小化 
+        //const int SC_MAXIMIZE = 0xF030; //最大化 
+        //const int SC_CLOSE = 0xF060; //关闭
+        /******************************************************************/
+        #region 字段/属性
+        /// <summary>
+        /// 检查更新实例 update(网盘)
+        /// </summary>
         public static UpdatePan UpdatePan = new UpdatePan();
 
         #region "窗口可视化属性"
-
         private readonly Timer _visiTimer = new Timer();
 
         public bool MwVisivility { get; set; }
@@ -37,15 +52,17 @@ namespace 饥荒百科全书CSharp
         }
         #endregion
 
-        #region "窗口是否初始化属性"
-
+        /// <summary>
+        /// 窗口是否初始化属性
+        /// </summary>
         public static bool MwInit { get; set; }
 
-        #endregion
-        // 托盘区图标
-        public NotifyIcon NotifyIcon;
-        // 是否加载字体
+        /// <summary>
+        /// 是否加载字体
+        /// </summary>
         public static bool LoadFont;
+        #endregion
+
         #region "MainWindow"
         //MainWindow构造函数
         public MainWindow()
@@ -75,6 +92,12 @@ namespace 饥荒百科全书CSharp
             #endregion
             // 初始化
             InitializeComponent();
+            /***************************禁用关闭按钮需要***********************/
+            //WindowInteropHelper wndHelper = new WindowInteropHelper(this);
+            //IntPtr wpfHwnd = wndHelper.Handle;
+            //int hMenu = GetSystemMenu(wpfHwnd.ToInt32(), 0);
+            //RemoveMenu(hMenu, SC_CLOSE, MF_REMOVE);
+            /******************************************************************/
             // 窗口缩放
             SourceInitialized += delegate (object sender, EventArgs e) { _hwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource; };
             MouseMove += Window_MouseMove;
@@ -175,75 +198,13 @@ namespace 饥荒百科全书CSharp
             // 设置游戏版本
             UiGameversion.SelectedIndex = (int)gameVersion;
             #endregion
-            #region 设定通知图标
-            NotifyIcon = new NotifyIcon
-            {
-                BalloonTipText = "饥荒百科全书躲起来了~",
-                Text = "饥荒百科全书",
-                // ReSharper disable once PossibleNullReferenceException
-                Icon = new System.Drawing.Icon(Application.GetResourceStream(new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Resources/DST.ico")).Stream),
-                Visible = true
-            };
-            NotifyIcon.MouseClick += NotifyIcon_MouseClick;
-
-            //设置菜单项  
-            var fengexian = new MenuItem("-");
-
-            //退出菜单项  
-            var exit = new MenuItem("退出");
-            exit.Click += Exit_Click;
-
-            var childen = new[] { fengexian, exit };
-            NotifyIcon.ContextMenu = new System.Windows.Forms.ContextMenu(childen);
-            //窗体状态改变时候触发  
-            StateChanged += SysTray_StateChanged;
-            #endregion
+            // 设置托盘区图标
+            SetNotifyIcon();
             // 右侧面板导航到欢迎界面
             RightFrame.Navigate(new WelcomePage());
             // 是否显示开服工具
             if (Global.TestMode)
                 SidebarDedicatedServer.Visibility = Visibility.Visible;
-        }
-
-        /// <summary>  
-        /// 退出选项  
-        /// </summary>  
-        /// <param name="sender"></param>  
-        /// <param name="e"></param>  
-        private void Exit_Click(object sender, EventArgs e)
-        {
-            DisposeNotifyIcon();
-            Application.Current.Shutdown();
-        }
-
-        /// <summary>  
-        /// 窗体状态改变时候触发  
-        /// </summary>  
-        /// <param name="sender"></param>  
-        /// <param name="e"></param>  
-        private void SysTray_StateChanged(object sender, EventArgs e)
-        {
-            if (this.WindowState == WindowState.Minimized)
-            {
-                MwVisivility = false;
-            }
-        }
-
-        /// <summary>  
-        /// 鼠标单击  
-        /// </summary>  
-        /// <param name="sender"></param>  
-        /// <param name="e"></param>  
-        private void NotifyIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                if (MwVisivility)
-                {
-                    NotifyIcon.ShowBalloonTip(1000);
-                }
-                MwVisivility = !MwVisivility;
-            }
         }
 
         /// <summary>

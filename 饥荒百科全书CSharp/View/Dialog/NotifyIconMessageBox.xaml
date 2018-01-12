@@ -11,9 +11,9 @@
         AllowsTransparency="True" 
         MouseLeftButtonDown="Window_MouseLeftButtonDown" 
         Topmost="False" 
-        Icon="/饥荒百科全书CSharp;component/Resources/DST.ico">
+        Icon="/饥荒百科全书CSharp;component/Resources/DST.ico" ShowInTaskbar="False">
 
-    <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FF2B2B2B">
+    <Border x:Name="MainBorder" BorderThickness="1" BorderBrush="#FFB2ECED">
         <Grid>
             <TextBlock x:Name="WindowTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒百科全书" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <StackPanel Width="180" Margin="0,40,0,0" VerticalAlignment="Top">

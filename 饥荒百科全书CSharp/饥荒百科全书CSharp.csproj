@@ -261,6 +261,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dictionary\ContentMenuDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dictionary\CursorDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -5772,6 +5776,20 @@
   <ItemGroup>
     <Resource Include="Resources\CheckBoxChecked.png" />
     <Resource Include="Resources\CheckBoxUnChecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\NotifyIcon\Character.png" />
+    <Resource Include="Resources\NotifyIcon\CookingSimulator.png" />
+    <Resource Include="Resources\NotifyIcon\Creature.png" />
+    <Resource Include="Resources\NotifyIcon\DedicatedServer.png" />
+    <Resource Include="Resources\NotifyIcon\Food.png" />
+    <Resource Include="Resources\NotifyIcon\Good.png" />
+    <Resource Include="Resources\NotifyIcon\Natural.png" />
+    <Resource Include="Resources\NotifyIcon\Science.png" />
+    <Resource Include="Resources\NotifyIcon\Setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\NotifyIcon\Exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

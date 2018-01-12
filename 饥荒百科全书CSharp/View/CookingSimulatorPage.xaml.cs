@@ -888,7 +888,7 @@ namespace 饥荒百科全书CSharp.View
                 CS_CrockPotListAddFood("F_froggle_bunwich", 1);
             if (_csFtDragonFruit >= 1 && _csFtMeats == 0)
                 CS_CrockPotListAddFood("F_dragonpie", 1);
-            if (_csFtEggplant >= 1 && _csFtVegetables >= 0.5)
+            if (_csFtEggplant >= 1 && _csFtVegetables >= 1.5)
                 CS_CrockPotListAddFood("F_stuffed_eggplant", 1);
             if (_csFtVegetables >= 0.5 && _csFtMeats == 0 && _csFtTwigs == 0)
                 CS_CrockPotListAddFood("F_ratatouille", 0);

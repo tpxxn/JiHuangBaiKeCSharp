@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:饥荒百科全书CSharp"
         xmlns:ucdedi="clr-namespace:饥荒百科全书CSharp.MyUserControl.DedicatedServer"
+        xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
         xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:class="clr-namespace:饥荒百科全书CSharp.Class"
@@ -13,10 +14,11 @@
         mc:Ignorable="d"
         Title="饥荒百科全书" Icon="Resources/DST.ico" 
         Height="660" Width="888" MinHeight="660" MinWidth="888" 
+        PreviewKeyDown="Window_PreviewKeyDown" PreviewKeyUp="Window_PreviewKeyUp"
         MouseLeftButtonDown="MainWindow_MouseLeftButtonDown" MouseLeftButtonUp="MainWindow_MouseLeftButtonUp"
         WindowStartupLocation="CenterScreen" SizeChanged="MainWindow_SizeChanged" Loaded="MainWindow_Loaded" 
         Cursor="{StaticResource CursorPointer}" WindowStyle="None" 
-        AllowsTransparency="True" MouseDoubleClick="MainWindow_MouseDoubleClick">
+        AllowsTransparency="True" MouseDoubleClick="MainWindow_MouseDoubleClick" Background="White">
     
     <Window.Resources>
         <DataTemplate x:Key="AutoSuggestBoxDataTemplate" DataType="class:SuggestBoxItem">
@@ -35,6 +37,54 @@
                 </Grid>
             </Button>
         </DataTemplate>
+        <ContextMenu x:Key="NotifyIconMenu" Style="{StaticResource ContentMenuStyle}"  Cursor="{StaticResource CursorPointer}" StaysOpen="True">
+            <MenuItem Foreground="Black" Style="{StaticResource MenuItemStyle}" Cursor="{StaticResource CursorLink}" Click="NotifyIcon_Navigated" IsEnabled="False">
+                <MenuItem.Header>
+                    <Grid Width="192">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="46"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Resources/DST.ico" Height="36" Width="36" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="饥荒百科全书" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </MenuItem.Header>
+            </MenuItem>
+            <!--<MenuItem Header="—————————" Style="{StaticResource MenuItemStyle}" IsEnabled="False"/>-->
+            <MenuItem Icon="{x:Null}" Style="{StaticResource MenuItemStyle}" >
+                <MenuItem.Header>
+                    <WrapPanel Width="192" Orientation="Horizontal">
+                        <Button ToolTip="人物" x:Name="CharacterButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Character.png" />
+                        </Button>
+                        <Button ToolTip="食物" x:Name="FoodButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Food.png" />
+                        </Button>
+                        <Button ToolTip="模拟" x:Name="CookingSimulatorButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/CookingSimulator.png" />
+                        </Button>
+                        <Button ToolTip="科技" x:Name="ScienceButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Science.png" />
+                        </Button>
+                        <Button ToolTip="生物" x:Name="CreatureButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Creature.png" />
+                        </Button>
+                        <Button ToolTip="自然" x:Name="NaturalButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Natural.png" />
+                        </Button>
+                        <Button ToolTip="物品" x:Name="GoodButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Good.png" />
+                        </Button>
+                        <Button ToolTip="设置" x:Name="SettingButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Setting.png" />
+                        </Button>
+                        <Button ToolTip="退出" x:Name="ExitButton" Width="64" Height="64" Cursor="{StaticResource CursorLink}" Background="{x:Null}" BorderBrush="{x:Null}" Click="NotifyIcon_Navigated">
+                            <Image Source="Resources/NotifyIcon/Exit.png" />
+                        </Button>
+                    </WrapPanel>
+                </MenuItem.Header>
+            </MenuItem>
+        </ContextMenu>
     </Window.Resources>
 
     <Grid x:Name="ResizeGrid">
@@ -70,7 +120,7 @@
                 <Button x:Name="UiBtnMinimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UiBtnBg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_bg_Style}" Focusable="False" />
                 <Popup x:Name="UiPopBg" PopupAnimation="Fade" Width="200" PlacementTarget="{Binding ElementName=UiBtnBg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
-                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
+                    <Border BorderThickness="1" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
                         <StackPanel Margin="10">
                             <Button x:Name="SeButtonBackground" Click="Se_button_Background_Click" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{StaticResource CursorLink}">
                                 <Canvas Height="40" Width="170" Margin="-2,-2,0,0" >
@@ -112,8 +162,8 @@
                     </Border>
                 </Popup>
                 <Button x:Name="UiBtnSetting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Margin="0,10,110,20" Height="20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_setting_Style}" Focusable="False" d:IsLocked="True" />
-                <Popup x:Name="UiPopSetting" PopupAnimation="Fade" Width="150" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Margin="0,0,748,-150" VerticalOffset="10" d:IsLocked="True">
-                    <Border BorderThickness="5" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
+                <Popup x:Name="UiPopSetting" PopupAnimation="Fade" Width="150" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Margin="0,0,748,-150" VerticalOffset="10">
+                    <Border BorderThickness="1" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
                         <StackPanel Margin="10">
                             <Button x:Name="SeButtonTopmost" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Cursor="{StaticResource CursorLink}" Click="Se_button_Topmost_Click">
                                 <Canvas Height="40" Width="120" Margin="-2,-2,0,0" >
