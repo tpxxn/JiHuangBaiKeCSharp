@@ -14,6 +14,7 @@ using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
 using Application = System.Windows.Application;
 using System.Runtime.InteropServices;
+using MessageBox = System.Windows.MessageBox;
 
 namespace 饥荒百科全书CSharp
 {
@@ -22,19 +23,6 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class MainWindow : Window
     {
-        /***************************禁用关闭按钮需要***********************/
-        //[DllImport("USER32.DLL")]
-        //public static extern int GetSystemMenu(int hwnd, int bRevert);
-        //[DllImport("USER32.DLL")]
-        //public static extern int RemoveMenu(int hMenu, int nPosition, int wFlags);
-        //const int MF_REMOVE = 0x1000;
-        //const int SC_RESTORE = 0xF120; //还原 
-        //const int SC_MOVE = 0xF010; //移动 
-        //const int SC_SIZE = 0xF000; //大小 
-        //const int SC_MINIMIZE = 0xF020; //最小化 
-        //const int SC_MAXIMIZE = 0xF030; //最大化 
-        //const int SC_CLOSE = 0xF060; //关闭
-        /******************************************************************/
         #region 字段/属性
         /// <summary>
         /// 检查更新实例 update(网盘)
@@ -64,7 +52,9 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "MainWindow"
-        //MainWindow构造函数
+        /// <summary>
+        /// MainWindow构造函数
+        /// </summary>
         public MainWindow()
         {
             Application.Current.MainWindow = this;
@@ -92,12 +82,6 @@ namespace 饥荒百科全书CSharp
             #endregion
             // 初始化
             InitializeComponent();
-            /***************************禁用关闭按钮需要***********************/
-            //WindowInteropHelper wndHelper = new WindowInteropHelper(this);
-            //IntPtr wpfHwnd = wndHelper.Handle;
-            //int hMenu = GetSystemMenu(wpfHwnd.ToInt32(), 0);
-            //RemoveMenu(hMenu, SC_CLOSE, MF_REMOVE);
-            /******************************************************************/
             // 窗口缩放
             SourceInitialized += delegate (object sender, EventArgs e) { _hwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource; };
             MouseMove += Window_MouseMove;
@@ -206,7 +190,7 @@ namespace 饥荒百科全书CSharp
             if (Global.TestMode)
                 SidebarDedicatedServer.Visibility = Visibility.Visible;
         }
-
+        
         /// <summary>
         /// MainWindow窗口加载
         /// </summary>

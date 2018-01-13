@@ -712,6 +712,11 @@ namespace 饥荒百科全书CSharp
         public NotifyIcon NotifyIcon;
 
         /// <summary>
+        /// 托盘区图标菜单
+        /// </summary>
+        private ContextMenu _notifyIconMenu;
+
+        /// <summary>
         /// 设置托盘区图标
         /// </summary>
         private void SetNotifyIcon()
@@ -725,6 +730,7 @@ namespace 饥荒百科全书CSharp
                 Visible = true
             };
             NotifyIcon.MouseClick += NotifyIcon_MouseClick;
+            _notifyIconMenu = (ContextMenu)FindResource("NotifyIconMenu");
         }
 
         private void NotifyIcon_Navigated(object sender, EventArgs e)
@@ -770,6 +776,11 @@ namespace 饥荒百科全书CSharp
                     break;
             }
             ((ContextMenu)GetParent((MenuItem)GetParent((WrapPanel)GetParent((Button)sender)))).IsOpen = false;
+            if (RegeditRw.RegRead("Topmost") == 0)
+            {
+                mainWindow.Topmost = true;
+                mainWindow.Topmost = false;
+            }
         }
 
         /// <summary>
@@ -785,8 +796,6 @@ namespace 饥荒百科全书CSharp
         /// <summary>  
         /// 鼠标单击  
         /// </summary>  
-        /// <param name="sender"></param>  
-        /// <param name="e"></param>  
         private void NotifyIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             // 左键显示隐藏界面
@@ -801,11 +810,15 @@ namespace 饥荒百科全书CSharp
             //右键打开菜单
             else if (e.Button == MouseButtons.Right)
             {
-                var notifyIconMenu = (ContextMenu)FindResource("NotifyIconMenu");
-                notifyIconMenu.IsOpen = true;
+                _notifyIconMenu.IsOpen = true;
             }
         }
 
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+                _notifyIconMenu.IsOpen = false;
+        }
         #endregion
+
     }
 }

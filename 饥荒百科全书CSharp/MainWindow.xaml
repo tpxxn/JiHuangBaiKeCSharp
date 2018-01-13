@@ -37,16 +37,18 @@
                 </Grid>
             </Button>
         </DataTemplate>
-        <ContextMenu x:Key="NotifyIconMenu" Style="{StaticResource ContentMenuStyle}"  Cursor="{StaticResource CursorPointer}" StaysOpen="True">
-            <MenuItem Foreground="Black" Style="{StaticResource MenuItemStyle}" Cursor="{StaticResource CursorLink}" Click="NotifyIcon_Navigated" IsEnabled="False">
+        <ContextMenu x:Key="NotifyIconMenu" Style="{StaticResource ContentMenuStyle}"  Cursor="{StaticResource CursorPointer}" StaysOpen="False">
+            <MenuItem Foreground="Black" Style="{StaticResource MenuItemStyle}">
                 <MenuItem.Header>
                     <Grid Width="192">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="46"/>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="35"/>
                         </Grid.ColumnDefinitions>
                         <Image Source="/Resources/DST.ico" Height="36" Width="36" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Column="1" Text="饥荒百科全书" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="饥荒百科全书" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Button Grid.Column="2" x:Name="ContextMenuBtnClose" Width="20" Margin="0,5,0,0" ToolTip="关闭菜单" Click="ButtonBase_OnClick"  Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_close_Style}" Focusable="False" />
                     </Grid>
                 </MenuItem.Header>
             </MenuItem>
@@ -114,7 +116,7 @@
             <Border x:Name="UiBackGroundBorder" BorderThickness="0" Grid.RowSpan="2" Grid.Column="1" d:IsLocked="True"/>
             <Grid x:Name="UiGrid" Grid.Row="0" Grid.Column="1">
                 <TextBlock x:Name="UiTitle" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" />
-                <Button x:Name="UiBtnClose" Width="20" ToolTip="退出" Click="UI_btn_close_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,10,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_close_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UiBtnClose" Width="20" ToolTip="退出" Click="UI_btn_close_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,10,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_close_Style}" Focusable="False" />
                 <Button x:Name="UiBtnMaximized" Width="20" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_maximized_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UiBtnNormal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_normal_Style}" Focusable="False" d:IsLocked="True" />
                 <Button x:Name="UiBtnMinimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
