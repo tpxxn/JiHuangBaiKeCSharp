@@ -167,13 +167,23 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         public static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
-            var resourceName = ProjectName + ".DynamicLinkLibrary." + new AssemblyName(args.Name).Name + ".dll";
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+            var dllName = new AssemblyName(args.Name).Name;
+            try
             {
-                // ReSharper disable once PossibleNullReferenceException
-                var assemblyData = new byte[stream.Length];
-                stream.Read(assemblyData, 0, assemblyData.Length);
-                return Assembly.Load(assemblyData);
+                var resourceName = ProjectName + ".DynamicLinkLibrary." + dllName + ".dll";
+                using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+                {
+                    // ReSharper disable once PossibleNullReferenceException
+                    var assemblyData = new byte[stream.Length];
+                    stream.Read(assemblyData, 0, assemblyData.Length);
+                    return Assembly.Load(assemblyData);
+                }
+            }
+            catch (Exception e)
+            {
+                if (dllName != "饥荒百科全书CSharp.resources")
+                    MessageBox.Show("DLL未能正确加载，详细信息：\r\n" + e.Message + "\r\n" + dllName);
+                throw new InvalidOperationException();
             }
         }
         #endregion

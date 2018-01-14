@@ -37,7 +37,7 @@
                 </Grid>
             </Button>
         </DataTemplate>
-        <ContextMenu x:Key="NotifyIconMenu" Style="{StaticResource ContentMenuStyle}"  Cursor="{StaticResource CursorPointer}" StaysOpen="False">
+        <ContextMenu x:Key="NotifyIconMenu" Style="{StaticResource ContentMenuStyle}" Cursor="{StaticResource CursorPointer}" StaysOpen="False">
             <MenuItem Foreground="Black" Style="{StaticResource MenuItemStyle}">
                 <MenuItem.Header>
                     <Grid Width="192">

@@ -23,26 +23,26 @@ namespace 饥荒百科全书CSharp
         /// <summary>
         /// Interaction logic for App.xaml
         /// </summary>
-        private class App_Run : Application
+        private class AppRun : Application
         {
-            public App_Run()
+            public AppRun()
             {
                 Debug.WriteLine("App constructor");
-                //Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
-                //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+                Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 Startup += App_Startup;
             }
 
-            //private static void Current_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
-            //{
-            //    MessageBox.Show("我们很抱歉，当前应用程序遇到一些问题，该操作已经终止，请进行重试，如果问题继续存在，请联系管理员.", "意外的操作", MessageBoxButton.OK, MessageBoxImage.Information);//这里通常需要给用户一些较为友好的提示，并且后续可能的操作
-            //    e.Handled = true;//使用这一行代码告诉运行时，该异常被处理了，不再作为UnhandledException抛出了。
-            //}
+            private static void Current_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+            {
+                MessageBox.Show("错误信息：\r\n" + e.Exception, "意外的操作", MessageBoxButton.OK, MessageBoxImage.Information);//这里通常需要给用户一些较为友好的提示，并且后续可能的操作
+                e.Handled = true;//使用这一行代码告诉运行时，该异常被处理了，不再作为UnhandledException抛出了。
+            }
 
-            //private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-            //{
-            //    MessageBox.Show("我们很抱歉，当前应用程序遇到一些问题，该操作已经终止，请进行重试，如果问题继续存在，请联系管理员.", "意外的操作", MessageBoxButton.OK, MessageBoxImage.Information);
-            //}
+            private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+            {
+                MessageBox.Show("错误信息：\r\n" + e.ExceptionObject, "意外的操作", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 
             private static void App_Startup(object sender, StartupEventArgs e)
             {
@@ -203,6 +203,10 @@ namespace 饥荒百科全书CSharp
                 var splashWindow = new SplashScreen();
                 splashWindow.InitializeComponent();
                 splashWindow.Show();
+                //var mainWindowShow = new MainWindow();
+                //mainWindowShow.InitializeComponent();
+                //mainWindowShow.Show();
+                //mainWindowShow.Activate();
             }
         }
 
@@ -235,7 +239,7 @@ namespace 饥荒百科全书CSharp
                             MessageBox.Show("您正在以测试模式运行饥荒百科全书，测试模式可能会导致部分BUG，请酌情使用!!!∑(ﾟДﾟノ)ノ");
                             _testMode = true;
                         }
-                        var app = new App_Run();
+                        var app = new AppRun();
                         app.Run();
                     }
                     else

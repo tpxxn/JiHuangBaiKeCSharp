@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
@@ -819,6 +820,5 @@ namespace 饥荒百科全书CSharp
                 _notifyIconMenu.IsOpen = false;
         }
         #endregion
-
     }
 }

@@ -1,6 +1,24 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.6.3",
+      "Data": "2018年1月13日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "增加一个捕获异常机制，出现异常会以对话框形式提示错误信息"
+        },
+        {
+          "Label": "改进",
+          "Content": "托盘区菜单添加关闭按钮"
+        },
+        {
+          "Label": "改进",
+          "Content": "优化减少文件体积"
+        }
+      ]
+    },
+    {
       "Version": "0.7.6.2",
       "Data": "2018年1月13日",
       "UpdataContent": [
