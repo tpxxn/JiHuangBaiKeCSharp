@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
 using Application = System.Windows.Application;
-using System.Runtime.InteropServices;
-using MessageBox = System.Windows.MessageBox;
 
 namespace 饥荒百科全书CSharp
 {

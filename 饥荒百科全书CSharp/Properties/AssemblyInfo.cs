@@ -7,11 +7,11 @@ using System.Windows;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("饥荒百科全书CSharp")]
+[assembly: AssemblyTitle("饥荒百科全书")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("饥荒百科全书CSharp")]
+[assembly: AssemblyProduct("饥荒百科全书")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -51,5 +51,5 @@ using System.Windows;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”: :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.7.6.2")]
-[assembly: AssemblyFileVersion("0.7.6.2")]
+[assembly: AssemblyVersion("0.7.6.3")]
+[assembly: AssemblyFileVersion("0.7.6.3")]

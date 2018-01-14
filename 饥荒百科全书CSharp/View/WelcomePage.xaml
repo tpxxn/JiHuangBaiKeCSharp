@@ -16,7 +16,7 @@
         <TextBlock Text="部分资料来源于wikia" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,225,40,0" Foreground="Black" FontSize="33.333" FontWeight="Bold" d:LayoutOverrides="VerticalAlignment" d:IsLocked="True"/>
         <TextBlock Text="作者: tpxxn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,235" Foreground="Black" FontSize="40" FontWeight="Bold"/>
         <Button x:Name="WButtonQrCodeQun" Focusable="False" Width="150" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Margin="0,0,37,62" Height="150" VerticalAlignment="Bottom" Click="W_button_QRCode_Qun_Click" Cursor="{DynamicResource CursorLink}">
-            <Image Source="/Resources/QRCode_Qun.png" Width="150" Height="150"/>
+            <Image Source="/Resources/Pic/QRCode_Qun.png" Width="150" Height="150"/>
         </Button>
         <Button x:Name="WButtonOfficialWebsite" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,127" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_official_website_Click" Cursor="{DynamicResource CursorLink}">
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="百科官网" VerticalAlignment="Top" TextDecorations="Underline"/>
