@@ -170,13 +170,21 @@ namespace 饥荒百科全书CSharp.Class
             var dllName = new AssemblyName(args.Name).Name;
             try
             {
-                var resourceName = ProjectName + ".DynamicLinkLibrary." + dllName + ".dll";
-                using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+                if (!dllName.Contains("PresentationFramework"))
                 {
-                    // ReSharper disable once PossibleNullReferenceException
-                    var assemblyData = new byte[stream.Length];
-                    stream.Read(assemblyData, 0, assemblyData.Length);
-                    return Assembly.Load(assemblyData);
+
+                    var resourceName = ProjectName + ".DynamicLinkLibrary." + dllName + ".dll";
+                    using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+                    {
+                        // ReSharper disable once PossibleNullReferenceException
+                        var assemblyData = new byte[stream.Length];
+                        stream.Read(assemblyData, 0, assemblyData.Length);
+                        return Assembly.Load(assemblyData);
+                    }
+                }
+                else
+                {
+                    return null;
                 }
             }
             catch (Exception e)
