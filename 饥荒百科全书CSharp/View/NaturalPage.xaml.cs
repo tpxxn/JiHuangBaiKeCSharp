@@ -143,7 +143,6 @@ namespace 饥荒百科全书CSharp.View
             InitializeComponent();
             Global.NaturalLeftFrame = LeftFrame;
             Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
-            Deserialize();
         }
 
         public void Deserialize()

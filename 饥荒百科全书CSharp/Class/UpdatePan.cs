@@ -115,13 +115,20 @@ namespace 饥荒百科全书CSharp.Class
             //    var downloadWindow = new DownloadWindow(false);
             //    downloadWindow.Show();
             //}
-            if (_localVersion != NewVersion && File.Exists(UpdateXmlPath))
+            if (VersionCompare(_localVersion, NewVersion) && File.Exists(UpdateXmlPath))
             {
                 var downloadWindow = new DownloadWindow(true);
                 downloadWindow.Show();
             }
         }
+
+        private static bool VersionCompare(string localVersion, string newVersion)
+        {
+            var localVersionNum = int.Parse(localVersion.Replace(".", ""));
+            var newVersionNum = int.Parse(newVersion.Replace(".", ""));
+            return localVersionNum < newVersionNum;
+        }
         #endregion
     }
-    
+
 }

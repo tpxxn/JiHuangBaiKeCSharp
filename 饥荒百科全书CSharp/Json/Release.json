@@ -1,6 +1,24 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.6.5",
+      "Data": "2018年1月16日",
+      "UpdataContent": [
+        {
+          "Label": "改进",
+          "Content": "优化部分页面载入速度"
+        },
+        {
+          "Label": "改进",
+          "Content": "微调UI(调整主页、标题栏，调整滚动条样式)"
+        },
+        {
+          "Label": "修复",
+          "Content": "修复更多由于加载dll引发的错误"
+        }
+      ]
+    },
+    {
       "Version": "0.7.6.4",
       "Data": "2018年1月15日",
       "UpdataContent": [

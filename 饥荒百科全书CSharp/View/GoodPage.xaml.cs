@@ -320,7 +320,6 @@ namespace 饥荒百科全书CSharp.View
             {
                 UnlockExpander.Visibility = Visibility.Collapsed;
             }
-            Deserialize();
         }
 
         public void Deserialize()

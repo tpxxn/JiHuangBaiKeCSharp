@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
@@ -17,14 +18,15 @@ using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
 using 饥荒百科全书CSharp.View.Dialog;
 using Application = System.Windows.Application;
+using Brushes = System.Windows.Media.Brushes;
 using Button = System.Windows.Controls.Button;
 using ContextMenu = System.Windows.Controls.ContextMenu;
 using Cursor = System.Windows.Input.Cursor;
+using FontFamily = System.Windows.Media.FontFamily;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 using MenuItem = System.Windows.Controls.MenuItem;
 using MessageBox = System.Windows.MessageBox;
 using MouseEventArgs = System.Windows.Input.MouseEventArgs;
-using TextBox = System.Windows.Controls.TextBox;
 
 namespace 饥荒百科全书CSharp
 {
@@ -582,13 +584,17 @@ namespace 饥荒百科全书CSharp
 
         #region 自定义Alt+F4 和 屏蔽Alt+Space
         private bool _altDown;
-
+        private bool _ctrlDown;
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.SystemKey == Key.LeftAlt || e.SystemKey == Key.RightAlt)
             {
                 _altDown = true;
+            }
+            else if (e.SystemKey == Key.LeftCtrl || e.SystemKey == Key.RightCtrl)
+            {
+                _ctrlDown = true;
             }
             // 调用自定义Alt+F4事件
             else if (e.SystemKey == Key.F4 && _altDown)
@@ -601,6 +607,11 @@ namespace 饥荒百科全书CSharp
             {
                 e.Handled = true;
             }
+            // 聚焦搜索框
+            else if (e.SystemKey == Key.F && _ctrlDown)
+            {
+                SearchTextBox.Focus();
+            }
         }
 
         private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
@@ -608,6 +619,10 @@ namespace 饥荒百科全书CSharp
             if (e.SystemKey == Key.LeftAlt || e.SystemKey == Key.RightAlt)
             {
                 _altDown = false;
+            }
+            if (e.SystemKey == Key.LeftCtrl || e.SystemKey == Key.RightCtrl)
+            {
+                _ctrlDown = false;
             }
         }
         #endregion

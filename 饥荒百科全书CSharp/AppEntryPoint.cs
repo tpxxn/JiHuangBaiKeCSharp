@@ -72,6 +72,18 @@ namespace 饥荒百科全书CSharp
                     new ResourceDictionary
                     {
                         Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/MyUserControl/LoadingIndicators/Colors.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/MyUserControl/LoadingIndicators/Styles.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
                             UriKind.Absolute)
                     },

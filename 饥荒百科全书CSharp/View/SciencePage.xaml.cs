@@ -166,7 +166,6 @@ namespace 饥荒百科全书CSharp.View
                 CartographyExpanderTextBolck.Text = "制图学";
                 OfferingsExpanderTextBolck.Text = "贡品";
             }
-            Deserialize();
         }
 
         public void Deserialize()

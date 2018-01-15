@@ -18,18 +18,26 @@
         <Button x:Name="WButtonQrCodeQun" Focusable="False" Width="150" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" Margin="0,0,37,62" Height="150" VerticalAlignment="Bottom" Click="W_button_QRCode_Qun_Click" Cursor="{DynamicResource CursorLink}">
             <Image Source="/Resources/Pic/QRCode_Qun.png" Width="150" Height="150"/>
         </Button>
-        <Button x:Name="WButtonOfficialWebsite" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,127" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_official_website_Click" Cursor="{DynamicResource CursorLink}">
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="百科官网" VerticalAlignment="Top" TextDecorations="Underline"/>
-        </Button>
-        <Button x:Name="WButtonMods" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,102" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_Mods_Click" Cursor="{DynamicResource CursorLink}">
-            <TextBlock TextWrapping="Wrap" Text="推荐Mod" VerticalAlignment="Top" TextDecorations="Underline" HorizontalAlignment="Left"/>
-        </Button>
-        <Button x:Name="WButtonDsNews" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,77" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_DSNews_Click" Cursor="{DynamicResource CursorLink}">
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒单机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
-        </Button>
-        <Button x:Name="WButtonDstNewS" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,52" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_DSTNewS_Click" Cursor="{DynamicResource CursorLink}">
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒联机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
-        </Button>
+        <StackPanel Margin="10,0,0,52" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button x:Name="WButtonOfficialWebsite" Focusable="False" Margin="0" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_official_website_Click" Cursor="{DynamicResource CursorLink}" FontSize="16" HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="百科官网" VerticalAlignment="Top" TextDecorations="Underline"/>
+            </Button>
+            <Button x:Name="WButtonJiHuangHeZi" Focusable="False" Margin="0" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_jihuanghezi_Click" Cursor="{DynamicResource CursorLink}" FontSize="16" HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒盒子 by 火叶" VerticalAlignment="Top" TextDecorations="Underline"/>
+            </Button>
+            <Button x:Name="WButtonMods" Focusable="False" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_Mods_Click" Cursor="{DynamicResource CursorLink}" FontSize="16" HorizontalAlignment="Left">
+                <TextBlock TextWrapping="Wrap" Text="推荐Mod(联机版)" VerticalAlignment="Top" TextDecorations="Underline" HorizontalAlignment="Left"/>
+            </Button>
+            <Button x:Name="WButtonDsNews" Focusable="False" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Blue" Click="W_button_DSNews_Click" Cursor="{DynamicResource CursorLink}" FontSize="16" HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒单机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
+            </Button>
+            <Button x:Name="WButtonDstNewS" Focusable="False" Margin="0" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_DSTNewS_Click" Cursor="{DynamicResource CursorLink}" FontSize="16" HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="饥荒联机版更新" VerticalAlignment="Top" TextDecorations="Underline"/>
+            </Button>
+            <Button x:Name="WButtonSteamCommunity" Focusable="False" Margin="0" Foreground="Blue" BorderBrush="{x:Null}" Background="{x:Null}" Click="W_button_SteamCommunity_Click" Cursor="{DynamicResource CursorLink}" FontSize="16" HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="暂时解决创意工坊无法访问等Steam连接问题的软件" VerticalAlignment="Top" TextDecorations="Underline"/>
+            </Button>
+        </StackPanel>
         <TextBlock x:Name="TipTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="注: DS-饥荒单机 | RoG-巨兽统治 | SW-失落之船 | DST-饥荒联机 | Tencent-WeGame版和QQ游戏大厅版" VerticalAlignment="Bottom" Margin="10,0,0,10" FontSize="16"/>
     </Grid>
 </Page>

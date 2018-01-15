@@ -65,7 +65,9 @@
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Border x:Name="templateRoot" SnapsToDevicePixels="true" Background="{StaticResource ComboBox.Static.Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{StaticResource ComboBox.Static.Border}">
                         <Border x:Name="splitBorder" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" SnapsToDevicePixels="true" Margin="0" HorizontalAlignment="Right" BorderThickness="1" BorderBrush="Transparent">
-                            <Path x:Name="arrow" VerticalAlignment="Center" Margin="0" HorizontalAlignment="Center" Fill="{StaticResource ComboBox.Static.Glyph}" Data="F1 M 0,0 L 2.667,2.66665 L 5.3334,0 L 5.3334,-1.78168 L 2.6667,0.88501 L0,-1.78168 L0,0 Z"/>
+                            <Path x:Name="arrow" VerticalAlignment="Center" Margin="0,0,2,0" HorizontalAlignment="Center" Fill="{StaticResource ComboBox.Static.Glyph}" 
+                                  Data="F1 M 0,0 L 10.668,10.668 L 21.336,0 L 21.336,-7.12672 L 10.668,3.54004 L0,-7.12672 L0,0 Z"/>
+                            <!--Data="F1 M 0,0 L 2.667,2.66665 L 5.3334,0 L 5.3334,-1.78168 L 2.6667,0.88501 L0,-1.78168 L0,0 Z"/>-->
                         </Border>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -253,9 +255,11 @@
     <Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Background" Value="{StaticResource ComboBox.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ComboBox.Static.Border}"/>
+        <!--<Setter Property="BorderBrush" Value="{StaticResource ComboBox.Static.Border}"/>-->
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="1"/>
+        <!--<Setter Property="BorderThickness" Value="0"/>-->
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="Padding" Value="6,3,5,3"/>

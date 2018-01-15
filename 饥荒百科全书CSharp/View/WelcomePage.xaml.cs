@@ -32,10 +32,13 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
-            WButtonOfficialWebsite.FontWeight = Global.FontWeight;
-            WButtonMods.FontWeight = Global.FontWeight;
-            WButtonDsNews.FontWeight = Global.FontWeight;
-            WButtonDstNewS.FontWeight = Global.FontWeight;
+            foreach (var obj in RightGridWelcome.Children)
+            {
+                if (obj.GetType() == typeof(Button))
+                {
+                    ((Button)obj).FontWeight = Global.FontWeight;
+                }
+            }
             TipTextBlock.FontWeight = Global.FontWeight;
         }
 
@@ -46,34 +49,46 @@ namespace 饥荒百科全书CSharp.View
         }
 
         #region "主页面板"
-        //官网
+        // 官网
         private void W_button_official_website_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://www.jihuangbaike.com");
         }
 
-        //Mod
+        // 饥荒盒子
+        private void W_button_jihuanghezi_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://www.fireleaves.cn");
+        }
+        
+        // Mod
         private void W_button_Mods_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://steamcommunity.com/sharedfiles/filedetails/?id=635215011");
         }
 
-        //DS新闻
+        // DS新闻
         private void W_button_DSNews_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://store.steampowered.com/news/?appids=219740");
         }
 
-        //DST新闻
+        // DST新闻
         private void W_button_DSTNewS_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("http://store.steampowered.com/news/?appids=322330");
         }
 
-        //群二维码
+        // 群二维码
         private void W_button_QRCode_Qun_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3538303333323236382C2274696D655374616D70223A313437303132323238337D0A");
+        }
+
+        // SteamCommunity
+        private void W_button_SteamCommunity_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://pan.baidu.com/s/1pMcy1U7");
         }
         #endregion
     }

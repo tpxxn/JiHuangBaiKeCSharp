@@ -192,7 +192,7 @@ namespace 饥荒百科全书CSharp
             // 检测新版本
             UpdatePan.UpdateNow();
         }
-
+        
         /// <summary>
         /// MainWindow窗口加载
         /// </summary>
@@ -216,5 +216,6 @@ namespace 饥荒百科全书CSharp
             LoadFont = true;
         }
         #endregion
+
     }
 }

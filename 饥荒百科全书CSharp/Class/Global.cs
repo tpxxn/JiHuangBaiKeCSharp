@@ -170,24 +170,23 @@ namespace 饥荒百科全书CSharp.Class
             var dllName = new AssemblyName(args.Name).Name;
             try
             {
-                if (!dllName.Contains("PresentationFramework"))
+                //if (!dllName.Contains("PresentationFramework"))
+                //{
+                var resourceName = ProjectName + ".DynamicLinkLibrary." + dllName + ".dll";
+                using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
                 {
-                    var resourceName = ProjectName + ".DynamicLinkLibrary." + dllName + ".dll";
-                    using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
-                    {
-                        // ReSharper disable once PossibleNullReferenceException
-                        var assemblyData = new byte[stream.Length];
-                        stream.Read(assemblyData, 0, assemblyData.Length);
-                        return Assembly.Load(assemblyData);
-                    }
+                    // ReSharper disable once PossibleNullReferenceException
+                    var assemblyData = new byte[stream.Length];
+                    stream.Read(assemblyData, 0, assemblyData.Length);
+                    return Assembly.Load(assemblyData);
                 }
-                return null;
+                //}
             }
             catch (Exception e)
             {
-                if (dllName != "饥荒百科全书CSharp.resources")
-                    MessageBox.Show("DLL未能正确加载，详细信息：\r\n" + e.Message + "\r\n" + dllName);
-                throw new InvalidOperationException();
+                //if (dllName != "饥荒百科全书CSharp.resources")
+                    //MessageBox.Show("DLL未能正确加载，详细信息：\r\n" + e.Message + "\r\n" + dllName);
+                return null;
             }
         }
         #endregion
