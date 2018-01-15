@@ -172,7 +172,6 @@ namespace 饥荒百科全书CSharp.Class
             {
                 if (!dllName.Contains("PresentationFramework"))
                 {
-
                     var resourceName = ProjectName + ".DynamicLinkLibrary." + dllName + ".dll";
                     using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
                     {
@@ -182,10 +181,7 @@ namespace 饥荒百科全书CSharp.Class
                         return Assembly.Load(assemblyData);
                     }
                 }
-                else
-                {
-                    return null;
-                }
+                return null;
             }
             catch (Exception e)
             {

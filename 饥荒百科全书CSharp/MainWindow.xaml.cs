@@ -100,12 +100,14 @@ namespace 饥荒百科全书CSharp
                 mainWindowFont = "微软雅黑";
             }
             mainWindow.FontFamily = new FontFamily(mainWindowFont);
+            ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontFamily = mainWindow.FontFamily;
             // 设置字体加粗
             if (string.IsNullOrEmpty(mainWindowFontWeight))
             {
                 RegeditRw.RegWrite("MainWindowFontWeight", "False");
             }
             mainWindow.FontWeight = mainWindowFontWeight == "True" ? FontWeights.Bold : FontWeights.Normal;
+            ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontWeight = mainWindow.FontWeight;
             Global.FontWeight = mainWindow.FontWeight;
             // 版本初始化
             UiVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version;
@@ -187,8 +189,10 @@ namespace 饥荒百科全书CSharp
             // 是否显示开服工具
             if (Global.TestMode)
                 SidebarDedicatedServer.Visibility = Visibility.Visible;
+            // 检测新版本
+            UpdatePan.UpdateNow();
         }
-        
+
         /// <summary>
         /// MainWindow窗口加载
         /// </summary>

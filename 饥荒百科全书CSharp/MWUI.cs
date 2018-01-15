@@ -179,7 +179,6 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "右上角按钮"
-
         #region "搜索框"
         /// <summary>
         /// 搜索框内容改变
@@ -187,31 +186,40 @@ namespace 饥荒百科全书CSharp
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             // 显示清除按钮
-            SearchClearButton.Visibility = SearchTextBox.Text == "" ? Visibility.Collapsed : Visibility.Visible;
-            // 搜索
-            Global.AutoSuggestBoxItem.Clear();
-            foreach (var item in Global.AutoSuggestBoxItemSource)
+            if (string.IsNullOrEmpty(SearchTextBox.Text.Trim()))
             {
-                Global.AutoSuggestBoxItem.Add(item);
-            }
-            var str = ((TextBox)sender).Text.Trim().ToLower();
-            if (string.IsNullOrEmpty(str)) return;
-            for (var i = Global.AutoSuggestBoxItem.Count - 1; i >= 0; i--)
-            {
-                if (Global.AutoSuggestBoxItem[i].Name.ToLower().IndexOf(str, StringComparison.Ordinal) < 0 && Global.AutoSuggestBoxItem[i].EnName.ToLower().IndexOf(str, StringComparison.Ordinal) < 0)
-                {
-                    Global.AutoSuggestBoxItem.Remove(Global.AutoSuggestBoxItem[i]);
-                }
-            }
-            if (Global.AutoSuggestBoxItem.Count != 0)
-            {
-                SearchItemsControl.DataContext = Global.AutoSuggestBoxItem;
-                SearchScrollViewer.ScrollToHorizontalOffset(0);
-                SearchPopup.IsOpen = true;
+                SearchClearButton.Visibility = Visibility.Collapsed;
+                SearchPopup.IsOpen = false;
             }
             else
             {
-                SearchPopup.IsOpen = false;
+                SearchClearButton.Visibility = Visibility.Visible;
+                // 搜索
+                Global.AutoSuggestBoxItem.Clear();
+                foreach (var item in Global.AutoSuggestBoxItemSource)
+                {
+                    Global.AutoSuggestBoxItem.Add(item);
+                }
+                var str = SearchTextBox.Text.Trim().ToLower();
+                if (string.IsNullOrEmpty(str)) return;
+                for (var i = Global.AutoSuggestBoxItem.Count - 1; i >= 0; i--)
+                {
+                    if (Global.AutoSuggestBoxItem[i].Name.ToLower().IndexOf(str, StringComparison.Ordinal) < 0 && Global.AutoSuggestBoxItem[i].EnName.ToLower().IndexOf(str, StringComparison.Ordinal) < 0)
+                    {
+                        Global.AutoSuggestBoxItem.Remove(Global.AutoSuggestBoxItem[i]);
+                    }
+                }
+                if (Global.AutoSuggestBoxItem.Count != 0)
+                {
+                    SearchItemsControl.DataContext = Global.AutoSuggestBoxItem;
+                    SearchScrollViewer.UpdateLayout();
+                    SearchScrollViewer.ScrollToHorizontalOffset(0);
+                    SearchPopup.IsOpen = true;
+                }
+                else
+                {
+                    SearchPopup.IsOpen = false;
+                }
             }
         }
 
@@ -352,6 +360,35 @@ namespace 饥荒百科全书CSharp
         }
 
         /// <summary>
+        /// 修改字体
+        /// </summary>
+        private void Se_ComboBox_Font_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!LoadFont) return;
+            var textList = (from TextBlock textBlock in SeComboBoxFont.Items select textBlock.Text).ToList();
+            mainWindow.FontFamily = new FontFamily(textList[SeComboBoxFont.SelectedIndex]);
+            ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontFamily = mainWindow.FontFamily;
+            ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontWeight = mainWindow.FontWeight;
+            Global.FontFamily = mainWindow.FontFamily;
+            RightFrame.NavigationService.Navigate(new WelcomePage());
+            SidebarWelcome.IsChecked = true;
+            RegeditRw.RegWrite("MainWindowFont", textList[SeComboBoxFont.SelectedIndex]);
+        }
+
+        /// <summary>
+        /// 修改字体加粗
+        /// </summary>
+        private void Se_CheckBox_FontWeight_Click(object sender, RoutedEventArgs e)
+        {
+            if (!LoadFont) return;
+            mainWindow.FontWeight = SeCheckBoxFontWeight.IsChecked == true ? FontWeights.Bold : FontWeights.Normal;
+            Global.FontWeight = mainWindow.FontWeight;
+            RightFrame.NavigationService.Navigate(new WelcomePage());
+            SidebarWelcome.IsChecked = true;
+            RegeditRw.RegWrite("MainWindowFontWeight", SeCheckBoxFontWeight.IsChecked.ToString());
+        }
+
+        /// <summary>
         /// 设置背景
         /// </summary>
         private void Se_button_Background_Click(object sender, RoutedEventArgs e)
@@ -441,33 +478,6 @@ namespace 饥荒百科全书CSharp
             }
         }
 
-        /// <summary>
-        /// 修改字体
-        /// </summary>
-        private void Se_ComboBox_Font_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (!LoadFont) return;
-            var textList = (from TextBlock textBlock in SeComboBoxFont.Items select textBlock.Text).ToList();
-            mainWindow.FontFamily = new FontFamily(textList[SeComboBoxFont.SelectedIndex]);
-            Global.FontFamily = mainWindow.FontFamily;
-            RightFrame.NavigationService.Navigate(new WelcomePage());
-            SidebarWelcome.IsChecked = true;
-            RegeditRw.RegWrite("MainWindowFont", textList[SeComboBoxFont.SelectedIndex]);
-        }
-
-        /// <summary>
-        /// 修改字体加粗
-        /// </summary>
-        private void Se_CheckBox_FontWeight_Click(object sender, RoutedEventArgs e)
-        {
-            if (!LoadFont) return;
-            mainWindow.FontWeight = SeCheckBoxFontWeight.IsChecked == true ? FontWeights.Bold : FontWeights.Normal;
-            Global.FontWeight = mainWindow.FontWeight;
-            RightFrame.NavigationService.Navigate(new WelcomePage());
-            SidebarWelcome.IsChecked = true;
-            RegeditRw.RegWrite("MainWindowFontWeight", SeCheckBoxFontWeight.IsChecked.ToString());
-        }
-        
         /// <summary>
         /// 设置背景透明度
         /// </summary>

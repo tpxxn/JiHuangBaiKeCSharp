@@ -19,7 +19,7 @@
         WindowStartupLocation="CenterScreen" SizeChanged="MainWindow_SizeChanged" Loaded="MainWindow_Loaded" 
         Cursor="{StaticResource CursorPointer}" WindowStyle="None" 
         AllowsTransparency="True" MouseDoubleClick="MainWindow_MouseDoubleClick" Background="White">
-    
+
     <Window.Resources>
         <DataTemplate x:Key="AutoSuggestBoxDataTemplate" DataType="class:SuggestBoxItem">
             <Button Click="SearchResultButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
@@ -116,11 +116,11 @@
             <Border x:Name="UiBackGroundBorder" BorderThickness="0" Grid.RowSpan="2" Grid.Column="1" d:IsLocked="True"/>
             <Grid x:Name="UiGrid" Grid.Row="0" Grid.Column="1">
                 <TextBlock x:Name="UiTitle" Text="饥荒百科全书" FontSize="20" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" />
-                <Button x:Name="UiBtnClose" Width="20" ToolTip="退出" Click="UI_btn_close_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,10,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_close_Style}" Focusable="False" />
-                <Button x:Name="UiBtnMaximized" Width="20" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_maximized_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnNormal" Width="20" ToolTip="还原" Click="UI_btn_normal_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,35,20" Visibility="Collapsed" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_normal_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnMinimized" Width="20" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="20" HorizontalAlignment="Right" Margin="0,10,60,20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_minimized_Style}" Focusable="False" d:IsLocked="True" />
-                <Button x:Name="UiBtnBg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="20" Margin="0,10,85,20" Height="20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_bg_Style}" Focusable="False" />
+                <Button x:Name="UiBtnClose" Width="25" ToolTip="退出" Click="UI_btn_close_Click" Height="25" HorizontalAlignment="Right" Margin="0,0,10,0" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_close_Style}" Focusable="False" VerticalAlignment="Center" d:IsLocked="True" />
+                <Button x:Name="UiBtnMaximized" Width="25" ToolTip="最大化" Click="UI_btn_maximized_Click" Height="25" HorizontalAlignment="Right" Margin="0,0,35,0" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_maximized_Style}" Focusable="False" VerticalAlignment="Center" d:IsLocked="True" />
+                <Button x:Name="UiBtnNormal" Width="25" ToolTip="还原" Click="UI_btn_normal_Click" Height="25" HorizontalAlignment="Right" Margin="0,0,35,0" Visibility="Collapsed" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_normal_Style}" Focusable="False" VerticalAlignment="Center" d:IsLocked="True" />
+                <Button x:Name="UiBtnMinimized" Width="25" ToolTip="最小化" Click="UI_btn_minimized_Click" Height="25" HorizontalAlignment="Right" Margin="0,0,60,0" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_minimized_Style}" Focusable="False" VerticalAlignment="Center" d:IsLocked="True" />
+                <Button x:Name="UiBtnBg" Content="背景设置" HorizontalAlignment="Right" Click="UI_btn_bg_Click" Width="25" Margin="0,0,85,0" Height="25" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_bg_Style}" Focusable="False" VerticalAlignment="Center" d:IsLocked="True" />
                 <Popup x:Name="UiPopBg" PopupAnimation="Fade" Width="200" PlacementTarget="{Binding ElementName=UiBtnBg}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150">
                     <Border BorderThickness="1" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
                         <StackPanel Margin="10">
@@ -163,7 +163,7 @@
                         </StackPanel>
                     </Border>
                 </Popup>
-                <Button x:Name="UiBtnSetting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="20" Margin="0,10,110,20" Height="20" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_setting_Style}" Focusable="False" d:IsLocked="True" />
+                <Button x:Name="UiBtnSetting" Content="设置" HorizontalAlignment="Right" Click="UI_btn_setting_Click" Width="25" Margin="0,0,110,0" Height="25" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_setting_Style}" Focusable="False" VerticalAlignment="Center" d:IsLocked="True" />
                 <Popup x:Name="UiPopSetting" PopupAnimation="Fade" Width="150" PlacementTarget="{Binding ElementName=UiBtnSetting}" Placement="Top" AllowsTransparency="True" StaysOpen="False" IsOpen="False" Margin="0,0,748,-150" VerticalOffset="10">
                     <Border BorderThickness="1" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
                         <StackPanel Margin="10">

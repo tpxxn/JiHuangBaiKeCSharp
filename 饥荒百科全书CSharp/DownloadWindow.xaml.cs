@@ -9,11 +9,18 @@ namespace 饥荒百科全书CSharp
     /// </summary>
     public partial class DownloadWindow : Window
     {
-        public DownloadWindow()
+        public DownloadWindow(bool newVersion)
         {
             InitializeComponent();
-            DownloadVersion.Text = "新版本 " + MainWindow.UpdatePan.NewVersion + " 下载地址";
-            DownloadURL_TextBlock.Text = MainWindow.UpdatePan.DownloadURL;
+            if (newVersion)
+            {
+                DownloadVersion.Text = "检测到新版本 " + MainWindow.UpdatePan.NewVersion;
+                DownloadURL_TextBlock.Text = "前往百度网盘下载";
+            }
+            //else
+            //{
+            //    DownloadVersion.Text = "您正在使用最新版本";
+            //}
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -28,12 +35,13 @@ namespace 饥荒百科全书CSharp
 
         private void DownloadURL_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start(MainWindow.UpdatePan.DownloadURL);
+            Process.Start(MainWindow.UpdatePan.DownloadUrl);
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
+            // ReSharper disable once PossibleNullReferenceException
             mainWindow.MwVisivility = true;
         }
     }

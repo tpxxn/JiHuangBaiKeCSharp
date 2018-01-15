@@ -1,8 +1,30 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.6.4",
+      "Data": "2018年1月15日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "启动自动检查更新"
+        },
+        {
+          "Label": "改进",
+          "Content": "搜索框的提示字体现在也会改变"
+        },
+        {
+          "Label": "改进",
+          "Content": "增大右上角按钮、增大设置页面字体"
+        },
+        {
+          "Label": "修复",
+          "Content": "修复由于使用部分第三方系统主题导致程序无法加载的BUG"
+        }
+      ]
+    },
+    {
       "Version": "0.7.6.3",
-      "Data": "2018年1月13日",
+      "Data": "2018年1月14日",
       "UpdataContent": [
         {
           "Label": "新增",

@@ -163,8 +163,8 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         private void DownloadNewversion_()
         {
-            var dw = new DownloadWindow();
-            dw.Show();
+            var downloadWindow = new DownloadWindow(true);
+            downloadWindow.Show();
             Download = true;
             //添加下载完成/下载进度事件
             _client.DownloadFileCompleted += Completed;
