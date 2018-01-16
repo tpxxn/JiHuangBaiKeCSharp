@@ -1835,7 +1835,7 @@
         "Need3": "G_yellow_gem",
         "Need3Value": 2,
         "Unlock": [ "N_ancient_pseudoscience_station" ],
-        "Introduction": "向目标发射光球，持续照明一段时间，可以用来烹调食物。其实不太实用，施展需要吟唱时间，光球也无法移动。每次使用消耗20点精神。（召唤矮人之星：stafflight）",
+        "Introduction": "向目标位置发射光球，持续照明一段时间，可以用来烹调食物。其实不太实用，施展需要吟唱时间，光球也无法移动。每次使用消耗20点精神。（召唤矮人之星：stafflight）",
         "Console": "yellowstaff"
       },
       {

@@ -776,543 +776,633 @@
         ]
     },
     "Equipment": {
-        "GoodEquipment": [
-            {
-                "Picture": "S_axe",
-                "Name": "斧头",
-                "EnName": "Axe",
-                "Attack": 27.2,
-                "Durability": "100次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "axe"
-            },
-            {
-                "Picture": "S_goldenaxe",
-                "Name": "奢侈金斧",
-                "EnName": "Luxury Axe",
-                "Attack": 27.2,
-                "Durability": "400次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "goldenaxe"
-            },
-            {
-                "Picture": "S_pickaxe",
-                "Name": "十字镐",
-                "EnName": "Pickaxe",
-                "Attack": 27.2,
-                "Durability": "33次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "pickaxe"
-            },
-            {
-                "Picture": "S_goldenpickaxe",
-                "Name": "华丽金镐",
-                "EnName": "Opulent Pickaxe",
-                "Attack": 27.2,
-                "Durability": "132次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "goldenpickaxe"
-            },
-            {
-                "Picture": "S_shovel",
-                "Name": "铲子",
-                "EnName": "Shovel",
-                "Attack": 17,
-                "Durability": "25次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "shovel"
-            },
-            {
-                "Picture": "S_goldenshovel",
-                "Name": "豪华金铲",
-                "EnName": "Regal Shovel",
-                "Attack": 17,
-                "Durability": "100次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "goldenshovel"
-            },
-            {
-                "Picture": "S_hammer",
-                "Name": "锤子",
-                "EnName": "Hammer",
-                "Attack": 17,
-                "Durability": "75次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "hammer"
-            },
-            {
-                "Picture": "S_pitchfork",
-                "Name": "草叉",
-                "EnName": "Pitchfork",
-                "Attack": 17,
-                "Durability": "200次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "pitchfork"
-            },
-            {
-                "Picture": "S_pickaxe_1",
-                "Name": "镐/头",
-                "EnName": "Pick/Axe",
-                "Attack": 30.6,
-                "Durability": "400次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "multitool_axe_pickaxe"
-            },
-            {
-                "Picture": "G_lucy_the_axe",
-                "Name": "露西斧",
-                "EnName": "Lucy the Axe",
-                "Attack": 27.2,
-                "Durability": "10001",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "lucy"
-            },
-            {
-                "Picture": "S_bug_net",
-                "Name": "捕虫网",
-                "EnName": "Bug Net",
-                "Attack": 4.25,
-                "Durability": "3.3次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "bugnet"
-            },
-            {
-                "Picture": "S_fishing_rod",
-                "Name": "鱼竿",
-                "EnName": "Fishing Rod",
-                "Attack": 4.25,
-                "Durability": "9次",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "fishingrod"
-            },
-            {
-                "Picture": "S_walking_cane",
-                "Name": "步行手杖",
-                "EnName": "Walking Cane",
-                "Attack": 17,
-                "Durability": "10001",
-                "Introduction": "除了用作工具还能用来打怪。",
-                "Console": "cane"
-            },
-            {
-                "Picture": "S_torch",
-                "Name": "火把",
-                "EnName": "Torch",
-                "Attack": 17,
-                "Durability": "75秒",
-                "Wet": 20,
-                "Introduction": "除了攻击伤害还有后续的燃烧伤害，带着还有一定的防潮效果。",
-                "Console": "torch"
-            },
-            {
-                "Picture": "S_miner_hat",
-                "Name": "矿灯帽",
-                "EnName": "Miner Hat",
-                "Durability": "468秒",
-                "Wet": 20,
-                "Introduction": "不仅可以照明还有少量防潮效果。",
-                "Console": "minerhat"
-            },
-            {
-                "Picture": "S_umbrella",
-                "Name": "雨伞",
-                "EnName": "Umbrella",
-                "Attack": 17,
-                "Durability": "20次",
-                "Wet": 90,
-                "Sanity": 2,
-                "Introduction": "不俗的防潮效果。",
-                "Console": "umbrella"
-            },
-            {
-                "Picture": "S_straw_hat",
-                "Name": "草帽",
-                "EnName": "Straw Hat",
-                "Durability": "5天",
-                "Wet": 20,
-                "HeatResistance": 60,
-                "Introduction": "一般的防潮隔热装备。",
-                "Console": "strawhat"
-            },
-            {
-                "Picture": "S_top_hat",
-                "Name": "高礼帽",
-                "EnName": "Top Hat",
-                "Durability": "6天",
-                "Wet": 20,
-                "HeatResistance": 60,
-                "Sanity": 2,
-                "Introduction": "少量的防潮效果，还有少量隔热和效果和精神光环。",
-                "Console": "tophat"
-            },
-            {
-                "Picture": "S_eyebrella",
-                "Name": "眼球伞",
-                "EnName": "Eyebrella",
-                "Durability": "8天",
-                "Wet": 100,
-                "HeatResistance": 240,
-                "Introduction": "无敌的防潮效果！隔热效果也是绝佳！",
-                "Console": "eyebrellahat"
-            },
-            {
-                "Picture": "S_thermal_stone",
-                "Name": "保温石",
-                "EnName": "Thermal Stone",
-                "ColdResistance": 120,
-                "HeatResistance": 120,
-                "Introduction": "每次变灰耐久度减少1点，可以用来升温也可以用来降温。",
-                "Console": "heatrock"
-            },
-            {
-                "Picture": "S_rabbit_earmuffs",
-                "Name": "兔子耳罩",
-                "EnName": "Rabbit Earmuffs",
-                "Durability": "5天",
-                "ColdResistance": 60,
-                "Introduction": "不怎么样的隔热装备，不过挺可爱的~",
-                "Console": "earmuffshat"
-            },
-            {
-                "Picture": "S_beefalo_hat",
-                "Name": "牛帽",
-                "EnName": "Beefalo Hat",
-                "Durability": "10天",
-                "Wet": 20,
-                "ColdResistance": 240,
-                "Introduction": "有了牛帽冬天就不用愁了。",
-                "Console": "beefalohat"
-            },
-            {
-                "Picture": "S_winter_hat",
-                "Name": "冬帽",
-                "EnName": "Winter Hat",
-                "Durability": "10天",
-                "ColdResistance": 120,
-                "Sanity": 1.33,
-                "Introduction": "一般过冬的装备。",
-                "Console": "winterhat"
-            },
-            {
-                "Picture": "S_dapper_vest",
-                "Name": "短背心",
-                "EnName": "Dapper Vest",
-                "Durability": "10天",
-                "ColdResistance": 60,
-                "Sanity": 3.33,
-                "Introduction": "没啥用的隔热装备。",
-                "Console": "sweatervest"
-            },
-            {
-                "Picture": "S_breezy_vest",
-                "Name": "透风外套",
-                "EnName": "Breezy Vest",
-                "Durability": "10天",
-                "ColdResistance": 60,
-                "Sanity": 2,
-                "Introduction": "纯粹是浪费红色象鼻。",
-                "Console": "trunkvest_summer"
-            },
-            {
-                "Picture": "S_puffy_vest",
-                "Name": "厚外套",
-                "EnName": "Puffy Vest",
-                "Durability": "15天",
-                "ColdResistance": 240,
-                "Sanity": 2,
-                "Introduction": "极好的隔热装备。",
-                "Console": "trunkvest_winter"
-            },
-            {
-                "Picture": "S_gunpowder",
-                "Name": "火药",
-                "EnName": "Gunpowder",
-                "Attack": 200,
-                "Durability": "1次",
-                "Introduction": "Boom！",
-                "Console": "gunpowder"
-            },
-            {
-                "Picture": "S_spear",
-                "Name": "长矛",
-                "EnName": "Spear",
-                "Attack": 34,
-                "Durability": 150,
-                "Introduction": "一般的武器。",
-                "Console": "spear"
-            },
-            {
-                "Picture": "S_ham_bat",
-                "Name": "火腿棒",
-                "EnName": "Ham Bat",
-                "Attack": 59.5,
-                "Durability": "10天",
-                "Introduction": "过得越久攻击越低。(29.75 - 59.5)",
-                "Console": "hambat"
-            },
-            {
-                "Picture": "S_blow_dart",
-                "Name": "吹箭",
-                "EnName": "Blow Dart",
-                "DropBy": "A_mactusk",
-                "Attack": 100,
-                "Durability": "1次",
-                "Introduction": "一下100点的伤害也不错了。",
-                "Console": "blowdart_pipe"
-            },
-            {
-                "Picture": "S_sleep_dart",
-                "Name": "麻醉吹箭",
-                "EnName": "Sleep Dart",
-                "Durability": "1次",
-                "Introduction": "让生物睡觉的吹箭。",
-                "Console": "blowdart_sleep"
-            },
-            {
-                "Picture": "S_fire_dart",
-                "Name": "燃烧吹箭",
-                "EnName": "Fire Dart",
-                "Attack": 5,
-                "Durability": "1次",
-                "Introduction": "虽然攻击只有5，但是有后续燃烧伤害。",
-                "Console": "blowdart_fire"
-            },
-            {
-                "Picture": "S_boomerang",
-                "Name": "回旋镖",
-                "EnName": "Boomerang",
-                "Attack": 27.2,
-                "Durability": "10次",
-                "Introduction": "不按空格接住还会打到自己。",
-                "Console": "boomerang"
-            },
-            {
-                "Picture": "S_dark_sword",
-                "Name": "暗影剑",
-                "EnName": "Dark Sword",
-                "Attack": 68,
-                "Durability": "100次",
-                "Sanity": -20,
-                "Introduction": "打着打着精神就没了。",
-                "Console": "nightsword"
-            },
-            {
-                "Picture": "S_bat_bat",
-                "Name": "吸血短棒",
-                "EnName": "Bat Bat",
-                "Attack": 42.5,
-                "Durability": "75次",
-                "Sanity": -3.33,
-                "Introduction": "每次攻击吸血6.8。",
-                "Console": "batbat"
-            },
-            {
-                "Picture": "S_fire_staff",
-                "Name": "火焰法杖",
-                "EnName": "Fire Staff",
-                "Attack": 150,
-                "Durability": "20次",
-                "Sanity": -1,
-                "Introduction": "烧吧烧吧！(攻击力范围：100-150)",
-                "Console": "firestaff"
-            },
-            {
-                "Picture": "S_ice_staff",
-                "Name": "冰冻法杖",
-                "EnName": "Ice Staff",
-                "Durability": "20次",
-                "Sanity": -1,
-                "Introduction": "冰冻敌人！",
-                "Console": "icestaff"
-            },
-            {
-                "Picture": "S_belt_of_hunger",
-                "Name": "饱食腰带",
-                "EnName": "Belt of Hunger",
-                "Ability": [
-                    "抵御饥饿"
-                ],
-                "Durability": "8天",
-                "Sanity": 2,
-                "Hunger": 60,
-                "Introduction": "饥饿速度变为默认的60%。",
-                "Console": "armorslurper"
-            },
-            {
-                "Picture": "S_thulecite_club",
-                "Name": "铥制棒",
-                "EnName": "Thulecite Club",
-                "Attack": 59.5,
-                "Durability": 150,
-                "Introduction": "攻击力不错的武器，增加10%的移动速度。",
-                "Console": "ruins_bat"
-            },
-            {
-                "Picture": "G_tentacle_spike",
-                "Name": "触手棒",
-                "EnName": "Tentacle Spike",
-                "DropBy": "A_tentacle",
-                "Attack": 51,
-                "Durability": "100次",
-                "Introduction": "没事去沼泽就能捡到几个。",
-                "Console": "tentaclespike"
-            },
-            {
-                "Picture": "S_grass_suit",
-                "Name": "草制护甲",
-                "EnName": "Grass Suit",
-                "Durability": "225HP",
-                "Defense": 60,
-                "Introduction": "最弱的防御装备。",
-                "Console": "armorgrass"
-            },
-            {
-                "Picture": "S_log_suit",
-                "Name": "木制护甲",
-                "EnName": "Log Suit",
-                "Durability": "450HP",
-                "Defense": 80,
-                "Introduction": "看得过去的防御装备。",
-                "Console": "armorwood"
-            },
-            {
-                "Picture": "S_marble_suit",
-                "Name": "大理石护甲",
-                "EnName": "Marble Suit",
-                "Ability": [
-                    "减速30%"
-                ],
-                "Durability": "1050HP",
-                "Defense": 95,
-                "Introduction": "接近无敌的防御装备，不过会减速30%，而且材料不好找。",
-                "Console": "armormarble"
-            },
-            {
-                "Picture": "S_football_helmet",
-                "Name": "橄榄球头盔",
-                "EnName": "Football Helmet",
-                "Durability": "450HP",
-                "Wet": 20,
-                "Defense": 80,
-                "Introduction": "防御性能不错！",
-                "Console": "footballhat"
-            },
-            {
-                "Picture": "S_night_armour",
-                "Name": "暗影护甲",
-                "EnName": "Night Armor",
-                "Ability": [
-                    "降低所受伤害10%的精神"
-                ],
-                "Durability": "750HP",
-                "Sanity": -10,
-                "Defense": 95,
-                "Introduction": "防御力极高，打着打着就没精神了。",
-                "Console": "armor_sanity"
-            },
-            {
-                "Picture": "S_beekeeper_hat",
-                "Name": "养蜂帽",
-                "EnName": "Beekeeper Hat",
-                "Durability": "750HP",
-                "Wet": 20,
-                "Defense": 80,
-                "Introduction": "仅防御来自蜜蜂和杀人蜂的攻击。",
-                "Console": "beehat"
-            },
-            {
-                "Picture": "S_thulecite_crown",
-                "Name": "铥制王冠",
-                "EnName": "Thulecite Crown",
-                "Ability": [
-                    "免疫中毒"
-                ],
-                "Durability": "1200HP",
-                "Defense": 90,
-                "Introduction": "防御力很高而且耐久也不错，还有被动效果。",
-                "Console": "ruinshat"
-            },
-            {
-                "Picture": "S_thulecite_suit",
-                "Name": "铥制护甲",
-                "EnName": "Thulecite Suit",
-                "Durability": "1800HP",
-                "Sanity": 3.33,
-                "Defense": 90,
-                "Introduction": "耐久最高，防御力也很高。",
-                "Console": "armorruins"
-            },
-            {
-                "Picture": "G_shelmet",
-                "Name": "蜗牛头盔",
-                "EnName": "Shelmet",
-                "DropBy": "A_slurtles",
-                "Durability": "750HP",
-                "Wet": 20,
-                "Defense": 90,
-                "Introduction": "防御力高，爆率低。",
-                "Console": "slurtlehat"
-            },
-            {
-                "Picture": "G_snurtle_shell_armor",
-                "Name": "蜗牛壳盔甲",
-                "EnName": "Snurtle Shell Armor",
-                "DropBy": "A_snurtles",
-                "Durability": "1050HP",
-                "Defense": 60,
-                "Introduction": "防御力低，爆率高，使用后可以钻进壳里躲避怪物攻击仇恨。",
-                "Console": "armorsnurtleshell"
-            },
-            {
-                "Picture": "G_tam_o'shanter",
-                "Name": "苏格兰帽",
-                "EnName": "Tam o' Shanter",
-                "DropBy": "A_mactusk",
-                "Durability": "25天",
-                "ColdResistance": 120,
-                "Sanity": 6.66,
-                "Introduction": "只能打海象掉落。",
-                "Console": "walrushat"
-            },
-            {
-                "Picture": "G_spiderhat",
-                "Name": "蜘蛛帽",
-                "EnName": "Spiderhat",
-                "DropBy": "A_spider_queen",
-                "Ability": [
-                    "指挥蜘蛛"
-                ],
-                "Durability": "120秒",
-                "Wet": 20,
-                "Sanity": -2,
-                "Introduction": "只能打蜘蛛女王掉落，可以控制蜘蛛。",
-                "Console": "spiderhat"
-            },
-            {
-                "Picture": "G_slurper",
-                "Name": "吞噬者",
-                "EnName": "Slurper",
-                "DropBy": "A_slurper",
-                "Ability": [
-                    "提供和矿灯帽相同的光照"
-                ],
-                "Hunger": -100,
-                "Introduction": "戴在头上会发光，吸食饥饿。",
-                "Console": "slurper"
-            },
-            {
-                "Picture": "G_krampus_sack",
-                "Name": "坎普斯背包",
-                "EnName": "Krampus Sack",
-                "DropBy": "A_krampus",
-                "Ability": [
-                    "14格背包"
-                ],
-                "Durability": "10001",
-                "Introduction": "击杀坎普斯极小几率获得。",
-                "Console": "krampus_sack"
-            }
-        ]
+      "GoodEquipment": [
+        {
+          "Picture": "S_axe",
+          "Name": "斧头",
+          "EnName": "Axe",
+          "Attack": 27.2,
+          "Durability": "100次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "axe"
+        },
+        {
+          "Picture": "S_goldenaxe",
+          "Name": "奢侈金斧",
+          "EnName": "Luxury Axe",
+          "Attack": 27.2,
+          "Durability": "400次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "goldenaxe"
+        },
+        {
+          "Picture": "S_pickaxe",
+          "Name": "十字镐",
+          "EnName": "Pickaxe",
+          "Attack": 27.2,
+          "Durability": "33次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "pickaxe"
+        },
+        {
+          "Picture": "S_goldenpickaxe",
+          "Name": "华丽金镐",
+          "EnName": "Opulent Pickaxe",
+          "Attack": 27.2,
+          "Durability": "132次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "goldenpickaxe"
+        },
+        {
+          "Picture": "S_shovel",
+          "Name": "铲子",
+          "EnName": "Shovel",
+          "Attack": 17,
+          "Durability": "25次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "shovel"
+        },
+        {
+          "Picture": "S_goldenshovel",
+          "Name": "豪华金铲",
+          "EnName": "Regal Shovel",
+          "Attack": 17,
+          "Durability": "100次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "goldenshovel"
+        },
+        {
+          "Picture": "S_hammer",
+          "Name": "锤子",
+          "EnName": "Hammer",
+          "Attack": 17,
+          "Durability": "75次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "hammer"
+        },
+        {
+          "Picture": "S_pitchfork",
+          "Name": "草叉",
+          "EnName": "Pitchfork",
+          "Attack": 17,
+          "Durability": "200次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "pitchfork"
+        },
+        {
+          "Picture": "S_pickaxe_1",
+          "Name": "镐/头",
+          "EnName": "Pick/Axe",
+          "Attack": 30.6,
+          "Durability": "400次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "multitool_axe_pickaxe"
+        },
+        {
+          "Picture": "G_lucy_the_axe",
+          "Name": "露西斧",
+          "EnName": "Lucy the Axe",
+          "Attack": 27.2,
+          "Durability": "10001",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "lucy"
+        },
+        {
+          "Picture": "S_bug_net",
+          "Name": "捕虫网",
+          "EnName": "Bug Net",
+          "Attack": 4.25,
+          "Durability": "3.3次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "bugnet"
+        },
+        {
+          "Picture": "S_fishing_rod",
+          "Name": "鱼竿",
+          "EnName": "Fishing Rod",
+          "Attack": 4.25,
+          "Durability": "9次",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "fishingrod"
+        },
+        {
+          "Picture": "S_walking_cane",
+          "Name": "步行手杖",
+          "EnName": "Walking Cane",
+          "Attack": 17,
+          "Durability": "10001",
+          "Introduction": "除了用作工具还能用来打怪。",
+          "Console": "cane"
+        },
+        {
+          "Picture": "S_torch",
+          "Name": "火把",
+          "EnName": "Torch",
+          "Attack": 17,
+          "Durability": "75秒",
+          "Wet": 20,
+          "Introduction": "除了攻击伤害还有后续的燃烧伤害，带着还有一定的防潮效果。",
+          "Console": "torch"
+        },
+        {
+          "Picture": "S_miner_hat",
+          "Name": "矿灯帽",
+          "EnName": "Miner Hat",
+          "Durability": "468秒",
+          "Wet": 20,
+          "Introduction": "不仅可以照明还有少量防潮效果。",
+          "Console": "minerhat"
+        },
+        {
+          "Picture": "S_umbrella",
+          "Name": "雨伞",
+          "EnName": "Umbrella",
+          "Attack": 17,
+          "Durability": "20次",
+          "Wet": 90,
+          "Sanity": 2,
+          "Introduction": "不俗的防潮效果。",
+          "Console": "umbrella"
+        },
+        {
+          "Picture": "S_straw_hat",
+          "Name": "草帽",
+          "EnName": "Straw Hat",
+          "Durability": "5天",
+          "Wet": 20,
+          "HeatResistance": 60,
+          "Introduction": "一般的防潮隔热装备。",
+          "Console": "strawhat"
+        },
+        {
+          "Picture": "S_top_hat",
+          "Name": "高礼帽",
+          "EnName": "Top Hat",
+          "Durability": "6天",
+          "Wet": 20,
+          "HeatResistance": 60,
+          "Sanity": 2,
+          "Introduction": "少量的防潮效果，还有少量隔热和效果和精神光环。",
+          "Console": "tophat"
+        },
+        {
+          "Picture": "S_eyebrella",
+          "Name": "眼球伞",
+          "EnName": "Eyebrella",
+          "Durability": "8天",
+          "Wet": 100,
+          "HeatResistance": 240,
+          "Introduction": "无敌的防潮效果！隔热效果也是绝佳！",
+          "Console": "eyebrellahat"
+        },
+        {
+          "Picture": "S_thermal_stone",
+          "Name": "保温石",
+          "EnName": "Thermal Stone",
+          "ColdResistance": 120,
+          "HeatResistance": 120,
+          "Introduction": "每次变灰耐久度减少1点，可以用来升温也可以用来降温。",
+          "Console": "heatrock"
+        },
+        {
+          "Picture": "S_rabbit_earmuffs",
+          "Name": "兔子耳罩",
+          "EnName": "Rabbit Earmuffs",
+          "Durability": "5天",
+          "ColdResistance": 60,
+          "Introduction": "不怎么样的隔热装备，不过挺可爱的~",
+          "Console": "earmuffshat"
+        },
+        {
+          "Picture": "S_beefalo_hat",
+          "Name": "牛帽",
+          "EnName": "Beefalo Hat",
+          "Durability": "10天",
+          "Wet": 20,
+          "ColdResistance": 240,
+          "Introduction": "有了牛帽冬天就不用愁了。",
+          "Console": "beefalohat"
+        },
+        {
+          "Picture": "S_winter_hat",
+          "Name": "冬帽",
+          "EnName": "Winter Hat",
+          "Durability": "10天",
+          "ColdResistance": 120,
+          "Sanity": 1.33,
+          "Introduction": "一般过冬的装备。",
+          "Console": "winterhat"
+        },
+        {
+          "Picture": "S_dapper_vest",
+          "Name": "短背心",
+          "EnName": "Dapper Vest",
+          "Durability": "10天",
+          "ColdResistance": 60,
+          "Sanity": 3.33,
+          "Introduction": "没啥用的隔热装备。",
+          "Console": "sweatervest"
+        },
+        {
+          "Picture": "S_breezy_vest",
+          "Name": "透风外套",
+          "EnName": "Breezy Vest",
+          "Durability": "10天",
+          "ColdResistance": 60,
+          "Sanity": 2,
+          "Introduction": "纯粹是浪费红色象鼻。",
+          "Console": "trunkvest_summer"
+        },
+        {
+          "Picture": "S_puffy_vest",
+          "Name": "厚外套",
+          "EnName": "Puffy Vest",
+          "Durability": "15天",
+          "ColdResistance": 240,
+          "Sanity": 2,
+          "Introduction": "极好的隔热装备。",
+          "Console": "trunkvest_winter"
+        },
+        {
+          "Picture": "S_gunpowder",
+          "Name": "火药",
+          "EnName": "Gunpowder",
+          "Attack": 200,
+          "Durability": "1次",
+          "Introduction": "Boom！",
+          "Console": "gunpowder"
+        },
+        {
+          "Picture": "S_spear",
+          "Name": "长矛",
+          "EnName": "Spear",
+          "Attack": 34,
+          "Durability": 150,
+          "Introduction": "一般的武器。",
+          "Console": "spear"
+        },
+        {
+          "Picture": "S_ham_bat",
+          "Name": "火腿棒",
+          "EnName": "Ham Bat",
+          "Attack": 59.5,
+          "Durability": "10天",
+          "Introduction": "过得越久攻击越低。(29.75 - 59.5)",
+          "Console": "hambat"
+        },
+        {
+          "Picture": "S_blow_dart",
+          "Name": "吹箭",
+          "EnName": "Blow Dart",
+          "DropBy": "A_mactusk",
+          "Attack": 100,
+          "Durability": "1次",
+          "Introduction": "一下100点的伤害也不错了。",
+          "Console": "blowdart_pipe"
+        },
+        {
+          "Picture": "S_sleep_dart",
+          "Name": "麻醉吹箭",
+          "EnName": "Sleep Dart",
+          "Durability": "1次",
+          "Introduction": "让生物睡觉的吹箭。",
+          "Console": "blowdart_sleep"
+        },
+        {
+          "Picture": "S_fire_dart",
+          "Name": "燃烧吹箭",
+          "EnName": "Fire Dart",
+          "Attack": 5,
+          "Durability": "1次",
+          "Introduction": "虽然攻击只有5，但是有后续燃烧伤害。",
+          "Console": "blowdart_fire"
+        },
+        {
+          "Picture": "S_boomerang",
+          "Name": "回旋镖",
+          "EnName": "Boomerang",
+          "Attack": 27.2,
+          "Durability": "10次",
+          "Introduction": "不按空格接住还会打到自己。",
+          "Console": "boomerang"
+        },
+        {
+          "Picture": "S_dark_sword",
+          "Name": "暗影剑",
+          "EnName": "Dark Sword",
+          "Attack": 68,
+          "Durability": "100次",
+          "Sanity": -20,
+          "Introduction": "打着打着精神就没了。",
+          "Console": "nightsword"
+        },
+        {
+          "Picture": "S_bat_bat",
+          "Name": "吸血短棒",
+          "EnName": "Bat Bat",
+          "Attack": 42.5,
+          "Durability": "75次",
+          "Sanity": -3.33,
+          "Introduction": "每次攻击吸血6.8。",
+          "Console": "batbat"
+        },
+        {
+          "Picture": "S_fire_staff",
+          "Name": "火焰法杖",
+          "EnName": "Fire Staff",
+          "Attack": 150,
+          "Durability": "20次",
+          "Sanity": -1,
+          "Introduction": "烧吧烧吧！(攻击力范围：100-150)",
+          "Console": "firestaff"
+        },
+        {
+          "Picture": "S_ice_staff",
+          "Name": "冰冻法杖",
+          "EnName": "Ice Staff",
+          "Durability": "20次",
+          "Sanity": -1,
+          "Introduction": "冰冻敌人！",
+          "Console": "icestaff"
+        },
+        {
+          "Picture": "S_telelocator_staff",
+          "Name": "传送法杖",
+          "EnName": "Telelocator Staff",
+          "Durability": "5次",
+          "Sanity": -50,
+          "Introduction": "装备后右键即可传送，会到达随机位置，如果有已激活的传送点则传送到传送点。",
+          "Console": "telestaff"
+        },
+        {
+          "Picture": "S_the_lazy_explorer",
+          "Name": "懒惰的探索者",
+          "EnName": "The Lazy Explorer",
+          "Durability": "15次",
+          "Sanity": -20,
+          "Introduction": "使用后会向目标瞬移，平常只会增加25%的移动速度，但是被怪物包围，或者被河道或者障碍阻挡道路，就好用了。",
+          "Console": "orangestaff"
+        },
+        {
+          "Picture": "S_star_caller's_staff",
+          "Name": "唤星者法杖",
+          "EnName": "Star Caller's Staff",
+          "Durability": "20次",
+          "Sanity": -20,
+          "Introduction": "向目标位置发射光球，持续照明一段时间，可以用来烹调食物。其实不太实用，施展需要吟唱时间，光球也无法移动。在矮人之星附近每分钟恢复25点精神(薇洛可以恢复35点)。",
+          "Console": "yellowstaff"
+        },
+        {
+          "Picture": "S_deconstruction_staff",
+          "Name": "分解法杖",
+          "EnName": "Deconstruction Staff",
+          "Durability": "5次",
+          "Sanity": -20,
+          "Introduction": "可以分解道具和建筑，但不会分解出宝石，如果被分解对象有折损，就无法获得100%原素材。",
+          "Console": "greenstaff"
+        },
+        {
+          "Picture": "S_life_giving_amulet",
+          "Name": "再生护符",
+          "EnName": "Life Giving Amulet",
+          "Durability": "1次",
+          "Sanity": 2,
+          "Introduction": "它除了死后复活之外也能让玩家缓慢地把饥饿转化为生命，同时精神也能缓慢恢复。",
+          "Console": "amulet"
+        },
+        {
+          "Picture": "S_chilled_amulet",
+          "Name": "冰冷护符",
+          "EnName": "Chilled Amulet",
+          "Durability": "33次",
+          "Sanity": 2,
+          "Introduction": "持续恢复少量精神，任何试图攻击你的生物都会受到冰冻效果，同时你自己也会被其寒气所影响。",
+          "Console": "blueamulet"
+        },
+        {
+          "Picture": "S_nightmare_amulet",
+          "Name": "噩梦护符",
+          "EnName": "Nightmare Amulet",
+          "Durability": "192秒",
+          "Sanity": -3.33,
+          "Introduction": "穿上后会立刻陷入噩梦状态(精神为0)，每分钟掉3.33精神，取下后会恢复到实际精神值。过方尖碑变得很容易。",
+          "Console": "purpleamulet"
+        },
+        {
+          "Picture": "S_the_lazy_forager",
+          "Name": "懒惰的搜寻者",
+          "EnName": "The Lazy Forager",
+          "Durability": "225次",
+          "Sanity": 2,
+          "Introduction": "自动拾取地上的物品，并不是瞬间拾取，有一点点间隔，由于有使用次数，一般情况就别用了。",
+          "Console": "orangeamulet"
+        },
+        {
+          "Picture": "S_magiluminescence",
+          "Name": "光明护符",
+          "EnName": "Magiluminescence",
+          "Durability": "1天",
+          "Sanity": 2,
+          "Introduction": "装备后会发光，类似矿灯帽，解放双手和帽子。",
+          "Console": "yellowamulet"
+        },
+        {
+          "Picture": "S_construction_amulet",
+          "Name": "建设护符",
+          "EnName": "Construction Amulet",
+          "Durability": "5次",
+          "Sanity": 2,
+          "Introduction": "装装备后建设和制作需要的材料会减半，只能使用5次，自己斟酌着使用。",
+          "Console": "greenamulet"
+        },
+        {
+          "Picture": "S_belt_of_hunger",
+          "Name": "饱食腰带",
+          "EnName": "Belt of Hunger",
+          "Ability": [
+            "抵御饥饿"
+          ],
+          "Durability": "8天",
+          "Sanity": 2,
+          "Hunger": 60,
+          "Introduction": "饥饿速度变为默认的60%。",
+          "Console": "armorslurper"
+        },
+        {
+          "Picture": "S_thulecite_club",
+          "Name": "铥制棒",
+          "EnName": "Thulecite Club",
+          "Attack": 59.5,
+          "Durability": 150,
+          "Introduction": "攻击力不错的武器，增加10%的移动速度。",
+          "Console": "ruins_bat"
+        },
+        {
+          "Picture": "G_tentacle_spike",
+          "Name": "触手棒",
+          "EnName": "Tentacle Spike",
+          "DropBy": "A_tentacle",
+          "Attack": 51,
+          "Durability": "100次",
+          "Introduction": "没事去沼泽就能捡到几个。",
+          "Console": "tentaclespike"
+        },
+        {
+          "Picture": "S_grass_suit",
+          "Name": "草制护甲",
+          "EnName": "Grass Suit",
+          "Durability": "225HP",
+          "Defense": 60,
+          "Introduction": "最弱的防御装备。",
+          "Console": "armorgrass"
+        },
+        {
+          "Picture": "S_log_suit",
+          "Name": "木制护甲",
+          "EnName": "Log Suit",
+          "Durability": "450HP",
+          "Defense": 80,
+          "Introduction": "看得过去的防御装备。",
+          "Console": "armorwood"
+        },
+        {
+          "Picture": "S_marble_suit",
+          "Name": "大理石护甲",
+          "EnName": "Marble Suit",
+          "Ability": [
+            "减速30%"
+          ],
+          "Durability": "1050HP",
+          "Defense": 95,
+          "Introduction": "接近无敌的防御装备，不过会减速30%，而且材料不好找。",
+          "Console": "armormarble"
+        },
+        {
+          "Picture": "S_football_helmet",
+          "Name": "橄榄球头盔",
+          "EnName": "Football Helmet",
+          "Durability": "450HP",
+          "Wet": 20,
+          "Defense": 80,
+          "Introduction": "防御性能不错！",
+          "Console": "footballhat"
+        },
+        {
+          "Picture": "S_night_armour",
+          "Name": "暗影护甲",
+          "EnName": "Night Armor",
+          "Ability": [
+            "降低所受伤害10%的精神"
+          ],
+          "Durability": "750HP",
+          "Sanity": -10,
+          "Defense": 95,
+          "Introduction": "防御力极高，打着打着就没精神了。",
+          "Console": "armor_sanity"
+        },
+        {
+          "Picture": "S_beekeeper_hat",
+          "Name": "养蜂帽",
+          "EnName": "Beekeeper Hat",
+          "Durability": "750HP",
+          "Wet": 20,
+          "Defense": 80,
+          "Introduction": "仅防御来自蜜蜂和杀人蜂的攻击。",
+          "Console": "beehat"
+        },
+        {
+          "Picture": "S_thulecite_crown",
+          "Name": "铥制王冠",
+          "EnName": "Thulecite Crown",
+          "Ability": [
+            "免疫中毒"
+          ],
+          "Durability": "1200HP",
+          "Defense": 90,
+          "Introduction": "防御力很高而且耐久也不错，还有被动效果。",
+          "Console": "ruinshat"
+        },
+        {
+          "Picture": "S_thulecite_suit",
+          "Name": "铥制护甲",
+          "EnName": "Thulecite Suit",
+          "Durability": "1800HP",
+          "Sanity": 3.33,
+          "Defense": 90,
+          "Introduction": "耐久最高，防御力也很高。",
+          "Console": "armorruins"
+        },
+        {
+          "Picture": "G_shelmet",
+          "Name": "蜗牛头盔",
+          "EnName": "Shelmet",
+          "DropBy": "A_slurtles",
+          "Durability": "750HP",
+          "Wet": 20,
+          "Defense": 90,
+          "Introduction": "防御力高，爆率低。",
+          "Console": "slurtlehat"
+        },
+        {
+          "Picture": "G_snurtle_shell_armor",
+          "Name": "蜗牛壳盔甲",
+          "EnName": "Snurtle Shell Armor",
+          "DropBy": "A_snurtles",
+          "Durability": "1050HP",
+          "Defense": 60,
+          "Introduction": "防御力低，爆率高，使用后可以钻进壳里躲避怪物攻击仇恨。",
+          "Console": "armorsnurtleshell"
+        },
+        {
+          "Picture": "G_tam_o'shanter",
+          "Name": "苏格兰帽",
+          "EnName": "Tam o' Shanter",
+          "DropBy": "A_mactusk",
+          "Durability": "25天",
+          "ColdResistance": 120,
+          "Sanity": 6.66,
+          "Introduction": "只能打海象掉落。",
+          "Console": "walrushat"
+        },
+        {
+          "Picture": "G_spiderhat",
+          "Name": "蜘蛛帽",
+          "EnName": "Spiderhat",
+          "DropBy": "A_spider_queen",
+          "Ability": [
+            "指挥蜘蛛"
+          ],
+          "Durability": "120秒",
+          "Wet": 20,
+          "Sanity": -2,
+          "Introduction": "只能打蜘蛛女王掉落，可以控制蜘蛛。",
+          "Console": "spiderhat"
+        },
+        {
+          "Picture": "G_slurper",
+          "Name": "吞噬者",
+          "EnName": "Slurper",
+          "DropBy": "A_slurper",
+          "Ability": [
+            "提供和矿灯帽相同的光照"
+          ],
+          "Hunger": -100,
+          "Introduction": "戴在头上会发光，吸食饥饿。",
+          "Console": "slurper"
+        },
+        {
+          "Picture": "G_krampus_sack",
+          "Name": "坎普斯背包",
+          "EnName": "Krampus Sack",
+          "DropBy": "A_krampus",
+          "Ability": [
+            "14格背包"
+          ],
+          "Durability": "10001",
+          "Introduction": "击杀坎普斯极小几率获得。",
+          "Console": "krampus_sack"
+        }
+      ]
     },
     "Sapling": {
         "GoodSapling": [

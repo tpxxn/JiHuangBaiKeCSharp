@@ -1,21 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Media;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
 using 饥荒百科全书CSharp.MyUserControl;
+using Application = System.Windows.Application;
+using Button = System.Windows.Controls.Button;
+using Clipboard = System.Windows.Clipboard;
+using RadioButton = System.Windows.Controls.RadioButton;
 
 namespace 饥荒百科全书CSharp.Class
 {
     public static class Global
     {
+        [ComVisible(true)]
+        [Flags]
+        [TypeConverter(typeof(KeysConverter))]
+        public enum KeyModifiers
+        {
+            None = 0,
+            Alt = 1,
+            Ctrl = 2,
+            Shift = 4,
+            WindowsKey = 8
+        }
+
         /// <summary>
         /// 应用程序文件夹
         /// </summary>

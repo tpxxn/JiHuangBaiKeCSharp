@@ -13,13 +13,13 @@
             <!--老板键-->
             <StackPanel Orientation="Horizontal">
                 <TextBlock x:Name="SeBossKeyTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="老板键" VerticalAlignment="Center" FontSize="20"/>
-                <Button x:Name="SeBossKeyKey" Content="Ctrl + Alt + B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="False" Margin="10,0,0,0" FontSize="20"/>
+                <Button x:Name="SeBossKeyKey" Background="{x:Null}" Cursor="{StaticResource CursorLink}" HorizontalAlignment="Left" Width="200" KeyDown="Se_BossKey_Key_KeyDown" IsEnabled="True" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Margin="0,10,0,0">
                 <TextBlock Text="关闭主面板：" FontSize="20"/>
                 <StackPanel Margin="30,5,0,0" VerticalAlignment="Top">
-                    <RadioButton x:Name="HideToNotifyIconRadioButton" Content="最小化到系统托盘" IsChecked="True" Cursor="{StaticResource CursorLink}" Click="NotifyIconRadioButton_OnClick" FontSize="16"/>
-                    <RadioButton x:Name="ExitRadioButton" Content="退出饥荒百科全书" Margin="0,10,0,0" Cursor="{StaticResource CursorLink}" Click="NotifyIconRadioButton_OnClick" FontSize="16"/>
+                    <RadioButton x:Name="HideToNotifyIconRadioButton" Content="最小化到系统托盘" IsChecked="True" Cursor="{StaticResource CursorLink}" Click="NotifyIconRadioButton_OnClick" FontSize="16" HorizontalAlignment="Left"/>
+                    <RadioButton x:Name="ExitRadioButton" Content="退出饥荒百科全书" Margin="0,10,0,0" Cursor="{StaticResource CursorLink}" Click="NotifyIconRadioButton_OnClick" FontSize="16" HorizontalAlignment="Left"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

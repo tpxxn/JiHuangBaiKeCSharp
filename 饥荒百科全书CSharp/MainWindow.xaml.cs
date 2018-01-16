@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.View;
 using Application = System.Windows.Application;
+using MessageBox = System.Windows.MessageBox;
 
 namespace 饥荒百科全书CSharp
 {
@@ -26,7 +27,9 @@ namespace 饥荒百科全书CSharp
         /// 检查更新实例 update(网盘)
         /// </summary>
         public static UpdatePan UpdatePan = new UpdatePan();
-
+        // 注册快捷键
+        public KeyboardHandler KeyboardHandler;
+        public IntPtr intPtr;
         #region "窗口可视化属性"
         private readonly Timer _visiTimer = new Timer();
 
@@ -198,8 +201,20 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            var _ = new KeyboardHandler(this);
-            foreach (var str in ReadFont())//加载字体
+            #region 加载快捷键
+            intPtr = new WindowInteropHelper(this).Handle;
+            KeyboardHandler = new KeyboardHandler(this);
+            var hotkeyBossKeyControlKeys = RegeditRw.RegRead("HotkeyBossKeyControlKeys");
+            var hotkeyBossKeyMainKey = RegeditRw.RegRead("HotkeyBossKeyMainKey");
+            if (hotkeyBossKeyControlKeys == 0 && hotkeyBossKeyMainKey == 0)
+            {
+                hotkeyBossKeyControlKeys = 3; //Ctrl+Alt
+                hotkeyBossKeyMainKey = 66; //B
+            }
+            KeyboardHandler.SetupHotKey(intPtr, (Global.KeyModifiers)hotkeyBossKeyControlKeys, (int)hotkeyBossKeyMainKey);
+            #endregion
+            #region 加载字体
+            foreach (var str in ReadFont())
             {
                 var textBlock = new TextBlock
                 {
@@ -214,6 +229,7 @@ namespace 饥荒百科全书CSharp
             var mainWindowFontWeight = RegeditRw.RegReadString("MainWindowFontWeight");
             SeCheckBoxFontWeight.IsChecked = mainWindowFontWeight == "True";
             LoadFont = true;
+            #endregion
         }
         #endregion
 

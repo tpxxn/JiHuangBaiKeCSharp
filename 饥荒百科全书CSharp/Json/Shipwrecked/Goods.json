@@ -1427,6 +1427,42 @@
         "Console": "icestaff"
       },
       {
+        "Picture": "S_telelocator_staff",
+        "Name": "传送法杖",
+        "EnName": "Telelocator Staff",
+        "Durability": "5次",
+        "Sanity": -50,
+        "Introduction": "装备后右键即可传送，会到达随机位置，如果有已激活的传送点则传送到传送点。",
+        "Console": "telestaff"
+      },
+      {
+        "Picture": "S_life_giving_amulet",
+        "Name": "再生护符",
+        "EnName": "Life Giving Amulet",
+        "Durability": "1次",
+        "Sanity": 2,
+        "Introduction": "它除了死后复活之外也能让玩家缓慢地把饥饿转化为生命，同时精神也能缓慢恢复。",
+        "Console": "amulet"
+      },
+      {
+        "Picture": "S_chilled_amulet",
+        "Name": "冰冷护符",
+        "EnName": "Chilled Amulet",
+        "Durability": "33次",
+        "Sanity": 2,
+        "Introduction": "持续恢复少量精神，任何试图攻击你的生物都会受到冰冻效果，同时你自己也会被其寒气所影响。",
+        "Console": "blueamulet"
+      },
+      {
+        "Picture": "S_nightmare_amulet",
+        "Name": "噩梦护符",
+        "EnName": "Nightmare Amulet",
+        "Durability": "192秒",
+        "Sanity": -3.33,
+        "Introduction": "穿上后会立刻陷入噩梦状态(精神为0)，每分钟掉3.33精神，取下后会恢复到实际精神值。过方尖碑变得很容易。",
+        "Console": "purpleamulet"
+      },
+      {
         "Picture": "G_tentacle_spike",
         "Name": "触手棒",
         "EnName": "Tentacle Spike",
