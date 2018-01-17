@@ -51,6 +51,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public double Sanity { get; set; }
         public double Hunger { get; set; }
         public double Defense { get; set; }
+        public double Speed { get; set; }
         public List<string> Ability { get; set; }
         public string DropBy { get; set; }
         public string Introduction { get; set; }

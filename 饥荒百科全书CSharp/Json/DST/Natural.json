@@ -1905,5 +1905,1011 @@
         ]
       }
     ]
-  }
+  },
+  "CreatureNests": {
+    "NatureCreatureNest": [
+      {
+        "Picture": "N_rabbit_hole",
+        "Pictures": [
+          "N_rabbit_hole",
+          "N_rabbit_hole_collapsed"
+        ],
+        "Name": "兔子洞",
+        "EnName": "Rabbit Hole",
+        "Creature": [
+          [
+            "A_rabbit",
+            "A_rabbit_winter",
+            "A_beardling"
+          ],
+          []
+        ],
+        "ResourcesDestroyed": [
+          [
+            "无|&Shovel"
+          ]
+        ],
+        "Ability": [
+          [
+            "春天变成倒塌的兔子洞"
+          ], 
+          [
+            "夏天变回兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "兔子洞是生成兔子的场所，兔子会在黄昏或者受到惊吓的时候回到兔子洞，受到惊吓的兔子会在1到3分钟内再次出洞(满足正常出洞条件)。当一只兔子被捕或被杀害，另一只就会从洞里重生(重生时间2.5天)。用铲子挖一个兔子洞可以破坏它，这将导致兔子不再重生。如果兔子由于任何原因在晚上被抓到外面，那么这只兔子将会睡着。在RoG版里，春天兔子洞会变成倒塌的兔子洞，不再生成兔子，春天结束后的几天又会变回兔子洞。在DST版里，摧毁的兔子洞会在5天后重生(仅夏天)，同一时间只能重生一个兔子洞，按照队列原则重生。",
+        "Console": [
+          "rabbithole"
+        ]
+      },
+      {
+        "Picture": "N_beehive",
+        "Name": "蜂巢",
+        "EnName": "Beehive",
+        "Health": 200,
+        "Creature": [
+          [
+            "A_bee",
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "蜂巢住着蜜蜂，每30秒就生成一只蜜蜂，最多6只。蜜蜂会在白天离开蜂巢，黄昏回到蜂巢。在冬天，蜜蜂不会出来。如果蜜蜂被攻击或捕捉，那么蜂巢中的所有蜜蜂都会变成杀人蜂来攻击玩家，并且附近蜂巢的蜜蜂也会出动。如果蜂巢受到攻击，蜂巢内的蜜蜂会变成杀人蜂攻击玩家，而已经在外面的蜜蜂则不会受到影响。如果蜂巢着火，那么蜜蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "beehive"
+        ]
+      },
+      {
+        "Picture": "N_killer_bee_hive",
+        "Name": "杀人蜂巢",
+        "EnName": "Killer Bee Hive",
+        "Health": 250,
+        "Creature": [
+          [
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "杀人蜂巢住着杀人蜂，每20秒就生成一只杀人蜂，最多6只。杀人蜂整天待在杀人蜂巢内。但如果玩家离杀人蜂巢太近，那么就算是晚上或者冬天，杀人蜂也会立即出动。如果杀人蜂被攻击或捕捉，那么杀人蜂巢中的所有杀人蜂都会来攻击玩家，并且附近杀人蜂巢的杀人蜂也会出动。如果杀人蜂巢受到攻击，杀人蜂巢内的杀人蜂会来攻击玩家。如果杀人蜂巢着火，那么杀人蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "wasphive"
+        ]
+      },
+      {
+        "Picture": "N_hollow_stump",
+        "Pictures": [
+          "N_hollow_stump",
+          "N_hollow_stump_dead"
+        ],
+        "Name": "中空树桩",
+        "EnName": "Hollow Stump",
+        "Creature": [
+          [
+            "A_catcoon"
+          ],
+          []
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "G_twigs|×2&Hammer",
+            "G_log|×2&Hammer",
+            "|下表中随机一样&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_deciduous_forest"
+        ],
+        "Introduction": "中空树桩只能在落叶阔叶林找到，它是浣猫的家。杀死一只浣猫之后会重生一只，重生需要1天，总共只有9只。当不再能重生浣猫的时候，中空树桩就会变得像损坏了一样。在DST版里，中空树桩是可以再生的，再生时间是被摧毁时的季节天数加上该季节剩余天数。",
+        "Console": [
+          "catcoonden"
+        ]
+      },
+      {
+        "Picture": "N_burrow",
+        "Name": "洞穴",
+        "EnName": "Burrow",
+        "Creature": [
+          [
+            "A_moleworm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_pig_torch",
+        "Name": "猪头火炬",
+        "EnName": "Pig Torch",
+        "Creature": [
+          [
+            "A_guard_pig"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_pig_house",
+        "Name": "猪舍",
+        "EnName": "Pig House",
+        "Creature": [
+          [
+            "A_pig_man"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_spider_den_1",
+        "Pictures": [
+          "N_spider_den_|3"
+        ],
+        "Name": "蜘蛛巢",
+        "EnName": "Spider Den",
+        "Creature": [
+          [
+            "A_spider",
+            "A_spider_warrior"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior",
+            "A_spider_queen"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ 
+          "rabbithole" 
+        ]
+      },
+      {
+        "Picture": "N_pond",
+        "Name": "青蛙池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "A_frog",
+            "F_fish"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ 
+          "rabbithole" 
+        ]
+      },
+      {
+        "Picture": "N_pond_mos",
+        "Name": "沼泽池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "A_mosquito",
+            "F_fish"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [
+          "rabbithole"
+        ]
+      },
+      {
+        "Picture": "N_rundown_house",
+        "Name": "鱼族废墟",
+        "EnName": "Rundown House",
+        "Creature": [
+          [
+            "A_merm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ 
+          "rabbithole" 
+        ]
+      },
+      {
+        "Picture": "N_pond_frozen",
+        "Name": "冰冻池塘",
+        "EnName": "Frozen Pond",
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [
+          "rabbithole" 
+        ]
+      },
+      {
+        "Picture": "N_tallbird_nest",
+        "Name": "高脚鸟巢穴",
+        "EnName": "Tallbird Nest",
+        "Creature": [
+          [
+            "A_tallbird"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [
+          "rabbithole" 
+        ]
+      },
+      {
+        "Picture": "N_hound_mound",
+        "Name": "猎犬丘",
+        "EnName": "Hound Mound",
+        "Creature": [
+          [
+            "A_hound"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [
+          "rabbithole" 
+        ]
+      },
+      {
+        "Picture": "N_walrus_camp",
+        "Name": "海象巢穴",
+        "EnName": "Walrus_camp",
+        "Creature": [
+          [
+            "A_mactusk",
+            "A_wee_mactusk",
+            "A_blue_hound"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ 
+          "rabbithole"
+        ]
+      },
+      {
+        "Picture": "N_Magma",
+        "Name": "岩浆",
+        "EnName": "Magma",
+        "Creature": [
+          [
+            "A_dragonfly"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [
+          "rabbithole"
+        ]
+      },
+      {
+        "Picture": "N_rabbit_hutch",
+        "Name": "兔子窝",
+        "EnName": "Rabbit Hutch",
+        "Creature": [
+          [
+            "A_bunnyman"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_spilagmite",
+        "Name": "蛛网岩",
+        "EnName": "Spilagmite",
+        "Creature": [
+          [
+            "A_cave_spider"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_pond_cave",
+        "Name": "洞穴池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "F_eel"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_slurtle_mound",
+        "Name": "含糊虫土堆",
+        "EnName": "Slurtle Mound",
+        "Creature": [
+          [
+            "A_slurtles",
+            "A_snurtles"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_splumonkey_pod",
+        "Name": "暴躁猴群",
+        "EnName": "Splumonkey Pod",
+        "Creature": [
+          [
+            "A_splumonkey",
+            "A_shadow_splumonkey"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_crabbit_den",
+        "Name": "兔蟹的窝",
+        "EnName": "Crabbit Den",
+        "Creature": [
+          [
+            "A_crabbit"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_wildbore_house",
+        "Name": "荒野小屋",
+        "EnName": "Wildbore House",
+        "Creature": [
+          [
+            "A_wildbore"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_mussel",
+        "Name": "贻贝床",
+        "EnName": "Mussel",
+        "Creature": [
+          [
+            "F_mussel"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_wobster_den",
+        "Name": "龙虾的巢穴",
+        "EnName": "Wobster Den",
+        "Creature": [
+          [
+            "F_wobster"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_prime_ape_hut",
+        "Name": "猿猴小屋",
+        "EnName": "Prime Ape Hut",
+        "Creature": [
+          [
+            "A_prime_ape"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_shoal",
+        "Name": "浅滩",
+        "EnName": "Shoal",
+        "Creature": [
+          [
+            "A_sea_hound",
+            "F_tropical_fish"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_merm_hut",
+        "Name": "鱼人房",
+        "EnName": "Merm Hut",
+        "Creature": [
+          [
+            "A_merm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_fishermerm's_hut",
+        "Name": "Fishermerm的小屋",
+        "EnName": "Fishermerm's Hut",
+        "Creature": [
+          [
+            "A_fishermerm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_tidal_pool",
+        "Name": "潮水池",
+        "EnName": "Tidal Pool",
+        "Creature": [
+          [
+            "A_rabbit",
+            "A_rabbit_winter",
+            "A_beardling"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "",
+        "Console": [ "tidalpool" ]
+      },
+      {
+        "Picture": "N_sharkitten_den",
+        "Name": "虎鲨的窝",
+        "EnName": "Sharkitten Den",
+        "Creature": [
+          [
+            "A_tiger_shark",
+            "A_sharkitten"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "",
+        "Console": [ "sharkittenspawner" ]
+      },
+      {
+        "Picture": "N_dragoon_den",
+        "Name": "龙人巢",
+        "EnName": "Dragoon Den",
+        "Creature": [
+          [
+            "A_dragoon"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_dragoon_egg",
+        "Name": "龙人蛋",
+        "EnName": "Dragoon Egg",
+        "Creature": [
+          [
+            "A_dragoon"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      }
+    ] 
+  } 
 }

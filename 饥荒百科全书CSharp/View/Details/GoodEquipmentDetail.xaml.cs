@@ -168,6 +168,15 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 GoodDefense.Visibility = Visibility.Collapsed;
             }
+            if (c.Speed != 0)
+            {
+                GoodSpeed.Value = c.Speed;
+                GoodSpeed.BarColor = Global.ColorBorderCyan;
+            }
+            else
+            {
+                GoodSpeed.Visibility = Visibility.Collapsed;
+            }
             var maxTextLength = 0;
             foreach (var uiElement in BarChartStackPanel.Children)
             {

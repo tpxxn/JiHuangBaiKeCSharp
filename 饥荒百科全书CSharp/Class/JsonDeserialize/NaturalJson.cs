@@ -106,17 +106,56 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class NatureCreatureNest
+    {
+        public string Picture { get; set; }
+        public List<string> Pictures { get; set; }
+        public string Name { get; set; }
+        public string EnName { get; set; }
+        public int Health { get; set; }
+        public List<List<string>> Creature { get; set; }
+        public List<List<string>> ResourcesDestroyed { get; set; }
+        public List<List<string>> Ability { get; set; }
+        public bool IsRegenerate { get; set; }
+        public bool IsDestroable { get; set; }
+        public List<string> Biomes { get; set; }
+        public string Introduction { get; set; }
+        public List<string> Console { get; set; }
+
+        public NatureCreatureNest()
+        {
+            Pictures = new List<string>();
+            Creature = new List<List<string>>();
+            ResourcesDestroyed = new List<List<string>>();
+            Ability = new List<List<string>>();
+            Biomes = new List<string>();
+            Console = new List<string>();
+        }
+    }
+
+    public class CreatureNests
+    {
+        public List<NatureCreatureNest> NatureCreatureNest { get; set; }
+
+        public CreatureNests()
+        {
+            NatureCreatureNest = new List<NatureCreatureNest>();
+        }
+    }
+
     public class NaturalRootObject
     {
         public Biomes Biomes { get; set; }
         public SmallPlants SmallPlants { get; set; }
         public Trees Trees { get; set; }
+        public CreatureNests CreatureNests { get; set; }
 
         public NaturalRootObject()
         {
             Biomes = new Biomes();
             SmallPlants = new SmallPlants();
             Trees = new Trees();
+            CreatureNests = new CreatureNests();
         }
     }
 }

@@ -891,6 +891,7 @@
           "EnName": "Walking Cane",
           "Attack": 17,
           "Durability": "10001",
+          "Speed": 25,
           "Introduction": "除了用作工具还能用来打怪。",
           "Console": "cane"
         },
@@ -1203,6 +1204,7 @@
           "EnName": "Magiluminescence",
           "Durability": "1天",
           "Sanity": 2,
+          "Speed": 20,
           "Introduction": "装备后会发光，类似矿灯帽，解放双手和帽子。",
           "Console": "yellowamulet"
         },

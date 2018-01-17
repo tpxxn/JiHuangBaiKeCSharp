@@ -30,8 +30,8 @@ namespace 饥荒百科全书CSharp
 #if DEBUG
                 Debug.WriteLine("App constructor");
 #endif
-                Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
-                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+                //Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+                //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 Startup += App_Startup;
             }
 

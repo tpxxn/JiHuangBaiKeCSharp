@@ -30,17 +30,6 @@ namespace 饥荒百科全书CSharp.Class
         }
 
         /// <summary>
-        /// 获取文件名
-        /// </summary>
-        /// <param name="path">长字符串</param>
-        /// <returns>资源文件路径</returns>
-        public static string GetFileName(string path)
-        {
-            path = path.Substring(path.LastIndexOf('/') + 1, path.Length - path.LastIndexOf('/') - 5);
-            return path;
-        }
-
-        /// <summary>
         /// 返回Json文本
         /// </summary>
         /// <param name="fileName">文件名</param>
@@ -62,6 +51,17 @@ namespace 饥荒百科全书CSharp.Class
             var src2 = Application.GetResourceStream(new Uri("/饥荒百科全书CSharp;component/Json/DedicatedServer/" + fileName, UriKind.Relative))?.Stream;
             var str = new StreamReader(src2 ?? throw new InvalidOperationException(), Encoding.UTF8).ReadToEnd();
             return str;
+        }
+
+        /// <summary>
+        /// 获取文件名
+        /// </summary>
+        /// <param name="path">长字符串</param>
+        /// <returns>资源文件路径</returns>
+        public static string GetFileName(string path)
+        {
+            path = path.Substring(path.LastIndexOf('/') + 1, path.Length - path.LastIndexOf('/') - 5);
+            return path;
         }
 
         /// <summary>

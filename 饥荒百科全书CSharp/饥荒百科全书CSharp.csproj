@@ -215,6 +215,9 @@
     <Compile Include="View\Details\NaturalBiomesDetail.xaml.cs">
       <DependentUpon>NaturalBiomesDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Details\NaturalCreatureNestDetail.xaml.cs">
+      <DependentUpon>NaturalCreatureNestDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Details\NaturalSmallPlantDetail.xaml.cs">
       <DependentUpon>NaturalSmallPlantDetail.xaml</DependentUpon>
     </Compile>
@@ -456,6 +459,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Details\NaturalBiomesDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\NaturalCreatureNestDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -5804,6 +5811,12 @@
   <ItemGroup>
     <Resource Include="Resources\GameResources\Goods\G_iridescent_gem.png" />
     <Resource Include="Resources\GameResources\Goods\G_moon_caller%27s_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Natures\N_hollow_stump_dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Natures\N_rabbit_hole_collapsed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

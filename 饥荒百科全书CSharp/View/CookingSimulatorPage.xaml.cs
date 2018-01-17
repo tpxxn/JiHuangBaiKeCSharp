@@ -989,119 +989,20 @@ namespace 饥荒百科全书CSharp.View
         /// <summary>
         /// 烹饪结果文字
         /// </summary>
-        /// <param name="source">食物代码</param>
+        /// <param name="source">食物图片(短名)</param>
         /// <returns>烹饪结果</returns>
-        private string CS_Food_Text(string source)
+        private static string CS_Food_Text(string source)
         {
-            switch (source)
-            {
-                case "F_tropical_bouillabaisse":
-                    return "热带鱼羹";
-                case "F_caviar":
-                    return "鱼子酱";
-                case "F_fresh_fruit_crepes":
-                    return "新鲜水果薄饼";
-                case "F_monster_tartare":
-                    return "怪物鞑靼";
-                case "F_mussel_bouillabaise":
-                    return "贻贝浓汤";
-                case "F_sweet_potato_souffle":
-                    return "薯蛋奶酥";
-                case "F_lobster_bisque":
-                    return "龙虾浓汤";
-                case "F_bisque":
-                    return "汤";
-                case "F_coffee":
-                    return "咖啡";
-                case "F_surf_'n'_turf":
-                    return "海鲜牛排";
-                case "F_lobster_dinner":
-                    return "龙虾正餐";
-                case "F_banana_pop":
-                    return "香蕉冰淇淋";
-                case "F_california_roll":
-                    return "加州卷";
-                case "F_jelly-O_pop":
-                    return "果冻冰淇淋";
-                case "F_ceviche":
-                    return "橘汁腌鱼";
-                case "F_shark_fin_soup":
-                    return "鱼翅汤";
-                case "F_seafood_gumbo":
-                    return "海鲜汤";
-                case "F_jellybeans":
-                    return "糖豆";
-                case "F_guacamole":
-                    return Global.GameVersion == 4 ? "鼹梨沙拉酱" : "鼹鼠鳄梨酱";
-                case "F_flower_salad":
-                    return Global.GameVersion == 4 ? "花沙拉" : "花瓣沙拉";
-                case "F_ice_cream":
-                    return "冰淇淋";
-                case "F_melonsicle":
-                    return Global.GameVersion == 4 ? "西瓜冰棍" : "西瓜冰";
-                case "F_trail_mix":
-                    return Global.GameVersion == 4 ? "什锦干果" : "水果杂烩";
-                case "F_spicy_chili":
-                    return Global.GameVersion == 4 ? "辣椒炖肉" : "辣椒酱";
-                case "F_unagi":
-                    return Global.GameVersion == 4 ? "鳗鱼料理" : "鳗鱼";
-                case "F_pumpkin_cookie":
-                    return "南瓜饼";
-                case "F_powdercake":
-                    return "芝士蛋糕";
-                case "F_mandrake_soup":
-                    return Global.GameVersion == 4 ? "曼德拉草汤" : "曼德拉汤";
-                case "F_fishsticks":
-                    return Global.GameVersion == 4 ? "炸鱼排" : "炸鱼条";
-                case "F_fish_tacos":
-                    return Global.GameVersion == 4 ? "鱼肉玉米卷" : "玉米饼包炸鱼";
-                case "F_bacon_and_eggs":
-                    return "培根煎蛋";
-                case "F_turkey_dinner":
-                    return Global.GameVersion == 4 ? "火鸡大餐" : "火鸡正餐";
-                case "F_taffy":
-                    return "太妃糖";
-                case "F_waffles":
-                    return "华夫饼";
-                case "F_monster_lasagna":
-                    return "怪物千层饼";
-                case "F_pierogi":
-                    return Global.GameVersion == 4 ? "波兰水饺" : "饺子";
-                case "F_kabobs":
-                    return "肉串";
-                case "F_honey_ham":
-                    return "蜜汁火腿";
-                case "F_honey_nuggets":
-                    return Global.GameVersion == 4 ? "蜜汁卤肉" : "甜蜜金砖";
-                case "F_butter_muffin":
-                    return Global.GameVersion == 4 ? "奶油玛芬" : "奶油松饼";
-                case "F_froggle_bunwich":
-                    return Global.GameVersion == 4 ? "蛙腿三明治" : "青蛙圆面包三明治";
-                case "F_dragonpie":
-                    return "火龙果派";
-                case "F_stuffed_eggplant":
-                    return Global.GameVersion == 4 ? "酿茄子" : "香酥茄盒";
-                case "F_ratatouille":
-                    return Global.GameVersion == 4 ? "蔬菜大杂烩" : "蔬菜杂烩";
-                case "F_fist_full_of_jam":
-                    return Global.GameVersion == 4 ? "满满的果酱" : "果酱蜜饯";
-                case "F_fruit_medley":
-                    return Global.GameVersion == 4 ? "水果圣代" : "水果沙拉";
-                case "F_meaty_stew":
-                    return "肉汤";
-                case "F_meatballs":
-                    return "肉丸";
-                case "F_wet_goop":
-                    return Global.GameVersion == 4 ? "失败料理" : "湿腻焦糊";
-                default:
-                    return null;
-            }
+            return (from foodRecipe 
+                    in Global.FoodRecipeData
+                    where StringProcess.GetFileName(foodRecipe.Picture) == source
+                    select foodRecipe.Name).FirstOrDefault();
         }
 
         /// <summary>
         /// 烹饪结果属性
         /// </summary>
-        /// <param name="source">食物代码</param>
+        /// <param name="source">食物图片(短名)</param>
         private void CS_FoodRecipe_Property(string source)
         {
             foreach (var foodRecipe in Global.FoodRecipeData)
