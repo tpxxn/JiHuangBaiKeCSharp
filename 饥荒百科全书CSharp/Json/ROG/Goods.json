@@ -2286,7 +2286,9 @@
           "A_cave_spider",
           "A_dangling_depth_dweller",
           "A_spider_queen",
-          "N_spider_den",
+          "N_spider_den_1",
+          "N_spider_den_2",
+          "N_spider_den_3",
           "N_spilagmite"
         ],
         "UnlockCharacter": "C_webber",
@@ -2363,6 +2365,13 @@
         "EnName": "Blueprint",
         "Introduction": "蓝图通常可以在风滚草和X标记点找到，冒险模式的开始也可以找到一些。使用蓝图将会恢复15点精神，并且解锁某个科技，旧钟科技只能通过蓝图解锁。(以上规律不适用于远古科技)",
         "Console": "(prefab name)_blueprint"
+      },
+      {
+        "Picture": "G_spider_eggs",
+        "Name": "蜘蛛卵",
+        "EnName": "Spider Eggs",
+        "Introduction": "破坏三级蜘蛛巢获取，可以种植一个一级蜘蛛巢。韦伯可以制作。",
+        "Console": "spidereggsack"
       }
     ]
   }

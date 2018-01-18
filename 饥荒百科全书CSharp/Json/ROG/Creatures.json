@@ -161,7 +161,8 @@
 				"Goods": [
 					"F_monster_meat|×1（50%）",
 					"G_silk|×1（25%）",
-					"G_spider_gland|×1（25%）"
+					"G_spider_gland|×1（25%）",
+					"G_webber's_skull|×1(5%)(未解锁韦伯)"
 				],
 				"Introduction": "蜘蛛出生在蜘蛛巢或由蜘蛛女王孵化，当玩家经过蜘蛛网时，会有少量蜘蛛来巡查。黄昏和夜晚蜘蛛会主动出来行动。若攻击了一只蜘蛛，周围的蜘蛛都会来帮忙，蜘蛛的攻击间隔较长，很容易风筝。用陷阱可以直接杀害蜘蛛。",
 				"Console": "spider"
@@ -183,7 +184,8 @@
 				"Goods": [
 					"F_monster_meat|×1（50%）",
 					"G_silk|×1（25%）",
-					"G_spider_gland|×1（25%）"
+					"G_spider_gland|×1（25%）",
+					"G_webber's_skull|×1(5%)(未解锁韦伯)"
 				],
 				"Ability": [
 					"跳跃攻击"
@@ -978,7 +980,8 @@
 				"Goods": [
 					"F_monster_meat|×1（50%）",
 					"G_silk|×1（25%）",
-					"G_spider_gland|×1（25%）"
+					"G_spider_gland|×1（25%）",
+					"G_webber's_skull|×1(5%)(未解锁韦伯)"
 				],
 				"Ability": [
 					"可以躲在壳里抵挡75%伤害。"
@@ -1003,7 +1006,8 @@
 				"Goods": [
 					"F_monster_meat|×1（50%）",
 					"G_silk|×1（25%）",
-					"G_spider_gland|×1（25%）"
+					"G_spider_gland|×1（25%）",
+					"G_webber's_skull|×1(5%)(未解锁韦伯)"
 				],
 				"Introduction": "喷吐蜘蛛同样生活在蛛网岩，它会喷出远程的蛛网攻击，尽量不要靠近它，除非只有一只喷吐蜘蛛。",
 				"Console": "spider_spitter"
@@ -1025,7 +1029,8 @@
 				"Goods": [
 					"F_monster_meat|×1（50%）",
 					"G_silk|×1（25%）",
-					"G_spider_gland|×1（25%）"
+					"G_spider_gland|×1（25%）",
+					"G_webber's_skull|×1(5%)(未解锁韦伯)"
 				],
 				"Ability": [
 					"跳跃攻击"
@@ -1756,7 +1761,8 @@
 					"F_monster_meat|×4",
 					"G_silk|×4",
 					"S_spider_eggs|×1",
-					"G_spiderhat|×1"
+					"G_spiderhat|×1",
+					"G_webber's_skull|×1(5%)(未解锁韦伯)"
 				],
 				"Ability": [
 					"生成蜘蛛和蜘蛛战士"

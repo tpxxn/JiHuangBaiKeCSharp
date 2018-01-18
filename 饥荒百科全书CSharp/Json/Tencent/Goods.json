@@ -2846,28 +2846,6 @@
       }
     ]
   },
-  "Unlock": {
-    "GoodUnlock": [
-      {
-        "Picture": "G_webber's_skull",
-        "Name": "韦伯的头颅",
-        "EnName": "Webbers Skull",
-        "DropBy": [
-          "A_spider",
-          "A_spider_warrior",
-          "A_spitter",
-          "A_cave_spider",
-          "A_dangling_depth_dweller",
-          "A_spider_queen",
-          "N_spider_den",
-          "N_spilagmite"
-        ],
-        "UnlockCharacter": "C_webber",
-        "Introduction": "每次击杀任何蜘蛛或拆蜘蛛巢和蛛网岩都有5%的几率掉落韦伯的头颅，把韦伯的头颅放进挖开的坟墓中，坟墓会被闪电劈中，韦伯会出现，然后跳回坟墓消失，并出现6只蜘蛛，韦伯就解锁了(不需要杀死蜘蛛)。",
-        "Console": "webberskull"
-      }
-    ]
-  },
   "GoodOthers": {
     "Good": [
       {
@@ -2932,6 +2910,13 @@
         "EnName": "Iridescent Gem",
         "Introduction": "由访月者的手杖分解获得，没有什么用处，只能喂给石龙虾。",
         "Console": "opalpreciousgem"
+      },
+      {
+        "Picture": "G_spider_eggs",
+        "Name": "蜘蛛卵",
+        "EnName": "Spider Eggs",
+        "Introduction": "破坏三级蜘蛛巢获取，可以种植一个一级蜘蛛巢。韦伯可以制作。",
+        "Console": "spidereggsack"
       }
     ]
   },

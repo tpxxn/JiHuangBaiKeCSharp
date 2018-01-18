@@ -43,6 +43,7 @@ namespace 饥荒百科全书CSharp.View.Details
             Global.NaturalLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
         
+        private readonly List<int?> _creatureNestHealthIntList = new List<int?>();
         private List<List<string>> _creatureNestCreatureListStringList;
         private List<List<string>> _creatureNestResourcesDestroyedListStringList;
         private List<List<string>> _creatureNestAbilityListStringList;
@@ -107,14 +108,18 @@ namespace 饥荒百科全书CSharp.View.Details
                 DestroableCheckBox.Margin = new Thickness(0, 0, 0, 0);
             }
             // 生命
-            if (c.Health != 0)
+            if (c.Health == null)
             {
-                CreatureHealth.Value = c.Health;
-                CreatureHealth.BarColor = Global.ColorGreen;
+                CreatureHealth.Visibility = Visibility.Collapsed;
             }
             else
             {
-                CreatureHealth.Visibility = Visibility.Collapsed;
+                CreatureHealth.Value = c.Health[0];
+                CreatureHealth.BarColor = Global.ColorGreen;
+                foreach (var health in c.Health)
+                {
+                    _creatureNestHealthIntList.Add(health);
+                }
             }
             // 生物
             if (c.Creature.Count == 0)
@@ -161,6 +166,11 @@ namespace 饥荒百科全书CSharp.View.Details
                     }
                 }
                 ShowResourcesDestroyed(0);
+            }
+            // 中空树桩额外掉落
+            if (c.EnName == "Hollow Stump")
+            {
+                ShowHollowStumpDrops();
             }
             //特殊能力
             if (c.Ability.Count == 0)
@@ -379,18 +389,180 @@ namespace 饥荒百科全书CSharp.View.Details
                     }
                     else
                     {
-                        var picButton = new PicButton
+                        if (!string.IsNullOrEmpty(resourceSource))
                         {
-                            HorizontalAlignment = HorizontalAlignment.Left,
-                            Margin = thickness,
-                            Source = StringProcess.GetGameResourcePath(resourceSource),
-                            Text = resourceText
-                        };
-                        //picButton.Click += Creature_Jump_Click;
-                        NaturalResourcesDestroyedStackPanel.Children.Add(picButton);
+                            var picButton = new PicButton
+                            {
+                                HorizontalAlignment = HorizontalAlignment.Left,
+                                Margin = thickness,
+                                Source = StringProcess.GetGameResourcePath(resourceSource),
+                                Text = resourceText
+                            };
+                            //picButton.Click += Creature_Jump_Click;
+                            NaturalResourcesDestroyedStackPanel.Children.Add(picButton);
+                            
+                        }
+                        else
+                        {
+                            var textBlock = new TextBlock
+                            {
+                                HorizontalAlignment = HorizontalAlignment.Left,
+                                Margin = thickness,
+                                VerticalAlignment = VerticalAlignment.Center,
+                                Text = resourceText
+                            };
+                            NaturalResourcesDestroyedStackPanel.Children.Add(textBlock);
+                        }
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// 显示中空树桩额外掉落表
+        /// </summary>
+        private void ShowHollowStumpDrops()
+        {
+            // 主StackPanel
+            var stackPanel = new StackPanel
+            {
+                Margin = new Thickness(20, 10, 0, 0)
+            };
+            // 30%StackPanel
+            var stackPanelP30 = new StackPanel
+            {
+                Orientation = Orientation.Horizontal
+            };
+            var textBlockP30 = new TextBlock
+            {
+                Text = "30%：",
+                VerticalAlignment = VerticalAlignment.Center
+            };
+            stackPanelP30.Children.Add(textBlockP30);
+            var picButtonP30 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("F_morsel")
+            };
+            stackPanelP30.Children.Add(picButtonP30);
+            stackPanel.Children.Add(stackPanelP30);
+            // 20%StackPanel
+            var stackPanelP20 = new StackPanel
+            {
+                Orientation = Orientation.Horizontal
+            };
+            var textBlockP20 = new TextBlock
+            {
+                Text = "20%：",
+                VerticalAlignment = VerticalAlignment.Center
+            };
+            stackPanelP20.Children.Add(textBlockP20);
+            var picButtonP20 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("G_boneshard")
+            };
+            stackPanelP20.Children.Add(picButtonP20);
+            stackPanel.Children.Add(stackPanelP20);
+            // 5%StackPanel
+            var stackPanelP5 = new StackPanel
+            {
+                Orientation = Orientation.Horizontal
+            };
+            var textBlockP5 = new TextBlock
+            {
+                Text = "5%：  ",
+                VerticalAlignment = VerticalAlignment.Center
+            };
+            stackPanelP5.Children.Add(textBlockP5);
+            var picButtonP51 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("S_rope")
+            };
+            stackPanelP5.Children.Add(picButtonP51);
+            var picButtonP52 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("G_azure_feather")
+            };
+            stackPanelP5.Children.Add(picButtonP52);
+            var picButtonP53 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("G_crimson_feather")
+            };
+            stackPanelP5.Children.Add(picButtonP53);
+            var picButtonP54 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("G_jet_feather")
+            };
+            stackPanelP5.Children.Add(picButtonP54);
+            if (Global.GameVersion < 2)
+            {
+                var picButtonP55 = new PicButton
+                {
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    Source = StringProcess.GetGameResourcePath("G_saffron_feather")
+                };
+                stackPanelP5.Children.Add(picButtonP55);
+            }
+            stackPanel.Children.Add(stackPanelP5);
+            // 2%StackPanel
+            var stackPanelP2 = new StackPanel
+            {
+                Orientation = Orientation.Horizontal
+            };
+            var textBlockP2 = new TextBlock
+            {
+                Text = "2%：  ",
+                VerticalAlignment = VerticalAlignment.Center
+            };
+            stackPanelP2.Children.Add(textBlockP2);
+            var picButtonP21 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("A_redbird")
+            };
+            stackPanelP2.Children.Add(picButtonP21);
+            var picButtonP22 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("A_snowbird")
+            };
+            stackPanelP2.Children.Add(picButtonP22);
+            var picButtonP23 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("A_crow")
+            };
+            stackPanelP2.Children.Add(picButtonP23);
+            if (Global.GameVersion < 2)
+            {
+                var picButtonP24 = new PicButton
+                {
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    Source = StringProcess.GetGameResourcePath("A_canary")
+                };
+                stackPanelP2.Children.Add(picButtonP24);
+            }
+            var picButtonP25 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("A_rabbit")
+            };
+            stackPanelP2.Children.Add(picButtonP25);
+            var picButtonP26 = new PicButton
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Source = StringProcess.GetGameResourcePath("A_moleworm")
+            };
+            stackPanelP2.Children.Add(picButtonP26);
+            stackPanel.Children.Add(stackPanelP2);
+            // 添加进NaturesRootGrid
+            NaturesRootGrid.Children.Add(stackPanel);
+            Grid.SetRow(stackPanel, 9);
         }
 
         /// <summary>
@@ -436,6 +608,10 @@ namespace 饥荒百科全书CSharp.View.Details
                     SwitchLeftButton.IsEnabled = false;
                 }
                 NatureImage.Source = new BitmapImage(new Uri(_creatureNestList[_creatureNestIndex], UriKind.Relative));
+                if (_creatureNestHealthIntList != null && _creatureNestHealthIntList.Count > 1)
+                {
+                    CreatureHealth.Value = _creatureNestHealthIntList[_creatureNestIndex];
+                }
                 if (_creatureNestCreatureListStringList != null)
                     ShowCreature(_creatureNestIndex);
                 if (_creatureNestResourcesDestroyedListStringList != null)
@@ -460,6 +636,10 @@ namespace 饥荒百科全书CSharp.View.Details
                     SwitchRightButton.IsEnabled = false;
                 }
                 NatureImage.Source = new BitmapImage(new Uri(_creatureNestList[_creatureNestIndex], UriKind.Relative));
+                if (_creatureNestHealthIntList != null && _creatureNestHealthIntList.Count > 1)
+                {
+                    CreatureHealth.Value = _creatureNestHealthIntList[_creatureNestIndex];
+                }
                 if (_creatureNestCreatureListStringList != null)
                     ShowCreature(_creatureNestIndex);
                 if (_creatureNestResourcesDestroyedListStringList != null)

@@ -2913,6 +2913,13 @@
         "EnName": "Iridescent Gem",
         "Introduction": "由唤月者法杖分解获得，没有什么用处，只能喂给石虾。",
         "Console": "opalpreciousgem"
+      },
+      {
+        "Picture": "G_spider_eggs",
+        "Name": "蜘蛛卵",
+        "EnName": "Spider Eggs",
+        "Introduction": "破坏三级蜘蛛巢获取，可以种植一个一级蜘蛛巢。韦伯可以制作。",
+        "Console": "spidereggsack"
       }
     ]
   },

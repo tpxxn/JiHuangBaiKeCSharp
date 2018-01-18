@@ -1952,7 +1952,9 @@
         "Picture": "N_beehive",
         "Name": "蜂巢",
         "EnName": "Beehive",
-        "Health": 200,
+        "Health": [
+          200
+        ],
         "Creature": [
           [
             "A_bee",
@@ -1980,7 +1982,9 @@
         "Picture": "N_killer_bee_hive",
         "Name": "杀人蜂巢",
         "EnName": "Killer Bee Hive",
-        "Health": 250,
+        "Health": [
+          250
+        ],
         "Creature": [
           [
             "A_killer_bee"
@@ -2046,23 +2050,25 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&"
+            "G_rocks|×1(53.3%)&Shovel",
+            "G_flint|×1(20%)&Shovel",
+            "G_nitre|×1(20%)&Shovel",
+            "G_gold_nugget|×1(6.6%)&Shovel",
+            "|偷取的任何东西&Shovel"
           ]
         ],
         "Ability": [
           [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "可移动"
           ]
         ],
         "IsRegenerate": true,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_grasslands"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "洞穴随机生成在草原生物群落，黄昏和夜晚产生鼹鼠，并开始在附近漫游，寻找矿物和地面上的其他东西放在洞穴里。如果挖了一个洞穴，那么鼹鼠会在一段时间后重新建立它。如果杀死了一只鼹鼠，那么在2.5天后，洞穴会产生一只新的鼹鼠。",
+        "Console": [ "molehill" ]
       },
       {
         "Picture": "N_pig_torch",
@@ -2075,23 +2081,24 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&"
+            "G_ash|×4(点燃)&Hammer",
+            "G_manure|×1(燃尽)&Hammer",
+            "G_log|×3(燃尽)&Hammer"
           ]
         ],
         "Ability": [
           [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "发光"
           ]
         ],
-        "IsRegenerate": true,
+        "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
           "N_grasslands",
           "N_savanna"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "猪头火炬会发光，受到守卫猪的保护，如果守卫猪被杀，那么猪头火炬会在3天后产生一只新的守卫猪。守卫猪偶尔会给猪头火炬加油，使其更亮。如果没有守卫猪给猪头火炬加油，那么猪头火炬最终将燃尽，不发光。",
+        "Console": [ "pigtorch" ]
       },
       {
         "Picture": "N_pig_house",
@@ -2104,23 +2111,27 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&"
+            "S_boards|×1&Torch",
+            "S_cut_stone|×1&Torch",
+            "G_pig_skin|×1&Torch",
+            "S_boards|×2&Hammer",
+            "S_cut_stone|×2&Hammer",
+            "G_pig_skin|×2&Hammer"
           ]
         ],
         "Ability": [
           [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "发光(靠近熄灭)"
           ]
         ],
         "IsRegenerate": true,
         "IsDestroable": true,
         "Biomes": [
           "N_grasslands",
-          "N_savanna"
+          "N_forest"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "自然的猪舍一般在猪村附近，偶尔也会在森林里找到几个零散的猪舍。如果猪人被杀死，猪舍会在4天后产生一只新的猪人。在黄昏和夜晚猪舍会点亮，但是玩家靠近会熄灭灯光，直到玩家离开。在RoG版里，猪舍可以被点燃，里面的猪人会立即跑出来(即使还没有到刷新时间也会立即刷新出一只)。",
+        "Console": [ "pighouse" ]
       },
       {
         "Picture": "N_spider_den_1",
@@ -2129,10 +2140,14 @@
         ],
         "Name": "蜘蛛巢",
         "EnName": "Spider Den",
+        "Health": [
+          250,
+          500,
+          1000
+        ],
         "Creature": [
           [
-            "A_spider",
-            "A_spider_warrior"
+            "A_spider"
           ],
           [
             "A_spider",
@@ -2146,13 +2161,25 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&"
+            "G_ash|×1&Torch",
+            "G_silk|×2&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×4&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×6&",
+            "G_spider_eggs|×1&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
           ]
         ],
         "Ability": [
           [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "可成长"
           ]
         ],
         "IsRegenerate": true,
@@ -2161,9 +2188,11 @@
           "N_grasslands",
           "N_savanna"
         ],
-        "Introduction": "",
-        "Console": [ 
-          "rabbithole" 
+        "Introduction": "蜘蛛巢会产生蜘蛛、蜘蛛战士，它们会在黄昏出来，白天回巢。蜘蛛巢附近的粘蛛网会减速除了各类蜘蛛和韦伯以外的其它生物。站在粘蛛网上，蜘蛛巢内1/3的蜘蛛会出来巡逻，如果发现敌情剩下2/3的蜘蛛和蜘蛛战士会主动出击，否则回到巢内。如果站在粘蛛网上攻击蜘蛛，那么蜘蛛巢内的蜘蛛和蜘蛛战士会全部出击，这并不是一个明智的选择。蜘蛛巢的生长周期为：1升2：5-10天；2升3：5-10天；3升蜘蛛女王：12.5-25天，当蜘蛛女王许久没有遇到敌情，就会徘徊一阵然后变回1级蜘蛛巢。1级蜘蛛巢总共产生3只蜘蛛，2级蜘蛛巢总共产生6只蜘蛛(其中1只蜘蛛战士)，3级蜘蛛巢总共产生9只蜘蛛(其中3只蜘蛛战士)。",
+        "Console": [
+          "spiderden",
+          "spiderden_2",
+          "spiderden_3"
         ]
       },
       {

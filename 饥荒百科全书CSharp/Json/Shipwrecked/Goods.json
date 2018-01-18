@@ -2186,6 +2186,13 @@
         "EnName": "Message in a Bottle",
         "Introduction": "瓶中信可以在沙滩上或者海洋中找到，使用后会变成空瓶子，阅读信会开放地图上某个区域并标记上红色的X记号。前往该地点会发现X标记点，用铲子可以挖出箱子和两个骨片，有时候也会挖出蛇。箱子里通常有贵重物品。",
         "Console": "messagebottle"
+      },
+      {
+        "Picture": "G_spider_eggs",
+        "Name": "蜘蛛卵",
+        "EnName": "Spider Eggs",
+        "Introduction": "破坏三级蜘蛛巢获取，可以种植一个一级蜘蛛巢。韦伯可以制作。",
+        "Console": "spidereggsack"
       }
     ]
   }

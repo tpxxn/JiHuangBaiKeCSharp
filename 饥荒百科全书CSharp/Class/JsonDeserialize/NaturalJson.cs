@@ -112,7 +112,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public List<string> Pictures { get; set; }
         public string Name { get; set; }
         public string EnName { get; set; }
-        public int Health { get; set; }
+        public List<int?> Health { get; set; }
         public List<List<string>> Creature { get; set; }
         public List<List<string>> ResourcesDestroyed { get; set; }
         public List<List<string>> Ability { get; set; }

@@ -27,6 +27,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="20" />
             </Grid.RowDefinitions>
             <Grid x:Name="ResultButtonGrid" Height="85" Width="173" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -45,17 +46,17 @@
                 <CheckBox Name="RegenerateCheckBox" Content="可再生" IsEnabled="False" Style="{StaticResource CheckBoxStyle1}"/>
                 <CheckBox Name="DestroableCheckBox" Content="可摧毁" IsEnabled="False" Style="{StaticResource CheckBoxStyle1}" Margin="50,0,0,0" />
             </StackPanel>
-            <uc:BarChart Grid.Row="4" x:Name="CreatureHealth" Label="生命" MaxValue="500" LabelWidth="60" Margin="10,0,0,0"/>
+            <uc:BarChart Grid.Row="4" x:Name="CreatureHealth" Label="生命" MaxValue="1000" LabelWidth="60" Margin="10,0,0,0"/>
             <TextBlock Grid.Row="5" x:Name="NaturalCreatureTextBlock" Text="生成生物：" Margin="10" Background="#55B2ECED"/>
             <StackPanel Grid.Row="6" x:Name="NaturalCreatureStackPanel" Orientation="Horizontal"/>
             <TextBlock Grid.Row="7" x:Name="NaturalResourcesDestroyedTextBlock" Text="摧毁后资源：" Margin="10" Background="#55B2ECED"/>
             <StackPanel Grid.Row="8" x:Name="NaturalResourcesDestroyedStackPanel"/>
-            <TextBlock Grid.Row="9" x:Name="NaturalAbilityTextBlock" Text="特殊能力：" Margin="10" Background="#55B2ECED"/>
-            <StackPanel Grid.Row="10" x:Name="NaturalAbilityStackPanel"/>
-            <TextBlock Grid.Row="11" x:Name="NaturalBiomesTextBlock" Text="主要生物群落：" Margin="10" Background="#55B2ECED"/>
-            <WrapPanel Grid.Row="12" x:Name="NaturalBiomesWrapPanel" Orientation="Horizontal" HorizontalAlignment="Center"/>
-            <TextBlock Grid.Row="13" x:Name="NatureIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10,20,10,10" />
-            <Grid x:Name="CopyGrid" Grid.Row="14" HorizontalAlignment="Center">
+            <TextBlock Grid.Row="10" x:Name="NaturalAbilityTextBlock" Text="特殊能力：" Margin="10" Background="#55B2ECED"/>
+            <StackPanel Grid.Row="11" x:Name="NaturalAbilityStackPanel"/>
+            <TextBlock Grid.Row="12" x:Name="NaturalBiomesTextBlock" Text="主要生物群落：" Margin="10" Background="#55B2ECED"/>
+            <WrapPanel Grid.Row="13" x:Name="NaturalBiomesWrapPanel" Orientation="Horizontal" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="14" x:Name="NatureIntroduction" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10,20,10,10" />
+            <Grid x:Name="CopyGrid" Grid.Row="15" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -67,7 +68,7 @@
                 <TextBlock x:Name="ConsolePos" Grid.Column="2" Text=")" Margin="0,5,15,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
                 <Button Grid.Column="3" HorizontalAlignment="Left" Content="复制" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
             </Grid>
-            <Grid Grid.Row="15"/>
+            <Grid Grid.Row="16"/>
         </Grid>
     </ScrollViewer>
 </Page>
