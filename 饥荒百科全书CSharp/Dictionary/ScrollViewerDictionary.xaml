@@ -61,7 +61,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollBar}">
-                    <Border x:Name="BackgroundBorder" Background="#01FFFFFF">
+                    <Border Cursor="{DynamicResource CursorPointer}" x:Name="BackgroundBorder" Background="#01FFFFFF">
                         <Grid x:Name="Bg" SnapsToDevicePixels="true">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="0"/>

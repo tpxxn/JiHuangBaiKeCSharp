@@ -107,12 +107,12 @@ namespace 饥荒百科全书CSharp.MyUserControl
             if ((double)e.NewValue < 0)
             {
                 barChart.ValueTextBlock.Foreground = new SolidColorBrush(Colors.Red);
-                barChart.ValueRectangle.Width = -(double)e.NewValue / barChart.MaxValue * 300;
+                barChart.ValueRectangle.Width = -(double)e.NewValue / barChart.MaxValue * 200;
             }
             else
             {
                 barChart.ValueTextBlock.Foreground = new SolidColorBrush(Colors.Black);
-                barChart.ValueRectangle.Width = (double)e.NewValue / barChart.MaxValue * 300;
+                barChart.ValueRectangle.Width = (double)e.NewValue / barChart.MaxValue * 200;
             }
             if ((double)e.NewValue == 10001)
             {

@@ -222,10 +222,17 @@ namespace 饥荒百科全书CSharp.View.Details
             // 介绍
             NatureIntroduction.Text = c.Introduction;
             // 控制台
-            ConsolePre.Text = $"c_spawn(\"{c.Console[0]}\",";
-            foreach (var console in c.Console)
+            if (c.Console.Count != 0)
             {
-                _creatureNestConsoleStringList.Add(console);
+                ConsolePre.Text = $"c_spawn(\"{c.Console[0]}\",";
+                foreach (var console in c.Console)
+                {
+                    _creatureNestConsoleStringList.Add(console);
+                }
+            }
+            else
+            {
+                CopyGrid.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -256,7 +263,8 @@ namespace 饥荒百科全书CSharp.View.Details
                     var picButton = new PicButton
                     {
                         HorizontalAlignment = HorizontalAlignment.Left,
-                        Source = StringProcess.GetGameResourcePath(creature)
+                        Source = StringProcess.GetGameResourcePath(creature),
+                        PictureSize = 75
                     };
                     stackPanel.Children.Add(picButton);
                 }

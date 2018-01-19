@@ -36,7 +36,7 @@
                 <uc:BarChart x:Name="CreatureAttackScope" Label="攻击范围" MaxValue="25" LabelWidth="60"/>
                 <uc:BarChart x:Name="CreatureMoveSpeed" Label="移动速度" MaxValue="20" LabelWidth="60"/>
                 <uc:BarChart x:Name="CreatureRunSpeed" Label="奔跑速度" MaxValue="10" LabelWidth="60"/>
-                <uc:BarChart x:Name="CreatureDangerous" Label="危险程度" MaxValue="60" LabelWidth="60"/>
+                <uc:BarChart x:Name="CreatureDangerous" Label="危险程度" MaxValue="10" LabelWidth="60"/>
                 <uc:BarChart x:Name="CreatureSanityEffect" Label="精神影响" MaxValue="400" LabelWidth="60"/>
             </StackPanel>
             <StackPanel x:Name="ActiveAttackAndTeamWorkStackPanel" Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">

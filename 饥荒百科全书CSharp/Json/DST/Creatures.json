@@ -2466,7 +2466,7 @@
         "AttackInterval": 3,
         "AttackScope": 2.4,
         "MoveSpeed": 4.2,
-        "Dangerous": 8,
+        "Dangerous": 10,
         "SanityEffect": -400,
         "IsActiveAttack": true,
         "IsTeamWork": true,
@@ -2530,6 +2530,7 @@
         "AttackInterval": 3.5,
         "AttackScope": 7,
         "MoveSpeed": 0.6,
+        "Dangerous": 9,
         "IsActiveAttack": true,
         "IsTeamWork": false,
         "Goods": [
@@ -2572,6 +2573,7 @@
         "AttackInterval": 3.5,
         "AttackScope": 7,
         "MoveSpeed": 0.6,
+        "Dangerous": 10,
         "IsActiveAttack": true,
         "IsTeamWork": false,
         "Goods": [
