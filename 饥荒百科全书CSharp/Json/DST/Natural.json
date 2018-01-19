@@ -1932,7 +1932,7 @@
         "Ability": [
           [
             "春天变成倒塌的兔子洞"
-          ], 
+          ],
           [
             "夏天变回兔子洞"
           ]
@@ -2363,7 +2363,8 @@
             "A_mactusk",
             "A_wee_mactusk",
             "A_blue_hound"
-          ],[]
+          ],
+          []
         ],
         "Ability": [
           [
@@ -2405,6 +2406,32 @@
         "Introduction": "岩浆是龙蝇的栖息地，它具有极高的温度，靠近它的物品会燃烧，玩家会过热(即使是冬天，足够的时间总会导致过热)，夜晚会发光，但是光的半径小于加热玩家的半径，所以夜晚靠岩浆照明恐怕不是一个明智的选择。岩浆可以烹饪，前提是你有防火的龙鳞盔甲或者无(非)畏(要)死(作)亡(死)。",
         "Console": [
           "lava_pond"
+        ]
+      },
+      {
+        "Picture": "N_gigantic_beehive",
+        "Name": "巨型蜂巢",
+        "EnName": "Gigantic Beehive",
+        "Creature": [
+          [
+            "A_bee_queen"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "F_honeycomb|×1(一定几率)&Hammer",
+            "F_honey|×1&Hammer",
+            "F_honey|×1(一定几率)&Hammer"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "巨型蜂巢里住着蜜蜂女王，用锤子连敲6下就会使得蜜蜂女王出现。如果巨型蜂巢口有蜂蜜流出，用锤子敲两下会得到1~2个蜂蜜，还有可能得到1个蜂巢，2分钟后蜂蜜再次流出，这种获取蜂蜜的方法一天只能用5次(即使玩家遵从这个获取蜂蜜和蜂巢的规则，最终还是会导致蜜蜂女王的诞生)。巨型蜂巢的重生时间大约为一个季度。",
+        "Console": [
+          "beequeenhivegrown"
         ]
       },
       {

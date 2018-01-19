@@ -167,10 +167,15 @@ namespace 饥荒百科全书CSharp.View.Details
                 }
                 ShowResourcesDestroyed(0);
             }
-            // 中空树桩额外掉落
+            // ***中空树桩额外掉落***
             if (c.EnName == "Hollow Stump")
             {
                 ShowHollowStumpDrops();
+            }
+            // ***蜜蜂女王摧毁后资源->资源***
+            if (c.EnName == "Gigantic Beehive")
+            {
+                NaturalResourcesDestroyedTextBlock.Text = "资源：";
             }
             //特殊能力
             if (c.Ability.Count == 0)
