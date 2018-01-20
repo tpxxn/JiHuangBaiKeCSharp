@@ -122,8 +122,8 @@
     <Compile Include="Class\JsonDeserialize\GoodsJson.cs" />
     <Compile Include="Class\DedicatedServers\JsonDeserialize\ServerConfigJson.cs" />
     <Compile Include="Class\JsonDeserialize\ReleaseJson.cs" />
-    <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\JsonDeserialize\NaturalJson.cs" />
+    <Compile Include="Class\HotKey.cs" />
     <Compile Include="Class\SendKey.cs" />
     <Compile Include="Class\Settings.cs" />
     <Compile Include="CopySplashScreen.xaml.cs">

@@ -41,6 +41,7 @@ namespace 饥荒百科全书CSharp.View.Details
         {
             InitializeComponent();
             Global.GoodLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
+            Global.ConsoleSendKey = Console_Click;
         }
 
         private void LoadData(GoodSapling c)
@@ -86,6 +87,11 @@ namespace 饥荒百科全书CSharp.View.Details
                 ConsoleNum.Text = "1";
             }
             Global.SetClipboard(ConsolePre.Text + ConsoleNum.Text + ")");
+        }
+
+        private void Console_Click(object sender, RoutedEventArgs e)
+        {
+            SendKey.SendMessage(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
         }
     }
 }

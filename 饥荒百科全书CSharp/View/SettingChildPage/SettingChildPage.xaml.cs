@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,26 +50,30 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
         /// </summary>
         private void LoadSetting()
         {
-            // 读取BOSSKEY设置
+            // 读取BossKey设置
             var hotkeyBossKeyControlKeys = RegeditRw.RegRead("HotkeyBossKeyControlKeys");
             var hotkeyBossKeyMainKey = RegeditRw.RegRead("HotkeyBossKeyMainKey");
             if (hotkeyBossKeyControlKeys == 0 && hotkeyBossKeyMainKey == 0)
             {
-                hotkeyBossKeyControlKeys = 3; //Ctrl+Alt
-                hotkeyBossKeyMainKey = 66; //B
+                hotkeyBossKeyControlKeys = 3; //Ctrl + Alt
+                hotkeyBossKeyMainKey = 0x42; //B
             }
-            var controlKeysString = ControlKeyToString(hotkeyBossKeyControlKeys);
-            var mainKey = DoubleToKey(hotkeyBossKeyMainKey);
-            var mainKeyString = "";
-            if ((mainKey >= Key.A && mainKey <= Key.Z) || (mainKey >= Key.F1 && mainKey <= Key.F12) || (mainKey >= Key.NumPad0 && mainKey <= Key.NumPad9) || (mainKey == Key.Space))
+            var BossKeyControlKeysString = ControlKeyToString(hotkeyBossKeyControlKeys);
+            var BossKeyMainKey = DoubleToKey(hotkeyBossKeyMainKey);
+            var BossKeyMainKeyString = KeyToString(BossKeyMainKey);
+            SeBossKeyKey.Content = BossKeyControlKeysString + BossKeyMainKeyString;
+            // 读取ConsoleKey设置
+            var hotkeyConsoleKeyControlKeys = RegeditRw.RegRead("HotkeyConsoleKeyControlKeys");
+            var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
+            if (hotkeyConsoleKeyControlKeys == 0 && hotkeyConsoleKeyMainKey == 0)
             {
-                mainKeyString = mainKey.ToString();
+                hotkeyConsoleKeyControlKeys = 0;
+                hotkeyConsoleKeyMainKey = 0x71; // F2
             }
-            if (mainKey >= Key.D0 && mainKey <= Key.D9)
-            {
-                mainKeyString = mainKey.ToString().Replace("D", "");
-            }
-            SeBossKeyKey.Content = controlKeysString + mainKeyString;
+            var ConsoleKeyControlKeysString = ControlKeyToString(hotkeyConsoleKeyControlKeys);
+            var ConsoleKeyMainKey = DoubleToKey(hotkeyConsoleKeyMainKey);
+            var ConsoleKeyMainKeyString = KeyToString(ConsoleKeyMainKey);
+            SeConsoleKeyKey.Content = ConsoleKeyControlKeysString + ConsoleKeyMainKeyString;
             // 读取点击关闭按钮设置
             if (string.IsNullOrEmpty(RegeditRw.RegReadString("HideToNotifyIconPrompt")))
             {
@@ -123,6 +128,21 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             return 0;
         }
 
+        private static string KeyToString(Key key)
+        {
+            //字母 || F1-F12 || 小键盘区的数字 || 空格?
+            if ((key >= Key.A && key <= Key.Z) || (key >= Key.F1 && key <= Key.F12) || (key >= Key.NumPad0 && key <= Key.NumPad9) || (key == Key.Space))
+            {
+                return key.ToString();
+            }
+            //字母区上面的数字
+            if (key >= Key.D0 && key <= Key.D9)
+            {
+                return key.ToString().Replace("D", "");
+            }
+            return "";
+        }
+
         private static Key DoubleToKey(double keyValue)
         {
             if (keyValue >= 65 && keyValue <= 90)
@@ -136,20 +156,13 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             return Key.B;
         }
 
-        //老板键
+        /// <summary>
+        /// 老板键
+        /// </summary>
         private void Se_BossKey_Key_KeyDown(object sender, KeyEventArgs e)
         {
-            var mainKey = ""; //主键值(文本)
-            //字母 || F1-F12 || 小键盘区的数字 || 空格?
-            if ((e.Key >= Key.A && e.Key <= Key.Z) || (e.Key >= Key.F1 && e.Key <= Key.F12) || (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9) || (e.Key == Key.Space))
-            {
-                mainKey = e.Key.ToString();
-            }
-            //字母区上面的数字
-            if (e.Key >= Key.D0 && e.Key <= Key.D9)
-            {
-                mainKey = e.Key.ToString().Replace("D", "");
-            }
+            //主键值(文本)
+            var mainKey = KeyToString(e.Key);
             //Alt Ctrl Shift键判断
             var pressAlt = (Control.ModifierKeys & Keys.Alt) == Keys.Alt ? (byte)1 : (byte)0;
             var pressCtrl = (Control.ModifierKeys & Keys.Control) == Keys.Control ? (byte)2 : (byte)0;
@@ -159,13 +172,15 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             e.Handled = true;
             // 主键值
             var mainKeyValue = KeyToInt(e.Key);
-            //输出值
+            // 输出值
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             if (!string.IsNullOrEmpty(mainKey))
             {
                 SeBossKeyKey.Content = controlKeysString + mainKey;
-                KeyboardHandler.UnregisterHotKey(mainWindow.intPtr, mainWindow.KeyboardHandler.GetType().GetHashCode());
-                mainWindow.KeyboardHandler.SetupHotKey(mainWindow.intPtr, (Global.KeyModifiers)controlKeys, mainKeyValue);
+                var hotkeyBossKeyControlKeys = RegeditRw.RegRead("HotkeyBossKeyControlKeys");
+                var hotkeyBossKeyMainKey = RegeditRw.RegRead("HotkeyBossKeyMainKey");
+                mainWindow.BossKeyHotKey.UnSetupHotKey(mainWindow.intPtr, (int)hotkeyBossKeyControlKeys + (int)hotkeyBossKeyMainKey * 10);
+                mainWindow.BossKeyHotKey.SetupHotKey(mainWindow, (Global.KeyModifiers)controlKeys, (Keys)mainKeyValue);
                 RegeditRw.RegWrite("HotkeyBossKeyControlKeys", controlKeys);
                 RegeditRw.RegWrite("HotkeyBossKeyMainKey", mainKeyValue);
                 var copySplashWindow = new CopySplashScreen("已保存");
@@ -174,6 +189,42 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             }
         }
 
+        /// <summary>
+        /// 控制台快捷键
+        /// </summary>
+        private void Se_ConsoleKey_Key_KeyDown(object sender, KeyEventArgs e)
+        {
+            //主键值(文本)
+            var mainKey = KeyToString(e.Key);
+            //Alt Ctrl Shift键判断
+            var pressAlt = (Control.ModifierKeys & Keys.Alt) == Keys.Alt ? (byte)1 : (byte)0;
+            var pressCtrl = (Control.ModifierKeys & Keys.Control) == Keys.Control ? (byte)2 : (byte)0;
+            var pressShift = (Control.ModifierKeys & Keys.Shift) == Keys.Shift ? (byte)4 : (byte)0;
+            var controlKeys = pressAlt + pressCtrl + pressShift;
+            var controlKeysString = ControlKeyToString(controlKeys);
+            e.Handled = true;
+            // 主键值
+            var mainKeyValue = KeyToInt(e.Key);
+            // 输出值
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            if (!string.IsNullOrEmpty(mainKey))
+            {
+                SeConsoleKeyKey.Content = controlKeysString + mainKey;
+                var hotkeyConsoleKeyControlKeys = RegeditRw.RegRead("HotkeyConsoleKeyControlKeys");
+                var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
+                mainWindow.BossKeyHotKey.UnSetupHotKey(mainWindow.intPtr, (int)hotkeyConsoleKeyControlKeys + (int)hotkeyConsoleKeyMainKey * 10);
+                mainWindow.ConsoleKeyHotKey.SetupHotKey(mainWindow, (Global.KeyModifiers)controlKeys, (Keys)mainKeyValue);
+                RegeditRw.RegWrite("HotkeyConsoleKeyControlKeys", controlKeys);
+                RegeditRw.RegWrite("HotkeyConsoleKeyMainKey", mainKeyValue);
+                var copySplashWindow = new CopySplashScreen("已保存");
+                copySplashWindow.InitializeComponent();
+                copySplashWindow.Show();
+            }
+        }
+
+        /// <summary>
+        /// 是否隐藏到托盘区
+        /// </summary>
         private void NotifyIconRadioButton_OnClick(object sender, RoutedEventArgs e)
         {
             if (HideToNotifyIconRadioButton.IsChecked == true)

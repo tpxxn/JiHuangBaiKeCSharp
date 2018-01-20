@@ -42,8 +42,9 @@ namespace 饥荒百科全书CSharp.View.Details
         {
             InitializeComponent();
             Global.NaturalLeftFrame.NavigationService.LoadCompleted += LoadCompleted;
+            Global.ConsoleSendKey = Console_Click;
         }
-        
+
         private readonly List<int?> _creatureNestHealthIntList = new List<int?>();
         private List<List<string>> _creatureNestCreatureListStringList;
         private List<List<string>> _creatureNestResourcesDestroyedListStringList;
@@ -684,7 +685,7 @@ namespace 饥荒百科全书CSharp.View.Details
 
         private void Console_Click(object sender, RoutedEventArgs e)
         {
-            SendKey.SendMessage(Process.GetProcessesByName("dontstarve_rail"), ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
+            SendKey.SendMessage(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
         }
     }
 }

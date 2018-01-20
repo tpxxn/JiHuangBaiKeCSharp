@@ -28,7 +28,8 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         public static UpdatePan UpdatePan = new UpdatePan();
         // 注册快捷键
-        public KeyboardHandler KeyboardHandler;
+        public HotKey BossKeyHotKey;
+        public HotKey ConsoleKeyHotKey;
         public IntPtr intPtr;
         #region "窗口可视化属性"
         private readonly Timer _visiTimer = new Timer();
@@ -202,16 +203,28 @@ namespace 饥荒百科全书CSharp
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             #region 加载快捷键
+            // mainWindow句柄
             intPtr = new WindowInteropHelper(this).Handle;
-            KeyboardHandler = new KeyboardHandler(this);
+            // BossKey
             var hotkeyBossKeyControlKeys = RegeditRw.RegRead("HotkeyBossKeyControlKeys");
             var hotkeyBossKeyMainKey = RegeditRw.RegRead("HotkeyBossKeyMainKey");
             if (hotkeyBossKeyControlKeys == 0 && hotkeyBossKeyMainKey == 0)
             {
-                hotkeyBossKeyControlKeys = 3; //Ctrl+Alt
-                hotkeyBossKeyMainKey = 66; //B
+                hotkeyBossKeyControlKeys = 3; // Ctrl + Alt
+                hotkeyBossKeyMainKey = 0x42; // B
             }
-            KeyboardHandler.SetupHotKey(intPtr, (Global.KeyModifiers)hotkeyBossKeyControlKeys, (int)hotkeyBossKeyMainKey);
+            BossKeyHotKey = new HotKey(this, (Global.KeyModifiers)hotkeyBossKeyControlKeys, (Keys)hotkeyBossKeyMainKey);
+            BossKeyHotKey.OnHotKey += hotKeyBosskey_OnHotKey;
+            // ConsoleKey
+            var hotkeyConsoleKeyControlKeys = RegeditRw.RegRead("HotkeyConsoleKeyControlKeys");
+            var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
+            if (hotkeyConsoleKeyControlKeys == 0 && hotkeyConsoleKeyMainKey == 0)
+            {
+                hotkeyConsoleKeyControlKeys = 0;
+                hotkeyConsoleKeyMainKey = 0x71; // F2
+            }
+            ConsoleKeyHotKey = new HotKey(this, (Global.KeyModifiers)hotkeyConsoleKeyControlKeys, (Keys)hotkeyConsoleKeyMainKey);
+            ConsoleKeyHotKey.OnHotKey += hotKeyConsole_OnHotKey;
             #endregion
             #region 加载字体
             foreach (var str in ReadFont())
@@ -231,6 +244,31 @@ namespace 饥荒百科全书CSharp
             LoadFont = true;
             #endregion
         }
+
+        #region 热键方法
+        private void hotKeyBosskey_OnHotKey()
+        {
+            if (mainWindow.NotifyIcon.Visible)
+            {
+                mainWindow.MwVisivility = false;
+                mainWindow.NotifyIcon.Visible = false;
+            }
+            else
+            {
+                mainWindow.MwVisivility = true;
+                mainWindow.NotifyIcon.Visible = true;
+            }
+        }
+
+        private static void hotKeyConsole_OnHotKey()
+        {
+            if (Global.ConsoleSendKey != null)
+            {
+                Global.ConsoleSendKey(null, null);
+            }
+        }
+        #endregion
+
         #endregion
 
     }

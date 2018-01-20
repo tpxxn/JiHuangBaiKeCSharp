@@ -31,18 +31,17 @@
             <uc:PicButton Grid.Row="5" x:Name="GoodDeadWrapPicButton" PictureSize="90" HorizontalAlignment="Center"/>
             <TextBlock Grid.Row="6" x:Name="GoodFollowTextBlock" Text="跟随宠物：" Margin="10" Background="#55B2ECED"/>
             <WrapPanel Grid.Row="7" x:Name="GoodFollowWrapPanel" Orientation="Horizontal" HorizontalAlignment="Center"/>
-            <Grid Grid.Row="8" HorizontalAlignment="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConsolePre" Margin="0,5,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
-                <TextBox x:Name="ConsoleNum" Grid.Column="1" Text="1" MaxLength="4" Cursor="{StaticResource CursorText}" TextChanged="ConsoleNum_TextChanged" TextAlignment="Center" Margin="0,5,0,0" FontSize="14"/>
-                <TextBlock Grid.Column="2" x:Name="ConsolePos" Text=")" Margin="0,5,15,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
-                <Button Grid.Column="3" HorizontalAlignment="Left" Content="复制" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
-            </Grid>
+            <StackPanel Grid.Row="8" x:Name="CopyGrid">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock x:Name="ConsolePre" Margin="0,5,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
+                    <TextBox x:Name="ConsoleNum" Text="1" MaxLength="4" Cursor="{StaticResource CursorText}" TextChanged="ConsoleNum_TextChanged" TextAlignment="Center" Margin="0,5,0,0" FontSize="14"/>
+                    <TextBlock x:Name="ConsolePos" Text=")" Margin="0,5,15,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
+                    <Button Content="复制" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
+                    <Button Content="在游戏控制台执行代码" Margin="5,0,0,0" Cursor="{StaticResource CursorLink}" Click="Console_Click" FontSize="14"/>
+                </StackPanel>
+            </StackPanel>
             <Grid Grid.Row="9"/>
         </Grid>
     </ScrollViewer>

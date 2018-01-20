@@ -13,6 +13,6 @@
             <DropShadowEffect ShadowDepth="0" Color="#FF323232" BlurRadius="10"/>
         </Grid.Effect>
         <Image x:Name="LoadingPicture" Source="Resources/Copied.png" Height="98" Width="230" Stretch="Fill"/>
-        <TextBlock x:Name="ContentTextBlock" Foreground="WhiteSmoke" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" Margin="100,0,0,0"/>
+        <TextBlock x:Name="ContentTextBlock" Foreground="WhiteSmoke" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" Margin="100,0,35,0" TextWrapping="Wrap" x:FieldModifier="public" TextAlignment="Center"/>
     </Grid>
 </Window>
