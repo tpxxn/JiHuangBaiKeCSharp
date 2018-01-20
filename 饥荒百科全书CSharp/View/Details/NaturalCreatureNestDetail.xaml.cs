@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -679,6 +680,11 @@ namespace 饥荒百科全书CSharp.View.Details
                 ConsoleNum.Text = "1";
             }
             Global.SetClipboard(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
+        }
+
+        private void Console_Click(object sender, RoutedEventArgs e)
+        {
+            SendKey.SendMessage(Process.GetProcessesByName("dontstarve_rail"), ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
         }
     }
 }

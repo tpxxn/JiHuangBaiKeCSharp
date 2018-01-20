@@ -83,6 +83,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -123,6 +124,7 @@
     <Compile Include="Class\JsonDeserialize\ReleaseJson.cs" />
     <Compile Include="Class\KeyboardHandler.cs" />
     <Compile Include="Class\JsonDeserialize\NaturalJson.cs" />
+    <Compile Include="Class\SendKey.cs" />
     <Compile Include="Class\Settings.cs" />
     <Compile Include="CopySplashScreen.xaml.cs">
       <DependentUpon>CopySplashScreen.xaml</DependentUpon>

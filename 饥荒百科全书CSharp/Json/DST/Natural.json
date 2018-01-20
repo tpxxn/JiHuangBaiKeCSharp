@@ -2445,23 +2445,21 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "S_boards|×1&Torch",
+            "F_roasted_carrot|×2&Torch",
+            "G_bunny_puff|×1&Torch",
+            "S_boards|×2&Hammer",
+            "F_carrot|×5&Hammer",
+            "G_bunny_puff|×2&Hammer"
           ]
         ],
         "IsRegenerate": true,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_blue_mushtree_forest"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "兔子窝产生一只兔人，兔人被杀会在1天后重生。兔人黄昏走出兔子窝，白天回去。",
+        "Console": [ "rabbithouse" ]
       },
       {
         "Picture": "N_spilagmite",
