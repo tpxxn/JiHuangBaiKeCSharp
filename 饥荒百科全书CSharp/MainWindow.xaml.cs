@@ -211,7 +211,7 @@ namespace 饥荒百科全书CSharp
             if (hotkeyBossKeyControlKeys == 0 && hotkeyBossKeyMainKey == 0)
             {
                 hotkeyBossKeyControlKeys = 3; // Ctrl + Alt
-                hotkeyBossKeyMainKey = 0x42; // B
+                hotkeyBossKeyMainKey = 0x57; // W
             }
             BossKeyHotKey = new HotKey(this, (Global.KeyModifiers)hotkeyBossKeyControlKeys, (Keys)hotkeyBossKeyMainKey);
             BossKeyHotKey.OnHotKey += hotKeyBosskey_OnHotKey;
@@ -220,7 +220,7 @@ namespace 饥荒百科全书CSharp
             var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
             if (hotkeyConsoleKeyControlKeys == 0 && hotkeyConsoleKeyMainKey == 0)
             {
-                hotkeyConsoleKeyControlKeys = 0;
+                hotkeyConsoleKeyControlKeys = 2; // Ctrl
                 hotkeyConsoleKeyMainKey = 0x71; // F2
             }
             ConsoleKeyHotKey = new HotKey(this, (Global.KeyModifiers)hotkeyConsoleKeyControlKeys, (Keys)hotkeyConsoleKeyMainKey);

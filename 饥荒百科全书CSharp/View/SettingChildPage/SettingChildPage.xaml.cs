@@ -56,7 +56,7 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             if (hotkeyBossKeyControlKeys == 0 && hotkeyBossKeyMainKey == 0)
             {
                 hotkeyBossKeyControlKeys = 3; //Ctrl + Alt
-                hotkeyBossKeyMainKey = 0x42; //B
+                hotkeyBossKeyMainKey = 0x57; //W
             }
             var BossKeyControlKeysString = ControlKeyToString(hotkeyBossKeyControlKeys);
             var BossKeyMainKey = DoubleToKey(hotkeyBossKeyMainKey);
@@ -67,7 +67,7 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
             if (hotkeyConsoleKeyControlKeys == 0 && hotkeyConsoleKeyMainKey == 0)
             {
-                hotkeyConsoleKeyControlKeys = 0;
+                hotkeyConsoleKeyControlKeys = 2; // Ctrl
                 hotkeyConsoleKeyMainKey = 0x71; // F2
             }
             var ConsoleKeyControlKeysString = ControlKeyToString(hotkeyConsoleKeyControlKeys);

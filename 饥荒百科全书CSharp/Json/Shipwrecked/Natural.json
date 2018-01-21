@@ -1036,39 +1036,6 @@
         ]
       },
       {
-        "Picture": "N_pig_house",
-        "Name": "猪舍",
-        "EnName": "Pig House",
-        "Creature": [
-          [
-            "A_pig_man"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "S_boards|×1&Torch",
-            "S_cut_stone|×1&Torch",
-            "G_pig_skin|×1&Torch",
-            "S_boards|×2&Hammer",
-            "S_cut_stone|×2&Hammer",
-            "G_pig_skin|×2&Hammer"
-          ]
-        ],
-        "Ability": [
-          [
-            "发光(靠近熄灭)"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_forest"
-        ],
-        "Introduction": "自然的猪舍一般在猪村附近，偶尔也会在森林里找到几个零散的猪舍。如果猪人被杀死，猪舍会在4天后产生一只新的猪人。在黄昏和夜晚猪舍会点亮，但是玩家靠近会熄灭灯光，直到玩家离开。在RoG版里，猪舍可以被点燃，里面的猪人会立即跑出来(即使还没有到刷新时间也会立即刷新出一只)。",
-        "Console": [ "pighouse" ]
-      },
-      {
         "Picture": "N_spider_den_1",
         "Pictures": [
           "N_spider_den_|3"
@@ -1130,103 +1097,6 @@
         ]
       },
       {
-        "Picture": "N_pond",
-        "Name": "青蛙池塘",
-        "EnName": "Pond",
-        "Creature": [
-          [
-            "A_frog",
-            "F_fish"
-          ]
-        ],
-        "Ability": [
-          [
-            "冬天结冰"
-          ]
-        ],
-        "IsRegenerate": false,
-        "IsDestroable": false,
-        "Biomes": [
-          "N_grasslands"
-        ],
-        "Introduction": "青蛙池塘的主要资源是鱼，使用钓鱼竿可以在一天中的任何时间钓鱼。青蛙池塘中共有10条鱼，鱼的重生时间为160秒。一旦到了冬天温度足够低，青蛙池塘会结冰，无法钓鱼。青蛙会在白天产生，黄昏跳回青蛙池塘。",
-        "Console": [
-          "pond"
-        ]
-      },
-      {
-        "Picture": "N_pond_mos",
-        "Name": "沼泽池塘",
-        "EnName": "Pond",
-        "Creature": [
-          [
-            "A_mosquito",
-            "F_fish"
-          ]
-        ],
-        "Ability": [
-          [
-            "冬天结冰"
-          ]
-        ],
-        "IsRegenerate": false,
-        "IsDestroable": false,
-        "Biomes": [
-          "N_marsh"
-        ],
-        "Introduction": "沼泽池塘的主要资源是鱼，使用钓鱼竿可以在一天中的任何时间钓鱼。沼泽池塘中共有10条鱼，鱼的重生时间为160秒。一旦到了冬天温度足够低，沼泽池塘会结冰，无法钓鱼。蚊子会在黄昏产生，白天消失。",
-        "Console": [
-          "pond_mos"
-        ]
-      },
-      {
-        "Picture": "N_rundown_house",
-        "Name": "鱼族废墟",
-        "EnName": "Rundown House",
-        "Creature": [
-          [
-            "A_merm"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "S_boards|×1&Torch",
-            "G_rocks|×1&Torch",
-            "F_cooked_fish|×1&Torch",
-            "S_boards|×1&Hammer",
-            "G_rocks|×1&Hammer",
-            "F_fish|×1&Hammer"
-          ]
-        ],
-        "IsRegenerate": false,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_marsh"
-        ],
-        "Introduction": "鱼族废墟是产生鱼人的自然建筑，不可以制造。鱼族废墟最多容纳4个鱼人，鱼人重生时间为4天。在白天，有一只鱼人通常会在外面，如果这个鱼人进入战斗状态或者鱼族废墟被锤，那么所有的鱼人都会出来战斗。黄昏的时候鱼人会离开鱼族废墟在附近徘徊。",
-        "Console": [
-          "mermhouse"
-        ]
-      },
-      {
-        "Picture": "N_pond_frozen",
-        "Name": "冰冻池塘",
-        "EnName": "Frozen Pond",
-        "Ability": [
-          [
-            "春天融化"
-          ]
-        ],
-        "IsRegenerate": false,
-        "IsDestroable": false,
-        "Biomes": [
-          "N_grasslands",
-          "N_village"
-        ],
-        "Introduction": "青蛙池塘、沼泽池塘、洞穴池塘到了冬天就会结冰，结冰后池塘上面和地面无异，可以走动。",
-        "Console": []
-      },
-      {
         "Picture": "N_tallbird_nest",
         "Name": "高鸟巢穴",
         "EnName": "Tallbird Nest",
@@ -1262,52 +1132,65 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "G_bamboo_patch|×2&Torch",
+            "G_palm_leaf|×2&Torch",
+            "G_pig_skin|×1&Torch",
+            "G_bamboo_patch|×4&Hammer",
+            "G_palm_leaf|×3&Hammer",
+            "G_pig_skin|×2&Hammer"
           ]
         ],
         "IsRegenerate": true,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_beach"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "自然的荒野小屋一般在海滩附近。如果野猪被杀死，荒野小屋会在一段时间后产生一只新的野猪。在黄昏和夜晚荒野小屋会点亮，但是玩家靠近会熄灭灯光，直到玩家离开。荒野小屋可以被点燃，里面的野猪会立即跑出来，并且攻击玩家(即使还没有到刷新时间也会立即刷新出一只)。",
+        "Console": [ "wildborehouse" ]
       },
       {
-        "Picture": "N_mussel",
+        "Picture": "N_ballphin_palace",
+        "Name": "海豚宫殿",
+        "EnName": "Ballphin Palace",
+        "Creature": [
+          [
+            "A_bottenosed_ballphin"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_limestone|×2&",
+            "F_seaweed|×2&"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_coral_reef_bio"
+        ],
+        "Introduction": "自然的海豚宫殿在珊瑚礁区域。黄昏的时候宽吻海豚会回到海豚宫殿睡觉(没有海豚宫殿的宽吻海豚会在晚上睡觉)。在黄昏和夜晚荒野小屋会点亮，玩家靠近也不会会熄灭灯光，可以在旁边一直待到白天。",
+        "Console": [
+          "ballphinhouse"
+        ]
+      },
+      {
+        "Picture": "N_mussel_bed",
         "Name": "贻贝床",
-        "EnName": "Mussel",
+        "EnName": "Mussel Bed",
         "Creature": [
           [
             "F_mussel"
           ]
         ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
         "IsRegenerate": true,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_ocean_shallow"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "使用采贝器(至少放置一天)或者拖网可以采集贻贝，采集数量根据采贝器放置时间计算，可以得到1、3、6个贻贝，采集后贻贝床和采贝器均被消耗。",
+        "Console": [
+          "mussel_farm"
+        ]
       },
       {
         "Picture": "N_wobster_den",
@@ -1318,25 +1201,38 @@
             "F_wobster"
           ]
         ],
-        "ResourcesDestroyed": [
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_ocean_shallow"
+        ],
+        "Introduction": "龙虾的巢穴是自然产生龙虾的地方，龙虾会在黄昏出洞，白天回去。如果一只龙虾死亡，一天半后会有一只新的龙虾在龙虾的巢穴诞生。",
+        "Console": [ "lobsterhole" ]
+      },
+      {
+        "Picture": "N_shoal",
+        "Name": "浅滩",
+        "EnName": "Shoal",
+        "Creature": [
           [
-            "G_ash|×1&Torch"
+            "A_sea_hound",
+            "F_tropical_fish"
           ]
         ],
         "Ability": [
           [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "可以钓热带鱼"
           ]
         ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
+        "IsRegenerate": false,
+        "IsDestroable": false,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_ocean_shallow",
+          "N_coral_reef_bio",
+          "N_mangrove_bio"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "浅滩会生成最多10只热带鱼，如果少于10只，则每半天就会产生一只新的热带鱼。钓鱼有20%几率钓到海狗。浅滩有活跃期和非活跃期，在正常情况下交替时间为1天，除非有船只经过或者有飓风和冰雹，这将立即驱散浅滩。",
+        "Console": [ "fishinhole" ]
       },
       {
         "Picture": "N_prime_ape_hut",
@@ -1349,53 +1245,22 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
+            "G_ash|×1&Torch",
+            "G_twigs|×5&Hammer",
+            "F_banana|×3&Hammer",
+            "G_manure|×4&Hammer",
+            "T_gnome_1|×1(1%)&Hammer"
           ]
         ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
+        "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_jungle"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_shoal",
-        "Name": "浅滩",
-        "EnName": "Shoal",
-        "Creature": [
-          [
-            "A_sea_hound",
-            "F_tropical_fish"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "猿猴小屋是产生猴子的建筑，每个猿猴小屋最多产生4只猴子，猴子被杀死会在短时间内重生。如果攻击猿猴小屋，可能会有1到2只猿猴出来(使用粪便)攻击玩家。",
+        "Console": [
+          "primeapebarrel" 
+        ]
       },
       {
         "Picture": "N_merm_hut",
@@ -1408,25 +1273,25 @@
         ],
         "ResourcesDestroyed": [
           [
-            "S_boards|×1&Torch",
-            "G_rocks|×1&Torch",
+            "G_Boards|×1&Torch",
+            "G_Rocks|×1&Torch",
             "F_tropical_fish|×1&Torch",
-            "S_boards|×1&Hammer",
-            "G_rocks|×1&Hammer",
+            "G_Boards|×1&Hammer",
+            "G_Rocks|×1&Hammer",
             "F_tropical_fish|×1&Hammer"
           ]
         ],
         "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
-          "N_marsh"
+          "N_tidal_marsh"
         ],
         "Introduction": "鱼人房是产生鱼人的自然建筑，不可以制造。鱼人房最多容纳4个鱼人，鱼人重生时间为4天。在白天，有一只鱼人通常会在外面，如果这个鱼人进入战斗状态或者鱼人房被锤，那么所有的鱼人都会出来战斗。黄昏的时候鱼人会离开鱼人房在附近徘徊。",
         "Console": [ "mermhouse" ]
       },
       {
         "Picture": "N_fishermerm's_hut",
-        "Name": "Fishermerm的小屋",
+        "Name": "渔夫的小屋",
         "EnName": "Fishermerm's Hut",
         "Creature": [
           [
@@ -1435,23 +1300,21 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
+            "G_Boards|×1&Torch",
+            "G_Rocks|×1&Torch",
+            "F_tropical_fish|×1&Torch",
+            "G_Boards|×1&Hammer",
+            "G_Rocks|×1&Hammer",
+            "F_tropical_fish|×1&Hammer"
           ]
         ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
+        "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_tidal_marsh"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "渔夫的小屋是产生渔人的自然建筑，不可以制造。渔夫的小屋最多容纳2个渔人，渔人重生时间为4天。在白天，有一只渔人通常会在外面，如果这个渔人进入战斗状态或者渔夫的小屋被锤，那么所有的渔人都会出来战斗。黄昏的时候渔人会离开渔夫的小屋在附近徘徊。",
+        "Console": [ "mermhouse_fisher" ]
       },
       {
         "Picture": "N_tidal_pool",
@@ -1459,28 +1322,20 @@
         "EnName": "Tidal Pool",
         "Creature": [
           [
-            "A_rabbit",
-            "A_rabbit_winter",
-            "A_beardling"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
+            "F_tropical_fish"
           ]
         ],
         "Ability": [
           [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "可以钓热带鱼"
           ]
         ],
         "IsRegenerate": false,
         "IsDestroable": false,
         "Biomes": [
-          "N_marsh"
+          "N_tidal_marsh"
         ],
-        "Introduction": "",
+        "Introduction": "潮水池会产生最多10条热带鱼，如果少于10条，则160秒重生1条。渔人会从潮水池钓热带鱼，但会放在地上而不是吃掉。",
         "Console": [ "tidalpool" ]
       },
       {
@@ -1493,24 +1348,15 @@
             "A_sharkitten"
           ]
         ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
         "IsRegenerate": false,
         "IsDestroable": false,
         "Biomes": [
           "N_beach"
         ],
-        "Introduction": "",
-        "Console": [ "sharkittenspawner" ]
+        "Introduction": "虎鲨的窝在季风季会产生小虎鲨，小虎鲨会在受到攻击或黄昏的时候回到虎鲨的窝。如果玩家离虎鲨的窝太近，虎鲨会攻击玩家。",
+        "Console": [
+          "sharkittenspawner"
+        ]
       },
       {
         "Picture": "N_dragoon_den",
@@ -1523,23 +1369,25 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
+            "G_dragoon_heart|×1&Gunpowder",
+            "G_rocks|×3&Gunpowder",
+            "G_obsidian|×2&Gunpowder"
           ]
         ],
         "Ability": [
           [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "可以用爆炸物摧毁"
           ]
         ],
         "IsRegenerate": true,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_volcano_bio"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "龙人巢可以容纳3到4只龙骑士，龙骑士在白天每30秒离开一只，在黄昏返回龙人巢。龙骑士被杀死后2分钟重生。",
+        "Console": [ 
+          "dragoonden"
+        ]
       },
       {
         "Picture": "N_dragoon_egg",
@@ -1552,13 +1400,8 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
+            "G_Flint|×1&Pickaxe",
+            "G_Rocks|×1&Pickaxe"
           ]
         ],
         "IsRegenerate": true,
@@ -1567,8 +1410,8 @@
           "N_grasslands",
           "N_savanna"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "龙人蛋是在干燥季节从火山喷发、或者使用熔岩法杖时从天而降的。直接命中会造成300点伤害，落入海洋会产生巨大的波浪，落在地上会摧毁建筑并使周围着火。砸在地上时有50%概率形成熔岩池，25%的概率直接摧毁，剩下25%的概率会完好无损，进而在120秒后孵化成龙骑士，如果在这期间开采龙人蛋可以防止其孵化出龙骑士(火药等爆炸可以摧毁)。",
+        "Console": [ "dragoonegg" ]
       }
     ] 
   } 

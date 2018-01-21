@@ -399,6 +399,44 @@ namespace 饥荒百科全书CSharp.View.Details
                             stackPanel.Children.Add(picButton3);
                             stackPanel.Children.Add(picButton4);
                         }
+                        else if (toolText == "Pickaxe")
+                        {
+                            picButton2 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_pickaxe")
+                            };
+                            picButton3 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_goldenpickaxe"),
+                            };
+                            var picButton4 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_pickaxe_1"),
+                                Text = "）"
+                            };
+                            stackPanel.Children.Add(picButton2);
+                            stackPanel.Children.Add(picButton3);
+                            stackPanel.Children.Add(picButton4);
+                        }
+                        else if (toolText == "Gunpowder")
+                        {
+                            picButton2 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_gunpowder")
+                            };
+                            picButton3 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_coconade"),
+                            };
+                            var picButton4 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_obsidian_coconade"),
+                                Text = "）"
+                            };
+                            stackPanel.Children.Add(picButton2);
+                            stackPanel.Children.Add(picButton3);
+                            stackPanel.Children.Add(picButton4);
+                        }
                         else if (toolText == "Hammer")
                         {
                             picButton2 = new PicButton

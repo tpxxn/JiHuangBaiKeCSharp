@@ -2980,7 +2980,7 @@
     <Resource Include="Resources\GameResources\Natures\N_mushtree_forest.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\GameResources\Natures\N_mussel.png" />
+    <Resource Include="Resources\GameResources\Natures\N_mussel_bed.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GameResources\Natures\N_nightmare_fissure.png" />
