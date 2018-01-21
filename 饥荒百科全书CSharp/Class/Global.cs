@@ -42,7 +42,7 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// 应用程序文件夹
         /// </summary>
-//        public static readonly StorageFolder ApplicationFolder = ApplicationData.Current.LocalFolder;
+        //        public static readonly StorageFolder ApplicationFolder = ApplicationData.Current.LocalFolder;
 
         /// <summary>
         /// 错误堆栈字符串

@@ -391,6 +391,18 @@ namespace 饥荒百科全书CSharp
         }
 
         /// <summary>
+        /// 修改淡紫色透明光标
+        /// </summary>
+        private void SeCheckBoxLavenderCursor_Click(object sender, RoutedEventArgs e)
+        {
+            var copySplashWindow = new CopySplashScreen("重启生效");
+            copySplashWindow.InitializeComponent();
+            copySplashWindow.ContentTextBlock.FontSize = 20;
+            copySplashWindow.Show();
+            RegeditRw.RegWrite("MainWindowLavenderCursor", SeCheckBoxFontWeight.IsChecked.ToString());
+        }
+
+        /// <summary>
         /// 设置背景
         /// </summary>
         private void Se_button_Background_Click(object sender, RoutedEventArgs e)
@@ -643,8 +655,8 @@ namespace 饥荒百科全书CSharp
         //左侧菜单开关
         private void Sidebar_Menu_Click(object sender, RoutedEventArgs e)
         {
-//            var MainWindowWidth = mainWindow.ActualWidth;
-//            double MainGridWidth = MainGrid.ActualWidth;
+            //            var MainWindowWidth = mainWindow.ActualWidth;
+            //            double MainGridWidth = MainGrid.ActualWidth;
             if (LeftMenuState == 0)
             {
                 UiVersion.Visibility = Visibility.Visible;
@@ -842,8 +854,9 @@ namespace 饥荒百科全书CSharp
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-                _notifyIconMenu.IsOpen = false;
+            _notifyIconMenu.IsOpen = false;
         }
         #endregion
+
     }
 }

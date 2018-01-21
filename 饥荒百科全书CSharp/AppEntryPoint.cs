@@ -30,8 +30,8 @@ namespace 饥荒百科全书CSharp
 #if DEBUG
                 Debug.WriteLine("App constructor");
 #endif
-                //Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
-                //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+                Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 Startup += App_Startup;
             }
 
@@ -66,6 +66,26 @@ namespace 饥荒百科全书CSharp
                 }
                 #endregion
 
+                var mainWindowLavenderCursor = RegeditRw.RegReadString("MainWindowLavenderCursor");
+                if (mainWindowLavenderCursor == "True")
+                {
+                    Current.Resources.MergedDictionaries.Add(new ResourceDictionary
+                    {
+                        Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
+                            UriKind.Absolute)
+                    });
+                }
+                else
+                {
+                    Current.Resources.MergedDictionaries.Add(new ResourceDictionary
+                    {
+                        Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DefaultCursorDictionary.xaml",
+                            UriKind.Absolute)
+                    });
+                }
+
                 #region 读取资源字典
                 var resourceDictionaries = new Collection<ResourceDictionary>
                 {
@@ -79,12 +99,6 @@ namespace 饥荒百科全书CSharp
                     {
                         Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/MyUserControl/LoadingIndicators/Styles.xaml",
-                            UriKind.Absolute)
-                    },
-                    new ResourceDictionary
-                    {
-                        Source = new Uri(
-                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
                             UriKind.Absolute)
                     },
                     new ResourceDictionary
