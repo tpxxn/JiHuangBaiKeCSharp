@@ -46,6 +46,7 @@ namespace 饥荒百科全书CSharp.Class
 
         public void SetupHotKey(Window window, Global.KeyModifiers keyModifiers, Keys key)
         {
+            
             Handle = new WindowInteropHelper(window).Handle;
             Window = window;
             var controlKey = (uint)keyModifiers;
@@ -127,11 +128,8 @@ namespace 饥荒百科全书CSharp.Class
         {
             if (msg == WM_HOTKEY)
             {
-                var hk = (HotKey)KeyPair[(int)wParam];
-                if (hk.OnHotKey != null)
-                {
-                    hk.OnHotKey();
-                }
+                var hotKey = (HotKey)KeyPair[(int)wParam];
+                hotKey.OnHotKey?.Invoke();
             }
             return IntPtr.Zero;
         }

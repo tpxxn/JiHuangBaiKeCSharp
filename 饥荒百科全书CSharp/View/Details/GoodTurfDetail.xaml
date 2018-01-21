@@ -39,8 +39,8 @@
                     <TextBlock x:Name="ConsolePos" Text=")" Margin="0,5,15,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
-                    <Button Content="复制" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
-                    <Button Content="在游戏控制台执行代码" Margin="5,0,0,0" Cursor="{StaticResource CursorLink}" Click="Console_Click" FontSize="14"/>
+                    <Button Content="复制" Background="{x:Null}" Cursor="{StaticResource CursorLink}" Click="Copy_Click" FontSize="14"/>
+                    <Button Content="在游戏控制台执行代码" Background="{x:Null}" Margin="5,0,0,0" Cursor="{StaticResource CursorLink}" Click="Console_Click" FontSize="14"/>
                 </StackPanel>
             </StackPanel>
             <Grid Grid.Row="8"/>

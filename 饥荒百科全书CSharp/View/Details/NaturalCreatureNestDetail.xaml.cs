@@ -380,6 +380,25 @@ namespace 饥荒百科全书CSharp.View.Details
                             stackPanel.Children.Add(picButton3);
                             stackPanel.Children.Add(picButton4);
                         }
+                        else if (toolText == "Axe")
+                        {
+                            picButton2 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_axe")
+                            };
+                            picButton3 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_goldenaxe"),
+                            };
+                            var picButton4 = new PicButton
+                            {
+                                Source = StringProcess.GetGameResourcePath("S_pickaxe_1"),
+                                Text = "）"
+                            };
+                            stackPanel.Children.Add(picButton2);
+                            stackPanel.Children.Add(picButton3);
+                            stackPanel.Children.Add(picButton4);
+                        }
                         else if (toolText == "Hammer")
                         {
                             picButton2 = new PicButton

@@ -949,5 +949,627 @@
         ]
       }
     ]
-  }
+  },
+  "CreatureNests": {
+    "NatureCreatureNest": [
+      {
+        "Picture": "N_crabbit_den",
+        "Name": "兔蟹的窝",
+        "EnName": "Crabbit Den",
+        "Creature": [
+          [
+            "A_crabbit",
+            "A_beardling_sw"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "无|&Shovel"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "兔蟹的窝是生成兔蟹的场所，兔蟹会在黄昏或者受到惊吓的时候会一头扎在沙滩里。当一只兔蟹被捕或被杀害，另一只就会从洞里重生(重生时间2.5天)。用铲子挖一个兔蟹的窝可以破坏它，这将导致兔蟹不再重生。如果兔蟹晚上在外面，那么这只兔蟹将会睡着。",
+        "Console": [ "crabhole" ]
+      },
+      {
+        "Picture": "N_beehive",
+        "Name": "蜂巢",
+        "EnName": "Beehive",
+        "Health": [
+          200
+        ],
+        "Creature": [
+          [
+            "A_bee",
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_beach",
+          "N_jungle"
+        ],
+        "Introduction": "蜂巢住着蜜蜂，每30秒就生成一只蜜蜂，最多6只。蜜蜂会在白天离开蜂巢，黄昏回到蜂巢。在冬天，蜜蜂不会出来。如果蜜蜂被攻击或捕捉，那么蜂巢中的所有蜜蜂都会变成杀人蜂来攻击玩家，并且附近蜂巢的蜜蜂也会出动。如果蜂巢受到攻击，蜂巢内的蜜蜂会变成杀人蜂攻击玩家，而已经在外面的蜜蜂则不会受到影响。如果蜂巢着火，那么蜜蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "beehive"
+        ]
+      },
+      {
+        "Picture": "N_killer_bee_hive",
+        "Name": "杀人蜂巢",
+        "EnName": "Killer Bee Hive",
+        "Health": [
+          250
+        ],
+        "Creature": [
+          [
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "杀人蜂巢住着杀人蜂，每20秒就生成一只杀人蜂，最多6只。杀人蜂整天待在杀人蜂巢内。但如果玩家离杀人蜂巢太近，那么就算是晚上或者冬天，杀人蜂也会立即出动。如果杀人蜂被攻击或捕捉，那么杀人蜂巢中的所有杀人蜂都会来攻击玩家，并且附近杀人蜂巢的杀人蜂也会出动。如果杀人蜂巢受到攻击，杀人蜂巢内的杀人蜂会来攻击玩家。如果杀人蜂巢着火，那么杀人蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "wasphive"
+        ]
+      },
+      {
+        "Picture": "N_pig_house",
+        "Name": "猪舍",
+        "EnName": "Pig House",
+        "Creature": [
+          [
+            "A_pig_man"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_boards|×1&Torch",
+            "S_cut_stone|×1&Torch",
+            "G_pig_skin|×1&Torch",
+            "S_boards|×2&Hammer",
+            "S_cut_stone|×2&Hammer",
+            "G_pig_skin|×2&Hammer"
+          ]
+        ],
+        "Ability": [
+          [
+            "发光(靠近熄灭)"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_forest"
+        ],
+        "Introduction": "自然的猪舍一般在猪村附近，偶尔也会在森林里找到几个零散的猪舍。如果猪人被杀死，猪舍会在4天后产生一只新的猪人。在黄昏和夜晚猪舍会点亮，但是玩家靠近会熄灭灯光，直到玩家离开。在RoG版里，猪舍可以被点燃，里面的猪人会立即跑出来(即使还没有到刷新时间也会立即刷新出一只)。",
+        "Console": [ "pighouse" ]
+      },
+      {
+        "Picture": "N_spider_den_1",
+        "Pictures": [
+          "N_spider_den_|3"
+        ],
+        "Name": "蜘蛛巢",
+        "EnName": "Spider Den",
+        "Health": [
+          250,
+          500,
+          1000
+        ],
+        "Creature": [
+          [
+            "A_spider"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior",
+            "A_spider_queen"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×2&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×4&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×6&",
+            "G_spider_eggs|×1&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "蜘蛛巢会产生蜘蛛、蜘蛛战士，它们会在黄昏出来，白天回巢。蜘蛛巢附近的粘蛛网会减速除了各类蜘蛛和韦伯以外的其它生物。站在粘蛛网上，蜘蛛巢内1/3的蜘蛛会出来巡逻，如果发现敌情剩下2/3的蜘蛛和蜘蛛战士会主动出击，否则回到巢内。如果站在粘蛛网上攻击蜘蛛，那么蜘蛛巢内的蜘蛛和蜘蛛战士会全部出击，这并不是一个明智的选择。蜘蛛巢的生长周期为：1升2：5-10天；2升3：5-10天；3升蜘蛛女王：12.5-25天，当蜘蛛女王许久没有遇到敌情，就会徘徊一阵然后变回1级蜘蛛巢。1级蜘蛛巢总共产生3只蜘蛛，2级蜘蛛巢总共产生6只蜘蛛(其中1只蜘蛛战士)，3级蜘蛛巢总共产生9只蜘蛛(其中3只蜘蛛战士)。",
+        "Console": [
+          "spiderden",
+          "spiderden_2",
+          "spiderden_3"
+        ]
+      },
+      {
+        "Picture": "N_pond",
+        "Name": "青蛙池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "A_frog",
+            "F_fish"
+          ]
+        ],
+        "Ability": [
+          [
+            "冬天结冰"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "青蛙池塘的主要资源是鱼，使用钓鱼竿可以在一天中的任何时间钓鱼。青蛙池塘中共有10条鱼，鱼的重生时间为160秒。一旦到了冬天温度足够低，青蛙池塘会结冰，无法钓鱼。青蛙会在白天产生，黄昏跳回青蛙池塘。",
+        "Console": [
+          "pond"
+        ]
+      },
+      {
+        "Picture": "N_pond_mos",
+        "Name": "沼泽池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "A_mosquito",
+            "F_fish"
+          ]
+        ],
+        "Ability": [
+          [
+            "冬天结冰"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "沼泽池塘的主要资源是鱼，使用钓鱼竿可以在一天中的任何时间钓鱼。沼泽池塘中共有10条鱼，鱼的重生时间为160秒。一旦到了冬天温度足够低，沼泽池塘会结冰，无法钓鱼。蚊子会在黄昏产生，白天消失。",
+        "Console": [
+          "pond_mos"
+        ]
+      },
+      {
+        "Picture": "N_rundown_house",
+        "Name": "鱼族废墟",
+        "EnName": "Rundown House",
+        "Creature": [
+          [
+            "A_merm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_boards|×1&Torch",
+            "G_rocks|×1&Torch",
+            "F_cooked_fish|×1&Torch",
+            "S_boards|×1&Hammer",
+            "G_rocks|×1&Hammer",
+            "F_fish|×1&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "鱼族废墟是产生鱼人的自然建筑，不可以制造。鱼族废墟最多容纳4个鱼人，鱼人重生时间为4天。在白天，有一只鱼人通常会在外面，如果这个鱼人进入战斗状态或者鱼族废墟被锤，那么所有的鱼人都会出来战斗。黄昏的时候鱼人会离开鱼族废墟在附近徘徊。",
+        "Console": [
+          "mermhouse"
+        ]
+      },
+      {
+        "Picture": "N_pond_frozen",
+        "Name": "冰冻池塘",
+        "EnName": "Frozen Pond",
+        "Ability": [
+          [
+            "春天融化"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_grasslands",
+          "N_village"
+        ],
+        "Introduction": "青蛙池塘、沼泽池塘、洞穴池塘到了冬天就会结冰，结冰后池塘上面和地面无异，可以走动。",
+        "Console": []
+      },
+      {
+        "Picture": "N_tallbird_nest",
+        "Name": "高鸟巢穴",
+        "EnName": "Tallbird Nest",
+        "Creature": [
+          [
+            "A_tallbird"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "F_tallbird_egg|×1&"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_magma_field"
+        ],
+        "Introduction": "高鸟巢穴是产生高鸟的生物巢穴，并且高鸟也会把蛋下在这里。高鸟蛋会在游戏时间17.5小时后重生，高鸟会在2.5天后重生。如果玩家靠近高鸟巢穴，高鸟会追着玩家攻击。黄昏和夜晚的时候高鸟会睡觉，但是如果在附近停留一会儿高鸟依然会醒来然后追逐玩家。",
+        "Console": [
+          "tallbirdnest"
+        ]
+      },
+      {
+        "Picture": "N_wildbore_house",
+        "Name": "荒野小屋",
+        "EnName": "Wildbore House",
+        "Creature": [
+          [
+            "A_wildbore"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_mussel",
+        "Name": "贻贝床",
+        "EnName": "Mussel",
+        "Creature": [
+          [
+            "F_mussel"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_wobster_den",
+        "Name": "龙虾的巢穴",
+        "EnName": "Wobster Den",
+        "Creature": [
+          [
+            "F_wobster"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_prime_ape_hut",
+        "Name": "猿猴小屋",
+        "EnName": "Prime Ape Hut",
+        "Creature": [
+          [
+            "A_prime_ape"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_shoal",
+        "Name": "浅滩",
+        "EnName": "Shoal",
+        "Creature": [
+          [
+            "A_sea_hound",
+            "F_tropical_fish"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_merm_hut",
+        "Name": "鱼人房",
+        "EnName": "Merm Hut",
+        "Creature": [
+          [
+            "A_merm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_boards|×1&Torch",
+            "G_rocks|×1&Torch",
+            "F_tropical_fish|×1&Torch",
+            "S_boards|×1&Hammer",
+            "G_rocks|×1&Hammer",
+            "F_tropical_fish|×1&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "鱼人房是产生鱼人的自然建筑，不可以制造。鱼人房最多容纳4个鱼人，鱼人重生时间为4天。在白天，有一只鱼人通常会在外面，如果这个鱼人进入战斗状态或者鱼人房被锤，那么所有的鱼人都会出来战斗。黄昏的时候鱼人会离开鱼人房在附近徘徊。",
+        "Console": [ "mermhouse" ]
+      },
+      {
+        "Picture": "N_fishermerm's_hut",
+        "Name": "Fishermerm的小屋",
+        "EnName": "Fishermerm's Hut",
+        "Creature": [
+          [
+            "A_fishermerm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_tidal_pool",
+        "Name": "潮水池",
+        "EnName": "Tidal Pool",
+        "Creature": [
+          [
+            "A_rabbit",
+            "A_rabbit_winter",
+            "A_beardling"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "",
+        "Console": [ "tidalpool" ]
+      },
+      {
+        "Picture": "N_sharkitten_den",
+        "Name": "虎鲨的窝",
+        "EnName": "Sharkitten Den",
+        "Creature": [
+          [
+            "A_tiger_shark",
+            "A_sharkitten"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "",
+        "Console": [ "sharkittenspawner" ]
+      },
+      {
+        "Picture": "N_dragoon_den",
+        "Name": "龙人巢",
+        "EnName": "Dragoon Den",
+        "Creature": [
+          [
+            "A_dragoon"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      },
+      {
+        "Picture": "N_dragoon_egg",
+        "Name": "龙人蛋",
+        "EnName": "Dragoon Egg",
+        "Creature": [
+          [
+            "A_dragoon"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长",
+            "春天变成倒塌的兔子洞"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "",
+        "Console": [ "rabbithole" ]
+      }
+    ] 
+  } 
 }

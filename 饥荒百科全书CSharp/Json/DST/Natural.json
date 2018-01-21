@@ -366,7 +366,8 @@
           "N_red_mushtree",
           "N_red_mushroom",
           "N_light_flower_1",
-          "N_fern_1"
+          "N_fern_1",
+          "N_spilagmite"
         ],
         "Rare": [
           "A_depths_worm",
@@ -393,7 +394,8 @@
         "EnName": "Stalagmite Biomes",
         "Abundant": [
           "N_stalagmite",
-          "A_spitter"
+          "A_spitter",
+          "N_spilagmite"
         ],
         "Rare": [
           "N_nightmare_fissure"
@@ -1943,7 +1945,7 @@
           "N_grasslands",
           "N_savanna"
         ],
-        "Introduction": "兔子洞是生成兔子的场所，兔子会在黄昏或者受到惊吓的时候回到兔子洞，受到惊吓的兔子会在1到3分钟内再次出洞(满足正常出洞条件)。当一只兔子被捕或被杀害，另一只就会从洞里重生(重生时间2.5天)。用铲子挖一个兔子洞可以破坏它，这将导致兔子不再重生。如果兔子由于任何原因在晚上被抓到外面，那么这只兔子将会睡着。在RoG版里，春天兔子洞会变成倒塌的兔子洞，不再生成兔子，春天结束后的几天又会变回兔子洞。在DST版里，摧毁的兔子洞会在5天后重生(仅夏天)，同一时间只能重生一个兔子洞，按照队列原则重生。",
+        "Introduction": "兔子洞是生成兔子的场所，兔子会在黄昏或者受到惊吓的时候回到兔子洞，受到惊吓的兔子会在1到3分钟内再次出洞(满足正常出洞条件)。当一只兔子被捕或被杀害，另一只就会从洞里重生(重生时间2.5天)。用铲子挖一个兔子洞可以破坏它，这将导致兔子不再重生。如果兔子由于任何原因在晚上被抓到外面，那么这只兔子将会睡着。春天兔子洞会变成倒塌的兔子洞，不再生成兔子，春天结束后的几天又会变回兔子洞。摧毁的兔子洞会在5天后重生(仅夏天)，同一时间只能重生一个兔子洞，按照队列原则重生。",
         "Console": [
           "rabbithole"
         ]
@@ -2029,12 +2031,12 @@
             "|下表中随机一样&Hammer"
           ]
         ],
-        "IsRegenerate": false,
+        "IsRegenerate": true,
         "IsDestroable": true,
         "Biomes": [
           "N_deciduous_forest"
         ],
-        "Introduction": "中空树桩只能在落叶阔叶林找到，它是浣猫的家。杀死一只浣猫之后会重生一只，重生需要1天，总共只有9只。当不再能重生浣猫的时候，中空树桩就会变得像损坏了一样。在DST版里，中空树桩是可以再生的，再生时间是被摧毁时的季节天数加上该季节剩余天数。",
+        "Introduction": "中空树桩只能在落叶阔叶林找到，它是浣猫的家。杀死一只浣猫之后会重生一只，重生需要1天，总共只有9只。当不再能重生浣猫的时候，中空树桩就会变得像损坏了一样。中空树桩是可以再生的，再生时间是被摧毁时的季节天数加上该季节剩余天数。",
         "Console": [
           "catcoonden"
         ]
@@ -2162,19 +2164,16 @@
         "ResourcesDestroyed": [
           [
             "G_ash|×1&Torch",
-            "G_silk|×2&",
-            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+            "G_silk|×2&"
           ],
           [
             "G_ash|×1&Torch",
-            "G_silk|×4&",
-            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+            "G_silk|×4&"
           ],
           [
             "G_ash|×1&Torch",
             "G_silk|×6&",
-            "G_spider_eggs|×1&",
-            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+            "G_spider_eggs|×1&"
           ]
         ],
         "Ability": [
@@ -2310,8 +2309,7 @@
         "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
-          "N_rockyland",
-          "N_magma_field"
+          "N_rockyland"
         ],
         "Introduction": "高鸟巢穴是产生高鸟的生物巢穴，并且高鸟也会把蛋下在这里。高鸟蛋会在游戏时间17.5小时后重生，高鸟会在2.5天后重生。如果玩家靠近高鸟巢穴，高鸟会追着玩家攻击。黄昏和夜晚的时候高鸟会睡觉，但是如果在附近停留一会儿高鸟依然会醒来然后追逐玩家。",
         "Console": [
@@ -2467,28 +2465,28 @@
         "EnName": "Spilagmite",
         "Creature": [
           [
-            "A_cave_spider"
+            "A_cave_spider",
+            "A_spitter"
           ]
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
+            "G_rocks|×2&Axe",
+            "G_silk|×1&Axe",
+            "G_silk|×1(50%)&Axe",
+            "G_spider_gland|×1(25%)&Axe",
+            "G_fossil_fragment|×1&Axe",
+            "G_fossil_fragment|×1(50%)&Axe"
           ]
         ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
+        "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_red_mushtree_forest",
+          "N_stalagmite_biomes"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "蛛网岩大约每2分钟产生一次洞穴蜘蛛或喷吐蜘蛛，最多2到3个，其中百分之33%为喷吐蜘蛛，其它的是洞穴蜘蛛。每4分钟出来一只巡逻，除非遇上地震或者有生物在其上行走。如果在其蛛网上行走，内部的两只洞穴蜘蛛会出来警告，如果蛛网岩被攻击，那么其内所有洞穴蜘蛛和喷吐蜘蛛都会出动。如果没有洞穴蜘蛛或喷吐蜘蛛被杀害，那么出洞的蜘蛛失去对敌人的兴趣时会在外面游荡，地震的时候，会回到蛛网岩内。攻击两次蛛网岩后蛛网岩将失去产生洞穴蜘蛛和喷吐蜘蛛的能力。",
+        "Console": [ "spiderhole" ]
       },
       {
         "Picture": "N_pond_cave",
@@ -2517,8 +2515,11 @@
       },
       {
         "Picture": "N_slurtle_mound",
-        "Name": "含糊虫土堆",
+        "Name": "龟壳蜗牛土堆",
         "EnName": "Slurtle Mound",
+        "Health": [
+          350
+        ],
         "Creature": [
           [
             "A_slurtles",
@@ -2527,23 +2528,20 @@
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
+            "|爆炸&Torch",
+            "G_slurtle_slime|×3&",
+            "G_broken_shell|×1&"
           ]
         ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
+        "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
-          "N_grasslands",
-          "N_savanna"
+          "N_blue_mushtree_forest",
+          "N_green_mushtree_forest",
+          "N_red_mushtree_forest"
         ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "龟壳蜗牛土堆在被攻击或地震后会产生龟壳蜗牛，其中90%可能是尖壳的(Slurtles)，10%可能是圆壳的(Snurtles)。龟壳蜗牛出来以后不会攻击玩家，只会逃跑或者吃地上的各种矿物。龟壳蜗牛土堆被点燃后会爆炸！",
+        "Console": [ "slurtlehole" ]
       },
       {
         "Picture": "N_splumonkey_pod",
@@ -2551,377 +2549,26 @@
         "EnName": "Splumonkey Pod",
         "Creature": [
           [
-            "A_splumonkey",
-            "A_shadow_splumonkey"
+            "A_splumonkey"
           ]
         ],
         "ResourcesDestroyed": [
           [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_crabbit_den",
-        "Name": "兔蟹的窝",
-        "EnName": "Crabbit Den",
-        "Creature": [
-          [
-            "A_crabbit"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_wildbore_house",
-        "Name": "荒野小屋",
-        "EnName": "Wildbore House",
-        "Creature": [
-          [
-            "A_wildbore"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_mussel",
-        "Name": "贻贝床",
-        "EnName": "Mussel",
-        "Creature": [
-          [
-            "F_mussel"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_wobster_den",
-        "Name": "龙虾的巢穴",
-        "EnName": "Wobster Den",
-        "Creature": [
-          [
-            "F_wobster"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_prime_ape_hut",
-        "Name": "猿猴小屋",
-        "EnName": "Prime Ape Hut",
-        "Creature": [
-          [
-            "A_prime_ape"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_shoal",
-        "Name": "浅滩",
-        "EnName": "Shoal",
-        "Creature": [
-          [
-            "A_sea_hound",
-            "F_tropical_fish"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_merm_hut",
-        "Name": "鱼人房",
-        "EnName": "Merm Hut",
-        "Creature": [
-          [
-            "A_merm"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "S_boards|×1&Torch",
-            "G_rocks|×1&Torch",
-            "F_tropical_fish|×1&Torch",
-            "S_boards|×1&Hammer",
-            "G_rocks|×1&Hammer",
-            "F_tropical_fish|×1&Hammer"
+            "G_ash|×1&Torch",
+            "G_manure|×2&Hammer",
+            "F_banana|×2&Hammer",
+            "T_gnome_1|×1(0.01%)&Hammer",
+            "T_gnome_2|×1(0.01%)&Hammer"
           ]
         ],
         "IsRegenerate": false,
         "IsDestroable": true,
         "Biomes": [
-          "N_marsh"
+          "N_village",
+          "N_wilds"
         ],
-        "Introduction": "鱼人房是产生鱼人的自然建筑，不可以制造。鱼人房最多容纳4个鱼人，鱼人重生时间为4天。在白天，有一只鱼人通常会在外面，如果这个鱼人进入战斗状态或者鱼人房被锤，那么所有的鱼人都会出来战斗。黄昏的时候鱼人会离开鱼人房在附近徘徊。",
-        "Console": [ "mermhouse" ]
-      },
-      {
-        "Picture": "N_fishermerm's_hut",
-        "Name": "Fishermerm的小屋",
-        "EnName": "Fishermerm's Hut",
-        "Creature": [
-          [
-            "A_fishermerm"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_tidal_pool",
-        "Name": "潮水池",
-        "EnName": "Tidal Pool",
-        "Creature": [
-          [
-            "A_rabbit",
-            "A_rabbit_winter",
-            "A_beardling"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": false,
-        "IsDestroable": false,
-        "Biomes": [
-          "N_marsh"
-        ],
-        "Introduction": "",
-        "Console": [ "tidalpool" ]
-      },
-      {
-        "Picture": "N_sharkitten_den",
-        "Name": "虎鲨的窝",
-        "EnName": "Sharkitten Den",
-        "Creature": [
-          [
-            "A_tiger_shark",
-            "A_sharkitten"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": false,
-        "IsDestroable": false,
-        "Biomes": [
-          "N_beach"
-        ],
-        "Introduction": "",
-        "Console": [ "sharkittenspawner" ]
-      },
-      {
-        "Picture": "N_dragoon_den",
-        "Name": "龙人巢",
-        "EnName": "Dragoon Den",
-        "Creature": [
-          [
-            "A_dragoon"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
-      },
-      {
-        "Picture": "N_dragoon_egg",
-        "Name": "龙人蛋",
-        "EnName": "Dragoon Egg",
-        "Creature": [
-          [
-            "A_dragoon"
-          ]
-        ],
-        "ResourcesDestroyed": [
-          [
-            "G_ash|×1&Torch"
-          ]
-        ],
-        "Ability": [
-          [
-            "可成长",
-            "春天变成倒塌的兔子洞"
-          ]
-        ],
-        "IsRegenerate": true,
-        "IsDestroable": true,
-        "Biomes": [
-          "N_grasslands",
-          "N_savanna"
-        ],
-        "Introduction": "",
-        "Console": [ "rabbithole" ]
+        "Introduction": "暴躁猴群最多产生4只洞穴猴子。当地震或洞穴猴子被攻击时，暴躁猴群不会产生洞穴猴子。燃烧时其中的洞穴猴子都会跑出来。用锤子锤4次即可破坏。",
+        "Console": [ "monkeybarrel" ]
       }
     ] 
   } 

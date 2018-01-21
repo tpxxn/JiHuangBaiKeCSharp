@@ -19,6 +19,7 @@ namespace 饥荒百科全书CSharp.Class
         private const int SW_SHOWNORMAL = 1;
         private const int SW_RESTORE = 9;
         private const int SW_SHOWNOACTIVATE = 4;
+        private const int VK_L = 0x4C;
         private const int VK_V = 0x56;
         private const int WM_KEYDOWN = 0x0100;
         private const int WM_KEYUP = 0x0101;
@@ -31,6 +32,10 @@ namespace 饥荒百科全书CSharp.Class
         private const int VK_Ctrl = 0x11;
         private const int VK_SPACE = 0x20;
         private const int VK_Console = 0xC0;
+
+        //键盘大小写
+        [DllImport("USER32", SetLastError = true)]
+        private static extern short GetKeyState(int nVirtKey);
 
         [DllImport("user32.dll")]
         private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
@@ -56,7 +61,7 @@ namespace 饥荒百科全书CSharp.Class
         private static extern int PostMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
-
+        
         /// <summary>
         /// 切换输入法(Ctrl+Space)
         /// </summary>
@@ -83,19 +88,36 @@ namespace 饥荒百科全书CSharp.Class
         /// 输入代码
         /// </summary>
         /// <param name="input">控制台代码</param>
-        public static void InputStr(string input)
+        public static void InputConsoleString(string input)
         {
             foreach (int wParam in Encoding.ASCII.GetBytes(input))
             {
                 int actualKeyValue;
-                // 字母
+                // 小写字母
                 if (wParam >= 97 && wParam <= 122)
                 {
                     actualKeyValue = wParam - 32;
                     //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
+                    if (GetKeyState(20) == 1)
+                        keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
                     System.Threading.Thread.Sleep(20);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYUP, 0);
+                    if (GetKeyState(20) == 1)
+                        keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYUP, 0);
+                }
+                // 大写字母
+                else if (wParam >= 65 && wParam <= 90)
+                {
+                    actualKeyValue = wParam;
+                    //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
+                    if (GetKeyState(20) == 0)
+                        keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
+                    keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
+                    System.Threading.Thread.Sleep(20);
+                    keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYUP, 0);
+                    if (GetKeyState(20) == 0)
+                        keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYUP, 0);
                 }
                 // 数字
                 else if (wParam >= 48 && wParam <= 57)
@@ -109,7 +131,7 @@ namespace 饥荒百科全书CSharp.Class
                 // 引号
                 else if (wParam == 34)
                 {
-                    actualKeyValue = 222;
+                    actualKeyValue = 0xDE;
                     //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
                     keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
@@ -120,7 +142,7 @@ namespace 饥荒百科全书CSharp.Class
                 // 左括号
                 else if (wParam == 40)
                 {
-                    actualKeyValue = 57;
+                    actualKeyValue = 0x39;
                     //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
                     keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
@@ -131,7 +153,7 @@ namespace 饥荒百科全书CSharp.Class
                 // 右括号
                 else if (wParam == 41)
                 {
-                    actualKeyValue = 48;
+                    actualKeyValue = 0x30;
                     //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
                     keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
@@ -142,16 +164,27 @@ namespace 饥荒百科全书CSharp.Class
                 // 逗号
                 else if (wParam == 44)
                 {
-                    actualKeyValue = 188;
+                    actualKeyValue = 0xBC;
                     //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
                     System.Threading.Thread.Sleep(20);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYUP, 0);
                 }
+                // 冒号
+                else if (wParam == 58)
+                {
+                    actualKeyValue = 0xBA;
+                    //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
+                    keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
+                    keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
+                    System.Threading.Thread.Sleep(20);
+                    keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYUP, 0);
+                    keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYUP, 0);
+                }
                 // 下划线
                 else if (wParam == 95)
                 {
-                    actualKeyValue = 189;
+                    actualKeyValue = 0xBD;
                     //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
                     keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
@@ -175,7 +208,17 @@ namespace 饥荒百科全书CSharp.Class
             System.Threading.Thread.Sleep(50);
             keybd_event(VK_Enter, MapVirtualKey(VK_Enter, 0), KEYEVENTF_KEYUP, 0);
         }
-
+        /// <summary>
+        /// 单机版关闭Log
+        /// </summary>
+        public static void CloseLog()
+        {
+            keybd_event(VK_Ctrl, MapVirtualKey(VK_Ctrl, 0), KEYEVENTF_KEYDOWN, 0);
+            keybd_event(VK_L, MapVirtualKey(VK_L, 0), KEYEVENTF_KEYDOWN, 0);
+            System.Threading.Thread.Sleep(20);
+            keybd_event(VK_L, MapVirtualKey(VK_L, 0), KEYEVENTF_KEYUP, 0);
+            keybd_event(VK_Ctrl, MapVirtualKey(VK_Ctrl, 0), KEYEVENTF_KEYUP, 0);
+        }
         /// <summary>
         /// 给游戏窗口发送控制台代码
         /// </summary>
@@ -196,7 +239,7 @@ namespace 饥荒百科全书CSharp.Class
                 {
                     var title = new StringBuilder(128);
                     GetWindowText(process.MainWindowHandle, title, title.Capacity);
-                    Debug.WriteLine(title.ToString() == "Don't Starve Together" ? "正在运行饥荒联机版" : "正在运行饥荒单机版");
+                    var gameVersion = title.ToString() == "Don't Starve Together" ? "DST" : "DS";
                     SetForegroundWindow(process.MainWindowHandle);
                     // 切换英文
                     System.Threading.Thread.Sleep(50);
@@ -206,10 +249,16 @@ namespace 饥荒百科全书CSharp.Class
                     SendConsole();
                     // 输入代码
                     System.Threading.Thread.Sleep(50);
-                    InputStr(message);
+                    InputConsoleString(message);
                     // 执行代码
                     System.Threading.Thread.Sleep(50);
                     SendEnter();
+                    // 关闭Log
+                    if (gameVersion == "DS")
+                    {
+                        System.Threading.Thread.Sleep(50);
+                        CloseLog();
+                    }
                     // 切换中文
                     System.Threading.Thread.Sleep(50);
                     SetImm();

@@ -324,6 +324,7 @@ namespace 饥荒百科全书CSharp.Class
             NaturalBiomesData.Clear();
             NaturalSmallPlantsData.Clear();
             NaturalTreesData.Clear();
+            NaturalCreatureNestData.Clear();
             GoodMaterialData.Clear();
             GoodEquipmentData.Clear();
             GoodSaplingData.Clear();

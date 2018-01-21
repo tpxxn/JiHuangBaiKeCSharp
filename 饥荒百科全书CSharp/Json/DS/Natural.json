@@ -285,7 +285,8 @@
           "N_red_mushtree",
           "N_red_mushroom",
           "N_light_flower_1",
-          "N_fern_1"
+          "N_fern_1",
+          "N_spilagmite"
         ],
         "Rare": [
           "A_depths_worm",
@@ -312,7 +313,8 @@
         "EnName": "Stalagmite Biomes",
         "Abundant": [
           "N_stalagmite",
-          "A_spitter"
+          "A_spitter",
+          "N_spilagmite"
         ],
         "Rare": [
           "N_nightmare_fissure"
@@ -1292,5 +1294,544 @@
         ]
       }
     ]
-  }
+  },
+  "CreatureNests": {
+    "NatureCreatureNest": [
+      {
+        "Picture": "N_rabbit_hole",
+        "Pictures": [
+          "N_rabbit_hole",
+          "N_rabbit_hole_collapsed"
+        ],
+        "Name": "兔子洞",
+        "EnName": "Rabbit Hole",
+        "Creature": [
+          [
+            "A_rabbit",
+            "A_rabbit_winter",
+            "A_beardling"
+          ],
+          []
+        ],
+        "ResourcesDestroyed": [
+          [
+            "无|&Shovel"
+          ]
+        ],
+        "Ability": [
+          [
+            "春天变成倒塌的兔子洞"
+          ],
+          [
+            "夏天变回兔子洞"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "兔子洞是生成兔子的场所，兔子会在黄昏或者受到惊吓的时候回到兔子洞，受到惊吓的兔子会在1到3分钟内再次出洞(满足正常出洞条件)。当一只兔子被捕或被杀害，另一只就会从洞里重生(重生时间2.5天)。用铲子挖一个兔子洞可以破坏它，这将导致兔子不再重生。如果兔子由于任何原因在晚上被抓到外面，那么这只兔子将会睡着。",
+        "Console": [
+          "rabbithole"
+        ]
+      },
+      {
+        "Picture": "N_beehive",
+        "Name": "蜂巢",
+        "EnName": "Beehive",
+        "Health": [
+          200
+        ],
+        "Creature": [
+          [
+            "A_bee",
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "蜂巢住着蜜蜂，每30秒就生成一只蜜蜂，最多6只。蜜蜂会在白天离开蜂巢，黄昏回到蜂巢。在冬天，蜜蜂不会出来。如果蜜蜂被攻击或捕捉，那么蜂巢中的所有蜜蜂都会变成杀人蜂来攻击玩家，并且附近蜂巢的蜜蜂也会出动。如果蜂巢受到攻击，蜂巢内的蜜蜂会变成杀人蜂攻击玩家，而已经在外面的蜜蜂则不会受到影响。如果蜂巢着火，那么蜜蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "beehive"
+        ]
+      },
+      {
+        "Picture": "N_killer_bee_hive",
+        "Name": "杀人蜂巢",
+        "EnName": "Killer Bee Hive",
+        "Health": [
+          250
+        ],
+        "Creature": [
+          [
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "杀人蜂巢住着杀人蜂，每20秒就生成一只杀人蜂，最多6只。杀人蜂整天待在杀人蜂巢内。但如果玩家离杀人蜂巢太近，那么就算是晚上或者冬天，杀人蜂也会立即出动。如果杀人蜂被攻击或捕捉，那么杀人蜂巢中的所有杀人蜂都会来攻击玩家，并且附近杀人蜂巢的杀人蜂也会出动。如果杀人蜂巢受到攻击，杀人蜂巢内的杀人蜂会来攻击玩家。如果杀人蜂巢着火，那么杀人蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "wasphive"
+        ]
+      },
+      {
+        "Picture": "N_pig_torch",
+        "Name": "猪头火炬",
+        "EnName": "Pig Torch",
+        "Creature": [
+          [
+            "A_guard_pig"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4(点燃)&Hammer",
+            "G_manure|×1(燃尽)&Hammer",
+            "G_log|×3(燃尽)&Hammer"
+          ]
+        ],
+        "Ability": [
+          [
+            "发光"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "猪头火炬会发光，受到守卫猪的保护，如果守卫猪被杀，那么猪头火炬会在3天后产生一只新的守卫猪。守卫猪偶尔会给猪头火炬加油，使其更亮。如果没有守卫猪给猪头火炬加油，那么猪头火炬最终将燃尽，不发光。",
+        "Console": [ "pigtorch" ]
+      },
+      {
+        "Picture": "N_pig_house",
+        "Name": "猪舍",
+        "EnName": "Pig House",
+        "Creature": [
+          [
+            "A_pig_man"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_boards|×2&Hammer",
+            "S_cut_stone|×2&Hammer",
+            "G_pig_skin|×2&Hammer"
+          ]
+        ],
+        "Ability": [
+          [
+            "发光(靠近熄灭)"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_forest"
+        ],
+        "Introduction": "自然的猪舍一般在猪村附近，偶尔也会在森林里找到几个零散的猪舍。如果猪人被杀死，猪舍会在4天后产生一只新的猪人。在黄昏和夜晚猪舍会点亮，但是玩家靠近会熄灭灯光，直到玩家离开。在RoG版里，猪舍可以被点燃，里面的猪人会立即跑出来(即使还没有到刷新时间也会立即刷新出一只)。",
+        "Console": [ "pighouse" ]
+      },
+      {
+        "Picture": "N_spider_den_1",
+        "Pictures": [
+          "N_spider_den_|3"
+        ],
+        "Name": "蜘蛛巢",
+        "EnName": "Spider Den",
+        "Health": [
+          250,
+          500,
+          1000
+        ],
+        "Creature": [
+          [
+            "A_spider"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior",
+            "A_spider_queen"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_silk|×2&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_silk|×4&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_silk|×6&",
+            "G_spider_eggs|×1&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "蜘蛛巢会产生蜘蛛、蜘蛛战士，它们会在黄昏出来，白天回巢。蜘蛛巢附近的粘蛛网会减速除了各类蜘蛛和韦伯以外的其它生物。站在粘蛛网上，蜘蛛巢内1/3的蜘蛛会出来巡逻，如果发现敌情剩下2/3的蜘蛛和蜘蛛战士会主动出击，否则回到巢内。如果站在粘蛛网上攻击蜘蛛，那么蜘蛛巢内的蜘蛛和蜘蛛战士会全部出击，这并不是一个明智的选择。蜘蛛巢的生长周期为：1升2：5-10天；2升3：5-10天；3升蜘蛛女王：12.5-25天，当蜘蛛女王许久没有遇到敌情，就会徘徊一阵然后变回1级蜘蛛巢。1级蜘蛛巢总共产生3只蜘蛛，2级蜘蛛巢总共产生6只蜘蛛(其中1只蜘蛛战士)，3级蜘蛛巢总共产生9只蜘蛛(其中3只蜘蛛战士)。",
+        "Console": [
+          "spiderden",
+          "spiderden_2",
+          "spiderden_3"
+        ]
+      },
+      {
+        "Picture": "N_pond",
+        "Name": "青蛙池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "A_frog",
+            "F_fish"
+          ]
+        ],
+        "Ability": [
+          [
+            "冬天结冰"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "青蛙池塘的主要资源是鱼，使用钓鱼竿可以在一天中的任何时间钓鱼。青蛙池塘中共有10条鱼，鱼的重生时间为160秒。一旦到了冬天温度足够低，青蛙池塘会结冰，无法钓鱼。青蛙会在白天产生，黄昏跳回青蛙池塘。",
+        "Console": [
+          "pond"
+        ]
+      },
+      {
+        "Picture": "N_pond_mos",
+        "Name": "沼泽池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "A_mosquito",
+            "F_fish"
+          ]
+        ],
+        "Ability": [
+          [
+            "冬天结冰"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "沼泽池塘的主要资源是鱼，使用钓鱼竿可以在一天中的任何时间钓鱼。沼泽池塘中共有10条鱼，鱼的重生时间为160秒。一旦到了冬天温度足够低，沼泽池塘会结冰，无法钓鱼。蚊子会在黄昏产生，白天消失。",
+        "Console": [
+          "pond_mos"
+        ]
+      },
+      {
+        "Picture": "N_rundown_house",
+        "Name": "鱼族废墟",
+        "EnName": "Rundown House",
+        "Creature": [
+          [
+            "A_merm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_boards|×1&Torch",
+            "G_rocks|×1&Torch",
+            "F_cooked_fish|×1&Torch",
+            "S_boards|×1&Hammer",
+            "G_rocks|×1&Hammer",
+            "F_fish|×1&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "鱼族废墟是产生鱼人的自然建筑，不可以制造。鱼族废墟最多容纳4个鱼人，鱼人重生时间为4天。在白天，有一只鱼人通常会在外面，如果这个鱼人进入战斗状态或者鱼族废墟被锤，那么所有的鱼人都会出来战斗。黄昏的时候鱼人会离开鱼族废墟在附近徘徊。",
+        "Console": [
+          "mermhouse"
+        ]
+      },
+      {
+        "Picture": "N_pond_frozen",
+        "Name": "冰冻池塘",
+        "EnName": "Frozen Pond",
+        "Ability": [
+          [
+            "春天融化"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_grasslands",
+          "N_village"
+        ],
+        "Introduction": "青蛙池塘、沼泽池塘、洞穴池塘到了冬天就会结冰，结冰后池塘上面和地面无异，可以走动。",
+        "Console": []
+      },
+      {
+        "Picture": "N_tallbird_nest",
+        "Name": "高鸟巢穴",
+        "EnName": "Tallbird Nest",
+        "Creature": [
+          [
+            "A_tallbird"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "F_tallbird_egg|×1&"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_rockyland",
+          "N_magma_field"
+        ],
+        "Introduction": "高鸟巢穴是产生高鸟的生物巢穴，并且高鸟也会把蛋下在这里。高鸟蛋会在游戏时间17.5小时后重生，高鸟会在2.5天后重生。如果玩家靠近高鸟巢穴，高鸟会追着玩家攻击。黄昏和夜晚的时候高鸟会睡觉，但是如果在附近停留一会儿高鸟依然会醒来然后追逐玩家。",
+        "Console": [
+          "tallbirdnest"
+        ]
+      },
+      {
+        "Picture": "N_walrus_camp",
+        "Pictures": [
+          "N_walrus_camp",
+          "N_walrus_camp_dead"
+        ],
+        "Name": "海象巢穴",
+        "EnName": "Walrus_camp",
+        "Creature": [
+          [
+            "A_mactusk",
+            "A_wee_mactusk",
+            "A_blue_hound"
+          ],
+          []
+        ],
+        "Ability": [
+          [
+            "冬季出现"
+          ],
+          [
+            "春季消失"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_marsh"
+        ],
+        "Introduction": "海象巢穴只会在冬季产生海象，其它季节如平地一般，但是可以看到地基。海象巢穴每2.5到3天就会补充完整失去的生物(一只海象，一只小海象，两只蓝色猎犬)。只要生物没有死光，那么海象巢穴就会发出微弱的光芒。",
+        "Console": [
+          "walrus_camp"
+        ]
+      },
+      {
+        "Picture": "N_Magma",
+        "Name": "岩浆",
+        "EnName": "Magma",
+        "Creature": [
+          [
+            "A_dragonfly"
+          ]
+        ],
+        "Ability": [
+          [
+            "高温"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_desert"
+        ],
+        "Introduction": "岩浆是龙蝇的栖息地，它具有极高的温度，靠近它的物品会燃烧，玩家会过热(即使是冬天，足够的时间总会导致过热)，夜晚会发光，但是光的半径小于加热玩家的半径，所以夜晚靠岩浆照明恐怕不是一个明智的选择。岩浆可以烹饪，前提是你有防火的龙鳞盔甲或者无(非)畏(要)死(作)亡(死)。",
+        "Console": [
+          "lava_pond"
+        ]
+      },
+      {
+        "Picture": "N_rabbit_hutch",
+        "Name": "兔子窝",
+        "EnName": "Rabbit Hutch",
+        "Creature": [
+          [
+            "A_bunnyman"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_boards|×1&Torch",
+            "F_roasted_carrot|×2&Torch",
+            "G_bunny_puff|×1&Torch",
+            "S_boards|×2&Hammer",
+            "F_carrot|×5&Hammer",
+            "G_bunny_puff|×2&Hammer"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_blue_mushtree_forest"
+        ],
+        "Introduction": "兔子窝产生一只兔人，兔人被杀会在1天后重生。兔人黄昏走出兔子窝，白天回去。",
+        "Console": [ "rabbithouse" ]
+      },
+      {
+        "Picture": "N_spilagmite",
+        "Name": "蛛网岩",
+        "EnName": "Spilagmite",
+        "Creature": [
+          [
+            "A_cave_spider",
+            "A_spitter"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_rocks|×2&Axe",
+            "G_silk|×1&Axe",
+            "G_silk|×1(50%)&Axe",
+            "G_spider_gland|×1(25%)&Axe"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_red_mushtree_forest",
+          "N_stalagmite_biomes"
+        ],
+        "Introduction": "蛛网岩大约每2分钟产生一次洞穴蜘蛛或喷吐蜘蛛，最多2到3个，其中百分之33%为喷吐蜘蛛，其它的是洞穴蜘蛛。每4分钟出来一只巡逻，除非遇上地震或者有生物在其上行走。如果在其蛛网上行走，内部的两只洞穴蜘蛛会出来警告，如果蛛网岩被攻击，那么其内所有洞穴蜘蛛和喷吐蜘蛛都会出动。如果没有洞穴蜘蛛或喷吐蜘蛛被杀害，那么出洞的蜘蛛失去对敌人的兴趣时会在外面游荡，地震的时候，会回到蛛网岩内。攻击两次蛛网岩后蛛网岩将失去产生洞穴蜘蛛和喷吐蜘蛛的能力。",
+        "Console": [ "spiderhole" ]
+      },
+      {
+        "Picture": "N_pond_cave",
+        "Name": "洞穴池塘",
+        "EnName": "Pond",
+        "Creature": [
+          [
+            "F_eel"
+          ]
+        ],
+        "Ability": [
+          [
+            "冬天结冰"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_village",
+          "N_wilds"
+        ],
+        "Introduction": "洞穴池塘的主要资源是鳗鱼，使用钓鳗鱼竿可以在一天中的任何时间钓鳗鱼。洞穴池塘中共有10条鳗鱼，鳗鱼的重生时间为160秒。一旦到了冬天温度足够低，洞穴池塘会结冰，无法钓鳗鱼。",
+        "Console": [
+          "pond_cave"
+        ]
+      },
+      {
+        "Picture": "N_slurtle_mound",
+        "Name": "龟壳蜗牛土堆",
+        "EnName": "Slurtle Mound",
+        "Health": [
+          350
+        ],
+        "Creature": [
+          [
+            "A_slurtles",
+            "A_snurtles"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "|爆炸&Torch",
+            "G_slurtle_slime|×3&",
+            "G_broken_shell|×1&"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_blue_mushtree_forest",
+          "N_green_mushtree_forest",
+          "N_red_mushtree_forest"
+        ],
+        "Introduction": "龟壳蜗牛土堆在被攻击或地震后会产生龟壳蜗牛，其中90%可能是尖壳的(Slurtles)，10%可能是圆壳的(Snurtles)。龟壳蜗牛出来以后不会攻击玩家，只会逃跑或者吃地上的各种矿物。龟壳蜗牛土堆被点燃后会爆炸！",
+        "Console": [ "slurtlehole" ]
+      },
+      {
+        "Picture": "N_splumonkey_pod",
+        "Name": "暴躁猴群",
+        "EnName": "Splumonkey Pod",
+        "Creature": [
+          [
+            "A_splumonkey"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "G_manure|×2&Hammer",
+            "F_banana|×2&Hammer",
+            "T_gnome_1|×1(0.01%)&Hammer",
+            "T_gnome_2|×1(0.01%)&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_village",
+          "N_wilds"
+        ],
+        "Introduction": "暴躁猴群最多产生4只洞穴猴子。当地震或洞穴猴子被攻击时，暴躁猴群不会产生洞穴猴子。燃烧时其中的洞穴猴子都会跑出来。用锤子锤4次即可破坏。",
+        "Console": [ "monkeybarrel" ]
+      }
+    ] 
+  } 
 }
