@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:jsonDeserialize="clr-namespace:饥荒百科全书CSharp.Class.JsonDeserialize"
+      xmlns:uc="clr-namespace:饥荒百科全书CSharp.MyUserControl"
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="888"
       Title="SciencePage" SizeChanged="Page_SizeChanged">
@@ -16,7 +17,7 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Image x:Name="Image" Source="{Binding Picture}" Stretch="Uniform" />
-                    <TextBlock Grid.Row="1" Text="{Binding Name}" HorizontalAlignment="Center" />
+                    <uc:HrlTextBlock Grid.Row="1" Text="{Binding Name}" HorizontalAlignment="Center" />
                 </Grid>
             </Button>
         </DataTemplate>

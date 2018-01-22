@@ -30,15 +30,15 @@ namespace 饥荒百科全书CSharp.MyUserControl
         }
 
         public static readonly DependencyProperty SourceProperty =
-            DependencyProperty.Register("Source", typeof(string), typeof(PicButton), new PropertyMetadata(string.Empty, OnSourceChang));
+            DependencyProperty.Register("Source", typeof(string), typeof(PicButton), new PropertyMetadata(string.Empty, OnSourceChange));
 
-        private static void OnSourceChang(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnSourceChange(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (e.NewValue == null) return;
             var picButton = (PicButton)d;
             try
             {
-                picButton.PictureButtonImage.Source = new BitmapImage(new Uri((string)e.NewValue,UriKind.Relative));
+                picButton.PictureButtonImage.Source = new BitmapImage(new Uri((string)e.NewValue, UriKind.Relative));
             }
             catch
             {
@@ -57,9 +57,9 @@ namespace 饥荒百科全书CSharp.MyUserControl
         }
 
         public static readonly DependencyProperty TextProperty =
-            DependencyProperty.Register("Text", typeof(string), typeof(PicButton), new PropertyMetadata(string.Empty, OnTextChang));
+            DependencyProperty.Register("Text", typeof(string), typeof(PicButton), new PropertyMetadata(string.Empty, OnTextChange));
 
-        private static void OnTextChang(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnTextChange(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (e.NewValue == null) return;
             var picButton = (PicButton)d;
@@ -84,9 +84,9 @@ namespace 饥荒百科全书CSharp.MyUserControl
         }
 
         public static readonly DependencyProperty PictureSizeProperty =
-            DependencyProperty.Register("PictureSize", typeof(double), typeof(PicButton), new PropertyMetadata((double)35, OnPictureSizeChang));
+            DependencyProperty.Register("PictureSize", typeof(double), typeof(PicButton), new PropertyMetadata((double)35, OnPictureSizeChange));
 
-        private static void OnPictureSizeChang(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnPictureSizeChange(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (e.NewValue == null) return;
             var picButton = (PicButton)d;

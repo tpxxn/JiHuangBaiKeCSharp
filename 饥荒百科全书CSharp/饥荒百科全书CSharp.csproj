@@ -151,6 +151,9 @@
     <Compile Include="MyUserControl\DedicatedServer\DediSelectBox.xaml.cs">
       <DependentUpon>DediSelectBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\HrlTextBlock.xaml.cs">
+      <DependentUpon>HrlTextBlock.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\LoadingIndicators\LoadingIndicator.cs" />
     <Compile Include="MyUserControl\PicButton.xaml.cs">
       <DependentUpon>PicButton.xaml</DependentUpon>
@@ -377,6 +380,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\DedicatedServer\DediSelectBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\HrlTextBlock.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
