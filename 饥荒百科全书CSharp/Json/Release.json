@@ -1,6 +1,16 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.7.1",
+      "Data": "2018年1月22日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "皮肤菜单增加是否开启淡紫色光标选项"
+        }
+      ]
+    },
+    {
       "Version": "0.7.7.0",
       "Data": "2018年1月21日",
       "UpdataContent": [

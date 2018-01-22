@@ -139,7 +139,18 @@ namespace 饥荒百科全书CSharp
             _visiTimer.Tick += VisiTimerEvent;
             _visiTimer.Start();
             // 设置光标资源字典路径
-            CursorDictionary.Source = new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml", UriKind.Absolute);
+            if (SeCheckBoxLavenderCursor.IsChecked == true)
+            {
+                CursorDictionary.Source =
+                    new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
+                        UriKind.Absolute);
+            }
+            else
+            {
+                CursorDictionary.Source =
+                    new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DefaultCursorDictionary.xaml",
+                        UriKind.Absolute);
+            }
             // 显示窗口
             MwVisibility = true;
             // 窗口置顶

@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Drawing.Text;
 using System.Reflection;
 using System.Threading;
+using System.Windows.Controls;
 using System.Windows.Media;
 using 饥荒百科全书CSharp.Class;
 
@@ -68,24 +69,40 @@ namespace 饥荒百科全书CSharp
 
                 #region 淡紫色透明光标
                 var mainWindowLavenderCursor = RegeditRw.RegReadString("MainWindowLavenderCursor");
+                Debug.WriteLine(mainWindowLavenderCursor);
+                if (string.IsNullOrEmpty(mainWindowLavenderCursor)) { 
+                    mainWindowLavenderCursor = "True";
+                    RegeditRw.RegWrite("MainWindowLavenderCursor", "True");
+                }
+                ResourceDictionary CursorDictionary;
                 if (mainWindowLavenderCursor == "True")
                 {
-                    Current.Resources.MergedDictionaries.Add(new ResourceDictionary
+                    CursorDictionary = new ResourceDictionary
                     {
                         Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
                             UriKind.Absolute)
-                    });
+                    };
+                    Debug.WriteLine("淡紫色透明光标模式");
                 }
                 else
                 {
-                    Current.Resources.MergedDictionaries.Add(new ResourceDictionary
+                    CursorDictionary = new ResourceDictionary
                     {
                         Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/DefaultCursorDictionary.xaml",
                             UriKind.Absolute)
-                    });
+                    };
+                    Current.Resources.MergedDictionaries.Add(CursorDictionary);
+                    Debug.WriteLine("默认光标模式");
                 }
+                foreach (var key in CursorDictionary.Keys)
+                {
+                    var cursor = ((TextBlock)CursorDictionary[key]).Cursor;
+                    CursorDictionary.Remove(key);
+                    CursorDictionary.Add(key, cursor);
+                }
+                Current.Resources.MergedDictionaries.Add(CursorDictionary);
                 #endregion
 
                 #region 读取资源字典

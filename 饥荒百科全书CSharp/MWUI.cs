@@ -59,7 +59,7 @@ namespace 饥荒百科全书CSharp
             if (Mouse.LeftButton == MouseButtonState.Pressed) return;
             if (e.OriginalSource is FrameworkElement element && !element.Name.Contains("Resize"))
             {
-                Cursor = (Cursor)CursorDictionary["CursorPointer"];
+                Cursor = ((TextBlock)CursorDictionary["CursorPointer"]).Cursor;
             }
         }
 
@@ -71,28 +71,28 @@ namespace 饥荒百科全书CSharp
             switch (direction)
             {
                 case ResizeDirection.Left:
-                    Cursor = (Cursor)CursorDictionary["CursorHorz"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorHorz"]).Cursor;
                     break;
                 case ResizeDirection.Right:
-                    Cursor = (Cursor)CursorDictionary["CursorHorz"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorHorz"]).Cursor;
                     break;
                 case ResizeDirection.Top:
-                    Cursor = (Cursor)CursorDictionary["CursorVert"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorVert"]).Cursor;
                     break;
                 case ResizeDirection.Bottom:
-                    Cursor = (Cursor)CursorDictionary["CursorVert"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorVert"]).Cursor;
                     break;
                 case ResizeDirection.TopLeft:
-                    Cursor = (Cursor)CursorDictionary["CursorDgn1"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorDgn1"]).Cursor;
                     break;
                 case ResizeDirection.BottomRight:
-                    Cursor = (Cursor)CursorDictionary["CursorDgn1"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorDgn1"]).Cursor;
                     break;
                 case ResizeDirection.TopRight:
-                    Cursor = (Cursor)CursorDictionary["CursorDgn2"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorDgn2"]).Cursor;
                     break;
                 case ResizeDirection.BottomLeft:
-                    Cursor = (Cursor)CursorDictionary["CursorDgn2"];
+                    Cursor = ((TextBlock)CursorDictionary["CursorDgn2"]).Cursor;
                     break;
             }
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -129,7 +129,7 @@ namespace 饥荒百科全书CSharp
             }
             // 如果鼠标位置在标题栏内，允许拖动  
             if (e.LeftButton != MouseButtonState.Pressed || (!inUiGrid && !inRightGridFrame && !inDedicatedServerFrame)) return;
-            Cursor = (Cursor)CursorDictionary["CursorMove"];
+            Cursor = ((TextBlock)CursorDictionary["CursorMove"]).Cursor;
             DragMove();
         }
 
@@ -138,7 +138,7 @@ namespace 饥荒百科全书CSharp
         /// </summary>
         private void MainWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Cursor = (Cursor)CursorDictionary["CursorPointer"];
+            Cursor = ((TextBlock)CursorDictionary["CursorPointer"]).Cursor;
         }
 
         /// <summary>
@@ -399,7 +399,7 @@ namespace 饥荒百科全书CSharp
             copySplashWindow.InitializeComponent();
             copySplashWindow.ContentTextBlock.FontSize = 20;
             copySplashWindow.Show();
-            RegeditRw.RegWrite("MainWindowLavenderCursor", SeCheckBoxFontWeight.IsChecked.ToString());
+            RegeditRw.RegWrite("MainWindowLavenderCursor", SeCheckBoxLavenderCursor.IsChecked.ToString());
         }
 
         /// <summary>
