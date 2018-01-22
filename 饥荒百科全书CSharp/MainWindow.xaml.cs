@@ -27,23 +27,37 @@ namespace 饥荒百科全书CSharp
         /// 检查更新实例 update(网盘)
         /// </summary>
         public static UpdatePan UpdatePan = new UpdatePan();
-        // 注册快捷键
+
+        #region 注册快捷键
+        /// <summary>
+        /// 老板键
+        /// </summary>
         public HotKey BossKeyHotKey;
+
+        /// <summary>
+        /// 控制台快捷键
+        /// </summary>
         public HotKey ConsoleKeyHotKey;
+
+        /// <summary>
+        /// mainWindow句柄
+        /// </summary>
         public IntPtr intPtr;
+        #endregion
+
         #region "窗口可视化属性"
         private readonly Timer _visiTimer = new Timer();
 
-        public bool MwVisivility { get; set; }
+        public bool MwVisibility { get; set; }
 
         private void VisiTimerEvent(object sender, EventArgs e)
         {
-            Visibility = MwVisivility ? Visibility.Visible : Visibility.Collapsed;
+            Visibility = MwVisibility ? Visibility.Visible : Visibility.Collapsed;
         }
         #endregion
 
         /// <summary>
-        /// 窗口是否初始化属性
+        /// 窗口是否初始化
         /// </summary>
         public static bool MwInit { get; set; }
 
@@ -74,6 +88,8 @@ namespace 饥荒百科全书CSharp
             // 字体
             var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
             var mainWindowFontWeight = RegeditRw.RegReadString("MainWindowFontWeight");
+            // 淡紫色透明光标
+            var mainWindowLavenderCursor = RegeditRw.RegReadString("MainWindowLavenderCursor");
             // 设置菜单
             var winTopmost = RegeditRw.RegRead("Topmost");
             // 游戏版本
@@ -113,6 +129,8 @@ namespace 饥荒百科全书CSharp
             mainWindow.FontWeight = mainWindowFontWeight == "True" ? FontWeights.Bold : FontWeights.Normal;
             ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontWeight = mainWindow.FontWeight;
             Global.FontWeight = mainWindow.FontWeight;
+            // 设置淡紫色透明光标
+            SeCheckBoxLavenderCursor.IsChecked = mainWindowLavenderCursor == "True";
             // 版本初始化
             UiVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version;
             // 窗口可视化计时器
@@ -123,7 +141,7 @@ namespace 饥荒百科全书CSharp
             // 设置光标资源字典路径
             CursorDictionary.Source = new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml", UriKind.Absolute);
             // 显示窗口
-            MwVisivility = true;
+            MwVisibility = true;
             // 窗口置顶
             if (winTopmost == 1)
             {
@@ -246,20 +264,26 @@ namespace 饥荒百科全书CSharp
         }
 
         #region 热键方法
+        /// <summary>
+        /// 热键：老板键
+        /// </summary>
         private void hotKeyBosskey_OnHotKey()
         {
             if (mainWindow.NotifyIcon.Visible)
             {
-                mainWindow.MwVisivility = false;
+                mainWindow.MwVisibility = false;
                 mainWindow.NotifyIcon.Visible = false;
             }
             else
             {
-                mainWindow.MwVisivility = true;
+                mainWindow.MwVisibility = true;
                 mainWindow.NotifyIcon.Visible = true;
             }
         }
 
+        /// <summary>
+        /// 热键：控制台快捷输入
+        /// </summary>
         private static void hotKeyConsole_OnHotKey()
         {
             if (Global.ConsoleSendKey != null)

@@ -66,6 +66,7 @@ namespace 饥荒百科全书CSharp
                 }
                 #endregion
 
+                #region 淡紫色透明光标
                 var mainWindowLavenderCursor = RegeditRw.RegReadString("MainWindowLavenderCursor");
                 if (mainWindowLavenderCursor == "True")
                 {
@@ -85,6 +86,7 @@ namespace 饥荒百科全书CSharp
                             UriKind.Absolute)
                     });
                 }
+                #endregion
 
                 #region 读取资源字典
                 var resourceDictionaries = new Collection<ResourceDictionary>

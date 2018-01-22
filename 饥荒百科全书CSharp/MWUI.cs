@@ -315,7 +315,7 @@ namespace 饥荒百科全书CSharp
         private void Se_button_Update_Click(object sender, RoutedEventArgs e)
         {
             UiPopSetting.IsOpen = false;
-            MwVisivility = false;
+            MwVisibility = false;
             UpdatePan.UpdateNow();
         }
 
@@ -578,7 +578,7 @@ namespace 饥荒百科全书CSharp
                 if (Settings.HideToNotifyIcon)
                 {
                     NotifyIcon.ShowBalloonTip(1000);
-                    MwVisivility = false;
+                    MwVisibility = false;
                 }
                 else
                 {
@@ -773,7 +773,7 @@ namespace 饥荒百科全书CSharp
 
         private void NotifyIcon_Navigated(object sender, EventArgs e)
         {
-            MwVisivility = true;
+            MwVisibility = true;
             switch (((Button)sender).Name)
             {
                 case "CharacterButton":
@@ -839,11 +839,11 @@ namespace 饥荒百科全书CSharp
             // 左键显示隐藏界面
             if (e.Button == MouseButtons.Left)
             {
-                if (MwVisivility)
+                if (MwVisibility)
                 {
                     NotifyIcon.ShowBalloonTip(1000);
                 }
-                MwVisivility = !MwVisivility;
+                MwVisibility = !MwVisibility;
             }
             //右键打开菜单
             else if (e.Button == MouseButtons.Right)

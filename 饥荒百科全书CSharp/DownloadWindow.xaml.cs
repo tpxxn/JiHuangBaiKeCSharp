@@ -42,7 +42,7 @@ namespace 饥荒百科全书CSharp
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             // ReSharper disable once PossibleNullReferenceException
-            mainWindow.MwVisivility = true;
+            mainWindow.MwVisibility = true;
         }
     }
 }

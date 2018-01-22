@@ -35,7 +35,7 @@ namespace 饥荒百科全书CSharp.View.Dialog
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             if (HideToNotifyIconRadioButton.IsChecked == true)
             {
-                mainWindow.MwVisivility = false;
+                mainWindow.MwVisibility = false;
                 mainWindow.NotifyIcon.ShowBalloonTip(1000);
                 Settings.HideToNotifyIcon = true;
                 RegeditRw.RegWrite("HideToNotifyIcon", "True");
