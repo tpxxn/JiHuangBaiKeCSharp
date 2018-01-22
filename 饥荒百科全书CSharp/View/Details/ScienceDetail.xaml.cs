@@ -91,7 +91,11 @@ namespace 饥荒百科全书CSharp.View.Details
                 }
             }
             ScienceIntroduction.Text = c.Introduction;
-            ConsolePre.Text = $"c_give(\"{c.Console}\",";
+            // 控制台
+            if (string.IsNullOrEmpty(c.ConsoleCommand))
+                ConsolePre.Text = $"c_give(\"{c.Console}\",";
+            else
+                ConsolePre.Text = c.ConsoleCommand + $"(\"{c.Console}\",";
         }
 
         private string _unlockCharcter;

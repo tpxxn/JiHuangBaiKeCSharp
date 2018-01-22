@@ -249,7 +249,7 @@ namespace 饥荒百科全书CSharp
             var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
             if (hotkeyConsoleKeyControlKeys == 0 && hotkeyConsoleKeyMainKey == 0)
             {
-                hotkeyConsoleKeyControlKeys = 2; // Ctrl
+                hotkeyConsoleKeyControlKeys = 0;
                 hotkeyConsoleKeyMainKey = 0x71; // F2
             }
             ConsoleKeyHotKey = new HotKey(this, (Global.KeyModifiers)hotkeyConsoleKeyControlKeys, (Keys)hotkeyConsoleKeyMainKey);

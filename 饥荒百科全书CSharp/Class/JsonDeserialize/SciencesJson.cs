@@ -22,6 +22,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public string UnlockCharcter { get; set; }
         public string UnlockBlueprint { get; set; }
         public string Introduction { get; set; }
+        public string ConsoleCommand { get; set; }
         public string Console { get; set; }
 
         public Science()

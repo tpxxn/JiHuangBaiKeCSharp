@@ -122,6 +122,7 @@
         "Need2": "G_log",
         "Need2Value": 2,
         "Introduction": "素材要求比较低，随时可以设置用于照明、烤制食物、取暖。燃料消耗完后会消失留下灰烬。",
+        "ConsoleCommand": "c_spawn",
         "Console": "campfire"
       },
       {
@@ -133,6 +134,7 @@
         "Need2": "G_rocks",
         "Need2Value": 12,
         "Introduction": "需要较多的石头，但是燃烧效率和下雨天的影响都比营火优秀，且燃料消耗完后不会消失。",
+        "ConsoleCommand": "c_spawn",
         "Console": "firepit"
       },
       {
@@ -312,6 +314,7 @@
         "Need3Value": 3,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "供玩家睡觉，可使用6次，可同时恢复生命和精神。用过5次之后建议用锤子砸烂并回收部分建材。",
+        "ConsoleCommand": "c_spawn",
         "Console": "tent"
       },
       {
@@ -384,6 +387,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "素材要求比较低，前期可以弄几个来种植蔬菜。",
+        "ConsoleCommand": "c_spawn",
         "Console": "slow_farmplot"
       },
       {
@@ -398,6 +402,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "需要大量的素材，但是它是值得的，因为它的生长速度和施肥效率都是基本农场的2倍。",
+        "ConsoleCommand": "c_spawn",
         "Console": "fast_farmplot"
       },
       {
@@ -412,6 +417,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "可自行养殖蜜蜂生产蜂蜜，旁边需要用蝴蝶种植一些花朵蜜蜂采蜜才有效率，收蜜时小心蜜蜂攻击。",
+        "ConsoleCommand": "c_spawn",
         "Console": "beebox"
       },
       {
@@ -426,6 +432,7 @@
         "Need3Value": 3,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "可以把肉类风干，大肉和蝙蝠翅膀需要2天，其他肉需要1天，下雨暂停风干过程。",
+        "ConsoleCommand": "c_spawn",
         "Console": "meatrack"
       },
       {
@@ -440,6 +447,7 @@
         "Need3Value": 6,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "允许玩家把4份食材烹饪成料理，料理配方见食物表。",
+        "ConsoleCommand": "c_spawn",
         "Console": "cookpot"
       },
       {
@@ -454,6 +462,7 @@
         "Need3Value": 1,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "拥有9格的储存功能，只允许储藏食物和保温石，放进去的食物腐烂速度延缓50%。",
+        "ConsoleCommand": "c_spawn",
         "Console": "icebox"
       }
     ]
@@ -471,6 +480,7 @@
         "Need3": "G_rocks",
         "Need3Value": 4,
         "Introduction": "靠近后将暂时解锁玩家一级科技，完成对应物品制作将永久解锁该物品科技。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab"
       },
       {
@@ -485,6 +495,7 @@
         "Need3Value": 6,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "靠近后将暂时解锁玩家二级科技，完成对应物品制作将永久解锁该物品科技。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab2"
       },
       {
@@ -512,6 +523,7 @@
         "Need3Value": 0,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "显示当前温度，判断夏季和冬季来临时间。",
+        "ConsoleCommand": "c_spawn",
         "Console": "winterometer"
       },
       {
@@ -526,6 +538,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "显示当前湿度，判断下雨和下雪的来临时间。",
+        "ConsoleCommand": "c_spawn",
         "Console": "rainometer"
       },
       {
@@ -553,6 +566,7 @@
         "Need3Value": 0,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "引导雷电，使其不会劈到周围可燃物上，如果避雷针被雷电劈中，它连续几天都有静电且会发光。",
+        "ConsoleCommand": "c_spawn",
         "Console": "lightning_rod"
       },
       {
@@ -567,6 +581,7 @@
         "Need3Value": 6,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "仅存在于PSN/XBOX版本的东西，唯一目的就是增加一项成就。每激活25次就会放一次焰火，激活725次放更大的焰火并且获得成就__...and despair!",
+        "ConsoleCommand": "c_spawn",
         "Console": "accomploshrine"
       }
     ]
@@ -744,6 +759,7 @@
         "Need1Value": 3,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "拥有3×3格的储物箱子。",
+        "ConsoleCommand": "c_spawn",
         "Console": "treasurechest"
       },
       {
@@ -754,6 +770,7 @@
         "Need1Value": 1,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "放置后会显示在小地图上，可以标记一些重要地点。同时也是fast travel MOD的载体。",
+        "ConsoleCommand": "c_spawn",
         "Console": "homesign"
       },
       {
@@ -802,6 +819,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "建造一个猪人房，和野外的一样，合理运用地理位置，将会使自己基地多了一群守卫。",
+        "ConsoleCommand": "c_spawn",
         "Console": "pighouse"
       },
       {
@@ -816,6 +834,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "建造一个兔人房，和野外的一样，合理运用地理位置，将会使自己基地多了一群守卫。",
+        "ConsoleCommand": "c_spawn",
         "Console": "rabbithouse"
       },
       {
@@ -830,6 +849,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "可以把捕捉到的小鸟放置在鸟笼内，可以用作物与其兑换种子，用肉类兑换鸟蛋。",
+        "ConsoleCommand": "c_spawn",
         "Console": "birdcage"
       },
       {
@@ -886,6 +906,7 @@
         "Need2Value": 1,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "仅有装饰作用，且其材料仅有洞穴或风滚草才能获得。",
+        "ConsoleCommand": "c_spawn",
         "Console": "pottedfern"
       }
     ]
@@ -970,6 +991,7 @@
         "Need3Value": 1,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。解锁物品科技有10%的几率产生兔子，由于它们无家可归，所以很容易在夜晚捕捉。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab4"
       },
       {
@@ -984,6 +1006,7 @@
         "Need3Value": 7,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "靠近后将暂时解锁玩家二级魔法，完成对应物品制作将永久解锁该物品科技。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab3"
       },
       {
@@ -998,6 +1021,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "死亡后点击右上角 激活雕像 即可在此复活，每造一个都会减少40生命上限，一般造一个在家里就好了。",
+        "ConsoleCommand": "c_spawn",
         "Console": "resurrectionstatue"
       },
       {
@@ -1040,6 +1064,7 @@
         "Need3Value": 1,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "添加噩梦燃料便会燃烧，一个就能烧很久，但是太靠近暗影火炬会掉精神，因此这货并不是很好用。",
+        "ConsoleCommand": "c_spawn",
         "Console": "nightlight"
       },
       {
@@ -1186,6 +1211,7 @@
         "Need3Value": 8,
         "Unlock": [ "S_shadow_manipulator" ],
         "Introduction": "放置三枚紫宝石后开始工作，使用传送法杖的时候就会固定传送到该位置，由于成本太高，不太常用。(三角传送点：gemsocket)",
+        "ConsoleCommand": "c_spawn",
         "Console": "telebase"
       }
     ]
@@ -1553,6 +1579,7 @@
         "Need3Value": 5,
         "Unlock": [ "N_ancient_pseudoscience_station" ],
         "Introduction": "允许玩家部署眼球炮塔，它将是一个强大的防御型建筑，拥有1000点血量和65点攻击，每秒会自动恢复12点生命。靠得很近的时候会减少精神。",
+        "ConsoleCommand": "c_spawn",
         "Console": "eyeturret_item"
       }
     ]

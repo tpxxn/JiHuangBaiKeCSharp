@@ -202,6 +202,7 @@
         "Need2Value": 4,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "吸引附近的皮弗娄牛、电羊(带电电羊)和考拉象(冬考拉象)。这些生物会一直舔直到耗尽。当皮弗娄牛舔舐盐器时驯化水平不降低。一只皮弗娄牛15天消耗完，电羊(带电电羊)20天，考拉象(冬考拉象)7.5天。",
+        "ConsoleCommand": "c_spawn",
         "Console": "saltlick"
       }
     ]
@@ -217,6 +218,7 @@
         "Need2": "G_log",
         "Need2Value": 2,
         "Introduction": "素材要求比较低，随时可以设置用于照明、烤制食物、取暖。燃料消耗完后会消失留下灰烬。",
+        "ConsoleCommand": "c_spawn",
         "Console": "campfire"
       },
       {
@@ -228,6 +230,7 @@
         "Need2": "G_rocks",
         "Need2Value": 12,
         "Introduction": "需要较多的石头，但是燃烧效率和下雨天的影响都比营火优秀，且燃料消耗完后不会消失。",
+        "ConsoleCommand": "c_spawn",
         "Console": "firepit"
       },
       {
@@ -265,6 +268,7 @@
         "Need2Value": 2,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "夏天外出必备冰火降温，和萤火一样燃料消耗完后会消失。",
+        "ConsoleCommand": "c_spawn",
         "Console": "coldfire"
       },
       {
@@ -279,6 +283,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "需要较多的石头，但是燃烧效率和下雨天的影响都比冰火优秀，且燃料消耗完后不会消失。",
+        "ConsoleCommand": "c_spawn",
         "Console": "coldfirepit"
       },
       {
@@ -345,6 +350,7 @@
         "Need2Value": 1,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "击败剧毒蕈蟾随机掉落的蓝图解锁。内含四个格子，可以放置发光材料（荧光果和发光浆果、小发光浆果）。放入的物品会像放进冰箱一样延长保鲜时间。",
+        "ConsoleCommand": "c_spawn",
         "Console": "mushroom_light"
       },
       {
@@ -359,6 +365,7 @@
         "Need3Value": 1,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "击败剧毒蕈蟾随机掉落的蓝图解锁。内含四个格子，可以放置发光材料（荧光果、发光浆果、小发光浆果和三种颜色的孢子），放入孢子的颜色决定了发光的颜色，颜色有叠加效果。放入的物品会像放进冰箱一样延长保鲜时间。",
+        "ConsoleCommand": "c_spawn",
         "Console": "mushroom_light2"
       }
     ]
@@ -649,6 +656,7 @@
         "Need3Value": 3,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "供玩家睡觉，可使用6次，可同时恢复生命和精神。用过5次之后建议用锤子砸烂并回收部分建材。",
+        "ConsoleCommand": "c_spawn",
         "Console": "tent"
       },
       {
@@ -663,6 +671,7 @@
         "Need3Value": 3,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "白天睡觉恢复精神和生命，可使用6次，消耗的饥饿比帐篷低，可谓是恢复神器。",
+        "ConsoleCommand": "c_spawn",
         "Console": "siestahut"
       },
       {
@@ -720,6 +729,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "素材要求比较低，前期可以弄几个来种植蔬菜。",
+        "ConsoleCommand": "c_spawn",
         "Console": "slow_farmplot"
       },
       {
@@ -734,6 +744,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "需要大量的素材，但是它是值得的，因为它的生长速度和施肥效率都是基本农场的2倍。",
+        "ConsoleCommand": "c_spawn",
         "Console": "fast_farmplot"
       },
       {
@@ -762,6 +773,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "种植三种颜色蘑菇或三种颜色孢子可以在上面生长对应颜色的蘑菇。",
+        "ConsoleCommand": "c_spawn",
         "Console": "mushroom_farm"
       },
       {
@@ -776,6 +788,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "可自行养殖蜜蜂生产蜂蜜，旁边需要用蝴蝶种植一些花朵蜜蜂采蜜才有效率，收蜜时小心蜜蜂攻击。",
+        "ConsoleCommand": "c_spawn",
         "Console": "beebox"
       },
       {
@@ -790,6 +803,7 @@
         "Need3Value": 3,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "可以把肉类风干，大肉和蝙蝠翅膀需要2天，其他肉需要1天，下雨暂停风干过程。",
+        "ConsoleCommand": "c_spawn",
         "Console": "meatrack"
       },
       {
@@ -804,6 +818,7 @@
         "Need3Value": 6,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "允许玩家把4份食材烹饪成料理，料理配方见食物表。",
+        "ConsoleCommand": "c_spawn",
         "Console": "cookpot"
       },
       {
@@ -818,6 +833,7 @@
         "Need3Value": 1,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "拥有9格的储存功能，只允许储藏食物和保温石，放进去的食物腐烂速度延缓50%。",
+        "ConsoleCommand": "c_spawn",
         "Console": "icebox"
       }
     ]
@@ -835,6 +851,7 @@
         "Need3": "G_rocks",
         "Need3Value": 4,
         "Introduction": "靠近后将暂时解锁玩家一级科技，完成对应物品制作将永久解锁该物品科技。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab"
       },
       {
@@ -849,6 +866,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "靠近后将暂时解锁玩家二级科技，完成对应物品制作将永久解锁该物品科技。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab2"
       },
       {
@@ -875,6 +893,7 @@
         "Need3Value": 0,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "访问制图标签，制作地图卷轴。",
+        "ConsoleCommand": "c_spawn",
         "Console": "cartographydesk"
       },
       {
@@ -889,6 +908,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "访问雕塑标签，制作雕塑。",
+        "ConsoleCommand": "c_spawn",
         "Console": "sculptingtable"
       },
       {
@@ -902,6 +922,7 @@
         "Need3Value": 0,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "显示当前温度，判断夏季和冬季来临时间。",
+        "ConsoleCommand": "c_spawn",
         "Console": "winterometer"
       },
       {
@@ -916,6 +937,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "显示当前湿度，判断下雨和下雪的来临时间。",
+        "ConsoleCommand": "c_spawn",
         "Console": "rainometer"
       },
       {
@@ -943,6 +965,7 @@
         "Need3Value": 0,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "引导雷电，使其不会劈到周围可燃物上，如果避雷针被雷电劈中，它连续几天都有静电且会发光。",
+        "ConsoleCommand": "c_spawn",
         "Console": "lightning_rod"
       },
       {
@@ -957,6 +980,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "雪球发射机可以扑灭任何冒烟或者着火的物体并且降温，包括萤火、暗影火炬。任何燃料物质可以为其补充燃料。可以让农作物夏天也能收成。",
+        "ConsoleCommand": "c_spawn",
         "Console": "firesuppressor"
       }
     ]
@@ -1254,6 +1278,7 @@
         "Need1Value": 3,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "拥有3×3格的储物箱子。",
+        "ConsoleCommand": "c_spawn",
         "Console": "treasurechest"
       },
       {
@@ -1264,6 +1289,7 @@
         "Need1Value": 1,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "放置后会显示在小地图上，可以标记一些重要地点。同时也是fast travel MOD的载体。",
+        "ConsoleCommand": "c_spawn",
         "Console": "homesign"
       },
       {
@@ -1274,6 +1300,7 @@
         "Need1Value": 1,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "建造的时候切换视角可以改变指向的方向。",
+        "ConsoleCommand": "c_spawn",
         "Console": "arrowsign"
       },
       {
@@ -1364,6 +1391,7 @@
         "Need2Value": 3,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "顾名思义，换衣服用的啦！",
+        "ConsoleCommand": "c_spawn",
         "Console": "wardrobe"
       },
       {
@@ -1378,6 +1406,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "建造一个猪人房，和野外的一样，合理运用地理位置，将会使自己基地多了一群守卫。",
+        "ConsoleCommand": "c_spawn",
         "Console": "pighouse"
       },
       {
@@ -1392,6 +1421,7 @@
         "Need3Value": 4,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "建造一个兔人房，和野外的一样，合理运用地理位置，将会使自己基地多了一群守卫。",
+        "ConsoleCommand": "c_spawn",
         "Console": "rabbithouse"
       },
       {
@@ -1406,6 +1436,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "可以把捕捉到的小鸟放置在鸟笼内，可以用作物与其兑换种子，用肉类兑换鸟蛋。",
+        "ConsoleCommand": "c_spawn",
         "Console": "birdcage"
       },
       {
@@ -1420,6 +1451,7 @@
         "Need3Value": 3,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "可以打扮的稻草人，降低乌鸦的生成率，吸引金丝雀。",
+        "ConsoleCommand": "c_spawn",
         "Console": "scarecrow"
       },
       {
@@ -1488,6 +1520,7 @@
         "Need2Value": 1,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "种植松果、坚果或多枝的树的果实都可以长出圣诞树。冬季盛宴活动特有。",
+        "ConsoleCommand": "c_spawn",
         "Console": "winter_treestand"
       },
       {
@@ -1500,6 +1533,7 @@
         "Need2Value": 2,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "供奉上浆果灌木丛或者蜜汁浆果丛可以解锁年货标签。击杀火鸡掉落的福袋开出的金元宝是制作年货标签物品的必要道具。鸡年吉祥活动特有。",
+        "ConsoleCommand": "c_spawn",
         "Console": "perdshrine"
       },
       {
@@ -1512,6 +1546,7 @@
         "Need2Value": 1,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "仅有装饰作用，且其材料仅有洞穴或风滚草才能获得。",
+        "ConsoleCommand": "c_spawn",
         "Console": "pottedfern"
       },
       {
@@ -1524,6 +1559,7 @@
         "Need2Value": 1,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "仅有装饰作用，稀有蓝图解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "succulent_potted"
       },
       {
@@ -1538,6 +1574,7 @@
         "Need3Value": 2,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "夜晚靠近光源，用两个锤子敲碎获得稀有蓝图解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "endtable"
       },
       {
@@ -1548,6 +1585,7 @@
         "Need1Value": 1,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、花瓣、浆果、胡萝卜放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "ruinsrelic_plate"
       },
       {
@@ -1558,6 +1596,7 @@
         "Need1Value": 1,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、胡萝、浆果、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "ruinsrelic_plate"
       },
       {
@@ -1568,6 +1607,7 @@
         "Need1Value": 2,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、兔子、胡萝卜、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "ruinsrelic_plate"
       },
       {
@@ -1578,6 +1618,7 @@
         "Need1Value": 2,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、红宝石、蝴蝶、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "ruinsrelic_plate"
       },
       {
@@ -1588,6 +1629,7 @@
         "Need1Value": 3,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、紫宝石、兔子、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "ruinsrelic_plate"
       },
       {
@@ -1598,6 +1640,7 @@
         "Need1Value": 4,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、紫宝石、乌鸦、兔子放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
+        "ConsoleCommand": "c_spawn",
         "Console": "ruinsrelic_plate"
       },
       {
@@ -1612,6 +1655,7 @@
         "Need3Value": 10,
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "拥有3×4格的储物箱子，可以防火。材料极其难得。",
+        "ConsoleCommand": "c_spawn",
         "Console": "dragonflychest"
       },
       {
@@ -1626,6 +1670,7 @@
         "Need3Value": 1,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "杀死龙蝇获得蓝图。",
+        "ConsoleCommand": "c_spawn",
         "Console": "dragonflyfurnace"
       }
     ]
@@ -1773,6 +1818,7 @@
         "Need3Value": 1,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。解锁物品科技有10%的几率产生兔子，由于它们无家可归，所以很容易在夜晚捕捉。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab4"
       },
       {
@@ -1787,6 +1833,7 @@
         "Need3Value": 7,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "靠近后将暂时解锁玩家二级魔法，完成对应物品制作将永久解锁该物品科技。",
+        "ConsoleCommand": "c_spawn",
         "Console": "researchlab3"
       },
       {
@@ -1801,6 +1848,7 @@
         "Need3Value": -40,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "死亡后点击右上角 激活雕像 即可在此复活，每造一个都会减少40生命上限，一般造一个在家里就好了。",
+        "ConsoleCommand": "c_spawn",
         "Console": "resurrectionstatue"
       },
       {
@@ -1843,6 +1891,7 @@
         "Need3Value": 1,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "添加噩梦燃料便会燃烧，一个就能烧很久，但是太靠近暗影火炬会掉精神，因此这货并不是很好用。",
+        "ConsoleCommand": "c_spawn",
         "Console": "nightlight"
       },
       {
@@ -1989,6 +2038,7 @@
         "Need3Value": 8,
         "Unlock": [ "S_shadow_manipulator" ],
         "Introduction": "放置三枚紫宝石后开始工作，使用传送法杖的时候就会固定传送到该位置，由于成本太高，不太常用。(三角传送点：gemsocket)",
+        "ConsoleCommand": "c_spawn",
         "Console": "telebase"
       },
       {
@@ -2003,6 +2053,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "一个地图标记，用来显示附近的状况。",
+        "ConsoleCommand": "c_spawn",
         "Console": "sentryward"
       },
       {
@@ -2017,6 +2068,7 @@
         "Need3Value": 2,
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "查看月相。",
+        "ConsoleCommand": "c_spawn",
         "Console": "moondial"
       },
       {
@@ -2031,6 +2083,7 @@
         "Need3Value": 3,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "用于两个玩家传送。目的地的玩家先激活该装置(每分钟消耗50精神)，需要传送的玩家再激活该装置或者右键单击物品栏里的沙子石即可完成传送。",
+        "ConsoleCommand": "c_spawn",
         "Console": "townportal"
       }
     ]
@@ -2586,6 +2639,7 @@
         "Need3Value": 5,
         "Unlock": [ "N_ancient_pseudoscience_station" ],
         "Introduction": "允许玩家部署眼球炮塔，它将是一个强大的防御型建筑，拥有1000点血量和65点攻击，每秒会自动恢复12点生命。靠得很近的时候会减少精神。",
+        "ConsoleCommand": "c_spawn",
         "Console": "eyeturret_item"
       }
     ]

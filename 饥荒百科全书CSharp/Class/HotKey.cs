@@ -29,7 +29,6 @@ namespace 饥荒百科全书CSharp.Class
 
         private static readonly Hashtable KeyPair = new Hashtable();         //热键哈希表
         private const int WM_HOTKEY = 0x0312;       // 热键消息编号
-        private const int VkB = 0x42;
 
         #endregion
 
