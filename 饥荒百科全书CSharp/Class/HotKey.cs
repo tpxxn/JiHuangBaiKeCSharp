@@ -29,7 +29,6 @@ namespace 饥荒百科全书CSharp.Class
         private Window Window;     //热键所在窗体
 
         public delegate void OnHotKeyEventHandler();     //热键事件委托
-        public event OnHotKeyEventHandler OnHotKey;   //热键事件
 
         private static readonly Hashtable KeyPair = new Hashtable();         //热键哈希表
         private const int WM_HOTKEY = 0x0312;       // 热键消息编号
@@ -96,22 +95,21 @@ namespace 饥荒百科全书CSharp.Class
             if (KeyPair.ContainsKey(KeyId))
             {
                 MessageBox.Show("热键已被注册！");
-                return;
             }
             //注册热键
-            if (RegisterHotKey(Handle, KeyId, controlKey, mainKey) == false)
+            var RegisterHotKeyResult = RegisterHotKey(Handle, KeyId, controlKey, mainKey);
+            if (RegisterHotKeyResult == false)
             {
                 var controlKeysString = ControlKeyToString(controlKey);
                 Debug.WriteLine("mainKey：" + mainKey);
                 var keyString = controlKeysString + KeyToString(key);
                 MessageBox.Show(keyString + "热键注册失败，可能和其他软件冲突，请重新设置！");
-                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                var mainWindow = (MainWindow) Application.Current.MainWindow;
                 // ReSharper disable once PossibleNullReferenceException
                 mainWindow.DedicatedServerFrame.Visibility = Visibility.Collapsed;
                 mainWindow.RightFrame.Visibility = Visibility.Visible;
                 mainWindow.RightFrame.NavigationService.Navigate(new SettingPage());
                 mainWindow.SidebarSetting.IsChecked = true;
-                return;
             }
             //消息挂钩只能连接一次!!
             if (KeyPair.Count == 0)
@@ -120,7 +118,6 @@ namespace 饥荒百科全书CSharp.Class
                 {
                     throw new Exception("消息挂钩连接失败!");
                 }
-                return;
             }
             //添加这个热键索引
             KeyPair.Add(KeyId, this);
@@ -173,6 +170,11 @@ namespace 饥荒百科全书CSharp.Class
             source.AddHook(HotKeyHook);
             return true;
         }
+
+        /// <summary>
+        /// 热键事件
+        /// </summary>
+        public event OnHotKeyEventHandler OnHotKey;   
 
         /// <summary>
         /// 热键处理过程
