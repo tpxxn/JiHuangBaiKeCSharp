@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
+using 饥荒百科全书CSharp.MyUserControl;
 using 饥荒百科全书CSharp.View.Details;
 
 namespace 饥荒百科全书CSharp.View
@@ -38,6 +39,23 @@ namespace 饥荒百科全书CSharp.View
             RightScrollViewer.FontWeight = Global.FontWeight;
             var extraData = (string[])e.ExtraData;
             Deserialize();
+            // 小图标
+            if (Settings.SmallButtonMode)
+            {
+                UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, RightScrollViewer);
+                foreach (var button in resultList)
+                {
+                    button.Width = 120;
+                    button.Height = 200;
+                    ((Grid)button.Content).Margin = new Thickness(0);
+                    ((Grid)button.Content).RowDefinitions[0].Height = new GridLength(180);
+                    ((Grid)button.Content).Width = 120;
+                    ((Grid)button.Content).Height = 200;
+                    ((HrlTextBlock)((Grid)button.Content).Children[1]).HrlWidth = 120;
+                }
+            }
             if (extraData == null) return;
             var suggestBoxItemPicture = extraData[1];
             foreach (var itemsControlItem in Global.CharacterData)

@@ -21,7 +21,6 @@ using Application = System.Windows.Application;
 using Brushes = System.Windows.Media.Brushes;
 using Button = System.Windows.Controls.Button;
 using ContextMenu = System.Windows.Controls.ContextMenu;
-using Cursor = System.Windows.Input.Cursor;
 using FontFamily = System.Windows.Media.FontFamily;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 using MenuItem = System.Windows.Controls.MenuItem;
@@ -370,7 +369,6 @@ namespace 饥荒百科全书CSharp
             var textList = (from TextBlock textBlock in SeComboBoxFont.Items select textBlock.Text).ToList();
             mainWindow.FontFamily = new FontFamily(textList[SeComboBoxFont.SelectedIndex]);
             ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontFamily = mainWindow.FontFamily;
-            ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontWeight = mainWindow.FontWeight;
             Global.FontFamily = mainWindow.FontFamily;
             RightFrame.NavigationService.Navigate(new WelcomePage());
             SidebarWelcome.IsChecked = true;
@@ -384,6 +382,7 @@ namespace 饥荒百科全书CSharp
         {
             if (!LoadFont) return;
             mainWindow.FontWeight = SeCheckBoxFontWeight.IsChecked == true ? FontWeights.Bold : FontWeights.Normal;
+            ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontWeight = mainWindow.FontWeight;
             Global.FontWeight = mainWindow.FontWeight;
             RightFrame.NavigationService.Navigate(new WelcomePage());
             SidebarWelcome.IsChecked = true;

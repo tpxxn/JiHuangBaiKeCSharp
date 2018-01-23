@@ -97,6 +97,7 @@ namespace 饥荒百科全书CSharp
             // 设置
             Settings.HideToNotifyIcon = RegeditRw.RegReadString("HideToNotifyIcon") == "True";
             Settings.HideToNotifyIconPrompt = RegeditRw.RegReadString("HideToNotifyIconPrompt") == "True";
+            Settings.SmallButtonMode = RegeditRw.RegReadString("SmallButtonMode") == "True";
             #endregion
             // 初始化
             InitializeComponent();
@@ -239,20 +240,21 @@ namespace 饥荒百科全书CSharp
             var hotkeyBossKeyMainKey = RegeditRw.RegRead("HotkeyBossKeyMainKey");
             if (hotkeyBossKeyControlKeys == 0 && hotkeyBossKeyMainKey == 0)
             {
-                hotkeyBossKeyControlKeys = 3; // Ctrl + Alt
-                hotkeyBossKeyMainKey = 0x57; // W
+                hotkeyBossKeyControlKeys = 3; //Ctrl + Alt
+                RegeditRw.RegWrite("HotkeyBossKeyControlKeys", 3);
+                hotkeyBossKeyMainKey = 0x57; //W
+                RegeditRw.RegWrite("HotkeyBossKeyMainKey", 0x57);
             }
             BossKeyHotKey = new HotKey(this, (Global.KeyModifiers)hotkeyBossKeyControlKeys, (Keys)hotkeyBossKeyMainKey);
             BossKeyHotKey.OnHotKey += hotKeyBosskey_OnHotKey;
             // ConsoleKey
-            var hotkeyConsoleKeyControlKeys = RegeditRw.RegRead("HotkeyConsoleKeyControlKeys");
             var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
-            if (hotkeyConsoleKeyControlKeys == 0 && hotkeyConsoleKeyMainKey == 0)
+            if (hotkeyConsoleKeyMainKey == 0)
             {
-                hotkeyConsoleKeyControlKeys = 0;
                 hotkeyConsoleKeyMainKey = 0x71; // F2
+                RegeditRw.RegWrite("HotkeyConsoleKeyMainKey", 0x71);
             }
-            ConsoleKeyHotKey = new HotKey(this, (Global.KeyModifiers)hotkeyConsoleKeyControlKeys, (Keys)hotkeyConsoleKeyMainKey);
+            ConsoleKeyHotKey = new HotKey(this, 0, (Keys)hotkeyConsoleKeyMainKey);
             ConsoleKeyHotKey.OnHotKey += hotKeyConsole_OnHotKey;
             #endregion
             #region 加载字体

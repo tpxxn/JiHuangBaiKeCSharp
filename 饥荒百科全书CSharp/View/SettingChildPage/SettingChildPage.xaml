@@ -26,6 +26,13 @@
                     <RadioButton x:Name="ExitRadioButton" Content="退出饥荒百科全书" Margin="0,10,0,0" Cursor="{StaticResource CursorLink}" Click="NotifyIconRadioButton_OnClick" FontSize="16" HorizontalAlignment="Left"/>
                 </StackPanel>
             </StackPanel>
+            <StackPanel Margin="0,10,0,0">
+                <TextBlock Text="小按钮模式：" FontSize="20"/>
+                <StackPanel Margin="30,5,0,0" VerticalAlignment="Top">
+                    <RadioButton x:Name="SmallButtonModeCloseRadioButton" Content="关闭" Margin="0,10,0,0" Cursor="{StaticResource CursorLink}" Click="BigButtonModeRadioButton_OnClick" FontSize="16" HorizontalAlignment="Left"/>
+                    <RadioButton x:Name="SmallButtonModeOpenRadioButton" Content="开启" IsChecked="True" Cursor="{StaticResource CursorLink}" Click="BigButtonModeRadioButton_OnClick" FontSize="16" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>

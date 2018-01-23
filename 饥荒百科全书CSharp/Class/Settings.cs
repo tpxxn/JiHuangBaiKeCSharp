@@ -17,5 +17,10 @@ namespace 饥荒百科全书CSharp.Class
         /// 是否显示“是否隐藏到托盘图标”提示
         /// </summary>
         public static bool HideToNotifyIconPrompt { get; set; }
+
+        /// <summary>
+        /// 小图标模式
+        /// </summary>
+        public static bool SmallButtonMode { get; set; }
     }
 }

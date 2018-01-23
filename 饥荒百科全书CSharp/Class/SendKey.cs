@@ -61,7 +61,7 @@ namespace 饥荒百科全书CSharp.Class
         private static extern int PostMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
-        
+
         /// <summary>
         /// 切换输入法(Ctrl+Space)
         /// </summary>
@@ -240,6 +240,7 @@ namespace 饥荒百科全书CSharp.Class
                     var title = new StringBuilder(128);
                     GetWindowText(process.MainWindowHandle, title, title.Capacity);
                     var gameVersion = title.ToString() == "Don't Starve Together" ? "DST" : "DS";
+                    // 游戏窗口置顶
                     SetForegroundWindow(process.MainWindowHandle);
                     // 切换英文
                     System.Threading.Thread.Sleep(50);

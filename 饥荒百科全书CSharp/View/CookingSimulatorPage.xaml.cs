@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
+using 饥荒百科全书CSharp.MyUserControl;
 
 namespace 饥荒百科全书CSharp.View
 {
@@ -36,6 +37,23 @@ namespace 饥荒百科全书CSharp.View
             }
             CookingSimulatorLeftScrollViewer.FontWeight = Global.FontWeight;
             RightScrollViewer.FontWeight = Global.FontWeight;
+            // 小图标
+            if (Settings.SmallButtonMode)
+            {
+                UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, RightScrollViewer);
+                foreach (var button in resultList)
+                {
+                    button.Width = 65;
+                    button.Height = 70;
+                    ((Grid)button.Content).Margin = new Thickness(0);
+                    ((Grid)button.Content).RowDefinitions[0].Height = new GridLength(50);
+                    ((Grid)button.Content).Width = 65;
+                    ((Grid)button.Content).Height = 70;
+                    ((HrlTextBlock)((Grid)button.Content).Children[1]).HrlWidth = 65;
+                }
+            }
         }
 
         public CookingSimulatorPage()

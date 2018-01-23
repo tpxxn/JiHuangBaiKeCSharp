@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
+using 饥荒百科全书CSharp.MyUserControl;
 using 饥荒百科全书CSharp.View.Details;
 
 namespace 饥荒百科全书CSharp.View
@@ -38,6 +39,23 @@ namespace 饥荒百科全书CSharp.View
             RightScrollViewer.FontWeight = Global.FontWeight;
             var extraData = (string[])e.ExtraData;
             Deserialize();
+            // 小图标
+            if (Settings.SmallButtonMode)
+            {
+                UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, RightScrollViewer);
+                foreach (var button in resultList)
+                {
+                    button.Width = 85;
+                    button.Height = 90;
+                    ((Grid)button.Content).Margin = new Thickness(0);
+                    ((Grid)button.Content).RowDefinitions[0].Height = new GridLength(70);
+                    ((Grid)button.Content).Width = 85;
+                    ((Grid)button.Content).Height = 90;
+                    ((HrlTextBlock)((Grid)button.Content).Children[1]).HrlWidth = 85;
+                }
+            }
             if (extraData == null)
             {
                 LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), Global.NaturalBiomesData[0]);

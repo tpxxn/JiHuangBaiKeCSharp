@@ -19,7 +19,6 @@ using 饥荒百科全书CSharp.Class;
 using Application = System.Windows.Application;
 using Control = System.Windows.Forms.Control;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
-using MessageBox = System.Windows.MessageBox;
 
 namespace 饥荒百科全书CSharp.View.SettingChildPage
 {
@@ -56,24 +55,24 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             if (hotkeyBossKeyControlKeys == 0 && hotkeyBossKeyMainKey == 0)
             {
                 hotkeyBossKeyControlKeys = 3; //Ctrl + Alt
+                RegeditRw.RegWrite("HotkeyBossKeyControlKeys", 3);
                 hotkeyBossKeyMainKey = 0x57; //W
+                RegeditRw.RegWrite("HotkeyBossKeyMainKey", 0x57);
             }
             var BossKeyControlKeysString = ControlKeyToString(hotkeyBossKeyControlKeys);
             var BossKeyMainKey = DoubleToKey(hotkeyBossKeyMainKey);
             var BossKeyMainKeyString = KeyToString(BossKeyMainKey);
             SeBossKeyKey.Content = BossKeyControlKeysString + BossKeyMainKeyString;
             // 读取ConsoleKey设置
-            var hotkeyConsoleKeyControlKeys = RegeditRw.RegRead("HotkeyConsoleKeyControlKeys");
             var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
-            if (hotkeyConsoleKeyControlKeys == 0 && hotkeyConsoleKeyMainKey == 0)
+            if (hotkeyConsoleKeyMainKey == 0)
             {
-                hotkeyConsoleKeyControlKeys = 0;
                 hotkeyConsoleKeyMainKey = 0x71; // F2
+                RegeditRw.RegWrite("HotkeyConsoleKeyMainKey", 0x71);
             }
-            var ConsoleKeyControlKeysString = ControlKeyToString(hotkeyConsoleKeyControlKeys);
             var ConsoleKeyMainKey = DoubleToKey(hotkeyConsoleKeyMainKey);
             var ConsoleKeyMainKeyString = KeyToString(ConsoleKeyMainKey);
-            SeConsoleKeyKey.Content = ConsoleKeyControlKeysString + ConsoleKeyMainKeyString;
+            SeConsoleKeyKey.Content = ConsoleKeyMainKeyString;
             // 读取点击关闭按钮设置
             if (string.IsNullOrEmpty(RegeditRw.RegReadString("HideToNotifyIconPrompt")))
             {
@@ -88,6 +87,22 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
                 else
                 {
                     ExitRadioButton.IsChecked = true;
+                }
+            }
+            // 读取小图标模式设置
+            if (string.IsNullOrEmpty(RegeditRw.RegReadString("SmallButtonMode")))
+            {
+                SmallButtonModeCloseRadioButton.IsChecked = true;
+            }
+            else
+            {
+                if (Settings.SmallButtonMode)
+                {
+                    SmallButtonModeOpenRadioButton.IsChecked = true;
+                }
+                else
+                {
+                    SmallButtonModeCloseRadioButton.IsChecked = true;
                 }
             }
         }
@@ -196,12 +211,6 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
         {
             //主键值(文本)
             var mainKey = KeyToString(e.Key);
-            //Alt Ctrl Shift键判断
-            var pressAlt = (Control.ModifierKeys & Keys.Alt) == Keys.Alt ? (byte)1 : (byte)0;
-            var pressCtrl = (Control.ModifierKeys & Keys.Control) == Keys.Control ? (byte)2 : (byte)0;
-            var pressShift = (Control.ModifierKeys & Keys.Shift) == Keys.Shift ? (byte)4 : (byte)0;
-            var controlKeys = pressAlt + pressCtrl + pressShift;
-            var controlKeysString = ControlKeyToString(controlKeys);
             e.Handled = true;
             // 主键值
             var mainKeyValue = KeyToInt(e.Key);
@@ -209,12 +218,10 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             if (!string.IsNullOrEmpty(mainKey))
             {
-                SeConsoleKeyKey.Content = controlKeysString + mainKey;
-                var hotkeyConsoleKeyControlKeys = RegeditRw.RegRead("HotkeyConsoleKeyControlKeys");
+                SeConsoleKeyKey.Content = mainKey;
                 var hotkeyConsoleKeyMainKey = RegeditRw.RegRead("HotkeyConsoleKeyMainKey");
-                mainWindow.BossKeyHotKey.UnSetupHotKey(mainWindow.intPtr, (int)hotkeyConsoleKeyControlKeys + (int)hotkeyConsoleKeyMainKey * 10);
-                mainWindow.ConsoleKeyHotKey.SetupHotKey(mainWindow, (Global.KeyModifiers)controlKeys, (Keys)mainKeyValue);
-                RegeditRw.RegWrite("HotkeyConsoleKeyControlKeys", controlKeys);
+                mainWindow.BossKeyHotKey.UnSetupHotKey(mainWindow.intPtr, (int)hotkeyConsoleKeyMainKey * 10);
+                mainWindow.ConsoleKeyHotKey.SetupHotKey(mainWindow, 0, (Keys)mainKeyValue);
                 RegeditRw.RegWrite("HotkeyConsoleKeyMainKey", mainKeyValue);
                 var copySplashWindow = new CopySplashScreen("已保存");
                 copySplashWindow.InitializeComponent();
@@ -236,6 +243,26 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             {
                 Settings.HideToNotifyIcon = false;
                 RegeditRw.RegWrite("HideToNotifyIcon", "False");
+            }
+            var copySplashWindow = new CopySplashScreen("已保存");
+            copySplashWindow.InitializeComponent();
+            copySplashWindow.Show();
+        }
+
+        /// <summary>
+        /// 是否隐藏到托盘区
+        /// </summary>
+        private void BigButtonModeRadioButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (SmallButtonModeOpenRadioButton.IsChecked == true)
+            {
+                Settings.SmallButtonMode = true;
+                RegeditRw.RegWrite("SmallButtonMode", "True");
+            }
+            else if (SmallButtonModeCloseRadioButton.IsChecked == true)
+            {
+                Settings.SmallButtonMode = false;
+                RegeditRw.RegWrite("SmallButtonMode", "False");
             }
             var copySplashWindow = new CopySplashScreen("已保存");
             copySplashWindow.InitializeComponent();

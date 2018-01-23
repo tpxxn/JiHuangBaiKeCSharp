@@ -69,14 +69,19 @@ namespace 饥荒百科全书CSharp.MyUserControl
         private static void OnHrlWidthChange(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (e.NewValue == null) return;
-            var HrlTextBlock = (HrlTextBlock)d;
+            var hrlTextBlock = (HrlTextBlock)d;
             if ((double)e.NewValue > 0)
             {
-                HrlTextBlock.RectangleGeometry.Rect = new Rect(0, 0, (double)e.NewValue, 25.6);
+                hrlTextBlock.RectangleGeometry.Rect = new Rect(0, 0, (double)e.NewValue, 25.6);
+                var textWidth = hrlTextBlock.MeasureTextWidth(hrlTextBlock.TextBlock.FontSize);
+                hrlTextBlock.Grid.Width = textWidth;
+                hrlTextBlock.TextBlock.Width = textWidth;
+                if (textWidth > hrlTextBlock.HrlWidth)
+                    hrlTextBlock.CeaterAnimation();
             }
             else
             {
-                HrlTextBlock.RectangleGeometry.Rect = new Rect(0, 0, 80, 25.6);
+                hrlTextBlock.RectangleGeometry.Rect = new Rect(0, 0, 80, 25.6);
             }
         }
 

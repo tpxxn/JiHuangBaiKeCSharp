@@ -32,7 +32,7 @@ namespace 饥荒百科全书CSharp.View
             {
                 FontFamily = Global.FontFamily;
             }
-            foreach (var obj in RightGridWelcome.Children)
+            foreach (var obj in StackPanel.Children)
             {
                 if (obj.GetType() == typeof(Button))
                 {

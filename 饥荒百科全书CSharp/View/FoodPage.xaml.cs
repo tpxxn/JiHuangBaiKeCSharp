@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
+using 饥荒百科全书CSharp.MyUserControl;
 using 饥荒百科全书CSharp.View.Details;
 
 namespace 饥荒百科全书CSharp.View
@@ -29,6 +31,7 @@ namespace 饥荒百科全书CSharp.View
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
         {
+           
             if (_loadedTime != 0) return;
             _loadedTime++;
             if (Global.FontFamily != null)
@@ -38,6 +41,23 @@ namespace 饥荒百科全书CSharp.View
             RightScrollViewer.FontWeight = Global.FontWeight;
             var extraData = (string[])e.ExtraData;
             Deserialize();
+            // 小图标
+            if (Settings.SmallButtonMode)
+            {
+                UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, RightScrollViewer);
+                foreach (var button in resultList)
+                {
+                    button.Width = 65;
+                    button.Height = 70;
+                    ((Grid)button.Content).Margin = new Thickness(0);
+                    ((Grid)button.Content).RowDefinitions[0].Height = new GridLength(50);
+                    ((Grid)button.Content).Width = 65;
+                    ((Grid)button.Content).Height = 70;
+                    ((HrlTextBlock)((Grid)button.Content).Children[1]).HrlWidth = 65;
+                }
+            }
             if (extraData == null)
             {
                 LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), Global.FoodRecipeData[0]);
