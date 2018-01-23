@@ -31,8 +31,8 @@ namespace 饥荒百科全书CSharp
 #if DEBUG
                 Debug.WriteLine("App constructor");
 #endif
-                Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
-                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+                //Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+                //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 Startup += App_Startup;
             }
 
@@ -61,10 +61,7 @@ namespace 饥荒百科全书CSharp
 
                 #region 设置全局字体
                 var mainWindowFont = RegeditRw.RegReadString("MainWindowFont");
-                if (!string.IsNullOrEmpty(mainWindowFont))
-                {
-                    Global.FontFamily = new FontFamily(mainWindowFont);
-                }
+                Global.FontFamily = !string.IsNullOrEmpty(mainWindowFont) ? new FontFamily(mainWindowFont) : new FontFamily("微软雅黑");
                 #endregion
 
                 #region 淡紫色透明光标
