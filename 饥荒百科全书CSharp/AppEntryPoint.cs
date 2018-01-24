@@ -28,8 +28,8 @@ namespace 饥荒百科全书CSharp
         {
             public AppRun()
             {
-                Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
-                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+                //Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+                //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 Startup += App_Startup;
             }
 

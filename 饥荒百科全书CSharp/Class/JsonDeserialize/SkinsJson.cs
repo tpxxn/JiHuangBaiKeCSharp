@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
@@ -17,6 +19,8 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public static SolidColorBrush Loyal = new SolidColorBrush(Color.FromRgb(146, 180, 95));
         public static SolidColorBrush Timeless = new SolidColorBrush(Color.FromRgb(108, 193, 126));
         public static SolidColorBrush Event = new SolidColorBrush(Color.FromRgb(180, 148, 0));
+        public static SolidColorBrush ProofOfPurchase = new SolidColorBrush(Color.FromRgb(76, 122, 77));
+        public static SolidColorBrush Reward = new SolidColorBrush(Color.FromRgb(232, 151, 81));
     }
 
     public class Skin
@@ -29,12 +33,15 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public List<string> Colors { get; set; }
         public string Introduction { get; set; }
         public List<string> Introductions { get; set; }
+        // 绑定前景色
+        public SolidColorBrush Color { get; set; }
 
         public Skin()
         {
             Pictures = new List<string>();
             Colors = new List<string>();
             Introductions = new List<string>();
+            Color = new SolidColorBrush();
         }
     }
 

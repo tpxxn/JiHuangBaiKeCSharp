@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
 using 饥荒百科全书CSharp.MyUserControl;
+using 饥荒百科全书CSharp.View.Details;
 
 namespace 饥荒百科全书CSharp.View
 {
@@ -32,11 +33,11 @@ namespace 饥荒百科全书CSharp.View
         {
             if (_loadedTime != 0) return;
             _loadedTime++;
-            if (Global.FontFamily != null)
-            {
-                FontFamily = Global.FontFamily;
-            }
-            RightScrollViewer.FontWeight = Global.FontWeight;
+            //if (Global.FontFamily != null)
+            //{
+            //    FontFamily = Global.FontFamily;
+            //}
+            //RightScrollViewer.FontWeight = Global.FontWeight;
             Deserialize();
             // 小图标
             if (Settings.SmallButtonMode)
@@ -55,12 +56,13 @@ namespace 饥荒百科全书CSharp.View
                     ((HrlTextBlock)((Grid)button.Content).Children[1]).HrlWidth = 65;
                 }
             }
-            //LeftFrame.NavigationService.Navigate(new SkinsDetail(), Global.ScienceToolData[0]);
+            LeftFrame.NavigationService.Navigate(new SkinDetail(), Global.SkinsBodyData[0]);
         }
 
         public SkinsPage()
         {
             InitializeComponent();
+            Global.SkinLeftFrame = LeftFrame;
             Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
         }
 
@@ -74,8 +76,7 @@ namespace 饥荒百科全书CSharp.View
         private void SkinsButton_Click(object sender, RoutedEventArgs e)
         {
             var skin = (Skin)((Button)sender).DataContext;
-            //TODO 页面跳转
-            //LeftFrame.NavigationService.Navigate(new SkinsDetail(), skin);
+            LeftFrame.NavigationService.Navigate(new SkinDetail(), skin);
         }
 
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)

@@ -694,12 +694,14 @@ namespace 饥荒百科全书CSharp.Class
             foreach (var skinsBodyItem in skins.Body.Skin)
             {
                 skinsBodyItem.Picture = StringProcess.GetGameResourcePath(skinsBodyItem.Picture);
+                skinsBodyItem.Color = GetSkinColor(skinsBodyItem.Rarity);
                 SkinsBodyData.Add(skinsBodyItem);
                 AutoSuggestBoxItemSourceAdd(skinsBodyItem, "SkinsBody");
             }
             foreach (var skinsHandsItem in skins.Hands.Skin)
             {
                 skinsHandsItem.Picture = StringProcess.GetGameResourcePath(skinsHandsItem.Picture);
+                skinsHandsItem.Color = GetSkinColor(skinsHandsItem.Rarity);
                 SkinsHandsData.Add(skinsHandsItem);
                 AutoSuggestBoxItemSourceAdd(skinsHandsItem, "SkinsHands");
             }
@@ -712,6 +714,41 @@ namespace 饥荒百科全书CSharp.Class
                 AutoSuggestBoxItem.Add(item);
             }
             #endregion
+        }
+
+        /// <summary>
+        /// 获取皮肤Color属性
+        /// </summary>
+        /// <param name="rarity">稀有度</param>
+        /// <returns>Color</returns>
+        public static SolidColorBrush GetSkinColor(string rarity)
+        {
+            Debug.WriteLine("Rarity：" + rarity);
+            switch (rarity)
+            {
+                case "Common":
+                    return SkinsColors.Common;
+                case "Classy":
+                    return SkinsColors.Classy;
+                case "Spiffy":
+                    return SkinsColors.Spiffy;
+                case "Distinguished":
+                    return SkinsColors.Distinguished;
+                case "Elegant":
+                    return SkinsColors.Elegant;
+                case "Loyal":
+                    return SkinsColors.Loyal;
+                case "Timeless":
+                    return SkinsColors.Timeless;
+                case "Event":
+                    return SkinsColors.Event;
+                case "Proof of Purchase":
+                    return SkinsColors.ProofOfPurchase;
+                case "Reward":
+                    return SkinsColors.Reward;
+                default:
+                    return new SolidColorBrush(Colors.Black);
+            }
         }
 
         /// <summary>

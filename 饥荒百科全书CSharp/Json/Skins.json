@@ -2,11 +2,7 @@
   "Body": {
     "Skin": [
       {
-        "Picture": "P_t_shirt",
-        "Pictures": [
-          "N_rabbit_hole",
-          "N_rabbit_hole_collapsed"
-        ],
+        "Picture": "P_cumulus_gray_t_shirt",
         "Name": "T恤",
         "EnName": "T Shirt",
         "Rarity": "Common",
@@ -17,27 +13,48 @@
           "Smoke White"
         ],
         "Introduction": "A '{Color}' colored shirt. Wilson is working on a W-shirt, but this prototype came out more T-shaped."
+      },
+      {
+        "Picture": "P_higgsbury_red_pleated_shirt",
+        "Name": "褶条衬衫",
+        "EnName": "Pleated Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Higgsbury Red",
+          "Pure White",
+          "Follicle Yellow"
+        ],
+        "Introduction": "Get your glad rags on with this '{Color}' colored shirt."
+      },
+      {
+        "Picture": "P_electrolytic_blue_lumberjack_shirt",
+        "Name": "伐木工衬衫",
+        "EnName": "Lumberjack Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Electrolytic Blue",
+          "Lumberjack Orange",
+          "Tentacle Purple",
+          "Being Uneasy Green"
+        ],
+        "Introduction": "Well, it's not buckskin but it's still skookum. It's '{Color}' colored with no foofaraw."
       }
     ]
   },
   "Hands": {
     "Skin": [
       {
-        "Picture": "P_t_shirt",
-        "Pictures": [
-          "N_rabbit_hole",
-          "N_rabbit_hole_collapsed"
-        ],
-        "Name": "T恤",
-        "EnName": "T Shirt",
+        "Picture": "P_scribble_black_hand_covers",
+        "Name": "手套",
+        "EnName": "Hand Covers",
         "Rarity": "Common",
         "Colors": [
-          "Cumulus Gray",
-          "Snail Mucus Purple",
+          "Scribble Black",
+          "Rubber Glove Blue",
           "Higgsbury Red",
           "Smoke White"
         ],
-        "Introduction": "A '{Color}' colored shirt. Wilson is working on a W-shirt, but this prototype came out more T-shaped."
+        "Introduction": "These are gloves. They cover your hands. This pair is '{Color}' colored."
       }
     ]
   }

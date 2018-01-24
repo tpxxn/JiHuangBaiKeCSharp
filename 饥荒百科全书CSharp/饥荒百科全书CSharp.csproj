@@ -233,6 +233,9 @@
     <Compile Include="View\Details\ScienceDetail.xaml.cs">
       <DependentUpon>ScienceDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Details\SkinDetail.xaml.cs">
+      <DependentUpon>SkinDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FoodPage.xaml.cs">
       <DependentUpon>FoodPage.xaml</DependentUpon>
     </Compile>
@@ -492,6 +495,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Details\ScienceDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\SkinDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
