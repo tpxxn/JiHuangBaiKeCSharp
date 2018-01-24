@@ -106,6 +106,9 @@ namespace 饥荒百科全书CSharp.Class
                 case "T":
                     str = $"/Resources/GameResources/Goods/{str}.png";
                     break;
+                case "P":
+                    str = $"/Resources/GameResources/Skins/{str}.png";
+                    break;
             }
             return str;
         }
