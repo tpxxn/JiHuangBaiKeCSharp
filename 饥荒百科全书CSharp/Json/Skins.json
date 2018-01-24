@@ -38,6 +38,784 @@
           "Being Uneasy Green"
         ],
         "Introduction": "Well, it's not buckskin but it's still skookum. It's '{Color}' colored with no foofaraw."
+      },
+      {
+        "Picture": "P_schematic_blue_buttoned_shirt",
+        "Name": "纽扣衬衫",
+        "EnName": "Buttoned Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Schematic Blue",
+          "Willful Green",
+          "Pigman Pink",
+          "Ghost White",
+          "Disilluminated Black"
+        ],
+        "Introduction": "A shirt that buttons up the front, in a '{Color}' color. Luckily for you, the fabric is a non-iron material. Unfortunately, the placket will still wrinkle as you wear it."
+      },
+      {
+        "Picture": "P_hyper_intelligent_blue_collared_shirt",
+        "Name": "有领衬衫",
+        "EnName": "Collared Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Hyper-Intelligent Blue",
+          "Higgsbury Red",
+          "Marble White",
+          "Downright Neighborly Yellow",
+          "Fishy Tincture Orange"
+        ],
+        "Introduction": "A '{Color}' colored polo shirt. Don't let your collar flap in the wind."
+      },
+      {
+        "Picture": "P_disilluminated_black_cardigan",
+        "Name": "开襟毛衫",
+        "EnName": "Cardigan",
+        "Rarity": "Classy",
+        "Colors": [
+          "Disilluminated Black",
+          "Combobulated Red",
+          "Doydoy Teal",
+          "Ghost White"
+        ],
+        "Introduction": "A '{Color}' colored cardigan. As soft as it is comfortable."
+      },
+      {
+        "Picture": "P_pigman_pink_suspension_shirt",
+        "Name": "挂带衬衫",
+        "EnName": "Suspension Shirt",
+        "Rarity": "Classy",
+        "Colors": [
+          "Pigman Pink",
+          "Pure White",
+          "Follicle Yellow"
+        ],
+        "Introduction": "Wearing this '{Color}' colored shirt makes you feel like the cat's pajamas."
+      },
+      {
+        "Picture": "P_electrolytic_blue_sweater_vest",
+        "Name": "毛衣背心",
+        "EnName": "Sweater Vest",
+        "Rarity": "Classy",
+        "Colors": [
+          "Electrolytic Blue",
+          "Werebeaver Brown",
+          "Cumulus Gray",
+          "Firehound Red",
+          "Forest Guardian Green"
+        ],
+        "Introduction": "An '{Color}' colored vest made of the finest beefalo wool. Unfortunately, it's not actually warm."
+      },
+      {
+        "Picture": "P_insufficient_chocolate_brown_tweed_waistcoat",
+        "Name": "粗花呢背心",
+        "EnName": "Tweed Waistcoat",
+        "Rarity": "Classy",
+        "Colors": [
+          "Insufficient Chocolate Brown",
+          "Forest Guardian Green",
+          "Colloidal Silver Gray",
+          "Dry Grass Tan",
+          "Lightning Goat Blue"
+        ],
+        "Introduction": "Don't get lost in the tweeds wearing this '{Color}' colored souvenir from the Village of Tweed."
+      },
+      {
+        "Picture": "P_werebeaver_brown_trench_coat",
+        "Name": "风衣",
+        "EnName": "Trench Coat",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Werebeaver Brown",
+          "Sulfuric Yellow"
+        ],
+        "Introduction": "A fashionable but unprotective trench coat in a '{Color}' color."
+      },
+      {
+        "Picture": "P_scribble_black_overalls",
+        "Name": "工作服",
+        "EnName": "Overalls",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Scribble Black",
+          "Hyper-Intelligent Blue",
+          "Unsuitably Blue"
+        ],
+        "Introduction": "These sturdy '{Color}' colored overalls are great for plumbing the depths."
+      },
+      {
+        "Picture": "P_snail_mucus_purple_jammie_shirt",
+        "Name": "杰米衬衫",
+        "EnName": "Jammie Shirt",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Snail Mucus Purple",
+          "High pH Blue"
+        ],
+        "Introduction": "Don't worry if this '{Color}' colored pajama top is too big on you. That just makes it cuter."
+      },
+      {
+        "Picture": "P_pure_white_toga",
+        "Name": "宽外袍",
+        "EnName": "Toga",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Pure White"
+        ],
+        "Introduction": "As they say, \"when in Rome\"!"
+      },
+      {
+        "Picture": "P_downright_neighborly_yellow_sleeveless_blouse",
+        "Name": "无袖衬衫",
+        "EnName": "Sleeveless Blouse",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Downright Neighborly Yellow"
+        ],
+        "Introduction": "This 'downright neighborly yellow' top just screams \"springtime\"! Seriously. Please make it stop screaming."
+      },
+      {
+        "Picture": "P_combobulated_red_quilted_outerwear",
+        "Name": "绗缝外套",
+        "EnName": "Quilted Outerwear",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Combobulated Red"
+        ],
+        "Introduction": "A majestic quilted outfit with just the right amount of poofiness."
+      },
+      {
+        "Picture": "P_high_elevation_blue_silk_robe",
+        "Name": "丝绸长袍",
+        "EnName": "Silk Robe",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "High Elevation Blue",
+          "Ewecus Pink",
+          "Rump Red",
+          "Downright Neighborly Yellow"
+        ],
+        "Introduction": "So smooth, you'll never want to let go of this '{Color}' colored robe."
+      },
+      {
+        "Picture": "P_dainty_coatdress",
+        "Name": "精致外衣",
+        "EnName": "Dainty Coatdress",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Higgsbury Red"
+        ],
+        "Introduction": "A cute and snuggly coat dress in \"Higgsbury red\"."
+      },
+      {
+        "Picture": "P_disilluminated_black_silk_loungewear",
+        "Name": "丝绸便服",
+        "EnName": "Silk Loungewear",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Disilluminated Black",
+          "Willful Green",
+          "Apidae Maxwellius Red",
+          "Marble White"
+        ],
+        "Introduction": "Bathe under the new moon in comfort and luxury with this silk '{Color}' colored loungewear."
+      },
+      {
+        "Picture": "P_anthropomorphic_feline_blue_nightgown",
+        "Name": "睡衣",
+        "EnName": "Nightgown",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Anthropomorphic Feline Blue",
+          "Peripeteia Purple"
+        ],
+        "Introduction": "It might look a bit itchy, but this '{Color}' nightgown is actually the coziest thing in the world."
+      },
+      {
+        "Picture": "P_no_tan_lines_tan_flouncy_dress",
+        "Name": "荷边花裙",
+        "EnName": "Flouncy Dress",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "No-Tan-Lines Tan"
+        ],
+        "Introduction": "Flouncy, bouncy, and so much fun!"
+      },
+      {
+        "Picture": "P_pure_white_yachtsuit_dress",
+        "Name": "游艇服饰",
+        "EnName": "Yachtsuit Dress",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Pure White"
+        ],
+        "Introduction": "\"Yacht not included.\""
+      },
+      {
+        "Picture": "P_fishy_tincture_orange_shearling_coat",
+        "Name": "毛绒大衣",
+        "EnName": "Shearling Coat",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Fishy Tincture Orange"
+        ],
+        "Introduction": "The floofy collar of this 'fishy tincture orange' coat won't keep you any warmer, but it looks incredible!"
+      },
+      {
+        "Picture": "P_monastral_blue_toggle_jacket",
+        "Name": "索扣夹克",
+        "EnName": "Toggle Jacket",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Monastral Blue"
+        ],
+        "Introduction": "This is one of those jackets where the pockets are just decorative. Oh well, at least it looks nice."
+      },
+      {
+        "Picture": "P_tuxedo",
+        "Name": "晚礼服",
+        "EnName": "Tuxedo",
+        "Rarity": "Distinguished",
+        "Introduction": "Some events ask for white tie, and some ask for black tie. Well, this is red tie."
+      },
+      {
+        "Picture": "P_cocktail_dress",
+        "Name": "鸡尾酒会礼服",
+        "EnName": "Cocktail Dress",
+        "Rarity": "Distinguished",
+        "Introduction": "Everybody needs a little black dress. (Conveniently, it hides ash stains.)"
+      },
+      {
+        "Picture": "P_mess_dress",
+        "Name": "食堂礼服",
+        "EnName": "Mess Dress",
+        "Rarity": "Distinguished",
+        "Introduction": "Formal dinner attire for military officers."
+      },
+      {
+        "Picture": "P_party_frock",
+        "Name": "派对连衣裙",
+        "EnName": "Party Frock",
+        "Rarity": "Distinguished",
+        "Introduction": "A cute party dress with puffed sleeves."
+      },
+      {
+        "Picture": "P_formal_body_shell",
+        "Name": "正礼机身",
+        "EnName": "Formal Body Shell",
+        "Rarity": "Distinguished",
+        "Introduction": "But of course it has a cummerbund."
+      },
+      {
+        "Picture": "P_ball_gown",
+        "Name": "舞会袍",
+        "EnName": "Ball Gown",
+        "Rarity": "Distinguished",
+        "Introduction": "Be the life of the party in this gray silk ball gown."
+      },
+      {
+        "Picture": "P_canadian_jacket",
+        "Name": "加拿大夹克",
+        "EnName": "Canadian Jacket",
+        "Rarity": "Distinguished",
+        "Introduction": "A real Canadian Jacket, made for real Canadians. (Not out of real Canadians.)"
+      },
+      {
+        "Picture": "P_evening_attire",
+        "Name": "晚礼服",
+        "EnName": "Evening Attire",
+        "Rarity": "Distinguished",
+        "Introduction": "A fancy flowing shirt with formal trousers."
+      },
+      {
+        "Picture": "P_striking_tuxedo",
+        "Name": "引人注目的礼服",
+        "EnName": "Striking Tuxedo",
+        "Rarity": "Distinguished",
+        "Introduction": "The delightful aroma of mothballs and decay wafts off it."
+      },
+      {
+        "Picture": "P_valkyrie_armor",
+        "Name": "瓦尔基里盔甲",
+        "EnName": "Valkyrie Armor",
+        "Rarity": "Distinguished",
+        "Introduction": "Be a knight in shining armor. Or at least look like one. (It's just a costume, not real armor.)"
+      },
+      {
+        "Picture": "P_formal_jacket",
+        "Name": "正式夹克",
+        "EnName": "Formal Jacket",
+        "Rarity": "Distinguished",
+        "Introduction": "A black blazer with a red scarf."
+      },
+      {
+        "Picture": "P_skirt_and_blazer",
+        "Name": "裙式外套",
+        "EnName": "Skirt and Blazer",
+        "Rarity": "Distinguished",
+        "Introduction": "A formal blazer and matching skirt for a sensible party gal."
+      },
+      {
+        "Picture": "P_rumpled_outfit",
+        "Name": "皱破的服装",
+        "EnName": "Rumpled Outfit",
+        "Rarity": "Distinguished",
+        "Introduction": "This outfit may have been attacked by weevils. Or something worse."
+      },
+      {
+        "Picture": "P_raggedy_rags",
+        "Name": "破烂的衣服",
+        "EnName": "Raggedy Rags",
+        "Rarity": "Distinguished",
+        "Introduction": "These clothes aren't good for anything except fueling a fire."
+      },
+      {
+        "Picture": "P_patched_bodysuit",
+        "Name": "补丁紧身衣",
+        "EnName": "Patched Bodysuit",
+        "Rarity": "Distinguished",
+        "Introduction": "Wearing fur makes you feel like mighty animal!"
+      },
+      {
+        "Picture": "P_shredded_skirt",
+        "Name": "破碎的裙子",
+        "EnName": "Shredded Skirt",
+        "Rarity": "Distinguished",
+        "Introduction": "This skirt has had a close brush with the forces of darkness."
+      },
+      {
+        "Picture": "P_battered_body_case",
+        "Name": "重创的机身",
+        "EnName": "Battered Body Case",
+        "Rarity": "Distinguished",
+        "Introduction": "It may have seen better days, but this body is still minimally functional."
+      },
+      {
+        "Picture": "P_tattered_togs",
+        "Name": "破烂的衣服",
+        "EnName": "Tattered Togs",
+        "Rarity": "Distinguished",
+        "Introduction": "Living outdoors may be healthy, but it's sure hard on your clothing."
+      },
+      {
+        "Picture": "P_grubby_gear",
+        "Name": "肮脏的衣服",
+        "EnName": "Grubby Gear",
+        "Rarity": "Distinguished",
+        "Introduction": "Trees are great, but clothing doesn't grow on them."
+      },
+      {
+        "Picture": "P_threadbare_clothing",
+        "Name": "破旧的衣服",
+        "EnName": "Threadbare Clothing",
+        "Rarity": "Distinguished",
+        "Introduction": "If these clothes could talk just imagine the stories they would tell."
+      },
+      {
+        "Picture": "P_frayed_finery",
+        "Name": "破损的服饰",
+        "EnName": "Frayed Finery",
+        "Rarity": "Distinguished",
+        "Introduction": "A tragic end to a once-dapper three piece suit."
+      },
+      {
+        "Picture": "P_torn_costume",
+        "Name": "损坏的战服",
+        "EnName": "Torn Costume",
+        "Rarity": "Distinguished",
+        "Introduction": "This costume looks a little the worse for wear, but the performance must go on."
+      },
+      {
+        "Picture": "P_bandaged_body",
+        "Name": "缠着绷带的身体",
+        "EnName": "Bandaged Body",
+        "Rarity": "Distinguished",
+        "Introduction": "Spiderwebs are pretty useful for bandaging scrapes."
+      },
+      {
+        "Picture": "P_worn_workwear",
+        "Name": "用坏的工作服",
+        "EnName": "Worn Workwear",
+        "Rarity": "Distinguished",
+        "Introduction": "You're just about overall this wilderness survival."
+      },
+      {
+        "Picture": "P_shadow_suit",
+        "Name": "非暗影礼服",
+        "EnName": "Shadow Suit",
+        "Rarity": "Distinguished",
+        "Introduction": "A suit made of shadows. Quite the opposite of flashy."
+      },
+      {
+        "Picture": "P_shadow_dress",
+        "Name": "暗影连衣裙",
+        "EnName": "Shadow Dress",
+        "Rarity": "Distinguished",
+        "Introduction": "This dress flickers as if it were on fire... If that fire were made of shadows."
+      },
+      {
+        "Picture": "P_shadow_jumpsuit",
+        "Name": "暗影连衣服",
+        "EnName": "Shadow Jumpsuit",
+        "Rarity": "Distinguished",
+        "Introduction": "These clothes put hair on your chest."
+      },
+      {
+        "Picture": "P_shadow_frock",
+        "Name": "暗影连衣裙",
+        "EnName": "Shadow Frock",
+        "Rarity": "Distinguished",
+        "Introduction": "Finally the darkness envelops you, as you always knew it would."
+      },
+      {
+        "Picture": "P_shadow_chassis",
+        "Name": "暗影机身",
+        "EnName": "Shadow Chassis",
+        "Rarity": "Distinguished",
+        "Introduction": "A dark automaton chassis with a lovely decorative gemstone."
+      },
+      {
+        "Picture": "P_shadow_gown",
+        "Name": "暗影长袍",
+        "EnName": "Shadow Gown",
+        "Rarity": "Distinguished",
+        "Introduction": "This dress is made from many shadow fragments sewn together."
+      },
+      {
+        "Picture": "P_shadow_fellers_kit",
+        "Name": "暗影伐木工的衣服",
+        "EnName": "Shadow Feller's Kit",
+        "Rarity": "Distinguished",
+        "Introduction": "Clothes for leaping from tree to tree and eating buttered scones."
+      },
+      {
+        "Picture": "P_cool_shadow_clothes",
+        "Name": "酷影衣服",
+        "EnName": "Cool Shadow Clothes",
+        "Rarity": "Distinguished",
+        "Introduction": "Dark clothes for cool people."
+      },
+      {
+        "Picture": "P_unshadow_suit",
+        "Name": "非暗影礼服",
+        "EnName": "Unshadow Suit",
+        "Rarity": "Distinguished",
+        "Introduction": "This look hearkens back to a simpler time. You are missed, Charlie."
+      },
+      {
+        "Picture": "P_shadow_armor",
+        "Name": "暗影盔甲",
+        "EnName": "Shadow Armor",
+        "Rarity": "Distinguished",
+        "Introduction": "Dark armor. It looks nice, but unfortunately shadows have no substance."
+      },
+      {
+        "Picture": "P_shadow_spider_body",
+        "Name": "暗影蜘蛛身体",
+        "EnName": "Shadow Spider Body",
+        "Rarity": "Distinguished",
+        "Introduction": "The hollowed out body of an elegant black widow."
+      },
+      {
+        "Picture": "P_shadow_coverall",
+        "Name": "暗影罩衣",
+        "EnName": "Shadow Coverall",
+        "Rarity": "Distinguished",
+        "Introduction": "Blood is thicker than water. Oil is thicker than both."
+      },
+      {
+        "Picture": "P_pig_guard_costume_top",
+        "Name": "猪人守卫套装",
+        "EnName": "Pig Guard Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Dress up like an intimidating Pig Guard for Hallowed Nights!"
+      },
+      {
+        "Picture": "P_dragonfly_costume_top",
+        "Name": "龙蝇套装",
+        "EnName": "Dragonfly Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Be a terrifying Dragonfly for Hallowed Nights!"
+      },
+      {
+        "Picture": "P_mactusk_costume_top",
+        "Name": "海象套装",
+        "EnName": "MacTusk Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Dress up as an old MacTusk for Hallowed Nights!"
+      },
+      {
+        "Picture": "P_lureplant_costume_top",
+        "Name": "诱饵草套装",
+        "EnName": "Lureplant Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Look the part of an alluring Lureplant."
+      },
+      {
+        "Picture": "P_rook_costume_top",
+        "Name": "战车套装",
+        "EnName": "Rook Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "This Rook Hallowed Nights costume will give you a run for your money."
+      },
+      {
+        "Picture": "P_volt_goat_costume_top",
+        "Name": "电羊套装",
+        "EnName": "Volt Goat Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "This electrifying costume will let your dress up like a cute Volt Goat!"
+      },
+      {
+        "Picture": "P_treeguard_costume_top",
+        "Name": "树人套装",
+        "EnName": "Treeguard Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "This Treeguard Hallowed Nights costume will really grow on you."
+      },
+      {
+        "Picture": "P_mandrake_costume_top",
+        "Name": "曼德拉草套装",
+        "EnName": "Mandrake Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "A Hallowed Nights costume fashioned after a delightfully annoying vegetable."
+      },
+      {
+        "Picture": "P_krampus_costume_top",
+        "Name": "坎普斯套装",
+        "EnName": "Krampus Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Dress up as a spooky Krampus for Hallowed Nights."
+      },
+      {
+        "Picture": "P_deerclops_costume_top",
+        "Name": "巨鹿套装",
+        "EnName": "Deerclops Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Look like an intimidating Deerclops with this Hallowed Nights costume."
+      },
+      {
+        "Picture": "P_batilisk_costume_top",
+        "Name": "蝙蝠套装",
+        "EnName": "Batilisk Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Look the part of a spooky Batilisk."
+      },
+      {
+        "Picture": "P_grass_gekko_costume_top",
+        "Name": "草丛壁虎套装",
+        "EnName": "Grass Gekko Costume Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Dress up like a cute Grass Gekko for Hallowed Nights."
+      },
+      {
+        "Picture": "P_forging_chestcover",
+        "Name": "淬炼护胸",
+        "EnName": "Forging Chestcover",
+        "Rarity": "Distinguished",
+        "Introduction": "Trimmed with the fur of felled quarry."
+      },
+      {
+        "Picture": "P_fighters_tunic",
+        "Name": "战士的束腰外衣",
+        "EnName": "Fighter's Tunic",
+        "Rarity": "Distinguished",
+        "Introduction": "This battle tunic screams \"warrior chic\"."
+      },
+      {
+        "Picture": "P_berserkers_chest_paint",
+        "Name": "战神的护胸",
+        "EnName": "Berserker's Chest Paint",
+        "Rarity": "Distinguished",
+        "Introduction": "Bare your mighty muscles and let your foes know what they're up against."
+      },
+      {
+        "Picture": "P_usurpers_drapery",
+        "Name": "篡位者的皱衣",
+        "EnName": "Usurper's Drapery",
+        "Rarity": "Distinguished",
+        "Introduction": "A belt of fangs suits any steadfast fighter."
+      },
+      {
+        "Picture": "P_cast_iron_chassis",
+        "Name": "铸铁机身",
+        "EnName": "Cast Iron Chassis",
+        "Rarity": "Distinguished",
+        "Introduction": "Make sure your minions know who's top robot."
+      },
+      {
+        "Picture": "P_metallurgists_robe",
+        "Name": "冶金家的长袍",
+        "EnName": "Metallurgist's Robe",
+        "Rarity": "Distinguished",
+        "Introduction": "Bend the metallic elements to your will in this sleek purple robe."
+      },
+      {
+        "Picture": "P_brawlers_harness",
+        "Name": "格斗家的甲胄",
+        "EnName": "Brawler's Harness",
+        "Rarity": "Distinguished",
+        "Introduction": "Let everyone know you're ready for a brawl with this harness."
+      },
+      {
+        "Picture": "P_duelists_armor",
+        "Name": "决斗者的盔甲",
+        "EnName": "Duelist's Armor",
+        "Rarity": "Distinguished",
+        "Introduction": "Stun your enemies into silence."
+      },
+      {
+        "Picture": "P_alchemists_robe_top",
+        "Name": "炼金术师的法袍",
+        "EnName": "Alchemist's Robe Top",
+        "Rarity": "Distinguished",
+        "Introduction": "Brew alchemical mixtures in style with this alchemist's robe top."
+      },
+      {
+        "Picture": "P_battlemasters_chestplate",
+        "Name": "战神的护胸",
+        "EnName": "Battlemaster's Chestplate",
+        "Rarity": "Distinguished",
+        "Introduction": "This decorative battle armor is sure to strike fear into the foes of the Valkyrie."
+      },
+      {
+        "Picture": "P_fiends_exoskeleton",
+        "Name": "魔鬼的外骨骼",
+        "EnName": "Fiend's Exoskeleton",
+        "Rarity": "Distinguished",
+        "Introduction": "You don't want to know what spiders do with their prey."
+      },
+      {
+        "Picture": "P_smelters_apron",
+        "Name": "熔炼工的围裙",
+        "EnName": "Smelter's Apron",
+        "Rarity": "Distinguished",
+        "Introduction": "An apron to wear to the sweltering fires of The Forge."
+      },
+      {
+        "Picture": "P_gardenrose_attire",
+        "Name": "花园玫瑰服",
+        "EnName": "Gardenrose Attire",
+        "Rarity": "Distinguished",
+        "Introduction": "Rose cultivation is truly a most delicate science."
+      },
+      {
+        "Picture": "P_velvet_rose_frock",
+        "Name": "丝绒玫瑰连衣裙",
+        "EnName": "Velvet Rose Frock",
+        "Rarity": "Distinguished",
+        "Introduction": "Momentarily slake your thirst for fire and brimstone by wrapping yourself in a lovely frock."
+      },
+      {
+        "Picture": "P_circus_rose_attire",
+        "Name": "马戏团玫瑰服",
+        "EnName": "Circus Rose Attire",
+        "Rarity": "Distinguished",
+        "Introduction": "When the muscle is stripped away all that remains is a sweet, delicate flower."
+      },
+      {
+        "Picture": "P_blushrose_capelet",
+        "Name": "玫瑰披肩",
+        "EnName": "Blushrose Capelet",
+        "Rarity": "Distinguished",
+        "Introduction": "The captive rose is bound by the lattice."
+      },
+      {
+        "Picture": "P_fieldrose_vessel",
+        "Name": "玫瑰容器",
+        "EnName": "Fieldrose Vessel",
+        "Rarity": "Distinguished",
+        "Introduction": "Vines wrapped around wires, wires wrapped around vines."
+      },
+      {
+        "Picture": "P_heirloom_rosegown",
+        "Name": "传家宝玫瑰礼服",
+        "EnName": "Heirloom Rosegown",
+        "Rarity": "Distinguished",
+        "Introduction": "All the culture and elegance of an Old Garden rose."
+      },
+      {
+        "Picture": "P_wildrose_duds",
+        "Name": "玫瑰服",
+        "EnName": "Wildrose Duds",
+        "Rarity": "Distinguished",
+        "Introduction": "Wildrose, grow wild and free."
+      },
+      {
+        "Picture": "P_greenrose_ensemble",
+        "Name": "绿玫瑰乐团服",
+        "EnName": "Greenrose Ensemble",
+        "Rarity": "Distinguished",
+        "Introduction": "No outfit is too loud when you're a rosy-cheeked mime."
+      },
+      {
+        "Picture": "P_twisted_rose_attire",
+        "Name": "扭曲的玫瑰服",
+        "EnName": "Twisted Rose Attire",
+        "Rarity": "Distinguished",
+        "Introduction": "People should know better than to grow too close to you."
+      },
+      {
+        "Picture": "P_stagerose_wardrobe",
+        "Name": "舞台玫瑰服",
+        "EnName": "Stagerose Wardrobe",
+        "Rarity": "Distinguished",
+        "Introduction": "The perfect ensemble for a Buff Beauty."
+      },
+      {
+        "Picture": "P_mossrose_drapery",
+        "Name": "苔藓玫瑰窗帘",
+        "EnName": "Mossrose Drapery",
+        "Rarity": "Distinguished",
+        "Introduction": "Wild flowers are just as beautiful as any fancy show rose."
+      },
+      {
+        "Picture": "P_coral_rose_slacks",
+        "Name": "珊瑚玫瑰长裤",
+        "EnName": "Coral Rose Slacks",
+        "Rarity": "Distinguished",
+        "Introduction": "Wild roses don't claim hillsides by being delicate."
+      },
+      {
+        "Picture": "P_hoarfrost_tunic",
+        "Name": "霜袍",
+        "EnName": "Hoarfrost Tunic",
+        "Rarity": "Distinguished",
+        "Introduction": "This frosted tunic smells like fresh snow."
+      },
+      {
+        "Picture": "P_coldfire_dress",
+        "Name": "冰火连衣裙",
+        "EnName": "Coldfire Dress",
+        "Rarity": "Distinguished",
+        "Introduction": "Much like coldfire itself, this cape and frock shalln't warm their wearer."
+      },
+      {
+        "Picture": "P_aged_frost_robe",
+        "Name": "陈旧的霜袍",
+        "EnName": "Aged Frost Robe",
+        "Rarity": "Distinguished",
+        "Introduction": "The robe of a man who embodies the spirit of giving."
+      },
+      {
+        "Picture": "P_snowchild_frock",
+        "Name": "冰霜女童连衣裙",
+        "EnName": "Snowchild Frock",
+        "Rarity": "Distinguished",
+        "Introduction": "A lovely dress in which to wander the frozen glades."
+      },
+      {
+        "Picture": "P_ice_floe_gown",
+        "Name": "浮冰长袍",
+        "EnName": "Ice Floe Gown",
+        "Rarity": "Distinguished",
+        "Introduction": "An elegant dress to wear while keeping the common folk at arm's length."
+      },
+      {
+        "Picture": "P_snowspider_torso",
+        "Name": "雪蜘蛛躯干",
+        "EnName": "Snowspider Torso",
+        "Rarity": "Distinguished",
+        "Introduction": "This fluffy white spider body comes with a warm scarf!"
       }
     ]
   },
@@ -55,6 +833,174 @@
           "Smoke White"
         ],
         "Introduction": "These are gloves. They cover your hands. This pair is '{Color}' colored."
+      },
+      {
+        "Picture": "P_forest_guardian_green_long_gloves",
+        "Name": "长手套",
+        "EnName": "Long Gloves",
+        "Rarity": "Common",
+        "Colors": [
+          "Forest Guardian Green",
+          "Cumulus Gray",
+          "Sulfuric Yellow",
+          "Pure White"
+        ],
+        "Introduction": "'{Color}' colored gloves suitable for all types of persons, robots, and monsters."
+      },
+      {
+        "Picture": "P_werebeaver_brown_buckled_gloves",
+        "Name": "扣带手套",
+        "EnName": "Buckled Gloves",
+        "Rarity": "Classy",
+        "Colors": [
+          "Werebeaver Brown",
+          "Firehound Red",
+          "Jungle Green"
+        ],
+        "Introduction": "'{Color}' colored gloves with a buckle on the back to help you hold it together."
+      },
+      {
+        "Picture": "P_houndbone_white_driving_gloves",
+        "Name": "驾驶员手套",
+        "EnName": "Driving Gloves",
+        "Rarity": "Classy",
+        "Colors": [
+          "Houndbone White"
+        ],
+        "Introduction": "These 'houndbone white' colored gloves are worn by good looking people who look cool."
+      },
+      {
+        "Picture": "P_tuxedo_gloves",
+        "Name": "礼服手套",
+        "EnName": "Tuxedo Gloves",
+        "Rarity": "Classy",
+        "Introduction": "These gloves will hide the chemical stains on your hands when you dress up for formal occasions."
+      },
+      {
+        "Picture": "P_striking_gloves",
+        "Name": "引人注目的手套",
+        "EnName": "Striking Gloves",
+        "Rarity": "Classy",
+        "Introduction": "White gloved hands are sometimes a symbol of deception. They're also a symbol of fashion!"
+      },
+      {
+        "Picture": "P_forging_bracers",
+        "Name": "锻造护腕",
+        "EnName": "Forging Bracers",
+        "Rarity": "Spiffy",
+        "Introduction": "These bracers will help you look the part in the arena."
+      },
+      {
+        "Picture": "P_fighters_bracers",
+        "Name": "战士护腕",
+        "EnName": "Fighter's Bracers",
+        "Rarity": "Spiffy",
+        "Introduction": "A fine leather set of bracers to wear into battle."
+      },
+      {
+        "Picture": "P_berserkers_hand_paint",
+        "Name": "狂战士手套",
+        "EnName": "Berserker's Hand Paint",
+        "Rarity": "Spiffy",
+        "Introduction": "Your mighty fists need no armor, only slight embellishment."
+      },
+      {
+        "Picture": "P_usurpers_handwraps",
+        "Name": "篡位者护手",
+        "EnName": "Usurper's Handwraps",
+        "Rarity": "Spiffy",
+        "Introduction": "These handwraps are imbued with a quiet ferocity."
+      },
+      {
+        "Picture": "P_cast_iron_fists",
+        "Name": "铸铁拳套",
+        "EnName": "Cast Iron Fists",
+        "Rarity": "Spiffy",
+        "Introduction": "Make them regret falling into your metallic clutches."
+      },
+      {
+        "Picture": "P_metallurgists_handwraps",
+        "Name": "炼金术士手套",
+        "EnName": "Metallurgist's Handwraps",
+        "Rarity": "Spiffy",
+        "Introduction": "A thin strip of cloth to protect your caster's hands."
+      },
+      {
+        "Picture": "P_brawlers_knucklewraps",
+        "Name": "打架者手套",
+        "EnName": "Brawler's Knucklewraps",
+        "Rarity": "Spiffy",
+        "Introduction": "These leather gloves have small holes cut in them for the knuckles to show through."
+      },
+      {
+        "Picture": "P_duelists_hand_covers",
+        "Name": "决斗者手套",
+        "EnName": "Duelist's Hand Covers",
+        "Rarity": "Spiffy",
+        "Introduction": "A light gauntlet design for an expert duelist."
+      },
+      {
+        "Picture": "P_alchemists_handwraps",
+        "Name": "炼金术士的护手",
+        "EnName": "Alchemist's Handwraps",
+        "Rarity": "Spiffy",
+        "Introduction": "The handwraps of an alchemist, skilled at battle."
+      },
+      {
+        "Picture": "P_battlemasters_gauntlets",
+        "Name": "战神的长手套",
+        "EnName": "Battlemaster's Gauntlets",
+        "Rarity": "Spiffy",
+        "Introduction": "These fists are ready for glorious battle."
+      },
+      {
+        "Picture": "P_fiends_claws",
+        "Name": "魔鬼的爪子",
+        "EnName": "Fiend's Claws",
+        "Rarity": "Spiffy",
+        "Introduction": "Perhaps after battle you could take up decorative hedge trimming."
+      },
+      {
+        "Picture": "P_smelters_gloves",
+        "Name": "熔炉手套",
+        "EnName": "Smelter's Gloves",
+        "Rarity": "Spiffy",
+        "Introduction": "Any pair of gloves can be improved by brass plating."
+      },
+      {
+        "Picture": "P_hoarfrost_gloves",
+        "Name": "冰霜手套",
+        "EnName": "Hoarfrost Gloves",
+        "Rarity": "Spiffy",
+        "Introduction": "The gloves of a fellow with an icy touch."
+      },
+      {
+        "Picture": "P_coldfire_tufts",
+        "Name": "冰火手套",
+        "EnName": "Coldfire Tufts",
+        "Rarity": "Spiffy",
+        "Introduction": "Two small tufts of rabbit fur to adorn the wrists."
+      },
+      {
+        "Picture": "P_aged_frost_gloves",
+        "Name": "陈旧的手套",
+        "EnName": "Aged Frost Gloves",
+        "Rarity": "Spiffy",
+        "Introduction": "These gloves fail to keep the cold out, although they inspire a feeling of coziness."
+      },
+      {
+        "Picture": "P_snowchild_gloves",
+        "Name": "冰霜女童手套",
+        "EnName": "Snowchild Gloves",
+        "Rarity": "Spiffy",
+        "Introduction": "A thin pair of winter gloves."
+      },
+      {
+        "Picture": "P_ice_floe_sapphires",
+        "Name": "浮冰蓝宝石",
+        "EnName": "Ice Floe Sapphires",
+        "Rarity": "Spiffy",
+        "Introduction": "Sleek arm covers that radiate cool, clear refinement."
       }
     ]
   }

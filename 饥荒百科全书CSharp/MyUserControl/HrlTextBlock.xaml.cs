@@ -38,18 +38,21 @@ namespace 饥荒百科全书CSharp.MyUserControl
         {
             if (e.NewValue == null) return;
             var hrlTextBlock = (HrlTextBlock)d;
-            if ((string)e.NewValue == null)
+            if (string.IsNullOrEmpty((string)e.NewValue))
             {
                 hrlTextBlock.TextBlock.Visibility = Visibility.Collapsed;
             }
             else
             {
-                var textWidth = hrlTextBlock.MeasureTextWidth(hrlTextBlock.TextBlock.FontSize);
-                hrlTextBlock.TextBlock.Text = (string)e.NewValue;
-                hrlTextBlock.Grid.Width = textWidth;
-                hrlTextBlock.TextBlock.Width = textWidth;
-                if (textWidth > hrlTextBlock.HrlWidth)
-                    hrlTextBlock.CeaterAnimation();
+                if (!string.IsNullOrEmpty(hrlTextBlock.Text))
+                {
+                    var textWidth = hrlTextBlock.MeasureTextWidth(hrlTextBlock.TextBlock.FontSize);
+                    hrlTextBlock.TextBlock.Text = (string)e.NewValue;
+                    hrlTextBlock.Grid.Width = textWidth;
+                    hrlTextBlock.TextBlock.Width = textWidth;
+                    if (textWidth > hrlTextBlock.HrlWidth)
+                        hrlTextBlock.CeaterAnimation();
+                }
             }
         }
 
@@ -72,12 +75,15 @@ namespace 饥荒百科全书CSharp.MyUserControl
             var hrlTextBlock = (HrlTextBlock)d;
             if ((double)e.NewValue > 0)
             {
-                hrlTextBlock.RectangleGeometry.Rect = new Rect(0, 0, (double)e.NewValue, 25.6);
-                var textWidth = hrlTextBlock.MeasureTextWidth(hrlTextBlock.TextBlock.FontSize);
-                hrlTextBlock.Grid.Width = textWidth;
-                hrlTextBlock.TextBlock.Width = textWidth;
-                if (textWidth > hrlTextBlock.HrlWidth)
-                    hrlTextBlock.CeaterAnimation();
+                if (!string.IsNullOrEmpty(hrlTextBlock.Text))
+                {
+                    hrlTextBlock.RectangleGeometry.Rect = new Rect(0, 0, (double)e.NewValue, 25.6);
+                    var textWidth = hrlTextBlock.MeasureTextWidth(hrlTextBlock.TextBlock.FontSize);
+                    hrlTextBlock.Grid.Width = textWidth;
+                    hrlTextBlock.TextBlock.Width = textWidth;
+                    if (textWidth > hrlTextBlock.HrlWidth)
+                        hrlTextBlock.CeaterAnimation();
+                }
             }
             else
             {

@@ -70,6 +70,17 @@ namespace 饥荒百科全书CSharp.View
         {
             BodyExpander.DataContext = Global.SkinsBodyData;
             HandsExpander.DataContext = Global.SkinsHandsData;
+            LegsExpander.DataContext = Global.SkinsLegsData;
+            FeetExpander.DataContext = Global.SkinsFeetData;
+            CharactersExpander.DataContext = Global.SkinsCharactersData;
+            ItemsExpander.DataContext = Global.SkinsItemsData;
+            StructuresExpander.DataContext = Global.SkinsStructuresData;
+            CrittersExpander.DataContext = Global.SkinsCrittersData;
+            SpecialExpander.DataContext = Global.SkinsSpecialData;
+            HallowedNightsSkinsExpander.DataContext = Global.SkinsHallowedNightsSkinsData;
+            WintersFeastSkinsExpander.DataContext = Global.SkinsWintersFeastSkinsData;
+            YearOfTheGobblerSkinsExpander.DataContext = Global.SkinsYearOfTheGobblerSkinsData;
+            TheForgeExpander.DataContext = Global.SkinsTheForgeData;
             //TODO 数据绑定
         }
 

@@ -65,15 +65,147 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class Legs
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Legs()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class Feet
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Feet()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class Characters
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Characters()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class Items
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Items()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class Structures
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Structures()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class Critters
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Critters()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class Special
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Special()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class HallowedNightsSkins
+    {
+        public List<Skin> Skin { get; set; }
+
+        public HallowedNightsSkins()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class WintersFeastSkins
+    {
+        public List<Skin> Skin { get; set; }
+
+        public WintersFeastSkins()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class YearOfTheGobblerSkins
+    {
+        public List<Skin> Skin { get; set; }
+
+        public YearOfTheGobblerSkins()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class TheForge
+    {
+        public List<Skin> Skin { get; set; }
+
+        public TheForge()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
     public class SkinsRootObject
     {
         public Body Body { get; set; }
         public Hands Hands { get; set; }
+        public Legs Legs { get; set; }
+        public Feet Feet { get; set; }
+        public Characters Characters { get; set; }
+        public Items Items { get; set; }
+        public Structures Structures { get; set; }
+        public Critters Critters { get; set; }
+        public Special Special { get; set; }
+        public HallowedNightsSkins HallowedNightsSkins { get; set; }
+        public WintersFeastSkins WintersFeastSkins { get; set; }
+        public YearOfTheGobblerSkins YearOfTheGobblerSkins { get; set; }
+        public TheForge TheForge { get; set; }
 
         public SkinsRootObject()
         {
             Body = new Body();
             Hands = new Hands();
+            Legs = new Legs();
+            Feet = new Feet();
+            Characters = new Characters();
+            Items = new Items();
+            Structures = new Structures();
+            Critters = new Critters();
+            Special = new Special();
+            HallowedNightsSkins = new HallowedNightsSkins();
+            WintersFeastSkins = new WintersFeastSkins();
+            YearOfTheGobblerSkins = new YearOfTheGobblerSkins();
+            TheForge = new TheForge();
         }
     }
 }

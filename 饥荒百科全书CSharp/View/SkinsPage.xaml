@@ -60,6 +60,160 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
+                <Expander x:Name="LegsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Legs" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="FeetExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Feet" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="CharactersExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Characters" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="ItemsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Items" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="StructuresExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Structures" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="CrittersExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Critters" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="SpecialExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Special" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="HallowedNightsSkinsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="HallowedNightsSkins" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="WintersFeastSkinsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="WintersFeastSkins" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="YearOfTheGobblerSkinsExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="YearOfTheGobblerSkins" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="TheForgeExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="TheForge" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
             </StackPanel>
         </ScrollViewer>
     </Grid>

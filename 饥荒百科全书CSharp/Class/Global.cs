@@ -282,6 +282,17 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Good> GoodOthersData = new List<Good>();
         public static readonly List<Skin> SkinsBodyData = new List<Skin>();
         public static readonly List<Skin> SkinsHandsData = new List<Skin>();
+        public static readonly List<Skin> SkinsLegsData = new List<Skin>();
+        public static readonly List<Skin> SkinsFeetData = new List<Skin>();
+        public static readonly List<Skin> SkinsCharactersData = new List<Skin>();
+        public static readonly List<Skin> SkinsItemsData = new List<Skin>();
+        public static readonly List<Skin> SkinsStructuresData = new List<Skin>();
+        public static readonly List<Skin> SkinsCrittersData = new List<Skin>();
+        public static readonly List<Skin> SkinsSpecialData = new List<Skin>();
+        public static readonly List<Skin> SkinsHallowedNightsSkinsData = new List<Skin>();
+        public static readonly List<Skin> SkinsWintersFeastSkinsData = new List<Skin>();
+        public static readonly List<Skin> SkinsYearOfTheGobblerSkinsData = new List<Skin>();
+        public static readonly List<Skin> SkinsTheForgeData = new List<Skin>();
         #endregion
 
         /// <summary>
@@ -345,6 +356,17 @@ namespace 饥荒百科全书CSharp.Class
             GoodOthersData.Clear();
             SkinsBodyData.Clear();
             SkinsHandsData.Clear();
+            SkinsLegsData.Clear();
+            SkinsFeetData.Clear();
+            SkinsCharactersData.Clear();
+            SkinsItemsData.Clear();
+            SkinsStructuresData.Clear();
+            SkinsCrittersData.Clear();
+            SkinsSpecialData.Clear();
+            SkinsHallowedNightsSkinsData.Clear();
+            SkinsWintersFeastSkinsData.Clear();
+            SkinsYearOfTheGobblerSkinsData.Clear();
+            SkinsTheForgeData.Clear();
             #endregion
 
             #region 人物
@@ -705,6 +727,83 @@ namespace 饥荒百科全书CSharp.Class
                 SkinsHandsData.Add(skinsHandsItem);
                 AutoSuggestBoxItemSourceAdd(skinsHandsItem, "SkinsHands");
             }
+            foreach (var skinsLegsItem in skins.Legs.Skin)
+            {
+                skinsLegsItem.Picture = StringProcess.GetGameResourcePath(skinsLegsItem.Picture);
+                skinsLegsItem.Color = GetSkinColor(skinsLegsItem.Rarity);
+                SkinsLegsData.Add(skinsLegsItem);
+                AutoSuggestBoxItemSourceAdd(skinsLegsItem, "SkinsLegs");
+            }
+            foreach (var skinsFeetItem in skins.Feet.Skin)
+            {
+                skinsFeetItem.Picture = StringProcess.GetGameResourcePath(skinsFeetItem.Picture);
+                skinsFeetItem.Color = GetSkinColor(skinsFeetItem.Rarity);
+                SkinsFeetData.Add(skinsFeetItem);
+                AutoSuggestBoxItemSourceAdd(skinsFeetItem, "SkinsFeet");
+            }
+            foreach (var skinsCharactersItem in skins.Characters.Skin)
+            {
+                skinsCharactersItem.Picture = StringProcess.GetGameResourcePath(skinsCharactersItem.Picture);
+                skinsCharactersItem.Color = GetSkinColor(skinsCharactersItem.Rarity);
+                SkinsCharactersData.Add(skinsCharactersItem);
+                AutoSuggestBoxItemSourceAdd(skinsCharactersItem, "SkinsCharacters");
+            }
+            foreach (var skinsItemsItem in skins.Items.Skin)
+            {
+                skinsItemsItem.Picture = StringProcess.GetGameResourcePath(skinsItemsItem.Picture);
+                skinsItemsItem.Color = GetSkinColor(skinsItemsItem.Rarity);
+                SkinsItemsData.Add(skinsItemsItem);
+                AutoSuggestBoxItemSourceAdd(skinsItemsItem, "SkinsItems");
+            }
+            foreach (var skinsStructuresItem in skins.Structures.Skin)
+            {
+                skinsStructuresItem.Picture = StringProcess.GetGameResourcePath(skinsStructuresItem.Picture);
+                skinsStructuresItem.Color = GetSkinColor(skinsStructuresItem.Rarity);
+                SkinsStructuresData.Add(skinsStructuresItem);
+                AutoSuggestBoxItemSourceAdd(skinsStructuresItem, "SkinsStructures");
+            }
+            foreach (var skinsCrittersItem in skins.Critters.Skin)
+            {
+                skinsCrittersItem.Picture = StringProcess.GetGameResourcePath(skinsCrittersItem.Picture);
+                skinsCrittersItem.Color = GetSkinColor(skinsCrittersItem.Rarity);
+                SkinsCrittersData.Add(skinsCrittersItem);
+                AutoSuggestBoxItemSourceAdd(skinsCrittersItem, "SkinsCritters");
+            }
+            foreach (var skinsSpecialItem in skins.Special.Skin)
+            {
+                skinsSpecialItem.Picture = StringProcess.GetGameResourcePath(skinsSpecialItem.Picture);
+                skinsSpecialItem.Color = GetSkinColor(skinsSpecialItem.Rarity);
+                SkinsSpecialData.Add(skinsSpecialItem);
+                AutoSuggestBoxItemSourceAdd(skinsSpecialItem, "SkinsSpecial");
+            }
+            foreach (var skinsHallowedNightsSkinsItem in skins.HallowedNightsSkins.Skin)
+            {
+                skinsHallowedNightsSkinsItem.Picture = StringProcess.GetGameResourcePath(skinsHallowedNightsSkinsItem.Picture);
+                skinsHallowedNightsSkinsItem.Color = GetSkinColor(skinsHallowedNightsSkinsItem.Rarity);
+                SkinsHallowedNightsSkinsData.Add(skinsHallowedNightsSkinsItem);
+                AutoSuggestBoxItemSourceAdd(skinsHallowedNightsSkinsItem, "SkinsHallowedNightsSkins");
+            }
+            foreach (var skinsWintersFeastSkinsItem in skins.WintersFeastSkins.Skin)
+            {
+                skinsWintersFeastSkinsItem.Picture = StringProcess.GetGameResourcePath(skinsWintersFeastSkinsItem.Picture);
+                skinsWintersFeastSkinsItem.Color = GetSkinColor(skinsWintersFeastSkinsItem.Rarity);
+                SkinsWintersFeastSkinsData.Add(skinsWintersFeastSkinsItem);
+                AutoSuggestBoxItemSourceAdd(skinsWintersFeastSkinsItem, "SkinsWintersFeastSkins");
+            }
+            foreach (var skinsYearOfTheGobblerSkinsItem in skins.YearOfTheGobblerSkins.Skin)
+            {
+                skinsYearOfTheGobblerSkinsItem.Picture = StringProcess.GetGameResourcePath(skinsYearOfTheGobblerSkinsItem.Picture);
+                skinsYearOfTheGobblerSkinsItem.Color = GetSkinColor(skinsYearOfTheGobblerSkinsItem.Rarity);
+                SkinsYearOfTheGobblerSkinsData.Add(skinsYearOfTheGobblerSkinsItem);
+                AutoSuggestBoxItemSourceAdd(skinsYearOfTheGobblerSkinsItem, "SkinsYearOfTheGobblerSkins");
+            }
+            foreach (var skinsTheForgeItem in skins.TheForge.Skin)
+            {
+                skinsTheForgeItem.Picture = StringProcess.GetGameResourcePath(skinsTheForgeItem.Picture);
+                skinsTheForgeItem.Color = GetSkinColor(skinsTheForgeItem.Rarity);
+                SkinsTheForgeData.Add(skinsTheForgeItem);
+                AutoSuggestBoxItemSourceAdd(skinsTheForgeItem, "SkinsTheForge");
+            }
             // TODO 皮肤分类
             #endregion
 
@@ -723,7 +822,6 @@ namespace 饥荒百科全书CSharp.Class
         /// <returns>Color</returns>
         public static SolidColorBrush GetSkinColor(string rarity)
         {
-            Debug.WriteLine("Rarity：" + rarity);
             switch (rarity)
             {
                 case "Common":

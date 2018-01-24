@@ -49,25 +49,29 @@ namespace 饥荒百科全书CSharp.View.Details
         private readonly List<string> _skinColorList = new List<string>();
         private readonly List<string> _skinList = new List<string>();
         private readonly List<string> _skinIntroductionList = new List<string>();
-        
+
         private void LoadData(Skin c)
         {
             // 颜色
-            if (c.Colors.Count == 1)
+            switch (c.Colors.Count)
             {
-                ColorTextBlock.Text = c.Colors[0];
-            }
-            else
-            {
-                SwitchLeftButton.Visibility = Visibility.Visible;
-                SwitchRightButton.Visibility = Visibility.Visible;
-                _skinMaxIndex = c.Colors.Count - 1;
-                foreach (var color in c.Colors)
-                {
-                    _skinColorList.Add(color);
-                }
-                SwitchLeftButton.IsEnabled = false;
-                ColorTextBlock.Text = _skinColorList[0];
+                case 0:
+                    ColorTextBlock.Visibility = Visibility.Collapsed;
+                    break;
+                case 1:
+                    ColorTextBlock.Text = "颜色：" + c.Colors[0];
+                    break;
+                default:
+                    SwitchLeftButton.Visibility = Visibility.Visible;
+                    SwitchRightButton.Visibility = Visibility.Visible;
+                    _skinMaxIndex = c.Colors.Count - 1;
+                    foreach (var color in c.Colors)
+                    {
+                        _skinColorList.Add(color);
+                    }
+                    SwitchLeftButton.IsEnabled = false;
+                    ColorTextBlock.Text = "颜色：" + _skinColorList[0];
+                    break;
             }
             // 图片
             if (c.Colors.Count == 0)
@@ -78,7 +82,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 foreach (var color in c.Colors)
                 {
-                    _skinList.Add(StringProcess.GetGameResourcePath("P_" + color.Replace(" ", "_") + "_" + c.EnName.Replace(" ", "_")));
+                    _skinList.Add(StringProcess.GetGameResourcePath("P_" + color.Replace(" ", "_").Replace("-", "_") + "_" + c.EnName.Replace(" ", "_")));
                 }
                 SkinImage.Source = new BitmapImage(new Uri(_skinList[0], UriKind.Relative));
             }
@@ -137,7 +141,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 SkinIntroduction.Text = _skinIntroductionList[0];
             }
         }
-        
+
         /// <summary>
         /// 左右切换按钮
         /// </summary>
@@ -152,7 +156,7 @@ namespace 饥荒百科全书CSharp.View.Details
                     SwitchLeftButton.IsEnabled = false;
                 }
                 SkinImage.Source = new BitmapImage(new Uri(_skinList[_skinIndex], UriKind.Relative));
-                ColorTextBlock.Text = _skinColorList[_skinIndex];
+                ColorTextBlock.Text = "颜色：" + _skinColorList[_skinIndex];
                 SkinIntroduction.Text = _skinIntroductionList[_skinIndex];
             }
         }
@@ -168,7 +172,7 @@ namespace 饥荒百科全书CSharp.View.Details
                     SwitchRightButton.IsEnabled = false;
                 }
                 SkinImage.Source = new BitmapImage(new Uri(_skinList[_skinIndex], UriKind.Relative));
-                ColorTextBlock.Text = _skinColorList[_skinIndex];
+                ColorTextBlock.Text = "颜色：" + _skinColorList[_skinIndex];
                 SkinIntroduction.Text = _skinIntroductionList[_skinIndex];
             }
         }
