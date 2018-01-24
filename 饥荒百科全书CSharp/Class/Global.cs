@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -76,6 +78,7 @@ namespace 饥荒百科全书CSharp.Class
         public static Frame CreatureLeftFrame { get; set; }
         public static Frame NaturalLeftFrame { get; set; }
         public static Frame GoodLeftFrame { get; set; }
+        public static Frame SkinLeftFrame { get; set; }
 
         /// <summary>
         /// 透明Style
@@ -277,6 +280,8 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Good> GoodYearOfTheGobblerData = new List<Good>();
         public static readonly List<Good> GoodComponentData = new List<Good>();
         public static readonly List<Good> GoodOthersData = new List<Good>();
+        public static readonly List<Skin> SkinsBodyData = new List<Skin>();
+        public static readonly List<Skin> SkinsHandsData = new List<Skin>();
         #endregion
 
         /// <summary>
@@ -338,19 +343,16 @@ namespace 饥荒百科全书CSharp.Class
             GoodYearOfTheGobblerData.Clear();
             GoodComponentData.Clear();
             GoodOthersData.Clear();
+            SkinsBodyData.Clear();
+            SkinsHandsData.Clear();
             #endregion
+
             #region 人物
             var character = JsonConvert.DeserializeObject<CharacterRootObject>(StringProcess.GetJsonString("Characters.json"));
             foreach (var characterItems in character.Character)
             {
-                CharacterData.Add(characterItems);
-            }
-            foreach (var characterItems in CharacterData)
-            {
                 characterItems.Picture = StringProcess.GetGameResourcePath(characterItems.Picture);
-            }
-            foreach (var characterItems in CharacterData)
-            {
+                CharacterData.Add(characterItems);
                 AutoSuggestBoxItemSourceAdd(characterItems, "Character");
             }
             #endregion
@@ -358,617 +360,352 @@ namespace 饥荒百科全书CSharp.Class
             var food = JsonConvert.DeserializeObject<FoodRootObject>(StringProcess.GetJsonString("Foods.json"));
             foreach (var foodRecipeItems in food.FoodRecipe.FoodRecipes)
             {
-                FoodRecipeData.Add(foodRecipeItems);
-            }
-            foreach (var foodRecipeItems in FoodRecipeData)
-            {
                 foodRecipeItems.Picture = StringProcess.GetGameResourcePath(foodRecipeItems.Picture);
+                FoodRecipeData.Add(foodRecipeItems);
+                AutoSuggestBoxItemSourceAdd(foodRecipeItems, "FoodRecipe");
             }
             foreach (var foodMeatsItems in food.FoodMeats.Foods)
             {
-                FoodMeatData.Add(foodMeatsItems);
-            }
-            foreach (var foodMeatsItems in FoodMeatData)
-            {
                 foodMeatsItems.Picture = StringProcess.GetGameResourcePath(foodMeatsItems.Picture);
+                FoodMeatData.Add(foodMeatsItems);
+                AutoSuggestBoxItemSourceAdd(foodMeatsItems, "FoodMeats");
             }
             foreach (var foodVegetablesItems in food.FoodVegetables.Foods)
             {
-                FoodVegetableData.Add(foodVegetablesItems);
-            }
-            foreach (var foodVegetablesItems in FoodVegetableData)
-            {
                 foodVegetablesItems.Picture = StringProcess.GetGameResourcePath(foodVegetablesItems.Picture);
+                FoodVegetableData.Add(foodVegetablesItems);
+                AutoSuggestBoxItemSourceAdd(foodVegetablesItems, "FoodVegetables");
             }
             foreach (var foodFruitItems in food.FoodFruit.Foods)
             {
-                FoodFruitData.Add(foodFruitItems);
-            }
-            foreach (var foodFruitItems in FoodFruitData)
-            {
                 foodFruitItems.Picture = StringProcess.GetGameResourcePath(foodFruitItems.Picture);
+                FoodFruitData.Add(foodFruitItems);
+                AutoSuggestBoxItemSourceAdd(foodFruitItems, "FoodFruits");
             }
             foreach (var foodEggsItems in food.FoodEggs.Foods)
             {
-                FoodEggData.Add(foodEggsItems);
-            }
-            foreach (var foodEggsItems in FoodEggData)
-            {
                 foodEggsItems.Picture = StringProcess.GetGameResourcePath(foodEggsItems.Picture);
+                FoodEggData.Add(foodEggsItems);
+                AutoSuggestBoxItemSourceAdd(foodEggsItems, "FoodEggs");
             }
             foreach (var foodOthersItems in food.FoodOthers.Foods)
             {
-                FoodOtherData.Add(foodOthersItems);
-            }
-            foreach (var foodOthersItems in FoodOtherData)
-            {
                 foodOthersItems.Picture = StringProcess.GetGameResourcePath(foodOthersItems.Picture);
+                FoodOtherData.Add(foodOthersItems);
+                AutoSuggestBoxItemSourceAdd(foodOthersItems, "FoodOthers");
             }
             foreach (var foodNoFcItems in food.FoodNoFc.Foods)
             {
-                FoodNoFcData.Add(foodNoFcItems);
-            }
-            foreach (var foodNoFcItems in FoodNoFcData)
-            {
                 foodNoFcItems.Picture = StringProcess.GetGameResourcePath(foodNoFcItems.Picture);
-            }
-            foreach (var foodRecipeItems in FoodRecipeData)
-            {
-                AutoSuggestBoxItemSourceAdd(foodRecipeItems, "FoodRecipe");
-            }
-            foreach (var foodItems in FoodMeatData)
-            {
-                AutoSuggestBoxItemSourceAdd(foodItems, "FoodMeats");
-            }
-            foreach (var foodItems in FoodVegetableData)
-            {
-                AutoSuggestBoxItemSourceAdd(foodItems, "FoodVegetables");
-            }
-            foreach (var foodItems in FoodFruitData)
-            {
-                AutoSuggestBoxItemSourceAdd(foodItems, "FoodFruits");
-            }
-            foreach (var foodItems in FoodEggData)
-            {
-                AutoSuggestBoxItemSourceAdd(foodItems, "FoodEggs");
-            }
-            foreach (var foodItems in FoodOtherData)
-            {
-                AutoSuggestBoxItemSourceAdd(foodItems, "FoodOthers");
-            }
-            foreach (var foodItems in FoodNoFcData)
-            {
-                AutoSuggestBoxItemSourceAdd(foodItems, "FoodNoFc");
+                FoodNoFcData.Add(foodNoFcItems);
+                AutoSuggestBoxItemSourceAdd(foodNoFcItems, "FoodNoFc");
             }
             #endregion
             #region 科技
             var science = JsonConvert.DeserializeObject<ScienceRootObject>(StringProcess.GetJsonString("Sciences.json"));
             foreach (var scienceToolItems in science.Tool.Science)
             {
-                ScienceToolData.Add(scienceToolItems);
-            }
-            foreach (var scienceToolItems in ScienceToolData)
-            {
                 scienceToolItems.Picture = StringProcess.GetGameResourcePath(scienceToolItems.Picture);
+                ScienceToolData.Add(scienceToolItems);
+                AutoSuggestBoxItemSourceAdd(scienceToolItems, "ScienceTool");
             }
             foreach (var scienceLightItems in science.Light.Science)
             {
-                ScienceLightData.Add(scienceLightItems);
-            }
-            foreach (var scienceLightItems in ScienceLightData)
-            {
                 scienceLightItems.Picture = StringProcess.GetGameResourcePath(scienceLightItems.Picture);
+                ScienceLightData.Add(scienceLightItems);
+                AutoSuggestBoxItemSourceAdd(scienceLightItems, "ScienceLight");
+
             }
             foreach (var scienceNauticalItems in science.Nautical.Science)
             {
-                ScienceNauticalData.Add(scienceNauticalItems);
-            }
-            foreach (var scienceNauticalItems in ScienceNauticalData)
-            {
                 scienceNauticalItems.Picture = StringProcess.GetGameResourcePath(scienceNauticalItems.Picture);
+                ScienceNauticalData.Add(scienceNauticalItems);
+                AutoSuggestBoxItemSourceAdd(scienceNauticalItems, "ScienceNautical");
+
             }
             foreach (var scienceSurvivalItems in science.Survival.Science)
             {
-                ScienceSurvivalData.Add(scienceSurvivalItems);
-            }
-            foreach (var scienceSurvivalItems in ScienceSurvivalData)
-            {
                 scienceSurvivalItems.Picture = StringProcess.GetGameResourcePath(scienceSurvivalItems.Picture);
+                ScienceSurvivalData.Add(scienceSurvivalItems);
+                AutoSuggestBoxItemSourceAdd(scienceSurvivalItems, "ScienceSurvival");
+
             }
             foreach (var scienceFoodItems in science.Foods.Science)
             {
-                ScienceFoodData.Add(scienceFoodItems);
-            }
-            foreach (var scienceFoodItems in ScienceFoodData)
-            {
                 scienceFoodItems.Picture = StringProcess.GetGameResourcePath(scienceFoodItems.Picture);
+                ScienceFoodData.Add(scienceFoodItems);
+                AutoSuggestBoxItemSourceAdd(scienceFoodItems, "ScienceFood");
+
             }
             foreach (var scienceTechnologyItems in science.Technology.Science)
             {
-                ScienceTechnologyData.Add(scienceTechnologyItems);
-            }
-            foreach (var scienceTechnologyItems in ScienceTechnologyData)
-            {
                 scienceTechnologyItems.Picture = StringProcess.GetGameResourcePath(scienceTechnologyItems.Picture);
+                ScienceTechnologyData.Add(scienceTechnologyItems);
+                AutoSuggestBoxItemSourceAdd(scienceTechnologyItems, "ScienceTechnology");
+
             }
             foreach (var scienceFightItems in science.Fight.Science)
             {
-                ScienceFightData.Add(scienceFightItems);
-            }
-            foreach (var scienceFightItems in ScienceFightData)
-            {
                 scienceFightItems.Picture = StringProcess.GetGameResourcePath(scienceFightItems.Picture);
+                ScienceFightData.Add(scienceFightItems);
+                AutoSuggestBoxItemSourceAdd(scienceFightItems, "ScienceFight");
+
             }
             foreach (var scienceStructureItems in science.Structure.Science)
             {
-                ScienceStructureData.Add(scienceStructureItems);
-            }
-            foreach (var scienceStructureItems in ScienceStructureData)
-            {
                 scienceStructureItems.Picture = StringProcess.GetGameResourcePath(scienceStructureItems.Picture);
+                ScienceStructureData.Add(scienceStructureItems);
+                AutoSuggestBoxItemSourceAdd(scienceStructureItems, "ScienceStructure");
+
             }
             foreach (var scienceRefineItems in science.Refine.Science)
             {
-                ScienceRefineData.Add(scienceRefineItems);
-            }
-            foreach (var scienceRefineItems in ScienceRefineData)
-            {
                 scienceRefineItems.Picture = StringProcess.GetGameResourcePath(scienceRefineItems.Picture);
+                ScienceRefineData.Add(scienceRefineItems);
+                AutoSuggestBoxItemSourceAdd(scienceRefineItems, "ScienceRefine");
+
             }
             foreach (var scienceMagicItems in science.Magic.Science)
             {
-                ScienceMagicData.Add(scienceMagicItems);
-            }
-            foreach (var scienceMagicItems in ScienceMagicData)
-            {
                 scienceMagicItems.Picture = StringProcess.GetGameResourcePath(scienceMagicItems.Picture);
+                ScienceMagicData.Add(scienceMagicItems);
+                AutoSuggestBoxItemSourceAdd(scienceMagicItems, "ScienceMagic");
+
             }
             foreach (var scienceDressItems in science.Dress.Science)
             {
-                ScienceDressData.Add(scienceDressItems);
-            }
-            foreach (var scienceDressItems in ScienceDressData)
-            {
                 scienceDressItems.Picture = StringProcess.GetGameResourcePath(scienceDressItems.Picture);
+                ScienceDressData.Add(scienceDressItems);
+                AutoSuggestBoxItemSourceAdd(scienceDressItems, "ScienceDress");
+
             }
             foreach (var scienceAncientItems in science.Ancient.Science)
             {
-                ScienceAncientData.Add(scienceAncientItems);
-            }
-            foreach (var scienceAncientItems in ScienceAncientData)
-            {
                 scienceAncientItems.Picture = StringProcess.GetGameResourcePath(scienceAncientItems.Picture);
+                ScienceAncientData.Add(scienceAncientItems);
+                AutoSuggestBoxItemSourceAdd(scienceAncientItems, "ScienceAncient");
+
             }
             foreach (var scienceBookItems in science.Book.Science)
             {
-                ScienceBookData.Add(scienceBookItems);
-            }
-            foreach (var scienceBookItems in ScienceBookData)
-            {
                 scienceBookItems.Picture = StringProcess.GetGameResourcePath(scienceBookItems.Picture);
+                ScienceBookData.Add(scienceBookItems);
+                AutoSuggestBoxItemSourceAdd(scienceBookItems, "ScienceBook");
+
             }
             foreach (var scienceShadowItems in science.Shadow.Science)
             {
-                ScienceShadowData.Add(scienceShadowItems);
-            }
-            foreach (var scienceShadowItems in ScienceShadowData)
-            {
                 scienceShadowItems.Picture = StringProcess.GetGameResourcePath(scienceShadowItems.Picture);
+                ScienceShadowData.Add(scienceShadowItems);
+                AutoSuggestBoxItemSourceAdd(scienceShadowItems, "ScienceShadow");
+
             }
             foreach (var scienceCritterItems in science.Critter.Science)
             {
-                ScienceCritterData.Add(scienceCritterItems);
-            }
-            foreach (var scienceCritterItems in ScienceCritterData)
-            {
                 scienceCritterItems.Picture = StringProcess.GetGameResourcePath(scienceCritterItems.Picture);
+                ScienceCritterData.Add(scienceCritterItems);
+                AutoSuggestBoxItemSourceAdd(scienceCritterItems, "ScienceCritter");
+
             }
             foreach (var scienceSculptItems in science.Sculpt.Science)
             {
-                ScienceSculptData.Add(scienceSculptItems);
-            }
-            foreach (var scienceSculptItems in ScienceSculptData)
-            {
                 scienceSculptItems.Picture = StringProcess.GetGameResourcePath(scienceSculptItems.Picture);
+                ScienceSculptData.Add(scienceSculptItems);
+                AutoSuggestBoxItemSourceAdd(scienceSculptItems, "ScienceSculpt");
+
             }
             foreach (var scienceCartographyItems in science.Cartography.Science)
             {
-                ScienceCartographyData.Add(scienceCartographyItems);
-            }
-            foreach (var scienceCartographyItems in ScienceCartographyData)
-            {
                 scienceCartographyItems.Picture = StringProcess.GetGameResourcePath(scienceCartographyItems.Picture);
+                ScienceCartographyData.Add(scienceCartographyItems);
+                AutoSuggestBoxItemSourceAdd(scienceCartographyItems, "ScienceCartography");
+
             }
             foreach (var scienceOfferingsItems in science.Offerings.Science)
             {
-                ScienceOfferingsData.Add(scienceOfferingsItems);
-            }
-            foreach (var scienceOfferingsItems in ScienceOfferingsData)
-            {
                 scienceOfferingsItems.Picture = StringProcess.GetGameResourcePath(scienceOfferingsItems.Picture);
+                ScienceOfferingsData.Add(scienceOfferingsItems);
+                AutoSuggestBoxItemSourceAdd(scienceOfferingsItems, "ScienceOfferings");
+
             }
             foreach (var scienceVolcanoItems in science.Volcano.Science)
             {
-                ScienceVolcanoData.Add(scienceVolcanoItems);
-            }
-            foreach (var scienceVolcanoItems in ScienceVolcanoData)
-            {
                 scienceVolcanoItems.Picture = StringProcess.GetGameResourcePath(scienceVolcanoItems.Picture);
-            }
-            foreach (var scienceItems in ScienceToolData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceTool");
-            }
-            foreach (var scienceItems in ScienceLightData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceLight");
-            }
-            foreach (var scienceItems in ScienceNauticalData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceNautical");
-            }
-            foreach (var scienceItems in ScienceSurvivalData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceSurvival");
-            }
-            foreach (var scienceItems in ScienceFoodData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceFood");
-            }
-            foreach (var scienceItems in ScienceTechnologyData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceTechnology");
-            }
-            foreach (var scienceItems in ScienceFightData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceFight");
-            }
-            foreach (var scienceItems in ScienceStructureData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceStructure");
-            }
-            foreach (var scienceItems in ScienceRefineData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceRefine");
-            }
-            foreach (var scienceItems in ScienceMagicData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceMagic");
-            }
-            foreach (var scienceItems in ScienceDressData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceDress");
-            }
-            foreach (var scienceItems in ScienceAncientData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceAncient");
-            }
-            foreach (var scienceItems in ScienceBookData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceBook");
-            }
-            foreach (var scienceItems in ScienceShadowData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceShadow");
-            }
-            foreach (var scienceItems in ScienceCritterData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceCritter");
-            }
-            foreach (var scienceItems in ScienceSculptData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceSculpt");
-            }
-            foreach (var scienceItems in ScienceCartographyData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceCartography");
-            }
-            foreach (var scienceItems in ScienceOfferingsData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceOfferings");
-            }
-            foreach (var scienceItems in ScienceVolcanoData)
-            {
-                AutoSuggestBoxItemSourceAdd(scienceItems, "ScienceVolcano");
+                ScienceVolcanoData.Add(scienceVolcanoItems);
+                AutoSuggestBoxItemSourceAdd(scienceVolcanoItems, "ScienceVolcano");
+
             }
             #endregion
             #region 生物
             var creature = JsonConvert.DeserializeObject<CreaturesRootObject>(StringProcess.GetJsonString("Creatures.json"));
             foreach (var creatureLandItems in creature.Land.Creature)
             {
-                CreatureLandData.Add(creatureLandItems);
-            }
-            foreach (var creatureLandItems in CreatureLandData)
-            {
                 creatureLandItems.Picture = StringProcess.GetGameResourcePath(creatureLandItems.Picture);
+                CreatureLandData.Add(creatureLandItems);
+                AutoSuggestBoxItemSourceAdd(creatureLandItems, "CreatureLand");
             }
             foreach (var creatureOceanItems in creature.Ocean.Creature)
             {
-                CreatureOceanData.Add(creatureOceanItems);
-            }
-            foreach (var creatureOceanItems in CreatureOceanData)
-            {
                 creatureOceanItems.Picture = StringProcess.GetGameResourcePath(creatureOceanItems.Picture);
+                CreatureOceanData.Add(creatureOceanItems);
+                AutoSuggestBoxItemSourceAdd(creatureOceanItems, "CreatureOcean");
             }
             foreach (var creatureFlyItems in creature.Fly.Creature)
             {
-                CreatureFlyData.Add(creatureFlyItems);
-            }
-            foreach (var creatureFlyItems in CreatureFlyData)
-            {
                 creatureFlyItems.Picture = StringProcess.GetGameResourcePath(creatureFlyItems.Picture);
+                CreatureFlyData.Add(creatureFlyItems);
+                AutoSuggestBoxItemSourceAdd(creatureFlyItems, "CreatureFly");
             }
             foreach (var creatureCaveItems in creature.Cave.Creature)
             {
-                CreatureCaveData.Add(creatureCaveItems);
-            }
-            foreach (var creatureCaveItems in CreatureCaveData)
-            {
                 creatureCaveItems.Picture = StringProcess.GetGameResourcePath(creatureCaveItems.Picture);
+                CreatureCaveData.Add(creatureCaveItems);
+                AutoSuggestBoxItemSourceAdd(creatureCaveItems, "CreatureCave");
             }
             foreach (var creatureEvilItems in creature.Evil.Creature)
             {
-                CreatureEvilData.Add(creatureEvilItems);
-            }
-            foreach (var creatureEvilItems in CreatureEvilData)
-            {
                 creatureEvilItems.Picture = StringProcess.GetGameResourcePath(creatureEvilItems.Picture);
+                CreatureEvilData.Add(creatureEvilItems);
+                AutoSuggestBoxItemSourceAdd(creatureEvilItems, "CreatureEvil");
             }
             foreach (var creatureOthersItems in creature.Others.Creature)
             {
-                CreatureOthersData.Add(creatureOthersItems);
-            }
-            foreach (var creatureOthersItems in CreatureOthersData)
-            {
                 creatureOthersItems.Picture = StringProcess.GetGameResourcePath(creatureOthersItems.Picture);
+                CreatureOthersData.Add(creatureOthersItems);
+                AutoSuggestBoxItemSourceAdd(creatureOthersItems, "CreatureOther");
             }
             foreach (var creatureBossItems in creature.Boss.Creature)
             {
-                CreatureBossData.Add(creatureBossItems);
-            }
-            foreach (var creatureBossItems in CreatureBossData)
-            {
                 creatureBossItems.Picture = StringProcess.GetGameResourcePath(creatureBossItems.Picture);
-            }
-            foreach (var creatureItems in CreatureLandData)
-            {
-                AutoSuggestBoxItemSourceAdd(creatureItems, "CreatureLand");
-            }
-            foreach (var creatureItems in CreatureOceanData)
-            {
-                AutoSuggestBoxItemSourceAdd(creatureItems, "CreatureOcean");
-            }
-            foreach (var creatureItems in CreatureFlyData)
-            {
-                AutoSuggestBoxItemSourceAdd(creatureItems, "CreatureFly");
-            }
-            foreach (var creatureItems in CreatureCaveData)
-            {
-                AutoSuggestBoxItemSourceAdd(creatureItems, "CreatureCave");
-            }
-            foreach (var creatureItems in CreatureEvilData)
-            {
-                AutoSuggestBoxItemSourceAdd(creatureItems, "CreatureEvil");
-            }
-            foreach (var creatureItems in CreatureOthersData)
-            {
-                AutoSuggestBoxItemSourceAdd(creatureItems, "CreatureOther");
-            }
-            foreach (var creatureItems in CreatureBossData)
-            {
-                AutoSuggestBoxItemSourceAdd(creatureItems, "CreatureBoss");
+                CreatureBossData.Add(creatureBossItems);
+                AutoSuggestBoxItemSourceAdd(creatureBossItems, "CreatureBoss");
             }
             #endregion
             #region 自然
             var natural = JsonConvert.DeserializeObject<NaturalRootObject>(StringProcess.GetJsonString("Natural.json"));
             foreach (var naturalBiomesItems in natural.Biomes.NatureBiomes)
             {
-                NaturalBiomesData.Add(naturalBiomesItems);
-            }
-            foreach (var naturalBiomesItems in NaturalBiomesData)
-            {
                 naturalBiomesItems.Picture = StringProcess.GetGameResourcePath(naturalBiomesItems.Picture);
+                NaturalBiomesData.Add(naturalBiomesItems);
+                AutoSuggestBoxItemSourceAdd(naturalBiomesItems, "NaturalBiomes");
             }
             foreach (var naturalSmallPlantItems in natural.SmallPlants.NatureSmallPlant)
             {
-                NaturalSmallPlantsData.Add(naturalSmallPlantItems);
-            }
-            foreach (var naturalSmallPlantItems in NaturalSmallPlantsData)
-            {
                 naturalSmallPlantItems.Picture = StringProcess.GetGameResourcePath(naturalSmallPlantItems.Picture);
+                NaturalSmallPlantsData.Add(naturalSmallPlantItems);
+                AutoSuggestBoxItemSourceAdd(naturalSmallPlantItems, "NaturalSmallPlants");
             }
             foreach (var naturalTreeItems in natural.Trees.NatureTree)
             {
-                NaturalTreesData.Add(naturalTreeItems);
-            }
-            foreach (var naturalTreeItems in NaturalTreesData)
-            {
                 naturalTreeItems.Picture = StringProcess.GetGameResourcePath(naturalTreeItems.Picture);
+                NaturalTreesData.Add(naturalTreeItems);
+                AutoSuggestBoxItemSourceAdd(naturalTreeItems, "NaturalTrees");
             }
             foreach (var naturalCreatureNestItems in natural.CreatureNests.NatureCreatureNest)
             {
-                NaturalCreatureNestData.Add(naturalCreatureNestItems);
-            }
-            foreach (var naturalCreatureNestItems in NaturalCreatureNestData)
-            {
                 naturalCreatureNestItems.Picture = StringProcess.GetGameResourcePath(naturalCreatureNestItems.Picture);
-            }
-            foreach (var naturalItems in NaturalBiomesData)
-            {
-                AutoSuggestBoxItemSourceAdd(naturalItems, "NaturalBiomes");
-            }
-            foreach (var naturalItems in NaturalSmallPlantsData)
-            {
-                AutoSuggestBoxItemSourceAdd(naturalItems, "NaturalSmallPlants");
-            }
-            foreach (var naturalItems in NaturalTreesData)
-            {
-                AutoSuggestBoxItemSourceAdd(naturalItems, "NaturalTrees");
-            }
-            foreach (var naturalItems in NaturalCreatureNestData)
-            {
-                AutoSuggestBoxItemSourceAdd(naturalItems, "NaturalCreatureNests");
+                NaturalCreatureNestData.Add(naturalCreatureNestItems);
+                AutoSuggestBoxItemSourceAdd(naturalCreatureNestItems, "NaturalCreatureNests");
             }
             #endregion
             #region 物品
             var good = JsonConvert.DeserializeObject<GoodsRootObject>(StringProcess.GetJsonString("Goods.json"));
             foreach (var goodMaterialItems in good.Material.GoodMaterial)
             {
-                GoodMaterialData.Add(goodMaterialItems);
-            }
-            foreach (var goodMaterialItems in GoodMaterialData)
-            {
                 goodMaterialItems.Picture = StringProcess.GetGameResourcePath(goodMaterialItems.Picture);
+                GoodMaterialData.Add(goodMaterialItems);
+                AutoSuggestBoxItemSourceAdd(goodMaterialItems, "GoodMaterial");
             }
             foreach (var goodEquipmentItems in good.Equipment.GoodEquipment)
             {
-                GoodEquipmentData.Add(goodEquipmentItems);
-            }
-            foreach (var goodEquipmentItems in GoodEquipmentData)
-            {
                 goodEquipmentItems.Picture = StringProcess.GetGameResourcePath(goodEquipmentItems.Picture);
+                GoodEquipmentData.Add(goodEquipmentItems);
+                AutoSuggestBoxItemSourceAdd(goodEquipmentItems, "GoodEquipment");
             }
             foreach (var goodSaplingItems in good.Sapling.GoodSapling)
             {
-                GoodSaplingData.Add(goodSaplingItems);
-            }
-            foreach (var goodSaplingItems in GoodSaplingData)
-            {
                 goodSaplingItems.Picture = StringProcess.GetGameResourcePath(goodSaplingItems.Picture);
+                GoodSaplingData.Add(goodSaplingItems);
+                AutoSuggestBoxItemSourceAdd(goodSaplingItems, "GoodSapling");
             }
             foreach (var goodCreaturesItems in good.Creatures.GoodCreatures)
             {
-                GoodCreaturesData.Add(goodCreaturesItems);
-            }
-            foreach (var goodCreaturesItems in GoodCreaturesData)
-            {
                 goodCreaturesItems.Picture = StringProcess.GetGameResourcePath(goodCreaturesItems.Picture);
+                GoodCreaturesData.Add(goodCreaturesItems);
+                AutoSuggestBoxItemSourceAdd(goodCreaturesItems, "GoodCreatures");
             }
             foreach (var goodTrinketsItems in good.Trinkets.GoodTrinkets)
             {
-                GoodTrinketsData.Add(goodTrinketsItems);
-            }
-            foreach (var goodTrinketsItems in GoodTrinketsData)
-            {
                 goodTrinketsItems.Picture = StringProcess.GetGameResourcePath(goodTrinketsItems.Picture);
+                GoodTrinketsData.Add(goodTrinketsItems);
+                AutoSuggestBoxItemSourceAdd(goodTrinketsItems, "GoodTrinkets");
             }
             foreach (var goodTurfItems in good.Turf.GoodTurf)
             {
-                GoodTurfData.Add(goodTurfItems);
-            }
-            foreach (var goodTurfItems in GoodTurfData)
-            {
                 goodTurfItems.Picture = StringProcess.GetGameResourcePath(goodTurfItems.Picture);
+                GoodTurfData.Add(goodTurfItems);
+                AutoSuggestBoxItemSourceAdd(goodTurfItems, "GoodTurf");
             }
             foreach (var goodPetItems in good.Pet.GoodPet)
             {
-                GoodPetData.Add(goodPetItems);
-            }
-            foreach (var goodPetItems in GoodPetData)
-            {
                 goodPetItems.Picture = StringProcess.GetGameResourcePath(goodPetItems.Picture);
+                GoodPetData.Add(goodPetItems);
+                AutoSuggestBoxItemSourceAdd(goodPetItems, "GoodPet");
             }
             foreach (var goodUnlockItems in good.Unlock.GoodUnlock)
             {
-                GoodUnlockData.Add(goodUnlockItems);
-            }
-            foreach (var goodUnlockItems in GoodUnlockData)
-            {
                 goodUnlockItems.Picture = StringProcess.GetGameResourcePath(goodUnlockItems.Picture);
+                GoodUnlockData.Add(goodUnlockItems);
+                AutoSuggestBoxItemSourceAdd(goodUnlockItems, "GoodUnlock");
             }
             foreach (var goodHallowedNightsItems in good.HallowedNights.Good)
             {
-                GoodHallowedNightsData.Add(goodHallowedNightsItems);
-            }
-            foreach (var goodHallowedNightsItems in GoodHallowedNightsData)
-            {
                 goodHallowedNightsItems.Picture = StringProcess.GetGameResourcePath(goodHallowedNightsItems.Picture);
+                GoodHallowedNightsData.Add(goodHallowedNightsItems);
+                AutoSuggestBoxItemSourceAdd(goodHallowedNightsItems, "GoodHallowedNights");
             }
-            foreach (var goodWinterwsFeastItems in good.WintersFeast.Good)
+            foreach (var goodWintersFeastItems in good.WintersFeast.Good)
             {
-                GoodWintersFeastData.Add(goodWinterwsFeastItems);
-            }
-            foreach (var goodWinterwsFeastItems in GoodWintersFeastData)
-            {
-                goodWinterwsFeastItems.Picture = StringProcess.GetGameResourcePath(goodWinterwsFeastItems.Picture);
+                goodWintersFeastItems.Picture = StringProcess.GetGameResourcePath(goodWintersFeastItems.Picture);
+                GoodWintersFeastData.Add(goodWintersFeastItems);
+                AutoSuggestBoxItemSourceAdd(goodWintersFeastItems, "GoodWintersFeast");
             }
             foreach (var goodYearOfTheGobblerItems in good.YearOfTheGobbler.Good)
             {
-                GoodYearOfTheGobblerData.Add(goodYearOfTheGobblerItems);
-            }
-            foreach (var goodYearOfTheGobblerItems in GoodYearOfTheGobblerData)
-            {
                 goodYearOfTheGobblerItems.Picture = StringProcess.GetGameResourcePath(goodYearOfTheGobblerItems.Picture);
+                GoodYearOfTheGobblerData.Add(goodYearOfTheGobblerItems);
+                AutoSuggestBoxItemSourceAdd(goodYearOfTheGobblerItems, "GoodYearOfTheGobbler");
             }
             foreach (var goodComponentItems in good.Component.Good)
             {
-                GoodComponentData.Add(goodComponentItems);
-            }
-            foreach (var goodComponentItems in GoodComponentData)
-            {
                 goodComponentItems.Picture = StringProcess.GetGameResourcePath(goodComponentItems.Picture);
+                GoodComponentData.Add(goodComponentItems);
+                AutoSuggestBoxItemSourceAdd(goodComponentItems, "GoodComponent");
             }
             foreach (var goodOthersItems in good.GoodOthers.Good)
             {
-                GoodOthersData.Add(goodOthersItems);
-            }
-            foreach (var goodOthersItems in GoodOthersData)
-            {
                 goodOthersItems.Picture = StringProcess.GetGameResourcePath(goodOthersItems.Picture);
-            }
-            foreach (var goodMaterialItems in GoodMaterialData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodMaterialItems, "GoodMaterial");
-            }
-            foreach (var goodEquipmentItems in GoodEquipmentData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodEquipmentItems, "GoodEquipment");
-            }
-            foreach (var goodSaplingItems in GoodSaplingData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodSaplingItems, "GoodSapling");
-            }
-            foreach (var goodCreaturesItems in GoodCreaturesData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodCreaturesItems, "GoodCreatures");
-            }
-            foreach (var goodTrinketsItems in GoodTrinketsData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodTrinketsItems, "GoodTrinkets");
-            }
-            foreach (var goodTurfItems in GoodTurfData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodTurfItems, "GoodTurf");
-            }
-            foreach (var goodPetItems in GoodPetData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodPetItems, "GoodPet");
-            }
-            foreach (var goodUnlockItems in GoodUnlockData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodUnlockItems, "GoodUnlock");
-            }
-            foreach (var goodHallowedNightsItems in GoodHallowedNightsData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodHallowedNightsItems, "GoodHallowedNights");
-            }
-            foreach (var goodWintersFeastItems in GoodWintersFeastData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodWintersFeastItems, "GoodWintersFeast");
-            }
-            foreach (var goodYearOfTheGobblerItems in GoodYearOfTheGobblerData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodYearOfTheGobblerItems, "GoodYearOfTheGobbler");
-            }
-            foreach (var goodComponentItems in GoodComponentData)
-            {
-                AutoSuggestBoxItemSourceAdd(goodComponentItems, "GoodComponent");
-            }
-            foreach (var goodOthersItems in GoodOthersData)
-            {
+                GoodOthersData.Add(goodOthersItems);
                 AutoSuggestBoxItemSourceAdd(goodOthersItems, "GoodOthers");
             }
             #endregion
+            #region 皮肤
+            var skins = JsonConvert.DeserializeObject<SkinsRootObject>(StringProcess.GetJsonStringSkins());
+            foreach (var skinsBodyItem in skins.Body.Skin)
+            {
+                skinsBodyItem.Picture = StringProcess.GetGameResourcePath(skinsBodyItem.Picture);
+                SkinsBodyData.Add(skinsBodyItem);
+                AutoSuggestBoxItemSourceAdd(skinsBodyItem, "SkinsBody");
+            }
+            foreach (var skinsHandsItem in skins.Hands.Skin)
+            {
+                skinsHandsItem.Picture = StringProcess.GetGameResourcePath(skinsHandsItem.Picture);
+                SkinsHandsData.Add(skinsHandsItem);
+                AutoSuggestBoxItemSourceAdd(skinsHandsItem, "SkinsHands");
+            }
+            // TODO 皮肤分类
+            #endregion
+
             #region 把AutoSuggestBoxItemSource数据源加入到AutoSuggestBoxItem
             foreach (var item in AutoSuggestBoxItemSource)
             {
@@ -1104,6 +841,13 @@ namespace 饥荒百科全书CSharp.Class
                 suggestBoxItem.Name = ((Good)obj).Name;
                 suggestBoxItem.EnName = ((Good)obj).EnName;
                 suggestBoxItem.Category = "物品";
+            }
+            else if (type == typeof(Skin))
+            {
+                suggestBoxItem.Picture = ((Skin)obj).Picture;
+                suggestBoxItem.Name = ((Skin)obj).Name;
+                suggestBoxItem.EnName = ((Skin)obj).EnName;
+                suggestBoxItem.Category = "皮肤";
             }
             suggestBoxItem.SourcePath = sourcePath;
             AutoSuggestBoxItemSource.Add(suggestBoxItem);

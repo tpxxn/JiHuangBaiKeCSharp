@@ -28,9 +28,6 @@ namespace 饥荒百科全书CSharp
         {
             public AppRun()
             {
-#if DEBUG
-                Debug.WriteLine("App constructor");
-#endif
                 Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
                 AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 Startup += App_Startup;
@@ -66,7 +63,6 @@ namespace 饥荒百科全书CSharp
 
                 #region 淡紫色透明光标
                 var mainWindowLavenderCursor = RegeditRw.RegReadString("MainWindowLavenderCursor");
-                Debug.WriteLine(mainWindowLavenderCursor);
                 if (string.IsNullOrEmpty(mainWindowLavenderCursor)) { 
                     mainWindowLavenderCursor = "True";
                     RegeditRw.RegWrite("MainWindowLavenderCursor", "True");
@@ -80,7 +76,6 @@ namespace 饥荒百科全书CSharp
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/CursorDictionary.xaml",
                             UriKind.Absolute)
                     };
-                    Debug.WriteLine("淡紫色透明光标模式");
                 }
                 else
                 {
@@ -91,7 +86,6 @@ namespace 饥荒百科全书CSharp
                             UriKind.Absolute)
                     };
                     Current.Resources.MergedDictionaries.Add(CursorDictionary);
-                    Debug.WriteLine("默认光标模式");
                 }
                 foreach (var key in CursorDictionary.Keys)
                 {

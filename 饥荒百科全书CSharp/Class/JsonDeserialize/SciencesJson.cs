@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace 饥荒百科全书CSharp.Class.JsonDeserialize
 {
-
     public class Science
     {
         public string Picture { get; set; }
@@ -30,7 +29,6 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             Unlock = new List<string>();
         }
     }
-
 
     public class Tool
     {

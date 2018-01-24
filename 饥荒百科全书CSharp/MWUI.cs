@@ -279,6 +279,10 @@ namespace 饥荒百科全书CSharp
                     SidebarGoods.IsChecked = true;
                     RightFrame.NavigationService.Navigate(new GoodPage(), extraData);
                     break;
+                case "皮肤":
+                    SidebarSkins.IsChecked = true;
+                    RightFrame.NavigationService.Navigate(new SkinsPage(), extraData);
+                    break;
             }
         }
         #endregion
@@ -724,6 +728,12 @@ namespace 饥荒百科全书CSharp
             RightFrame.Visibility = Visibility.Visible;
             RightFrame.NavigationService.Navigate(new GoodPage());
         }
+        private void Sidebar_Skins_Click(object sender, RoutedEventArgs e)
+        {
+            DedicatedServerFrame.Visibility = Visibility.Collapsed;
+            RightFrame.Visibility = Visibility.Visible;
+            RightFrame.NavigationService.Navigate(new SkinsPage());
+        }
         private void Sidebar_DedicatedServer_Click(object sender, RoutedEventArgs e)
         {
             RightFrame.Visibility = Visibility.Collapsed;
@@ -763,7 +773,7 @@ namespace 饥荒百科全书CSharp
                 BalloonTipText = "饥荒百科全书躲起来了~",
                 Text = "饥荒百科全书",
                 // ReSharper disable once PossibleNullReferenceException
-                Icon = new System.Drawing.Icon(Application.GetResourceStream(new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Resources/DST.ico")).Stream),
+                Icon = new Icon(Application.GetResourceStream(new Uri("pack://application:,,,/饥荒百科全书CSharp;component/Resources/DST.ico")).Stream),
                 Visible = true
             };
             NotifyIcon.MouseClick += NotifyIcon_MouseClick;

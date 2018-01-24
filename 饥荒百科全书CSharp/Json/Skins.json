@@ -1,0 +1,44 @@
+﻿{
+  "Body": {
+    "Skin": [
+      {
+        "Picture": "P_t_shirt",
+        "Pictures": [
+          "N_rabbit_hole",
+          "N_rabbit_hole_collapsed"
+        ],
+        "Name": "T恤",
+        "EnName": "T Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Cumulus Gray",
+          "Snail Mucus Purple",
+          "Higgsbury Red",
+          "Smoke White"
+        ],
+        "Introduction": "A '{Color}' colored shirt. Wilson is working on a W-shirt, but this prototype came out more T-shaped."
+      }
+    ]
+  },
+  "Hands": {
+    "Skin": [
+      {
+        "Picture": "P_t_shirt",
+        "Pictures": [
+          "N_rabbit_hole",
+          "N_rabbit_hole_collapsed"
+        ],
+        "Name": "T恤",
+        "EnName": "T Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Cumulus Gray",
+          "Snail Mucus Purple",
+          "Higgsbury Red",
+          "Smoke White"
+        ],
+        "Introduction": "A '{Color}' colored shirt. Wilson is working on a W-shirt, but this prototype came out more T-shaped."
+      }
+    ]
+  }
+}

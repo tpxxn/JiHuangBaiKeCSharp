@@ -44,6 +44,17 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// 返回Json文本
         /// </summary>
+        /// <returns>string类型文本</returns>
+        public static string GetJsonStringSkins()
+        {
+            var src2 = Application.GetResourceStream(new Uri("/饥荒百科全书CSharp;component/Json/Skins.json", UriKind.Relative))?.Stream;
+            var str = new StreamReader(src2 ?? throw new InvalidOperationException(), Encoding.UTF8).ReadToEnd();
+            return str;
+        }
+
+        /// <summary>
+        /// 返回Json文本
+        /// </summary>
         /// <param name="fileName">文件名</param>
         /// <returns>string类型文本</returns>
         public static string GetJsonStringDedicatedServer(string fileName)

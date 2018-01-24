@@ -299,6 +299,27 @@
         </Setter>
     </Style>
 
+    <Style x:Key="Sidebar_Skins_Style" TargetType="{x:Type RadioButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Image x:Name="btnbg_minimized" Source="/Resources/HamburgerMenu/HamburgerMenu_Skin_1.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Skin_2.png" TargetName="btnbg_minimized" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Skin_3.png" TargetName="btnbg_minimized" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Source" Value="/Resources/HamburgerMenu/HamburgerMenu_Skin_3.png" TargetName="btnbg_minimized" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style x:Key="Sidebar_Setting_Style" TargetType="{x:Type RadioButton}">
         <Setter Property="Template">
             <Setter.Value>
