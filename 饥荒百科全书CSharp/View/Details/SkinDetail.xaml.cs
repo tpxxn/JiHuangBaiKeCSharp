@@ -82,7 +82,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 foreach (var color in c.Colors)
                 {
-                    _skinList.Add(StringProcess.GetGameResourcePath("P_" + color.Replace(" ", "_").Replace("-", "_") + "_" + c.EnName.Replace(" ", "_")));
+                    _skinList.Add(StringProcess.GetGameResourcePath("P_" + color.Replace(" ", "_").Replace("-", "_") + "_" + c.EnName.Replace(" ", "_").Replace("-", "_")));
                 }
                 SkinImage.Source = new BitmapImage(new Uri(_skinList[0], UriKind.Relative));
             }
@@ -117,13 +117,13 @@ namespace 饥荒百科全书CSharp.View.Details
                     RarityTextBlock.Text = "事件 Event";
                     break;
                 case "Proof of Purchase":
-                    RarityTextBlock.Text = "购买 Proof of Purchase";
+                    RarityTextBlock.Text = "购买证明 Proof of Purchase";
                     break;
                 case "Reward":
                     RarityTextBlock.Text = "奖励 Reward";
                     break;
                 default:
-                    RarityTextBlock.Text = "普通 Common";
+                    RarityTextBlock.Visibility = Visibility.Collapsed;
                     break;
             }
             RarityTextBlock.Foreground = Global.GetSkinColor(c.Rarity);

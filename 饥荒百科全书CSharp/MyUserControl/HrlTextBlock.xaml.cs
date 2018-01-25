@@ -104,7 +104,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
                 Text,
                 System.Globalization.CultureInfo.InvariantCulture,
                 FlowDirection.LeftToRight,
-                new Typeface(Global.FontFamily.ToString()),
+                new Typeface(Global.FontFamily, FontStyle, Global.FontWeight, FontStretch),
                 fontSize,
                 Brushes.Black
             );

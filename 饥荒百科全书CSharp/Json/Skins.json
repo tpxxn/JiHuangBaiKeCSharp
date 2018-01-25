@@ -885,7 +885,7 @@
       },
       {
         "Picture": "P_forging_bracers",
-        "Name": "锻造护腕",
+        "Name": "淬炼护腕",
         "EnName": "Forging Bracers",
         "Rarity": "Spiffy",
         "Introduction": "These bracers will help you look the part in the arena."
@@ -1001,6 +1001,1611 @@
         "EnName": "Ice Floe Sapphires",
         "Rarity": "Spiffy",
         "Introduction": "Sleek arm covers that radiate cool, clear refinement."
+      }
+    ]
+  },
+  "Legs": {
+    "Skin": [
+      {
+        "Picture": "P_scribble_black_pants",
+        "Name": "裤子",
+        "EnName": "Pants",
+        "Rarity": "Common",
+        "Colors": [
+          "Scribble Black",
+          "Werebeaver Brown",
+          "Stormcloud Gray",
+          "No-Tan-Lines Tan",
+          "Forest Guardian Green"
+        ],
+        "Introduction": "Wearing these '{Color}' colored pants won't help you survive... But you'll look great!"
+      },
+      {
+        "Picture": "P_scribble_black_skirt",
+        "Name": "裙子",
+        "EnName": "Skirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Scribble Black",
+          "Werebeaver Brown",
+          "Stormcloud Gray",
+          "No-Tan-Lines Tan",
+          "Pigman Pink"
+        ],
+        "Introduction": "Wearing this '{Color}' colored skirt won't help you survive... But you'll look great!"
+      },
+      {
+        "Picture": "P_rubber_glove_blue_checkered_trousers",
+        "Name": "格子裤子",
+        "EnName": "Checkered Trousers",
+        "Rarity": "Classy",
+        "Colors": [
+          "Rubber Glove Blue",
+          "Willful Green"
+        ],
+        "Introduction": "These '{Color}' colored pants are perfect for playing checkers, or checking items off your to-do list."
+      },
+      {
+        "Picture": "P_forest_guardian_green_knee_pants",
+        "Name": "膝盖裤",
+        "EnName": "Knee Pants",
+        "Rarity": "Classy",
+        "Colors": [
+          "Forest Guardian Green",
+          "Dry Grass Tan"
+        ],
+        "Introduction": "Enjoy a knickerbocker glory in these '{Color}' colored knickerbockers."
+      },
+      {
+        "Picture": "P_rubber_glove_blue_plaid_skirt",
+        "Name": "格子裙",
+        "EnName": "Plaid Skirt",
+        "Rarity": "Classy",
+        "Colors": [
+          "Rubber Glove Blue",
+          "Science Experiment Green"
+        ],
+        "Introduction": "This '{Color}' colored skirt isn't a proper kilt, but you feel vaguely Scottish anyway."
+      },
+      {
+        "Picture": "P_snail_mucus_purple_jammie_pants",
+        "Name": "杰米长裤",
+        "EnName": "Jammie Pants",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Snail Mucus Purple",
+          "High pH Blue"
+        ],
+        "Introduction": "No striped pajama squid were harmed in the making of these '{Color}' colored naptime pants."
+      },
+      {
+        "Picture": "P_forging_leggings",
+        "Name": "淬炼绑腿",
+        "EnName": "Forging Leggings",
+        "Rarity": "Spiffy",
+        "Introduction": "A pair of fur-trimmed leggings and a broad leather belt."
+      },
+      {
+        "Picture": "P_fighters_pteruges",
+        "Name": "战士皮裙",
+        "EnName": "Fighter's Pteruges",
+        "Rarity": "Spiffy",
+        "Introduction": "A decorative leather skirt for a fiery fighter."
+      },
+      {
+        "Picture": "P_berserkers_belt",
+        "Name": "狂战士腰带",
+        "EnName": "Berserker's Belt",
+        "Rarity": "Spiffy",
+        "Introduction": "Berserkers have no need of pants!"
+      },
+      {
+        "Picture": "P_cast_iron_legs",
+        "Name": "铸铁腿",
+        "EnName": "Cast Iron Legs",
+        "Rarity": "Spiffy",
+        "Introduction": "This backplate was cast in the fires of The Forge."
+      },
+      {
+        "Picture": "P_brawlers_leggings",
+        "Name": "格斗家绑腿",
+        "EnName": "Brawler's Leggings",
+        "Rarity": "Spiffy",
+        "Introduction": "A pair of battle leggings with a studded leather belt."
+      },
+      {
+        "Picture": "P_alchemists_robe_top",
+        "Name": "炼金术师的法袍",
+        "EnName": "Alchemist's Robe Top",
+        "Rarity": "Spiffy",
+        "Introduction": "The preferred armor of the deadly alchemist."
+      },
+      {
+        "Picture": "P_battlemasters_legguards",
+        "Name": "战神腿甲",
+        "EnName": "Battlemaster's Legguards",
+        "Rarity": "Spiffy",
+        "Introduction": "They'll never see your powerful kicks coming."
+      },
+      {
+        "Picture": "P_smelters_trousers",
+        "Name": "熔炉裤子",
+        "EnName": "Smelter's Trousers",
+        "Rarity": "Spiffy",
+        "Introduction": "Breathable trousers to withstand the sweltering heat of The Forge."
+      },
+      {
+        "Picture": "P_hoarfrost_trousers",
+        "Name": "冰霜裤子",
+        "EnName": "Hoarfrost Trousers",
+        "Rarity": "Spiffy",
+        "Introduction": "These worn slacks have seen many a chilly winter."
+      },
+      {
+        "Picture": "P_aged_frost_trousers",
+        "Name": "陈旧的裤子",
+        "EnName": "Aged Frost Trousers",
+        "Rarity": "Spiffy",
+        "Introduction": "An old, traditional pair of trousers in a 'monastral blue' hue."
+      },
+      {
+        "Picture": "P_snowspider_slacks",
+        "Name": "雪蜘蛛休闲裤",
+        "EnName": "Snowspider Slacks",
+        "Rarity": "Spiffy",
+        "Introduction": "A wintry pair of plaid trousers."
+      }
+    ]
+  },
+  "Feet": {
+    "Skin": [
+      {
+        "Picture": "P_scribble_black_booties",
+        "Name": "短靴",
+        "EnName": "Booties",
+        "Rarity": "Common",
+        "Introduction": "A pair of 'scribble black' colored boot devices."
+      },
+      {
+        "Picture": "P_catcoon_blue_sneakers",
+        "Name": "运动鞋",
+        "EnName": "Sneakers",
+        "Rarity": "Common",
+        "Colors": [
+          "Catcoon Blue",
+          "Cactus Green",
+          "Low pH Red",
+          "Carrot Orange"
+        ],
+        "Introduction": "Wear these '{Color}' colored sneakers surreptitiously."
+      },
+      {
+        "Picture": "P_pure_white_mary_janes",
+        "Name": "扣带低跟鞋",
+        "EnName": "Mary Janes",
+        "Rarity": "Classy",
+        "Colors": [
+          "Pure White"
+        ],
+        "Introduction": "Hit the jackpot with these classic 'pure white' colored Mary Janes."
+      },
+      {
+        "Picture": "P_pure_white_pumps",
+        "Name": "轻便帆布鞋",
+        "EnName": "Pumps",
+        "Rarity": "Classy",
+        "Colors": [
+          "Pure White"
+        ],
+        "Introduction": "Dress to the nines in these 'pure white' colored shoes."
+      },
+      {
+        "Picture": "P_scribble_black_low_heels",
+        "Name": "低跟鞋",
+        "EnName": "Low Heels",
+        "Rarity": "Classy",
+        "Colors": [
+          "Scribble Black"
+        ],
+        "Introduction": "Low-heeled 'scribble black' colored dress shoes."
+      },
+      {
+        "Picture": "P_scribble_black_high_heels",
+        "Name": "高跟鞋",
+        "EnName": "High Heels",
+        "Rarity": "Classy",
+        "Colors": [
+          "Scribble Black"
+        ],
+        "Introduction": "High-heeled 'scribble black' colored dress shoes."
+      },
+      {
+        "Picture": "P_pure_white_riding_boots",
+        "Name": "马靴",
+        "EnName": "Riding Boots",
+        "Rarity": "Classy",
+        "Colors": [
+          "Pure White"
+        ],
+        "Introduction": "A pair of 'pure white' colored riding boots. Yee-haw!"
+      },
+      {
+        "Picture": "P_werebeaver_brown_canadian_boots",
+        "Name": "加拿大靴",
+        "EnName": "Canadian Boots",
+        "Rarity": "Classy",
+        "Colors": [
+          "Werebeaver Brown"
+        ],
+        "Introduction": "Infused with maple syrup and essence of moose. This pair is a tasteful 'werebeaver brown' color."
+      },
+      {
+        "Picture": "P_insufficient_chocolate_brown_steel_toed_boots",
+        "Name": "钢头皮靴",
+        "EnName": "Steel-Toed Boots",
+        "Rarity": "Classy",
+        "Colors": [
+          "Insufficient Chocolate Brown",
+          "Muddy Shoes Tan"
+        ],
+        "Introduction": "These '{Color}' colored boots will protect you from stubbing your toes, but not a whole lot else."
+      },
+      {
+        "Picture": "P_catcoon_blue_sandals",
+        "Name": "凉鞋",
+        "EnName": "Sandals",
+        "Rarity": "Classy",
+        "Colors": [
+          "Catcoon Blue"
+        ],
+        "Introduction": "A pair of 'catcoon blue' colored sandals, with socks (for extra fashion)."
+      },
+      {
+        "Picture": "P_forging_boots",
+        "Name": "淬炼之靴",
+        "EnName": "Forging Boots",
+        "Rarity": "Classy",
+        "Introduction": "You were born to battle. You feel it in your soles."
+      },
+      {
+        "Picture": "P_fighters_sandals",
+        "Name": "战士拖鞋",
+        "EnName": "Fighter's Sandals",
+        "Rarity": "Classy",
+        "Introduction": "Thick straps make these fur-trimmed sandals sturdy and comfortable."
+      },
+      {
+        "Picture": "P_berserkers_boots",
+        "Name": "狂战士靴",
+        "EnName": "Berserker's Boots",
+        "Rarity": "Classy",
+        "Introduction": "Even berserkers like having warm feet."
+      },
+      {
+        "Picture": "P_usurpers_sandals",
+        "Name": "篡位者拖鞋",
+        "EnName": "Usurper's Sandals",
+        "Rarity": "Classy",
+        "Introduction": "A pair of fur-trimmed sandals for a usurper to wear."
+      },
+      {
+        "Picture": "P_cast_iron_boots",
+        "Name": "铸铁靴",
+        "EnName": "Cast Iron Boots",
+        "Rarity": "Classy",
+        "Introduction": "These boots were made for crushing, and that's just what they'll do."
+      },
+      {
+        "Picture": "P_metallurgists_sandals",
+        "Name": "炼金术士拖鞋",
+        "EnName": "Metallurgist's Sandals",
+        "Rarity": "Classy",
+        "Introduction": "Sandals with leather tops to prevent accidental spilling of metallurgist's concoctions."
+      },
+      {
+        "Picture": "P_brawlers_boots",
+        "Name": "格斗家靴",
+        "EnName": "Brawler's Boots",
+        "Rarity": "Classy",
+        "Introduction": "A sensible pair of boots to keep you on balance in the ring."
+      },
+      {
+        "Picture": "P_duelists_sandals",
+        "Name": "决斗者拖鞋",
+        "EnName": "Duelist's Sandals",
+        "Rarity": "Classy",
+        "Introduction": "A breathable pair of duelist's sandals to wear into the ring."
+      },
+      {
+        "Picture": "P_alchemists_boots",
+        "Name": "炼金术士靴",
+        "EnName": "Alchemist's Boots",
+        "Rarity": "Classy",
+        "Introduction": "Powerful spells are best followed by a click of the heels."
+      },
+      {
+        "Picture": "P_battlemasters_sandals",
+        "Name": "战神拖鞋",
+        "EnName": "Battlemaster's Sandals",
+        "Rarity": "Classy",
+        "Introduction": "A pair of battlemaster's sandals to wear into the arena."
+      },
+      {
+        "Picture": "P_fiends_talons",
+        "Name": "魔鬼脚爪",
+        "EnName": "Fiend's Talons",
+        "Rarity": "Classy",
+        "Introduction": "Freshly sharpened spider toesies, ready for a fight."
+      },
+      {
+        "Picture": "P_smelters_boots",
+        "Name": "熔炉靴",
+        "EnName": "Smelter's Boots",
+        "Rarity": "Classy",
+        "Introduction": "Nothing beats a pair of brass-toed boots."
+      },
+      {
+        "Picture": "P_hoarfrost_shoes",
+        "Name": "冰霜之靴",
+        "EnName": "Hoarfrost Shoes",
+        "Rarity": "Classy",
+        "Introduction": "Pointy shoes for a frigid fellow."
+      },
+      {
+        "Picture": "P_coldfire_shoes",
+        "Name": "冰火之靴",
+        "EnName": "Coldfire Shoes",
+        "Rarity": "Classy",
+        "Introduction": "A pair of stylish heels accented by a puff of rabbit fur."
+      },
+      {
+        "Picture": "P_aged_frost_valenki",
+        "Name": "陈旧的毡靴",
+        "EnName": "Aged Frost Valenki",
+        "Rarity": "Classy",
+        "Introduction": "A handsome pair of traditional winter boots."
+      },
+      {
+        "Picture": "P_snowchild_valenki",
+        "Name": "冰霜女童毡靴",
+        "EnName": "Snowchild Valenki",
+        "Rarity": "Classy",
+        "Introduction": "A lovely pair of traditional winter boots."
+      },
+      {
+        "Picture": "P_ice_floe_heels",
+        "Name": "浮冰高跟鞋",
+        "EnName": "Ice Floe Heels",
+        "Rarity": "Classy",
+        "Introduction": "White heels, each adorned with a piercing ice crystal."
+      },
+      {
+        "Picture": "P_snowspider_slippers",
+        "Name": "血蜘蛛拖鞋",
+        "EnName": "Snowspider Slippers",
+        "Rarity": "Classy",
+        "Introduction": "A fuzzy pair of wintry snow slippers."
+      },
+      {
+        "Picture": "P_snail_mucus_purple_bunny_slippers",
+        "Name": "兔毛拖鞋",
+        "EnName": "Bunny Slippers",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Snail Mucus Purple"
+        ],
+        "Introduction": "Show those bunnies what's what by wearing this pair of fuzzy 'snail mucus purple' colored bunny slippers."
+      },
+      {
+        "Picture": "P_anthropomorphic_feline_blue_fuzzy_slippers",
+        "Name": "毛绒拖鞋",
+        "EnName": "Fuzzy Slippers",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Anthropomorphic Feline Blue"
+        ],
+        "Introduction": "Warm, fuzzy, 'anthropomorphic feline blue' colored slippers. A spot of cheer in a hostile world."
+      }
+    ]
+  },
+  "Characters": {
+    "Skin": [
+      {
+        "Picture": "P_guest_of_honor_wilson",
+        "Name": "威尔逊 - 贵宾",
+        "EnName": "Wilson - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Formal Wilson is unhappy Wilson."
+      },
+      {
+        "Picture": "P_guest_of_honor_willow",
+        "Name": "薇洛 - 贵宾",
+        "EnName": "Willow - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Willow prefers events that include bonfires or fireworks."
+      },
+      {
+        "Picture": "P_guest_of_honor_wolfgang",
+        "Name": "沃尔夫冈 - 贵宾",
+        "EnName": "Wolfgang - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Wolfgang enjoys formal dinners: the food is usually excellent."
+      },
+      {
+        "Picture": "P_guest_of_honor_wendy",
+        "Name": "温蒂 - 贵宾",
+        "EnName": "Wendy - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Wendy is not cheered by party games."
+      },
+      {
+        "Picture": "P_guest_of_honor_wx_78",
+        "Name": "WX-78 - 贵宾",
+        "EnName": "WX-78 - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "ERROR: DO NOT RECOGNIZE COMMAND \"MOUSTACHE.TWIRL\""
+      },
+      {
+        "Picture": "P_guest_of_honor_wickerbottom",
+        "Name": "维克波顿 - 贵宾",
+        "EnName": "Wickerbottom - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Since Wickerbottom doesn't sleep, she can dance all night."
+      },
+      {
+        "Picture": "P_guest_of_honor_woodie",
+        "Name": "伍迪 - 贵宾",
+        "EnName": "Woodie - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Woodie puts bear fat in his hair when he goes out."
+      },
+      {
+        "Picture": "P_guest_of_honor_wes",
+        "Name": "韦斯 - 贵宾",
+        "EnName": "Wes - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Formal Wes requires extra pomade."
+      },
+      {
+        "Picture": "P_guest_of_honor_maxwell",
+        "Name": "麦克斯韦 - 贵宾",
+        "EnName": "Maxwell - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Against all possible odds Maxwell has become even more dapper."
+      },
+      {
+        "Picture": "P_guest_of_honor_wigfrid",
+        "Name": "维格弗里德 - 贵宾",
+        "EnName": "Wigfrid - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "She resembles a Visigothic princess."
+      },
+      {
+        "Picture": "P_guest_of_honor_webber",
+        "Name": "韦伯 - 贵宾",
+        "EnName": "Webber - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "Webber takes parties seriously."
+      },
+      {
+        "Picture": "P_guest_of_honor_winona",
+        "Name": "薇诺娜 - 贵宾",
+        "EnName": "Winona - Guest of Honor",
+        "Rarity": "Elegant",
+        "Introduction": "This isn't what Winona expected when she read \"Formal Assembly\" on the invitation."
+      },
+      {
+        "Picture": "P_the_survivor_wilson",
+        "Name": "威尔逊 - 幸存者",
+        "EnName": "Wilson - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "As a scientist, Wilson is well equipped to investigate the natural world."
+      },
+      {
+        "Picture": "P_the_survivor_willow",
+        "Name": "薇洛 - 幸存者",
+        "EnName": "Willow - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Willow is taming the wilderness with fire."
+      },
+      {
+        "Picture": "P_the_survivor_wolfgang",
+        "Name": "沃尔夫冈 - 幸存者",
+        "EnName": "Wolfgang - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "In the wilderness, only the mighty survive."
+      },
+      {
+        "Picture": "P_the_survivor_wendy",
+        "Name": "温蒂 - 幸存者",
+        "EnName": "Wendy - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Wendy is actually pretty good at surviving."
+      },
+      {
+        "Picture": "P_the_survivor_wx_78",
+        "Name": "WX-78 - 幸存者",
+        "EnName": "WX-78 - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Exposure to the elements causes corrosion."
+      },
+      {
+        "Picture": "P_the_survivor_wickerbottom",
+        "Name": "维克波顿 - 幸存者",
+        "EnName": "Wickerbottom - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Those with knowledge are good at making do in difficult circumstances."
+      },
+      {
+        "Picture": "P_the_survivor_woodie",
+        "Name": "伍迪 - 幸存者",
+        "EnName": "Woodie - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Woodie looks like he's turning into a tree."
+      },
+      {
+        "Picture": "P_the_survivor_wes",
+        "Name": "韦斯 - 幸存者",
+        "EnName": "Wes - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Even mimes can fight if confronted with a monster."
+      },
+      {
+        "Picture": "P_the_survivor_maxwell",
+        "Name": "麦克斯韦 - 幸存者",
+        "EnName": "Maxwell - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "This is Maxwell, the intrepid explorer."
+      },
+      {
+        "Picture": "P_the_survivor_wigfrid",
+        "Name": "维格弗里德 - 幸存者",
+        "EnName": "Wigfrid - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "A warrior cannot eat until she defeats some meat."
+      },
+      {
+        "Picture": "P_the_survivor_webber",
+        "Name": "韦伯 - 幸存者",
+        "EnName": "Webber - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Webber looks a little worse for the wear."
+      },
+      {
+        "Picture": "P_the_survivor_winona",
+        "Name": "薇诺娜 - 幸存者",
+        "EnName": "Winona - The Survivor",
+        "Rarity": "Elegant",
+        "Introduction": "Winona's always been made of rough stuff."
+      },
+      {
+        "Picture": "P_the_triumphant_wilson",
+        "Name": "威尔逊 - 凯旋",
+        "EnName": "Wilson - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "Wilson has learned the science of shadows."
+      },
+      {
+        "Picture": "P_the_triumphant_willow",
+        "Name": "薇洛 - 凯旋",
+        "EnName": "Willow - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "Willow enjoys flickering flames of inky blackness."
+      },
+      {
+        "Picture": "P_the_triumphant_wolfgang",
+        "Name": "沃尔夫冈 - 凯旋",
+        "EnName": "Wolfgang - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "Wolfgang is even mightier than usual."
+      },
+      {
+        "Picture": "P_the_triumphant_wendy",
+        "Name": "温蒂 - 凯旋",
+        "EnName": "Wendy - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "Wendy has always been comfortable with darkness."
+      },
+      {
+        "Picture": "P_the_triumphant_wx_78",
+        "Name": "WX-78 - 凯旋",
+        "EnName": "WX-78 - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "This robot was evil before. Now they're double evil."
+      },
+      {
+        "Picture": "P_the_triumphant_wickerbottom",
+        "Name": "维克波顿 - 凯旋",
+        "EnName": "Wickerbottom - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "A librarian knows how to watch from the shadows."
+      },
+      {
+        "Picture": "P_the_triumphant_woodie",
+        "Name": "伍迪 - 凯旋",
+        "EnName": "Woodie - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "The shadow realm is pretty much the same as here, just darker."
+      },
+      {
+        "Picture": "P_the_triumphant_wes",
+        "Name": "韦斯 - 凯旋",
+        "EnName": "Wes - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "The sun is too bright. It blots out the darkness."
+      },
+      {
+        "Picture": "P_the_untriumphant_maxwell",
+        "Name": "麦克斯韦 - 败北",
+        "EnName": "Maxwell - The Untriumphant",
+        "Rarity": "Elegant",
+        "Introduction": "Before it all went so wrong..."
+      },
+      {
+        "Picture": "P_the_triumphant_wigfrid",
+        "Name": "维格弗里德 - 凯旋",
+        "EnName": "Wigfrid - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "Go to the dark side and be on top of the world."
+      },
+      {
+        "Picture": "P_the_triumphant_webber",
+        "Name": "韦伯 - 凯旋",
+        "EnName": "Webber - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "Dark spiders have poisonous fangs."
+      },
+      {
+        "Picture": "P_the_triumphant_winona",
+        "Name": "薇诺娜 - 凯旋",
+        "EnName": "Winona - The Triumphant",
+        "Rarity": "Elegant",
+        "Introduction": "No one knows the depths of Winona's dark machinations."
+      },
+      {
+        "Picture": "P_piggsbury_mask",
+        "Name": "猪-博瑞面具",
+        "EnName": "Piggsbury Mask",
+        "Rarity": "Elegant",
+        "Introduction": "Wilson usually forgets to put a costume together until the last moment. He's always busy experimenting."
+      },
+      {
+        "Picture": "P_willowfly_head",
+        "Name": "薇-蝇的头",
+        "EnName": "Willowfly Head",
+        "Rarity": "Elegant",
+        "Introduction": "Willow would dress like this every day if she could."
+      },
+      {
+        "Picture": "P_macwolf_bald_cap",
+        "Name": "海象-夫冈的秃头套",
+        "EnName": "MacWolf Bald Cap",
+        "Rarity": "Elegant",
+        "Introduction": "It seems a shame to hide such luxurious hair."
+      },
+      {
+        "Picture": "P_wendyflower_head",
+        "Name": "温迪-花朵的头",
+        "EnName": "Wendyflower Head",
+        "Rarity": "Elegant",
+        "Introduction": "Wendy quite fancies this hair color."
+      },
+      {
+        "Picture": "P_rookiebot_headplate",
+        "Name": "战车-机器的头部件",
+        "EnName": "Rookiebot Headplate",
+        "Rarity": "Elegant",
+        "Introduction": "The welding on this costume took AGES."
+      },
+      {
+        "Picture": "P_ms._voltbottom_antlers",
+        "Name": "伏特-伯顿女士的羊角",
+        "EnName": "Ms. Voltbottom Antlers",
+        "Rarity": "Elegant",
+        "Introduction": "An elegant costume for an elegant woman."
+      },
+      {
+        "Picture": "P_woodguard_head",
+        "Name": "伍-树的头",
+        "EnName": "Woodguard Head",
+        "Rarity": "Elegant",
+        "Introduction": "Woodie will have twigs stuck in his beard for weeks. Not that that's unusual."
+      },
+      {
+        "Picture": "P_wesdrake_makeup",
+        "Name": "维斯-德拉装饰",
+        "EnName": "Wesdrake Makeup",
+        "Rarity": "Elegant",
+        "Introduction": "What's the sound of one mandrake meeping?"
+      },
+      {
+        "Picture": "P_krampwell_head",
+        "Name": "坎普-威尔的头",
+        "EnName": "Krampwell Head",
+        "Rarity": "Elegant",
+        "Introduction": "Maxwell deeply regrets asking the others to choose his costume for him."
+      },
+      {
+        "Picture": "P_deerfrid_mask",
+        "Name": "鹿-格弗里德面具",
+        "EnName": "Deerfrid Mask",
+        "Rarity": "Elegant",
+        "Introduction": "Wigfrid chose to be one of her favorite foes to battle for Hallowed Nights."
+      },
+      {
+        "Picture": "P_webilisk_head",
+        "Name": "韦-蝠的头",
+        "EnName": "Webilisk Head",
+        "Rarity": "Elegant",
+        "Introduction": "Gosh, those wings look very... real."
+      },
+      {
+        "Picture": "P_nona_gekko_head",
+        "Name": "诺娜-壁虎的头",
+        "EnName": "Nona Gekko Head",
+        "Rarity": "Elegant",
+        "Introduction": "It wasn't easy for Winona to get her hair like that."
+      },
+      {
+        "Picture": "P_the_gladiator_wilson",
+        "Name": "威尔逊 - 角斗士",
+        "EnName": "Wilson - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Wilson is willing to take on any challenger."
+      },
+      {
+        "Picture": "P_the_gladiator_willow",
+        "Name": "薇洛 - 角斗士",
+        "EnName": "Willow - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Willow will reduce this ring to cinders."
+      },
+      {
+        "Picture": "P_the_gladiator_wolfgang",
+        "Name": "沃尔夫冈 - 角斗士",
+        "EnName": "Wolfgang - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "This look suits Wolfgang, and he knows it."
+      },
+      {
+        "Picture": "P_the_gladiator_wendy",
+        "Name": "温蒂 - 角斗士",
+        "EnName": "Wendy - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Wendy's hidden ruthlessness needed only slight provocation to show itself."
+      },
+      {
+        "Picture": "P_the_gladiator_wx_78",
+        "Name": "WX-78 - 角斗士",
+        "EnName": "WX-78 - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "WX's transformation into an organic killing machine proves all dreams are possible, if you only believe."
+      },
+      {
+        "Picture": "P_the_gladiator_wickerbottom",
+        "Name": "维克波顿 - 角斗士",
+        "EnName": "Wickerbottom - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Wickerbottom adapted to life in the arena with grace and ease."
+      },
+      {
+        "Picture": "P_the_gladiator_woodie",
+        "Name": "伍迪 - 角斗士",
+        "EnName": "Woodie - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Woodie is a wild man in the arena."
+      },
+      {
+        "Picture": "P_the_gladiator_wes",
+        "Name": "韦斯 - 角斗士",
+        "EnName": "Wes - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Beware the battle mime."
+      },
+      {
+        "Picture": "P_the_gladiator_maxwell",
+        "Name": "麦克斯韦 - 角斗士",
+        "EnName": "Maxwell - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Maxwell is both dark AND brooding."
+      },
+      {
+        "Picture": "P_the_gladiator_wigfrid",
+        "Name": "维格弗里德 - 角斗士",
+        "EnName": "Wigfrid - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "The question was never IF Wigfrid would master the ring, but when."
+      },
+      {
+        "Picture": "P_the_gladiator_webber",
+        "Name": "韦伯 - 角斗士",
+        "EnName": "Webber - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "It's not wise to corner venomous spiders."
+      },
+      {
+        "Picture": "P_the_gladiator_winona",
+        "Name": "薇诺娜 - 角斗士",
+        "EnName": "Winona - The Gladiator",
+        "Rarity": "Elegant",
+        "Introduction": "Winona's tough as nails and ready to throw down."
+      },
+      {
+        "Picture": "P_the_roseate_wilson",
+        "Name": "威尔逊 - 玫瑰",
+        "EnName": "Wilson - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "Who knew rose dye was so permanent?"
+      },
+      {
+        "Picture": "P_the_roseate_willow",
+        "Name": "薇洛 - 玫瑰",
+        "EnName": "Willow - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "Willow was always a bit prickly. Now she's just moreso."
+      },
+      {
+        "Picture": "P_the_roseate_wolfgang",
+        "Name": "沃尔夫冈 - 玫瑰",
+        "EnName": "Wolfgang - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "This moustache doesn't tickle, it prickles."
+      },
+      {
+        "Picture": "P_the_roseate_wendy",
+        "Name": "温蒂 - 玫瑰",
+        "EnName": "Wendy - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "A dark crimson rose represents mourning."
+      },
+      {
+        "Picture": "P_the_roseate_wx_78",
+        "Name": "WX-78 - 玫瑰",
+        "EnName": "WX-78 - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "The organics have inextricably grown on WX... Regrettable."
+      },
+      {
+        "Picture": "P_the_roseate_wickerbottom",
+        "Name": "维克波顿 - 玫瑰",
+        "EnName": "Wickerbottom - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "Now duel for the rose queen's amusement."
+      },
+      {
+        "Picture": "P_the_roseate_woodie",
+        "Name": "伍迪 - 玫瑰",
+        "EnName": "Woodie - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "Woodie tends his own garden more often than he tends his own hair."
+      },
+      {
+        "Picture": "P_the_roseate_wes",
+        "Name": "韦斯 - 玫瑰",
+        "EnName": "Wes - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "Wes always felt his rosy cheeks were his best feature."
+      },
+      {
+        "Picture": "P_the_roseate_maxwell",
+        "Name": "麦克斯韦 - 玫瑰",
+        "EnName": "Maxwell - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "Ladies and gentlemen, a round of applause for our lovely assistant."
+      },
+      {
+        "Picture": "P_the_roseate_wigfrid",
+        "Name": "维格弗里德 - 玫瑰",
+        "EnName": "Wigfrid - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "Wigfrid was born for the part of Red Queen."
+      },
+      {
+        "Picture": "P_the_roseate_webber",
+        "Name": "韦伯 - 玫瑰",
+        "EnName": "Webber - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "The rosebuds are tangled in there real good."
+      },
+      {
+        "Picture": "P_the_roseate_winona",
+        "Name": "薇诺娜 - 玫瑰",
+        "EnName": "Winona - The Roseate",
+        "Rarity": "Elegant",
+        "Introduction": "By any other name, she'd smell of engine grease."
+      },
+      {
+        "Picture": "P_the_snowfallen_wilson",
+        "Name": "威尔逊 - 落雪",
+        "EnName": "Wilson - The Snowfallen",
+        "Rarity": "Elegant",
+        "Introduction": "The chill of the first frost of winter has beset poor Wilson."
+      },
+      {
+        "Picture": "P_the_snowfallen_willow",
+        "Name": "薇洛 - 落雪",
+        "EnName": "Willow - The Snowfallen",
+        "Rarity": "Elegant",
+        "Introduction": "Coldfire is Willow's favorite type of fire... After hot fire, warm fire, tepid fire, and vaguely lukewarm fire."
+      },
+      {
+        "Picture": "P_the_snowfallen_wolfgang",
+        "Name": "沃尔夫冈 - 落雪",
+        "EnName": "Wolfgang - The Snowfallen",
+        "Rarity": "Elegant",
+        "Introduction": "Wolfgang enjoys passing cold winter nights around a fire with loved ones."
+      },
+      {
+        "Picture": "P_the_snowfallen_wendy",
+        "Name": "温蒂 - 落雪",
+        "EnName": "Wendy - The Snowfallen",
+        "Rarity": "Elegant",
+        "Introduction": "Wendy feels cold and ephemeral as season's first fallen snowflake."
+      },
+      {
+        "Picture": "P_the_snowfallen_wickerbottom",
+        "Name": "维克波顿 - 落雪",
+        "EnName": "Wickerbottom - The Snowfallen",
+        "Rarity": "Elegant",
+        "Introduction": "It would be wise not to get on the queen of winter's bad side."
+      },
+      {
+        "Picture": "P_the_snowfallen_webber",
+        "Name": "韦伯 - 落雪",
+        "EnName": "Webber - The Snowfallen",
+        "Rarity": "Elegant",
+        "Introduction": "Webber never needs to buy a winter coat. He makes his own."
+      }
+    ]
+  },
+  "Items": {
+    "Skin": [
+      {
+        "Picture": "P_backpack_mushy_collection",
+        "Name": "发霉的背包",
+        "EnName": "Moldy Backpack",
+        "Introduction": "A backpack which has grown moldy from disuse."
+      },
+      {
+        "Picture": "P_catcoon_blue_backpack",
+        "Name": "彩色背包",
+        "EnName": "Backpack",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Catcoon Blue",
+          "Forever Green"
+        ],
+        "Introduction": "Carry your stuff in a '{Color}' colored backpack."
+      },
+      {
+        "Picture": "P_dismal_gray_buckled_backpack",
+        "Name": "扣带背包",
+        "EnName": "Buckled Backpack",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Dismal Gray",
+          "Monastral Blue",
+          "Rook Red"
+        ],
+        "Introduction": "A '{Color}' colored backpack with a big, curved buckle."
+      },
+      {
+        "Picture": "P_subaqueous_megafauna_green_rucksack",
+        "Name": "帆布背包",
+        "EnName": "Rucksack",
+        "Rarity": "Spiffy",
+        "Colors": [
+          "Subaqueous Megafauna Green",
+          "Carrot Orange",
+          "Koalefant Trunk Red"
+        ],
+        "Introduction": "A rustic rucksack in a '{Color}' color."
+      },
+      {
+        "Picture": "P_back_bat",
+        "Name": "蝙蝠背包",
+        "EnName": "Back Bat",
+        "Rarity": "Elegant",
+        "Introduction": "Behold, a batty black bat-shaped backpack. Bat."
+      },
+      {
+        "Picture": "P_beefalo_carryall",
+        "Name": "皮弗娄牛提包",
+        "EnName": "Beefalo Carryall",
+        "Rarity": "Elegant",
+        "Introduction": "A backpack made in the shape of a little beefalo. It's so cute and fluffy!"
+      },
+      {
+        "Picture": "P_catcoon_carryall",
+        "Name": "浣猫提包",
+        "EnName": "Catcoon Carryall",
+        "Rarity": "Elegant",
+        "Introduction": "Squirrel away your items with this catcoon-shaped carryall."
+      },
+      {
+        "Picture": "P_scorching_satchel",
+        "Name": "灼热书包",
+        "EnName": "Scorching Satchel",
+        "Rarity": "Elegant",
+        "Introduction": "Dragon flier burning bright, in the desert quite a sight. What equipment is required to quench thy fearsome scorching fires?"
+      },
+      {
+        "Picture": "P_rabbit_rucksack",
+        "Name": "兔子帆布背包",
+        "EnName": "Rabbit Rucksack",
+        "Rarity": "Elegant",
+        "Introduction": "Go down the rabbit hole with this rabbit-shaped backpack."
+      },
+      {
+        "Picture": "P_smallbird_satchel",
+        "Name": "高鸟书包",
+        "EnName": "Smallbird Satchel",
+        "Rarity": "Elegant",
+        "Introduction": "This smallbird won't ever grow up and reject you like a real smallbird would."
+      },
+      {
+        "Picture": "P_spider_sack",
+        "Name": "蜘蛛背包",
+        "EnName": "Spider Sack",
+        "Rarity": "Elegant",
+        "Introduction": "Wearing this backpack will let you make an arachnophobe's day a little bit worse. Or, you could ask yourself 'What would Willow do?' and burn it! Burn it with fire!"
+      },
+      {
+        "Picture": "P_poop_pouch",
+        "Name": "便便袋",
+        "EnName": "Poop Pouch",
+        "Rarity": "Elegant",
+        "Introduction": "A bag shaped like feces. Obviously it was designed by somebody who enjoys sophomoric humor."
+      },
+      {
+        "Picture": "P_thorned_laurel",
+        "Name": "带刺桂冠",
+        "EnName": "Thorned Laurel",
+        "Rarity": "Elegant",
+        "Introduction": "Laurels ought rest on you, not the other way around."
+      },
+      {
+        "Picture": "P_floppy_straw_hat",
+        "Name": "松软稻草帽",
+        "EnName": "Floppy Straw Hat",
+        "Rarity": "Elegant",
+        "Introduction": "Be like a little British lady in your garden!"
+      },
+      {
+        "Picture": "P_floppy_straw_hat_miner_hat",
+        "Name": "褶边矿灯帽",
+        "EnName": "Frilly Headlamp",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_floppy_straw_hat_rain_hat",
+        "Name": "松软雨帽",
+        "EnName": "Floppy Rain Hat",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_bowler_hat",
+        "Name": "圆顶硬礼帽",
+        "EnName": "Bowler Hat",
+        "Rarity": "Elegant",
+        "Introduction": "Demonstrate your impeccable style with this dapper bowler hat."
+      },
+      {
+        "Picture": "P_bowler_hat_prestihatitator",
+        "Name": "魔法圆顶硬礼帽台",
+        "EnName": "Prestibowlerhatator",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_bumble_spear",
+        "Name": "蜜蜂之矛",
+        "EnName": "Bumble Spear",
+        "Rarity": "Elegant",
+        "Introduction": "It doesn't hit harder than a regular spear, although it certainly still stings."
+      },
+      {
+        "Picture": "P_bumble_spear_ice_staff",
+        "Name": "冰冻蜜蜂法杖",
+        "EnName": "Icy Bumble Staff",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_bumble_spear_fire_staff",
+        "Name": "火焰蜜蜂法杖",
+        "EnName": "Fiery Bumble Staff",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_rose_pike",
+        "Name": "玫瑰长矛",
+        "EnName": "Rose Pike",
+        "Rarity": "Elegant",
+        "Introduction": "No sharper than any other spear, though much lovelier."
+      },
+      {
+        "Picture": "P_rose_pike_ice_staff",
+        "Name": "玫瑰冰冻法杖",
+        "EnName": "Rose Ice Staff",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_rose_pike_fire_staff",
+        "Name": "玫瑰火焰法杖",
+        "EnName": "Rose Fire Staff",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_weatherbeaten_torch",
+        "Name": "风吹日晒的火把",
+        "EnName": "Weatherbeaten Torch",
+        "Rarity": "Elegant",
+        "Introduction": "Give your torch some visual flare with these hastily wrapped, desiccated rags. Smoky!"
+      },
+      {
+        "Picture": "P_houndbone_white_patchwork_quilt",
+        "Name": "拼布被子",
+        "EnName": "Patchwork Quilt",
+        "Rarity": "Distinguished",
+        "Colors": [
+          "Houndbone White",
+          "High Elevation Blue"
+        ],
+        "Introduction": "Nothing says \"bedtime\" quite like a bunch of little fabric squares sewn into one bigger, '{Color}' fabric square."
+      }
+    ]
+  },
+  "Structures": {
+    "Skin": [
+      {
+        "Picture": "P_fanged_firepit",
+        "Name": "尖牙火坑",
+        "EnName": "Fanged Firepit",
+        "Rarity": "Distinguished",
+        "Introduction": "Thish firepit ish made of rocksh that reshemble fangsh. What would it shay if it could shpeak?"
+      },
+      {
+        "Picture": "P_carpet_bag",
+        "Name": "手提旅行袋",
+        "EnName": "Carpet Bag",
+        "Rarity": "Distinguished",
+        "Introduction": "This bag made from luxurious carpet is the height of modern fashion!"
+      },
+      {
+        "Picture": "P_treasured_chest",
+        "Name": "宝藏宝箱",
+        "EnName": "Treasured Chest",
+        "Rarity": "Distinguished",
+        "Introduction": "A chest worthy of storing your finest gems and treasures. Or, y'know, twigs and manure."
+      },
+      {
+        "Picture": "P_train_case",
+        "Name": "小旅行箱",
+        "EnName": "Train Case",
+        "Rarity": "Distinguished",
+        "Introduction": "Organize your foraged scraps in class and style."
+      },
+      {
+        "Picture": "P_steamer_trunk",
+        "Name": "轮船行李箱",
+        "EnName": "Steamer Trunk",
+        "Rarity": "Distinguished",
+        "Introduction": "NOTE: Doesn't steam."
+      },
+      {
+        "Picture": "P_travellers_trunk",
+        "Name": "旅行者行李箱",
+        "EnName": "Traveller's Trunk",
+        "Rarity": "Distinguished",
+        "Introduction": "Its travelling days may be over, but it'll always have the memories."
+      },
+      {
+        "Picture": "P_austere_endtable",
+        "Name": "简朴茶几",
+        "EnName": "Austere Endtable",
+        "Rarity": "Distinguished",
+        "Introduction": "A table that would be a truly elegant addition to any unkempt wilderness base."
+      },
+      {
+        "Picture": "P_dragonfly_endtable",
+        "Name": "龙蝇茶几",
+        "EnName": "Dragonfly Endtable",
+        "Rarity": "Distinguished",
+        "Introduction": "An endtable inspired by the most opulent of bloodthirsty monsters."
+      },
+      {
+        "Picture": "P_antique_endtable",
+        "Name": "古风茶几",
+        "EnName": "Antique Endtable",
+        "Rarity": "Distinguished",
+        "Introduction": "A quaint decorative table that would make your grandmother proud."
+      },
+      {
+        "Picture": "P_camping_crock_pot",
+        "Name": "营地烹饪锅",
+        "EnName": "Camping Crock Pot",
+        "Rarity": "Distinguished",
+        "Introduction": "This cooking pot looks kind of beaten up, but the food it cooks still tastes delicious."
+      },
+      {
+        "Picture": "P_alchemy_pod",
+        "Name": "炼金舱",
+        "EnName": "Alchemy Pod",
+        "Rarity": "Distinguished",
+        "Introduction": ""
+      }
+    ]
+  },
+  "Critters": {
+    "Skin": [
+      {
+        "Picture": "P_wyvernling",
+        "Name": "小双足飞龙",
+        "EnName": "Wyvernling",
+        "Rarity": "Elegant",
+        "Introduction": "This pet's doofy lil dragon face inspires both fear and wuv."
+      },
+      {
+        "Picture": "P_bearded_dragon",
+        "Name": "松狮蜥",
+        "EnName": "Bearded Dragon",
+        "Rarity": "Elegant",
+        "Introduction": "A pet as noble as he is huggable."
+      }
+    ]
+  },
+  "Special": {
+    "Skin": [
+      {
+        "Picture": "P_mini_monument",
+        "Name": "迷你丰碑火坑",
+        "EnName": "Mini Monument",
+        "Rarity": "Loyal",
+        "Introduction": "A firepit modeled after an ancient, giant monument. Luckily, this version is sized more appropriately for humans (and human-sized entities)."
+      },
+      {
+        "Picture": "P_tragic_torch",
+        "Name": "凄惨之炬",
+        "EnName": "Tragic Torch",
+        "Rarity": "Loyal",
+        "Introduction": "At first glance this torch appears menacing, but holding it makes you feel quite sad."
+      },
+      {
+        "Picture": "P_ancient_cane",
+        "Name": "远古手杖",
+        "EnName": "Ancient Cane",
+        "Rarity": "Timeless",
+        "Introduction": "To tread ancient paths, long forgotten."
+      },
+      {
+        "Picture": "P_ancient_cane_the_lazy_explorer",
+        "Name": "远古探索者",
+        "EnName": "The Ancient Explorer",
+        "Rarity": "Timeless"
+      },
+      {
+        "Picture": "P_ancient_kings_chest",
+        "Name": "远古国王之箱",
+        "EnName": "Ancient King's Chest",
+        "Rarity": "Timeless",
+        "Introduction": "The history of an ancient people is locked away inside."
+      },
+      {
+        "Picture": "P_dry_macaroni_beige_letterman_jacket",
+        "Name": "莱特曼运动夹克",
+        "EnName": "Letterman Jacket",
+        "Rarity": "Spiffy",
+        "Introduction": "Run from ghosts and eat copious amounts in style in this slick Letterman Jacket!"
+      },
+      {
+        "Picture": "P_high_ph_blue_smart_sweater",
+        "Name": "神气的毛衣",
+        "EnName": "Smart Sweater",
+        "Rarity": "Spiffy",
+        "Introduction": "Donning this Smart Sweater impels the wearer to burgeon a broad, patrician lexicon."
+      },
+      {
+        "Picture": "P_black_winter_hat",
+        "Name": "黑冬帽",
+        "EnName": "Black Winter Hat",
+        "Rarity": "Proof of Purchase",
+        "Introduction": "A dark winter hat for the dark winter months."
+      },
+      {
+        "Picture": "P_pink_winter_hat",
+        "Name": "粉冬帽",
+        "EnName": "Pink Winter Hat",
+        "Rarity": "Proof of Purchase",
+        "Introduction": "Doesn't keep your head any warmer than a regular winter hat, but gosh if it isn't just the cutest."
+      },
+      {
+        "Picture": "P_crabpack",
+        "Name": "兔蟹背包",
+        "EnName": "Crabpack",
+        "Rarity": "Proof of Purchase",
+        "Introduction": "Watch out, this snappy backpack can get a little snippy!"
+      },
+      {
+        "Picture": "P_deerclops_duffel",
+        "Name": "巨鹿旅行包",
+        "EnName": "Deerclops Duffel",
+        "Rarity": "Proof of Purchase",
+        "Introduction": "A backpack shaped like Deerclops. It's surprisingly cute!"
+      },
+      {
+        "Picture": "P_glommer_pack",
+        "Name": "格罗姆背包",
+        "EnName": "Glommer Pack",
+        "Rarity": "Proof of Purchase",
+        "Introduction": "This pack is shaped like a friend."
+      },
+      {
+        "Picture": "P_meepsack",
+        "Name": "曼德拉袋",
+        "EnName": "Meepsack",
+        "Rarity": "Proof of Purchase",
+        "Introduction": "Keep this lil guy quiet by shoving some delicious loot in his mouth!"
+      },
+      {
+        "Picture": "P_calico_chester_chest",
+        "Name": "印花布切斯特之箱",
+        "EnName": "Calico Chester Chest",
+        "Rarity": "Proof of Purchase",
+        "Introduction": "No Chesters were harmed in the making of this chest... I think."
+      },
+      {
+        "Picture": "P_pirate_birdcage",
+        "Name": "海盗鸟笼",
+        "EnName": "Pirate Birdcage",
+        "Rarity": "Loyal",
+        "Introduction": "The birds' swashbuckling days are over, thanks to this pirate-themed birdcage."
+      },
+      {
+        "Picture": "P_cherubs_heart",
+        "Name": "天使之心",
+        "EnName": "Cherub's Heart",
+        "Rarity": "Loyal",
+        "Introduction": "The slings and arrows of fate have taken their toll on this poor, afflicted heart."
+      }
+    ]
+  },
+  "HallowedNightsSkins": {
+    "Skin": [
+      {
+        "Picture": "P_catty_costume",
+        "Name": "狸猫装",
+        "EnName": "Catty Costume",
+        "Rarity": "Distinguished",
+        "Introduction": "This Catty Costume will make you look like one fine feline!"
+      },
+      {
+        "Picture": "P_cheeky_chester",
+        "Name": "切斯特装",
+        "EnName": "Cheeky Chester Costume",
+        "Rarity": "Distinguished",
+        "Introduction": "Don't worry, that's faux-Chester fur."
+      },
+      {
+        "Picture": "P_glommy_guise",
+        "Name": "格罗姆外衣",
+        "EnName": "Glommy Guise",
+        "Rarity": "Distinguished",
+        "Introduction": "Cover up your full moon with this adorable Glommy Guise!"
+      },
+      {
+        "Picture": "P_hutch_disguise",
+        "Name": "哈奇伪装品",
+        "EnName": "Hutch Disguise",
+        "Rarity": "Distinguished",
+        "Introduction": "The perfect look for going underground and undercover."
+      },
+      {
+        "Picture": "P_catty_costume_cap",
+        "Name": "狸猫装配帽",
+        "EnName": "Catty Costume Cap",
+        "Rarity": "Elegant",
+        "Introduction": "Is that really a cap with a catcoon's face? You've gotta be kitten me!"
+      },
+      {
+        "Picture": "P_catty_costume_cap_prestihatitator",
+        "Name": "魔法狸猫帽台",
+        "EnName": "Presticatator",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_cheeky_chester_cap",
+        "Name": "切斯特配帽",
+        "EnName": "Cheeky Chester Cap",
+        "Rarity": "Elegant",
+        "Introduction": "They say that imitation is the sincerest form of flattery."
+      },
+      {
+        "Picture": "P_cheeky_chester_cap_prestihatitator",
+        "Name": "魔法切斯特帽台",
+        "EnName": "Chestihatator",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_glommy_head_guise",
+        "Name": "格罗姆配帽",
+        "EnName": "Glommy Head Guise",
+        "Rarity": "Elegant",
+        "Introduction": "The goopiness inside the rim makes it glom to your head that much better!"
+      },
+      {
+        "Picture": "P_glommy_head_guise_prestihatitator",
+        "Name": "魔法格罗姆帽台",
+        "EnName": "Prestihataglommer",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_hutch_head_disguise",
+        "Name": "哈奇装配帽",
+        "EnName": "Hutch Head Disguise",
+        "Rarity": "Elegant",
+        "Introduction": "It's a Hutch hatch, for your head!"
+      },
+      {
+        "Picture": "P_hutch_head_disguise_prestihatitator",
+        "Name": "魔法哈奇帽台",
+        "EnName": "Prestihutchatator",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_hallowed_light",
+        "Name": "万圣节之光",
+        "EnName": "Hallowed Light",
+        "Rarity": "Elegant",
+        "Introduction": "Repel the dark these Hallowed Nights with a dreadful beacon of most Hallowed Light."
+      },
+      {
+        "Picture": "P_macabre_birdcage",
+        "Name": "毛骨悚然的鸟笼",
+        "EnName": "Macabre Birdcage",
+        "Rarity": "Distinguished",
+        "Introduction": "Trap birds in a prison of their own making."
+      },
+      {
+        "Picture": "P_creepy_cauldron",
+        "Name": "毛骨悚然的大锅",
+        "EnName": "Creepy Cauldron",
+        "Rarity": "Elegant",
+        "Introduction": "Double, double, broil and gobble, campfire burns and crockpot bubbles!"
+      },
+      {
+        "Picture": "P_vampire_batling",
+        "Name": "吸血小蝙蝠",
+        "EnName": "Vampire Batling",
+        "Rarity": "Elegant",
+        "Introduction": "You'd have to be blind not to appreciate this bat's horrifying adorableness."
+      },
+      {
+        "Picture": "P_wilson_pigguard_collection",
+        "Name": "守卫猪套装",
+        "EnName": "Guardian Pig Costume",
+        "Rarity": "Event",
+        "Introduction": "Piggsbury Costume"
+      },
+      {
+        "Picture": "P_willow_dragonfly_collection",
+        "Name": "龙蝇套装",
+        "EnName": "Dragonfly Costume",
+        "Rarity": "Event",
+        "Introduction": "Willowfly Costume"
+      },
+      {
+        "Picture": "P_wolfgang_walrus_collection",
+        "Name": "海象套装",
+        "EnName": "MacTusk Costume",
+        "Rarity": "Event",
+        "Introduction": "MacWolf Costume"
+      },
+      {
+        "Picture": "P_wendy_lureplant_collection",
+        "Name": "诱饵草套装",
+        "EnName": "Lureplant Costume",
+        "Rarity": "Event",
+        "Introduction": "Wendyflower Costume"
+      },
+      {
+        "Picture": "P_wx78_rhinorook_collection",
+        "Name": "战车套装",
+        "EnName": "Rook Costume",
+        "Rarity": "Event",
+        "Introduction": "Rookiebot Costume"
+      },
+      {
+        "Picture": "P_wickerbottom_lightninggoat_collection",
+        "Name": "电羊套装",
+        "EnName": "Volt Goat Costume",
+        "Rarity": "Event",
+        "Introduction": "Ms. Voltbottom Costume"
+      },
+      {
+        "Picture": "P_woodie_treeguard_collection",
+        "Name": "树人套装",
+        "EnName": "Treeguard Costume",
+        "Rarity": "Event",
+        "Introduction": "Woodguard Costume"
+      },
+      {
+        "Picture": "P_wes_mandrake_collection",
+        "Name": "曼德拉草套装",
+        "EnName": "Mandrake Costume",
+        "Rarity": "Event",
+        "Introduction": "Wesdrake Costume"
+      },
+      {
+        "Picture": "P_waxwell_krampus_collection",
+        "Name": "坎普斯套装",
+        "EnName": "Krampus Costume",
+        "Rarity": "Event",
+        "Introduction": "Krampwell Costume"
+      },
+      {
+        "Picture": "P_wathgrithr_deerclops_collection",
+        "Name": "巨鹿套装",
+        "EnName": "Deerclops Costume",
+        "Rarity": "Event",
+        "Introduction": "Deerfrid Costume"
+      },
+      {
+        "Picture": "P_webber_bat_collection",
+        "Name": "蝙蝠套装",
+        "EnName": "Batilisk Costume",
+        "Rarity": "Event",
+        "Introduction": "Webilisk Costume"
+      },
+      {
+        "Picture": "P_winona_grass_gekko",
+        "Name": "草丛壁虎套装",
+        "EnName": "Grass Gekko Costume",
+        "Rarity": "Event",
+        "Introduction": "Nona Gekko Costume"
+      }
+    ]
+  },
+  "WintersFeastSkins": {
+    "Skin": [
+      {
+        "Picture": "P_cumulus_gray_t_shirt",
+        "Name": "恤",
+        "EnName": "Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Cumulus",
+          "Cumulus"
+        ],
+        "Introduction": ""
+      }
+    ]
+  },
+  "YearOfTheGobblerSkins": {
+    "Skin": [
+      {
+        "Picture": "P_cumulus_gray_t_shirt",
+        "Name": "恤",
+        "EnName": "Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Cumulus",
+          "Cumulus"
+        ],
+        "Introduction": ""
+      }
+    ]
+  },
+  "TheForge": {
+    "Skin": [
+      {
+        "Picture": "P_cumulus_gray_t_shirt",
+        "Name": "恤",
+        "EnName": "Shirt",
+        "Rarity": "Common",
+        "Colors": [
+          "Cumulus",
+          "Cumulus"
+        ],
+        "Introduction": ""
       }
     ]
   }
