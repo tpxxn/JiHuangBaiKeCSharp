@@ -175,6 +175,26 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class Emotes
+    {
+        public List<Skin> Skin { get; set; }
+
+        public Emotes()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class OutfitSets
+    {
+        public List<Skin> Skin { get; set; }
+
+        public OutfitSets()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
     public class SkinsRootObject
     {
         public Body Body { get; set; }
@@ -190,6 +210,8 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public WintersFeastSkins WintersFeastSkins { get; set; }
         public YearOfTheGobblerSkins YearOfTheGobblerSkins { get; set; }
         public TheForge TheForge { get; set; }
+        public Emotes Emotes { get; set; }
+        public OutfitSets OutfitSets { get; set; }
 
         public SkinsRootObject()
         {
@@ -206,6 +228,8 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             WintersFeastSkins = new WintersFeastSkins();
             YearOfTheGobblerSkins = new YearOfTheGobblerSkins();
             TheForge = new TheForge();
+            Emotes = new Emotes();
+            OutfitSets = new OutfitSets();
         }
     }
 }

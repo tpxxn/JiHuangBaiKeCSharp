@@ -76,6 +76,14 @@ namespace 饥荒百科全书CSharp.View.Details
             // 图片
             if (c.Colors.Count == 0)
             {
+                // 套装
+                if (string.IsNullOrEmpty(c.Introduction) && string.IsNullOrEmpty(c.Rarity))
+                {
+                    ImageButtonGrid.Width = 258;
+                    ImageButtonGrid.Height = 170;
+                    SkinImage.Height = 170;
+                    ImageColumnDefinition.Width = new GridLength(170);
+                }
                 SkinImage.Source = new BitmapImage(new Uri(c.Picture, UriKind.Relative));
             }
             else

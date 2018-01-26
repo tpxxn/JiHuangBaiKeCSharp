@@ -2567,45 +2567,885 @@
   "WintersFeastSkins": {
     "Skin": [
       {
-        "Picture": "P_cumulus_gray_t_shirt",
-        "Name": "恤",
-        "EnName": "Shirt",
-        "Rarity": "Common",
+        "Picture": "P_forest_guardian_green_festive_stocking_cap",
+        "Name": "圣诞长袜帽",
+        "EnName": "Festive Stocking Cap",
+        "Rarity": "Spiffy",
         "Colors": [
-          "Cumulus",
-          "Cumulus"
+          "Forest Guardian Green"
         ],
-        "Introduction": ""
+        "Introduction": "One might wear this '{Color}' winter hat on a cozy night around a campfire. Or, hey, they might not."
+      },
+      {
+        "Picture": "P_holly_wreath",
+        "Name": "冬青花环",
+        "EnName": "Holly Wreath",
+        "Rarity": "Spiffy",
+        "Introduction": "A jolly holly laurel to wear on your head. How winter-y!"
+      },
+      {
+        "Picture": "P_ribbon_wreath",
+        "Name": "丝带花环",
+        "EnName": "Ribbon Wreath",
+        "Rarity": "Spiffy",
+        "Introduction": "Get in the seasonal spirit by wreathing your head in lovely ribbons!"
+      },
+      {
+        "Picture": "P_yuletide_overcoat",
+        "Name": "圣诞外衣",
+        "EnName": "Yuletide Overcoat",
+        "Rarity": "Distinguished",
+        "Introduction": "Put another log on the fire! No, seriously, it's about to go out."
+      },
+      {
+        "Picture": "P_yuletide_frock",
+        "Name": "圣诞礼服",
+        "EnName": "Yuletide Frock",
+        "Rarity": "Distinguished",
+        "Introduction": "A dashing frock for dashing through the snow!"
+      },
+      {
+        "Picture": "P_ornamental_birdcage",
+        "Name": "装饰鸟笼",
+        "EnName": "Ornamental Birdcage",
+        "Rarity": "Distinguished",
+        "Introduction": "Imprison a bird in a wreath of seasonal cheer."
+      },
+      {
+        "Picture": "P_polar_broodling",
+        "Name": "极地小龙蝇",
+        "EnName": "Polar Broodling",
+        "Rarity": "Elegant",
+        "Introduction": "This Broodling renounced its fiery ways... Now it's a lovely shade of blue!"
+      },
+      {
+        "Picture": "P_snowy_glomglom",
+        "Name": "雪花格罗咪",
+        "EnName": "Snowy Glomglom",
+        "Rarity": "Elegant",
+        "Introduction": "What a precious little snowball you are, Glomglom!"
+      },
+      {
+        "Picture": "P_snowkit",
+        "Name": "小雪猫",
+        "EnName": "Snowkit",
+        "Rarity": "Elegant",
+        "Introduction": "Did this Kittykit just get cuter? (How's that even possible?!)"
+      },
+      {
+        "Picture": "P_snowflake_ewelet",
+        "Name": "雪片小钢羊",
+        "EnName": "Snowflake Ewelet",
+        "Rarity": "Elegant",
+        "Introduction": "Winter doesn't seem quite as cold when you have a fleecy Ewelet by your side."
+      },
+      {
+        "Picture": "P_arctic_vargling",
+        "Name": "北极小座狼",
+        "EnName": "Arctic Vargling",
+        "Rarity": "Elegant",
+        "Introduction": "Looks like this adorable little lump grew his winter coat in. Good boy, Vargling!"
+      },
+      {
+        "Picture": "P_penglet",
+        "Name": "小企鸥",
+        "EnName": "Penglet",
+        "Rarity": "Elegant",
+        "Introduction": "This plump little fellow is sure to brighten even the bitterest of winter nights!"
+      },
+      {
+        "Picture": "P_firehound_red_jingly_tophat",
+        "Name": "叮当高礼帽",
+        "EnName": "Jingly Tophat",
+        "Rarity": "Event",
+        "Introduction": "A festive 'firehound red' colored tophat."
+      },
+      {
+        "Picture": "P_jingly_tophat_prestihatitator",
+        "Name": "魔法叮当高礼帽台",
+        "EnName": "Jingly Prestihatator",
+        "Rarity": "Event"
+      },
+      {
+        "Picture": "P_plum_pudding_cap",
+        "Name": "葡萄干布丁帽",
+        "EnName": "Plum Pudding Cap",
+        "Rarity": "Event",
+        "Introduction": "This plum pudding hat contains no plums. Just a bunch of raisins."
+      },
+      {
+        "Picture": "P_gingerbread_chest",
+        "Name": "姜饼宝箱",
+        "EnName": "Gingerbread Chest",
+        "Rarity": "Event",
+        "Introduction": "Don't be fooled... it's completely inedible."
       }
     ]
   },
   "YearOfTheGobblerSkins": {
     "Skin": [
       {
-        "Picture": "P_cumulus_gray_t_shirt",
-        "Name": "恤",
-        "EnName": "Shirt",
-        "Rarity": "Common",
-        "Colors": [
-          "Cumulus",
-          "Cumulus"
-        ],
-        "Introduction": ""
+        "Picture": "P_tied_trapper_hat",
+        "Name": "打结的猎人帽",
+        "EnName": "Tied Trapper Hat",
+        "Rarity": "Distinguished",
+        "Introduction": "This trapper hat appears to have been permanently tied up. Luckily it looks stylish that way."
+      },
+      {
+        "Picture": "P_trapper_hat",
+        "Name": "猎人帽",
+        "EnName": "Trapper Hat",
+        "Rarity": "Distinguished",
+        "Introduction": "This trapper hat is soft and cozy, but the ends don't seem to tie up anymore."
+      },
+      {
+        "Picture": "P_rooslet",
+        "Name": "小公鸡",
+        "EnName": "Rooslet",
+        "Rarity": "Elegant",
+        "Introduction": "If you wanted a bouncy rooster companion by your side, then you're in cluck!"
+      },
+      {
+        "Picture": "P_clucky_winter_hat",
+        "Name": "咯咯冬帽",
+        "EnName": "Clucky Winter Hat",
+        "Rarity": "Loyal",
+        "Introduction": "This winter hat is strangely reminiscent of a small feathered friend."
+      },
+      {
+        "Picture": "P_lucky_beast_attire",
+        "Name": "好运兽装",
+        "EnName": "Lucky Beast Attire",
+        "Rarity": "Event",
+        "Introduction": "The perfect outfit for a dance or two."
+      },
+      {
+        "Picture": "P_lucky_beast_outfit",
+        "Name": "好运兽服",
+        "EnName": "Lucky Beast Outfit",
+        "Rarity": "Event",
+        "Introduction": "All ready for a spectacular performance!"
+      },
+      {
+        "Picture": "P_silk_brocade_coat",
+        "Name": "丝绸锦缎外套",
+        "EnName": "Silk Brocade Coat",
+        "Rarity": "Event",
+        "Introduction": "A silken brocade coat in a lovely 'willful green' shade."
+      },
+      {
+        "Picture": "P_silk_pajamas",
+        "Name": "丝绸睡衣",
+        "EnName": "Silk Pajamas",
+        "Rarity": "Event",
+        "Introduction": "Luxurious PJs in a handsome 'doydoy teal'."
+      },
+      {
+        "Picture": "P_clucky_slippers",
+        "Name": "咯咯拖鞋",
+        "EnName": "Clucky Slippers",
+        "Rarity": "Event",
+        "Introduction": "Slip your feet into some fluffy, comfy chicken slippers."
       }
     ]
   },
   "TheForge": {
     "Skin": [
       {
-        "Picture": "P_cumulus_gray_t_shirt",
-        "Name": "恤",
-        "EnName": "Shirt",
-        "Rarity": "Common",
-        "Colors": [
-          "Cumulus",
-          "Cumulus"
-        ],
-        "Introduction": ""
+        "Picture": "P_life_blossom_garland",
+        "Name": "生命花环",
+        "EnName": "Life Blossom Garland",
+        "Rarity": "Elegant",
+        "Introduction": "This lovely wreath of Life Blossoms have lost their magic, but they still look divine."
+      },
+      {
+        "Picture": "P_feathered_wreath",
+        "Name": "羽毛花环",
+        "EnName": "Feathered Wreath",
+        "Rarity": "Elegant",
+        "Introduction": "This feather hat is so luxurious to the touch!"
+      },
+      {
+        "Picture": "P_barbed_helmet",
+        "Name": "带刺的头盔",
+        "EnName": "Barbed Helmet",
+        "Rarity": "Elegant",
+        "Introduction": "Who wouldn't be intimidated by this fearsome helm?"
+      },
+      {
+        "Picture": "P_clairvoyant_life_amulet",
+        "Name": "透视生命护符",
+        "EnName": "Clairvoyant Life Amulet",
+        "Rarity": "Elegant",
+        "Introduction": "This Life Giving Amulet was crafted in Battlemaster Pugna's Forge."
+      },
+      {
+        "Picture": "P_woven_grass_armor",
+        "Name": "编织草甲",
+        "EnName": "Woven Grass Armor",
+        "Rarity": "Elegant",
+        "Introduction": "Extra care and craftsmanship was put into weaving this grass armor."
+      },
+      {
+        "Picture": "P_feathered_grass_armor",
+        "Name": "羽毛草甲",
+        "EnName": "Feathered Grass Armor",
+        "Rarity": "Elegant",
+        "Introduction": "This delicately woven cloak is an excellent decorative piece."
+      },
+      {
+        "Picture": "P_wood_armor",
+        "Name": "硬木盔甲",
+        "EnName": "Wood Armor",
+        "Rarity": "Elegant",
+        "Introduction": "This wood armor is a fresh decorative take on a timeless functional design."
+      },
+      {
+        "Picture": "P_wood_armor_scalemail",
+        "Name": "龙蝇身体盔甲",
+        "EnName": "Dragonfly Body Armor",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_jagged_wood_armor",
+        "Name": "齿木盔甲",
+        "EnName": "Jagged Wood Armor",
+        "Rarity": "Elegant",
+        "Introduction": "The fangs are purely decorative. They're not even real!"
+      },
+      {
+        "Picture": "P_jagged_wood_armor_scalemail",
+        "Name": "锯齿龙蝇盔甲",
+        "EnName": "Jagged Dragonfly Armor",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_silken_wood_armor",
+        "Name": "绸木盔甲",
+        "EnName": "Silken Wood Armor",
+        "Rarity": "Elegant",
+        "Introduction": "This silken wood armor provides no additional protection, but at least it stops the splinters."
+      },
+      {
+        "Picture": "P_silken_wood_armor_scalemail",
+        "Name": "龙蝇腹卷",
+        "EnName": "Dragonfly Haramaki",
+        "Rarity": "Elegant"
+      },
+      {
+        "Picture": "P_marble_splint_mail",
+        "Name": "大理石夹板",
+        "EnName": "Marble Splint Mail",
+        "Rarity": "Elegant",
+        "Introduction": "This splint mail is crafted of many marble slabs chained together."
+      },
+      {
+        "Picture": "P_marble_plate_armor",
+        "Name": "大理石板甲",
+        "EnName": "Marble Plate Armor",
+        "Rarity": "Elegant",
+        "Introduction": "This armor is the fastest way there is to get chiseled abs."
+      },
+      {
+        "Picture": "P_pugnas_ham_bat",
+        "Name": "帕格纳的火腿棒",
+        "EnName": "Pugna's Ham Bat",
+        "Rarity": "Elegant",
+        "Introduction": "This ham bat was fashioned after the scepter of the great Battlemaster Pugna."
+      },
+      {
+        "Picture": "P_infernal_fire_staff",
+        "Name": "地狱火杖",
+        "EnName": "Infernal Fire Staff",
+        "Rarity": "Elegant",
+        "Introduction": "This fire staff is strangely reminiscent of the Infernal Staff found in The Forge."
+      },
+      {
+        "Picture": "P_the_end_is_nigh_gilded_edition",
+        "Name": "《末日将至：镀金版》",
+        "EnName": "The End is Nigh: Gilded Edition",
+        "Rarity": "Elegant",
+        "Introduction": "The lettering inside is exquisitely calligraphed."
+      },
+      {
+        "Picture": "P_the_challenger_wilson",
+        "Name": "威尔逊 - 挑战者",
+        "EnName": "Wilson - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "This wouldn't be the first time Wilson's had to fight off a goon or two."
+      },
+      {
+        "Picture": "P_the_challenger_willow",
+        "Name": "薇洛 - 挑战者",
+        "EnName": "Willow - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Willow was never one to be pushed around."
+      },
+      {
+        "Picture": "P_the_challenger_wolfgang",
+        "Name": "沃尔夫冈 - 挑战者",
+        "EnName": "Wolfgang - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Wolfgang's no stranger to the art of pugilism."
+      },
+      {
+        "Picture": "P_the_challenger_wendy",
+        "Name": "温蒂 - 挑战者",
+        "EnName": "Wendy - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "If Wendy is to succumb to death, she'll do so on her own terms."
+      },
+      {
+        "Picture": "P_the_challenger_wx_78",
+        "Name": "WX-78 - 挑战者",
+        "EnName": "WX-78 - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Few things get them more excited than the prospect of destroying fleshlings."
+      },
+      {
+        "Picture": "P_the_challenger_wickerbottom",
+        "Name": "维克波顿 - 挑战者",
+        "EnName": "Wickerbottom - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Wickerbottom is not opposed to self defense, should the occasion call for it."
+      },
+      {
+        "Picture": "P_the_challenger_woodie",
+        "Name": "伍迪 - 挑战者",
+        "EnName": "Woodie - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "It's best not to mess with a man and his axe."
+      },
+      {
+        "Picture": "P_the_challenger_wes",
+        "Name": "韦斯 - 挑战者",
+        "EnName": "Wes - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Wes is quiet, but not meek."
+      },
+      {
+        "Picture": "P_the_challenger_maxwell",
+        "Name": "麦克斯韦 - 挑战者",
+        "EnName": "Maxwell - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Maxwell believes this look to be quite intimidating."
+      },
+      {
+        "Picture": "P_the_challenger_wigfrid",
+        "Name": "维格弗里德 - 挑战者",
+        "EnName": "Wigfrid - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Wigfrid was born for the arena."
+      },
+      {
+        "Picture": "P_the_challenger_webber",
+        "Name": "韦伯 - 挑战者",
+        "EnName": "Webber - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Webber's used to fending for himself."
+      },
+      {
+        "Picture": "P_the_challenger_winona",
+        "Name": "薇诺娜 - 挑战者",
+        "EnName": "Winona - The Challenger",
+        "Rarity": "Event",
+        "Introduction": "Winona came ready for a fight!"
+      }
+    ]
+  },
+  "Emotes": {
+    "Skin": [
+      {
+        "Picture": "P_cheer_emote",
+        "Name": "动作表情-欢呼",
+        "EnName": "Cheer Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /cheer to do a big cheer!\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_chicken_dance_emote",
+        "Name": "动作表情-公鸡舞",
+        "EnName": "Chicken Dance Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /chicken to do a chicken dance!\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_flex_emote",
+        "Name": "动作表情-炫耀",
+        "EnName": "Flex Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /flex to flex your muscle!\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_impatient_emote",
+        "Name": "动作表情-不耐烦",
+        "EnName": "Impatient Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /impatient to tap your foot impatiently.\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_laugh_emote",
+        "Name": "动作表情-大笑",
+        "EnName": "Laugh Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /laugh to laugh.\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_robot_dance_emote",
+        "Name": "动作表情-机械舞",
+        "EnName": "Robot Dance Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /robot to do the robot!\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_shrug_emote",
+        "Name": "动作表情-耸肩",
+        "EnName": "Shrug Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /shrug to shrug. Meh.\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_slow_clap_emote",
+        "Name": "动作表情-缓慢鼓掌",
+        "EnName": "Slow Clap Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /slowclap to express your disapproval.\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_step_dance_emote",
+        "Name": "动作表情-踢踏舞",
+        "EnName": "Step Dance Emote",
+        "Rarity": "Distinguished",
+        "Introduction": "Type /step to perform a step dance.\r\n在熔炉活动可以使用"
+      },
+      {
+        "Picture": "P_swoon_emote",
+        "Name": "动作表情-痴迷",
+        "EnName": "Swoon Emote",
+        "Rarity": "Loyal",
+        "Introduction": "A deep /swoon is not for the faint of heart.\r\n穿上“天使之心”皮肤后可以在情人节使用"
+      },
+      {
+        "Picture": "P_sleepy_emote",
+        "Name": "动作表情-困倦",
+        "EnName": "Sleepy Emote",
+        "Rarity": "Reward",
+        "Introduction": "You are getting veeery /sleepy...\r\n收集一套同色的“杰米衬衫”、“杰米长裤”、“拼布被子”皮肤后可以使用"
+      },
+      {
+        "Picture": "P_yawn_emote",
+        "Name": "动作表情-打哈欠",
+        "EnName": "Yawn Emote",
+        "Rarity": "Reward",
+        "Introduction": "Just /yawn and everyone will know you're ready for an adorable nap!\r\n收集一套同色的“杰米衬衫”、“杰米长裤”、“拼布被子”皮肤后可以使用"
+      },
+      {
+        "Picture": "P_fist_shake_emote",
+        "Name": "动作表情-握拳头",
+        "EnName": "Fist Shake Emote",
+        "Rarity": "Reward",
+        "Introduction": "Type /fistshake to show your frustration.\r\n收集一套任意一套“角斗士”套装皮肤后可以使用"
+      },
+      {
+        "Picture": "P_carol_emote",
+        "Name": "动作表情-颂歌",
+        "EnName": "Carol Emote",
+        "Rarity": "Reward",
+        "Introduction": "Type /carol to sing a Winter's Feast carol.\r\n收集一套任意一套“雪落”套装皮肤后可以使用"
+      }
+    ]
+  },
+  "OutfitSets": {
+    "Skin": [
+      {
+        "Picture": "P_wilson_guest_of_honor_skin_portrait",
+        "Name": "威尔逊 - 贵宾",
+        "EnName": "Formal Wilson Portrait"
+      },
+      {
+        "Picture": "P_willow_guest_of_honor_skin_portrait",
+        "Name": "薇洛 - 贵宾",
+        "EnName": "Formal Willow Portrait"
+      },
+      {
+        "Picture": "P_wolfgang_guest_of_honor_skin_portrait",
+        "Name": "沃尔夫冈 - 贵宾",
+        "EnName": "Formal Wolfgang Portrait"
+      },
+      {
+        "Picture": "P_wendy_guest_of_honor_skin_portrait",
+        "Name": "温蒂 - 贵宾",
+        "EnName": "Formal Wendy Portrait"
+      },
+      {
+        "Picture": "P_wx-78_guest_of_honor_skin_portrait",
+        "Name": "WX-78 - 贵宾",
+        "EnName": "Formal WX-78 Portrait"
+      },
+      {
+        "Picture": "P_wickerbottom_guest_of_honor_skin_portrait",
+        "Name": "维克波顿 - 贵宾",
+        "EnName": "Formal Wickerbottom Portrait"
+      },
+      {
+        "Picture": "P_woodie_guest_of_honor_skin_portrait",
+        "Name": "伍迪 - 贵宾",
+        "EnName": "Formal Woodie Portrait"
+      },
+      {
+        "Picture": "P_wes_guest_of_honor_skin_portrait",
+        "Name": "韦斯 - 贵宾",
+        "EnName": "Formal Wes Portrait"
+      },
+      {
+        "Picture": "P_waxwell_guest_of_honor_skin_portrait",
+        "Name": "麦克斯韦 - 贵宾",
+        "EnName": "Formal Maxwell Portrait"
+      },
+      {
+        "Picture": "P_wigfrid_guest_of_honor_skin_portrait",
+        "Name": "维格弗里德 - 贵宾",
+        "EnName": "Formal Wigfrid Portrait"
+      },
+      {
+        "Picture": "P_webber_guest_of_honor_skin_portrait",
+        "Name": "韦伯 - 贵宾",
+        "EnName": "Formal Webber Portrait"
+      },
+      {
+        "Picture": "P_winona_guest_of_honor_skin_portrait",
+        "Name": "薇诺娜 - 贵宾",
+        "EnName": "Formal Winona Portrait"
+      },
+      {
+        "Picture": "P_wilson_survivor_skin_portrait",
+        "Name": "威尔逊 - 幸存者",
+        "EnName": "Survivor Wilson Skin"
+      },
+      {
+        "Picture": "P_willow_survivor_skin_portrait",
+        "Name": "薇洛 - 幸存者",
+        "EnName": "Survivor Willow Skin"
+      },
+      {
+        "Picture": "P_wolfgang_survivor_skin_portrait",
+        "Name": "沃尔夫冈 - 幸存者",
+        "EnName": "Survivor Wolfgang Skin"
+      },
+      {
+        "Picture": "P_wendy_survivor_skin_portrait",
+        "Name": "温蒂 - 幸存者",
+        "EnName": "Survivor Wendy Skin"
+      },
+      {
+        "Picture": "P_wx-78_survivor_skin_portrait",
+        "Name": "WX-78 - 幸存者",
+        "EnName": "Survivor WX-78 Skin"
+      },
+      {
+        "Picture": "P_wickerbottom_survivor_skin_portrait",
+        "Name": "维克波顿 - 幸存者",
+        "EnName": "Survivor Wickerbottom Skin"
+      },
+      {
+        "Picture": "P_woodie_survivor_skin_portrait",
+        "Name": "伍迪 - 幸存者",
+        "EnName": "Survivor Woodie Skin"
+      },
+      {
+        "Picture": "P_wes_survivor_skin_portrait",
+        "Name": "韦斯 - 幸存者",
+        "EnName": "Survivor Wes Skin"
+      },
+      {
+        "Picture": "P_waxwell_survivor_skin_portrait",
+        "Name": "麦克斯韦 - 幸存者",
+        "EnName": "Survivor Maxwell Skin"
+      },
+      {
+        "Picture": "P_wigfrid_survivor_skin_portrait",
+        "Name": "维格弗里德 - 幸存者",
+        "EnName": "Survivor Wigfrid Skin"
+      },
+      {
+        "Picture": "P_webber_survivor_skin_portrait",
+        "Name": "韦伯 - 幸存者",
+        "EnName": "Survivor Webber Skin"
+      },
+      {
+        "Picture": "P_winona_survivor_skin_portrait",
+        "Name": "薇诺娜 - 幸存者",
+        "EnName": "Survivor Winona Skin"
+      },
+      {
+        "Picture": "P_wilson_shadow_skin_portrait",
+        "Name": "威尔逊 - 凯旋",
+        "EnName": "Shadow Wilson Skin"
+      },
+      {
+        "Picture": "P_willow_shadow_skin_portrait",
+        "Name": "薇洛 - 凯旋",
+        "EnName": "Shadow Willow Skin"
+      },
+      {
+        "Picture": "P_wolfgang_shadow_skin_portrait",
+        "Name": "沃尔夫冈 - 凯旋",
+        "EnName": "Shadow Wolfgang Skin"
+      },
+      {
+        "Picture": "P_wendy_shadow_skin_portrait",
+        "Name": "温蒂 - 凯旋",
+        "EnName": "Shadow Wendy Skin"
+      },
+      {
+        "Picture": "P_wx-78_shadow_skin_portrait",
+        "Name": "WX-78 - 凯旋",
+        "EnName": "Shadow WX-78 Skin"
+      },
+      {
+        "Picture": "P_wickerbottom_shadow_skin_portrait",
+        "Name": "维克波顿 - 凯旋",
+        "EnName": "Shadow Wickerbottom Skin"
+      },
+      {
+        "Picture": "P_woodie_shadow_skin_portrait",
+        "Name": "伍迪 - 凯旋",
+        "EnName": "Shadow Woodie Skin"
+      },
+      {
+        "Picture": "P_wes_shadow_skin_portrait",
+        "Name": "韦斯 - 凯旋",
+        "EnName": "Shadow Wes Skin"
+      },
+      {
+        "Picture": "P_waxwell_shadow_skin_portrait",
+        "Name": "麦克斯韦 - 败北",
+        "EnName": "Unshadowed Maxwell Skin"
+      },
+      {
+        "Picture": "P_wigfrid_shadow_skin_portrait",
+        "Name": "维格弗里德 - 凯旋",
+        "EnName": "Shadow Wigfrid Skin"
+      },
+      {
+        "Picture": "P_webber_shadow_skin_portrait",
+        "Name": "韦伯 - 凯旋",
+        "EnName": "Shadow Webber Skin"
+      },
+      {
+        "Picture": "P_winona_shadow_skin_portrait",
+        "Name": "薇诺娜 - 凯旋",
+        "EnName": "Shadow Winona Skin"
+      },
+      {
+        "Picture": "P_wilson_halloween",
+        "Name": "威尔逊 - 万圣节",
+        "EnName": "Wilson - Guardian Pig Costume"
+      },
+      {
+        "Picture": "P_willow_halloween",
+        "Name": "薇洛 - 万圣节",
+        "EnName": "Willow - Dragonfly Costume"
+      },
+      {
+        "Picture": "P_wolfgang_halloween",
+        "Name": "沃尔夫冈 - 万圣节",
+        "EnName": "Wolfgang - MacTusk Costume"
+      },
+      {
+        "Picture": "P_wendy_halloween",
+        "Name": "温蒂 - 万圣节",
+        "EnName": "Wendy - Lureplant Costume"
+      },
+      {
+        "Picture": "P_wx_78_halloween",
+        "Name": "WX-78 - 万圣节",
+        "EnName": "WX-78 - Rook Costume"
+      },
+      {
+        "Picture": "P_wickerbottom_halloween",
+        "Name": "维克波顿 - 万圣节",
+        "EnName": "Wickerbottom - Volt Goat Costume"
+      },
+      {
+        "Picture": "P_woodie_halloween",
+        "Name": "伍迪 - 万圣节",
+        "EnName": "Woodie - Treeguard Costume"
+      },
+      {
+        "Picture": "P_wes_halloween",
+        "Name": "韦斯 - 万圣节",
+        "EnName": "Wes - Mandrake Costume"
+      },
+      {
+        "Picture": "P_maxwell_halloween",
+        "Name": "麦克斯韦 - 万圣节",
+        "EnName": "Maxwell - Krampus Costume"
+      },
+      {
+        "Picture": "P_wigfrid_halloween",
+        "Name": "维格弗里德 - 万圣节",
+        "EnName": "Wigfrid - Deerclops Costume"
+      },
+      {
+        "Picture": "P_webber_halloween",
+        "Name": "韦伯 - 万圣节",
+        "EnName": "Webber - Batilisk Costume"
+      },
+      {
+        "Picture": "P_winona_halloween",
+        "Name": "薇诺娜 - 万圣节",
+        "EnName": "Winona - Grass Gekko Costume"
+      },
+      {
+        "Picture": "P_wilson_warrior_skin_portrait",
+        "Name": "威尔逊 - 角斗士",
+        "EnName": "Warrior Wilson Skin"
+      },
+      {
+        "Picture": "P_willow_warrior_skin_portrait",
+        "Name": "薇洛 - 角斗士",
+        "EnName": "Warrior Willow Skin"
+      },
+      {
+        "Picture": "P_wolfgang_warrior_skin_portrait",
+        "Name": "沃尔夫冈 - 角斗士",
+        "EnName": "Warrior Wolfgang Skin"
+      },
+      {
+        "Picture": "P_wendy_warrior_skin_portrait",
+        "Name": "温蒂 - 角斗士",
+        "EnName": "Warrior Wendy Skin"
+      },
+      {
+        "Picture": "P_wx-78_warrior_skin_portrait",
+        "Name": "WX-78 - 角斗士",
+        "EnName": "Warrior WX-78 Skin"
+      },
+      {
+        "Picture": "P_wickerbottom_warrior_skin_portrait",
+        "Name": "维克波顿 - 角斗士",
+        "EnName": "Warrior Wickerbottom Skin"
+      },
+      {
+        "Picture": "P_woodie_warrior_skin_portrait",
+        "Name": "伍迪 - 角斗士",
+        "EnName": "Warrior Woodie Skin"
+      },
+      {
+        "Picture": "P_wes_warrior_skin_portrait",
+        "Name": "韦斯 - 角斗士",
+        "EnName": "Warrior Wes Skin"
+      },
+      {
+        "Picture": "P_maxwell_warrior_skin_portrait",
+        "Name": "麦克斯韦 - 角斗士",
+        "EnName": "Warrior Maxwell Skin"
+      },
+      {
+        "Picture": "P_wigfrid_warrior_skin_portrait",
+        "Name": "维格弗里德 - 角斗士",
+        "EnName": "Warrior Wigfrid Skin"
+      },
+      {
+        "Picture": "P_webber_warrior_skin_portrait",
+        "Name": "韦伯 - 角斗士",
+        "EnName": "Warrior Webber Skin"
+      },
+      {
+        "Picture": "P_winona_warrior_skin_portrait",
+        "Name": "薇诺娜 - 角斗士",
+        "EnName": "Warrior Winona Skin"
+      },
+      {
+        "Picture": "P_wilson_rose",
+        "Name": "威尔逊 - 玫瑰",
+        "EnName": "Rose Wilson Skin"
+      },
+      {
+        "Picture": "P_willow_rose",
+        "Name": "薇洛 - 玫瑰",
+        "EnName": "Rose Willow Skin"
+      },
+      {
+        "Picture": "P_wolfgang_rose",
+        "Name": "沃尔夫冈 - 玫瑰",
+        "EnName": "Rose Wolfgang Skin"
+      },
+      {
+        "Picture": "P_wendy_rose",
+        "Name": "温蒂 - 玫瑰",
+        "EnName": "Rose Wendy Skin"
+      },
+      {
+        "Picture": "P_wx-78_rose",
+        "Name": "WX-78 - 玫瑰",
+        "EnName": "Rose WX-78 Skin"
+      },
+      {
+        "Picture": "P_wickerbottom_rose",
+        "Name": "维克波顿 - 玫瑰",
+        "EnName": "Rose Wickerbottom Skin"
+      },
+      {
+        "Picture": "P_woodie_rose",
+        "Name": "伍迪 - 玫瑰",
+        "EnName": "Rose Woodie Skin"
+      },
+      {
+        "Picture": "P_wes_rose",
+        "Name": "韦斯 - 玫瑰",
+        "EnName": "Rose Wes Skin"
+      },
+      {
+        "Picture": "P_maxwell_rose",
+        "Name": "麦克斯韦 - 玫瑰",
+        "EnName": "Rose Maxwell Skin"
+      },
+      {
+        "Picture": "P_wigfrid_rose",
+        "Name": "维格弗里德 - 玫瑰",
+        "EnName": "Rose Wigfrid Skin"
+      },
+      {
+        "Picture": "P_webber_rose",
+        "Name": "韦伯 - 玫瑰",
+        "EnName": "Rose Webber Skin"
+      },
+      {
+        "Picture": "P_winona_rose",
+        "Name": "薇诺娜 - 玫瑰",
+        "EnName": "Rose Winona Skin"
+      },
+      {
+        "Picture": "P_wilson_snowfallen_portrait",
+        "Name": "威尔逊 - 落雪",
+        "EnName": "Snowfallen Wilson Skin"
+      },
+      {
+        "Picture": "P_willow_snowfallen_portrait",
+        "Name": "薇洛 - 落雪",
+        "EnName": "Snowfallen Willow Skin"
+      },
+      {
+        "Picture": "P_wolfgang_snowfallen_portrait",
+        "Name": "沃尔夫冈 - 落雪",
+        "EnName": "Snowfallen Wolfgang Skin"
+      },
+      {
+        "Picture": "P_wendy_snowfallen_portrait",
+        "Name": "温蒂 - 落雪",
+        "EnName": "Snowfallen Wendy Skin"
+      },
+      {
+        "Picture": "P_wickerbottom_snowfallen_portrait",
+        "Name": "维克波顿 - 落雪",
+        "EnName": "Snowfallen Wickerbottom Skin"
+      },
+      {
+        "Picture": "P_webber_snowfallen_portrait",
+        "Name": "韦伯 - 落雪",
+        "EnName": "Snowfallen Webber Skin"
       }
     ]
   }

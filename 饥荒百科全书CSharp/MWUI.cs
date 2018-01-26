@@ -101,6 +101,17 @@ namespace 饥荒百科全书CSharp
         private void ResizeWindow(ResizeDirection direction)
         {
             SendMessage(_hwndSource.Handle, WmSyscommand, (IntPtr)(61440 + direction), IntPtr.Zero);
+            var systemWorkAreaRect = SystemParameters.WorkArea;
+            if (Width == systemWorkAreaRect.Width && Height == systemWorkAreaRect.Height)
+            {
+                UiBtnMaximized.Visibility = Visibility.Collapsed;
+                UiBtnNormal.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                UiBtnMaximized.Visibility = Visibility.Visible;
+                UiBtnNormal.Visibility = Visibility.Collapsed;
+            }
         }
 
         /// <summary>
@@ -294,7 +305,9 @@ namespace 饥荒百科全书CSharp
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!MwInit) return;
+            
             Global.GameVersion = UiGameversion.SelectedIndex;
+            SidebarSkins.Visibility = Global.GameVersion > 1 ? Visibility.Collapsed : Visibility.Visible;
             // 设置AutoSuggestBox的数据源
             Global.SetAutoSuggestBoxItem();
             RightFrame.Navigate(new Uri("../View/WelcomePage.xaml", UriKind.Relative));
@@ -527,7 +540,7 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "最小化/最大化/关闭按钮"
-        public Rect Rcnormal;//窗口位置
+        public Rect RectNormal;//窗口位置
         /// <summary>
         /// 最小化按钮
         /// </summary>
@@ -543,12 +556,12 @@ namespace 饥荒百科全书CSharp
         {
             UiBtnMaximized.Visibility = Visibility.Collapsed;
             UiBtnNormal.Visibility = Visibility.Visible;
-            Rcnormal = new Rect(Left, Top, Width, Height);//保存下当前位置与大小
+            RectNormal = new Rect(Left, Top, Width, Height);//保存下当前位置与大小
             Left = 0;
             Top = 0;
-            var rc = SystemParameters.WorkArea;
-            Width = rc.Width;
-            Height = rc.Height;
+            var systemWorkAreaRect = SystemParameters.WorkArea;
+            Width = systemWorkAreaRect.Width;
+            Height = systemWorkAreaRect.Height;
             //WindowState = WindowState.Maximized;
         }
 
@@ -559,10 +572,10 @@ namespace 饥荒百科全书CSharp
         {
             UiBtnMaximized.Visibility = Visibility.Visible;
             UiBtnNormal.Visibility = Visibility.Collapsed;
-            Left = Rcnormal.Left;
-            Top = Rcnormal.Top;
-            Width = Rcnormal.Width;
-            Height = Rcnormal.Height;
+            Left = RectNormal.Left;
+            Top = RectNormal.Top;
+            Width = RectNormal.Width;
+            Height = RectNormal.Height;
             //WindowState = WindowState.Normal;
         }
 

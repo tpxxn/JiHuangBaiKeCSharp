@@ -20,10 +20,10 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="20" />
             </Grid.RowDefinitions>
-            <Grid x:Name="ResultButtonGrid" Height="85" Width="173" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid x:Name="ImageButtonGrid" Height="85" Width="173" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="85"/>
+                    <ColumnDefinition x:Name="ImageColumnDefinition" Width="85"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" x:Name="SwitchLeftButton" Background="{x:Null}" BorderBrush="{x:Null}" Width="44" HorizontalAlignment="Right" Style="{StaticResource SwitchButtonLeftStyle}" Click="SwitchLeftButton_Click" Visibility="Collapsed"/>

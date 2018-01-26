@@ -24,7 +24,7 @@
             <Image Grid.Row="0" x:Name="GoodImage" Stretch="Uniform" Height="85" HorizontalAlignment="Center" />
             <TextBlock Grid.Row="1" x:Name="GoodName" FontSize="26" HorizontalAlignment="Center" />
             <TextBlock Grid.Row="2" x:Name="GoodEnName" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0" />
-            <uc:BarChart Grid.Row="3" x:Name="GoodFresh" Label="保鲜" MaxValue="300" HorizontalAlignment="Center"/>
+            <uc:BarChart Grid.Row="3" x:Name="GoodFresh" Label="保鲜" MaxValue="300" HorizontalAlignment="Stretch"  Margin="10"/>
             <TextBlock Grid.Row="4" x:Name="GoodGoodsTextBlock" Text="杀害后获得：" Margin="10" Background="#55B2ECED"/>
             <WrapPanel Grid.Row="5" x:Name="GoodGoodsWrapPanel" Orientation="Horizontal" HorizontalAlignment="Center"/>
             <StackPanel Grid.Row="6" x:Name="CopyGrid">
