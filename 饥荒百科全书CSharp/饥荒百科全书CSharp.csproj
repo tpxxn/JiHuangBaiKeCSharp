@@ -224,6 +224,9 @@
     <Compile Include="View\Details\NaturalCreatureNestDetail.xaml.cs">
       <DependentUpon>NaturalCreatureNestDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Details\NaturalInanimateDetail.xaml.cs">
+      <DependentUpon>NaturalInanimateDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Details\NaturalSmallPlantDetail.xaml.cs">
       <DependentUpon>NaturalSmallPlantDetail.xaml</DependentUpon>
     </Compile>
@@ -483,6 +486,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Details\NaturalCreatureNestDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Details\NaturalInanimateDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

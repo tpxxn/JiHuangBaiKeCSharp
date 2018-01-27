@@ -143,12 +143,63 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class NatureResources
+    {
+        public string PictrueSource { get; set; }
+        public string Number { get; set; }
+        public string Tools { get; set; }
+    }
+
+    // TODO NatureInanimate
+    public class NatureInanimate
+    {
+        public string Picture { get; set; }
+        public List<string> Pictures { get; set; }
+        public string Name { get; set; }
+        public List<string> Names { get; set; }
+        public string EnName { get; set; }
+        public List<string> EnNames { get; set; }
+        public List<int?> Health { get; set; }
+        public List<List<string>> Creature { get; set; }
+        public List<List<NatureResources>> Resources { get; set; }
+        public List<List<string>> Ability { get; set; }
+        public bool IsRegenerate { get; set; }
+        public bool IsDestroable { get; set; }
+        public List<string> Biomes { get; set; }
+        public string Introduction { get; set; }
+        public string Console { get; set; }
+        public List<string> Consoles { get; set; }
+
+        public NatureInanimate()
+        {
+            Pictures = new List<string>();
+            Names = new List<string>();
+            EnNames = new List<string>();
+            Creature = new List<List<string>>();
+            Resources = new List<List<NatureResources>>();
+            Ability = new List<List<string>>();
+            Biomes = new List<string>();
+            Consoles = new List<string>();
+        }
+    }
+
+    public class Inanimates
+    {
+        public List<NatureInanimate> NatureInanimate { get; set; }
+
+        public Inanimates()
+        {
+            NatureInanimate = new List<NatureInanimate>();
+        }
+    }
+
     public class NaturalRootObject
     {
         public Biomes Biomes { get; set; }
         public SmallPlants SmallPlants { get; set; }
         public Trees Trees { get; set; }
         public CreatureNests CreatureNests { get; set; }
+        public Inanimates Inanimates { get; set; }
 
         public NaturalRootObject()
         {
@@ -156,6 +207,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             SmallPlants = new SmallPlants();
             Trees = new Trees();
             CreatureNests = new CreatureNests();
+            Inanimates = new Inanimates();
         }
     }
 }

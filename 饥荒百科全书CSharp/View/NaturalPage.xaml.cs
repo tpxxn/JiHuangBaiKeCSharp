@@ -78,6 +78,9 @@ namespace 饥荒百科全书CSharp.View
                     case "NaturalCreatureNests":
                         OnNavigatedToCreatureNestDialog(Global.NaturalCreatureNestData, suggestBoxItemPicture);
                         break;
+                    case "NaturalInanimate":
+                        OnNavigatedToInanimateDialog(Global.NaturalInanimatesData, suggestBoxItemPicture);
+                        break;
                 }
             }
         }
@@ -186,6 +189,32 @@ namespace 饥荒百科全书CSharp.View
             }
         }
 
+        private void OnNavigatedToInanimateDialog(List<NatureInanimate> naturalCollection, string suggestBoxItemPicture)
+        {
+            foreach (var itemsControlItem in naturalCollection)
+            {
+                var naturalInanimate = itemsControlItem;
+                if (naturalInanimate == null || naturalInanimate.Picture != suggestBoxItemPicture) continue;
+                RightScrollViewer.UpdateLayout();
+                var resultList = new List<Button>();
+                Global.FindChildren(resultList, RightScrollViewer);
+                foreach (var button in resultList)
+                {
+                    var imageSource = ((Image)((Grid)button.Content).Children[0]).Source.ToString();
+                    var imageSourceShort = imageSource.Substring(22, imageSource.Length - 22);
+                    if (imageSourceShort != naturalInanimate.Picture) continue;
+                    var naturalInanimateButton = button;
+                    var currentScrollPosition = RightScrollViewer.VerticalOffset;
+                    var point = new Point(0, currentScrollPosition);
+                    var targetPosition = naturalInanimateButton.TransformToVisual(RightScrollViewer).Transform(point);
+                    RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
+                    break;
+                }
+                LeftFrame.NavigationService.Navigate(new NaturalInanimateDetail(), naturalInanimate);
+                break;
+            }
+        }
+
         public NaturalPage()
         {
             InitializeComponent();
@@ -199,6 +228,7 @@ namespace 饥荒百科全书CSharp.View
             SmallPlantsExpander.DataContext = Global.NaturalSmallPlantsData;
             TreesExpander.DataContext = Global.NaturalTreesData;
             CreatureNestExpander.DataContext = Global.NaturalCreatureNestData;
+            InanimateExpander.DataContext = Global.NaturalInanimatesData;
         }
 
         private void NaturalBiomesButton_Click(object sender, RoutedEventArgs e)
@@ -223,6 +253,12 @@ namespace 饥荒百科全书CSharp.View
         {
             var nature = (NatureCreatureNest)((Button)sender).DataContext;
             LeftFrame.NavigationService.Navigate(new NaturalCreatureNestDetail(), nature);
+        }
+
+        private void NaturalInanimateButton_Click(object sender, RoutedEventArgs e)
+        {
+            var nature = (NatureInanimate)((Button)sender).DataContext;
+            LeftFrame.NavigationService.Navigate(new NaturalInanimateDetail(), nature);
         }
 
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)

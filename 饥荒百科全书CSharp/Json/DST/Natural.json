@@ -2570,6 +2570,43 @@
         "Introduction": "暴躁猴群最多产生4只洞穴猴子。当地震或洞穴猴子被攻击时，暴躁猴群不会产生洞穴猴子。燃烧时其中的洞穴猴子都会跑出来。用锤子锤4次即可破坏。",
         "Console": [ "monkeybarrel" ]
       }
-    ] 
-  } 
+    ]
+  },
+  "Inanimates": {
+    "NatureInanimate": [
+      {
+        "Picture": "N_suspicious_dirt_pile",
+        "Pictures": [
+          "N_suspicious_dirt_pile",
+          "N_animal_track"
+        ],
+        "Name": "可疑的土堆",
+        "Names": [
+          "可疑的土堆",
+          "动物足迹"
+        ],
+        "EnName": "Suspicious Dirt Pile",
+        "EnNames": [
+          "Suspicious Dirt Pile",
+          "Animal Track"
+        ],
+        "Creature": [
+          [],
+          [
+            "A_koalefant",
+            "A_winter_koalefant",
+            "A_varg",
+            "A_ewecus"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Introduction": "",
+        "Console": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
 }

@@ -267,6 +267,7 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<NatureSmallPlant> NaturalSmallPlantsData = new List<NatureSmallPlant>();
         public static readonly List<NatureTree> NaturalTreesData = new List<NatureTree>();
         public static readonly List<NatureCreatureNest> NaturalCreatureNestData = new List<NatureCreatureNest>();
+        public static readonly List<NatureInanimate> NaturalInanimatesData = new List<NatureInanimate>();
         public static readonly List<GoodMaterial> GoodMaterialData = new List<GoodMaterial>();
         public static readonly List<GoodEquipment> GoodEquipmentData = new List<GoodEquipment>();
         public static readonly List<GoodSapling> GoodSaplingData = new List<GoodSapling>();
@@ -343,6 +344,7 @@ namespace 饥荒百科全书CSharp.Class
             NaturalSmallPlantsData.Clear();
             NaturalTreesData.Clear();
             NaturalCreatureNestData.Clear();
+            NaturalInanimatesData.Clear();
             GoodMaterialData.Clear();
             GoodEquipmentData.Clear();
             GoodSaplingData.Clear();
@@ -632,6 +634,12 @@ namespace 饥荒百科全书CSharp.Class
                 naturalCreatureNestItems.Picture = StringProcess.GetGameResourcePath(naturalCreatureNestItems.Picture);
                 NaturalCreatureNestData.Add(naturalCreatureNestItems);
                 AutoSuggestBoxItemSourceAdd(naturalCreatureNestItems, "NaturalCreatureNests");
+            }
+            foreach (var naturalInanimateItems in natural.Inanimates.NatureInanimate)
+            {
+                naturalInanimateItems.Picture = StringProcess.GetGameResourcePath(naturalInanimateItems.Picture);
+                NaturalInanimatesData.Add(naturalInanimateItems);
+                AutoSuggestBoxItemSourceAdd(naturalInanimateItems, "NaturalInanimate");
             }
             #endregion
             #region 物品
