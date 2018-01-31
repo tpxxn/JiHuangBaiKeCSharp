@@ -635,12 +635,13 @@ namespace 饥荒百科全书CSharp.Class
                 NaturalCreatureNestData.Add(naturalCreatureNestItems);
                 AutoSuggestBoxItemSourceAdd(naturalCreatureNestItems, "NaturalCreatureNests");
             }
-            foreach (var naturalInanimateItems in natural.Inanimates.NatureInanimate)
-            {
-                naturalInanimateItems.Picture = StringProcess.GetGameResourcePath(naturalInanimateItems.Picture);
-                NaturalInanimatesData.Add(naturalInanimateItems);
-                AutoSuggestBoxItemSourceAdd(naturalInanimateItems, "NaturalInanimate");
-            }
+            //TODO
+            //foreach (var naturalInanimateItems in natural.Inanimates.NatureInanimate)
+            //{
+            //    naturalInanimateItems.Picture = StringProcess.GetGameResourcePath(naturalInanimateItems.Picture);
+            //    NaturalInanimatesData.Add(naturalInanimateItems);
+            //    AutoSuggestBoxItemSourceAdd(naturalInanimateItems, "NaturalInanimate");
+            //}
             #endregion
             #region 物品
             var good = JsonConvert.DeserializeObject<GoodsRootObject>(StringProcess.GetJsonString("Goods.json"));

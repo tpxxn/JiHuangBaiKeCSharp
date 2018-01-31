@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Diagnostics;
 using System.Drawing.Text;
+using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Controls;
@@ -36,13 +37,44 @@ namespace 饥荒百科全书CSharp
 
             private static void Current_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
             {
-                MessageBox.Show("错误信息：\r\n" + e.Exception, "意外的操作", MessageBoxButton.OK, MessageBoxImage.Information);//这里通常需要给用户一些较为友好的提示，并且后续可能的操作
+                UnhandledExceptionFileLog(e.Exception.ToString());
                 e.Handled = true;//使用这一行代码告诉运行时，该异常被处理了，不再作为UnhandledException抛出了。
             }
 
             private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
             {
-                MessageBox.Show("错误信息：\r\n" + e.ExceptionObject, "意外的操作", MessageBoxButton.OK, MessageBoxImage.Information);
+                UnhandledExceptionFileLog(e.ExceptionObject.ToString());
+            }
+
+            private static void UnhandledExceptionFileLog(string log)
+            {
+                try
+                {
+                    var logFilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +
+                        @"\JiHuangBaiKeCSharp\Log\"; //设置文件夹位置
+                    if (Directory.Exists(logFilePath) == false) //若文件夹不存在
+                    {
+                        Directory.CreateDirectory(logFilePath);
+                    }
+                    var logFilename = "log_" + DateTime.Now.ToString("yyyyMMdd") + "_" +
+                        DateTime.Now.ToString("hhmmss") + ".txt"; //设置文件名
+                    var logPath = logFilePath + logFilename;
+                    if (!File.Exists(logPath))
+                    {
+                        var fs = File.Create(logPath);
+                        fs.Close();
+                    }
+                    var fileStream = new FileStream(logPath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
+                    var streamWriter = new StreamWriter(fileStream);
+                    streamWriter.WriteLine("错误信息：\r\n" + log);
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                    fileStream.Close();
+                }
+                catch (Exception)
+                {
+                    // ignored
+                }
             }
 
             private static void App_Startup(object sender, StartupEventArgs e)

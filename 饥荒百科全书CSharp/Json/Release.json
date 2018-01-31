@@ -1,6 +1,20 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.7.4",
+      "Data": "2018年1月31日",
+      "UpdataContent": [
+        {
+          "Label": "改进",
+          "Content": "现在未捕获的错误会记录在\"文档\\JiHuangBaiKeCSharp\\Log\"文件夹下，而不是用对话框提示"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正自动检查更新的一些错误"
+        }
+      ]
+    },
+    {
       "Version": "0.7.7.3",
       "Data": "2018年1月26日",
       "UpdataContent": [

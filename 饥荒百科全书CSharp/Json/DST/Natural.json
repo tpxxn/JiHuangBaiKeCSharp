@@ -2602,9 +2602,9 @@
         "IsRegenerate": false,
         "IsDestroable": false,
         "Introduction": "",
-        "Console": [
-          "",
-          ""
+        "Consoles": [
+          "suspicious dirt pile",
+          "suspicious dirt pile"
         ]
       }
     ]

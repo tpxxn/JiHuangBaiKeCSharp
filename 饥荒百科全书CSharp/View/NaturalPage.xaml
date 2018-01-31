@@ -137,7 +137,7 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-                <Expander x:Name="InanimateExpander" Style="{StaticResource ExpanderStyle}" >
+                <Expander x:Name="InanimateExpander" Style="{StaticResource ExpanderStyle}" Visibility="Collapsed">
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="无生命的" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>

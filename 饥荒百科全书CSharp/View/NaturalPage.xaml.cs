@@ -228,7 +228,7 @@ namespace 饥荒百科全书CSharp.View
             SmallPlantsExpander.DataContext = Global.NaturalSmallPlantsData;
             TreesExpander.DataContext = Global.NaturalTreesData;
             CreatureNestExpander.DataContext = Global.NaturalCreatureNestData;
-            InanimateExpander.DataContext = Global.NaturalInanimatesData;
+            //InanimateExpander.DataContext = Global.NaturalInanimatesData;
         }
 
         private void NaturalBiomesButton_Click(object sender, RoutedEventArgs e)
