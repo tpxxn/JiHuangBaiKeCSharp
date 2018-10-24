@@ -6420,6 +6420,179 @@
     <Resource Include="Resources\GameResources\Skins\P_wx-78_warrior_skin_portrait.png" />
     <Resource Include="Resources\GameResources\Skins\P_wx_78_halloween.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_dryads_tunic.png" />
+    <Resource Include="Resources\GameResources\Skins\P_fauvists_smock.png" />
+    <Resource Include="Resources\GameResources\Skins\P_gardening_apron.png" />
+    <Resource Include="Resources\GameResources\Skins\P_grove_sentinel_tunic.png" />
+    <Resource Include="Resources\GameResources\Skins\P_orchardists_tunic.png" />
+    <Resource Include="Resources\GameResources\Skins\P_timber_golem_trunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_aristocrats_fine_overcoat.png" />
+    <Resource Include="Resources\GameResources\Skins\P_aristocrats_haughty_attire.png" />
+    <Resource Include="Resources\GameResources\Skins\P_blacksmiths_apron.png" />
+    <Resource Include="Resources\GameResources\Skins\P_diving_suit.png" />
+    <Resource Include="Resources\GameResources\Skins\P_mourning_weeds.png" />
+    <Resource Include="Resources\GameResources\Skins\P_physicians_topcoat.png" />
+    <Resource Include="Resources\GameResources\Skins\P_pugilists_overcoat.png" />
+    <Resource Include="Resources\GameResources\Skins\P_schoolboy_uniform.png" />
+    <Resource Include="Resources\GameResources\Skins\P_sooty_sweeps_rags.png" />
+    <Resource Include="Resources\GameResources\Skins\P_street_peddlers_tatters.png" />
+    <Resource Include="Resources\GameResources\Skins\P_traders_furs.png" />
+    <Resource Include="Resources\GameResources\Skins\P_tragedienne_costume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_dryads_handwraps.png" />
+    <Resource Include="Resources\GameResources\Skins\P_fauvists_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_grove_sentinel_wristbands.png" />
+    <Resource Include="Resources\GameResources\Skins\P_muddy_gardening_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_orchardists_bangles.png" />
+    <Resource Include="Resources\GameResources\Skins\P_timber_golem_hands.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_aristocrats_fine_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_aristocrats_haughty_sleeves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_blacksmiths_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_diving_gauntlets.png" />
+    <Resource Include="Resources\GameResources\Skins\P_mourning_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_physicians_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_pugilists_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_schoolboy_cuffs.png" />
+    <Resource Include="Resources\GameResources\Skins\P_sooty_sweeps_mitts.png" />
+    <Resource Include="Resources\GameResources\Skins\P_street_peddlers_gloves.png" />
+    <Resource Include="Resources\GameResources\Skins\P_traders_culls.png" />
+    <Resource Include="Resources\GameResources\Skins\P_tragedienne_gloves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_aristocrats_fine_trousers.png" />
+    <Resource Include="Resources\GameResources\Skins\P_blacksmiths_pants.png" />
+    <Resource Include="Resources\GameResources\Skins\P_diving_suit_bottom.png" />
+    <Resource Include="Resources\GameResources\Skins\P_dryads_leggings.png" />
+    <Resource Include="Resources\GameResources\Skins\P_gardening_trousers.png" />
+    <Resource Include="Resources\GameResources\Skins\P_grove_sentinel_leggings.png" />
+    <Resource Include="Resources\GameResources\Skins\P_orchardists_pants.png" />
+    <Resource Include="Resources\GameResources\Skins\P_pugilists_trousers.png" />
+    <Resource Include="Resources\GameResources\Skins\P_traders_leggings.png" />
+    <Resource Include="Resources\GameResources\Skins\P_tragedienne_trousers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_aristocrats_haughty_heels.png" />
+    <Resource Include="Resources\GameResources\Skins\P_dryads_sandals.png" />
+    <Resource Include="Resources\GameResources\Skins\P_fauvists_loafers.png" />
+    <Resource Include="Resources\GameResources\Skins\P_grove_sentinel_sandals.png" />
+    <Resource Include="Resources\GameResources\Skins\P_mourning_shoes.png" />
+    <Resource Include="Resources\GameResources\Skins\P_muddy_gardening_boots.png" />
+    <Resource Include="Resources\GameResources\Skins\P_orchardists_moccasins.png" />
+    <Resource Include="Resources\GameResources\Skins\P_physicians_shoes.png" />
+    <Resource Include="Resources\GameResources\Skins\P_schoolboy_claws.png" />
+    <Resource Include="Resources\GameResources\Skins\P_sooty_sweeps_shoes.png" />
+    <Resource Include="Resources\GameResources\Skins\P_street_peddlers_slippers.png" />
+    <Resource Include="Resources\GameResources\Skins\P_timber_golem_roots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_the_verdant_maxwell.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_verdant_wes.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_verdant_wigfrid.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_verdant_winona.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_verdant_woodie.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_verdant_wx_78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_maxwell.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_webber.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_wendy.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_wes.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_wickerbottom.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_wigfrid.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_willow.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_wilson.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_winona.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_wolfgang.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_woodie.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_culinarian_wx_78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_maxwell.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_webber.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_wendy.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_wes.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_wickerbottom.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_wigfrid.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_willow.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_wilson.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_winona.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_wolfgang.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_woodie.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_victorian_wx_78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_maxwell_verdant_skin_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wes_verdant_skin_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wigfrid_verdant_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_winona_verdant_skin_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_woodie_verdant_skin_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wx_78_verdant_skin_portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_maxwell_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_webber_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wendy_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wes_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wickerbottom_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wigfrid_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_willow_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wilson_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_winona_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wolfgang_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_woodie_victorian_portrait.png" />
+    <Resource Include="Resources\GameResources\Skins\P_wx_78_victorian_portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_fanciful_axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_puppy_cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_warhound_helm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_pot_roastbat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_clement_life_amulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_fanciful_shovel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_goatshead_cane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_knitted_puppy_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_romantic_birdcage.png" />
+    <Resource Include="Resources\GameResources\Skins\P_the_amazing_sideshow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_tureen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_victorian_hearth.png" />
+    <Resource Include="Resources\GameResources\Skins\P_winged_brazier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_victorian_ice_box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_the_magnificent_rainometer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_pedigree_vargling.png" />
+    <Resource Include="Resources\GameResources\Skins\P_purebred_vargling.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

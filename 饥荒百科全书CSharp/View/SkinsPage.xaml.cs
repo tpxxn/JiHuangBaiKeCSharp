@@ -67,6 +67,9 @@ namespace 饥荒百科全书CSharp.View
                 var suggestBoxItemPicture = extraData[1];
                 switch (extraData[0])
                 {
+                    case "SkinsWatchTwitchLive":
+                        OnNavigatedToSkinDialog(Global.SkinsWatchTwitchLiveData, suggestBoxItemPicture);
+                        break;
                     case "SkinsBody":
                         OnNavigatedToSkinDialog(Global.SkinsBodyData, suggestBoxItemPicture);
                         break;
@@ -105,6 +108,12 @@ namespace 饥荒百科全书CSharp.View
                         break;
                     case "SkinsTheForge":
                         OnNavigatedToSkinDialog(Global.SkinsTheForgeData, suggestBoxItemPicture);
+                        break;
+                    case "SkinsYearOfTheVarg":
+                        OnNavigatedToSkinDialog(Global.SkinsYearOfTheVargData, suggestBoxItemPicture);
+                        break;
+                    case "SkinsTheGorge":
+                        OnNavigatedToSkinDialog(Global.SkinsTheGorgeData, suggestBoxItemPicture);
                         break;
                     case "SkinsEmotes":
                         OnNavigatedToSkinDialog(Global.SkinsEmotesData, suggestBoxItemPicture);
@@ -151,6 +160,7 @@ namespace 饥荒百科全书CSharp.View
 
         public void Deserialize()
         {
+            WatchTwitchLiveExpander.DataContext = Global.SkinsWatchTwitchLiveData;
             BodyExpander.DataContext = Global.SkinsBodyData;
             HandsExpander.DataContext = Global.SkinsHandsData;
             LegsExpander.DataContext = Global.SkinsLegsData;
@@ -164,6 +174,8 @@ namespace 饥荒百科全书CSharp.View
             WintersFeastSkinsExpander.DataContext = Global.SkinsWintersFeastSkinsData;
             YearOfTheGobblerSkinsExpander.DataContext = Global.SkinsYearOfTheGobblerSkinsData;
             TheForgeExpander.DataContext = Global.SkinsTheForgeData;
+            YearOfTheVargExpander.DataContext = Global.SkinsYearOfTheVargData;
+            TheGorgeExpander.DataContext = Global.SkinsTheGorgeData;
             EmotesExpander.DataContext = Global.SkinsEmotesData;
             OutfitSetsExpander.DataContext = Global.SkinsOutfitSetsData;
         }

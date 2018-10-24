@@ -281,6 +281,7 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Good> GoodYearOfTheGobblerData = new List<Good>();
         public static readonly List<Good> GoodComponentData = new List<Good>();
         public static readonly List<Good> GoodOthersData = new List<Good>();
+        public static readonly List<Skin> SkinsWatchTwitchLiveData = new List<Skin>();
         public static readonly List<Skin> SkinsBodyData = new List<Skin>();
         public static readonly List<Skin> SkinsHandsData = new List<Skin>();
         public static readonly List<Skin> SkinsLegsData = new List<Skin>();
@@ -294,6 +295,8 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Skin> SkinsWintersFeastSkinsData = new List<Skin>();
         public static readonly List<Skin> SkinsYearOfTheGobblerSkinsData = new List<Skin>();
         public static readonly List<Skin> SkinsTheForgeData = new List<Skin>();
+        public static readonly List<Skin> SkinsYearOfTheVargData = new List<Skin>();
+        public static readonly List<Skin> SkinsTheGorgeData = new List<Skin>();
         public static readonly List<Skin> SkinsEmotesData = new List<Skin>();
         public static readonly List<Skin> SkinsOutfitSetsData = new List<Skin>();
         #endregion
@@ -358,6 +361,7 @@ namespace 饥荒百科全书CSharp.Class
             GoodYearOfTheGobblerData.Clear();
             GoodComponentData.Clear();
             GoodOthersData.Clear();
+            SkinsWatchTwitchLiveData.Clear();
             SkinsBodyData.Clear();
             SkinsHandsData.Clear();
             SkinsLegsData.Clear();
@@ -371,6 +375,8 @@ namespace 饥荒百科全书CSharp.Class
             SkinsWintersFeastSkinsData.Clear();
             SkinsYearOfTheGobblerSkinsData.Clear();
             SkinsTheForgeData.Clear();
+            SkinsYearOfTheVargData.Clear();
+            SkinsTheGorgeData.Clear();
             SkinsEmotesData.Clear();
             SkinsOutfitSetsData.Clear();
             #endregion
@@ -728,6 +734,13 @@ namespace 饥荒百科全书CSharp.Class
             if (GameVersion == 0 || GameVersion == 1)
             {
                 var skins = JsonConvert.DeserializeObject<SkinsRootObject>(StringProcess.GetJsonStringSkins());
+                foreach (var skinsWatchTwitchLiveItem in skins.WatchTwitchLive.Skin)
+                {
+                    skinsWatchTwitchLiveItem.Picture = StringProcess.GetGameResourcePath(skinsWatchTwitchLiveItem.Picture);
+                    skinsWatchTwitchLiveItem.Color = GetSkinColor(skinsWatchTwitchLiveItem.Rarity);
+                    SkinsWatchTwitchLiveData.Add(skinsWatchTwitchLiveItem);
+                    AutoSuggestBoxItemSourceAdd(skinsWatchTwitchLiveItem, "SkinsWatchTwitchLive");
+                }
                 foreach (var skinsBodyItem in skins.Body.Skin)
                 {
                     skinsBodyItem.Picture = StringProcess.GetGameResourcePath(skinsBodyItem.Picture);
@@ -818,6 +831,20 @@ namespace 饥荒百科全书CSharp.Class
                     skinsTheForgeItem.Color = GetSkinColor(skinsTheForgeItem.Rarity);
                     SkinsTheForgeData.Add(skinsTheForgeItem);
                     AutoSuggestBoxItemSourceAdd(skinsTheForgeItem, "SkinsTheForge");
+                }
+                foreach (var skinsYearOfTheVargItem in skins.YearOfTheVarg.Skin)
+                {
+                    skinsYearOfTheVargItem.Picture = StringProcess.GetGameResourcePath(skinsYearOfTheVargItem.Picture);
+                    skinsYearOfTheVargItem.Color = GetSkinColor(skinsYearOfTheVargItem.Rarity);
+                    SkinsYearOfTheVargData.Add(skinsYearOfTheVargItem);
+                    AutoSuggestBoxItemSourceAdd(skinsYearOfTheVargItem, "SkinsYearOfTheVarg");
+                }
+                foreach (var skinsTheGorgeItem in skins.TheGorge.Skin)
+                {
+                    skinsTheGorgeItem.Picture = StringProcess.GetGameResourcePath(skinsTheGorgeItem.Picture);
+                    skinsTheGorgeItem.Color = GetSkinColor(skinsTheGorgeItem.Rarity);
+                    SkinsTheGorgeData.Add(skinsTheGorgeItem);
+                    AutoSuggestBoxItemSourceAdd(skinsTheGorgeItem, "SkinsTheGorge");
                 }
                 foreach (var skinsEmotesItem in skins.Emotes.Skin)
                 {

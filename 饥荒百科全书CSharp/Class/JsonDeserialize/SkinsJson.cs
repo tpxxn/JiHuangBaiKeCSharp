@@ -45,6 +45,16 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class WatchTwitchLive
+    {
+        public List<Skin> Skin { get; set; }
+
+        public WatchTwitchLive()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
     public class Body
     {
         public List<Skin> Skin { get; set; }
@@ -175,6 +185,26 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class YearOfTheVarg
+    {
+        public List<Skin> Skin { get; set; }
+
+        public YearOfTheVarg()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
+    public class TheGorge
+    {
+        public List<Skin> Skin { get; set; }
+
+        public TheGorge()
+        {
+            Skin = new List<Skin>();
+        }
+    }
+
     public class Emotes
     {
         public List<Skin> Skin { get; set; }
@@ -197,6 +227,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
 
     public class SkinsRootObject
     {
+        public WatchTwitchLive WatchTwitchLive { get; set; }
         public Body Body { get; set; }
         public Hands Hands { get; set; }
         public Legs Legs { get; set; }
@@ -210,11 +241,14 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public WintersFeastSkins WintersFeastSkins { get; set; }
         public YearOfTheGobblerSkins YearOfTheGobblerSkins { get; set; }
         public TheForge TheForge { get; set; }
+        public YearOfTheVarg YearOfTheVarg { get; set; }
+        public TheGorge TheGorge { get; set; }
         public Emotes Emotes { get; set; }
         public OutfitSets OutfitSets { get; set; }
 
         public SkinsRootObject()
         {
+            WatchTwitchLive = new WatchTwitchLive();
             Body = new Body();
             Hands = new Hands();
             Legs = new Legs();
@@ -228,6 +262,8 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             WintersFeastSkins = new WintersFeastSkins();
             YearOfTheGobblerSkins = new YearOfTheGobblerSkins();
             TheForge = new TheForge();
+            YearOfTheVarg = new YearOfTheVarg();
+            TheGorge = new TheGorge();
             Emotes = new Emotes();
             OutfitSets = new OutfitSets();
         }

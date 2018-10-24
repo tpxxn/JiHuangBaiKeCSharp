@@ -32,6 +32,20 @@
         <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource CursorHorz}" Style="{DynamicResource GridSplitterStyle}" />
         <ScrollViewer x:Name="RightScrollViewer" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
             <StackPanel x:Name="RightStackPanel">
+                <Expander x:Name="WatchTwitchLiveExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="观看 6 小时 Twitch Don't Starve Together 直播" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
                 <Expander x:Name="BodyExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
@@ -203,7 +217,35 @@
                 <Expander x:Name="TheForgeExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="熔炉 The Forge" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBlock Text="The Forge 皮肤" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="YearOfTheVargExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Year Of The Varg 皮肤" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="TheGorgeExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="The Gorge 皮肤" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Expander.Header>
                     <ItemsControl ItemTemplate="{StaticResource SkinsDataTemplate}" ItemsSource="{Binding}" Margin="10">
