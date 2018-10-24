@@ -578,7 +578,9 @@
           "F_meat|×2",
           "G_volt_goat_horn|×1（25%）"
         ],
-        "Introduction": "击杀伏特电羊会额外获得一个电羊奶。攻击电羊或被电羊攻击均会触电，可以戴着雨帽、雨衣或眼球伞来防电。"
+        "Introduction": "击杀伏特电羊会额外获得一个电羊奶。攻击电羊或被电羊攻击均会触电，可以戴着雨帽、雨衣或眼球伞来防电。",
+        "Console": "lightninggoat",
+        "ConsoleStateValue": "setcharged(true)"
       },
       {
         "Picture": "A_koalefant",
@@ -955,7 +957,7 @@
         "Health": 200,
         "Attack": 40,
         "AttackInterval": 2,
-        "AttackScope": 30,
+        "AttackScope": 3,
         "MoveSpeed": 3,
         "RunSpeed": 6,
         "Dangerous": 2,
@@ -1690,7 +1692,9 @@
         "Goods": [
           "G_nightmare_fuel|×2~4"
         ],
-        "Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。"
+        "Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。",
+        "Console": "shadow_knight",
+        "ConsoleStateValue": "LevelUp(2)"
       },
       {
         "Picture": "A_shadow_knight_level_3",
@@ -1711,7 +1715,9 @@
           "S_dark_sword|×1",
           "G_shadow_atrium|×1"
         ],
-        "Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。"
+        "Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。",
+        "Console": "shadow_knight",
+        "ConsoleStateValue": "LevelUp(3)"
       },
       {
         "Picture": "A_shadow_bishop_level_1",
@@ -1754,7 +1760,9 @@
         "Ability": [
           "变成暗影蝙蝠攻击"
         ],
-        "Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。"
+        "Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。",
+        "Console": "shadow_bishop",
+        "ConsoleStateValue": "LevelUp(2)"
       },
       {
         "Picture": "A_shadow_bishop_level_3",
@@ -1778,7 +1786,9 @@
         "Ability": [
           "变成暗影蝙蝠攻击"
         ],
-        "Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。"
+        "Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。",
+        "Console": "shadow_bishop",
+        "ConsoleStateValue": "LevelUp(3)"
       },
       {
         "Picture": "A_shadow_rook_level_1",
@@ -1821,7 +1831,9 @@
         "Ability": [
           "瞬移攻击"
         ],
-        "Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。"
+        "Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。",
+        "Console": "shadow_rook",
+        "ConsoleStateValue": "LevelUp(2)"
       },
       {
         "Picture": "A_shadow_rook_level_3",
@@ -1845,7 +1857,9 @@
         "Ability": [
           "瞬移攻击"
         ],
-        "Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。"
+        "Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。",
+        "Console": "shadow_rook",
+        "ConsoleStateValue": "LevelUp(2)"
       },
       {
         "Picture": "A_varg",
@@ -2121,7 +2135,8 @@
           "G_living_log|×6"
         ],
         "Introduction": "生成自大型常青树。",
-        "Console": "leif"
+        "Console": "leif",
+        "ConsoleStateValue": "SetLeifScale(0.7)"
       },
       {
         "Picture": "A_poison_birchnut_trees",
@@ -2621,7 +2636,8 @@
         "IsActiveAttack": true,
         "IsTeamWork": true,
         "Introduction": "当用鹿之匙开启“精确”补给时偷诞老人会带着一对宝石鹿出现。当偷诞老人失去宝石鹿则会变为愤怒形态，生命值变为27440，伤害变为205.8，攻击间隔攻击距离分别变为2.14和4.2。当血量下降到一半以下时会召唤2~6只坎普斯（每个玩家2只）。第一次被击倒时会变成第二形态，具有远距离攻击。",
-        "Console": "klaus"
+        "Console": "klaus",
+        "ConsoleStateValue": "SpawnDeer(true)"
       },
       {
         "Picture": "A_klaus2",

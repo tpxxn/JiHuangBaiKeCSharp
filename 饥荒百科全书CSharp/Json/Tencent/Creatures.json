@@ -557,26 +557,28 @@
 				"Introduction": "电羊被攻击会逃跑。攻击一只电羊不会引起整群电羊围攻，可以击杀大部分电羊，剩下一只赶到家附近用围墙围起，然后就会繁殖。电羊是闪电优先攻击的目标，被闪电或晨星击中会变成带电电羊。",
 				"Console": "lightninggoat"
 			},
-			{
-				"Picture": "A_volt_goat_withelectric",
-				"Name": "带电电羊",
-				"EnName": "Volt Goat",
-				"Health": 700,
-				"Attack": 37.5,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 4,
-				"RunSpeed": 8,
-				"Dangerous": 5,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_electric_milk|×1",
-					"F_meat|×2",
-					"G_volt_goat_horn|×1（25%）"
-				],
-				"Introduction": "击杀带电电羊会额外获得一个电羊奶。攻击电羊或被电羊攻击均会触电，可以戴着雨帽、雨衣或眼球伞来防电。"
-			},
+      {
+        "Picture": "A_volt_goat_withelectric",
+        "Name": "带电电羊",
+        "EnName": "Volt Goat",
+        "Health": 700,
+        "Attack": 37.5,
+        "AttackInterval": 2,
+        "AttackScope": 3,
+        "MoveSpeed": 4,
+        "RunSpeed": 8,
+        "Dangerous": 5,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_electric_milk|×1",
+          "F_meat|×2",
+          "G_volt_goat_horn|×1（25%）"
+        ],
+        "Introduction": "击杀带电电羊会额外获得一个电羊奶。攻击电羊或被电羊攻击均会触电，可以戴着雨帽、雨衣或眼球伞来防电。",
+        "Console": "lightninggoat",
+        "ConsoleStateValue": "setcharged(true)"
+      },
 			{
 				"Picture": "A_koalefant",
 				"Name": "无尾象",
@@ -952,7 +954,7 @@
 				"Health": 200,
 				"Attack": 40,
 				"AttackInterval": 2,
-				"AttackScope": 30,
+				"AttackScope": 3,
 				"MoveSpeed": 3,
 				"RunSpeed": 6,
 				"Dangerous": 2,
@@ -1671,45 +1673,49 @@
 				"Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。",
 				"Console": "shadow_knight"
 			},
-			{
-				"Picture": "A_shadow_knight_level_2",
-				"Name": "暗影骑士Level2",
-				"EnName": "Shadow Knight Level 2",
-				"Health": 2700,
-				"Attack": 90,
-				"AttackInterval": 2.5,
-				"AttackScope": 3.2,
-				"RunSpeed": 9,
-				"Dangerous": 6,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_nightmare_fuel|×2~4"
-				],
-				"Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。"
-			},
-			{
-				"Picture": "A_shadow_knight_level_3",
-				"Name": "暗影骑士Level3",
-				"EnName": "Shadow Knight Level 3",
-				"Health": 8100,
-				"Attack": 150,
-				"AttackInterval": 2,
-				"AttackScope": 5,
-				"RunSpeed": 12,
-				"Dangerous": 8,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_nightmare_fuel|×4",
-					"S_night_armour|×1",
-					"S_dark_sword|×1",
-					"G_shadow_atrium|×1"
-				],
-				"Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。"
-			},
+      {
+        "Picture": "A_shadow_knight_level_2",
+        "Name": "暗影骑士Level2",
+        "EnName": "Shadow Knight Level 2",
+        "Health": 2700,
+        "Attack": 90,
+        "AttackInterval": 2.5,
+        "AttackScope": 3.2,
+        "RunSpeed": 9,
+        "Dangerous": 6,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_nightmare_fuel|×2~4"
+        ],
+        "Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。",
+        "Console": "shadow_knight",
+        "ConsoleStateValue": "LevelUp(2)"
+      },
+      {
+        "Picture": "A_shadow_knight_level_3",
+        "Name": "暗影骑士Level3",
+        "EnName": "Shadow Knight Level 3",
+        "Health": 8100,
+        "Attack": 150,
+        "AttackInterval": 2,
+        "AttackScope": 5,
+        "RunSpeed": 12,
+        "Dangerous": 8,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_nightmare_fuel|×4",
+          "S_night_armour|×1",
+          "S_dark_sword|×1",
+          "G_shadow_atrium|×1"
+        ],
+        "Introduction": "普通的近战攻击方式。击杀后周围的暗影主教和暗影战车会提升一级。",
+        "Console": "shadow_knight",
+        "ConsoleStateValue": "LevelUp(3)"
+      },
 			{
 				"Picture": "A_shadow_bishop_level_1",
 				"Name": "暗影主教Level1",
@@ -1732,51 +1738,55 @@
 				"Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。",
 				"Console": "shadow_bishop"
 			},
-			{
-				"Picture": "A_shadow_bishop_level_2",
-				"Name": "暗影主教Level2",
-				"EnName": "Shadow Bishop Level 2",
-				"Health": 2500,
-				"Attack": 35,
-				"AttackInterval": 14,
-				"AttackScope": 6,
-				"RunSpeed": 5,
-				"Dangerous": 5,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_nightmare_fuel|×2~4"
-				],
-				"Ability": [
-					"变成暗影蝙蝠攻击"
-				],
-				"Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。"
-			},
-			{
-				"Picture": "A_shadow_bishop_level_3",
-				"Name": "暗影主教Level3",
-				"EnName": "Shadow Bishop Level 3",
-				"Health": 7500,
-				"Attack": 60,
-				"AttackInterval": 12,
-				"AttackScope": 8,
-				"RunSpeed": 7,
-				"Dangerous": 7,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_nightmare_fuel|×4",
-					"S_night_armour|×1",
-					"S_dark_sword|×1",
-					"G_shadow_atrium|×1"
-				],
-				"Ability": [
-					"变成暗影蝙蝠攻击"
-				],
-				"Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。"
-			},
+      {
+        "Picture": "A_shadow_bishop_level_2",
+        "Name": "暗影主教Level2",
+        "EnName": "Shadow Bishop Level 2",
+        "Health": 2500,
+        "Attack": 35,
+        "AttackInterval": 14,
+        "AttackScope": 6,
+        "RunSpeed": 5,
+        "Dangerous": 5,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_nightmare_fuel|×2~4"
+        ],
+        "Ability": [
+          "变成暗影蝙蝠攻击"
+        ],
+        "Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。",
+        "Console": "shadow_bishop",
+        "ConsoleStateValue": "LevelUp(2)"
+      },
+      {
+        "Picture": "A_shadow_bishop_level_3",
+        "Name": "暗影主教Level3",
+        "EnName": "Shadow Bishop Level 3",
+        "Health": 7500,
+        "Attack": 60,
+        "AttackInterval": 12,
+        "AttackScope": 8,
+        "RunSpeed": 7,
+        "Dangerous": 7,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_nightmare_fuel|×4",
+          "S_night_armour|×1",
+          "S_dark_sword|×1",
+          "G_shadow_atrium|×1"
+        ],
+        "Ability": [
+          "变成暗影蝙蝠攻击"
+        ],
+        "Introduction": "变成一群暗影蝙蝠伤害附近的玩家。击杀后周围的暗影骑士和暗影战车会提升一级。",
+        "Console": "shadow_bishop",
+        "ConsoleStateValue": "LevelUp(3)"
+      },
 			{
 				"Picture": "A_shadow_rook_level_1",
 				"Name": "暗影战车Level1",
@@ -1799,51 +1809,55 @@
 				"Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。",
 				"Console": "shadow_rook"
 			},
-			{
-				"Picture": "A_shadow_rook_level_2",
-				"Name": "暗影战车Level2",
-				"EnName": "Shadow Rook Level 2",
-				"Health": 4000,
-				"Attack": 100,
-				"AttackInterval": 5.5,
-				"AttackScope": 10,
-				"RunSpeed": 8,
-				"Dangerous": 7,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_nightmare_fuel|×2~4"
-				],
-				"Ability": [
-					"瞬移攻击"
-				],
-				"Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。"
-			},
-			{
-				"Picture": "A_shadow_rook_level_3",
-				"Name": "暗影战车Level3",
-				"EnName": "Shadow Rook Level 3",
-				"Health": 10000,
-				"Attack": 165,
-				"AttackInterval": 5,
-				"AttackScope": 13,
-				"RunSpeed": 11,
-				"Dangerous": 9,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"G_nightmare_fuel|×4",
-					"S_night_armour|×1",
-					"S_dark_sword|×1",
-					"G_shadow_atrium|×1"
-				],
-				"Ability": [
-					"瞬移攻击"
-				],
-				"Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。"
-			},
+      {
+        "Picture": "A_shadow_rook_level_2",
+        "Name": "暗影战车Level2",
+        "EnName": "Shadow Rook Level 2",
+        "Health": 4000,
+        "Attack": 100,
+        "AttackInterval": 5.5,
+        "AttackScope": 10,
+        "RunSpeed": 8,
+        "Dangerous": 7,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_nightmare_fuel|×2~4"
+        ],
+        "Ability": [
+          "瞬移攻击"
+        ],
+        "Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。",
+        "Console": "shadow_rook",
+        "ConsoleStateValue": "LevelUp(2)"
+      },
+      {
+        "Picture": "A_shadow_rook_level_3",
+        "Name": "暗影战车Level3",
+        "EnName": "Shadow Rook Level 3",
+        "Health": 10000,
+        "Attack": 165,
+        "AttackInterval": 5,
+        "AttackScope": 13,
+        "RunSpeed": 11,
+        "Dangerous": 9,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "G_nightmare_fuel|×4",
+          "S_night_armour|×1",
+          "S_dark_sword|×1",
+          "G_shadow_atrium|×1"
+        ],
+        "Ability": [
+          "瞬移攻击"
+        ],
+        "Introduction": "尝试瞬移到玩家背后进行攻击。击杀后周围的暗影骑士和暗影主教会提升一级。",
+        "Console": "shadow_rook",
+        "ConsoleStateValue": "LevelUp(3)"
+      },
 			{
 				"Picture": "A_varg",
 				"Name": "座狼",
@@ -2605,21 +2619,22 @@
         "Introduction": "将金色雀关在洞穴的鸟笼里会变成中毒的金丝雀，拿出放在毒菇巢上毒菇就会被染成黄色，砍伐后产生黄色毒菇。各项属性均有增长。",
         "Console": "toadstool_dark"
       },
-			{
-				"Picture": "A_klaus",
-				"Name": "克劳斯第一形态",
-				"EnName": "Klaus",
-				"Health": 10000,
-				"Attack": 75,
-				"AttackInterval": 3,
-				"AttackScope": 3,
-				"MoveSpeed": 2.75,
-				"Dangerous": 8,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Introduction": "当用鹿角开启战利品贮藏时克劳斯会带着一对宝石鹿出现。当克劳斯失去宝石鹿则会变为愤怒形态，生命值变为27440，伤害变为205.8，攻击间隔攻击距离分别变为2.14和4.2。当血量下降到一半以下时会召唤2~6只坎普斯（每个玩家2只）。第一次被击倒时会变成第二形态，具有远距离攻击。",
-				"Console": "klaus"
-			},
+      {
+        "Picture": "A_klaus",
+        "Name": "克劳斯第一形态",
+        "EnName": "Klaus",
+        "Health": 10000,
+        "Attack": 75,
+        "AttackInterval": 3,
+        "AttackScope": 3,
+        "MoveSpeed": 2.75,
+        "Dangerous": 8,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Introduction": "当用鹿角开启战利品贮藏时克劳斯会带着一对宝石鹿出现。当克劳斯失去宝石鹿则会变为愤怒形态，生命值变为27440，伤害变为205.8，攻击间隔攻击距离分别变为2.14和4.2。当血量下降到一半以下时会召唤2~6只坎普斯（每个玩家2只）。第一次被击倒时会变成第二形态，具有远距离攻击。",
+        "Console": "klaus",
+        "ConsoleStateValue": "SpawnDeer(true)"
+      },
 			{
 				"Picture": "A_klaus2",
 				"Name": "克劳斯第二形态",

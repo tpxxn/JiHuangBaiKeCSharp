@@ -555,26 +555,28 @@
 				"Introduction": "电羊被攻击会逃跑。攻击一只电羊不会引起整群电羊围攻，可以击杀大部分电羊，剩下一只赶到家附近用围墙围起，然后就会繁殖。电羊是闪电优先攻击的目标，被闪电或晨星击中会变成伏特电羊。",
 				"Console": "lightninggoat"
 			},
-			{
-				"Picture": "A_volt_goat_withelectric",
-				"Name": "伏特电羊",
-				"EnName": "Volt Goat",
-				"Health": 300,
-				"Attack": 37.5,
-				"AttackInterval": 2,
-				"AttackScope": 3,
-				"MoveSpeed": 4,
-				"RunSpeed": 8,
-				"Dangerous": 5,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_electric_milk|×1",
-					"F_meat|×2",
-					"G_volt_goat_horn|×1（25%）"
-				],
-				"Introduction": "击杀伏特电羊会额外获得一个电羊奶。攻击电羊或被电羊攻击均会触电，可以戴着雨帽、雨衣或眼球伞来防电。"
-			},
+      {
+        "Picture": "A_volt_goat_withelectric",
+        "Name": "伏特电羊",
+        "EnName": "Volt Goat",
+        "Health": 300,
+        "Attack": 37.5,
+        "AttackInterval": 2,
+        "AttackScope": 3,
+        "MoveSpeed": 4,
+        "RunSpeed": 8,
+        "Dangerous": 5,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_electric_milk|×1",
+          "F_meat|×2",
+          "G_volt_goat_horn|×1（25%）"
+        ],
+        "Introduction": "击杀伏特电羊会额外获得一个电羊奶。攻击电羊或被电羊攻击均会触电，可以戴着雨帽、雨衣或眼球伞来防电。",
+        "Console": "lightninggoat",
+        "ConsoleStateValue": "setcharged(true)"
+      },
 			{
 				"Picture": "A_koalefant",
 				"Name": "考拉象",
@@ -869,7 +871,7 @@
 				"Health": 200,
 				"Attack": 40,
 				"AttackInterval": 2,
-				"AttackScope": 30,
+				"AttackScope": 3,
 				"MoveSpeed": 3,
 				"RunSpeed": 6,
 				"Dangerous": 2,
@@ -1681,27 +1683,28 @@
         ],
         "Introduction": "生成自中型常青树。"
       },
-			{
-				"Picture": "A_treeguard",
-				"Name": "树人守卫(大)",
-				"EnName": "Treeguard",
-				"Health": 2500,
-				"Attack": 62,
-				"AttackInterval": 3,
-				"AttackScope": 3.75,
-				"MoveSpeed": 1.875,
-				"RunSpeed": 1.875,
-				"Dangerous": 6,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_living_log|×6"
-				],
-				"Introduction": "生成自大型常青树。",
-				"Console": "leif"
-			},
+      {
+        "Picture": "A_treeguard",
+        "Name": "树人守卫(大)",
+        "EnName": "Treeguard",
+        "Health": 2500,
+        "Attack": 62,
+        "AttackInterval": 3,
+        "AttackScope": 3.75,
+        "MoveSpeed": 1.875,
+        "RunSpeed": 1.875,
+        "Dangerous": 6,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_monster_meat|×1",
+          "G_living_log|×6"
+        ],
+        "Introduction": "生成自大型常青树。",
+        "Console": "leif",
+        "ConsoleStateValue": "SetLeifScale(0.7)"
+      },
       {
         "Picture": "A_poison_birchnut_trees",
         "Name": "毒桦树",

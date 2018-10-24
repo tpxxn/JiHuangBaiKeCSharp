@@ -1530,27 +1530,28 @@
 				],
 				"Introduction": "生成自中型常青树。"
 			},
-			{
-				"Picture": "A_treeguard",
-				"Name": "树人守卫(大)",
-				"EnName": "Treeguard",
-				"Health": 2500,
-				"Attack": 62,
-				"AttackInterval": 3,
-				"AttackScope": 3.75,
-				"MoveSpeed": 1.875,
-				"RunSpeed": 1.875,
-				"Dangerous": 6,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_living_log|×6"
-				],
-				"Introduction": "生成自大型常青树。",
-				"Console": "leif"
-			},
+      {
+        "Picture": "A_treeguard",
+        "Name": "树人守卫(大)",
+        "EnName": "Treeguard",
+        "Health": 2500,
+        "Attack": 62,
+        "AttackInterval": 3,
+        "AttackScope": 3.75,
+        "MoveSpeed": 1.875,
+        "RunSpeed": 1.875,
+        "Dangerous": 6,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_monster_meat|×1",
+          "G_living_log|×6"
+        ],
+        "Introduction": "生成自大型常青树。",
+        "Console": "leif",
+        "ConsoleStateValue": "SetLeifScale(0.7)"
+      },
 			{
 				"Picture": "A_spider_queen",
 				"Name": "蜘蛛女王",

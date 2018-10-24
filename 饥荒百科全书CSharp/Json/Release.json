@@ -1,6 +1,24 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.7.5",
+      "Data": "2018年10月25日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "添加Year of the Varg、The Gorge、观看直播获得的皮肤"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正树人守卫、克劳斯第一形态、暗影生物（9种带级别的）、电羊控制台代码"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正兔人的攻击距离"
+        }
+      ]
+    },
+    {
       "Version": "0.7.7.4",
       "Data": "2018年1月31日",
       "UpdataContent": [
