@@ -620,7 +620,7 @@
           "A_treeguard",
           "A_poison_birchnut_trees"
         ],
-        "Introduction": "击杀树精守卫、桦树精获得，砍倒完全正常的树也可以得到。",
+        "Introduction": "击杀树人守卫、桦树精获得，砍倒完全正常的树也可以得到。",
         "Console": "livinglog"
       },
       {
@@ -1812,7 +1812,8 @@
         "Fresh": 2,
         "Goods": [
           "F_monster_meat|×1（40%）",
-          "G_nightmare_fuel|×1（40%）"
+          "G_nightmare_fuel|×1（40%）",
+          "G_beard_hair|×1（20%）"
         ],
         "Console": "rabbit"
       },
@@ -2103,7 +2104,7 @@
         "EnName": "Checkered Flooring",
         "Make": "S_checkered_flooring",
         "Texture": "Texture_checkered_flooring",
-        "Introduction": "出现在棋盘区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的方格地板足够大时，附近只会出现乌鸦。在船难版中，不会产生水坑，但是依然会被潮汐和洪水淹没。",
+        "Introduction": "出现在棋盘区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的棋格地板足够大时，附近只会出现乌鸦。在船难版中，不会产生水坑，但是依然会被潮汐和洪水淹没。",
         "Console": "turf_checkerfloor"
       },
       {
@@ -2136,7 +2137,7 @@
         "Name": "草地地皮",
         "EnName": "Grass Turf",
         "Texture": "Texture_grass_turf",
-        "Introduction": "出现在草原区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的长草地皮足够大时，附近只会出现红鸟和雪鸟。",
+        "Introduction": "出现在草原区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的草地地皮足够大时，附近只会出现红鸟和雪鸟。",
         "Console": "turf_grass"
       },
       {
@@ -2176,7 +2177,7 @@
         "Name": "洞穴岩石地皮",
         "EnName": "Cave Rock Turf",
         "Texture": "Texture_cave_rock_turf",
-        "Introduction": "出现在岩石平原和石笋生物群落区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的洞穴石地足够大时，附近只会出现乌鸦。",
+        "Introduction": "出现在岩石平原和石笋生物群落区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的洞穴岩石地皮足够大时，附近只会出现乌鸦。",
         "Console": "turf_underrock"
       },
       {
@@ -2224,7 +2225,7 @@
         "Name": "粘泥地皮",
         "EnName": "Slimey Turf",
         "Texture": "Texture_slimey_turf",
-        "Introduction": "出现在沉没森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的粘滑地皮足够大时，附近只会出现乌鸦。",
+        "Introduction": "出现在沉没森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的粘泥地皮足够大时，附近只会出现乌鸦。",
         "Console": "turf_sinkhole"
       },
       {

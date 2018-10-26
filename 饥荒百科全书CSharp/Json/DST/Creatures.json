@@ -1950,6 +1950,8 @@
         "Name": "寒冰切斯特",
         "EnName": "Snow Chester",
         "Health": 450,
+        "MoveSpeed": 3,
+        "RunSpeed": 7,
         "IsActiveAttack": false,
         "IsTeamWork": false,
         "Goods": [
@@ -2094,7 +2096,9 @@
           "F_monster_meat|×1",
           "G_living_log|×6"
         ],
-        "Introduction": "生成自小型常青树。世界天数3天后，砍倒常青树时，附近的常青树就有1.33%的可能性变成树人守卫，根据常青树的大小分为小、中、大三种。树人守卫刚生成时会对砍倒树的玩家产生永久性敌对关系，但是可以通过种植松果使其平静下来，在16单位以内种植有15%的可能性，在5单位以内种植有33%的可能性。"
+        "Introduction": "生成自小型常青树。世界天数3天后，砍倒常青树时，附近的常青树就有1.33%的可能性变成树人守卫，根据常青树的大小分为小、中、大三种。树人守卫刚生成时会对砍倒树的玩家产生永久性敌对关系，但是可以通过种植松果使其平静下来，在16单位以内种植有15%的可能性，在5单位以内种植有33%的可能性。",
+        "Console": "leif",
+        "ConsoleStateValue": "SetLeifScale(0.7)"
       },
       {
         "Picture": "A_treeguard",
@@ -2114,7 +2118,8 @@
           "F_monster_meat|×1",
           "G_living_log|×6"
         ],
-        "Introduction": "生成自中型常青树。"
+        "Introduction": "生成自中型常青树。",
+        "Console": "leif"
       },
       {
         "Picture": "A_treeguard",
@@ -2136,7 +2141,7 @@
         ],
         "Introduction": "生成自大型常青树。",
         "Console": "leif",
-        "ConsoleStateValue": "SetLeifScale(0.7)"
+        "ConsoleStateValue": "SetLeifScale(1.25)"
       },
       {
         "Picture": "A_poison_birchnut_trees",

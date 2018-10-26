@@ -58,7 +58,7 @@ namespace 饥荒百科全书CSharp.Class
                     File.Delete(UpdateXmlPath);
                 }
                 //第一个参数是下载地址,第二个参数是文件保存的路径文件名
-                _client.DownloadFileAsync(new Uri("http://www.jihuangbaike.com/update/update.xml"), UpdateXmlPath);
+                _client.DownloadFileAsync(new Uri("http://47.107.95.224//update/update.xml"), UpdateXmlPath);
                 //读取从服务器获取的最新版本号(读取XML文件)
                 _client.DownloadFileCompleted += Completed;
                 //LatestVersion();

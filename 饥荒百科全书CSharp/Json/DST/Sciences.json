@@ -1532,9 +1532,21 @@
         "Need2": "S_boards",
         "Need2Value": 2,
         "Unlock": [ "S_alchemy_engine" ],
-        "Introduction": "供奉上浆果灌木丛或者蜜汁浆果丛可以解锁年货标签。击杀火鸡掉落的福袋开出的金元宝是制作年货标签物品的必要道具。鸡年吉祥活动特有。",
+        "Introduction": "供奉上浆果灌木丛或者蜜汁浆果丛可以解锁年货标签。击杀火鸡掉落的红包开出的金元宝是制作年货标签物品的必要道具。Year Of The Gobbler 活动特有。",
         "ConsoleCommand": "c_spawn",
         "Console": "perdshrine"
+      },
+      {
+        "Picture": "S_varg_shrine_build",
+        "Name": "座狼神龛",
+        "EnName": "Varg Shrine",
+        "Need1": "G_gold_nugget",
+        "Need1Value": 8,
+        "Need2": "S_boards",
+        "Need2Value": 2,
+        "Introduction": "供奉火把可以解锁年货标签（此时火把的持续时间为 375 秒）。击杀黏土座狼和黏土猎犬掉落的红包开出的金元宝是制作年货标签物品的必要道具。Year Of The Varg 活动特有。",
+        "ConsoleCommand": "c_spawn",
+        "Console": "wargshrine"
       },
       {
         "Picture": "S_potted_fern",
@@ -1579,7 +1591,7 @@
       },
       {
         "Picture": "S_replica_relic_plate",
-        "Name": "文物碟复制品",
+        "Name": "仿造的古董盘子",
         "EnName": "Replica Relic Plate",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -1590,58 +1602,58 @@
       },
       {
         "Picture": "S_replica_relic_dish",
-        "Name": "文物盘复制品",
+        "Name": "仿造的古董餐碟",
         "EnName": "Replica Relic Dish",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、胡萝、浆果、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
         "ConsoleCommand": "c_spawn",
-        "Console": "ruinsrelic_plate"
+        "Console": "ruinsrelic_dish"
       },
       {
         "Picture": "S_replica_relic_bowl",
-        "Name": "文物碗复制品",
+        "Name": "仿造的古董碗",
         "EnName": "Replica Relic Bowl",
         "Need1": "S_cut_stone",
         "Need1Value": 2,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、兔子、胡萝卜、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
         "ConsoleCommand": "c_spawn",
-        "Console": "ruinsrelic_plate"
+        "Console": "ruinsrelic_bowl"
       },
       {
         "Picture": "S_replica_relic_vase",
-        "Name": "文物瓶复制品",
+        "Name": "仿造的古董花瓶",
         "EnName": "Replica Relic Vase",
         "Need1": "S_cut_stone",
         "Need1Value": 2,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、红宝石、蝴蝶、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
         "ConsoleCommand": "c_spawn",
-        "Console": "ruinsrelic_plate"
+        "Console": "ruinsrelic_vase"
       },
       {
         "Picture": "S_replica_relic_chair",
-        "Name": "文物椅复制品",
+        "Name": "仿造的古董椅子",
         "EnName": "Replica Relic Chair",
         "Need1": "S_cut_stone",
         "Need1Value": 3,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、紫宝石、兔子、花瓣放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
         "ConsoleCommand": "c_spawn",
-        "Console": "ruinsrelic_plate"
+        "Console": "ruinsrelic_chair"
       },
       {
         "Picture": "S_replica_relic_table",
-        "Name": "文物桌复制品",
+        "Name": "仿造的古董桌子",
         "EnName": "Replica Relic Table",
         "Need1": "S_cut_stone",
         "Need1Value": 4,
         "UnlockBlueprint": "G_rare_blueprint",
         "Introduction": "通过按顺序将铥制徽章、圆滑石砖、噩梦燃料、紫宝石、乌鸦、兔子放入远古箱子(Ancient Chest)获得稀有蓝图来解锁。",
         "ConsoleCommand": "c_spawn",
-        "Console": "ruinsrelic_plate"
+        "Console": "ruinsrelic_table"
       },
       {
         "Picture": "S_scaled_chest",
@@ -2919,7 +2931,7 @@
       },
       {
         "Picture": "S_pawn_figure_marble",
-        "Name": "兵卒轮廓",
+        "Name": "兵卒雕塑",
         "EnName": "Pawn Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -2932,7 +2944,7 @@
       },
       {
         "Picture": "S_pawn_figure_stone",
-        "Name": "兵卒轮廓",
+        "Name": "兵卒雕塑",
         "EnName": "Pawn Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -2945,7 +2957,7 @@
       },
       {
         "Picture": "S_rook_figure_marble",
-        "Name": "战车轮廓",
+        "Name": "战车雕塑",
         "EnName": "Rook Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -2958,7 +2970,7 @@
       },
       {
         "Picture": "S_rook_figure_stone",
-        "Name": "战车轮廓",
+        "Name": "战车雕塑",
         "EnName": "Rook Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -2971,7 +2983,7 @@
       },
       {
         "Picture": "S_knight_figure_marble",
-        "Name": "骑士轮廓",
+        "Name": "骑士雕塑",
         "EnName": "Knight Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -2984,7 +2996,7 @@
       },
       {
         "Picture": "S_knight_figure_stone",
-        "Name": "骑士轮廓",
+        "Name": "骑士雕塑",
         "EnName": "Knight Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -2997,7 +3009,7 @@
       },
       {
         "Picture": "S_bishop_figure_marble",
-        "Name": "主教轮廓",
+        "Name": "主教雕塑",
         "EnName": "Bishop Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -3010,7 +3022,7 @@
       },
       {
         "Picture": "S_bishop_figure_stone",
-        "Name": "主教轮廓",
+        "Name": "主教雕塑",
         "EnName": "Bishop Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -3023,7 +3035,7 @@
       },
       {
         "Picture": "S_queenly_figure_marble",
-        "Name": "女王轮廓",
+        "Name": "女王雕塑",
         "EnName": "Queenly Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -3036,7 +3048,7 @@
       },
       {
         "Picture": "S_queenly_figure_stone",
-        "Name": "女王轮廓",
+        "Name": "女王雕塑",
         "EnName": "Queenly Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -3049,7 +3061,7 @@
       },
       {
         "Picture": "S_kingly_figure_marble",
-        "Name": "国王轮廓",
+        "Name": "国王雕塑",
         "EnName": "Kingly Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -3062,7 +3074,7 @@
       },
       {
         "Picture": "S_kingly_figure_stone",
-        "Name": "国王轮廓",
+        "Name": "国王雕塑",
         "EnName": "Kingly Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -3075,7 +3087,7 @@
       },
       {
         "Picture": "S_deerclops_figure_marble",
-        "Name": "巨鹿轮廓",
+        "Name": "巨鹿雕塑",
         "EnName": "Deerclops Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -3089,7 +3101,7 @@
       },
       {
         "Picture": "S_deerclops_figure_stone",
-        "Name": "巨鹿轮廓",
+        "Name": "巨鹿雕塑",
         "EnName": "Deerclops Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -3103,7 +3115,7 @@
       },
       {
         "Picture": "S_bearger_figure_marble",
-        "Name": "熊獾轮廓",
+        "Name": "熊獾雕塑",
         "EnName": "Bearger Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -3117,7 +3129,7 @@
       },
       {
         "Picture": "S_bearger_figure_stone",
-        "Name": "熊獾轮廓",
+        "Name": "熊獾雕塑",
         "EnName": "Bearger Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -3131,7 +3143,7 @@
       },
       {
         "Picture": "S_moose_figure_marble",
-        "Name": "驼鹿/巨鹅轮廓",
+        "Name": "驼鹿/巨鹅雕塑",
         "EnName": "Moose/Goose Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -3145,7 +3157,7 @@
       },
       {
         "Picture": "S_moose_figure_stone",
-        "Name": "驼鹿/巨鹅轮廓",
+        "Name": "驼鹿/巨鹅雕塑",
         "EnName": "Moose/Goose Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -3159,7 +3171,7 @@
       },
       {
         "Picture": "S_dragonfly_figure_marble",
-        "Name": "龙蝇轮廓",
+        "Name": "龙蝇雕塑",
         "EnName": "Dragonfly Figure",
         "Need1": "G_marble",
         "Need1Value": 1,
@@ -3173,7 +3185,7 @@
       },
       {
         "Picture": "S_dragonfly_figure_stone",
-        "Name": "龙蝇轮廓",
+        "Name": "龙蝇雕塑",
         "EnName": "Dragonfly Figure",
         "Need1": "S_cut_stone",
         "Need1Value": 1,
@@ -3211,8 +3223,8 @@
         "EnName": "Red Firecrackers",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 1,
-        "Unlock": [ "S_gobbler_shrine" ],
-        "Introduction": "用火把或薇洛的打火机可以点燃鞭炮。可以使用三次。鸡年吉祥活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
+        "Introduction": "用火把或薇洛的打火机可以点燃鞭炮。可以使用三次。Year Of The Globber/Varg 活动特有。",
         "Console": "firecrackers"
       },
       {
@@ -3221,9 +3233,19 @@
         "EnName": "Red Lanterns",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 3,
-        "Unlock": [ "S_gobbler_shrine" ],
-        "Introduction": "光照效果较弱，但是持续时间较长。鸡年吉祥活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
+        "Introduction": "光照效果较弱，但是持续时间较长。Year Of The Globber/Varg 活动特有。",
         "Console": "redlantern"
+      },
+      {
+        "Picture": "S_lucky_whistle",
+        "Name": "幸运哨子",
+        "EnName": "Lucky Whistle",
+        "Need1": "G_lucky_gold_nugget",
+        "Need1Value": 3,
+        "Unlock": [ "S_varg_shrine_build" ],
+        "Introduction": "吹响幸运哨子可以驯服周围最多5只猎犬（包括黏土猎犬）40秒，被驯服的猎犬会追随玩家，且不会攻击玩家，但仍然会攻击其他生物。总共可以使用10次",
+        "Console": "houndwhistle"
       },
       {
         "Picture": "S_lucky_fan",
@@ -3232,7 +3254,7 @@
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 3,
         "Unlock": [ "S_gobbler_shrine" ],
-        "Introduction": "前三次使用每次消耗22.2%的耐久，召唤一个旋风，并且给周围降温，会扑灭火。后三次使用每次消耗11.1%的耐久，不会召唤旋风，其他效果依旧。鸡年吉祥活动特有。",
+        "Introduction": "前三次使用每次消耗22.2%的耐久，召唤一个旋风，并且给周围降温，会扑灭火。后三次使用每次消耗11.1%的耐久，不会召唤旋风，其他效果依旧。Year Of The Globber 活动特有。",
         "Console": "perdfan"
       },
       {
@@ -3241,8 +3263,8 @@
         "EnName": "Lucky Beast Head",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 8,
-        "Unlock": [ "S_gobbler_shrine" ],
-        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。鸡年吉祥活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
+        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg 活动特有。",
         "Console": "dragonheadhat"
       },
       {
@@ -3251,8 +3273,8 @@
         "EnName": "Lucky Beast Body",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 8,
-        "Unlock": [ "S_gobbler_shrine" ],
-        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。鸡年吉祥活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
+        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg 活动特有。",
         "Console": "dragonbodyhat"
       },
       {
@@ -3261,8 +3283,8 @@
         "EnName": "Lucky Beast Tail",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 8,
-        "Unlock": [ "S_gobbler_shrine" ],
-        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。鸡年吉祥活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
+        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg 活动特有。",
         "Console": "dragontailhat"
       }
     ]

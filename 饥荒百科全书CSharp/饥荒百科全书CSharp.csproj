@@ -6593,6 +6593,24 @@
     <Resource Include="Resources\GameResources\Skins\P_pedigree_vargling.png" />
     <Resource Include="Resources\GameResources\Skins\P_purebred_vargling.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_hound_figure_marble_build.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hound_figure_stone_build.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hound_sketch.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_lucky_whistle.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_varg_figure_marble_build.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_varg_figure_stone_build.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_varg_shrine_build.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_varg_sketch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Creatures\A_clay_hound.png" />
+    <Resource Include="Resources\GameResources\Creatures\A_clay_varg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_glass_spike_medium.png" />
+    <Resource Include="Resources\GameResources\Goods\G_glass_spike_tall.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

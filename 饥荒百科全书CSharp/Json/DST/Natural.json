@@ -431,7 +431,7 @@
           "N_berry_bush_1",
           "N_cave_banana_tree"
         ],
-        "Introduction": "这里通常有一大片的树和少量的树苗和浆果灌木丛，不会有生物在这里生成(除了火鸡和树精守卫)。"
+        "Introduction": "这里通常有一大片的树和少量的树苗和浆果灌木丛，不会有生物在这里生成(除了火鸡和树人守卫)。"
       },
       {
         "Picture": "N_labyrinth",
@@ -641,7 +641,7 @@
         "ResourcesBurned": [
           "G_ash|×1"
         ],
-        "IsRegenerate": false,
+        "IsRegenerate": true,
         "IsCombustible": true,
         "Biomes": [
           "N_grasslands"
@@ -669,7 +669,7 @@
         "ResourcesBurned": [
           "G_ash|×1"
         ],
-        "IsRegenerate": false,
+        "IsRegenerate": true,
         "IsCombustible": true,
         "Biomes": [
           "N_grasslands",
@@ -702,7 +702,7 @@
         "ResourcesBurned": [
           "G_ash|×1"
         ],
-        "IsRegenerate": false,
+        "IsRegenerate": true,
         "IsCombustible": true,
         "Biomes": [
           "N_grasslands",
@@ -1398,7 +1398,7 @@
           "N_grasslands",
           "N_forest"
         ],
-        "Introduction": "常青树十分常见，除了稀树大草原和矿区，都能看到它的身影。常青树是松果和木材的主要来源，可以被猪人随从砍伐。砍伐常青树的次数为5(小)/10(中)/15(大)/1(老)次。常青树会随着时间变化在小、中、大、老这个生长周期中不断循环。一旦砍伐，树墩不会长成常青树。第四天开始，每次砍伐常青树都有1.3%的几率产生树精守卫(包括自己种的)，树精守卫的速度并不快，可以通过种植常青树平息树精守卫的愤怒。联机版中，常青树在一段时间后会变成石化树。",
+        "Introduction": "常青树十分常见，除了稀树大草原和矿区，都能看到它的身影。常青树是松果和木材的主要来源，可以被猪人随从砍伐。砍伐常青树的次数为5(小)/10(中)/15(大)/1(老)次。常青树会随着时间变化在小、中、大、老这个生长周期中不断循环。一旦砍伐，树墩不会长成常青树。第四天开始，每次砍伐常青树都有1.3%的几率产生树人守卫(包括自己种的)，树人守卫的速度并不快，可以通过种植常青树平息树人守卫的愤怒。联机版中，常青树在一段时间后会变成石化树。",
         "Console": [
           "evergreen"
         ]
@@ -1745,7 +1745,7 @@
             "G_twigs|×1(一定几率)"
           ]
         ],
-        "IsRegenerate": false,
+        "IsRegenerate": true,
         "IsCombustible": true,
         "Biomes": [
           "N_forest"

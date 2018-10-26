@@ -1593,24 +1593,26 @@
 				"Introduction": "切斯特是跟随眼骨的储物生物，拥有9格储物功能。眼骨很有可能可以在一条通往青蛙池塘的路的尽头附近找到。切斯特每3秒可以恢复22.5点生命(寒冰切斯特、暗影切斯特、哈奇、河豚哈奇、音乐盒哈奇、鹈鹕、胖鹈鹕、火焰鹈鹕均有该属性)。",
 				"Console": "chester"
 			},
-			{
-				"Picture": "A_snow_chester",
-				"Name": "寒冰切斯特",
-				"EnName": "Snow Chester",
-				"Health": 450,
-				"IsActiveAttack": false,
-				"IsTeamWork": false,
-				"Goods": [
-					"|储存的物品"
-				],
-				"Ability": [
-					"跟随眼骨",
-					"9格储物",
-					"生命恢复",
-					"食物保鲜。"
-				],
-				"Introduction": "月圆之夜在切斯特的每个格子里放入至少一个蓝宝石就会变成寒冰切斯特，具有冰箱的保鲜效果，死后变成正常的切斯特。"
-			},
+      {
+        "Picture": "A_snow_chester",
+        "Name": "寒冰切斯特",
+        "EnName": "Snow Chester",
+        "Health": 450,
+        "MoveSpeed": 3,
+        "RunSpeed": 7,
+        "IsActiveAttack": false,
+        "IsTeamWork": false,
+        "Goods": [
+          "|储存的物品"
+        ],
+        "Ability": [
+          "跟随眼骨",
+          "9格储物",
+          "生命恢复",
+          "食物保鲜。"
+        ],
+        "Introduction": "月圆之夜在切斯特的每个格子里放入至少一个蓝宝石就会变成寒冰切斯特，具有冰箱的保鲜效果，死后变成正常的切斯特。"
+      },
 			{
 				"Picture": "A_shadow_chester",
 				"Name": "暗影切斯特",
@@ -1643,26 +1645,28 @@
 	},
 	"Boss": {
 		"Creature": [
-			{
-				"Picture": "A_treeguard",
-				"Name": "树人守卫(小)",
-				"EnName": "Treeguard",
-				"Health": 1400,
-				"Attack": 35,
-				"AttackInterval": 3,
-				"AttackScope": 2.1,
-				"MoveSpeed": 1.05,
-				"RunSpeed": 1.05,
-				"Dangerous": 6,
-				"SanityEffect": -100,
-				"IsActiveAttack": true,
-				"IsTeamWork": true,
-				"Goods": [
-					"F_monster_meat|×1",
-					"G_living_log|×6"
-				],
-				"Introduction": "生成自小型常青树。世界天数3天后，砍倒常青树时，附近的常青树就有1.33%的可能性变成树人守卫，根据常青树的大小分为小、中、大三种。树人守卫刚生成时会对砍倒树的玩家产生永久性敌对关系，但是可以通过种植松果使其平静下来，在16单位以内种植有15%的可能性，在5单位以内种植有33%的可能性。"
-			},
+      {
+        "Picture": "A_treeguard",
+        "Name": "树人守卫(小)",
+        "EnName": "Treeguard",
+        "Health": 1400,
+        "Attack": 35,
+        "AttackInterval": 3,
+        "AttackScope": 2.1,
+        "MoveSpeed": 1.05,
+        "RunSpeed": 1.05,
+        "Dangerous": 6,
+        "SanityEffect": -100,
+        "IsActiveAttack": true,
+        "IsTeamWork": true,
+        "Goods": [
+          "F_monster_meat|×1",
+          "G_living_log|×6"
+        ],
+        "Introduction": "生成自小型常青树。世界天数3天后，砍倒常青树时，附近的常青树就有1.33%的可能性变成树人守卫，根据常青树的大小分为小、中、大三种。树人守卫刚生成时会对砍倒树的玩家产生永久性敌对关系，但是可以通过种植松果使其平静下来，在16单位以内种植有15%的可能性，在5单位以内种植有33%的可能性。",
+        "Console": "leif",
+        "ConsoleStateValue": "SetLeifScale(0.7)"
+      },
       {
         "Picture": "A_treeguard",
         "Name": "树人守卫(中)",
@@ -1681,7 +1685,8 @@
           "F_monster_meat|×1",
           "G_living_log|×6"
         ],
-        "Introduction": "生成自中型常青树。"
+        "Introduction": "生成自中型常青树。",
+        "Console": "leif"
       },
       {
         "Picture": "A_treeguard",
@@ -1703,7 +1708,7 @@
         ],
         "Introduction": "生成自大型常青树。",
         "Console": "leif",
-        "ConsoleStateValue": "SetLeifScale(0.7)"
+        "ConsoleStateValue": "SetLeifScale(1.25)"
       },
       {
         "Picture": "A_poison_birchnut_trees",

@@ -637,23 +637,17 @@
         "Picture": "G_glommer's_flower",
         "Name": "咕噜咪之花",
         "EnName": "Glommer's Flower",
-        "Science": [
-          "S_old_bell"
-        ],
-        "Introduction": "月圆之夜在猪王附近的格洛姆的雕像下可以找到格洛姆之花，带着它格洛姆就会跟随玩家，同时也是制作旧钟的材料之一。",
+        "Introduction": "月圆之夜在猪王附近的咕噜咪的雕像下可以找到咕噜咪之花，带着它咕噜咪就会跟随玩家。",
         "Console": "glommerflower"
       },
       {
         "Picture": "G_glommer's_wings",
         "Name": "咕噜咪翅膀",
         "EnName": "Glommer's Wings",
-        "Science": [
-          "S_old_bell"
-        ],
         "SourceCreature": [
           "A_glommer"
         ],
-        "Introduction": "击杀格洛姆获得，制作旧钟的材料之一。",
+        "Introduction": "击杀咕噜咪获得。",
         "Console": "glommerwings"
       },
       {
@@ -756,7 +750,7 @@
           "A_treeguard",
           "A_poison_birchnut_trees"
         ],
-        "Introduction": "击杀树精守卫、桦树精获得，砍倒完全正常的树也可以得到。",
+        "Introduction": "击杀树人守卫、桦树精获得，砍倒完全正常的树也可以得到。",
         "Console": "livinglog"
       },
       {
@@ -2284,7 +2278,8 @@
         "Fresh": 2,
         "Goods": [
           "F_monster_meat|×1（40%）",
-          "G_nightmare_fuel|×1（40%）"
+          "G_nightmare_fuel|×1（40%）",
+          "G_beard_hair|×1（20%）"
         ],
         "Console": "rabbit"
       },
@@ -2402,21 +2397,21 @@
         "Picture": "A_blue_spore",
         "Name": "蓝色孢子",
         "EnName": "Blue Spore",
-        "Fresh": 10001,
+        "Fresh": 15,
         "Console": "spore_tall"
       },
       {
         "Picture": "A_green_spore",
         "Name": "绿色孢子",
         "EnName": "Green Spore",
-        "Fresh": 10001,
+        "Fresh": 15,
         "Console": "spore_small"
       },
       {
         "Picture": "A_red_spore",
         "Name": "红色孢子",
         "EnName": "Red Spore",
-        "Fresh": 10001,
+        "Fresh": 15,
         "Console": "spore_medium"
       }
     ]
@@ -2643,7 +2638,7 @@
         "EnName": "Checkered Flooring",
         "Make": "S_checkered_flooring",
         "Texture": "Texture_checkered_flooring",
-        "Introduction": "出现在棋盘区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的方格地板足够大时，附近只会出现乌鸦。在船难版中，不会产生水坑，但是依然会被潮汐和洪水淹没。",
+        "Introduction": "出现在棋盘区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的棋格地板足够大时，附近只会出现乌鸦。在船难版中，不会产生水坑，但是依然会被潮汐和洪水淹没。",
         "Console": "turf_checkerfloor"
       },
       {
@@ -2685,7 +2680,7 @@
         "Name": "牧草地皮",
         "EnName": "Grass Turf",
         "Texture": "Texture_grass_turf",
-        "Introduction": "出现在草原区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的长草地皮足够大时，附近只会出现红雀和雪雀。",
+        "Introduction": "出现在草原区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的草地地皮足够大时，附近只会出现红雀和雪雀。",
         "Console": "turf_grass"
       },
       {
@@ -2725,7 +2720,7 @@
         "Name": "岩洞地皮",
         "EnName": "Cave Rock Turf",
         "Texture": "Texture_cave_rock_turf",
-        "Introduction": "出现在岩石平原和石笋生物群落区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的洞穴石地足够大时，附近只会出现乌鸦。",
+        "Introduction": "出现在岩石平原和石笋生物群落区域，不能在上面种植植物，阻止食人花和眼球草的生长，当铺设的洞穴岩石地皮足够大时，附近只会出现乌鸦。",
         "Console": "turf_underrock"
       },
       {
@@ -2773,7 +2768,7 @@
         "Name": "粘泥地皮",
         "EnName": "Slimey Turf",
         "Texture": "Texture_slimey_turf",
-        "Introduction": "出现在沉没森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的粘滑地皮足够大时，附近只会出现乌鸦。",
+        "Introduction": "出现在沉没森林区域，可以在上面种植植物，也不阻止食人花和眼球草的生长，当铺设的粘泥地皮足够大时，附近只会出现乌鸦。",
         "Console": "turf_sinkhole"
       },
       {
@@ -2871,10 +2866,24 @@
       },
       {
         "Picture": "G_glass_spike",
-        "Name": "玻璃尖刺",
+        "Name": "玻璃尖刺（小）",
         "EnName": "Glass Spike",
         "Introduction": "与蚁狮对战时用火点燃沙尖刺可以变成玻璃尖刺，装饰品，可以背走(背着的时候移动速度极慢)，骑牛可以快速搬运。",
         "Console": "glassspike_short"
+      },
+      {
+        "Picture": "G_glass_spike_medium",
+        "Name": "玻璃尖刺（中）",
+        "EnName": "Glass Spike",
+        "Introduction": "与蚁狮对战时用火点燃沙尖刺可以变成玻璃尖刺，装饰品，可以背走(背着的时候移动速度极慢)，骑牛可以快速搬运。",
+        "Console": "glassspike_med"
+      },
+      {
+        "Picture": "G_glass_spike_tall",
+        "Name": "玻璃尖刺（大）",
+        "EnName": "Glass Spike",
+        "Introduction": "与蚁狮对战时用火点燃沙尖刺可以变成玻璃尖刺，装饰品，可以背走(背着的时候移动速度极慢)，骑牛可以快速搬运。",
+        "Console": "glassspike_tall"
       },
       {
         "Picture": "G_glass_castle",
