@@ -2291,6 +2291,13 @@
         "Picture": "P_tragic_torch",
         "Name": "凄惨之炬",
         "EnName": "Tragic Torch",
+        "Rarity": "Timeless",
+        "Introduction": "At first glance this torch appears menacing, but holding it makes you feel quite sad."
+      },
+      {
+        "Picture": "P_tragic_torch",
+        "Name": "凄惨之炬",
+        "EnName": "Tragic Torch",
         "Rarity": "Loyal",
         "Introduction": "At first glance this torch appears menacing, but holding it makes you feel quite sad."
       },

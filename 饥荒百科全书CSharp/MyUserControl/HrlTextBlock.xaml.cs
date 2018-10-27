@@ -23,6 +23,10 @@ namespace 饥荒百科全书CSharp.MyUserControl
     /// </summary>
     public partial class HrlTextBlock : UserControl
     {
+
+        //创建动画资源
+        private readonly Storyboard storyboard = new Storyboard();
+
         #region 属性：Text
 
         public string Text
@@ -93,6 +97,19 @@ namespace 饥荒百科全书CSharp.MyUserControl
 
         #endregion
 
+        #region 属性：NeedAnimation
+
+        public bool NeedAnimation
+        {
+            get => (bool)GetValue(NeedAnimationProperty);
+            set => SetValue(NeedAnimationProperty, value);
+        }
+
+        public static readonly DependencyProperty NeedAnimationProperty =
+            DependencyProperty.Register("NeedAnimation", typeof(bool), typeof(HrlTextBlock));
+
+        #endregion
+
         /// <summary>
         /// 获取文字长度
         /// </summary>
@@ -116,8 +133,6 @@ namespace 饥荒百科全书CSharp.MyUserControl
         /// </summary>
         private void CeaterAnimation()
         {
-            //创建动画资源
-            var storyboard = new Storyboard();
             var length = MeasureTextWidth(TextBlock.FontSize);
             //移动动画
             {
@@ -135,7 +150,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
                 storyboard.Children.Add(widthMove);
             }
             storyboard.RepeatBehavior = RepeatBehavior.Forever;
-            storyboard.Begin();
+            NeedAnimation = true;
         }
 
         public HrlTextBlock()
@@ -143,5 +158,20 @@ namespace 饥荒百科全书CSharp.MyUserControl
             InitializeComponent();
         }
 
+        private void HrlTextBlock_OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            if (NeedAnimation)
+            {
+                storyboard.Begin();
+            }
+        }
+
+        private void HrlTextBlock_OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            if (NeedAnimation)
+            {
+                storyboard.Stop();
+            }
+        }
     }
 }
