@@ -1500,6 +1500,27 @@
 				"Console": "icehound"
 			},
 			{
+				"Picture": "A_clay_hound",
+				"Name": "黏土猎犬",
+				"EnName": "Clay Hound",
+				"Health": 150,
+				"Attack": 20,
+				"AttackInterval": 2,
+				"AttackScope": 3,
+				"MoveSpeed": 8.5,
+				"RunSpeed": 8.5,
+				"Dangerous": 4,
+				"SanityEffect": -40,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+				  "G_red_pouch|×1（20%）",
+				  "G_hound's_tooth|×1（10%）"
+				],
+				"Introduction": "黏土猎犬可以从可疑的土堆中发现，仅在 Year Of The Varg 活动出现。",
+				"Console": "clayhound"
+			},
+			{
 				"Picture": "A_depths_worm",
 				"Name": "洞穴蠕虫",
 				"EnName": "Depths Worm",
@@ -1880,6 +1901,26 @@
 				],
 				"Introduction": "沿着动物足迹寻找有可能找到座狼(另外两种是考拉象或冬考拉象和钢羊)，找到的几率从第一天的5%到第一百天的33%。它会召唤猎犬、红色猎犬、蓝色猎犬中随机的两只，其中红色猎犬和蓝色猎犬根据季节而定，如果时间过久还会召唤更多的猎犬。",
 				"Console": "warg"
+			},
+			{
+				"Picture": "A_clay_varg",
+				"Name": "黏土座狼",
+				"EnName": "Clay Varg",
+				"Health": 1800,
+				"Attack": 50,
+				"AttackInterval": 3,
+				"AttackScope": 5,
+				"MoveSpeed": 5.5,
+				"RunSpeed": 5.5,
+				"Dangerous": 6,
+				"IsActiveAttack": true,
+				"IsTeamWork": true,
+				"Goods": [
+				  "G_red_pouch|×4-6",
+				  "G_hound's_tooth|×1-3"
+				],
+				"Introduction": "如果世界上有一个激活的座狼神龛，那么黏土座狼就可以从十二只黏土猎犬包围的可疑的土堆中发现，如果玩家足够接近，它就会醒来，仅在 Year Of The Varg 活动出现。它不能被燃烧并且不会睡觉，与普通座狼不同的是，它不能召唤黏土猎犬。",
+				"Console": "claywarg"
 			},
 			{
 				"Picture": "A_ewecus",

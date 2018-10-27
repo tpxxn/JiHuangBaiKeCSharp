@@ -115,6 +115,7 @@
           "S_electric_dart",
           "S_birdcage",
           "S_gobbler_shrine",
+          "S_varg_shrine_build",
           "S_scaled_chest",
           "S_one-man_band",
           "S_night_light",
@@ -163,7 +164,8 @@
         "Science": [
           "S_moon_rock_wall",
           "S_cratered_moonrock",
-          "S_moon_dial"
+          "S_moon_dial",
+          "S_moon_rock_idol"
         ],
         "Introduction": "仅联机版才有的月之石，通常可以在陨石雨区域发现。",
         "Console": "moonrocknugget"
@@ -368,7 +370,11 @@
           "S_blow_dart",
           "S_sewing_kit",
           "S_dapper_vest",
-          "S_vargling"
+          "S_vargling",
+          "S_hound_figure_marble_build",
+          "S_hound_figure_stone_build",
+          "S_varg_figure_marble_build",
+          "S_varg_figure_stone_build"
         ],
         "SourceCreature": [
           "A_hound",
@@ -437,7 +443,7 @@
           "S_electric_dart"
         ],
         "SourceCreature": [
-          "Canary"
+          "A_canary"
         ],
         "Introduction": "击杀金丝雀获得。",
         "Console": "feather_canary"
@@ -865,7 +871,8 @@
           "S_bat_bat",
           "S_shadow_manipulator",
           "S_nightmare_amulet",
-          "S_telelocator_staff"
+          "S_telelocator_staff",
+          "S_moon_rock_idol"
         ],
         "SourceCreature": [
           "A_clockwork_bishop",
@@ -1152,6 +1159,17 @@
         ],
         "Introduction": "将带孔月岩石和蓝宝石放在月石底盘合成。扔在地上可以在地图上显示标记。",
         "Console": "bluemooneye"
+      },
+      {
+        "Picture": "G_celestial_orb",
+        "Name": "月体明珠",
+        "EnName": "Celestial Orb",
+        "Science": [
+          "S_moon_rock_idol",
+          "S_portal_paraphernalia"
+        ],
+        "Introduction": "挖掘陨石可以得到月体明珠，在离开游戏或进入洞穴时会自动掉落。靠近它可以暂时解锁制作月体科技的物品。",
+        "Console": "moonrockseed"
       },
       {
         "Picture": "G_chilled_lavae",

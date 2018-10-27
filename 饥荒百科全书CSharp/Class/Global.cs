@@ -254,6 +254,7 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Science> ScienceCritterData = new List<Science>();
         public static readonly List<Science> ScienceSculptData = new List<Science>();
         public static readonly List<Science> ScienceCartographyData = new List<Science>();
+        public static readonly List<Science> ScienceCelestialData = new List<Science>();
         public static readonly List<Science> ScienceOfferingsData = new List<Science>();
         public static readonly List<Science> ScienceVolcanoData = new List<Science>();
         public static readonly List<Creature> CreatureLandData = new List<Creature>();
@@ -334,6 +335,7 @@ namespace 饥荒百科全书CSharp.Class
             ScienceCritterData.Clear();
             ScienceSculptData.Clear();
             ScienceCartographyData.Clear();
+            ScienceCelestialData.Clear();
             ScienceOfferingsData.Clear();
             ScienceVolcanoData.Clear();
             CreatureLandData.Clear();
@@ -448,126 +450,114 @@ namespace 饥荒百科全书CSharp.Class
                 scienceLightItems.Picture = StringProcess.GetGameResourcePath(scienceLightItems.Picture);
                 ScienceLightData.Add(scienceLightItems);
                 AutoSuggestBoxItemSourceAdd(scienceLightItems, "ScienceLight");
-
             }
             foreach (var scienceNauticalItems in science.Nautical.Science)
             {
                 scienceNauticalItems.Picture = StringProcess.GetGameResourcePath(scienceNauticalItems.Picture);
                 ScienceNauticalData.Add(scienceNauticalItems);
                 AutoSuggestBoxItemSourceAdd(scienceNauticalItems, "ScienceNautical");
-
             }
             foreach (var scienceSurvivalItems in science.Survival.Science)
             {
                 scienceSurvivalItems.Picture = StringProcess.GetGameResourcePath(scienceSurvivalItems.Picture);
                 ScienceSurvivalData.Add(scienceSurvivalItems);
                 AutoSuggestBoxItemSourceAdd(scienceSurvivalItems, "ScienceSurvival");
-
             }
             foreach (var scienceFoodItems in science.Foods.Science)
             {
                 scienceFoodItems.Picture = StringProcess.GetGameResourcePath(scienceFoodItems.Picture);
                 ScienceFoodData.Add(scienceFoodItems);
                 AutoSuggestBoxItemSourceAdd(scienceFoodItems, "ScienceFood");
-
             }
             foreach (var scienceTechnologyItems in science.Technology.Science)
             {
                 scienceTechnologyItems.Picture = StringProcess.GetGameResourcePath(scienceTechnologyItems.Picture);
                 ScienceTechnologyData.Add(scienceTechnologyItems);
                 AutoSuggestBoxItemSourceAdd(scienceTechnologyItems, "ScienceTechnology");
-
             }
             foreach (var scienceFightItems in science.Fight.Science)
             {
                 scienceFightItems.Picture = StringProcess.GetGameResourcePath(scienceFightItems.Picture);
                 ScienceFightData.Add(scienceFightItems);
                 AutoSuggestBoxItemSourceAdd(scienceFightItems, "ScienceFight");
-
             }
             foreach (var scienceStructureItems in science.Structure.Science)
             {
                 scienceStructureItems.Picture = StringProcess.GetGameResourcePath(scienceStructureItems.Picture);
                 ScienceStructureData.Add(scienceStructureItems);
                 AutoSuggestBoxItemSourceAdd(scienceStructureItems, "ScienceStructure");
-
             }
             foreach (var scienceRefineItems in science.Refine.Science)
             {
                 scienceRefineItems.Picture = StringProcess.GetGameResourcePath(scienceRefineItems.Picture);
                 ScienceRefineData.Add(scienceRefineItems);
                 AutoSuggestBoxItemSourceAdd(scienceRefineItems, "ScienceRefine");
-
             }
             foreach (var scienceMagicItems in science.Magic.Science)
             {
                 scienceMagicItems.Picture = StringProcess.GetGameResourcePath(scienceMagicItems.Picture);
                 ScienceMagicData.Add(scienceMagicItems);
                 AutoSuggestBoxItemSourceAdd(scienceMagicItems, "ScienceMagic");
-
             }
             foreach (var scienceDressItems in science.Dress.Science)
             {
                 scienceDressItems.Picture = StringProcess.GetGameResourcePath(scienceDressItems.Picture);
                 ScienceDressData.Add(scienceDressItems);
                 AutoSuggestBoxItemSourceAdd(scienceDressItems, "ScienceDress");
-
             }
             foreach (var scienceAncientItems in science.Ancient.Science)
             {
                 scienceAncientItems.Picture = StringProcess.GetGameResourcePath(scienceAncientItems.Picture);
                 ScienceAncientData.Add(scienceAncientItems);
                 AutoSuggestBoxItemSourceAdd(scienceAncientItems, "ScienceAncient");
-
             }
             foreach (var scienceBookItems in science.Book.Science)
             {
                 scienceBookItems.Picture = StringProcess.GetGameResourcePath(scienceBookItems.Picture);
                 ScienceBookData.Add(scienceBookItems);
                 AutoSuggestBoxItemSourceAdd(scienceBookItems, "ScienceBook");
-
             }
             foreach (var scienceShadowItems in science.Shadow.Science)
             {
                 scienceShadowItems.Picture = StringProcess.GetGameResourcePath(scienceShadowItems.Picture);
                 ScienceShadowData.Add(scienceShadowItems);
                 AutoSuggestBoxItemSourceAdd(scienceShadowItems, "ScienceShadow");
-
             }
             foreach (var scienceCritterItems in science.Critter.Science)
             {
                 scienceCritterItems.Picture = StringProcess.GetGameResourcePath(scienceCritterItems.Picture);
                 ScienceCritterData.Add(scienceCritterItems);
                 AutoSuggestBoxItemSourceAdd(scienceCritterItems, "ScienceCritter");
-
             }
             foreach (var scienceSculptItems in science.Sculpt.Science)
             {
                 scienceSculptItems.Picture = StringProcess.GetGameResourcePath(scienceSculptItems.Picture);
                 ScienceSculptData.Add(scienceSculptItems);
                 AutoSuggestBoxItemSourceAdd(scienceSculptItems, "ScienceSculpt");
-
             }
             foreach (var scienceCartographyItems in science.Cartography.Science)
             {
                 scienceCartographyItems.Picture = StringProcess.GetGameResourcePath(scienceCartographyItems.Picture);
                 ScienceCartographyData.Add(scienceCartographyItems);
                 AutoSuggestBoxItemSourceAdd(scienceCartographyItems, "ScienceCartography");
-
+            }
+            foreach (var scienceCelestialItems in science.Celestial.Science)
+            {
+                scienceCelestialItems.Picture = StringProcess.GetGameResourcePath(scienceCelestialItems.Picture);
+                ScienceCelestialData.Add(scienceCelestialItems);
+                AutoSuggestBoxItemSourceAdd(scienceCelestialItems, "ScienceCelestial");
             }
             foreach (var scienceOfferingsItems in science.Offerings.Science)
             {
                 scienceOfferingsItems.Picture = StringProcess.GetGameResourcePath(scienceOfferingsItems.Picture);
                 ScienceOfferingsData.Add(scienceOfferingsItems);
                 AutoSuggestBoxItemSourceAdd(scienceOfferingsItems, "ScienceOfferings");
-
             }
             foreach (var scienceVolcanoItems in science.Volcano.Science)
             {
                 scienceVolcanoItems.Picture = StringProcess.GetGameResourcePath(scienceVolcanoItems.Picture);
                 ScienceVolcanoData.Add(scienceVolcanoItems);
                 AutoSuggestBoxItemSourceAdd(scienceVolcanoItems, "ScienceVolcano");
-
             }
             #endregion
             #region 生物

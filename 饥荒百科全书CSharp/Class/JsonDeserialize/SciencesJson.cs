@@ -209,13 +209,22 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             Science = new List<Science>();
         }
     }
-
     
     public class Volcano
     {
         public List<Science> Science { get; set; }
 
         public Volcano()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class Celestial
+    {
+        public List<Science> Science { get; set; }
+
+        public Celestial()
         {
             Science = new List<Science>();
         }
@@ -242,6 +251,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public Cartography Cartography { get; set; }
         public Offerings Offerings { get; set; }
         public Volcano Volcano { get; set; }
+        public Celestial Celestial { get; set; }
 
         public ScienceRootObject()
         {
@@ -264,6 +274,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             Cartography = new Cartography();
             Offerings = new Offerings();
             Volcano = new Volcano();
+            Celestial = new Celestial();
         }
     }
 }

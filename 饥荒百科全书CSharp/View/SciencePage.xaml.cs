@@ -117,6 +117,9 @@ namespace 饥荒百科全书CSharp.View
                     case "ScienceCartography":
                         OnNavigatedToScienceDialog(Global.ScienceCartographyData, suggestBoxItemPicture);
                         break;
+                    case "ScienceCelestial":
+                        OnNavigatedToScienceDialog(Global.ScienceCelestialData, suggestBoxItemPicture);
+                        break;
                     case "ScienceOfferings":
                         OnNavigatedToScienceDialog(Global.ScienceOfferingsData, suggestBoxItemPicture);
                         break;
@@ -173,6 +176,7 @@ namespace 饥荒百科全书CSharp.View
                 CritterExpaner.Visibility = Visibility.Collapsed;
                 SculptExpander.Visibility = Visibility.Collapsed;
                 CartographyExpander.Visibility = Visibility.Collapsed;
+                CelestialExpander.Visibility = Visibility.Collapsed;
                 OfferingsExpander.Visibility = Visibility.Collapsed;
             }
             if (Global.GameVersion == 1)
@@ -205,6 +209,7 @@ namespace 饥荒百科全书CSharp.View
             CritterExpaner.DataContext = Global.ScienceCritterData;
             SculptExpander.DataContext = Global.ScienceSculptData;
             CartographyExpander.DataContext = Global.ScienceCartographyData;
+            CelestialExpander.DataContext = Global.ScienceCelestialData;
             OfferingsExpander.DataContext = Global.ScienceOfferingsData;
             VolcanoExpander.DataContext = Global.ScienceVolcanoData;
         }

@@ -3107,7 +3107,6 @@
         "Need1Value": 1,
         "Need2": "F_deerclops_eyeball",
         "Need2Value": 2,
-        "Need3Value": 1,
         "Unlock": [ "S_potter's_wheel" ],
         "UnlockBlueprint": "G_sketch",
         "Introduction": "需要把石砖放在陶艺转盘上。",
@@ -3121,7 +3120,6 @@
         "Need1Value": 1,
         "Need2": "S_thick_fur",
         "Need2Value": 2,
-        "Need3Value": 1,
         "Unlock": [ "S_potter's_wheel" ],
         "UnlockBlueprint": "G_sketch",
         "Introduction": "需要把大理石放在陶艺转盘上。",
@@ -3135,7 +3133,6 @@
         "Need1Value": 1,
         "Need2": "S_thick_fur",
         "Need2Value": 2,
-        "Need3Value": 1,
         "Unlock": [ "S_potter's_wheel" ],
         "UnlockBlueprint": "G_sketch",
         "Introduction": "需要把石砖放在陶艺转盘上。",
@@ -3149,7 +3146,6 @@
         "Need1Value": 1,
         "Need2": "G_down_feather",
         "Need2Value": 2,
-        "Need3Value": 5,
         "Unlock": [ "S_potter's_wheel" ],
         "UnlockBlueprint": "G_sketch",
         "Introduction": "需要把大理石放在陶艺转盘上。",
@@ -3163,7 +3159,6 @@
         "Need1Value": 1,
         "Need2": "G_down_feather",
         "Need2Value": 2,
-        "Need3Value": 5,
         "Unlock": [ "S_potter's_wheel" ],
         "UnlockBlueprint": "G_sketch",
         "Introduction": "需要把石砖放在陶艺转盘上。",
@@ -3177,7 +3172,6 @@
         "Need1Value": 1,
         "Need2": "G_scales",
         "Need2Value": 2,
-        "Need3Value": 1,
         "Unlock": [ "S_potter's_wheel" ],
         "UnlockBlueprint": "G_sketch",
         "Introduction": "需要把大理石放在陶艺转盘上。",
@@ -3191,11 +3185,62 @@
         "Need1Value": 1,
         "Need2": "G_scales",
         "Need2Value": 2,
-        "Need3Value": 1,
         "Unlock": [ "S_potter's_wheel" ],
         "UnlockBlueprint": "G_sketch",
         "Introduction": "需要把石砖放在陶艺转盘上。",
         "Console": "chesspiece_dragonfly_stone"
+      },
+      {
+        "Picture": "S_hound_figure_marble_build",
+        "Name": "猎犬雕塑",
+        "EnName": "Hound Figure",
+        "Need1": "S_cut_stone",
+        "Need1Value": 1,
+        "Need2": "G_hound's_tooth",
+        "Need2Value": 1,
+        "Unlock": [ "S_potter's_wheel" ],
+        "UnlockBlueprint": "G_sketch",
+        "Introduction": "需要把大理石或石砖放在陶艺转盘上。",
+        "Console": "chesspiece_clayhound_marble"
+      },
+      {
+        "Picture": "S_hound_figure_stone_build",
+        "Name": "猎犬雕塑",
+        "EnName": "Hound Figure",
+        "Need1": "S_cut_stone",
+        "Need1Value": 1,
+        "Need2": "G_hound's_tooth",
+        "Need2Value": 1,
+        "Unlock": [ "S_potter's_wheel" ],
+        "UnlockBlueprint": "G_sketch",
+        "Introduction": "需要把大理石或石砖放在陶艺转盘上。",
+        "Console": "chesspiece_clayhound_stone"
+      },
+      {
+        "Picture": "S_varg_figure_marble_build",
+        "Name": "座狼雕塑",
+        "EnName": "Varg Figure",
+        "Need1": "S_cut_stone",
+        "Need1Value": 1,
+        "Need2": "G_hound's_tooth",
+        "Need2Value": 2,
+        "Unlock": [ "S_potter's_wheel" ],
+        "UnlockBlueprint": "G_sketch",
+        "Introduction": "需要把大理石或石砖放在陶艺转盘上。",
+        "Console": "chesspiece_claywarg_marble"
+      },
+      {
+        "Picture": "S_varg_figure_stone_build",
+        "Name": "座狼雕塑",
+        "EnName": "Varg Figure",
+        "Need1": "S_cut_stone",
+        "Need1Value": 1,
+        "Need2": "G_hound's_tooth",
+        "Need2Value": 2,
+        "Unlock": [ "S_potter's_wheel" ],
+        "UnlockBlueprint": "G_sketch",
+        "Introduction": "需要把大理石或石砖放在陶艺转盘上。",
+        "Console": "chesspiece_claywarg_stone"
       }
     ]
   },
@@ -3212,6 +3257,34 @@
         "Unlock": [ "S_cartographer's_desk" ],
         "Introduction": "共享玩家探索的地图。",
         "Console": "mapscroll"
+      }
+    ]
+  },
+  "Celestial": {
+    "Science": [
+      {
+        "Picture": "S_moon_rock_idol",
+        "Name": "月石神像",
+        "EnName": "Moon Rock Idol",
+        "Need1": "G_moon_rock",
+        "Need1Value": 1,
+        "Need2": "G_purple_gem",
+        "Need2Value": 1,
+        "Unlock": [ "G_celestial_orb" ],
+        "Introduction": "将月石神像提供给月体传送门可以重新选择人物，但是会把物品栏的东西全部丢在门口。游戏天数、地图、科技原型体和收养的小动物都将保留。",
+        "Console": "moonrockidol"
+      },
+      {
+        "Picture": "S_portal_paraphernalia",
+        "Name": "传送门用具",
+        "EnName": "Portal Paraphernalia",
+        "Need1": "S_boards",
+        "Need1Value": 1,
+        "Need2": "S_rope",
+        "Need2Value": 1,
+        "Unlock": [ "G_celestial_orb" ],
+        "Introduction": "使用传送门用具可以将华丽的大门升级为月体传送门。但是仅使用传送门用具是不够的，你还需要提供1个紫月石透镜和20个月岩石才能完成月体传送门的建造。",
+        "Console": "multiplayer_portal_moonrock_constr_plans"
       }
     ]
   },
@@ -3246,6 +3319,26 @@
         "Unlock": [ "S_varg_shrine_build" ],
         "Introduction": "吹响幸运哨子可以驯服周围最多5只猎犬（包括黏土猎犬）40秒，被驯服的猎犬会追随玩家，且不会攻击玩家，但仍然会攻击其他生物。总共可以使用10次",
         "Console": "houndwhistle"
+      },
+      {
+        "Picture": "S_hound_sketch",
+        "Name": "粘土猎犬雕塑草图",
+        "EnName": "Clay Hound Figure Sketch",
+        "Need1": "G_lucky_gold_nugget",
+        "Need1Value": 8,
+        "Unlock": [ "S_varg_shrine_build" ],
+        "Introduction": "携带粘土猎犬雕塑草图并将大理石或石砖放在陶艺转盘上即可制作猎犬雕塑。",
+        "Console": "chesspiece_clayhound_sketch"
+      },
+      {
+        "Picture": "S_varg_sketch",
+        "Name": "粘土座狼雕塑草图",
+        "EnName": "Clay Varg Figure Sketch",
+        "Need1": "G_lucky_gold_nugget",
+        "Need1Value": 16,
+        "Unlock": [ "S_varg_shrine_build" ],
+        "Introduction": "携带粘土座狼雕塑草图并将大理石或石砖放在陶艺转盘上即可制作座狼雕塑。",
+        "Console": "chesspiece_claywarg_sketch"
       },
       {
         "Picture": "S_lucky_fan",
