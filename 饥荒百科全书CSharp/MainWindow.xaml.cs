@@ -139,6 +139,9 @@ namespace 饥荒百科全书CSharp
             _visiTimer.Interval = 200;
             _visiTimer.Tick += VisiTimerEvent;
             _visiTimer.Start();
+            // 搜索文本框计时器
+            _searchTextBoxTimer.Interval = 100;
+            _searchTextBoxTimer.Tick += SearchTimerEvent;
             // 设置光标资源字典路径
             if (SeCheckBoxLavenderCursor.IsChecked == true)
             {

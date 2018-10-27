@@ -192,47 +192,68 @@ namespace 饥荒百科全书CSharp
 
         #region "右上角按钮"
         #region "搜索框"
+        // 搜索框实际开始搜索Timer
+        private readonly Timer _searchTextBoxTimer = new Timer();
+        // 搜索框实际开始搜索计数（5=0.5秒）
+        private double searchStart;
+
         /// <summary>
-        /// 搜索框内容改变
+        /// 搜索框计时器事件
         /// </summary>
-        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchTimerEvent(object sender, EventArgs e)
         {
-            // 显示清除按钮
-            if (string.IsNullOrEmpty(SearchTextBox.Text.Trim()))
+            searchStart += 1;
+            if (searchStart >= 5)
             {
-                SearchClearButton.Visibility = Visibility.Collapsed;
-                SearchPopup.IsOpen = false;
-            }
-            else
-            {
-                SearchClearButton.Visibility = Visibility.Visible;
-                // 搜索
-                Global.AutoSuggestBoxItem.Clear();
-                foreach (var item in Global.AutoSuggestBoxItemSource)
+                searchStart = 0;
+                _searchTextBoxTimer.Stop();
+                _searchTextBoxTimer.Enabled = false;
+                // 显示清除按钮
+                if (string.IsNullOrEmpty(SearchTextBox.Text.Trim()))
                 {
-                    Global.AutoSuggestBoxItem.Add(item);
-                }
-                var str = SearchTextBox.Text.Trim().ToLower();
-                if (string.IsNullOrEmpty(str)) return;
-                for (var i = Global.AutoSuggestBoxItem.Count - 1; i >= 0; i--)
-                {
-                    if (Global.AutoSuggestBoxItem[i].Name.ToLower().IndexOf(str, StringComparison.Ordinal) < 0 && Global.AutoSuggestBoxItem[i].EnName.ToLower().IndexOf(str, StringComparison.Ordinal) < 0)
-                    {
-                        Global.AutoSuggestBoxItem.Remove(Global.AutoSuggestBoxItem[i]);
-                    }
-                }
-                if (Global.AutoSuggestBoxItem.Count != 0)
-                {
-                    SearchItemsControl.DataContext = Global.AutoSuggestBoxItem;
-                    SearchScrollViewer.UpdateLayout();
-                    SearchScrollViewer.ScrollToHorizontalOffset(0);
-                    SearchPopup.IsOpen = true;
+                    SearchClearButton.Visibility = Visibility.Collapsed;
+                    SearchPopup.IsOpen = false;
                 }
                 else
                 {
-                    SearchPopup.IsOpen = false;
+                    SearchClearButton.Visibility = Visibility.Visible;
+                    // 搜索
+                    Global.AutoSuggestBoxItem.Clear();
+                    foreach (var item in Global.AutoSuggestBoxItemSource)
+                    {
+                        Global.AutoSuggestBoxItem.Add(item);
+                    }
+                    var str = SearchTextBox.Text.Trim().ToLower();
+                    if (string.IsNullOrEmpty(str)) return;
+                    for (var i = Global.AutoSuggestBoxItem.Count - 1; i >= 0; i--)
+                    {
+                        if (Global.AutoSuggestBoxItem[i].Name.ToLower().IndexOf(str, StringComparison.Ordinal) < 0 && Global.AutoSuggestBoxItem[i].EnName.ToLower().IndexOf(str, StringComparison.Ordinal) < 0)
+                        {
+                            Global.AutoSuggestBoxItem.Remove(Global.AutoSuggestBoxItem[i]);
+                        }
+                    }
+                    if (Global.AutoSuggestBoxItem.Count != 0)
+                    {
+                        SearchItemsControl.DataContext = Global.AutoSuggestBoxItem;
+                        SearchScrollViewer.UpdateLayout();
+                        SearchScrollViewer.ScrollToHorizontalOffset(0);
+                        SearchPopup.IsOpen = true;
+                    }
+                    else
+                    {
+                        SearchPopup.IsOpen = false;
+                    }
                 }
             }
+        }
+
+        /// <summary>
+        /// 搜索框改变时计时器启动
+        /// </summary>
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _searchTextBoxTimer.Enabled = true;
+            _searchTextBoxTimer.Start();
         }
 
         /// <summary>
