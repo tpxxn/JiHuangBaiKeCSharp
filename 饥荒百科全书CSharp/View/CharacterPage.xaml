@@ -11,7 +11,7 @@
     
     <Page.Resources>
         <DataTemplate x:Key="CharacterDataTemplate" DataType="jsonDeserialize:Character">
-            <Button Click="CharacterButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="CharacterButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="135" Height="210">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />

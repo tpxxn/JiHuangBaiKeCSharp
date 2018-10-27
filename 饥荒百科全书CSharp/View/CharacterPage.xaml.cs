@@ -90,5 +90,17 @@ namespace 饥荒百科全书CSharp.View
         {
             UiSplitter.Height = ActualHeight;
         }
+
+        private void UIElement_OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            var button = (Button)sender;
+            ((HrlTextBlock)((Grid)button.Content).Children[1]).HrlTextBlock_OnMouseEnter(null, null);
+        }
+
+        private void UIElement_OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            var button = (Button)sender;
+            ((HrlTextBlock)((Grid)button.Content).Children[1]).HrlTextBlock_OnMouseLeave(null, null);
+        }
     }
 }

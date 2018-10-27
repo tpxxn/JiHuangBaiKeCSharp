@@ -11,7 +11,7 @@
 
     <Page.Resources>
         <DataTemplate x:Key="NaturalBiomesDataTemplate" DataType="jsonDeserialize:NatureBiomes">
-            <Button Click="NaturalBiomesButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="NaturalBiomesButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -23,7 +23,7 @@
             </Button>
         </DataTemplate>
         <DataTemplate x:Key="NaturalSmallPlantsDataTemplate" DataType="jsonDeserialize:NatureSmallPlant">
-            <Button Click="NaturalSmallPlantButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="NaturalSmallPlantButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -35,7 +35,7 @@
             </Button>
         </DataTemplate>
         <DataTemplate x:Key="NaturalTreesDataTemplate" DataType="jsonDeserialize:NatureTree">
-            <Button Click="NaturalTreeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="NaturalTreeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -47,7 +47,7 @@
             </Button>
         </DataTemplate>
         <DataTemplate x:Key="CreatureNestDataTemplate" DataType="jsonDeserialize:NatureCreatureNest">
-            <Button Click="NaturalCreatureNestButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="NaturalCreatureNestButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -59,7 +59,7 @@
             </Button>
         </DataTemplate>
         <DataTemplate x:Key="InanimateDataTemplate" DataType="jsonDeserialize:NatureInanimate">
-            <Button Click="NaturalInanimateButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="NaturalInanimateButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="100" Height="100">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />

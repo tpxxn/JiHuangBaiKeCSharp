@@ -10,7 +10,7 @@
       Title="SkinsPage" SizeChanged="Page_SizeChanged">
     <Page.Resources>
         <DataTemplate x:Key="SkinsDataTemplate" DataType="jsonDeserialize:Skin">
-            <Button Click="SkinsButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="SkinsButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />

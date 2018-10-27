@@ -144,9 +144,9 @@ namespace 饥荒百科全书CSharp.MyUserControl
                     TranslateTransform.XProperty,
                 };
                 Storyboard.SetTargetProperty(widthMove, new PropertyPath("(0).(1)[3].(2)", propertyChain));//设置动画类型
-                widthMove.KeyFrames.Add(new EasingDoubleKeyFrame(5, KeyTime.FromTimeSpan(new TimeSpan(0, 0, 0))));//添加时间线
+                widthMove.KeyFrames.Add(new EasingDoubleKeyFrame(0, KeyTime.FromTimeSpan(new TimeSpan(0, 0, 0))));//添加时间线
                 widthMove.KeyFrames.Add(new EasingDoubleKeyFrame(HrlWidth - length - 5, KeyTime.FromTimeSpan(new TimeSpan(0, 0, 0, 2))));//添加时间线
-                widthMove.KeyFrames.Add(new EasingDoubleKeyFrame(5, KeyTime.FromTimeSpan(new TimeSpan(0, 0, 0, 4))));//添加时间线
+                widthMove.KeyFrames.Add(new EasingDoubleKeyFrame(0, KeyTime.FromTimeSpan(new TimeSpan(0, 0, 0, 4))));//添加时间线
                 storyboard.Children.Add(widthMove);
             }
             storyboard.RepeatBehavior = RepeatBehavior.Forever;
@@ -158,7 +158,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
             InitializeComponent();
         }
 
-        private void HrlTextBlock_OnMouseEnter(object sender, MouseEventArgs e)
+        public void HrlTextBlock_OnMouseEnter(object sender, MouseEventArgs e)
         {
             if (NeedAnimation)
             {
@@ -166,7 +166,7 @@ namespace 饥荒百科全书CSharp.MyUserControl
             }
         }
 
-        private void HrlTextBlock_OnMouseLeave(object sender, MouseEventArgs e)
+        public void HrlTextBlock_OnMouseLeave(object sender, MouseEventArgs e)
         {
             if (NeedAnimation)
             {

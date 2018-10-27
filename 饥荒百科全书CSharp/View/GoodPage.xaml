@@ -12,7 +12,7 @@
 
     <Page.Resources>
         <DataTemplate x:Key="GoodMaterialDataTemplate" DataType="jsonDeserialize:GoodMaterial">
-            <Button Click="GoodMaterialButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodMaterialButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -23,9 +23,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-
         <DataTemplate x:Key="GoodEquipmentDataTemplate" DataType="jsonDeserialize:GoodEquipment">
-            <Button Click="GoodEquipmentButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodEquipmentButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -36,9 +35,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-
         <DataTemplate x:Key="GoodSaplingDataTemplate" DataType="jsonDeserialize:GoodSapling">
-            <Button Click="GoodSaplingButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodSaplingButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -49,9 +47,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-
         <DataTemplate x:Key="GoodCreaturesDataTemplate" DataType="jsonDeserialize:GoodCreatures">
-            <Button Click="GoodCreaturesButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodCreaturesButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -62,9 +59,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-
         <DataTemplate x:Key="GoodTurfDataTemplate" DataType="jsonDeserialize:GoodTurf">
-            <Button Click="GoodTurfButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodTurfButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -75,9 +71,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-
         <DataTemplate x:Key="GoodPetDataTemplate" DataType="jsonDeserialize:GoodPet">
-            <Button Click="GoodPetButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodPetButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -88,9 +83,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-
         <DataTemplate x:Key="GoodUnlockDataTemplate" DataType="jsonDeserialize:GoodUnlock">
-            <Button Click="GoodUnlockButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodUnlockButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -101,9 +95,8 @@
                 </Grid>
             </Button>
         </DataTemplate>
-
         <DataTemplate x:Key="GoodDataTemplate" DataType="jsonDeserialize:Good">
-            <Button Click="GoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="GoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />

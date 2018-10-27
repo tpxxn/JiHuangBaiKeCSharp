@@ -12,7 +12,7 @@
     
     <Page.Resources>
         <DataTemplate x:Key="FoodRecipeDataTemplate" DataType="jsonDeserialize:FoodRecipe2">
-            <Button Click="FoodRecipeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="FoodRecipeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -25,7 +25,7 @@
         </DataTemplate>
 
         <DataTemplate x:Key="FoodDataTemplate" DataType="jsonDeserialize:Food">
-            <Button Click="FoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False">
+            <Button Click="FoodButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="{StaticResource CursorLink}" Focusable="False" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave">
                 <Grid Margin="5" Width="80" Height="80">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
