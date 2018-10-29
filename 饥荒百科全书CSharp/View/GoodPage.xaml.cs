@@ -26,12 +26,12 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class GoodPage : Page
     {
-        private int _loadedTime;
+        //private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
         {
-            if (_loadedTime != 0) return;
-            _loadedTime++;
+            //if (_loadedTime != 0) return;
+            //_loadedTime++;
             if (Global.FontFamily != null)
             {
                 FontFamily = Global.FontFamily;

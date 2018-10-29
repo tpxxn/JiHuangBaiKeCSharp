@@ -27,12 +27,14 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class SkinsPage : Page
     {
-        private int _loadedTime;
+        //private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
         {
-            if (_loadedTime != 0) return;
-            _loadedTime++;
+            //if (_loadedTime != 0) return;
+            //_loadedTime++;
+            if (Global.GameVersion > 1)
+                return;
             if (Global.FontFamily != null)
             {
                 FontFamily = Global.FontFamily;

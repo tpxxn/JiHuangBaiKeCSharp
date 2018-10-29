@@ -99,7 +99,6 @@ namespace 饥荒百科全书CSharp.View.Details
         private static void Good_Jump_Click(object sender, RoutedEventArgs e)
         {
             var picturePath = Global.ButtonToPicButton((Button)sender).Source;
-            var rightFrame = Global.RightFrame;
             var shortName = StringProcess.GetFileName(picturePath);
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
@@ -110,12 +109,10 @@ namespace 饥荒百科全书CSharp.View.Details
                 switch (picHead)
                 {
                     case "S":
-                        Global.PageJump(4);
-                        rightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                        Global.PageJump(4, extraData);
                         return;
                     case "A":
-                        Global.PageJump(5);
-                        rightFrame.NavigationService.Navigate(new CreaturePage(), extraData);
+                        Global.PageJump(5, extraData);
                         return;
                 }
             }

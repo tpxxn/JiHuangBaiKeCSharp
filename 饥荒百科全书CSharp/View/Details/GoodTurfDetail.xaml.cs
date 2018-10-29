@@ -74,14 +74,12 @@ namespace 饥荒百科全书CSharp.View.Details
         private void Good_Jump_Click(object sender, RoutedEventArgs e)
         {
             var picturePath = Global.ButtonToPicButton((Button)sender).Source;
-            var rightFrame = Global.RightFrame;
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
             {
                 if (picturePath != suggestBoxItem.Picture) continue;
                 string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture }; ;
-                Global.PageJump(3);
-                rightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                Global.PageJump(3, extraData);
             }
         }
 

@@ -205,7 +205,6 @@ namespace 饥荒百科全书CSharp.View.Details
         private void Food_Jump_Click(object sender, RoutedEventArgs eventArgs)
         {
             var picturePath = Global.ButtonToPicButton((Button)sender).Source;
-            var rightFrame = Global.RightFrame;
             var shortName = StringProcess.GetFileName(picturePath);
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
@@ -216,7 +215,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 switch (picHead)
                 {
                     case "F_":
-                        rightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                        Global.PageJump(2, extraData);
                         return;
                     case "FC":
                         // ignore

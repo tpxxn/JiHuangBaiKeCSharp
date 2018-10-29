@@ -103,7 +103,6 @@ namespace 饥荒百科全书CSharp.View.Details
         private void Science_Jump_Click(object sender, RoutedEventArgs e)
         {
             var picturePath = Global.ButtonToPicButton((Button)sender).Source;
-            var rightFrame = Global.RightFrame;
             var shortName = StringProcess.GetFileName(picturePath);
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
@@ -114,15 +113,13 @@ namespace 饥荒百科全书CSharp.View.Details
                 switch (picHead)
                 {
                     case "F":
-                        Global.PageJump(2);
-                        rightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                        Global.PageJump(2, extraData);
                         return;
                     case "S":
-                        rightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                        Global.PageJump(4, extraData);
                         return;
                     case "G":
-                        Global.PageJump(7);
-                        rightFrame.NavigationService.Navigate(new GoodPage(), extraData);
+                        Global.PageJump(7, extraData);
                         return;
                 }
             }
@@ -131,14 +128,13 @@ namespace 饥荒百科全书CSharp.View.Details
         private void Science_CharacterJump_Click(object sender, RoutedEventArgs e)
         {
             var picturePath = _unlockCharcter;
-            var rightFrame = Global.RightFrame;
+            
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
             {
                 if (picturePath != suggestBoxItem.Picture) continue;
                 string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture }; ;
-                Global.PageJump(1);
-                rightFrame.NavigationService.Navigate(new CharacterPage(), extraData);
+                Global.PageJump(1, extraData);
             }
         }
 

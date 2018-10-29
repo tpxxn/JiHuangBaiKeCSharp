@@ -244,14 +244,12 @@ namespace 饥荒百科全书CSharp.View.Details
         private void DropBy_Jump_Click(object sender, RoutedEventArgs e)
         {
             var picturePath = Global.ButtonToPicButton((Button)sender).Source;
-            var rightFrame = Global.RightFrame;
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
             {
                 if (picturePath != suggestBoxItem.Picture) continue;
                 string[] extraData = { suggestBoxItem.SourcePath, suggestBoxItem.Picture }; ;
-                Global.PageJump(4);
-                rightFrame.NavigationService.Navigate(new CreaturePage(), extraData);
+                Global.PageJump(4, extraData);
             }
         }
 

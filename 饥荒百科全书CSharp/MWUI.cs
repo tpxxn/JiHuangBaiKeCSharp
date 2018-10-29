@@ -289,31 +289,31 @@ namespace 饥荒百科全书CSharp
             {
                 case "人物":
                     SidebarCharacter.IsChecked = true;
-                    RightFrame.NavigationService.Navigate(new CharacterPage(), extraData);
+                    RightFrame.NavigationService.Navigate(Global.PageManager[1], extraData);
                     break;
                 case "食物":
                     SidebarFood.IsChecked = true;
-                    RightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                    RightFrame.NavigationService.Navigate(Global.PageManager[2], extraData);
                     break;
                 case "科技":
                     SidebarScience.IsChecked = true;
-                    RightFrame.NavigationService.Navigate(new SciencePage(), extraData);
+                    RightFrame.NavigationService.Navigate(Global.PageManager[4], extraData);
                     break;
                 case "生物":
                     SidebarCreature.IsChecked = true;
-                    RightFrame.NavigationService.Navigate(new CreaturePage(), extraData);
+                    RightFrame.NavigationService.Navigate(Global.PageManager[5], extraData);
                     break;
                 case "自然":
                     SidebarNatural.IsChecked = true;
-                    RightFrame.NavigationService.Navigate(new NaturalPage(), extraData);
+                    RightFrame.NavigationService.Navigate(Global.PageManager[6], extraData);
                     break;
                 case "物品":
                     SidebarGoods.IsChecked = true;
-                    RightFrame.NavigationService.Navigate(new GoodPage(), extraData);
+                    RightFrame.NavigationService.Navigate(Global.PageManager[7], extraData);
                     break;
                 case "皮肤":
                     SidebarSkins.IsChecked = true;
-                    RightFrame.NavigationService.Navigate(new SkinsPage(), extraData);
+                    RightFrame.NavigationService.Navigate(Global.PageManager[10], extraData);
                     break;
             }
         }
@@ -326,12 +326,12 @@ namespace 饥荒百科全书CSharp
         private void UI_gameversion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!MwInit) return;
-            
             Global.GameVersion = UiGameversion.SelectedIndex;
             SidebarSkins.Visibility = Global.GameVersion > 1 ? Visibility.Collapsed : Visibility.Visible;
             // 设置AutoSuggestBox的数据源
             Global.SetAutoSuggestBoxItem();
-            RightFrame.Navigate(new Uri("../View/WelcomePage.xaml", UriKind.Relative));
+            Global.PageManagerInit();
+            RightFrame.Navigate(Global.PageManager[0]);
             SidebarWelcome.IsChecked = true;
             RegeditRw.RegWrite("GameVersion", UiGameversion.SelectedIndex);
         }
@@ -408,7 +408,7 @@ namespace 饥荒百科全书CSharp
             mainWindow.FontFamily = new FontFamily(textList[SeComboBoxFont.SelectedIndex]);
             ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontFamily = mainWindow.FontFamily;
             Global.FontFamily = mainWindow.FontFamily;
-            RightFrame.NavigationService.Navigate(new WelcomePage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[0]);
             SidebarWelcome.IsChecked = true;
             RegeditRw.RegWrite("MainWindowFont", textList[SeComboBoxFont.SelectedIndex]);
         }
@@ -422,7 +422,7 @@ namespace 饥荒百科全书CSharp
             mainWindow.FontWeight = SeCheckBoxFontWeight.IsChecked == true ? FontWeights.Bold : FontWeights.Normal;
             ((TextBlock)((VisualBrush)FindResource("HelpBrush")).Visual).FontWeight = mainWindow.FontWeight;
             Global.FontWeight = mainWindow.FontWeight;
-            RightFrame.NavigationService.Navigate(new WelcomePage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[0]);
             SidebarWelcome.IsChecked = true;
             RegeditRw.RegWrite("MainWindowFontWeight", SeCheckBoxFontWeight.IsChecked.ToString());
         }
@@ -718,55 +718,55 @@ namespace 饥荒百科全书CSharp
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new WelcomePage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[0]);
         }
         private void Sidebar_Character_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new CharacterPage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[1]);
         }
         private void Sidebar_Food_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new FoodPage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[2]);
         }
         private void Sidebar_Cooking_Simulator_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new CookingSimulatorPage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[3]);
         }
         private void Sidebar_Science_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new SciencePage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[4]);
         }
         private void Sidebar_Creature_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new CreaturePage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[5]);
         }
         private void Sidebar_Natural_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new NaturalPage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[6]);
         }
         private void Sidebar_Goods_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new GoodPage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[7]);
         }
         private void Sidebar_Skins_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new SkinsPage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[10]);
         }
         private void Sidebar_DedicatedServer_Click(object sender, RoutedEventArgs e)
         {
@@ -774,14 +774,14 @@ namespace 饥荒百科全书CSharp
             DedicatedServerFrame.Visibility = Visibility.Visible;
             if (DedicatedServerFrame.Content == null)
             {
-                DedicatedServerFrame.NavigationService.Navigate(new DedicatedServerPage());
+                DedicatedServerFrame.NavigationService.Navigate(Global.PageManager[9]);
             }
         }
         private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
-            RightFrame.NavigationService.Navigate(new SettingPage());
+            RightFrame.NavigationService.Navigate(Global.PageManager[8]);
         }
         #endregion
         #endregion

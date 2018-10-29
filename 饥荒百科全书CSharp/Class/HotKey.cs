@@ -108,7 +108,7 @@ namespace 饥荒百科全书CSharp.Class
                 // ReSharper disable once PossibleNullReferenceException
                 mainWindow.DedicatedServerFrame.Visibility = Visibility.Collapsed;
                 mainWindow.RightFrame.Visibility = Visibility.Visible;
-                mainWindow.RightFrame.NavigationService.Navigate(new SettingPage());
+                mainWindow.RightFrame.NavigationService.Navigate(Global.PageManager[8]);
                 mainWindow.SidebarSetting.IsChecked = true;
             }
             //消息挂钩只能连接一次!!

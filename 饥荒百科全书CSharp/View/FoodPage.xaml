@@ -50,7 +50,7 @@
                 </ScrollViewer>
             </Border>
         </Popup>
-        <Frame Grid.Column="0" x:Name="LeftFrame"/>
+        <Frame Grid.Column="0" x:Name="LeftFrame" NavigationUIVisibility="Hidden"/>
         <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{StaticResource CursorHorz}" Style="{DynamicResource GridSplitterStyle}" />
         <ScrollViewer x:Name="RightScrollViewer" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>

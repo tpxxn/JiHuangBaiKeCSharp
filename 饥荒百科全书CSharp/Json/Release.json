@@ -1,6 +1,24 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.7.7",
+      "Data": "2018年10月30日",
+      "UpdataContent": [
+        {
+          "Label": "修复",
+          "Content": "更新月石墙图片"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正白色猎犬雕像、座狼雕像的合成配方"
+        },
+        {
+          "Label": "修复",
+          "Content": "★修正切换页面时内存无限增大的问题"
+        }
+      ]
+    },
+    {
       "Version": "0.7.7.6",
       "Data": "2018年10月28日",
       "UpdataContent": [

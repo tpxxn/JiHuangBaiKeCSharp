@@ -25,12 +25,12 @@ namespace 饥荒百科全书CSharp.View
     /// </summary>
     public partial class CookingSimulatorPage : Page
     {
-        private int _loadedTime;
+        //private int _loadedTime;
 
         public void LoadCompleted(object sender, NavigationEventArgs e)
         {
-            if (_loadedTime != 0) return;
-            _loadedTime++;
+            //if (_loadedTime != 0) return;
+            //_loadedTime++;
             if (Global.FontFamily != null)
             {
                 FontFamily = Global.FontFamily;
@@ -1041,14 +1041,13 @@ namespace 饥荒百科全书CSharp.View
         {
             if (FoodResultImage.Source == null) return;
             var picturePath = _crockPotList[_foodIndex];
-            var rightFrame = Global.RightFrame;
+            
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
             {
                 if (picturePath != StringProcess.GetFileName(suggestBoxItem.Picture)) continue;
-                Global.PageJump(2);
                 var extraData = new[] { suggestBoxItem.SourcePath, suggestBoxItem.Picture };
-                rightFrame.NavigationService.Navigate(new FoodPage(), extraData);
+                Global.PageJump(2,extraData);
                 break;
             }
         }

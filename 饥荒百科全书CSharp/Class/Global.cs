@@ -16,6 +16,7 @@ using System.Windows.Media;
 using Newtonsoft.Json;
 using 饥荒百科全书CSharp.Class.JsonDeserialize;
 using 饥荒百科全书CSharp.MyUserControl;
+using 饥荒百科全书CSharp.View;
 using Application = System.Windows.Application;
 using Button = System.Windows.Controls.Button;
 using Clipboard = System.Windows.Clipboard;
@@ -60,6 +61,44 @@ namespace 饥荒百科全书CSharp.Class
         /// 测试模式
         /// </summary>
         public static bool TestMode { get; set; }
+
+        /// <summary>
+        /// <para>Page管理器 </para>
+        /// <para>WelcomePage 0 </para>
+        /// <para>CharacterPage 1 </para>
+        /// <para>FoodPage 2 </para>
+        /// <para>CookingSimulatorPage 3 </para>
+        /// <para>SciencePage 4 </para>
+        /// <para>CreaturePage 5 </para>
+        /// <para>NaturalPage 6 </para>
+        /// <para>GoodPage 7 </para>
+        /// <para>SettingPage 8 </para>
+        /// <para>DedicatedServerPage 9 </para>
+        /// <para>SkinsPage 10 </para>
+        /// </summary>
+        public static List<Page> PageManager = new List<Page>();
+
+        /// <summary>
+        /// Page管理器初始化
+        /// </summary>
+        public static void PageManagerInit()
+        {
+            PageManager.Clear();
+            PageManager.Add(new WelcomePage());
+            PageManager.Add(new CharacterPage());
+            PageManager.Add(new FoodPage());
+            PageManager.Add(new CookingSimulatorPage());
+            PageManager.Add(new SciencePage());
+            PageManager.Add(new CreaturePage());
+            PageManager.Add(new NaturalPage());
+            PageManager.Add(new GoodPage());
+            PageManager.Add(new SettingPage());
+            PageManager.Add(new DedicatedServerPage());
+            if (GameVersion <= 1)
+            {
+                PageManager.Add(new SkinsPage());
+            }
+        }
 
         /// <summary>
         /// MainPage需要保存在Global里额几个控件对象
@@ -166,8 +205,9 @@ namespace 饥荒百科全书CSharp.Class
         /// 页面跳转
         /// </summary>
         /// <param name="index">页面序号</param>
-        public static void PageJump(int index)
+        public static void PageJump(int index,string[] extraData)
         {
+            RightFrame.NavigationService.Navigate(PageManager[index], extraData);
             foreach (var radioButton in MainPageHamburgerButton)
             {
                 radioButton.IsChecked = false;
