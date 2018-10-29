@@ -58,6 +58,7 @@ namespace 饥荒百科全书CSharp.View
             }
             if (extraData == null)
             {
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new CreatureDetail(), Global.CreatureLandData[0]);
             }
             else
@@ -112,6 +113,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new CreatureDetail(), creature);
                 break;
             }
@@ -146,6 +148,7 @@ namespace 饥荒百科全书CSharp.View
         private void CreatureButton_Click(object sender, RoutedEventArgs e)
         {
             var creature = (Creature)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new CreatureDetail(), creature);
         }
 

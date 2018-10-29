@@ -58,6 +58,7 @@ namespace 饥荒百科全书CSharp.View
             }
             if (extraData == null)
             {
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), Global.GoodMaterialData[0]);
             }
             else
@@ -130,6 +131,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), good);
                 break;
             }
@@ -156,6 +158,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodEquipmentDetail(), good);
                 break;
             }
@@ -182,6 +185,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodSaplingDetail(), good);
                 break;
             }
@@ -208,6 +212,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodCreaturesDetail(), good);
                 break;
             }
@@ -234,6 +239,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodTurfDetail(), good);
                 break;
             }
@@ -260,6 +266,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodPetDetail(), good);
                 break;
             }
@@ -286,6 +293,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodUnlockDetail(), good);
                 break;
             }
@@ -312,6 +320,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new GoodDetail(), good);
                 break;
             }
@@ -360,48 +369,56 @@ namespace 饥荒百科全书CSharp.View
         private void GoodMaterialButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (GoodMaterial)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodMaterialDetail(), good);
         }
 
         private void GoodEquipmentButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (GoodEquipment)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodEquipmentDetail(), good);
         }
 
         private void GoodSaplingButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (GoodSapling)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodSaplingDetail(), good);
         }
 
         private void GoodCreaturesButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (GoodCreatures)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodCreaturesDetail(), good);
         }
 
         private void GoodTurfButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (GoodTurf)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodTurfDetail(), good);
         }
 
         private void GoodPetButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (GoodPet)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodPetDetail(), good);
         }
 
         private void GoodUnlockButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (GoodUnlock)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodUnlockDetail(), good);
         }
 
         private void GoodButton_Click(object sender, RoutedEventArgs e)
         {
             var good = (Good)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new GoodDetail(), good);
         }
 

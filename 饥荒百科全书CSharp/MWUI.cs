@@ -285,6 +285,10 @@ namespace 饥荒百科全书CSharp
         /// <param name="extraData">额外数据</param>
         private void AutoSuggestNavigate(string[] extraData)
         {
+            if (RightFrame.CanGoBack)
+            {
+                RightFrame.RemoveBackEntry();
+            }
             switch (extraData[2])
             {
                 case "人物":
@@ -714,58 +718,62 @@ namespace 饥荒百科全书CSharp
         #endregion
 
         #region "页面切换"
-        private void Sidebar_Welcome_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 导航前的准备
+        /// </summary>
+        private void NavigatePrepare()
         {
             DedicatedServerFrame.Visibility = Visibility.Collapsed;
             RightFrame.Visibility = Visibility.Visible;
+            if (RightFrame.CanGoBack)
+            {
+                RightFrame.RemoveBackEntry();
+            }
+        }
+
+        private void Sidebar_Welcome_Click(object sender, RoutedEventArgs e)
+        {
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[0]);
         }
         private void Sidebar_Character_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[1]);
         }
         private void Sidebar_Food_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[2]);
         }
         private void Sidebar_Cooking_Simulator_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[3]);
         }
         private void Sidebar_Science_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[4]);
         }
         private void Sidebar_Creature_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[5]);
         }
         private void Sidebar_Natural_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[6]);
         }
         private void Sidebar_Goods_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[7]);
         }
         private void Sidebar_Skins_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[10]);
         }
         private void Sidebar_DedicatedServer_Click(object sender, RoutedEventArgs e)
@@ -779,8 +787,7 @@ namespace 饥荒百科全书CSharp
         }
         private void Sidebar_Setting_Click(object sender, RoutedEventArgs e)
         {
-            DedicatedServerFrame.Visibility = Visibility.Collapsed;
-            RightFrame.Visibility = Visibility.Visible;
+            NavigatePrepare();
             RightFrame.NavigationService.Navigate(Global.PageManager[8]);
         }
         #endregion

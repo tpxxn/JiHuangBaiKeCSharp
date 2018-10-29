@@ -207,6 +207,10 @@ namespace 饥荒百科全书CSharp.Class
         /// <param name="index">页面序号</param>
         public static void PageJump(int index,string[] extraData)
         {
+            if (RightFrame.CanGoBack)
+            {
+                RightFrame.RemoveBackEntry();
+            }
             RightFrame.NavigationService.Navigate(PageManager[index], extraData);
             foreach (var radioButton in MainPageHamburgerButton)
             {

@@ -58,6 +58,7 @@ namespace 饥荒百科全书CSharp.View
             }
             if (extraData == null)
             {
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new ScienceDetail(), Global.ScienceToolData[0]);
             }
             else
@@ -151,6 +152,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new ScienceDetail(), science);
                 break;
             }
@@ -217,6 +219,7 @@ namespace 饥荒百科全书CSharp.View
         private void ScienceButton_Click(object sender, RoutedEventArgs e)
         {
             var science = (Science)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new ScienceDetail(), science);
         }
 

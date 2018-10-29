@@ -62,6 +62,7 @@ namespace 饥荒百科全书CSharp.View
             {
                 var character = itemsControlItem;
                 if (character == null || character.Picture != suggestBoxItemPicture) continue;
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new CharacterDetail(), character);
                 break;
             }
@@ -77,12 +78,14 @@ namespace 饥荒百科全书CSharp.View
         public void Deserialize()
         {
             CharacterItemsControl.DataContext = Global.CharacterData;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new CharacterDetail(), Global.CharacterData[0]);
         }
         
         private void CharacterButton_Click(object sender, RoutedEventArgs e)
         {
             var character = (Character)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new CharacterDetail(), character);
         }
 

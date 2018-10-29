@@ -59,6 +59,7 @@ namespace 饥荒百科全书CSharp.View
             }
             if (extraData == null)
             {
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), Global.FoodRecipeData[0]);
             }
             else
@@ -113,6 +114,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), food);
                 break;
             }
@@ -139,6 +141,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new FoodDetail(), food);
                 break;
             }
@@ -165,12 +168,14 @@ namespace 饥荒百科全书CSharp.View
         private void FoodRecipeButton_Click(object sender, RoutedEventArgs e)
         {
             var foodRecipe = (FoodRecipe2)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new FoodRecipeDetail(), foodRecipe);
         }
 
         private void FoodButton_Click(object sender, RoutedEventArgs e)
         {
             var food = (Food)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new FoodDetail(), food);
         }
 

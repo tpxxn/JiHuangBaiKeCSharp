@@ -58,6 +58,7 @@ namespace 饥荒百科全书CSharp.View
             }
             if (extraData == null)
             {
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), Global.NaturalBiomesData[0]);
             }
             else
@@ -106,6 +107,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), naturalBiomes);
                 break;
             }
@@ -132,6 +134,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new NaturalSmallPlantDetail(), naturalSmallPlant);
                 break;
             }
@@ -158,6 +161,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new NaturalTreesDetail(), naturalSmallPlant);
                 break;
             }
@@ -184,6 +188,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new NaturalCreatureNestDetail(), naturalCreatureNest);
                 break;
             }
@@ -210,6 +215,7 @@ namespace 饥荒百科全书CSharp.View
                     RightScrollViewer.ScrollToVerticalOffset(targetPosition.Y);
                     break;
                 }
+                if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
                 LeftFrame.NavigationService.Navigate(new NaturalInanimateDetail(), naturalInanimate);
                 break;
             }
@@ -234,30 +240,35 @@ namespace 饥荒百科全书CSharp.View
         private void NaturalBiomesButton_Click(object sender, RoutedEventArgs e)
         {
             var nature = (NatureBiomes)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new NaturalBiomesDetail(), nature);
         }
 
         private void NaturalSmallPlantButton_Click(object sender, RoutedEventArgs e)
         {
             var nature = (NatureSmallPlant)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new NaturalSmallPlantDetail(), nature);
         }
 
         private void NaturalTreeButton_Click(object sender, RoutedEventArgs e)
         {
             var nature = (NatureTree)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new NaturalTreesDetail(), nature);
         }
 
         private void NaturalCreatureNestButton_Click(object sender, RoutedEventArgs e)
         {
             var nature = (NatureCreatureNest)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new NaturalCreatureNestDetail(), nature);
         }
 
         private void NaturalInanimateButton_Click(object sender, RoutedEventArgs e)
         {
             var nature = (NatureInanimate)((Button)sender).DataContext;
+            if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new NaturalInanimateDetail(), nature);
         }
 
