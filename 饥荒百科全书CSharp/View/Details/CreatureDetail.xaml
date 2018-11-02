@@ -9,7 +9,7 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="CreatureDetail">
 
-    <ScrollViewer x:Name="CreatureLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False" Margin="0,0,0,-294">
+    <ScrollViewer x:Name="CreatureLeftScrollViewer" Template="{StaticResource MyScrollViewer}" Focusable="False">
         <Grid x:Name="CreaturesRootGrid" Margin="0,10,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
