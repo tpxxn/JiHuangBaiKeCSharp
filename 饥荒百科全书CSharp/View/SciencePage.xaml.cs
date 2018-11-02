@@ -100,6 +100,12 @@ namespace 饥荒百科全书CSharp.View
                     case "ScienceDress":
                         OnNavigatedToScienceDialog(Global.ScienceDressData, suggestBoxItemPicture);
                         break;
+                    case "ScienceCelestial":
+                        OnNavigatedToScienceDialog(Global.ScienceCelestialData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceMadScience":
+                        OnNavigatedToScienceDialog(Global.ScienceMadScienceData, suggestBoxItemPicture);
+                        break;
                     case "ScienceAncient":
                         OnNavigatedToScienceDialog(Global.ScienceAncientData, suggestBoxItemPicture);
                         break;
@@ -117,9 +123,6 @@ namespace 饥荒百科全书CSharp.View
                         break;
                     case "ScienceCartography":
                         OnNavigatedToScienceDialog(Global.ScienceCartographyData, suggestBoxItemPicture);
-                        break;
-                    case "ScienceCelestial":
-                        OnNavigatedToScienceDialog(Global.ScienceCelestialData, suggestBoxItemPicture);
                         break;
                     case "ScienceOfferings":
                         OnNavigatedToScienceDialog(Global.ScienceOfferingsData, suggestBoxItemPicture);
@@ -185,6 +188,8 @@ namespace 饥荒百科全书CSharp.View
             {
                 LightExpanderTextBolck.Text = "点燃";
                 DressExpanderTextBolck.Text = "服装";
+                CelestialExpanderTextBolck.Text = "天空";
+                MadScienceExpanderTextBolck.Text = "疯狂科学";
                 ShadowExpanderTextBolck.Text = "影子";
                 CritterExpanderTextBolck.Text = "小动物";
                 CartographyExpanderTextBolck.Text = "制图学";
@@ -205,13 +210,14 @@ namespace 饥荒百科全书CSharp.View
             RefineExpander.DataContext = Global.ScienceRefineData;
             MagicExpander.DataContext = Global.ScienceMagicData;
             DressExpander.DataContext = Global.ScienceDressData;
+            CelestialExpander.DataContext = Global.ScienceCelestialData;
+            MadScienceExpander.DataContext = Global.ScienceMadScienceData;
             AncientExpander.DataContext = Global.ScienceAncientData;
             BooksExpander.DataContext = Global.ScienceBookData;
             ShadowExpander.DataContext = Global.ScienceShadowData;
             CritterExpaner.DataContext = Global.ScienceCritterData;
             SculptExpander.DataContext = Global.ScienceSculptData;
             CartographyExpander.DataContext = Global.ScienceCartographyData;
-            CelestialExpander.DataContext = Global.ScienceCelestialData;
             OfferingsExpander.DataContext = Global.ScienceOfferingsData;
             VolcanoExpander.DataContext = Global.ScienceVolcanoData;
         }

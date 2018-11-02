@@ -276,6 +276,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dictionary\ButtonDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Dictionary\ComboBoxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -6620,6 +6624,35 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GameResources\Goods\G_celestial_orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_bat_decoration.png" />
+    <Resource Include="Resources\GameResources\Goods\G_crow_decoration.png" />
+    <Resource Include="Resources\GameResources\Goods\G_dangling_depth_dweller_decoration.png" />
+    <Resource Include="Resources\GameResources\Goods\G_ghost_decoration.png" />
+    <Resource Include="Resources\GameResources\Goods\G_spider_decoration.png" />
+    <Resource Include="Resources\GameResources\Goods\G_tentacle_decoration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_mad_scientist_lab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_brew_of_phobic_abatement.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_dram_of_psychic_fortitude.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_flask_of_sanguine_mixture.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sulfuric_crystals_of_lime.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_totally_normal_root.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ico_madscience.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_brew_of_phobic_abrogation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_canteen_of_sanguine_mixture.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sulfuric_crystals_of_saltpeter.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tumblerful_of_psychic_fortitude.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

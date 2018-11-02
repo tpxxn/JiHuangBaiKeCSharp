@@ -140,6 +140,26 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class Celestial
+    {
+        public List<Science> Science { get; set; }
+
+        public Celestial()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class MadScience
+    {
+        public List<Science> Science { get; set; }
+
+        public MadScience()
+        {
+            Science = new List<Science>();
+        }
+    }
+
     public class Ancient
     {
         public List<Science> Science { get; set; }
@@ -220,16 +240,6 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
-    public class Celestial
-    {
-        public List<Science> Science { get; set; }
-
-        public Celestial()
-        {
-            Science = new List<Science>();
-        }
-    }
-
     public class ScienceRootObject
     {
         public Tool Tool { get; set; }
@@ -243,6 +253,8 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public Refine Refine { get; set; }
         public Magic Magic { get; set; }
         public Dress Dress { get; set; }
+        public Celestial Celestial { get; set; }
+        public MadScience MadScience { get; set; }
         public Ancient Ancient { get; set; }
         public Book Book { get; set; }
         public Shadow Shadow { get; set; }
@@ -251,7 +263,6 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public Cartography Cartography { get; set; }
         public Offerings Offerings { get; set; }
         public Volcano Volcano { get; set; }
-        public Celestial Celestial { get; set; }
 
         public ScienceRootObject()
         {
@@ -266,6 +277,8 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             Refine = new Refine();
             Magic = new Magic();
             Dress = new Dress();
+            Celestial = new Celestial();
+            MadScience = new MadScience();
             Ancient = new Ancient();
             Book = new Book();
             Shadow = new Shadow();
@@ -274,7 +287,6 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             Cartography = new Cartography();
             Offerings = new Offerings();
             Volcano = new Volcano();
-            Celestial = new Celestial();
         }
     }
 }

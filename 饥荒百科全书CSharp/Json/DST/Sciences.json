@@ -841,6 +841,18 @@
   "Technology": {
     "Science": [
       {
+        "Picture": "S_mad_scientist_lab",
+        "Name": "疯狂科学家实验室",
+        "EnName": "Mad Scientist Lab",
+        "Need1": "S_electrical_doodad",
+        "Need1Value": 2,
+        "Need2": "S_cut_stone",
+        "Need2Value": 2,
+        "Introduction": "靠近后将暂时解锁玩家实验室科技，制作药水需在疯狂科学家实验旁进行。",
+        "ConsoleCommand": "c_spawn",
+        "Console": "madscience_lab"
+      },
+      {
         "Picture": "S_science_machine",
         "Name": "科学机器",
         "EnName": "Science Machine",
@@ -2462,6 +2474,164 @@
       }
     ]
   },
+  "Celestial": {
+    "Science": [
+      {
+        "Picture": "S_moon_rock_idol",
+        "Name": "月石神像",
+        "EnName": "Moon Rock Idol",
+        "Need1": "G_moon_rock",
+        "Need1Value": 1,
+        "Need2": "G_purple_gem",
+        "Need2Value": 1,
+        "Unlock": [ "G_celestial_orb" ],
+        "Introduction": "将月石神像提供给月体传送门可以重新选择人物，但是会把物品栏的东西全部丢在门口。游戏天数、地图、科技原型体和收养的小动物都将保留。",
+        "Console": "moonrockidol"
+      },
+      {
+        "Picture": "S_portal_paraphernalia",
+        "Name": "传送门用具",
+        "EnName": "Portal Paraphernalia",
+        "Need1": "S_boards",
+        "Need1Value": 1,
+        "Need2": "S_rope",
+        "Need2Value": 1,
+        "Unlock": [ "G_celestial_orb" ],
+        "Introduction": "使用传送门用具可以将华丽的大门升级为月体传送门。但是仅使用传送门用具是不够的，你还需要提供1个紫月石透镜和20个月岩石才能完成月体传送门的建造。",
+        "Console": "multiplayer_portal_moonrock_constr_plans"
+      }
+    ]
+  },
+  "MadScience": {
+    "Science": [
+      {
+        "Picture": "S_brew_of_phobic_abatement",
+        "Name": "勇气药水",
+        "EnName": "Brew of Phobic Abatement",
+        "Need1": "F_frog_legs",
+        "Need1Value": 1,
+        "Need2": "G_gold_nugget",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行恐惧实验有三分之二几率制作出勇气药水。万圣节砍树时有一定几率产生蝙蝠（动画效果），人物会吓一跳，并且降低精神，如果喝了勇气药水，那么可以 4 分钟不用惧怕该事件。",
+        "Console": "halloweenpotion_bravery_small"
+      },
+      {
+        "Picture": "S_brew_of_phobic_abrogation",
+        "Name": "无畏药水",
+        "EnName": "Brew of Phobic Abrogation",
+        "Need1": "F_frog_legs",
+        "Need1Value": 1,
+        "Need2": "G_gold_nugget",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行恐惧实验有三分之一几率制作出无畏药水。万圣节砍树时有一定几率产生蝙蝠（动画效果），人物会吓一跳，并且降低精神，如果喝了无畏药水，那么可以 6 分钟不用惧怕该事件。",
+        "Console": "halloweenpotion_bravery_large"
+      },
+      {
+        "Picture": "S_flask_of_sanguine_mixture",
+        "Name": "小瓶生命药水",
+        "EnName": "Flask of Sanguine Mixture",
+        "Need1": "A_mosquito",
+        "Need1Value": 1,
+        "Need2": "F_red_cap",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行血色实验有三分之二几率制作出小瓶生命药水。食用时瞬间恢复 8 点生命，然后每两秒恢复 1 点生命，持续恢复一分钟。",
+        "Console": "halloweenpotion_health_small"
+      },
+      {
+        "Picture": "S_canteen_of_sanguine_mixture",
+        "Name": "大瓶生命药水",
+        "EnName": "Canteen of Sanguine Mixture",
+        "Need1": "A_mosquito",
+        "Need1Value": 1,
+        "Need2": "F_red_cap",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行血色实验有三分之一几率制作出大瓶生命药水。食用时瞬间恢复 20 点生命，然后每两秒恢复 1 点生命，持续恢复一分钟。",
+        "Console": "halloweenpotion_health_large"
+      },
+      {
+        "Picture": "S_dram_of_psychic_fortitude",
+        "Name": "小杯精神药水",
+        "EnName": "Dram of Psychic Fortitude",
+        "Need1": "A_crow",
+        "Need1Value": 1,
+        "Need2": "G_dark_petals",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行精神实验有三分之二几率制作出小杯精神药水。食用时瞬间恢复 5 点精神，然后每两秒恢复 1 点精神，持续恢复一分钟。",
+        "Console": "halloweenpotion_sanity_small"
+      },
+      {
+        "Picture": "S_tumblerful_of_psychic_fortitude",
+        "Name": "大杯精神药水",
+        "EnName": "Tumblerful of Psychic Fortitude",
+        "Need1": "A_crow",
+        "Need1Value": 1,
+        "Need2": "G_dark_petals",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行精神实验有三分之一几率制作出大杯精神药水。食用时瞬间恢复 15 点精神，然后每两秒恢复 1 点精神，持续恢复一分钟。",
+        "Console": "halloweenpotion_sanity_large"
+      },
+      {
+        "Picture": "S_sulfuric_crystals_of_lime",
+        "Name": "石灰硫酸盐晶体",
+        "EnName": "Sulfuric Crystals of Lime",
+        "Need1": "G_charcoal",
+        "Need1Value": 1,
+        "Need2": "F_rotten_egg",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行化学实验有一半几率制作出石灰硫酸盐晶体。添加燃料火焰会产生红色粒子特效。",
+        "Console": "halloweenpotion_embers"
+      },
+      {
+        "Picture": "S_sulfuric_crystals_of_saltpeter",
+        "Name": "硝酸晶体",
+        "EnName": "Sulfuric Crystals of Saltpeter",
+        "Need1": "G_charcoal",
+        "Need1Value": 1,
+        "Need2": "F_rotten_egg",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -10,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行化学实验有一半几率制作出硝酸晶体。添加燃料火焰会产生黄色粒子特效。",
+        "Console": "halloweenpotion_sparks"
+      },
+      {
+        "Picture": "S_totally_normal_root",
+        "Name": "完全正常的树根",
+        "EnName": "Totally Normal Root",
+        "Need1": "F_batilisk_wing",
+        "Need1Value": 1,
+        "Need2": "G_living_log",
+        "Need2Value": 1,
+        "Need3": "G_sanity",
+        "Need3Value": -20,
+        "Unlock": [ "S_mad_scientist_lab" ],
+        "Introduction": "进行植物实验会制作出完全正常的树根。完全正常的树根可以种植，过一段时间长成完全正常的树，可以使用万圣节装饰进行装饰。",
+        "Console": "livingtree_root"
+      }
+    ]
+  },
   "Ancient": {
     "Science": [
       {
@@ -3257,34 +3427,6 @@
         "Unlock": [ "S_cartographer's_desk" ],
         "Introduction": "共享玩家探索的地图。",
         "Console": "mapscroll"
-      }
-    ]
-  },
-  "Celestial": {
-    "Science": [
-      {
-        "Picture": "S_moon_rock_idol",
-        "Name": "月石神像",
-        "EnName": "Moon Rock Idol",
-        "Need1": "G_moon_rock",
-        "Need1Value": 1,
-        "Need2": "G_purple_gem",
-        "Need2Value": 1,
-        "Unlock": [ "G_celestial_orb" ],
-        "Introduction": "将月石神像提供给月体传送门可以重新选择人物，但是会把物品栏的东西全部丢在门口。游戏天数、地图、科技原型体和收养的小动物都将保留。",
-        "Console": "moonrockidol"
-      },
-      {
-        "Picture": "S_portal_paraphernalia",
-        "Name": "传送门用具",
-        "EnName": "Portal Paraphernalia",
-        "Need1": "S_boards",
-        "Need1Value": 1,
-        "Need2": "S_rope",
-        "Need2Value": 1,
-        "Unlock": [ "G_celestial_orb" ],
-        "Introduction": "使用传送门用具可以将华丽的大门升级为月体传送门。但是仅使用传送门用具是不够的，你还需要提供1个紫月石透镜和20个月岩石才能完成月体传送门的建造。",
-        "Console": "multiplayer_portal_moonrock_constr_plans"
       }
     ]
   },

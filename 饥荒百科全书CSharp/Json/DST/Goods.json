@@ -3154,6 +3154,48 @@
         "EnName": "Lava Pepper",
         "Introduction": "万圣节糖果。食用时可恢复生命1点，精神2点，饥饿0点。",
         "Console": "halloweencandy_14"
+      },
+      {
+        "Picture": "G_ghost_decoration",
+        "Name": "幽灵饰品",
+        "EnName": "Ghost Decoration",
+        "Introduction": "万圣节饰品，给完全正常的树装饰。",
+        "Console": "halloween_ornament_1"
+      },
+      {
+        "Picture": "G_bat_decoration",
+        "Name": "蝙蝠饰品",
+        "EnName": "Bat Decoration",
+        "Introduction": "万圣节饰品，给完全正常的树装饰。",
+        "Console": "halloween_ornament_2"
+      },
+      {
+        "Picture": "G_spider_decoration",
+        "Name": "蜘蛛饰品",
+        "EnName": "Spider Decoration",
+        "Introduction": "万圣节饰品，给完全正常的树装饰。",
+        "Console": "halloween_ornament_3"
+      },
+      {
+        "Picture": "G_tentacle_decoration",
+        "Name": "触手饰品",
+        "EnName": "Tentacle Decoration",
+        "Introduction": "万圣节饰品，给完全正常的树装饰。",
+        "Console": "halloween_ornament_4"
+      },
+      {
+        "Picture": "G_dangling_depth_dweller_decoration",
+        "Name": "洞穴悬蛛饰品",
+        "EnName": "Dangling Depth Dweller Decoration",
+        "Introduction": "万圣节饰品，给完全正常的树装饰。",
+        "Console": "halloween_ornament_5"
+      },
+      {
+        "Picture": "G_crow_decoration",
+        "Name": "乌鸦饰品",
+        "EnName": "Crow Decoration",
+        "Introduction": "万圣节饰品，给完全正常的树装饰。",
+        "Console": "halloween_ornament_6"
       }
     ]
   },

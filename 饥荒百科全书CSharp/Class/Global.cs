@@ -255,7 +255,7 @@ namespace 饥荒百科全书CSharp.Class
             catch (Exception e)
             {
                 //if (dllName != "饥荒百科全书CSharp.resources")
-                    //MessageBox.Show("DLL未能正确加载，详细信息：\r\n" + e.Message + "\r\n" + dllName);
+                //MessageBox.Show("DLL未能正确加载，详细信息：\r\n" + e.Message + "\r\n" + dllName);
                 return null;
             }
         }
@@ -292,13 +292,14 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Science> ScienceRefineData = new List<Science>();
         public static readonly List<Science> ScienceMagicData = new List<Science>();
         public static readonly List<Science> ScienceDressData = new List<Science>();
+        public static readonly List<Science> ScienceCelestialData = new List<Science>();
+        public static readonly List<Science> ScienceMadScienceData = new List<Science>();
         public static readonly List<Science> ScienceAncientData = new List<Science>();
         public static readonly List<Science> ScienceBookData = new List<Science>();
         public static readonly List<Science> ScienceShadowData = new List<Science>();
         public static readonly List<Science> ScienceCritterData = new List<Science>();
         public static readonly List<Science> ScienceSculptData = new List<Science>();
         public static readonly List<Science> ScienceCartographyData = new List<Science>();
-        public static readonly List<Science> ScienceCelestialData = new List<Science>();
         public static readonly List<Science> ScienceOfferingsData = new List<Science>();
         public static readonly List<Science> ScienceVolcanoData = new List<Science>();
         public static readonly List<Creature> CreatureLandData = new List<Creature>();
@@ -373,13 +374,14 @@ namespace 饥荒百科全书CSharp.Class
             ScienceRefineData.Clear();
             ScienceMagicData.Clear();
             ScienceDressData.Clear();
+            ScienceCelestialData.Clear();
+            ScienceMadScienceData.Clear();
             ScienceAncientData.Clear();
             ScienceBookData.Clear();
             ScienceShadowData.Clear();
             ScienceCritterData.Clear();
             ScienceSculptData.Clear();
             ScienceCartographyData.Clear();
-            ScienceCelestialData.Clear();
             ScienceOfferingsData.Clear();
             ScienceVolcanoData.Clear();
             CreatureLandData.Clear();
@@ -549,6 +551,18 @@ namespace 饥荒百科全书CSharp.Class
                 ScienceDressData.Add(scienceDressItems);
                 AutoSuggestBoxItemSourceAdd(scienceDressItems, "ScienceDress");
             }
+            foreach (var scienceCelestialItems in science.Celestial.Science)
+            {
+                scienceCelestialItems.Picture = StringProcess.GetGameResourcePath(scienceCelestialItems.Picture);
+                ScienceCelestialData.Add(scienceCelestialItems);
+                AutoSuggestBoxItemSourceAdd(scienceCelestialItems, "ScienceCelestial");
+            }
+            foreach (var scienceMadScienceItems in science.MadScience.Science)
+            {
+                scienceMadScienceItems.Picture = StringProcess.GetGameResourcePath(scienceMadScienceItems.Picture);
+                ScienceMadScienceData.Add(scienceMadScienceItems);
+                AutoSuggestBoxItemSourceAdd(scienceMadScienceItems, "ScienceMadScience");
+            }
             foreach (var scienceAncientItems in science.Ancient.Science)
             {
                 scienceAncientItems.Picture = StringProcess.GetGameResourcePath(scienceAncientItems.Picture);
@@ -584,12 +598,6 @@ namespace 饥荒百科全书CSharp.Class
                 scienceCartographyItems.Picture = StringProcess.GetGameResourcePath(scienceCartographyItems.Picture);
                 ScienceCartographyData.Add(scienceCartographyItems);
                 AutoSuggestBoxItemSourceAdd(scienceCartographyItems, "ScienceCartography");
-            }
-            foreach (var scienceCelestialItems in science.Celestial.Science)
-            {
-                scienceCelestialItems.Picture = StringProcess.GetGameResourcePath(scienceCelestialItems.Picture);
-                ScienceCelestialData.Add(scienceCelestialItems);
-                AutoSuggestBoxItemSourceAdd(scienceCelestialItems, "ScienceCelestial");
             }
             foreach (var scienceOfferingsItems in science.Offerings.Science)
             {

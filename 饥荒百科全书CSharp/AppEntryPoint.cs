@@ -153,6 +153,12 @@ namespace 饥荒百科全书CSharp
                     new ResourceDictionary
                     {
                         Source = new Uri(
+                            "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/ButtonDictionary.xaml",
+                            UriKind.Absolute)
+                    },
+                    new ResourceDictionary
+                    {
+                        Source = new Uri(
                             "pack://application:,,,/饥荒百科全书CSharp;component/Dictionary/ComboBoxDictionary.xaml",
                             UriKind.Absolute)
                     },

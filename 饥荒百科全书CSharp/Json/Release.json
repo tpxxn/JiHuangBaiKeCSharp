@@ -1,6 +1,20 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.7.8",
+      "Data": "2018年11月2日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "增加 2018 Hallowed Nights 活动科技、物品"
+        },
+        {
+          "Label": "改进",
+          "Content": "控制台代码复制、在游戏控制台执行代码按钮样式修改"
+        }
+      ]
+    },
+    {
       "Version": "0.7.7.7",
       "Data": "2018年10月30日",
       "UpdataContent": [
