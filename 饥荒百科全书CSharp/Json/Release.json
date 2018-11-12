@@ -1,6 +1,16 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.7.9",
+      "Data": "2018年11月3日",
+      "UpdataContent": [
+        {
+          "Label": "修复",
+          "Content": "修正生物详情页显示不全的BUG"
+        }
+      ]
+    },
+    {
       "Version": "0.7.7.8",
       "Data": "2018年11月2日",
       "UpdataContent": [
