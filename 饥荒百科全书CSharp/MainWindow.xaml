@@ -186,8 +186,8 @@
                         </StackPanel>
                     </Border>
                 </Popup>
-                <TextBlock x:Name="UiGameversionTextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,0,255,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" d:IsLocked="True"/>
-                <ComboBox x:Name="UiGameversion" VerticalAlignment="Center" Width="110" Margin="0,0,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Right">
+                <TextBlock x:Name="UiGameversionTextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,0,275,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" d:IsLocked="True"/>
+                <ComboBox x:Name="UiGameversion" VerticalAlignment="Center" Width="130" Margin="0,0,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Right">
                     <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DST.PNG" Width="32" Height="32"  />
@@ -225,7 +225,7 @@
                         </StackPanel>
                     </ComboBoxItem>
                 </ComboBox>
-                <TextBox x:Name="SearchTextBox" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="250" Margin="0,0,350,0" Cursor="{StaticResource CursorText}"  Style="{StaticResource UI_search_Style}" TextChanged="SearchTextBox_TextChanged" FontSize="15" MaxLength="10"/>
+                <TextBox x:Name="SearchTextBox" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="250" Margin="0,0,370,0" Cursor="{StaticResource CursorText}"  Style="{StaticResource UI_search_Style}" TextChanged="SearchTextBox_TextChanged" FontSize="15" MaxLength="10"/>
                 <Popup x:Name="SearchPopup" PopupAnimation="Fade" Width="250" PlacementTarget="{Binding ElementName=SearchTextBox}" Placement="Bottom" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150" MaxHeight="500">
                     <Border BorderThickness="1" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
                         <ScrollViewer x:Name="SearchScrollViewer" Template="{StaticResource PopupScrollViewer}" >

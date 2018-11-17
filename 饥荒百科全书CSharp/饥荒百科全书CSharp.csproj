@@ -6660,6 +6660,10 @@
   <ItemGroup>
     <Resource Include="Resources\DLC_Hamlet.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Characters\C_warbucks.png" />
+    <Resource Include="Resources\GameResources\Characters\C_wilba.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
