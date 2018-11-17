@@ -1,0 +1,1418 @@
+﻿{
+  "Biomes": {
+    "NatureBiomes": [
+      {
+        "Picture": "N_beach",
+        "Name": "海滩",
+        "EnName": "Beach",
+        "Abundant": [
+          "N_palm_tree_1",
+          "N_sapling",
+          "N_grass_sw",
+          "G_flint",
+          "N_crabbit_den",
+          "N_sandy_pile",
+          "G_seashell"
+        ],
+        "Occasional": [
+          "G_rocky_turf",
+          "N_boulder_1",
+          "N_boulder_3",
+          "N_limpet_rock",
+          "N_wildbore_house"
+        ],
+        "Rare": [
+          "N_crate_1"
+        ],
+        "Introduction": "海滩是船难版常见的生物群落之一，它们一般有多种类型的资源。玩家进入世界(船难版)总会出生在海滩。晚上临近海洋的区域会被淹没，月圆之夜是潮汐最强的时候。"
+      },
+      {
+        "Picture": "N_jungle",
+        "Name": "热带雨林",
+        "EnName": "Jungle",
+        "Abundant": [
+          "N_jungle_tree_1",
+          "N_bamboo_patch",
+          "N_viney_bush",
+          "N_flower_1",
+          "A_fireflies",
+          "N_prime_ape_hut",
+          "A_spider"
+        ],
+        "Occasional": [
+          "N_berry_bush_2",
+          "N_boulder_2",
+          "N_wildbore_house",
+          "N_spider_den_3",
+          "N_blue_mushroom",
+          "N_green_mushroom",
+          "N_red_mushroom",
+          "A_snake",
+          "A_poison_snake",
+          "A_butterfly"
+        ],
+        "Rare": [
+          "N_boulder_1",
+          "G_rocks",
+          "G_flint"
+        ],
+        "Introduction": "热带雨林生物群落的生物、植物和资源都十分丰富，在这里要小心蛇和猿猴，它们十分令人讨厌。"
+      },
+      {
+        "Picture": "N_mangrove_bio",
+        "Name": "红树林",
+        "EnName": "Mangrove",
+        "Abundant": [
+          "N_mangrove_1",
+          "N_grass_sw"
+        ],
+        "Occasional": [
+          "N_shoal"
+        ],
+        "Rare": [
+          "A_water_beefalo"
+        ],
+        "Introduction": "这里虽然只能乘船通行，然而一般还是认为是一个岛屿，这里生活着水牛，草不会枯萎。"
+      },
+      {
+        "Picture": "N_magma_field",
+        "Name": "岩浆领域",
+        "EnName": "Magma Field",
+        "Abundant": [
+          "N_magma_pile",
+          "N_magma_pile_gold",
+          "N_krissure"
+        ],
+        "Occasional": [
+          "N_sapling",
+          "N_boulder_1",
+          "N_boulder_2"
+        ],
+        "Rare": [
+          "A_tallbird",
+          "N_tallbird_nest"
+        ],
+        "Introduction": "黑暗而崎岖的地形，有丰富的熔岩矿和熔岩金矿，偶尔会遇到高脚鸟。要小心压力火泉。"
+      },
+      {
+        "Picture": "N_meadow",
+        "Name": "草甸",
+        "EnName": "Meadow",
+        "Abundant": [
+          "N_grass_sw",
+          "N_flower_1",
+          "A_butterfly",
+          "F_sweet_potato"
+        ],
+        "Occasional": [
+          "G_rocks",
+          "G_flint",
+          "N_beehive",
+          "A_mandrake"
+        ],
+        "Rare": [
+          "N_red_mushroom"
+        ],
+        "Introduction": "富含草的生物群落，这里也是唯一能找到甘薯的地方，通常还有少量的蜂巢和曼德拉草。"
+      },
+      {
+        "Picture": "N_tidal_marsh",
+        "Name": "潮汐沼泽",
+        "EnName": "Tidal Marsh",
+        "Abundant": [
+          "N_reeds",
+          "A_flup",
+          "N_tidal_pool",
+          "N_poisonous_hole"
+        ],
+        "Occasional": [
+          "A_merm",
+          "N_merm_hut"
+        ],
+        "Rare": [
+          "A_fishermerm",
+          "N_fishermerm's_hut"
+        ],
+        "Introduction": "潮汐沼泽通常存在于单独的小岛，覆盖满了潮滩地皮。这里是鱼人/渔人和追踪性弹涂鱼的天堂，要小心毒洞哦！"
+      },
+      {
+        "Picture": "N_coral_reef_bio",
+        "Name": "珊瑚礁",
+        "EnName": "Coral Reef",
+        "Abundant": [
+          "N_coral_reef",
+          "N_shoal",
+          "A_dogfish"
+        ],
+        "Occasional": [
+          "N_seaweed",
+          "A_jellyfish"
+        ],
+        "Rare": [
+          "N_brainy_sprout"
+        ],
+        "Introduction": "珊瑚礁生物群落富含珊瑚礁，能找到浅滩和狗鱼，偶尔会有海藻和水母。运气好可以找到聪明芽。"
+      },
+      {
+        "Picture": "N_ocean_shallow",
+        "Name": "海洋(浅)",
+        "EnName": "Ocean(shallow)",
+        "Abundant": [
+          "N_seaweed"
+        ],
+        "Occasional": [
+          "A_jellyfish",
+          "N_wobster_den",
+          "F_mussel",
+          "A_dogfish"
+        ],
+        "Rare": [
+          "G_message_in_a_bottle"
+        ],
+        "Introduction": "淡蓝色的地形，没有海浪，围绕着所有岛屿，但是有可能会延伸。在这里可以发现贻贝、龙虾的巢穴、狗鱼和海藻。"
+      },
+      {
+        "Picture": "N_ocean_medium",
+        "Name": "海洋(中)",
+        "EnName": "Ocean(medium)",
+        "Abundant": [
+          "N_waves"
+        ],
+        "Occasional": [
+          "A_stink_ray",
+          "A_seagull"
+        ],
+        "Rare": [
+          "A_dogfish",
+          "N_shoal"
+        ],
+        "Introduction": "这里有许多的海浪，在这里可以发现恶臭魔鬼鱼、可疑的气泡、浅滩、旗鱼，温和季节会有海鸥出现。不会与岛屿接壤。"
+      },
+      {
+        "Picture": "N_ocean_deep",
+        "Name": "海洋(深)",
+        "EnName": "Ocean(deep)",
+        "Abundant": [
+          "N_waves"
+        ],
+        "Occasional": [
+          "A_bottenosed_ballphin",
+          "A_seagull"
+        ],
+        "Rare": [
+          "A_swordfish",
+          "N_shoal",
+          "G_rawling",
+          "N_volcano"
+        ],
+        "Introduction": "海洋深处，深色区域，只有这里有残骸和潮湿的坟墓，通常可以找到浅滩、海藻和狗鱼。不会与海洋(浅)和岛屿接壤。"
+      },
+      {
+        "Picture": "N_ship_graveyard",
+        "Name": "船舶墓地",
+        "EnName": "Ship Graveyard",
+        "Abundant": [],
+        "Occasional": [
+          "N_wreck_1",
+          "N_steamer_trunk",
+          "N_shoal"
+        ],
+        "Rare": [
+          "N_seaweed",
+          "N_watery_grave_1",
+          "A_swordfish"
+        ],
+        "Introduction": "残骸和潮湿的坟墓区域。"
+      },
+      {
+        "Picture": "N_volcano_bio",
+        "Name": "火山",
+        "EnName": "Volcano",
+        "Abundant": [
+          "N_coffee_plant",
+          "N_magma_pile",
+          "N_magma_pile_gold",
+          "N_charcoal_boulder",
+          "N_obsidian_boulder"
+        ],
+        "Occasional": [
+          "N_skeleton_1",
+          "N_elephant_cactus",
+          "N_krissure",
+          "N_dragoon_den"
+        ],
+        "Rare": [
+          "N_obsidian_workbench",
+          "N_woodlegs'_cage"
+        ],
+        "Introduction": "围绕火山口的生物群落，中间是含有大量熔岩的区域，靠近会过热。在这里可以找到大量咖啡树、熔岩矿熔岩金矿、黑曜岩和煤矿，也有不少象仙人掌和龙人巢，必定有一个火山祭坛和黑曜石工作台。如果没有解锁伍德莱格那么在这里会发现伍德莱格的笼子。"
+      }
+    ]
+  },
+  "SmallPlants": {
+    "NatureSmallPlant": [
+      {
+        "Picture": "N_flower_1",
+        "Pictures": [
+          "N_flower_|10"
+        ],
+        "Name": "花",
+        "EnName": "Flower",
+        "Resources": [
+          [ "G_petals|×1&" ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_butterfly",
+          "拾取时精神+5"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach",
+          "N_jungle"
+        ],
+        "Introduction": "花的用途多种多样。采集12朵花可以做花环，每次采集花都会增加5点精神，这在游戏前期十分有用。花还是产生蝴蝶的地方，捕捉的蝴蝶可以右键种植成花，这使得花可以重生。无家可归的蜜蜂也可以随着时间的推移产生新的花。许多花种在一起建立一个蝴蝶农场用以获取蝴蝶翅膀，也可以用来增加蜂蜜的产蜜速度。",
+        "Console": "flower"
+      },
+      {
+        "Picture": "N_evil_flower_1",
+        "Pictures": [
+          "N_evil_flower_|8"
+        ],
+        "Name": "恶魔之花",
+        "EnName": "Evil Flower",
+        "Resources": [
+          [ "G_dark_petals|×1&" ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_butterfly",
+          "拾取时精神-5"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "恶魔之花通常存在于传送机零件、完全正常的树和麦斯威尔之门附近。拾取恶魔之花会减少5点精神。恶魔之花同样可以产生蝴蝶，并且吸引蝴蝶与蜜蜂。",
+        "Console": "flower_evil"
+      },
+      {
+        "Picture": "N_planted_carrot",
+        "Name": "胡萝卜",
+        "EnName": "Carrot",
+        "Resources": [
+          [
+            "F_carrot|×1&"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_grasslands"
+        ],
+        "Introduction": "胡萝卜常见于草原，野生的胡萝卜不会重生，但是可以通过种子种植出来。",
+        "Console": "carrot_planted"
+      },
+      {
+        "Picture": "N_planted_sweet_potato",
+        "Name": "甘薯",
+        "EnName": "Sweet Potato",
+        "Resources": [
+          [
+            "F_sweet_potato|×1&"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_meadow"
+        ],
+        "Introduction": "甘薯只能在草甸地形找到，野生的甘薯不会重生，但是可以通过种子种植出来。",
+        "Console": "sweet_potato_planted"
+      },
+      {
+        "Picture": "N_sapling",
+        "Pictures": [
+          "N_sapling",
+          "N_sapling_empty"
+        ],
+        "Name": "树苗",
+        "EnName": "Sapling",
+        "Resources": [
+          [
+            "G_twigs|×1&",
+            "G_sapling|×1&Shovel"
+          ],
+          [
+            "G_sapling|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "树苗常见于海滩，它可以提供一个树枝。树苗可以移植，但是不能种植在方格地板、木质地板、卵石路、地毯地板、岩石草皮、沙地、洞穴石地上。不像草和浆果灌木丛，它不需要施肥，生长需要4天时间(冬天不会生长)。尽管叫树苗，但是永远不会长成树。在夏天树苗会枯萎，需要施肥或者在旁边建造雪球发射器防止这一情况的发生。在联机版里，开局两个季节之后树苗会患病，并且无法治愈。",
+        "Console": "sapling"
+      },
+      {
+        "Picture": "N_grass_sw",
+        "Pictures": [
+          "N_grass_sw",
+          "N_grass_empty_sw",
+          "N_grass_dead"
+        ],
+        "Name": "草",
+        "EnName": "Grass",
+        "Resources": [
+          [
+            "G_cut_grass_SW|×1&",
+            "G_grass_tuft_SW|×1&Shovel"
+          ],
+          [
+            "G_grass_tuft_SW|×1&Shovel"
+          ],
+          [
+            "G_grass_tuft_SW|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach",
+          "N_meadow"
+        ],
+        "Introduction": "草常见于海滩，它可以提供一个干草。草可以移植，但是不能种植在方格地板、木质地板、卵石路、地毯地板、岩石草皮、沙地、洞穴石地上。移植的草需要施肥(便便、鸟屎、便便篮)，生长需要3天时间(下雨会减少生长时间。",
+        "Console": "grass"
+      },
+      {
+        "Picture": "N_berry_bush_2",
+        "Pictures": [
+          "N_berry_bush_2",
+          "N_berry_bush_empty_2",
+          "N_berry_bush_dead_2"
+        ],
+        "Name": "浆果灌木丛",
+        "EnName": "Berry Bush",
+        "Resources": [
+          [
+            "F_berries|×1&",
+            "G_berry_bush_2|×1&"
+          ],
+          [
+            "G_berry_bush_2|×1&"
+          ],
+          [
+            "G_twigs|×2&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_gobbler",
+          "A_snake"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "浆果灌木丛常见于热带雨林，它可以提供一个浆果。浆果灌木丛可以移植，但是不能种植在方格地板、木质地板、卵石路、地毯地板、岩石草皮、沙地、洞穴石地上。移植的浆果灌木丛需要施肥(便便、鸟屎、便便篮)，生长需要3-5天时间(下雨会减少生长时间，冬天不会生长)。采摘浆果的时候会出现火鸡，如果不击杀或驱逐它，它就会把周围可以收获的浆果全部吃光！在夏天浆果灌木丛会枯萎，需要施肥或者在旁边建造雪球发射器防止这一情况的发生。注意！这种浆果灌木丛不能制作丛林帽！",
+        "Console": "berrybush2"
+      },
+      {
+        "Picture": "N_reeds",
+        "Pictures": [
+          "N_reeds",
+          "N_reeds_empty"
+        ],
+        "Name": "芦苇",
+        "EnName": "Reeds",
+        "Resources": [
+          [
+            "G_cut_reeds|×1&"
+          ],
+          [
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_tidal_marsh"
+        ],
+        "Introduction": "芦苇常见于潮汐沼泽，它可以提供一个割好的芦苇。芦苇不能移植。生长需要3天时间(冬天不会生长)。有一种芦苇陷阱：沼泽地里一大片芦苇，并且伴随着一大片的触手，十分危险。",
+        "Console": "reeds"
+      },
+      {
+        "Picture": "N_planted_mandrake",
+        "Name": "曼德拉草",
+        "EnName": "Mandrake",
+        "Resources": [
+          [
+            "F_mandrake|×1&"
+          ]
+        ],
+        "Ability": [
+          "在黄昏和夜晚捡起会跟随玩家"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_mosaic"
+        ],
+        "Introduction": "曼德拉草全图只有三只，可以在草甸地形发现它。在黄昏和夜晚捡起会跟随玩家，在白天捡起会直接死亡。",
+        "Console": "mandrake_planted"
+      },
+      {
+        "Picture": "N_plant",
+        "Name": "水草",
+        "EnName": "Plant",
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_tidal_marsh"
+        ],
+        "Introduction": "随着池塘的生成而生成2-4株，不能捡起，但是会被火烧，每到夏天就会长回来。",
+        "Console": "marsh_plant"
+      },
+      {
+        "Picture": "N_blue_mushroom",
+        "Pictures": [
+          "N_blue_mushroom",
+          "N_mushroom_inground",
+          "N_mushroom_picked"
+        ],
+        "Name": "蓝蘑菇",
+        "EnName": "Blue Mushroom",
+        "Resources": [
+          [
+            "F_blue_cap|×1&",
+            "F_blue_cap|×1&Shovel"
+          ],
+          [
+            "F_blue_cap|×1&",
+            "F_blue_cap|×1&Shovel"
+          ],
+          [
+            "F_blue_cap|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "蓝蘑菇夜晚才会长出来，也可以砍蓝色蘑菇树获取。蓝蘑菇炒烤蓝蘑菇，味道一定不错！",
+        "Console": "blue_mushroom"
+      },
+      {
+        "Picture": "N_green_mushroom",
+        "Pictures": [
+          "N_green_mushroom",
+          "N_mushroom_inground",
+          "N_mushroom_picked"
+        ],
+        "Name": "绿蘑菇",
+        "EnName": "Green Mushroom",
+        "Resources": [
+          [
+            "F_green_cap|×1&",
+            "F_green_cap|×1&Shovel"
+          ],
+          [
+            "F_green_cap|×1&",
+            "F_green_cap|×1&Shovel"
+          ],
+          [
+            "F_green_cap|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "绿蘑菇黄昏才会长出来，也可以砍绿色蘑菇树获取。直接食用降低50点精神，所以要烤了吃。",
+        "Console": "green_mushroom"
+      },
+      {
+        "Picture": "N_red_mushroom",
+        "Pictures": [
+          "N_red_mushroom",
+          "N_mushroom_inground",
+          "N_mushroom_picked"
+        ],
+        "Name": "红蘑菇",
+        "EnName": "Red Mushroom",
+        "Resources": [
+          [
+            "F_red_cap|×1&",
+            "F_red_cap|×1&Shovel"
+          ],
+          [
+            "F_red_cap|×1&",
+            "F_red_cap|×1&Shovel"
+          ],
+          [
+            "F_red_cap|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "红蘑菇白天才会长出来，也可以砍红色蘑菇树获取。放在地上可以间接地让怪物吃它而受到伤害。",
+        "Console": "red_mushroom"
+      },
+      {
+        "Picture": "N_bamboo_patch",
+        "Pictures": [
+          "N_bamboo_patch",
+          "N_bamboo_patch_empty",
+          "N_bamboo_patch_dead"
+        ],
+        "Name": "竹子",
+        "EnName": "Bamboo Patch",
+        "Resources": [
+          [
+            "G_bamboo_patch|×1&Machete",
+            "G_bamboo_root|×1&Shovel"
+          ],
+          [
+            "G_bamboo_root|×1&Shovel"
+          ],
+          [
+            "G_bamboo_root|×1&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "用砍刀砍可以得到竹子，可以移植，需要施肥。",
+        "Console": "bambootree"
+      },
+      {
+        "Picture": "N_viney_bush",
+        "Pictures": [
+          "N_viney_bush",
+          "N_viney_bush_empty",
+          "N_viney_bush_dead"
+        ],
+        "Name": "藤蔓丛",
+        "EnName": "Viney Bush",
+        "Resources": [
+          [
+            "G_vine|×1&Machete",
+            "G_viney_bush_root|×1&Shovel",
+            "G_snakeskin|×1(含有蛇穴的藤蔓从)&Shovel"
+          ],
+          [
+            "G_viney_bush_root|×1&Shovel",
+            "G_snakeskin|×1(含有蛇穴的藤蔓从)&Shovel"
+          ],
+          [
+            "G_viney_bush_root|×1&Shovel",
+            "G_snakeskin|×1(含有蛇穴的藤蔓从)&Shovel"
+          ]
+        ],
+        "ResourcesBurned": [
+          "G_ash|×1"
+        ],
+        "Ability": [
+          "A_snake",
+          "A_poison_snake"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "用砍刀砍可以得到藤蔓，生长需要4天时间。一些藤蔓丛会有蛇出没(有蛇的藤蔓丛会发生声音和周期性震动)。蛇会在黄昏离开藤蔓丛，整个晚上在外面游荡，并且在白天回来。每个藤蔓丛最多含有三条蛇，击杀后每90秒重新生成一条。可以移植，移植的藤蔓丛不会产生蛇。",
+        "Console": "bush_vine"
+      },
+      {
+        "Picture": "N_seaweed",
+        "Pictures": [
+          "N_seaweed",
+          "N_seaweed_empty"
+        ],
+        "Name": "海藻",
+        "EnName": "Seaweed",
+        "Resources": [
+          [
+            "F_seaweed|×1&",
+            "G_seaweed_stalk|×1&TrawlNet"
+          ],
+          [
+            "G_seaweed_stalk|×1&TrawlNet"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_ocean_shallow"
+        ],
+        "Introduction": "海藻可以在浅海中找到，有时候会成片出现。采集的海藻可以做一些食物。",
+        "Console": "seaweed_planted"
+      },
+      {
+        "Picture": "N_coffee_plant",
+        "Pictures": [
+          "N_coffee_plant",
+          "N_coffee_plant_empty",
+          "N_coffee_plant_dead"
+        ],
+        "Name": "咖啡树",
+        "EnName": "Coffee Plant",
+        "Resources": [
+          [
+            "F_coffee_beans|×1&",
+            "G_coffee_plant|×1&Shovel"
+          ],
+          [
+            "G_coffee_plant|×1&Shovel"
+          ],
+          [
+            "G_coffee_plant|×1&Shovel"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_volcano_bio"
+        ],
+        "Introduction": "咖啡树只生长在火山里，采摘可以得到一个咖啡豆，生长需要4-5天(不受下雨影响)。咖啡树可以移植，但是只能种在火山地皮上，移植的咖啡树生长只需要3-5天。给咖啡树施肥需要灰烬而不是便便。那些没有移植的咖啡树只会在干燥季节生长。咖啡树不会被火烧，不会被雷劈。",
+        "Console": "coffeebush"
+      },
+      {
+        "Picture": "N_elephant_cactus",
+        "Pictures": [
+          "N_elephant_cactus",
+          "N_elephant_cactus_dead",
+          "N_elephant_cactus_stump"
+        ],
+        "Name": "象仙人掌",
+        "EnName": "Elephant Cactus",
+        "Resources": [
+          [
+            "G_cactus_spike|×1&"
+          ],
+          [
+            "G_twigs|×2&Shovel"
+          ],
+          [
+            "G_elephant_cactus_stump|×1&Shovel"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_volcano_bio"
+        ],
+        "Introduction": "象仙人掌只生长在火山里，它们只在干燥季节活跃。靠近象仙人掌会受到20点AOE伤害，每次攻击象仙人掌，它将使攻击者受到10点伤害。穿着象仙人掌盔甲尽管可以免疫象仙人掌的AOE攻击，但是无法抵挡反击伤害。象仙人掌死亡后会掉落象仙人掌刺并且缩小，这时可以用铲子挖起移植，象仙人掌只能种植在岩浆地皮、灰色地皮和火山地皮上。象仙人掌不会被火烧。",
+        "Console": "elephantcactus_active"
+      }
+    ]
+  },
+  "Trees": {
+    "NatureTree": [
+      {
+        "Picture": "N_palm_tree_1",
+        "Pictures": [
+          "N_palm_tree_|3"
+        ],
+        "Name": "椰子树",
+        "EnName": "Palm Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_log|×1&",
+            "G_palm_leaf|×1&"
+          ],
+          [
+            "G_log|×2&",
+            "G_palm_leaf|×1&"
+          ],
+          [
+            "G_log|×2&",
+            "G_palm_leaf|×1&",
+            "F_coconut|×1&",
+            "F_coconut|×1(33%)&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "Ability": [
+          "A_palm_treeguard"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "椰子树通常可以在海滩找到。椰子树是椰子和木材的主要来源，可以被猪人随从砍伐。砍伐椰子树的次数为5(小)/10(中)/15(大)次。椰子树会随着时间变化在小、中、大这个生长周期中不断循环。一旦砍伐，树墩不会长成椰子树。第四天开始，每次砍伐椰子树都有1/75的几率产生椰树守卫(包括自己种的)。每次砍伐椰子树都有1%的几率砸下一个椰子造成20点伤害，掉落的椰子可以收集。",
+        "Console": [
+          "palmtree"
+        ]
+      },
+      {
+        "Picture": "N_jungle_tree_1",
+        "Pictures": [
+          "N_jungle_tree_|3"
+        ],
+        "Name": "丛林树",
+        "EnName": "Jungle Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_log|×1&"
+          ],
+          [
+            "G_log|×2&",
+            "G_jungle_tree_seed|×1&",
+            "F_egg|×1(50%)&"
+          ],
+          [
+            "G_log|×3&",
+            "G_jungle_tree_seed|×2&",
+            "F_egg|×1(25%)&",
+            "F_egg|×1(25%)&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "Ability": [
+          "A_snake",
+          "A_poison_snake"
+        ],
+        "IsRegenerate": true,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "丛林树只能在热带雨林找到，它们是迄今为止最大的树。每次砍伐丛林树都有50%的几率产生蛇。",
+        "Console": [
+          "jungletree"
+        ]
+      },
+      {
+        "Picture": "N_mangrove_1",
+        "Pictures": [
+          "N_mangrove_|3"
+        ],
+        "Name": "红树",
+        "EnName": "Mangrove",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_log|×1&",
+            "G_twigs|×1&"
+          ],
+          [
+            "G_log|×1&",
+            "G_twigs|×2&"
+          ],
+          [
+            "G_log|×2&",
+            "G_twigs|×3&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_mangrove_bio"
+        ],
+        "Introduction": "红树生长在红树林生物群落，只能坐船拜访它们。截至目前，没有种植红树的方法，但是只要没有完全摧毁它们，就会很快恢复。",
+        "Console": [
+          "mangrovetree"
+        ]
+      },
+      {
+        "Picture": "N_regular_jungle_tree",
+        "Name": "正常的丛林树",
+        "EnName": "Regular Jungle Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_living_log|×2&"
+          ]
+        ],
+        "ResourcesBurned": [
+          [
+            "G_charcoal|×1"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "船难版的完全正常的树。需要砍伐20次，可以获得两个活木，挖起树墩也可以获得一个活木。正常的丛林树周围通常有一些恶魔之花。",
+        "Console": [
+          "livingjungletree"
+        ]
+      },
+      {
+        "Picture": "N_burnt_ash_tree",
+        "Name": "烧焦的灰树",
+        "EnName": "Burnt Ash Tree",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "G_ash|×1&"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_volcano_bio"
+        ],
+        "Introduction": "生长在火山的树，砍伐后获得一个灰烬。",
+        "Console": [
+          "volcano_shrub"
+        ]
+      },
+      {
+        "Picture": "N_brainy_sprout",
+        "Name": "聪明芽",
+        "EnName": "Brainy Sprout",
+        "CutDownTools": "Axe",
+        "Resources": [
+          [
+            "F_brainy_matter|×1&",
+            "S_limestone|×1&Hammer"
+          ]
+        ],
+        "Ability": [
+          "+25精神/分",
+          "发光"
+        ],
+        "IsRegenerate": false,
+        "IsCombustible": false,
+        "Biomes": [
+          "N_coral_reef_bio"
+        ],
+        "Introduction": "聪明芽生长在珊瑚礁生物群落。采摘获得聪明豆，生长需要20天。如果没有采摘，在黄昏和夜晚会发光，发光的时候有25精神/分的光环存在。",
+        "Console": [
+          "coral_brain_rock"
+        ]
+      }
+    ]
+  },
+  "CreatureNests": {
+    "NatureCreatureNest": [
+      {
+        "Picture": "N_crabbit_den",
+        "Name": "兔蟹的窝",
+        "EnName": "Crabbit Den",
+        "Creature": [
+          [
+            "A_crabbit",
+            "A_beardling_sw"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "无|&Shovel"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "兔蟹的窝是生成兔蟹的场所，兔蟹会在黄昏或者受到惊吓的时候会一头扎在沙滩里。当一只兔蟹被捕或被杀害，另一只就会从洞里重生(重生时间2.5天)。用铲子挖一个兔蟹的窝可以破坏它，这将导致兔蟹不再重生。如果兔蟹晚上在外面，那么这只兔蟹将会睡着。",
+        "Console": [ "crabhole" ]
+      },
+      {
+        "Picture": "N_beehive",
+        "Name": "蜂巢",
+        "EnName": "Beehive",
+        "Health": [
+          200
+        ],
+        "Creature": [
+          [
+            "A_bee",
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_beach",
+          "N_jungle"
+        ],
+        "Introduction": "蜂巢住着蜜蜂，每30秒就生成一只蜜蜂，最多6只。蜜蜂会在白天离开蜂巢，黄昏回到蜂巢。在冬天，蜜蜂不会出来。如果蜜蜂被攻击或捕捉，那么蜂巢中的所有蜜蜂都会变成杀人蜂来攻击玩家，并且附近蜂巢的蜜蜂也会出动。如果蜂巢受到攻击，蜂巢内的蜜蜂会变成杀人蜂攻击玩家，而已经在外面的蜜蜂则不会受到影响。如果蜂巢着火，那么蜜蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "beehive"
+        ]
+      },
+      {
+        "Picture": "N_killer_bee_hive",
+        "Name": "杀人蜂巢",
+        "EnName": "Killer Bee Hive",
+        "Health": [
+          250
+        ],
+        "Creature": [
+          [
+            "A_killer_bee"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×4&Torch",
+            "F_honeycomb|×1&Hammer",
+            "F_honey|×3&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "杀人蜂巢住着杀人蜂，每20秒就生成一只杀人蜂，最多6只。杀人蜂整天待在杀人蜂巢内。但如果玩家离杀人蜂巢太近，那么就算是晚上或者冬天，杀人蜂也会立即出动。如果杀人蜂被攻击或捕捉，那么杀人蜂巢中的所有杀人蜂都会来攻击玩家，并且附近杀人蜂巢的杀人蜂也会出动。如果杀人蜂巢受到攻击，杀人蜂巢内的杀人蜂会来攻击玩家。如果杀人蜂巢着火，那么杀人蜂都会飞出来乱窜(因为找不到攻击目标)。",
+        "Console": [
+          "wasphive"
+        ]
+      },
+      {
+        "Picture": "N_spider_den_1",
+        "Pictures": [
+          "N_spider_den_|3"
+        ],
+        "Name": "蜘蛛巢",
+        "EnName": "Spider Den",
+        "Health": [
+          250,
+          500,
+          1000
+        ],
+        "Creature": [
+          [
+            "A_spider"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior"
+          ],
+          [
+            "A_spider",
+            "A_spider_warrior",
+            "A_spider_queen"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×2&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×4&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ],
+          [
+            "G_ash|×1&Torch",
+            "G_silk|×6&",
+            "G_spider_eggs|×1&",
+            "G_webber's_skull|×1(5%)(未解锁韦伯)&"
+          ]
+        ],
+        "Ability": [
+          [
+            "可成长"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "蜘蛛巢会产生蜘蛛、蜘蛛战士，它们会在黄昏出来，白天回巢。蜘蛛巢附近的粘蛛网会减速除了各类蜘蛛和韦伯以外的其它生物。站在粘蛛网上，蜘蛛巢内1/3的蜘蛛会出来巡逻，如果发现敌情剩下2/3的蜘蛛和蜘蛛战士会主动出击，否则回到巢内。如果站在粘蛛网上攻击蜘蛛，那么蜘蛛巢内的蜘蛛和蜘蛛战士会全部出击，这并不是一个明智的选择。蜘蛛巢的生长周期为：1升2：5-10天；2升3：5-10天；3升蜘蛛女王：12.5-25天，当蜘蛛女王许久没有遇到敌情，就会徘徊一阵然后变回1级蜘蛛巢。1级蜘蛛巢总共产生3只蜘蛛，2级蜘蛛巢总共产生6只蜘蛛(其中1只蜘蛛战士)，3级蜘蛛巢总共产生9只蜘蛛(其中3只蜘蛛战士)。",
+        "Console": [
+          "spiderden",
+          "spiderden_2",
+          "spiderden_3"
+        ]
+      },
+      {
+        "Picture": "N_tallbird_nest",
+        "Name": "高鸟巢穴",
+        "EnName": "Tallbird Nest",
+        "Creature": [
+          [
+            "A_tallbird"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "F_tallbird_egg|×1&"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_magma_field"
+        ],
+        "Introduction": "高鸟巢穴是产生高鸟的生物巢穴，并且高鸟也会把蛋下在这里。高鸟蛋会在游戏时间17.5小时后重生，高鸟会在2.5天后重生。如果玩家靠近高鸟巢穴，高鸟会追着玩家攻击。黄昏和夜晚的时候高鸟会睡觉，但是如果在附近停留一会儿高鸟依然会醒来然后追逐玩家。",
+        "Console": [
+          "tallbirdnest"
+        ]
+      },
+      {
+        "Picture": "N_wildbore_house",
+        "Name": "荒野小屋",
+        "EnName": "Wildbore House",
+        "Creature": [
+          [
+            "A_wildbore"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_bamboo_patch|×2&Torch",
+            "G_palm_leaf|×2&Torch",
+            "G_pig_skin|×1&Torch",
+            "G_bamboo_patch|×4&Hammer",
+            "G_palm_leaf|×3&Hammer",
+            "G_pig_skin|×2&Hammer"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "自然的荒野小屋一般在海滩附近。如果野猪被杀死，荒野小屋会在一段时间后产生一只新的野猪。在黄昏和夜晚荒野小屋会点亮，但是玩家靠近会熄灭灯光，直到玩家离开。荒野小屋可以被点燃，里面的野猪会立即跑出来，并且攻击玩家(即使还没有到刷新时间也会立即刷新出一只)。",
+        "Console": [ "wildborehouse" ]
+      },
+      {
+        "Picture": "N_ballphin_palace",
+        "Name": "海豚宫殿",
+        "EnName": "Ballphin Palace",
+        "Creature": [
+          [
+            "A_bottenosed_ballphin"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "S_limestone|×2&",
+            "F_seaweed|×2&"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_coral_reef_bio"
+        ],
+        "Introduction": "自然的海豚宫殿在珊瑚礁区域。黄昏的时候宽吻海豚会回到海豚宫殿睡觉(没有海豚宫殿的宽吻海豚会在晚上睡觉)。在黄昏和夜晚荒野小屋会点亮，玩家靠近也不会会熄灭灯光，可以在旁边一直待到白天。",
+        "Console": [
+          "ballphinhouse"
+        ]
+      },
+      {
+        "Picture": "N_mussel_bed",
+        "Name": "贻贝床",
+        "EnName": "Mussel Bed",
+        "Creature": [
+          [
+            "F_mussel"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_ocean_shallow"
+        ],
+        "Introduction": "使用采贝器(至少放置一天)或者拖网可以采集贻贝，采集数量根据采贝器放置时间计算，可以得到1、3、6个贻贝，采集后贻贝床和采贝器均被消耗。",
+        "Console": [
+          "mussel_farm"
+        ]
+      },
+      {
+        "Picture": "N_wobster_den",
+        "Name": "龙虾的巢穴",
+        "EnName": "Wobster Den",
+        "Creature": [
+          [
+            "F_wobster"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_ocean_shallow"
+        ],
+        "Introduction": "龙虾的巢穴是自然产生龙虾的地方，龙虾会在黄昏出洞，白天回去。如果一只龙虾死亡，一天半后会有一只新的龙虾在龙虾的巢穴诞生。",
+        "Console": [ "lobsterhole" ]
+      },
+      {
+        "Picture": "N_shoal",
+        "Name": "浅滩",
+        "EnName": "Shoal",
+        "Creature": [
+          [
+            "A_sea_hound",
+            "F_tropical_fish"
+          ]
+        ],
+        "Ability": [
+          [
+            "可以钓热带鱼"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_ocean_shallow",
+          "N_coral_reef_bio",
+          "N_mangrove_bio"
+        ],
+        "Introduction": "浅滩会生成最多10只热带鱼，如果少于10只，则每半天就会产生一只新的热带鱼。钓鱼有20%几率钓到海狗。浅滩有活跃期和非活跃期，在正常情况下交替时间为1天，除非有船只经过或者有飓风和冰雹，这将立即驱散浅滩。",
+        "Console": [ "fishinhole" ]
+      },
+      {
+        "Picture": "N_prime_ape_hut",
+        "Name": "猿猴小屋",
+        "EnName": "Prime Ape Hut",
+        "Creature": [
+          [
+            "A_prime_ape"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_ash|×1&Torch",
+            "G_twigs|×5&Hammer",
+            "F_banana|×3&Hammer",
+            "G_manure|×4&Hammer",
+            "T_gnome_1|×1(1%)&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_jungle"
+        ],
+        "Introduction": "猿猴小屋是产生猴子的建筑，每个猿猴小屋最多产生4只猴子，猴子被杀死会在短时间内重生。如果攻击猿猴小屋，可能会有1到2只猿猴出来(使用粪便)攻击玩家。",
+        "Console": [
+          "primeapebarrel" 
+        ]
+      },
+      {
+        "Picture": "N_merm_hut",
+        "Name": "鱼人房",
+        "EnName": "Merm Hut",
+        "Creature": [
+          [
+            "A_merm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_Boards|×1&Torch",
+            "G_Rocks|×1&Torch",
+            "F_tropical_fish|×1&Torch",
+            "G_Boards|×1&Hammer",
+            "G_Rocks|×1&Hammer",
+            "F_tropical_fish|×1&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_tidal_marsh"
+        ],
+        "Introduction": "鱼人房是产生鱼人的自然建筑，不可以制造。鱼人房最多容纳4个鱼人，鱼人重生时间为4天。在白天，有一只鱼人通常会在外面，如果这个鱼人进入战斗状态或者鱼人房被锤，那么所有的鱼人都会出来战斗。黄昏的时候鱼人会离开鱼人房在附近徘徊。",
+        "Console": [ "mermhouse" ]
+      },
+      {
+        "Picture": "N_fishermerm's_hut",
+        "Name": "渔夫的小屋",
+        "EnName": "Fishermerm's Hut",
+        "Creature": [
+          [
+            "A_fishermerm"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_Boards|×1&Torch",
+            "G_Rocks|×1&Torch",
+            "F_tropical_fish|×1&Torch",
+            "G_Boards|×1&Hammer",
+            "G_Rocks|×1&Hammer",
+            "F_tropical_fish|×1&Hammer"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_tidal_marsh"
+        ],
+        "Introduction": "渔夫的小屋是产生渔人的自然建筑，不可以制造。渔夫的小屋最多容纳2个渔人，渔人重生时间为4天。在白天，有一只渔人通常会在外面，如果这个渔人进入战斗状态或者渔夫的小屋被锤，那么所有的渔人都会出来战斗。黄昏的时候渔人会离开渔夫的小屋在附近徘徊。",
+        "Console": [ "mermhouse_fisher" ]
+      },
+      {
+        "Picture": "N_tidal_pool",
+        "Name": "潮水池",
+        "EnName": "Tidal Pool",
+        "Creature": [
+          [
+            "F_tropical_fish"
+          ]
+        ],
+        "Ability": [
+          [
+            "可以钓热带鱼"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_tidal_marsh"
+        ],
+        "Introduction": "潮水池会产生最多10条热带鱼，如果少于10条，则160秒重生1条。渔人会从潮水池钓热带鱼，但会放在地上而不是吃掉。",
+        "Console": [ "tidalpool" ]
+      },
+      {
+        "Picture": "N_sharkitten_den",
+        "Name": "虎鲨的窝",
+        "EnName": "Sharkitten Den",
+        "Creature": [
+          [
+            "A_tiger_shark",
+            "A_sharkitten"
+          ]
+        ],
+        "IsRegenerate": false,
+        "IsDestroable": false,
+        "Biomes": [
+          "N_beach"
+        ],
+        "Introduction": "虎鲨的窝在季风季会产生小虎鲨，小虎鲨会在受到攻击或黄昏的时候回到虎鲨的窝。如果玩家离虎鲨的窝太近，虎鲨会攻击玩家。",
+        "Console": [
+          "sharkittenspawner"
+        ]
+      },
+      {
+        "Picture": "N_dragoon_den",
+        "Name": "龙人巢",
+        "EnName": "Dragoon Den",
+        "Creature": [
+          [
+            "A_dragoon"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_dragoon_heart|×1&Gunpowder",
+            "G_rocks|×3&Gunpowder",
+            "G_obsidian|×2&Gunpowder"
+          ]
+        ],
+        "Ability": [
+          [
+            "可以用爆炸物摧毁"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_volcano_bio"
+        ],
+        "Introduction": "龙人巢可以容纳3到4只龙骑士，龙骑士在白天每30秒离开一只，在黄昏返回龙人巢。龙骑士被杀死后2分钟重生。",
+        "Console": [ 
+          "dragoonden"
+        ]
+      },
+      {
+        "Picture": "N_dragoon_egg",
+        "Name": "龙人蛋",
+        "EnName": "Dragoon Egg",
+        "Creature": [
+          [
+            "A_dragoon"
+          ]
+        ],
+        "ResourcesDestroyed": [
+          [
+            "G_Flint|×1&Pickaxe",
+            "G_Rocks|×1&Pickaxe"
+          ]
+        ],
+        "IsRegenerate": true,
+        "IsDestroable": true,
+        "Biomes": [
+          "N_grasslands",
+          "N_savanna"
+        ],
+        "Introduction": "龙人蛋是在干燥季节从火山喷发、或者使用熔岩法杖时从天而降的。直接命中会造成300点伤害，落入海洋会产生巨大的波浪，落在地上会摧毁建筑并使周围着火。砸在地上时有50%概率形成熔岩池，25%的概率直接摧毁，剩下25%的概率会完好无损，进而在120秒后孵化成龙骑士，如果在这期间开采龙人蛋可以防止其孵化出龙骑士(火药等爆炸可以摧毁)。",
+        "Console": [ "dragoonegg" ]
+      }
+    ] 
+  } 
+}

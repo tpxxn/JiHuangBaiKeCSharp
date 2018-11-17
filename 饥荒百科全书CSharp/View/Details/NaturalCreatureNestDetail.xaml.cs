@@ -571,7 +571,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 Source = StringProcess.GetGameResourcePath("G_jet_feather")
             };
             stackPanelP5.Children.Add(picButtonP54);
-            if (Global.GameVersion < 2)
+            if (Global.GameVersion <= 1)
             {
                 var picButtonP55 = new PicButton
                 {
@@ -610,7 +610,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 Source = StringProcess.GetGameResourcePath("A_crow")
             };
             stackPanelP2.Children.Add(picButtonP23);
-            if (Global.GameVersion < 2)
+            if (Global.GameVersion <= 1)
             {
                 var picButtonP24 = new PicButton
                 {

@@ -331,6 +331,7 @@ namespace 饥荒百科全书CSharp
         {
             if (!MwInit) return;
             Global.GameVersion = UiGameversion.SelectedIndex;
+            // 联机版显示皮肤
             SidebarSkins.Visibility = Global.GameVersion > 1 ? Visibility.Collapsed : Visibility.Visible;
             // 设置AutoSuggestBox的数据源
             Global.SetAutoSuggestBoxItem();

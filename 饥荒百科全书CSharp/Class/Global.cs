@@ -143,7 +143,13 @@ namespace 饥荒百科全书CSharp.Class
         #region 游戏版本
 
         /// <summary>
-        /// 游戏版本
+        /// <para>游戏版本： </para>
+        /// <para>0：DST </para>
+        /// <para>1：Tencent</para>
+        /// <para>2：DS</para>
+        /// <para>3：ROG</para>
+        /// <para>4：Shipwrecked</para>
+        /// <para>5：Hamlet</para>
         /// </summary>
         public static double GameVersion { get; set; }
 
@@ -152,7 +158,7 @@ namespace 饥荒百科全书CSharp.Class
         /// </summary>
         public static string[] BuiltInGameVersionJsonFolder =
         {
-            "DST", "Tencent", "DS", "ROG", "Shipwrecked"
+            "DST", "Tencent", "DS", "ROG", "Shipwrecked", "Hamlet"
         };
 
         #endregion

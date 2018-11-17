@@ -218,6 +218,12 @@
                             <TextBlock Text="SW" VerticalAlignment="Center" Margin="10,0,0,0" />
                         </StackPanel>
                     </ComboBoxItem>
+                    <ComboBoxItem Focusable="False">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/DLC_Hamlet.PNG" Width="32" Height="32" />
+                            <TextBlock Text="Hamlet" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
                 </ComboBox>
                 <TextBox x:Name="SearchTextBox" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="250" Margin="0,0,350,0" Cursor="{StaticResource CursorText}"  Style="{StaticResource UI_search_Style}" TextChanged="SearchTextBox_TextChanged" FontSize="15" MaxLength="10"/>
                 <Popup x:Name="SearchPopup" PopupAnimation="Fade" Width="250" PlacementTarget="{Binding ElementName=SearchTextBox}" Placement="Bottom" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150" MaxHeight="500">

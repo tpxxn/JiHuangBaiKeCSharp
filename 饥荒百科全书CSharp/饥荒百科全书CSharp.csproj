@@ -603,6 +603,12 @@
     <Resource Include="Json\DedicatedServer\ServerConfig.json" />
     <Resource Include="Json\Release.json" />
     <Resource Include="Json\Skins.json" />
+    <Resource Include="Json\Hamlet\Characters.json" />
+    <Resource Include="Json\Hamlet\Creatures.json" />
+    <Resource Include="Json\Hamlet\Foods.json" />
+    <Resource Include="Json\Hamlet\Goods.json" />
+    <Resource Include="Json\Hamlet\Natural.json" />
+    <Resource Include="Json\Hamlet\Sciences.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -6650,6 +6656,9 @@
     <Resource Include="Resources\GameResources\Sciences\S_canteen_of_sanguine_mixture.png" />
     <Resource Include="Resources\GameResources\Sciences\S_sulfuric_crystals_of_saltpeter.png" />
     <Resource Include="Resources\GameResources\Sciences\S_tumblerful_of_psychic_fortitude.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DLC_Hamlet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
