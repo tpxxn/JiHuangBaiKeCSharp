@@ -187,7 +187,7 @@
                     </Border>
                 </Popup>
                 <TextBlock x:Name="UiGameversionTextBlock" TextWrapping="Wrap" Text="游戏版本：" Margin="0,0,275,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" d:IsLocked="True"/>
-                <ComboBox x:Name="UiGameversion" VerticalAlignment="Center" Width="130" Margin="0,0,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Right">
+                <ComboBox x:Name="UiGameversion" VerticalAlignment="Center" Width="130" Margin="0,0,140,0" Focusable="False" SelectionChanged="UI_gameversion_SelectionChanged" IsReadOnly="True" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Right" FontSize="15">
                     <ComboBoxItem Focusable="False">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/DLC_DST.PNG" Width="32" Height="32"  />
@@ -225,7 +225,7 @@
                         </StackPanel>
                     </ComboBoxItem>
                 </ComboBox>
-                <TextBox x:Name="SearchTextBox" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="250" Margin="0,0,370,0" Cursor="{StaticResource CursorText}"  Style="{StaticResource UI_search_Style}" TextChanged="SearchTextBox_TextChanged" FontSize="15" MaxLength="10"/>
+                <TextBox x:Name="SearchTextBox" HorizontalAlignment="Right" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="250" Margin="0,0,370,0" Cursor="{StaticResource CursorText}"  Style="{StaticResource UI_search_Style}" TextChanged="SearchTextBox_TextChanged" FontSize="20" MaxLength="10"/>
                 <Popup x:Name="SearchPopup" PopupAnimation="Fade" Width="250" PlacementTarget="{Binding ElementName=SearchTextBox}" Placement="Bottom" AllowsTransparency="True" StaysOpen="False" IsOpen="False" VerticalOffset="10" Margin="0,0,748,-150" MaxHeight="500">
                     <Border BorderThickness="1" BorderBrush="#FFB2ECED" Background="White" Cursor="{StaticResource CursorPointer}">
                         <ScrollViewer x:Name="SearchScrollViewer" Template="{StaticResource PopupScrollViewer}" >
@@ -239,7 +239,7 @@
                         </ScrollViewer>
                     </Border>
                 </Popup>
-                <Button x:Name="SearchClearButton" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,0,351,0" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" VerticalAlignment="Center"/>
+                <Button x:Name="SearchClearButton" Width="20" ToolTip="清除" Height="20" HorizontalAlignment="Right" Margin="0,0,371,0" Cursor="{StaticResource CursorLink}" Style="{StaticResource UI_btn_close_Style}" Click="UI_search_clear_Click" Visibility="Collapsed" Focusable="False" VerticalAlignment="Center"/>
             </Grid>
             <Frame x:Name="RightFrame" Grid.Row="1" Grid.Column="1" Margin="0,1,0,0" Background="#FEFFFFFF" NavigationUIVisibility="Hidden"/>
             <Frame x:Name="DedicatedServerFrame" Grid.Row="1" Grid.Column="1" Margin="0,1,0,0" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
