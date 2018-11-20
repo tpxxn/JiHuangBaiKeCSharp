@@ -170,6 +170,17 @@ namespace 饥荒百科全书CSharp.Class
                     System.Threading.Thread.Sleep(20);
                     keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYUP, 0);
                 }
+                // 小数点
+                else if (wParam == 46)
+                {
+                    actualKeyValue = 0x6E;
+                    //Debug.WriteLine("byte actualKeyValue: " + (char)actualKeyValue + " " + (byte)actualKeyValue);
+                    keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYDOWN, 0);
+                    keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYDOWN, 0);
+                    System.Threading.Thread.Sleep(20);
+                    keybd_event((byte)actualKeyValue, MapVirtualKey((uint)actualKeyValue, 0), KEYEVENTF_KEYUP, 0);
+                    keybd_event(VK_Shift, MapVirtualKey(VK_Shift, 0), KEYEVENTF_KEYUP, 0);
+                }
                 // 冒号
                 else if (wParam == 58)
                 {

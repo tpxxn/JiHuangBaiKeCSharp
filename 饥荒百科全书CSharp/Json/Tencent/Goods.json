@@ -2385,13 +2385,13 @@
           "F_morsel|×1（50%）",
           "G_saffron_feather|×1（50%）"
         ],
-        "Console": "Canary"
+        "Console": "canary"
       },
       {
         "Picture": "A_canary_volatile",
         "Name": "金丝雀(不稳定)",
         "EnName": "Canary(Volatile)",
-        "Console": "Canary"
+        "Console": "canary_poisoned"
       },
       {
         "Picture": "A_crow",

@@ -133,7 +133,7 @@ namespace 饥荒百科全书CSharp
             // 设置淡紫色透明光标
             SeCheckBoxLavenderCursor.IsChecked = mainWindowLavenderCursor == "True";
             // 版本初始化
-            UiVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version;
+            UiVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version + Global.VersionSuffix;
             // 窗口可视化计时器
             _visiTimer.Enabled = true;
             _visiTimer.Interval = 200;

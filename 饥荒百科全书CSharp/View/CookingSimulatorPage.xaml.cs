@@ -181,7 +181,8 @@ namespace 饥荒百科全书CSharp.View
         private double _csFtWeevoleCarapace;
         private double _csFtDorsalFin;
         private double _csFtInedible;
-        private double _csFtBug;
+        private double _csFtBeanBug;
+        private double _csFtSlugBug;
 
         private byte _foodIndex;
         private string _csFoodName = "";
@@ -795,10 +796,16 @@ namespace 饥荒百科全书CSharp.View
                     _csFtInedible += 1;
                     break;
                 case "F_bean_bugs":
-                    _csFtBug += 1;
+                    _csFtBeanBug += 1;
                     break;
                 case "F_cooked_bean_bugs":
-                    _csFtBug += 1;
+                    _csFtBeanBug += 1;
+                    break;
+                case "F_gummy_slug":
+                    _csFtSlugBug += 1;
+                    break;
+                case "F_cooked_gummy_slug":
+                    _csFtSlugBug += 1;
                     break;
                     #endregion
             }
@@ -868,10 +875,11 @@ namespace 饥荒百科全书CSharp.View
             _csFtWeevoleCarapace = 0;
             _csFtDorsalFin = 0;
             _csFtInedible = 0;
-            _csFtBug = 0;
-        #endregion
-        #region 属性统计
-        CS_RecipeStatistics(_csRecipe1);
+            _csFtBeanBug = 0;
+            _csFtSlugBug = 0;
+            #endregion
+            #region 属性统计
+            CS_RecipeStatistics(_csRecipe1);
             CS_RecipeStatistics(_csRecipe2);
             CS_RecipeStatistics(_csRecipe3);
             CS_RecipeStatistics(_csRecipe4);
@@ -883,7 +891,7 @@ namespace 饥荒百科全书CSharp.View
 
                 if (_csFtFilter >= 2 && _csFtSweetener >= 1 && _csFtIce >= 1)
                     CS_CrockPotListAddFood("F_iced_tea", 30);
-                if (_csFtBug == 3 && _csFtMeats >= 1)
+                if (_csFtBeanBug == 3 && _csFtMeats >= 0.5)
                     CS_CrockPotListAddFood("F_feijoada", 30);
                 if (_csFtFilter >= 2 && _csFtSweetener >= 1 && _csFtMeats == 0 && _csFtVegetables == 0 && _csFtInedible == 0)
                     CS_CrockPotListAddFood("F_tea", 25);
@@ -895,12 +903,16 @@ namespace 饥荒百科全书CSharp.View
                     CS_CrockPotListAddFood("F_asparagus_soup", 10);
                 if (_csFtFoliage >= 1 && _csFtMeats >= 1 && _csFtVegetables >= 2)
                     CS_CrockPotListAddFood("F_steamed_ham_sandwich", 5);
+                if (_csFtWeevoleCarapace == 2 && _csFtVegetables >= 0.5)
+                    CS_CrockPotListAddFood("F_hard_shell_tacos", 1);
+                if (_csFtSlugBug >= 1 && _csFtSweetener >= 1)
+                    CS_CrockPotListAddFood("F_gummy_cake", 1);
                 if (_csFtNettle >= 3)
                     CS_CrockPotListAddFood("F_nettle_rolls", 0);
             }
             // ------------------------SW------------------------
             // 便携式烹饪锅的四种食物
-            if (Global.GameVersion == 4)
+            if (Global.GameVersion == 4 || Global.GameVersion == 5)
             {
                 if (_csFtVegetables >= 0.5 && _csFtNeonQuattro == 1 && _csFtPierrotFish == 1 && _csFtPurpleGrouper == 1)
                     CS_CrockPotListAddFood("F_tropical_bouillabaisse", 40);
@@ -1096,7 +1108,7 @@ namespace 饥荒百科全书CSharp.View
         /// <returns>烹饪结果</returns>
         private static string CS_Food_Text(string source)
         {
-            return (from foodRecipe 
+            return (from foodRecipe
                     in Global.FoodRecipeData
                     where StringProcess.GetFileName(foodRecipe.Picture) == source
                     select foodRecipe.Name).FirstOrDefault();
@@ -1126,13 +1138,13 @@ namespace 饥荒百科全书CSharp.View
         {
             if (FoodResultImage.Source == null) return;
             var picturePath = _crockPotList[_foodIndex];
-            
+
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
             {
                 if (picturePath != StringProcess.GetFileName(suggestBoxItem.Picture)) continue;
                 var extraData = new[] { suggestBoxItem.SourcePath, suggestBoxItem.Picture };
-                Global.PageJump(2,extraData);
+                Global.PageJump(2, extraData);
                 break;
             }
         }

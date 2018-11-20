@@ -333,6 +333,14 @@ namespace 饥荒百科全书CSharp
             Global.GameVersion = UiGameversion.SelectedIndex;
             // 联机版显示皮肤
             SidebarSkins.Visibility = Global.GameVersion > 1 ? Visibility.Collapsed : Visibility.Visible;
+            // 哈姆雷特版隐藏
+            if (Global.GameVersion == 5)
+            {
+                SidebarScience.Visibility = Visibility.Collapsed;
+                SidebarCreature.Visibility = Visibility.Collapsed;
+                SidebarNatural.Visibility = Visibility.Collapsed;
+                SidebarGoods.Visibility = Visibility.Collapsed;
+            }
             // 设置AutoSuggestBox的数据源
             Global.SetAutoSuggestBoxItem();
             Global.PageManagerInit();

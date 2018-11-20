@@ -36,7 +36,7 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
         {
             InitializeComponent();
             Global.SettingRootFrame.NavigationService.LoadCompleted += LoadCompleted;
-            VersionTextBlock.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            VersionTextBlock.Text = Assembly.GetExecutingAssembly().GetName().Version + Global.VersionSuffix;
         }
 
         //官网

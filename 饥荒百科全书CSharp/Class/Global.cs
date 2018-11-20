@@ -26,6 +26,8 @@ namespace 饥荒百科全书CSharp.Class
 {
     public static class Global
     {
+        public static string VersionSuffix = "";
+
         public delegate void ConsoleSendKeyEventHandler(object sender, RoutedEventArgs e);
 
         public static ConsoleSendKeyEventHandler ConsoleSendKey = null;

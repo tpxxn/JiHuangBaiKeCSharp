@@ -1,6 +1,28 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.8.0",
+      "Data": "2018年11月21日",
+      "UpdataContent": [
+        {
+          "Label": "新增",
+          "Content": "哈姆雷特版的人物、食物、模拟"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正皱巴巴的包裹描述"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正金丝雀（不稳定）控制台代码"
+        },
+        {
+          "Label": "修复",
+          "Content": "修正控制台代码中含有小数点时自动输入错误的BUG"
+        }
+      ]
+    },
+    {
       "Version": "0.7.7.9",
       "Data": "2018年11月3日",
       "UpdataContent": [
