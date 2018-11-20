@@ -127,7 +127,7 @@ namespace 饥荒百科全书CSharp.View
         private string _csRecipe3 = "";
         private string _csRecipe4 = "";
         /// <summary>
-        /// 52种食材
+        /// 53种食材
         /// </summary>
         private double _csFtEggs;
         private double _csFtVegetables;
@@ -152,6 +152,7 @@ namespace 饥荒百科全书CSharp.View
         private double _csFtLichen;
         private double _csFtLimpets;
         private double _csFtMandrake;
+        private double _csFtFoliage;
         private double _csFtMeats;
         private double _csFtMoleworm;
         private double _csFtMonsterFoods;
@@ -640,6 +641,10 @@ namespace 饥荒百科全书CSharp.View
                     _csFtVegetables += 1;
                     _csFtRadish += 1;
                     break;
+                case "F_foliage":
+                    _csFtVegetables += 1;
+                    _csFtFoliage += 1;
+                    break;
                 #endregion
                 #region 水果
                 case "F_juicy_berries":
@@ -833,6 +838,7 @@ namespace 饥荒百科全书CSharp.View
             _csFtLichen = 0;
             _csFtLimpets = 0;
             _csFtMandrake = 0;
+            _csFtFoliage = 0;
             _csFtMeats = 0;
             _csFtMoleworm = 0;
             _csFtMonsterFoods = 0;
@@ -887,6 +893,8 @@ namespace 饥荒百科全书CSharp.View
                     CS_CrockPotListAddFood("F_spicy_vegetable_stinger", 15);
                 if (_csFtAsparagus >= 1 && _csFtVegetables >= 1.5)
                     CS_CrockPotListAddFood("F_asparagus_soup", 10);
+                if (_csFtFoliage >= 1 && _csFtMeats >= 1 && _csFtVegetables >= 2)
+                    CS_CrockPotListAddFood("F_steamed_ham_sandwich", 5);
                 if (_csFtNettle >= 3)
                     CS_CrockPotListAddFood("F_nettle_rolls", 0);
             }

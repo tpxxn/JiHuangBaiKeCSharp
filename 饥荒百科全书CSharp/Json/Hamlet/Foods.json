@@ -1390,6 +1390,29 @@
         "Console": "feijoada"
       },
       {
+        "Picture": "F_steamed_ham_sandwich",
+        "Name": "蒸火腿三明治",
+        "EnName": "Steamed Ham Sandwich",
+        "Health": 40,
+        "Hunger": 37.5,
+        "Sanity": 15,
+        "Perish": 6,
+        "Cooktime": 40,
+        "Priority": 5,
+        "NeedPicture1": "FC_Meats",
+        "Need1": "×1    ",
+        "NeedPictureOr": "FC_Vegetables",
+        "NeedOr": "×2",
+        "NeedPicture2": "F_foliage",
+        "Need2": "×1    ",
+        "Recommend1": "F_meat",
+        "Recommend2": "F_foliage",
+        "Recommend3": "F_foliage",
+        "Recommend4": "F_foliage",
+        "Introduce": "不要放树枝、芦笋和曼德拉草，否则因为优先度问题会做出其他食物。",
+        "Console": "steamedhamsandwich"
+      },
+      {
         "Picture": "F_wet_goop",
         "Name": "潮湿粘糊物",
         "EnName": "Wet Goop",
@@ -2228,6 +2251,19 @@
         "Console": "seaweed_dried"
       },
       {
+        "Picture": "F_mandrake",
+        "Name": "曼德拉草",
+        "EnName": "Mandrake",
+        "Health": 60,
+        "Hunger": 75,
+        "Sanity": 0,
+        "Perish": 10001,
+        "Attribute": "FC_Vegetables",
+        "AttributeValue": "×1",
+        "Introduce": "白天在草原(曼德拉平原)或洞穴拔起曼德拉草获得。",
+        "Console": "mandrake"
+      },
+      {
         "Picture": "F_asparagus",
         "Name": "芦笋",
         "EnName": "Asparagus",
@@ -2280,17 +2316,17 @@
         "Console": "radish_cooked"
       },
       {
-        "Picture": "F_mandrake",
-        "Name": "曼德拉草",
-        "EnName": "Mandrake",
-        "Health": 60,
-        "Hunger": 75,
+        "Picture": "F_foliage",
+        "Name": "蕨叶",
+        "EnName": "Foliage",
+        "Health": 1,
+        "Hunger": 0,
         "Sanity": 0,
-        "Perish": 10001,
+        "Perish": 6,
         "Attribute": "FC_Vegetables",
         "AttributeValue": "×1",
-        "Introduce": "白天在草原(曼德拉平原)或洞穴拔起曼德拉草获得。",
-        "Console": "mandrake"
+        "Introduce": "在蝙蝠地穴里采摘。",
+        "Console": "foliage"
       }
     ]
   },
