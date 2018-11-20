@@ -6719,6 +6719,23 @@
     <Resource Include="Resources\GameResources\Foods\F_gummy_cake.png" />
     <Resource Include="Resources\GameResources\Foods\F_gummy_slug.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Foods\F_aloe.png" />
+    <Resource Include="Resources\GameResources\Foods\F_aloe_seeds.png" />
+    <Resource Include="Resources\GameResources\Foods\F_clippings.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_aloe.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_dartfrog_legs.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_lotus_root.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_seed_pod.png" />
+    <Resource Include="Resources\GameResources\Foods\F_flytrap_stalk.png" />
+    <Resource Include="Resources\GameResources\Foods\F_fried_tuber.png" />
+    <Resource Include="Resources\GameResources\Foods\F_lotus_flower.png" />
+    <Resource Include="Resources\GameResources\Foods\F_magic_water.png" />
+    <Resource Include="Resources\GameResources\Foods\F_nectar.png" />
+    <Resource Include="Resources\GameResources\Foods\F_poison_dartfrog_legs.png" />
+    <Resource Include="Resources\GameResources\Foods\F_seed_pod.png" />
+    <Resource Include="Resources\GameResources\Foods\F_tuber.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
