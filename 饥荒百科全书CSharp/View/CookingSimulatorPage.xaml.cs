@@ -127,7 +127,7 @@ namespace 饥荒百科全书CSharp.View
         private string _csRecipe3 = "";
         private string _csRecipe4 = "";
         /// <summary>
-        /// 43种食材
+        /// 51种食材
         /// </summary>
         private double _csFtEggs;
         private double _csFtVegetables;
@@ -160,6 +160,8 @@ namespace 饥荒百科全书CSharp.View
         private double _csFtRoastedBirchnut;
         private double _csFtRoastedCoffeeBeans;
         private double _csFtSeaweed;
+        private double _csFtAsparagus;
+        private double _csFtRadish;
         private double _csFtSharkFin;
         private double _csFtSweetener;
         private double _csFtSweetPotato;
@@ -621,6 +623,22 @@ namespace 饥荒百科全书CSharp.View
                 case "F_dried_seaweed":
                     _csFtVegetables += 1;
                     break;
+                case "F_asparagus":
+                    _csFtVegetables += 1;
+                    _csFtAsparagus += 1;
+                    break;
+                case "F_cooked_asparagus":
+                    _csFtVegetables += 1;
+                    _csFtAsparagus += 1;
+                    break;
+                case "F_radish":
+                    _csFtVegetables += 1;
+                    _csFtRadish += 1;
+                    break;
+                case "F_cooked_radish":
+                    _csFtVegetables += 1;
+                    _csFtRadish += 1;
+                    break;
                 #endregion
                 #region 水果
                 case "F_juicy_berries":
@@ -816,6 +834,8 @@ namespace 饥荒百科全书CSharp.View
             _csFtRoastedBirchnut = 0;
             _csFtRoastedCoffeeBeans = 0;
             _csFtSeaweed = 0;
+            _csFtAsparagus = 0;
+            _csFtRadish = 0;
             _csFtSharkFin = 0;
             _csFtSweetener = 0;
             _csFtSweetPotato = 0;
@@ -853,6 +873,10 @@ namespace 饥荒百科全书CSharp.View
                     CS_CrockPotListAddFood("F_tea", 25);
                 if (_csFtSnakeBone >= 2 && _csFtMeats >= 2)
                     CS_CrockPotListAddFood("F_snake_bone_soup", 20);
+                if ((_csFtAsparagus >= 1 || _csFtRadish >= 1) && _csFtVegetables >= 2.5 && _csFtIce >= 1)
+                    CS_CrockPotListAddFood("F_spicy_vegetable_stinger", 15);
+                if (_csFtAsparagus >= 1 && _csFtVegetables >= 1.5)
+                    CS_CrockPotListAddFood("F_asparagus_soup", 10);
                 if (_csFtNettle >= 3)
                     CS_CrockPotListAddFood("F_nettle_rolls", 0);
             }

@@ -6687,6 +6687,20 @@
   <ItemGroup>
     <Resource Include="Resources\GameResources\Foods\FC_Inedible.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Foods\F_asparagus.png" />
+    <Resource Include="Resources\GameResources\Foods\F_asparagus_seeds.png" />
+    <Resource Include="Resources\GameResources\Foods\F_asparagus_soup.png" />
+    <Resource Include="Resources\GameResources\Foods\F_cooked_asparagus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Foods\F_cooked_radish.png" />
+    <Resource Include="Resources\GameResources\Foods\F_radish.png" />
+    <Resource Include="Resources\GameResources\Foods\F_radish_seeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Foods\F_spicy_vegetable_stinger.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
