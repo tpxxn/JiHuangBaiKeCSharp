@@ -172,6 +172,12 @@ namespace 饥荒百科全书CSharp.View
         private double _csFtNeonQuattro;
         private double _csFtPierrotFish;
         private double _csFtPurpleGrouper;
+        private double _csFtNettle;
+        private double _csFtSnakeBone;
+        private double _csFtFilter;
+        private double _csFtWeevoleCarapace;
+        private double _csFtDorsalFin;
+        private double _csFtInedible;
 
         private byte _foodIndex;
         private string _csFoodName = "";
@@ -742,11 +748,29 @@ namespace 饥荒百科全书CSharp.View
                     break;
                 case "F_twigs":
                     _csFtTwigs += 1;
+                    _csFtInedible += 1;
                     break;
                 case "F_moleworm":
                     _csFtMoleworm += 1;
                     break;
-                    #endregion
+                case "F_nettle":
+                    _csFtNettle += 1;
+                    break;
+                case "F_snake_bone":
+                    _csFtSnakeBone += 1;
+                    break;
+                case "F_orange_piko":
+                    _csFtFilter += 1;
+                    break;
+                case "F_weevole_carapace":
+                    _csFtWeevoleCarapace += 1;
+                    _csFtInedible += 1;
+                    break;
+                case "F_dorsal_fin":
+                    _csFtDorsalFin += 1;
+                    _csFtInedible += 1;
+                    break;
+                #endregion
             }
         }
 
@@ -805,14 +829,33 @@ namespace 饥荒百科全书CSharp.View
             _csFtNeonQuattro = 0;
             _csFtPierrotFish = 0;
             _csFtPurpleGrouper = 0;
-            #endregion
-            #region 属性统计
-            CS_RecipeStatistics(_csRecipe1);
+            _csFtNettle = 0;
+            _csFtSnakeBone = 0;
+            _csFtFilter = 0;
+            _csFtWeevoleCarapace = 0;
+            _csFtDorsalFin = 0;
+            _csFtInedible = 0;
+        #endregion
+        #region 属性统计
+        CS_RecipeStatistics(_csRecipe1);
             CS_RecipeStatistics(_csRecipe2);
             CS_RecipeStatistics(_csRecipe3);
             CS_RecipeStatistics(_csRecipe4);
             #endregion
             #region 烹饪
+            // ----------------------Hamlet----------------------
+            if (Global.GameVersion == 5)
+            {
+
+                if (_csFtFilter >= 2 && _csFtSweetener >= 1 && _csFtIce >= 1)
+                    CS_CrockPotListAddFood("F_iced_tea", 30);
+                if (_csFtFilter >= 2 && _csFtSweetener >= 1 && _csFtMeats == 0 && _csFtVegetables == 0 && _csFtInedible == 0)
+                    CS_CrockPotListAddFood("F_tea", 25);
+                if (_csFtSnakeBone >= 2 && _csFtMeats >= 2)
+                    CS_CrockPotListAddFood("F_snake_bone_soup", 20);
+                if (_csFtNettle >= 3)
+                    CS_CrockPotListAddFood("F_nettle_rolls", 0);
+            }
             // ------------------------SW------------------------
             // 便携式烹饪锅的四种食物
             if (Global.GameVersion == 4)
