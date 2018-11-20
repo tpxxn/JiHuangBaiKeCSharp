@@ -127,7 +127,7 @@ namespace 饥荒百科全书CSharp.View
         private string _csRecipe3 = "";
         private string _csRecipe4 = "";
         /// <summary>
-        /// 51种食材
+        /// 52种食材
         /// </summary>
         private double _csFtEggs;
         private double _csFtVegetables;
@@ -180,6 +180,7 @@ namespace 饥荒百科全书CSharp.View
         private double _csFtWeevoleCarapace;
         private double _csFtDorsalFin;
         private double _csFtInedible;
+        private double _csFtBug;
 
         private byte _foodIndex;
         private string _csFoodName = "";
@@ -788,7 +789,13 @@ namespace 饥荒百科全书CSharp.View
                     _csFtDorsalFin += 1;
                     _csFtInedible += 1;
                     break;
-                #endregion
+                case "F_bean_bugs":
+                    _csFtBug += 1;
+                    break;
+                case "F_cooked_bean_bugs":
+                    _csFtBug += 1;
+                    break;
+                    #endregion
             }
         }
 
@@ -855,6 +862,7 @@ namespace 饥荒百科全书CSharp.View
             _csFtWeevoleCarapace = 0;
             _csFtDorsalFin = 0;
             _csFtInedible = 0;
+            _csFtBug = 0;
         #endregion
         #region 属性统计
         CS_RecipeStatistics(_csRecipe1);
@@ -869,6 +877,8 @@ namespace 饥荒百科全书CSharp.View
 
                 if (_csFtFilter >= 2 && _csFtSweetener >= 1 && _csFtIce >= 1)
                     CS_CrockPotListAddFood("F_iced_tea", 30);
+                if (_csFtBug == 3 && _csFtMeats >= 1)
+                    CS_CrockPotListAddFood("F_feijoada", 30);
                 if (_csFtFilter >= 2 && _csFtSweetener >= 1 && _csFtMeats == 0 && _csFtVegetables == 0 && _csFtInedible == 0)
                     CS_CrockPotListAddFood("F_tea", 25);
                 if (_csFtSnakeBone >= 2 && _csFtMeats >= 2)

@@ -1369,6 +1369,27 @@
         "Console": "spicyvegstinger"
       },
       {
+        "Picture": "F_feijoada",
+        "Name": "肉烧豆虫",
+        "EnName": "Feijoada",
+        "Health": 20,
+        "Hunger": 75,
+        "Sanity": 15,
+        "Perish": 8,
+        "Cooktime": 75,
+        "Priority": 30,
+        "NeedPicture1": "FC_bug",
+        "Need1": "×3    ",
+        "NeedPictureOr": "FC_Meats",
+        "NeedOr": "×1",
+        "Recommend1": "F_bean_bugs",
+        "Recommend2": "F_bean_bugs",
+        "Recommend3": "F_bean_bugs",
+        "Recommend4": "F_meat",
+        "Introduce": "原为一道巴西的名菜。在饥荒的世界里使用豆虫制作，真是重口味。属性很不错。",
+        "Console": "feijoada"
+      },
+      {
         "Picture": "F_wet_goop",
         "Name": "潮湿粘糊物",
         "EnName": "Wet Goop",
@@ -2721,6 +2742,32 @@
         "AttributeValue2": "×1",
         "Introduce": "击杀宽吻海豚获得。",
         "Console": "dorsalfin"
+      },
+      {
+        "Picture": "F_bean_bugs",
+        "Name": "豆虫",
+        "EnName": "Bean Bugs",
+        "Health": 0,
+        "Hunger": 10,
+        "Sanity": -10,
+        "Perish": 40,
+        "Attribute": "FC_Bug",
+        "AttributeValue": "×1",
+        "Introduce": "翻开石板获得。",
+        "Console": "jellybug"
+      },
+      {
+        "Picture": "F_cooked_bean_bugs",
+        "Name": "烤豆虫",
+        "EnName": "Cooked Bean Bugs",
+        "Health": 1,
+        "Hunger": 12.5,
+        "Sanity": -5,
+        "Perish": 10,
+        "Attribute": "FC_Bug",
+        "AttributeValue": "×1",
+        "Introduce": "把豆虫放在篝火上烤制。",
+        "Console": "jellybug_cooked"
       }
     ]
   },
