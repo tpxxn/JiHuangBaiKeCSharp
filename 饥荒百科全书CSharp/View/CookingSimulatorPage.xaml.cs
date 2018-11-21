@@ -642,6 +642,12 @@ namespace 饥荒百科全书CSharp.View
                     _csFtVegetables += 1;
                     _csFtRadish += 1;
                     break;
+                case "F_aloe":
+                    _csFtVegetables += 1;
+                    break;
+                case "F_cooked_aloe":
+                    _csFtVegetables += 1;
+                    break;
                 case "F_foliage":
                     _csFtVegetables += 1;
                     _csFtFoliage += 1;
