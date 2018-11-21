@@ -6740,6 +6740,24 @@
     <Resource Include="Resources\GameResources\Foods\F_blooming_tuber.png" />
     <Resource Include="Resources\GameResources\Foods\F_fried_blooming_tuber.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ico_city_planning.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_treasure_hunting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_shears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_iron_ore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_cork_candle_hat.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cowl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_cork.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

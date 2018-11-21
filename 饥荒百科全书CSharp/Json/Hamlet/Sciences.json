@@ -20,7 +20,7 @@
         "Need1Value": 2,
         "Need2": "S_gold_nugget",
         "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "耐久度是普通斧头的四倍。尽情地砍吧，少年！",
         "Console": "goldenaxe"
       },
@@ -43,7 +43,7 @@
         "Need1Value": 4,
         "Need2": "S_gold_nugget",
         "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "耐久度是普通砍刀的四倍。砍砍砍！",
         "Console": "goldenmachete"
       },
@@ -66,9 +66,21 @@
         "Need1Value": 4,
         "Need2": "S_gold_nugget",
         "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "耐久度是普通十字镐的四倍。用它去征服矿区！",
         "Console": "goldenpickaxe"
+      },
+      {
+        "Picture": "S_shears",
+        "Name": "剪刀",
+        "EnName": "Shears",
+        "Need1": "G_twigs",
+        "Need1Value": 2,
+        "Need2": "G_iron_ore",
+        "Need2Value": 2,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "可以用来修剪各种各样的东西。修剪树篱可以得到碎叶。",
+        "Console": "shears"
       },
       {
         "Picture": "S_shovel",
@@ -90,7 +102,7 @@
         "Need1Value": 4,
         "Need2": "S_gold_nugget",
         "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "耐久度是普通铲子的四倍。人手一把去挖坟！",
         "Console": "goldenshovel"
       },
@@ -160,19 +172,6 @@
         "Console": "firepit"
       },
       {
-        "Picture": "S_chiminea",
-        "Name": "室外壁炉",
-        "EnName": "Chiminea",
-        "Need1": "S_limestone",
-        "Need1Value": 2,
-        "Need2": "G_sand",
-        "Need2Value": 2,
-        "Need3": "G_log",
-        "Need3Value": 2,
-        "Introduction": "防风的壁炉，谁用谁知道！它不会让周围的物品燃烧，风季的时候熄灭得也更慢，防风必备！",
-        "Console": "chiminea"
-      },
-      {
         "Picture": "S_torch",
         "Name": "火把",
         "EnName": "Torch",
@@ -184,56 +183,16 @@
         "Console": "torch"
       },
       {
-        "Picture": "S_tar_lamp",
-        "Name": "焦油灯",
-        "EnName": "Tar Lamp",
-        "Need1": "G_seashell",
-        "Need1Value": 1,
-        "Need2": "G_tar",
-        "Need2Value": 1,
-        "Introduction": "使用焦油制作的照明工具。类似水瓶提灯，可以开关，并且也可以安置在船上。",
-        "Console": "tarlamp"
-      },
-      {
-        "Picture": "S_endothermic_fire",
-        "Name": "吸热火堆",
-        "EnName": "Endothermic Fire",
-        "Need1": "G_cut_grass_SW",
-        "Need1Value": 3,
-        "Need2": "G_nitre",
+        "Picture": "S_cork_candle_hat",
+        "Name": "软木蜡烛帽",
+        "EnName": "Cork Candle Hat",
+        "Need1": "G_cork",
+        "Need1Value": 4,
+        "Need2": "G_iron_ore",
         "Need2Value": 2,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "夏天外出必备冰火降温，和萤火一样燃料消耗完后会消失。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "coldfire"
-      },
-      {
-        "Picture": "S_endothermic_fire_pit",
-        "Name": "吸热火坑",
-        "EnName": "Endothermic Fire Pit",
-        "Need1": "G_nitre",
-        "Need1Value": 2,
-        "Need2": "S_cut_stone",
-        "Need2Value": 4,
-        "Need3": "S_electrical_doodad",
-        "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
-        "Introduction": "需要较多的石头，但是燃烧效率和下雨天的影响都比冰火优秀，且燃料消耗完后不会消失。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "coldfirepit"
-      },
-      {
-        "Picture": "S_obsidian_fire_pit",
-        "Name": "黑曜石火坑",
-        "EnName": "Obsidian Fire Pit",
-        "Need1": "G_log",
-        "Need1Value": 3,
-        "Need2": "G_obsidian",
-        "Need2Value": 8,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
-        "Introduction": "比营火的燃烧效率要高三倍，而且光照范围更大，免疫大风，不过会被淹没。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "obsidianfirepit"
+        "Unlock": [ "S_science_machine"],
+        "Introduction": "使用上与火把基本相同，区别是可以用软木添加燃料以及装备在帽子栏。",
+        "Console": "candlehat"
       },
       {
         "Picture": "S_miner_hat",
@@ -245,61 +204,37 @@
         "Need2Value": 1,
         "Need3": "G_fireflies",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "大范围照明工具，优点在于你能腾出手来干活，缺点就是萤火虫是不可再生资源。可以用萤火虫、荧光果、粘滑含糊虫添加燃料。",
         "Console": "minerhat"
       },
       {
-        "Picture": "S_bottle_lantern",
-        "Name": "水瓶提灯",
-        "EnName": "Bottle Lantern",
-        "Need1": "S_empty_bottle",
-        "Need1Value": 1,
-        "Need2": "G_bioluminescence",
-        "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
-        "Introduction": "船难版的手提灯。可以用萤火虫、荧光果、粘滑含糊虫添加燃料。",
-        "Console": "bottlelantern"
-      },
-      {
-        "Picture": "S_boat_torch",
-        "Name": "船载火把",
-        "EnName": "Boat Torch",
-        "Need1": "G_twigs",
+        "Picture": "S_cowl",
+        "Name": "整流罩",
+        "EnName": "Cowl",
+        "Need1": "G_pig_skin",
         "Need1Value": 2,
-        "Need2": "S_torch",
+        "Need2": "F_batilisk_wing",
         "Need2Value": 1,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "顾名思义，船上用的火把，不能给木筏和竹筏用，照明范围和火把一样。",
-        "Console": "boat_torch"
-      },
-      {
-        "Picture": "S_boat_lantern",
-        "Name": "船灯",
-        "EnName": "Boat Lantern",
-        "Need1": "S_empty_bottle",
-        "Need1Value": 1,
-        "Need2": "G_twigs",
-        "Need2Value": 2,
-        "Need3": "G_fireflies",
+        "Need3": "S_compass",
         "Need3Value": 1,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "装在船上的水瓶手提灯，照明范围很大。可以用萤火虫、荧光果、粘滑含糊虫添加燃料。",
-        "Console": "boat_lantern"
+        "Unlock": [ "S_alchemy_engine"],
+        "Introduction": "提供基于声呐的夜视功能。在潮湿季节可以防止雾的减速。",
+        "Console": "bathat"
       },
       {
-        "Picture": "S_buoyant_chiminea",
-        "Name": "漂浮火炉",
-        "EnName": "Buoyant Chiminea",
-        "Need1": "G_sand",
-        "Need1Value": 4,
-        "Need2": "G_tar",
-        "Need2Value": 6,
-        "Need3": "S_limestone",
-        "Need3Value": 6,
-        "Introduction": "漂浮火炉和室外壁炉效果一样，只不过它可以在海上建造！",
-        "ConsoleCommand": "c_spawn",
-        "Console": "sea_chiminea"
+        "Picture": "S_lantern_1",
+        "Name": "手提灯",
+        "EnName": "Lantern",
+        "Need1": "G_twigs",
+        "Need1Value": 3,
+        "Need2": "G_cut_grass",
+        "Need2Value": 2,
+        "Need3": "G_light_bulb",
+        "Need3Value": 2,
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "大范围照明工具，可以放置在地下，右键开关，下洞穴带着它是个不错的选择。可以用萤火虫、荧光果、粘滑含糊虫添加燃料。",
+        "Console": "lantern"
       }
     ]
   },
@@ -391,7 +326,7 @@
         "Need1Value": 6,
         "Need2": "S_rope",
         "Need2Value": 3,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "拥有300点耐久度，可以装备武器/船灯和船帆，还有额外的六个物品栏。航行速度：5。",
         "ConsoleCommand": "c_spawn",
         "Console": "cargoboat"
@@ -406,7 +341,7 @@
         "Need2Value": 3,
         "Need3": "G_seashell",
         "Need3Value": 10,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "拥有500点耐久度，可以装备武器/船灯和船帆。航行速度：6。",
         "ConsoleCommand": "c_spawn",
         "Console": "armouredboat"
@@ -421,7 +356,7 @@
         "Need2Value": 3,
         "Need3": "S_limestone",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "拥有800点耐久度，耐久度最高的船，可以装备武器/船灯和船帆。航行速度：4。",
         "ConsoleCommand": "c_spawn",
         "Console": "armouredboat"
@@ -464,7 +399,7 @@
         "Need2Value": 2,
         "Need3": "S_cloth",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以提高30%的航速，耐久性中等，需要炼金引擎才能建造。",
         "Console": "clothsail"
       },
@@ -478,7 +413,7 @@
         "Need2Value": 2,
         "Need3": "G_snakeskin",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "耐久性最高，然而速度在草帆和布帆之间，比较适合长途旅行。",
         "Console": "snakeskinsail"
       },
@@ -506,7 +441,7 @@
         "Need2Value": 1,
         "Need3": "S_gold_nugget",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以提高50%的航速，耐久性也最高，然而为了获得材料涡轮叶片必须打败豹卷风。只能通过齿轮修复，一个齿轮修复25%耐久度。",
         "Console": "ironwind"
       },
@@ -645,7 +580,7 @@
         "Need2Value": 4,
         "Need3": "S_rope",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以用来装在船上以撞击生物和建筑并造成伤害。当玩家撞向生物或建筑时，海妖之锤会充能并在撞击的时候造成200点伤害。",
         "Console": "quackeringram"
       },
@@ -715,7 +650,7 @@
         "Need1Value": 1,
         "Need2": "F_honey",
         "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以恢复30生命，只要控制了沼泽地的芦苇便能大面积生产，它没有保鲜度，所以要备一些在箱子。",
         "Console": "bandage"
       },
@@ -778,7 +713,7 @@
         "Need2Value": 1,
         "Need3": "S_rope",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "傻猴子们，玩球儿去~",
         "Console": "monkeyball"
       },
@@ -844,7 +779,7 @@
         "Need2Value": 1,
         "Need3": "G_flint",
         "Need3Value": 3,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "靠近萤火可以吸收热量，供玩家在冬季保暖，有一定热度时戴在身上还可以发光.放在冰箱里可以放热，供玩家夏季乘凉。",
         "Console": "heatrock"
       },
@@ -879,7 +814,7 @@
         "Need2Value": 6,
         "Need3": "S_rope",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "猪皮背包能增加12格物品栏，但是会减少主角的移动速度，毕竟不是LV的包包，不是很实用。",
         "Console": "piggyback"
       },
@@ -905,7 +840,7 @@
         "Need2Value": 4,
         "Need3": "S_rope",
         "Need3Value": 3,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "供玩家睡觉，可使用6次，可同时恢复生命和精神。用过5次之后建议用锤子砸烂并回收部分建材。",
         "ConsoleCommand": "c_spawn",
         "Console": "tent"
@@ -920,7 +855,7 @@
         "Need2Value": 4,
         "Need3": "S_rope",
         "Need3Value": 3,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "白天睡觉恢复精神和生命，可使用6次，消耗的饥饿比帐篷低，可谓是恢复神器。",
         "ConsoleCommand": "c_spawn",
         "Console": "siestahut"
@@ -935,7 +870,7 @@
         "Need2Value": 4,
         "Need3": "S_rope",
         "Need3Value": 3,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "待在椰叶小屋下，不会被雨淋，不会过热。小屋没有耐久，尽管其外表脆弱，然而不会受到大风的影响。小屋的保护区域比看起来要大一些。",
         "ConsoleCommand": "c_spawn",
         "Console": "palmleaf_hut"
@@ -950,7 +885,7 @@
         "Need2Value": 2,
         "Need3": "S_rope",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "扇一下会让玩家温度降低50°，但最低不会低于5°。会扑灭周围的火！可以使用15次。",
         "Console": "tropicalfan"
       },
@@ -964,7 +899,7 @@
         "Need2Value": 2,
         "Need3": "G_shark_gills",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "船难版的隔热背包。只有6个格子的背包，但是作用和冰箱类似可以让食物变质变缓慢，但是和冰箱不同的是不能阻止冰块变质，也不能冷却保温石。",
         "Console": "seasack"
       },
@@ -978,7 +913,7 @@
         "Need2Value": 2,
         "Need3": "G_manure",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "建造一个渡渡鸟巢来孵小渡渡鸟~",
         "ConsoleCommand": "c_spawn",
         "Console": "doydoynest"
@@ -1026,7 +961,7 @@
         "Need2Value": 6,
         "Need3": "G_rocks",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "需要大量的素材，但是它是值得的，因为它的生长速度和施肥效率都是基本农场的2倍。",
         "ConsoleCommand": "c_spawn",
         "Console": "fast_farmplot"
@@ -1041,7 +976,7 @@
         "Need2Value": 2,
         "Need3": "G_log",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "三个便便变成十个便便的戏法。",
         "Console": "fertilizer"
       },
@@ -1100,7 +1035,7 @@
         "Need2Value": 1,
         "Need3": "S_cut_stone",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "拥有9格的储存功能，只允许储藏食物和保温石，放进去的食物腐烂速度延缓50%。",
         "ConsoleCommand": "c_spawn",
         "Console": "icebox"
@@ -1203,7 +1138,7 @@
         "Need2Value": 4,
         "Need3": "G_gears",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "魔棒是用于定位和寻找麦斯威尔之门的道具，在联机版里貌似没有用处。",
         "Console": "diviningrod"
       },
@@ -1246,7 +1181,7 @@
         "Need2Value": 1,
         "Need3": "G_nitre",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "点燃后爆炸，小范围造成200点伤害，这足以秒杀玩家，高数量伤害会叠加，对付移动速度慢的怪好用。",
         "Console": "gunpowder"
       },
@@ -1274,7 +1209,7 @@
         "Need2Value": 15,
         "Need3": "S_electrical_doodad",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "雪球发射机可以扑灭任何冒烟或者着火的物体并且降温，包括萤火、暗影火炬。任何燃料物质可以为其补充燃料。可以让农作物夏天也能收成。",
         "ConsoleCommand": "c_spawn",
         "Console": "firesuppressor"
@@ -1289,7 +1224,7 @@
         "Need2Value": 5,
         "Need3": "S_electrical_doodad",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "用燃料换冰。每30秒产生一个冰，最多3个，一旦开始生产就不能停下，燃料添加过多也不会有多余的冰。被建造时会持续生产45秒(即一个半冰)。剩余30秒时若燃料不够则会浪费剩余的燃料。",
         "ConsoleCommand": "c_spawn",
         "Console": "icemaker"
@@ -1304,7 +1239,7 @@
         "Need2Value": 1,
         "Need3": "G_gears",
         "Need3Value": 6,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "仅存在于PSN/XBOX版本的东西，唯一目的就是增加一项成就。每激活25次就会放一次焰火，激活725次放更大的焰火并且获得成就__...and despair!",
         "ConsoleCommand": "c_spawn",
         "Console": "accomploshrine"
@@ -1319,7 +1254,7 @@
         "Need2Value": 1,
         "Need3": "S_electrical_doodad",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "在中海和深海种植海妖之钻可以钻出焦油井。",
         "Console": "quackendrill"
       }
@@ -1427,7 +1362,7 @@
         "Need1Value": 3,
         "Need2": "S_rope",
         "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "吸收大量伤害，每分钟回复2点精神，但是会减少10%的速度。",
         "Console": "armorlimestone"
       },
@@ -1439,7 +1374,7 @@
         "Need1Value": 3,
         "Need2": "S_log_suit",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "防御力很高，每次受到攻击都会反弹17点伤害，使象仙人掌无视玩家并且免疫来自象仙人掌的攻击。",
         "Console": "armorcactus"
       },
@@ -1451,7 +1386,7 @@
         "Need1Value": 1,
         "Need2": "S_rope",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "防御优异的帽子，素材也容易寻找，可惜需要炼金机器才能解锁，配合其他防具让你拥有极高的防御。",
         "Console": "footballhat"
       },
@@ -1465,7 +1400,7 @@
         "Need2Value": 1,
         "Need3": "S_rope",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "防御力极高，有一定防水功效，还能防止被毒蛇、毒蚊、蜘蛛战士攻击时中毒。",
         "Console": "oxhat"
       },
@@ -1535,7 +1470,7 @@
         "Need2Value": 1,
         "Need3": "G_charcoal",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "比较普通的远程武器，飞出并返回，须按空格接住，否则伤到自己并损失2倍耐久度。",
         "Console": "boomerang"
       },
@@ -1563,7 +1498,7 @@
         "Need2Value": 1,
         "Need3": "G_hound's_tooth",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "伤害是长矛的2倍，数量多时会非常恐怖，基地简直固若金汤，冬天刷海象父子就能获得大量狗牙。",
         "Console": "trap_teeth"
       },
@@ -1577,7 +1512,7 @@
         "Need2Value": 1,
         "Need3": "S_rope",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以放在地上点燃又可以点燃后丢出去的炸弹，造成250点伤害。",
         "Console": "coconade"
       },
@@ -1589,7 +1524,7 @@
         "Need1Value": 3,
         "Need2": "A_jellyfish",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以装载长矛、战斗长矛、毒矛、黑曜石矛，射出去造成三倍伤害。射出的矛需重新拾起填装。一个矛枪可以使用八次。",
         "Console": "spear_launcher"
       },
@@ -1603,7 +1538,7 @@
         "Need2Value": 2,
         "Need3": "G_twigs",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "拥有高额的伤害，对豹卷风还能造成1.5倍伤害加成。攻击力虽高可是需要旗鱼。",
         "Console": "cutlass"
       }
@@ -1676,7 +1611,7 @@
         "EnName": "Stone Wall",
         "Need1": "S_cut_stone",
         "Need1Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可放置围墙，每份200生命，可叠加放置，最高400，和前两种墙相比，生命值挺高，且不能被点燃。",
         "Console": "wall_stone_item"
       },
@@ -1686,7 +1621,7 @@
         "EnName": "Limestone Wall",
         "Need1": "S_limestone",
         "Need1Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可放置围墙，每份250生命，可叠加放置，最高500，有时间的话可以造一些。",
         "Console": "wall_limestone_item"
       },
@@ -1712,7 +1647,7 @@
         "Need2Value": 5,
         "Need3": "G_pig_skin",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "建造一个荒野小屋，类似猪人房，不过当你拆荒野小屋的时候野猪会试图保护它。",
         "ConsoleCommand": "c_spawn",
         "Console": "wildborehouse"
@@ -1742,7 +1677,7 @@
         "Need2Value": 3,
         "Need3": "G_manure",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "建造一个猿猴小屋，最多产生四只猿。猿被击杀后新的猿将会在短时间内重生。",
         "ConsoleCommand": "c_spawn",
         "Console": "primeapebarrel"
@@ -1757,7 +1692,7 @@
         "Need2Value": 5,
         "Need3": "G_obsidian",
         "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "建造一个龙人巢，产生3到4只龙人。不能用锤子摧毁，只能用火药或椰壳炸弹炸毁。",
         "ConsoleCommand": "c_spawn",
         "Console": "dragoonden"
@@ -1772,7 +1707,7 @@
         "Need2Value": 6,
         "Need3": "F_seeds",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以把捕捉到的小鸟放置在鸟笼内，可以用作物与其兑换种子，用肉类兑换鸟蛋。",
         "ConsoleCommand": "c_spawn",
         "Console": "birdcage"
@@ -1785,7 +1720,7 @@
         "Need1Value": 1,
         "Need2": "S_boards",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可放置地皮，主角和其他生物在鹅卵石上行走，都会增加50%移动速度，尽早为自己基地铺上吧。",
         "Console": "cobblestones"
       },
@@ -1795,7 +1730,7 @@
         "EnName": "Wooden Flooring",
         "Need1": "S_boards",
         "Need1Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可放置地皮，不会产生水坑，然而无法阻止潮汐和洪水。",
         "Console": "turf_woodfloor"
       },
@@ -1807,7 +1742,7 @@
         "Need1Value": 2,
         "Need2": "S_cloth",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可放置地皮，不会产生水坑，然而无法阻止潮汐和洪水。",
         "Console": "turf_snakeskinfloor"
       },
@@ -1929,7 +1864,7 @@
         "EnName": "Ice",
         "Need1": "G_hail",
         "Need1Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "高级素材，可进一步合成更多道具。也可以食用。",
         "Console": "ice"
       },
@@ -1939,7 +1874,7 @@
         "EnName": "Empty Bottle",
         "Need1": "G_sand",
         "Need1Value": 3,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "高级素材，可进一步合成更多道具。",
         "Console": "messagebottleempty"
       },
@@ -1949,7 +1884,7 @@
         "EnName": "Nightmare Fuel",
         "Need1": "G_dark_petals",
         "Need1Value": 4,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "高级素材，可以用来制作梦魇装备，或者为暗影灯添加燃料。",
         "Console": "nightmarefuel"
       },
@@ -1961,7 +1896,7 @@
         "Need1Value": 1,
         "Need2": "G_blue_gem",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "高级素材，可以用来合成暗影操纵器等道具。",
         "Console": "purplegem"
       }
@@ -2204,7 +2139,7 @@
         "Need2Value": 8,
         "Need3": "G_hound's_tooth",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "可以修复非防御性的衣服和帽子，由于不同的装备耐久度最大值不一样，修复的百分比也不会相同。",
         "Console": "sewing_kit"
       },
@@ -2258,7 +2193,7 @@
         "Need2Value": 4,
         "Need3": "S_ice",
         "Need3Value": 10,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "制作材料倒是一点都不困难，只要提前在冰箱里准备好冰块就行了。不过带上后湿度会增加，速度也会降低10%，比较头痛。",
         "Console": "icehat"
       },
@@ -2272,7 +2207,7 @@
         "Need2Value": 1,
         "Need3": "S_rope",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "谁最聪明吖？戴上它可以制作四次任何可合成的物品而不需要科技，但是不会解锁该物品的配方。",
         "Console": "brainjellyhat"
       },
@@ -2296,7 +2231,7 @@
         "Need1Value": 8,
         "Need2": "S_rope",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "只能防御蜜蜂攻击，和橄榄球头盔防御系数一样，由于1个猪皮不比8个蜘蛛网难找，所以不太常用。",
         "Console": "beehat"
       },
@@ -2310,7 +2245,7 @@
         "Need2Value": 2,
         "Need3": "G_tentacle_spots",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "恢复少量精神，能吸引更多的鸟着陆，然而靠近鸟还是会飞走。",
         "Console": "featherhat"
       },
@@ -2324,7 +2259,7 @@
         "Need2Value": 1,
         "Need3": "G_berry_bush",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "右键变成浆果丛隐藏自己，对已经发现你的怪物没有作用，除了卖萌毫无用处的帽子，感觉在掩耳盗铃。",
         "Console": "bushhat"
       },
@@ -2338,7 +2273,7 @@
         "Need2Value": 1,
         "Need3": "G_boneshard",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "防止70%的湿度增加，还能防雷防水母触电，简直就是戴在头上的避雷针！",
         "Console": "snakeskinhat"
       },
@@ -2366,7 +2301,7 @@
         "Need2Value": 2,
         "Need3": "G_palm_leaf",
         "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "完全免疫水和雨！保暖功效和牛帽一样！",
         "Console": "blubbersuit"
       },
@@ -2408,7 +2343,7 @@
         "Need2Value": 3,
         "Need3": "G_petals",
         "Need3Value": 5,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "夏天用来减缓温度上升的衣服，虽然效果不大，总比带负面效果的冰块要好一点吧。不能用缝补工具修补。在船难版里制作材料仙人掌花改为花瓣。",
         "Console": "hawaiianshirt"
       },
@@ -2422,7 +2357,7 @@
         "Need2Value": 1,
         "Need3": "S_straw_hat",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "像眼球伞一样防水防雷还延缓过热，可以空出双手来工作，非常方便。",
         "Console": "double_umbrellahat"
       },
@@ -2436,7 +2371,7 @@
         "Need2Value": 1,
         "Need3": "S_rope",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "20%防水，并且防止被大风吹跑，穿上后还会减小被豹卷风卷影响的半径。",
         "Console": "armor_windbreaker"
       },
@@ -2450,7 +2385,7 @@
         "Need2Value": 3,
         "Need3": "A_jellyfish",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "戴上它就可以免疫毒洞和恶臭魔鬼鱼的毒！机器人戴上它大概是为了臭美一下吧？",
         "Console": "gashat"
       },
@@ -2464,7 +2399,7 @@
         "Need2Value": 2,
         "Need3": "F_coconut",
         "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine", "S_sea_lab" ],
+        "Unlock": [ "S_alchemy_engine"],
         "Introduction": "增加25%的移动速度，和步行手杖一样。还能抵御些许风！",
         "Console": "aerodynamichat"
       }

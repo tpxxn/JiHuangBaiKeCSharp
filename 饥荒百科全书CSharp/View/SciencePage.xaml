@@ -62,6 +62,21 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
+                <Expander x:Name="TreasureHuntingExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_treasure_hunting.png" />
+                            <TextBlock x:Name="TreasureHuntingExpanderTextBolck" Text="寻宝" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
                 <Expander x:Name="NauticalExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
@@ -337,6 +352,36 @@
                         <StackPanel Orientation="Horizontal">
                             <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_volcano.png" />
                             <TextBlock Text="火山" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="CityPlanningExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_city_planning.png" />
+                            <TextBlock x:Name="CityPlanningExpanderTextBolck" Text="城镇规划" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
+                <Expander x:Name="RenovateExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate.png" />
+                            <TextBlock x:Name="RenovateExpanderTextBolck" Text="修复" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Expander.Header>
                     <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">

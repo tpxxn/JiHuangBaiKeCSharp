@@ -50,6 +50,16 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class TreasureHunting
+    {
+        public List<Science> Science { get; set; }
+
+        public TreasureHunting()
+        {
+            Science = new List<Science>();
+        }
+    }
+
     public class Nautical
     {
         public List<Science> Science { get; set; }
@@ -240,10 +250,31 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class CityPlanning
+    {
+        public List<Science> Science { get; set; }
+
+        public CityPlanning()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class Renovate
+    {
+        public List<Science> Science { get; set; }
+
+        public Renovate()
+        {
+            Science = new List<Science>();
+        }
+    }
+
     public class ScienceRootObject
     {
         public Tool Tool { get; set; }
         public Light Light { get; set; }
+        public TreasureHunting TreasureHunting { get; set; }
         public Nautical Nautical { get; set; }
         public Survival Survival { get; set; }
         public Foods Foods { get; set; }
@@ -263,11 +294,14 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public Cartography Cartography { get; set; }
         public Offerings Offerings { get; set; }
         public Volcano Volcano { get; set; }
+        public CityPlanning CityPlanning { get; set; }
+        public Renovate Renovate { get; set; }
 
         public ScienceRootObject()
         {
             Tool = new Tool();
             Light = new Light();
+            TreasureHunting = new TreasureHunting();
             Nautical = new Nautical();
             Survival = new Survival();
             Foods = new Foods();
@@ -287,6 +321,8 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             Cartography = new Cartography();
             Offerings = new Offerings();
             Volcano = new Volcano();
+            CityPlanning = new CityPlanning();
+            Renovate = new Renovate();
         }
     }
 }

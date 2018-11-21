@@ -73,6 +73,9 @@ namespace 饥荒百科全书CSharp.View
                     case "ScienceLight":
                         OnNavigatedToScienceDialog(Global.ScienceLightData, suggestBoxItemPicture);
                         break;
+                    case "ScienceTreasureHunting":
+                        OnNavigatedToScienceDialog(Global.ScienceTreasureHuntingData, suggestBoxItemPicture);
+                        break;
                     case "ScienceNautical":
                         OnNavigatedToScienceDialog(Global.ScienceNauticalData, suggestBoxItemPicture);
                         break;
@@ -130,6 +133,12 @@ namespace 饥荒百科全书CSharp.View
                     case "ScienceVolcano":
                         OnNavigatedToScienceDialog(Global.ScienceVolcanoData, suggestBoxItemPicture);
                         break;
+                    case "ScienceCityPlanning":
+                        OnNavigatedToScienceDialog(Global.ScienceCityPlanningData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovate":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateData, suggestBoxItemPicture);
+                        break;
                 }
             }
         }
@@ -166,7 +175,8 @@ namespace 饥荒百科全书CSharp.View
             InitializeComponent();
             Global.ScienceLeftFrame = LeftFrame;
             Global.RightFrame.NavigationService.LoadCompleted += LoadCompleted;
-            if (Global.GameVersion != 4)
+            // SW/Hamlet
+            if (Global.GameVersion != 4 && Global.GameVersion != 5)
             {
                 NauticalExpander.Visibility = Visibility.Collapsed;
                 VolcanoExpander.Visibility = Visibility.Collapsed;
@@ -175,6 +185,13 @@ namespace 饥荒百科全书CSharp.View
             {
                 AncientExpander.Visibility = Visibility.Collapsed;
             }
+            //Hamlet
+            if (Global.GameVersion != 5)
+            {
+                TreasureHuntingExpander.Visibility = Visibility.Collapsed;
+                CityPlanningExpander.Visibility = Visibility.Collapsed;
+                RenovateExpander.Visibility = Visibility.Collapsed;
+            }
             if (Global.GameVersion != 0 && Global.GameVersion != 1)
             {
                 ShadowExpander.Visibility = Visibility.Collapsed;
@@ -182,6 +199,7 @@ namespace 饥荒百科全书CSharp.View
                 SculptExpander.Visibility = Visibility.Collapsed;
                 CartographyExpander.Visibility = Visibility.Collapsed;
                 CelestialExpander.Visibility = Visibility.Collapsed;
+                MadScienceExpander.Visibility = Visibility.Collapsed;
                 OfferingsExpander.Visibility = Visibility.Collapsed;
             }
             if (Global.GameVersion == 1)
@@ -201,6 +219,7 @@ namespace 饥荒百科全书CSharp.View
         {
             ToolExpander.DataContext = Global.ScienceToolData;
             LightExpander.DataContext = Global.ScienceLightData;
+            TreasureHuntingExpander.DataContext = Global.ScienceTreasureHuntingData;
             NauticalExpander.DataContext = Global.ScienceNauticalData;
             SurvivalExpander.DataContext = Global.ScienceSurvivalData;
             FoodExpander.DataContext = Global.ScienceFoodData;
@@ -220,6 +239,8 @@ namespace 饥荒百科全书CSharp.View
             CartographyExpander.DataContext = Global.ScienceCartographyData;
             OfferingsExpander.DataContext = Global.ScienceOfferingsData;
             VolcanoExpander.DataContext = Global.ScienceVolcanoData;
+            CityPlanningExpander.DataContext = Global.ScienceCityPlanningData;
+            RenovateExpander.DataContext = Global.ScienceRenovateData;
         }
 
         private void ScienceButton_Click(object sender, RoutedEventArgs e)

@@ -336,14 +336,12 @@ namespace 饥荒百科全书CSharp
             // 哈姆雷特版隐藏
             if (Global.GameVersion == 5)
             {
-                SidebarScience.Visibility = Visibility.Collapsed;
                 SidebarCreature.Visibility = Visibility.Collapsed;
                 SidebarNatural.Visibility = Visibility.Collapsed;
                 SidebarGoods.Visibility = Visibility.Collapsed;
             }
             else
             {
-                SidebarScience.Visibility = Visibility.Visible;
                 SidebarCreature.Visibility = Visibility.Visible;
                 SidebarNatural.Visibility = Visibility.Visible;
                 SidebarGoods.Visibility = Visibility.Visible;

@@ -291,6 +291,7 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Food> FoodNoFcData = new List<Food>();
         public static readonly List<Science> ScienceToolData = new List<Science>();
         public static readonly List<Science> ScienceLightData = new List<Science>();
+        public static readonly List<Science> ScienceTreasureHuntingData = new List<Science>();
         public static readonly List<Science> ScienceNauticalData = new List<Science>();
         public static readonly List<Science> ScienceSurvivalData = new List<Science>();
         public static readonly List<Science> ScienceFoodData = new List<Science>();
@@ -310,6 +311,8 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Science> ScienceCartographyData = new List<Science>();
         public static readonly List<Science> ScienceOfferingsData = new List<Science>();
         public static readonly List<Science> ScienceVolcanoData = new List<Science>();
+        public static readonly List<Science> ScienceCityPlanningData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateData = new List<Science>();
         public static readonly List<Creature> CreatureLandData = new List<Creature>();
         public static readonly List<Creature> CreatureOceanData = new List<Creature>();
         public static readonly List<Creature> CreatureFlyData = new List<Creature>();
@@ -373,6 +376,7 @@ namespace 饥荒百科全书CSharp.Class
             FoodNoFcData.Clear();
             ScienceToolData.Clear();
             ScienceLightData.Clear();
+            ScienceTreasureHuntingData.Clear();
             ScienceNauticalData.Clear();
             ScienceSurvivalData.Clear();
             ScienceFoodData.Clear();
@@ -392,6 +396,8 @@ namespace 饥荒百科全书CSharp.Class
             ScienceCartographyData.Clear();
             ScienceOfferingsData.Clear();
             ScienceVolcanoData.Clear();
+            ScienceCityPlanningData.Clear();
+            ScienceRenovateData.Clear();
             CreatureLandData.Clear();
             CreatureOceanData.Clear();
             CreatureFlyData.Clear();
@@ -504,6 +510,12 @@ namespace 饥荒百科全书CSharp.Class
                 scienceLightItems.Picture = StringProcess.GetGameResourcePath(scienceLightItems.Picture);
                 ScienceLightData.Add(scienceLightItems);
                 AutoSuggestBoxItemSourceAdd(scienceLightItems, "ScienceLight");
+            }
+            foreach (var scienceTreasureHuntingItems in science.TreasureHunting.Science)
+            {
+                scienceTreasureHuntingItems.Picture = StringProcess.GetGameResourcePath(scienceTreasureHuntingItems.Picture);
+                ScienceTreasureHuntingData.Add(scienceTreasureHuntingItems);
+                AutoSuggestBoxItemSourceAdd(scienceTreasureHuntingItems, "ScienceTreasureHunting");
             }
             foreach (var scienceNauticalItems in science.Nautical.Science)
             {
@@ -618,6 +630,18 @@ namespace 饥荒百科全书CSharp.Class
                 scienceVolcanoItems.Picture = StringProcess.GetGameResourcePath(scienceVolcanoItems.Picture);
                 ScienceVolcanoData.Add(scienceVolcanoItems);
                 AutoSuggestBoxItemSourceAdd(scienceVolcanoItems, "ScienceVolcano");
+            }
+            foreach (var scienceCityPlanningItems in science.CityPlanning.Science)
+            {
+                scienceCityPlanningItems.Picture = StringProcess.GetGameResourcePath(scienceCityPlanningItems.Picture);
+                ScienceCityPlanningData.Add(scienceCityPlanningItems);
+                AutoSuggestBoxItemSourceAdd(scienceCityPlanningItems, "ScienceCityPlanning");
+            }
+            foreach (var scienceRenovateItems in science.Renovate.Science)
+            {
+                scienceRenovateItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateItems.Picture);
+                ScienceRenovateData.Add(scienceRenovateItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateItems, "ScienceRenovate");
             }
             #endregion
             #region 生物
