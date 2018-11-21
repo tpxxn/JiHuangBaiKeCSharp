@@ -341,6 +341,13 @@ namespace 饥荒百科全书CSharp
                 SidebarNatural.Visibility = Visibility.Collapsed;
                 SidebarGoods.Visibility = Visibility.Collapsed;
             }
+            else
+            {
+                SidebarScience.Visibility = Visibility.Visible;
+                SidebarCreature.Visibility = Visibility.Visible;
+                SidebarNatural.Visibility = Visibility.Visible;
+                SidebarGoods.Visibility = Visibility.Visible;
+            }
             // 设置AutoSuggestBox的数据源
             Global.SetAutoSuggestBoxItem();
             Global.PageManagerInit();

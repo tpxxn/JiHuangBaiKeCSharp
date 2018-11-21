@@ -6736,6 +6736,10 @@
     <Resource Include="Resources\GameResources\Foods\F_seed_pod.png" />
     <Resource Include="Resources\GameResources\Foods\F_tuber.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Foods\F_blooming_tuber.png" />
+    <Resource Include="Resources\GameResources\Foods\F_fried_blooming_tuber.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
