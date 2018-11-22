@@ -1192,7 +1192,7 @@
         "Perish": 6,
         "Attribute": "FC_Meats",
         "AttributeValue": "×0.5",
-        "Introduce": "狩猎火鸡、渡渡鸟和莫斯林获得。",
+        "Introduce": "狩猎火鸡和莫斯林获得。",
         "Console": "drumstick"
       },
       {
@@ -1803,32 +1803,6 @@
         "AttributeValue": "×4",
         "Introduce": "把高鸟蛋放在篝火上烤制。",
         "Console": "tallbirdegg_cooked"
-      },
-      {
-        "Picture": "F_doydoy_egg",
-        "Name": "渡渡鸟蛋",
-        "EnName": "Doydoy Egg",
-        "Health": 3,
-        "Hunger": 25,
-        "Sanity": 0,
-        "Perish": 10,
-        "Attribute": "FC_Eggs",
-        "AttributeValue": "×1",
-        "Introduce": "渡渡鸟巢穴获得。",
-        "Console": "doydoyegg"
-      },
-      {
-        "Picture": "F_fried_doydoy_egg",
-        "Name": "煎渡渡鸟蛋",
-        "EnName": "Fried DoyDoy Egg",
-        "Health": 0,
-        "Hunger": 37.5,
-        "Sanity": 0,
-        "Perish": 6,
-        "Attribute": "FC_Eggs",
-        "AttributeValue": "×1",
-        "Introduce": "把渡渡鸟蛋放在篝火上烤制。",
-        "Console": "doydoyegg_cooked"
       }
     ]
   },

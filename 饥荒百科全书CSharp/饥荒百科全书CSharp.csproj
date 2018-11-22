@@ -6758,6 +6758,44 @@
   <ItemGroup>
     <Resource Include="Resources\GameResources\Goods\G_cork.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ball_pein_hammer.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_blunderbuss.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_blunderbuss_1.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_bug_bgone.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_claw_palm_sapling.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cork_barrel.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cork_bat.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cork_bowl_canoe.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_disarming_tools.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fancy_helmet.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_gas_mask.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_gold_pan.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_halberd.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hogus_porkusator.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_lawn_turf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_magnifying_glass.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_mant_mask.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_mant_suit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_oscillating_fan.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_pith_hat.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_skyworthy.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_smelter.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_snakeskin_hat_hamlet.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_snakeskin_jacket_hamlet.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_snakeskin_sail_hamlet.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sprinkler.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_thunderhat.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tin_suit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_venom_gland.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_weevole_mantle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_cultivated_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_snakeskin_hamlet.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
