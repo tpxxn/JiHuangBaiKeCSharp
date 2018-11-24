@@ -6791,10 +6791,60 @@
     <Resource Include="Resources\GameResources\Sciences\S_weevole_mantle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\GameResources\Goods\G_cultivated_turf.png" />
+    <Resource Include="Resources\GameResources\Goods\G_snakeskin_hamlet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\GameResources\Goods\G_snakeskin_hamlet.png" />
+    <Resource Include="Resources\GameResources\Goods\G_alloy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_chitin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_oinc.png" />
+    <Resource Include="Resources\GameResources\Goods\G_tenpiece_oinc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_rainforest_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_gold_dust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_cultivated_turf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_can_of_silly_string.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_cloth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_peagawk_plume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_thunder_feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_curly_tails_mud_spa.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_flat_stone_turf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_lamp_post.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_miss_sows_floral_arrangements.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_my_city_hall.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_pigg_and_pigglets_general_store.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_security_contract.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_slanty_shanty.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_stone_road_turf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_swinesbury_fine_grocers.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_the_boars_tusk_weapon_shop.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_the_flying_pig_arcane_shop.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_the_sows_ear_hat_shop.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_the_sterling_trough_deli.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_the_sty_oddities_emporium.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_town_house.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_watch_tower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_key_to_the_city.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

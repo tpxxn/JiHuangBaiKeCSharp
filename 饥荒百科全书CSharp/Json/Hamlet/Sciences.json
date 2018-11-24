@@ -309,7 +309,7 @@
         "Picture": "S_lucky_hat",
         "Name": "幸运帽",
         "EnName": "Lucky Hat",
-        "Need1": "S_cloth",
+        "Need1": "G_cloth",
         "Need1Value": 3,
         "Need2": "G_boneshard",
         "Need2Value": 4,
@@ -407,7 +407,7 @@
         "Picture": "S_chef_pouch",
         "Name": "厨师的袋子",
         "EnName": "Chef Pouch",
-        "Need1": "S_cloth",
+        "Need1": "G_cloth",
         "Need1Value": 1,
         "Need2": "S_rope",
         "Need2Value": 1,
@@ -608,25 +608,11 @@
         "Unlock": [ "S_alchemy_engine" ],
         "Introduction": "扇一下会让玩家和周围温度降低50°，但最低不会低于2.5°。会扑灭周围的火！",
         "Console": "featherfan"
-      },
+      }
     ]
   },
   "Foods": {
     "Science": [
-      {
-        "Picture": "S_mussel_stick",
-        "Name": "采贝器",
-        "EnName": "Mussel Stick",
-        "Need1": "G_bamboo_patch",
-        "Need1Value": 2,
-        "Need2": "G_vine",
-        "Need2Value": 1,
-        "Need3": "F_seaweed",
-        "Need3Value": 1,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "插在贻贝床上可以采贝，时间越久采的贻贝越多，最多六个。",
-        "Console": "mussel_stick"
-      },
       {
         "Picture": "S_basic_farm",
         "Name": "基础农场",
@@ -670,21 +656,6 @@
         "Unlock": [ "S_alchemy_engine"],
         "Introduction": "三个便便变成十个便便的戏法。",
         "Console": "fertilizer"
-      },
-      {
-        "Picture": "S_bee_box",
-        "Name": "蜂箱",
-        "EnName": "Bee Box",
-        "Need1": "S_boards",
-        "Need1Value": 2,
-        "Need2": "F_honeycomb",
-        "Need2Value": 1,
-        "Need3": "A_bee",
-        "Need3Value": 4,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "可自行养殖蜜蜂生产蜂蜜，旁边需要用蝴蝶种植一些花朵蜜蜂采蜜才有效率，收蜜时小心蜜蜂攻击。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "beebox"
       },
       {
         "Picture": "S_drying_rack",
@@ -732,31 +703,19 @@
         "Console": "icebox"
       },
       {
-        "Picture": "S_fish_farm",
-        "Name": "养鱼场",
-        "EnName": "Fish Farm",
-        "Need1": "F_coconut",
-        "Need1Value": 4,
-        "Need2": "S_rope",
-        "Need2Value": 2,
-        "Need3": "G_silk",
-        "Need3Value": 2,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "养鱼场用来养殖热带鱼，它需要鱼子提供营养。每次只能养一种鱼，总共三个阶段，每个阶段生产一条鱼。如果在第一阶段收获，养鱼场将会空出来，并且需要新的鱼子提供营养。如果玩家没有清空养鱼场，它会一直保持生产同样的鱼。养鱼场的鱼量表明目前的阶段，小标志上的颜色表明生产鱼的种类。鳄狗可能会去袭击养鱼场，这将导致养鱼阶段损失，直到完全清空，使用海堤可以提供对鳄狗的保护。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "fish_farm"
-      },
-      {
-        "Picture": "S_mussel_bed",
-        "Name": "贻贝床",
-        "EnName": "Mussel Bed",
-        "Need1": "F_mussel",
-        "Need1Value": 1,
-        "Need2": "G_coral",
+        "Picture": "S_sprinkler",
+        "Name": "洒水器",
+        "EnName": "Sprinkler",
+        "Need1": "G_alloy",
+        "Need1Value": 2,
+        "Need2": "G_blue_gem",
         "Need2Value": 1,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "可以在浅海种植贻贝。",
-        "Console": "mussel_bed"
+        "Need3": "S_ice",
+        "Need3Value": 6,
+        "Unlock": [ "S_alchemy_engine"],
+        "Introduction": "洒水器需要建立在水旁边，建成时自动生成一个管道连接到水里。可以使范围内的荨麻藤在任意季节生长，若玩家在洒水器旁边则会快速增加湿度。与雪球发射器类似，需要添加燃料。",
+        "ConsoleCommand": "c_spawn",
+        "Console": "sprinkler"
       }
     ]
   },
@@ -790,21 +749,6 @@
         "Introduction": "靠近后将暂时解锁玩家二级科技，完成对应物品制作将永久解锁该物品科技。",
         "ConsoleCommand": "c_spawn",
         "Console": "researchlab2"
-      },
-      {
-        "Picture": "S_sea_lab",
-        "Name": "海洋实验室",
-        "EnName": "Sea Lab",
-        "Need1": "S_limestone",
-        "Need1Value": 4,
-        "Need2": "G_sand",
-        "Need2Value": 2,
-        "Need3": "S_electrical_doodad",
-        "Need3Value": 2,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "靠近后将暂时解锁玩家二级科技，完成对应物品制作将永久解锁该物品科技。只能在海上建造。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "researchlab5"
       },
       {
         "Picture": "S_electrical_doodad",
@@ -896,7 +840,7 @@
         "EnName": "Ice Flingomatic",
         "Need1": "G_gears",
         "Need1Value": 2,
-        "Need2": "S_ice",
+        "Need2": "F_ice",
         "Need2Value": 15,
         "Need3": "S_electrical_doodad",
         "Need3Value": 2,
@@ -906,48 +850,34 @@
         "Console": "firesuppressor"
       },
       {
-        "Picture": "S_ice_maker_3000",
-        "Name": "造冰机 3000",
-        "EnName": "Ice Maker 3000",
-        "Need1": "S_thermal_stone",
-        "Need1Value": 1,
-        "Need2": "G_bamboo_patch",
-        "Need2Value": 5,
-        "Need3": "S_electrical_doodad",
-        "Need3Value": 2,
+        "Picture": "S_smelter",
+        "Name": "炼铁炉",
+        "EnName": "Smelter",
+        "Need1": "S_cut_stone",
+        "Need1Value": 6,
+        "Need2": "S_boards",
+        "Need2Value": 4,
+        "Need3": "G_red_gem",
+        "Need3Value": 1,
         "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "用燃料换冰。每30秒产生一个冰，最多3个，一旦开始生产就不能停下，燃料添加过多也不会有多余的冰。被建造时会持续生产45秒(即一个半冰)。剩余30秒时若燃料不够则会浪费剩余的燃料。",
+        "Introduction": "将 4 个铁矿石放入炼铁炉可以生产合金。",
         "ConsoleCommand": "c_spawn",
-        "Console": "icemaker"
+        "Console": "smelter"
       },
       {
-        "Picture": "S_accomploshrine",
-        "Name": "神灯",
-        "EnName": "Accomploshrine",
-        "Need1": "S_gold_nugget",
-        "Need1Value": 10,
-        "Need2": "S_cut_stone",
-        "Need2Value": 1,
+        "Picture": "S_oscillating_fan",
+        "Name": "转动的风扇",
+        "EnName": "Oscillating Fan",
+        "Need1": "G_alloy",
+        "Need1Value": 2,
+        "Need2": "S_electrical_doodad",
+        "Need2Value": 2,
         "Need3": "G_gears",
-        "Need3Value": 6,
+        "Need3Value": 1,
         "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "仅存在于PSN/XBOX版本的东西，唯一目的就是增加一项成就。每激活25次就会放一次焰火，激活725次放更大的焰火并且获得成就__...and despair!",
+        "Introduction": "开启后，可以有效防止花粉过敏，并且可以很快吹干玩家。任何燃料物质可以为其补充燃料。",
         "ConsoleCommand": "c_spawn",
-        "Console": "accomploshrine"
-      },
-      {
-        "Picture": "S_quacken_drill",
-        "Name": "海妖之钻",
-        "EnName": "Quacken Drill",
-        "Need1": "G_quacken_beak",
-        "Need1Value": 1,
-        "Need2": "G_gears",
-        "Need2Value": 1,
-        "Need3": "S_electrical_doodad",
-        "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "在中海和深海种植海妖之钻可以钻出焦油井。",
-        "Console": "quackendrill"
+        "Console": "basefan"
       }
     ]
   },
@@ -994,16 +924,28 @@
         "Console": "spear"
       },
       {
-        "Picture": "S_poison_spear",
-        "Name": "毒矛",
-        "EnName": "Poison Spear",
-        "Need1": "S_spear",
+        "Picture": "S_halberd",
+        "Name": "战戟",
+        "EnName": "Halberd",
+        "Need1": "G_alloy",
         "Need1Value": 1,
-        "Need2": "G_venom_gland",
+        "Need2": "G_twigs",
+        "Need2Value": 2,
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "战戟拥有较高的伤害，击杀猪人守卫必定掉落，也可以在野猪獠牙武器店用 5 个呼噜币购买。",
+        "Console": "halberd"
+      },
+      {
+        "Picture": "S_cork_bat",
+        "Name": "软木棒",
+        "EnName": "Cork Bat",
+        "Need1": "G_cork",
+        "Need1Value": 3,
+        "Need2": "S_boards",
         "Need2Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "和长矛的攻击力相当，中毒的敌人攻速移速将会变慢，攻击力降低，然而收获的食材保鲜度将下降为原本的一半。",
-        "Console": "spear_poison"
+        "Introduction": "极高的攻击力...是作为武器不错的选择。",
+        "Console": "cork_bat"
       },
       {
         "Picture": "S_ham_bat",
@@ -1032,42 +974,40 @@
         "Console": "armorwood"
       },
       {
-        "Picture": "S_seashell_suit",
-        "Name": "海贝盔甲",
-        "EnName": "Seashell Suit",
-        "Need1": "G_seashell",
-        "Need1Value": 10,
-        "Need2": "F_seaweed",
+        "Picture": "S_weevole_mantle",
+        "Name": "虫壳披风",
+        "EnName": "Weevole Mantle",
+        "Need1": "F_weevole_carapace",
+        "Need1Value": 4,
+        "Need2": "G_chitin",
         "Need2Value": 2,
-        "Need3": "S_rope",
-        "Need3Value": 1,
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "拥有一定的防御能力，它的好处是在潮湿季节使用时不会减慢玩家速度。",
+        "Console": "armor_weevole"
+      },
+      {
+        "Picture": "S_mant_mask",
+        "Name": "蚁盔",
+        "EnName": "Mant Mask",
+        "Need1": "G_chitin",
+        "Need1Value": 5,
+        "Need2": "S_football_helmet",
+        "Need2Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "吸收大部分的伤害，防止被毒蛇、毒蚊、毒蜘蛛战士攻击时中毒。",
-        "Console": "armorseashell"
+        "Introduction": "戴上它轻松伪装成蚂蚁，拥有较高的防御及防水能力。",
+        "Console": "antmaskhat"
       },
       {
-        "Picture": "S_limestone_suit",
-        "Name": "石灰石盔甲",
-        "EnName": "Limestone Suit",
-        "Need1": "S_limestone",
-        "Need1Value": 3,
-        "Need2": "S_rope",
-        "Need2Value": 2,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "吸收大量伤害，每分钟回复2点精神，但是会减少10%的速度。",
-        "Console": "armorlimestone"
-      },
-      {
-        "Picture": "S_cactus_armour",
-        "Name": "象仙人掌盔甲",
-        "EnName": "Cactus Armor",
-        "Need1": "G_cactus_spike",
-        "Need1Value": 3,
+        "Picture": "S_mant_suit",
+        "Name": "蚁甲",
+        "EnName": "Mant Suit",
+        "Need1": "G_chitin",
+        "Need1Value": 5,
         "Need2": "S_log_suit",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "防御力很高，每次受到攻击都会反弹17点伤害，使象仙人掌无视玩家并且免疫来自象仙人掌的攻击。",
-        "Console": "armorcactus"
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "穿上它轻松伪装成蚂蚁，拥有较高的防御能力及一定的防水能力。蚁甲除了拥有防御耐久还有时间耐久，并且它们将单独计算。",
+        "Console": "antsuit"
       },
       {
         "Picture": "S_football_helmet",
@@ -1082,18 +1022,28 @@
         "Console": "footballhat"
       },
       {
-        "Picture": "S_horned_helmet",
-        "Name": "角状头盔",
-        "EnName": "Horned Helmet",
-        "Need1": "G_horn",
-        "Need1Value": 1,
-        "Need2": "G_seashell",
+        "Picture": "S_fancy_helmet",
+        "Name": "花哨的头盔",
+        "EnName": "Fancy Helmet",
+        "Need1": "G_alloy",
+        "Need1Value": 3,
+        "Need2": "G_cork",
+        "Need2Value": 3,
+        "Unlock": [ "S_science_machine"],
+        "Introduction": "拥有较高的防御能力及一定的防水能力，然而会减慢玩家速度。",
+        "Console": "metalplatehat"
+      },
+      {
+        "Picture": "S_tin_suit",
+        "Name": "锡甲",
+        "EnName": "Tin Suit",
+        "Need1": "G_alloy",
+        "Need1Value": 3,
+        "Need2": "S_hammer",
         "Need2Value": 1,
-        "Need3": "S_rope",
-        "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "防御力极高，有一定防水功效，还能防止被毒蛇、毒蚊、蜘蛛战士攻击时中毒。",
-        "Console": "oxhat"
+        "Unlock": [ "S_science_machine"],
+        "Introduction": "拥有较高的防御能力，然而会减慢玩家速度。",
+        "Console": "armor_metalplate"
       },
       {
         "Picture": "S_blow_dart",
@@ -1138,20 +1088,6 @@
         "Console": "blowdart_fire"
       },
       {
-        "Picture": "S_poison_dart",
-        "Name": "淬毒吹箭",
-        "EnName": "Poison Dart",
-        "Need1": "G_cut_reeds",
-        "Need1Value": 2,
-        "Need2": "G_venom_gland",
-        "Need2Value": 1,
-        "Need3": "G_jet_feather",
-        "Need3Value": 1,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "一次性武器，在两分钟内每十秒毒两点血，共造成二十六点伤害。如果生物被毒死食材会变得不新鲜。",
-        "Console": "blowdart_poison"
-      },
-      {
         "Picture": "S_boomerang",
         "Name": "回旋镖",
         "EnName": "Boomerang",
@@ -1194,44 +1130,18 @@
         "Console": "trap_teeth"
       },
       {
-        "Picture": "S_coconade",
-        "Name": "椰壳炸弹",
-        "EnName": "Coconade",
-        "Need1": "F_coconut",
-        "Need1Value": 1,
-        "Need2": "S_gunpowder",
+        "Picture": "S_blunderbuss",
+        "Name": "火铳",
+        "EnName": "Blunderbuss",
+        "Need1": "S_boards",
+        "Need1Value": 2,
+        "Need2": "G_tenpiece_oinc",
         "Need2Value": 1,
-        "Need3": "S_rope",
+        "Need3": "G_gears",
         "Need3Value": 1,
         "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "可以放在地上点燃又可以点燃后丢出去的炸弹，造成250点伤害。",
-        "Console": "coconade"
-      },
-      {
-        "Picture": "S_spear_gun",
-        "Name": "矛枪",
-        "EnName": "Spear Gun",
-        "Need1": "G_bamboo_patch",
-        "Need1Value": 3,
-        "Need2": "A_jellyfish",
-        "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "可以装载长矛、战斗长矛、毒矛、黑曜石矛，射出去造成三倍伤害。射出的矛需重新拾起填装。一个矛枪可以使用八次。",
-        "Console": "spear_launcher"
-      },
-      {
-        "Picture": "S_cutlass_supreme",
-        "Name": "旗鱼短剑",
-        "EnName": "Cutlass Supreme",
-        "Need1": "G_dead_swordfish",
-        "Need1Value": 1,
-        "Need2": "S_gold_nugget",
-        "Need2Value": 2,
-        "Need3": "G_twigs",
-        "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "拥有高额的伤害，对豹卷风还能造成1.5倍伤害加成。攻击力虽高可是需要旗鱼。",
-        "Console": "cutlass"
+        "Introduction": "需要火药才能使用。造成远程的 200 点伤害，十分强力！",
+        "Console": "blunderbuss"
       }
     ]
   },
@@ -1249,17 +1159,17 @@
         "Console": "treasurechest"
       },
       {
-        "Picture": "S_sea_chest",
-        "Name": "海上箱子",
-        "EnName": "Sea Chest",
-        "Need1": "G_tar",
-        "Need1Value": 1,
-        "Need2": "S_boards",
-        "Need2Value": 4,
+        "Picture": "S_cork_barrel",
+        "Name": "软木桶",
+        "EnName": "Cork Barrel",
+        "Need1": "G_cork",
+        "Need1Value": 2,
+        "Need2": "S_rope",
+        "Need2Value": 1,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "拥有3×3格的储物箱子。只能放在海上",
+        "Introduction": "可以储存 4 样物品，防水防火，并且帕格狐狸无法打开它。",
         "ConsoleCommand": "c_spawn",
-        "Console": "waterchest"
+        "Console": "corkchest"
       },
       {
         "Picture": "S_sign",
@@ -1307,88 +1217,6 @@
         "Console": "wall_stone_item"
       },
       {
-        "Picture": "S_limestone_wall",
-        "Name": "石灰石墙",
-        "EnName": "Limestone Wall",
-        "Need1": "S_limestone",
-        "Need1Value": 2,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "可放置围墙，每份250生命，可叠加放置，最高500，有时间的话可以造一些。",
-        "Console": "wall_limestone_item"
-      },
-      {
-        "Picture": "S_sea_wall",
-        "Name": "海堤",
-        "EnName": "Sea Wall",
-        "Need1": "S_limestone",
-        "Need1Value": 2,
-        "Need2": "F_seaweed",
-        "Need2Value": 4,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "可放置围墙，每份375生命，可叠加放置，最高750，只能放在海上，可以阻挡海浪、鳄狗。被攻击掉落珊瑚，不能使用石灰石或珊瑚修理。",
-        "Console": "wall_enforcedlimestone_item"
-      },
-      {
-        "Picture": "S_wildbore_house",
-        "Name": "荒野小屋",
-        "EnName": "Wildbore House",
-        "Need1": "G_bamboo_patch",
-        "Need1Value": 8,
-        "Need2": "G_palm_leaf",
-        "Need2Value": 5,
-        "Need3": "G_pig_skin",
-        "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "建造一个荒野小屋，类似猪人房，不过当你拆荒野小屋的时候野猪会试图保护它。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "wildborehouse"
-      },
-      {
-        "Picture": "S_ballphin_palace",
-        "Name": "海豚宫殿",
-        "EnName": "Ballphin Palace",
-        "Need1": "S_limestone",
-        "Need1Value": 4,
-        "Need2": "F_seaweed",
-        "Need2Value": 4,
-        "Need3": "G_dorsal_fin",
-        "Need3Value": 2,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "建造一个海豚宫殿，每个海豚宫殿居住着一只宽吻海豚，它黄昏的时候会回到海豚宫殿。当玩家靠近时，灯光不会熄灭，足矣在旁边度过一晚。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "ballphinhouse"
-      },
-      {
-        "Picture": "S_prime_ape_hut",
-        "Name": "猿猴小屋",
-        "EnName": "Prime Ape Hut",
-        "Need1": "G_twigs",
-        "Need1Value": 10,
-        "Need2": "F_banana",
-        "Need2Value": 3,
-        "Need3": "G_manure",
-        "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "建造一个猿猴小屋，最多产生四只猿。猿被击杀后新的猿将会在短时间内重生。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "primeapebarrel"
-      },
-      {
-        "Picture": "S_dragoon_den",
-        "Name": "龙人巢",
-        "EnName": "Dragoon Den",
-        "Need1": "G_dragoon_heart",
-        "Need1Value": 1,
-        "Need2": "G_rocks",
-        "Need2Value": 5,
-        "Need3": "G_obsidian",
-        "Need3Value": 4,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "建造一个龙人巢，产生3到4只龙人。不能用锤子摧毁，只能用火药或椰壳炸弹炸毁。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "dragoonden"
-      },
-      {
         "Picture": "S_birdcage",
         "Name": "鸟笼",
         "EnName": "Birdcage",
@@ -1426,42 +1254,50 @@
         "Console": "turf_woodfloor"
       },
       {
-        "Picture": "S_snakeskin_rug",
-        "Name": "蛇皮地毯",
-        "EnName": "Snakeskin Rug",
-        "Need1": "G_snakeskin_hamlet",
-        "Need1Value": 2,
-        "Need2": "S_cloth",
+        "Picture": "S_checkered_flooring",
+        "Name": "棋格地板",
+        "EnName": "Checkered Flooring",
+        "Need1": "G_marble",
+        "Need1Value": 1,
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "可放置地皮，仅有装饰性。",
+        "Console": "turf_checkerfloor"
+      },
+      {
+        "Picture": "S_carpeted_flooring",
+        "Name": "地毯地板",
+        "EnName": "Carpeted Flooring",
+        "Need1": "S_boards",
+        "Need1Value": 1,
+        "Need2": "G_beefalo_wool",
         "Need2Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "可放置地皮，不会产生水坑，然而无法阻止潮汐和洪水。",
-        "Console": "turf_snakeskinfloor"
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "可放置地皮，仅有装饰性。",
+        "Console": "turf_carpetfloor"
       },
       {
-        "Picture": "S_sandbag",
-        "Name": "沙袋",
-        "EnName": "SandBag",
-        "Need1": "S_cloth",
+        "Picture": "S_lawn_turf",
+        "Name": "装饰草坪",
+        "EnName": "Lawn Turf",
+        "Need1": "G_cut_grass",
         "Need1Value": 2,
-        "Need2": "G_sand",
-        "Need2Value": 3,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "阻止洪水、填充水坑就靠它！每份200点生命。",
-        "Console": "sandbagsmall_item"
+        "Need2": "G_nitre",
+        "Need2Value": 1,
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "可放置地皮，仅有装饰性。",
+        "Console": "turf_lawn"
       },
       {
-        "Picture": "S_sand_castle",
-        "Name": "沙雕",
-        "EnName": "Sand Castle",
-        "Need1": "G_sand",
-        "Need1Value": 4,
-        "Need2": "G_palm_leaf",
-        "Need2Value": 2,
-        "Need3": "G_seashell",
-        "Need3Value": 3,
-        "Introduction": "沙雕嘛，当然只能建在沙滩上啦！站在周围会增加精神，只会持续一天。一天结束后会变成沙子、贝壳和椰树叶各一个。",
-        "ConsoleCommand": "c_spawn",
-        "Console": "sand_castle"
+        "Picture": "S_cultivated_turf",
+        "Name": "耕地地皮",
+        "EnName": "Cultivated Turf",
+        "Need1": "G_rainforest_turf",
+        "Need1Value": 1,
+        "Need2": "G_ash",
+        "Need2Value": 1,
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "可放置地皮，仅有装饰性。",
+        "Console": "turf_fields"
       }
     ]
   },
@@ -1498,6 +1334,18 @@
         "Console": "cutstone"
       },
       {
+        "Picture": "S_claw_palm_sapling",
+        "Name": "棕榈爪树苗",
+        "EnName": "Claw Palm Sapling",
+        "Need1": "G_cork",
+        "Need1Value": 1,
+        "Need2": "G_manure",
+        "Need2Value": 1,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "经过一天会长成棕榈爪树。",
+        "Console": "clawpalmtree_sapling"
+      },
+      {
         "Picture": "S_papyrus",
         "Name": "莎草纸",
         "EnName": "Papyrus",
@@ -1508,66 +1356,24 @@
         "Console": "papyrus"
       },
       {
-        "Picture": "S_cloth",
-        "Name": "布",
-        "EnName": "Cloth",
-        "Need1": "G_bamboo_patch",
-        "Need1Value": 3,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "高级素材，可进一步合成更多道具。",
-        "Console": "fabric"
-      },
-      {
-        "Picture": "S_limestone",
-        "Name": "石灰石",
-        "EnName": "Limestone",
-        "Need1": "G_coral",
-        "Need1Value": 3,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "高级素材，可进一步合成更多道具。",
-        "Console": "Limestone"
-      },
-      {
-        "Picture": "S_coral_nubbin",
-        "Name": "珊瑚种子",
-        "EnName": "Coral Nubbin",
-        "Need1": "S_limestone",
-        "Need1Value": 3,
-        "Need2": "G_coral_larva",
-        "Need2Value": 1,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "可以种植珊瑚礁。",
-        "Console": "nubbin"
-      },
-      {
         "Picture": "S_gold_nugget",
         "Name": "金块",
         "EnName": "Gold Nugget",
-        "Need1": "G_dubloons",
-        "Need1Value": 3,
+        "Need1": "G_gold_dust",
+        "Need1Value": 6,
         "Unlock": [ "S_science_machine" ],
         "Introduction": "高级素材，可进一步合成更多道具。",
         "Console": "goldnugget"
       },
       {
-        "Picture": "S_ice",
-        "Name": "冰",
-        "EnName": "Ice",
-        "Need1": "G_hail",
-        "Need1Value": 4,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "高级素材，可进一步合成更多道具。也可以食用。",
-        "Console": "ice"
-      },
-      {
-        "Picture": "S_empty_bottle",
-        "Name": "空瓶子",
-        "EnName": "Empty Bottle",
-        "Need1": "G_sand",
+        "Picture": "S_venom_gland",
+        "Name": "毒腺",
+        "EnName": "Venom Gland",
+        "Need1": "F_poison_dartfrog_legs",
         "Need1Value": 3,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "高级素材，可进一步合成更多道具。",
-        "Console": "messagebottleempty"
+        "Unlock": [ "S_alchemy_engine" ],
+        "Introduction": "高级素材，可进一步合成更多道具。直接食用会中毒。",
+        "Console": "venomgland"
       },
       {
         "Picture": "S_nightmare_fuel",
@@ -1596,19 +1402,19 @@
   "Magic": {
     "Science": [
       {
-        "Picture": "S_prestihatitator",
-        "Name": "灵子分解机",
-        "EnName": "Prestihatitator",
-        "Need1": "G_parrot",
-        "Need1Value": 1,
+        "Picture": "S_hogus_porkusator",
+        "Name": "石猪引擎",
+        "EnName": "Hogus Porkusator",
+        "Need1": "G_pig_skin",
+        "Need1Value": 4,
         "Need2": "S_boards",
         "Need2Value": 4,
-        "Need3": "G_pirate_hat",
-        "Need3Value": 1,
+        "Need3": "G_azure_feather",
+        "Need3Value": 4,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。解锁物品科技有10%的几率产生兔子，由于它们无家可归，所以很容易在夜晚捕捉。",
+        "Introduction": "靠近后将暂时解锁玩家一级魔法，完成对应物品制作将永久解锁该物品科技。",
         "ConsoleCommand": "c_spawn",
-        "Console": "researchlab4"
+        "Console": "hogusporkusator"
       },
       {
         "Picture": "S_shadow_manipulator",
@@ -1653,20 +1459,6 @@
         "Unlock": [ "S_prestihatitator" ],
         "Introduction": "能让周围所有生物睡着的神器，由于制作材料需要曼德拉草，一般还是捡到的比较多。",
         "Console": "panflute"
-      },
-      {
-        "Picture": "S_dripple_pipes",
-        "Name": "滴水的长管",
-        "EnName": "Dripple Pipes",
-        "Need1": "G_horn",
-        "Need1Value": 1,
-        "Need2": "G_nightmare_fuel",
-        "Need2Value": 2,
-        "Need3": "S_rope",
-        "Need3Value": 1,
-        "Unlock": [ "S_prestihatitator" ],
-        "Introduction": "冬天使用会下雪，其他时候使用会下小雨。改变天气的奇妙物品。",
-        "Console": "ox_flute"
       },
       {
         "Picture": "S_one-man_band",
@@ -1815,6 +1607,21 @@
         "Introduction": "放置三枚紫宝石后开始工作，使用传送法杖的时候就会固定传送到该位置，由于成本太高，不太常用。(三角传送点：gemsocket)",
         "ConsoleCommand": "c_spawn",
         "Console": "telebase"
+      },
+      {
+        "Picture": "S_skyworthy",
+        "Name": "天空之椅",
+        "EnName": "Skyworthy",
+        "Need1": "G_nightmare_fuel",
+        "Need1Value": 4,
+        "Need2": "G_living_log",
+        "Need2Value": 4,
+        "Need3": "G_can_of_silly_string",
+        "Need3Value": 1,
+        "Unlock": [ "S_shadow_manipulator" ],
+        "Introduction": "激活后可以选择前往失落之船世界或生存世界。",
+        "ConsoleCommand": "c_spawn",
+        "Console": "porkland_exit"
       }
     ]
   },
@@ -1863,68 +1670,46 @@
         "Console": "tophat"
       },
       {
-        "Picture": "S_fashion_melon",
-        "Name": "时尚西瓜帽",
-        "EnName": "Fashion Melon",
-        "Need1": "F_watermelon",
+        "Picture": "S_gas_mask",
+        "Name": "防毒面具",
+        "EnName": "Gas Mask",
+        "Need1": "G_peagawk_plume",
+        "Need1Value": 4,
+        "Need2": "G_cloth",
+        "Need2Value": 1,
+        "Need3": "G_pig_skin",
+        "Need3Value": 1,
+        "Unlock": [ "S_alchemy_engine"],
+        "Introduction": "防止玩家受到雨林的毒气的伤害以及繁盛季节的花粉过敏。不过代价是会降低精神（-10精神/分钟）。",
+        "Console": "gasmaskhat"
+      },
+      {
+        "Picture": "S_pith_hat",
+        "Name": "木帽",
+        "EnName": "Pith Hat",
+        "Need1": "G_cloth",
         "Need1Value": 1,
-        "Need2": "G_twigs",
+        "Need2": "G_vine",
         "Need2Value": 3,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "夏天可以稍微防止高温，不过腐烂速度实在是有点快。",
-        "Console": "watermelonhat"
-      },
-      {
-        "Picture": "S_ice_cube",
-        "Name": "冰方块",
-        "EnName": "Ice Cube",
-        "Need1": "S_electrical_doodad",
-        "Need1Value": 2,
-        "Need2": "S_rope",
-        "Need2Value": 4,
-        "Need3": "S_ice",
-        "Need3Value": 10,
+        "Need3": "G_cork",
+        "Need3Value": 6,
         "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "制作材料倒是一点都不困难，只要提前在冰箱里准备好冰块就行了。不过带上后湿度会增加，速度也会降低10%，比较头痛。",
-        "Console": "icehat"
+        "Introduction": "主要用于防止在潮湿季节收到雾的减速效果。",
+        "Console": "pithhat"
       },
       {
-        "Picture": "S_brain_of_thought",
-        "Name": "智慧帽",
-        "EnName": "Brain of Thought",
-        "Need1": "F_brainy_matter",
+        "Picture": "S_thunderhat",
+        "Name": "雷电帽",
+        "EnName": "Thunderhat",
+        "Need1": "G_thunder_feather",
         "Need1Value": 1,
-        "Need2": "A_jellyfish",
-        "Need2Value": 1,
-        "Need3": "S_rope",
-        "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "谁最聪明吖？戴上它可以制作四次任何可合成的物品而不需要科技，但是不会解锁该物品的配方。",
-        "Console": "brainjellyhat"
-      },
-      {
-        "Picture": "S_shark_tooth_crown",
-        "Name": "鲨齿王冠",
-        "EnName": "Shark Tooth Crown",
-        "Need1": "G_hound's_tooth",
-        "Need1Value": 5,
         "Need2": "S_gold_nugget",
-        "Need2Value": 1,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "在船上戴上它每分钟恢复6.6精神。金灿灿的牙齿高贵身份显露无疑。",
-        "Console": "shark_teethhat"
-      },
-      {
-        "Picture": "S_beekeeper_hat",
-        "Name": "养蜂帽",
-        "EnName": "Beekeeper Hat",
-        "Need1": "G_silk",
-        "Need1Value": 8,
-        "Need2": "S_rope",
-        "Need2Value": 1,
+        "Need2Value": 2,
+        "Need3": "G_cork",
+        "Need3Value": 3,
         "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "只能防御蜜蜂攻击，和橄榄球头盔防御系数一样，由于1个猪皮不比8个蜘蛛网难找，所以不太常用。",
-        "Console": "beehat"
+        "Introduction": "可以免疫 10 次闪电伤害。",
+        "Console": "thunderhat"
       },
       {
         "Picture": "S_feather_hat",
@@ -1955,7 +1740,7 @@
         "Console": "bushhat"
       },
       {
-        "Picture": "S_snakeskin_hat",
+        "Picture": "S_snakeskin_hat_hamlet",
         "Name": "蛇皮帽",
         "EnName": "Snakeskin Hat",
         "Need1": "G_snakeskin_hamlet",
@@ -1969,7 +1754,7 @@
         "Console": "snakeskinhat"
       },
       {
-        "Picture": "S_snakeskin_jacket",
+        "Picture": "S_snakeskin_jacket_hamlet",
         "Name": "蛇皮上衣",
         "EnName": "Snakeskin Jacket",
         "Need1": "G_snakeskin_hamlet",
@@ -1981,118 +1766,6 @@
         "Unlock": [ "S_science_machine" ],
         "Introduction": "和蛇皮帽效果一样，另外还具有较差的保暖功能，和兔子耳罩差不多。",
         "Console": "armor_snakeskin"
-      },
-      {
-        "Picture": "S_blubber_suit",
-        "Name": "鲸脂套装",
-        "EnName": "Blubber Suit",
-        "Need1": "F_blubber",
-        "Need1Value": 4,
-        "Need2": "S_cloth",
-        "Need2Value": 2,
-        "Need3": "G_palm_leaf",
-        "Need3Value": 2,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "完全免疫水和雨！保暖功效和牛帽一样！",
-        "Console": "blubbersuit"
-      },
-      {
-        "Picture": "S_tar_suit",
-        "Name": "焦油套装",
-        "EnName": "Tar Suit",
-        "Need1": "G_tar",
-        "Need1Value": 4,
-        "Need2": "S_cloth",
-        "Need2Value": 2,
-        "Need3": "G_palm_leaf",
-        "Need3Value": 2,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "完全免疫水、雨和雷电！可以使用缝补工具修补。",
-        "Console": "tarsuit"
-      },
-      {
-        "Picture": "S_summer_frest",
-        "Name": "夏季背心",
-        "EnName": "Summer Frest",
-        "Need1": "S_rope",
-        "Need1Value": 1,
-        "Need2": "G_crimson_feather",
-        "Need2Value": 3,
-        "Need3": "G_pig_skin",
-        "Need3Value": 2,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "夏天可以凉快一些，属性略低于花格衬衫。",
-        "Console": "reflectivevest"
-      },
-      {
-        "Picture": "S_floral_shirt",
-        "Name": "花格衬衫",
-        "EnName": "Floral Shirt",
-        "Need1": "S_papyrus",
-        "Need1Value": 3,
-        "Need2": "G_silk",
-        "Need2Value": 3,
-        "Need3": "G_petals",
-        "Need3Value": 5,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "夏天用来减缓温度上升的衣服，虽然效果不大，总比带负面效果的冰块要好一点吧。不能用缝补工具修补。在船难版里制作材料仙人掌花改为花瓣。",
-        "Console": "hawaiianshirt"
-      },
-      {
-        "Picture": "S_dumbrella",
-        "Name": "双层伞帽",
-        "EnName": "Dumbrella",
-        "Need1": "G_shark_gills",
-        "Need1Value": 2,
-        "Need2": "S_umbrella",
-        "Need2Value": 1,
-        "Need3": "S_straw_hat",
-        "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "像眼球伞一样防水防雷还延缓过热，可以空出双手来工作，非常方便。",
-        "Console": "double_umbrellahat"
-      },
-      {
-        "Picture": "S_windbreaker",
-        "Name": "风衣",
-        "EnName": "Windbreaker",
-        "Need1": "F_blubber",
-        "Need1Value": 2,
-        "Need2": "S_cloth",
-        "Need2Value": 1,
-        "Need3": "S_rope",
-        "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "20%防水，并且防止被大风吹跑，穿上后还会减小被豹卷风卷影响的半径。",
-        "Console": "armor_windbreaker"
-      },
-      {
-        "Picture": "S_particulate_purifier",
-        "Name": "粉尘净化器",
-        "EnName": "Particulate Purifier",
-        "Need1": "S_empty_bottle",
-        "Need1Value": 2,
-        "Need2": "G_coral",
-        "Need2Value": 3,
-        "Need3": "A_jellyfish",
-        "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "戴上它就可以免疫毒洞和恶臭魔鬼鱼的毒！机器人戴上它大概是为了臭美一下吧？",
-        "Console": "gashat"
-      },
-      {
-        "Picture": "S_sleek_hat",
-        "Name": "星芒头盔",
-        "EnName": "Sleek Hat",
-        "Need1": "G_shark_fin",
-        "Need1Value": 1,
-        "Need2": "G_vine",
-        "Need2Value": 2,
-        "Need3": "F_coconut",
-        "Need3Value": 1,
-        "Unlock": [ "S_alchemy_engine"],
-        "Introduction": "增加25%的移动速度，和步行手杖一样。还能抵御些许风！",
-        "Console": "aerodynamichat"
       }
     ]
   },
@@ -2154,134 +1827,59 @@
         "Console": "book_brimstone"
       },
       {
-        "Picture": "S_joy_of_volcanology",
-        "Name": "《欢乐的火山》",
-        "EnName": "Joy Of Volcanology",
+        "Picture": "S_on_tentacles",
+        "Name": "《触手之上》",
+        "EnName": "On Tentacles",
         "Need1": "S_papyrus",
         "Need1Value": 2,
-        "Need2": "G_obsidian",
-        "Need2Value": 2,
-        "Need3Value": 0,
-        "Unlock": [ "S_prestihatitator" ],
-        "UnlockCharcter": "C_wickerbottom",
-        "Introduction": "在玩家位置落下四个龙人蛋(不会保存完整)。阅读书籍不会降低精神，维克波顿专有，可使用5次。",
-        "Console": "book_meteor"
+        "Need2": "G_tentacle_spots",
+        "Need2Value": 1,
+        "Unlock": [ "S_alchemy_engine" ],
+        "UnlockCharcter": "C_wickerbottom_dst",
+        "Introduction": "维克波顿周围将出现3只触手，阅读书籍将会降低50精神，维克波顿专有，可使用5次。",
+        "Console": "book_tentacles"
       }
     ]
   },
-  "Volcano": {
+  "CityPlanning": {
     "Science": [
       {
-        "Picture": "S_obsidian_machete",
-        "Name": "黑曜石砍刀",
-        "EnName": "Obsidian Machete",
-        "Need1": "S_machete",
+        "Picture": "S_flat_stone_turf",
+        "Name": "平整的石制地面",
+        "EnName": "Flat Stone Turf",
+        "Need1": "S_cut_stone",
         "Need1Value": 1,
-        "Need2": "G_obsidian",
-        "Need2Value": 3,
-        "Need3": "G_dragoon_heart",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "挥砍更有效率。拥有29点攻击力，如果充能能打出连击。除了风季，会逐渐充能，能量和第二击伤害(最高29)成正比。过度充能会导致攻击的目标燃烧。充能还会发光发热，会导致过热。",
-        "Console": "obsidianmachete"
+        "Unlock": [ "G_key_to_the_city" ],
+        "Introduction": "可放置地皮，仅有装饰性。",
+        "Console": "turf_foundation"
       },
       {
-        "Picture": "S_obsidian_axe",
-        "Name": "黑曜石斧",
-        "EnName": "Obsidian Axe",
-        "Need1": "S_axe",
-        "Need1Value": 1,
-        "Need2": "G_obsidian",
-        "Need2Value": 2,
-        "Need3": "G_dragoon_heart",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "砍树效率是普通斧头的2.5倍。和黑曜石砍刀一样会充能。",
-        "Console": "obsidianaxe"
-      },
-      {
-        "Picture": "S_obsidian_spear",
-        "Name": "黑曜石矛",
-        "EnName": "Obsidian Spear",
-        "Need1": "S_spear",
-        "Need1Value": 1,
-        "Need2": "G_obsidian",
-        "Need2Value": 3,
-        "Need3": "G_dragoon_heart",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "拥有51点攻击力，充满能后攻击将会达到102点。",
-        "Console": "spear_obsidian"
-      },
-      {
-        "Picture": "S_volcano_staff",
-        "Name": "熔岩法杖",
-        "EnName": "Volcano Staff",
-        "Need1": "S_fire_staff",
-        "Need1Value": 1,
-        "Need2": "G_obsidian",
-        "Need2Value": 4,
-        "Need3": "G_dragoon_heart",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "施放符咒会导致下龙人蛋雨，不同于天然的火山喷发，没有机会保留完整的龙人蛋。",
-        "Console": "volcanostaff"
-      },
-      {
-        "Picture": "S_obsidian_armour",
-        "Name": "黑曜石盔甲",
-        "EnName": "Obsidian Armor",
-        "Need1": "S_log_suit",
-        "Need1Value": 1,
-        "Need2": "G_obsidian",
-        "Need2Value": 5,
-        "Need3": "G_dragoon_heart",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "类似龙鳞盔甲，然而不会恢复精神，而且耐久度也只有龙鳞盔甲的四分之三。",
-        "Console": "armorobsidian"
-      },
-      {
-        "Picture": "S_obsidian_coconade",
-        "Name": "黑曜石炸弹",
-        "EnName": "Obsidian Coconade",
-        "Need1": "S_coconade",
-        "Need1Value": 3,
-        "Need2": "G_obsidian",
-        "Need2Value": 3,
-        "Need3": "G_dragoon_heart",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "类似椰壳炸弹，不过威力更大，能造成340点伤害，而且一次制造三个。",
-        "Console": "obsidiancoconade"
-      },
-      {
-        "Picture": "S_howling_conch",
-        "Name": "呼啸的海螺",
-        "EnName": "Howling Conch",
-        "Need1": "G_obsidian",
-        "Need1Value": 4,
-        "Need2": "S_purple_gem",
-        "Need2Value": 1,
-        "Need3": "G_magic_seal",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "使用后会开始持续半天的强风，如果在巨人的统治里使用则会变成降雨。",
-        "Console": "wind_conch"
-      },
-      {
-        "Picture": "S_sail_stick",
-        "Name": "帆棍",
-        "EnName": "Sail Stick",
-        "Need1": "G_obsidian",
+        "Picture": "S_stone_road_turf",
+        "Name": "卵石路地皮",
+        "EnName": "Stone Road Turf",
+        "Need1": "S_cut_stone",
         "Need1Value": 2,
-        "Need2": "G_nightmare_fuel",
-        "Need2Value": 3,
-        "Need3": "G_magic_seal",
-        "Need3Value": 1,
-        "Unlock": [ "N_obsidian_workbench" ],
-        "Introduction": "改变风向的神器道具，装备着帆棍无论怎么走都是顺风！",
-        "Console": "sail_stick"
+        "Need2": "S_boards",
+        "Need2Value": 1,
+        "Unlock": [ "G_key_to_the_city" ],
+        "Introduction": "可放置地皮，仅有装饰性。",
+        "Console": "turf_cobbleroad"
+      }
+    ]
+  },
+  "Renovate": {
+    "Science": [
+      {
+        "Picture": "S_birds_of_the_world",
+        "Name": "《世界鸟类》",
+        "EnName": "Birds Of The World",
+        "Need1": "S_papyrus",
+        "Need1Value": 2,
+        "Need2": "G_egg",
+        "Need2Value": 2,
+        "Unlock": [ "S_science_machine" ],
+        "Introduction": "维克波顿周围将出现大量的鸟类，阅读书籍将会降低50精神，维克波顿专有，可使用5次。",
+        "Console": "book_birds"
       }
     ]
   }

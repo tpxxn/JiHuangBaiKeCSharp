@@ -2891,7 +2891,6 @@
         "Need1Value": 2,
         "Need2": "G_tentacle_spots",
         "Need2Value": 1,
-        "Need3Value": 0,
         "Unlock": [ "S_alchemy_engine" ],
         "UnlockCharcter": "C_wickerbottom_dst",
         "Introduction": "维克波顿周围将出现3只触手，阅读书籍将会降低50精神，维克波顿专有，可使用5次。",

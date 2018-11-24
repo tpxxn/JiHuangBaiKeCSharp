@@ -179,11 +179,15 @@ namespace 饥荒百科全书CSharp.View
             if (Global.GameVersion != 4 && Global.GameVersion != 5)
             {
                 NauticalExpander.Visibility = Visibility.Collapsed;
-                VolcanoExpander.Visibility = Visibility.Collapsed;
             }
             else
             {
                 AncientExpander.Visibility = Visibility.Collapsed;
+            }
+            //SW
+            if (Global.GameVersion != 4)
+            {
+                VolcanoExpander.Visibility = Visibility.Collapsed;
             }
             //Hamlet
             if (Global.GameVersion != 5)
