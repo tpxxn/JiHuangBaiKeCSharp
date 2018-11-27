@@ -32,6 +32,213 @@
         <GridSplitter x:Name="UiSplitter" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Height="608" VerticalAlignment="Top" Width="5" Background="#FF828282" Cursor="{DynamicResource CursorHorz}" Style="{DynamicResource GridSplitterStyle}" />
         <ScrollViewer x:Name="RightScrollViewer" Template="{StaticResource MyScrollViewer}" Grid.Column="1" Margin="5,0,0,0" Focusable="False" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>
+                <Expander x:Name="RenovateExpander" Style="{StaticResource ExpanderStyle2}">
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate.png" />
+                            <TextBlock Text="翻新" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel Margin="10">
+                            <Expander x:Name="RenovateFlooringExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_flooring.png" />
+                                        <TextBlock Text="地板" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateShelvesExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_shelves.png" />
+                                        <TextBlock Text="货架" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovatePlantholdersExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_plantholders.png" />
+                                        <TextBlock Text="植物种植盆" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateColumnsExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_columns.png" />
+                                        <TextBlock Text="梁柱" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateWallPapersExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_wall_papers.png" />
+                                        <TextBlock Text="墙纸" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateCeilingLightsExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_ceiling_lights.png" />
+                                        <TextBlock Text="吊灯" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateWallDecorationsExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_wall_decorations.png" />
+                                        <TextBlock Text="墙壁装饰" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateChairsExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_chairs.png" />
+                                        <TextBlock Text="椅子" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateHouseUpgradesExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_house_upgrades.png" />
+                                        <TextBlock Text="配套家具" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateWindowsExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_windows.png" />
+                                        <TextBlock Text="窗帘" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateRugsExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_rugs.png" />
+                                        <TextBlock Text="地毯" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateLampsExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_lamps.png" />
+                                        <TextBlock Text="落地灯" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                            <Expander x:Name="RenovateTablesExpander" Style="{StaticResource ExpanderStyle}" >
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate_tables.png" />
+                                        <TextBlock Text="桌子" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Expander>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
                 <Expander x:Name="ToolExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
@@ -377,21 +584,7 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
-                <Expander x:Name="RenovateExpander" Style="{StaticResource ExpanderStyle}" >
-                    <Expander.Header>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_renovate.png" />
-                            <TextBlock x:Name="RenovateExpanderTextBolck" Text="修复" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Expander.Header>
-                    <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal"/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                    </ItemsControl>
-                </Expander>
+                
             </StackPanel>
         </ScrollViewer>
     </Grid>

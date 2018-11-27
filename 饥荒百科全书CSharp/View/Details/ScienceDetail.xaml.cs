@@ -96,6 +96,10 @@ namespace 饥荒百科全书CSharp.View.Details
                 ConsolePre.Text = $"c_give(\"{c.Console}\",";
             else
                 ConsolePre.Text = c.ConsoleCommand + $"(\"{c.Console}\",";
+            if (string.IsNullOrEmpty(c.Console))
+            {
+                CopyGrid.Visibility = Visibility.Collapsed;
+            }
         }
 
         private string _unlockCharcter;

@@ -262,9 +262,163 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
 
     public class Renovate
     {
-        public List<Science> Science { get; set; }
+        public RenovateFlooring RenovateFlooring { get; set; }
+        public RenovateShelves RenovateShelves { get; set; }
+        public RenovatePlantholders RenovatePlantholders { get; set; }
+        public RenovateColumns RenovateColumns { get; set; }
+        public RenovateWallPapers RenovateWallPapers { get; set; }
+        public RenovateCeilingLights RenovateCeilingLights { get; set; }
+        public RenovateWallDecorations RenovateWallDecorations { get; set; }
+        public RenovateChairs RenovateChairs { get; set; }
+        public RenovateHouseUpgrades RenovateHouseUpgrades { get; set; }
+        public RenovateWindows RenovateWindows { get; set; }
+        public RenovateRugs RenovateRugs { get; set; }
+        public RenovateLamps RenovateLamps { get; set; }
+        public RenovateTables RenovateTables { get; set; }
 
         public Renovate()
+        {
+            RenovateFlooring = new RenovateFlooring();
+            RenovateShelves = new RenovateShelves();
+            RenovatePlantholders = new RenovatePlantholders();
+            RenovateColumns = new RenovateColumns();
+            RenovateWallPapers = new RenovateWallPapers();
+            RenovateCeilingLights = new RenovateCeilingLights();
+            RenovateWallDecorations = new RenovateWallDecorations();
+            RenovateChairs = new RenovateChairs();
+            RenovateHouseUpgrades = new RenovateHouseUpgrades();
+            RenovateWindows = new RenovateWindows();
+            RenovateRugs = new RenovateRugs();
+            RenovateLamps = new RenovateLamps();
+            RenovateTables = new RenovateTables();
+        }
+    }
+
+    public class RenovateFlooring
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateFlooring()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateShelves
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateShelves()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovatePlantholders
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovatePlantholders()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateColumns
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateColumns()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateWallPapers
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateWallPapers()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateCeilingLights
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateCeilingLights()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateWallDecorations
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateWallDecorations()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateChairs
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateChairs()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateHouseUpgrades
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateHouseUpgrades()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateWindows
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateWindows()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateRugs
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateRugs()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateLamps
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateLamps()
+        {
+            Science = new List<Science>();
+        }
+    }
+
+    public class RenovateTables
+    {
+        public List<Science> Science { get; set; }
+
+        public RenovateTables()
         {
             Science = new List<Science>();
         }

@@ -312,7 +312,19 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Science> ScienceOfferingsData = new List<Science>();
         public static readonly List<Science> ScienceVolcanoData = new List<Science>();
         public static readonly List<Science> ScienceCityPlanningData = new List<Science>();
-        public static readonly List<Science> ScienceRenovateData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateFlooringData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateShelvesData = new List<Science>();
+        public static readonly List<Science> ScienceRenovatePlantholdersData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateColumnsData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateWallPapersData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateCeilingLightsData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateWallDecorationsData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateChairsData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateHouseUpgradesData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateWindowsData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateRugsData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateLampsData = new List<Science>();
+        public static readonly List<Science> ScienceRenovateTablesData = new List<Science>();
         public static readonly List<Creature> CreatureLandData = new List<Creature>();
         public static readonly List<Creature> CreatureOceanData = new List<Creature>();
         public static readonly List<Creature> CreatureFlyData = new List<Creature>();
@@ -397,7 +409,19 @@ namespace 饥荒百科全书CSharp.Class
             ScienceOfferingsData.Clear();
             ScienceVolcanoData.Clear();
             ScienceCityPlanningData.Clear();
-            ScienceRenovateData.Clear();
+            ScienceRenovateFlooringData.Clear();
+            ScienceRenovateShelvesData.Clear();
+            ScienceRenovatePlantholdersData.Clear();
+            ScienceRenovateColumnsData.Clear();
+            ScienceRenovateWallPapersData.Clear();
+            ScienceRenovateCeilingLightsData.Clear();
+            ScienceRenovateWallDecorationsData.Clear();
+            ScienceRenovateChairsData.Clear();
+            ScienceRenovateHouseUpgradesData.Clear();
+            ScienceRenovateWindowsData.Clear();
+            ScienceRenovateRugsData.Clear();
+            ScienceRenovateLampsData.Clear();
+            ScienceRenovateTablesData.Clear();
             CreatureLandData.Clear();
             CreatureOceanData.Clear();
             CreatureFlyData.Clear();
@@ -637,11 +661,83 @@ namespace 饥荒百科全书CSharp.Class
                 ScienceCityPlanningData.Add(scienceCityPlanningItems);
                 AutoSuggestBoxItemSourceAdd(scienceCityPlanningItems, "ScienceCityPlanning");
             }
-            foreach (var scienceRenovateItems in science.Renovate.Science)
+            foreach (var scienceRenovateFlooringItems in science.Renovate.RenovateFlooring.Science)
             {
-                scienceRenovateItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateItems.Picture);
-                ScienceRenovateData.Add(scienceRenovateItems);
-                AutoSuggestBoxItemSourceAdd(scienceRenovateItems, "ScienceRenovate");
+                scienceRenovateFlooringItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateFlooringItems.Picture);
+                ScienceRenovateFlooringData.Add(scienceRenovateFlooringItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateFlooringItems, "ScienceRenovateFlooring");
+            }
+            foreach (var scienceRenovateShelvesItems in science.Renovate.RenovateShelves.Science)
+            {
+                scienceRenovateShelvesItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateShelvesItems.Picture);
+                ScienceRenovateShelvesData.Add(scienceRenovateShelvesItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateShelvesItems, "ScienceRenovateShelves");
+            }
+            foreach (var scienceRenovatePlantholdersItems in science.Renovate.RenovatePlantholders.Science)
+            {
+                scienceRenovatePlantholdersItems.Picture = StringProcess.GetGameResourcePath(scienceRenovatePlantholdersItems.Picture);
+                ScienceRenovatePlantholdersData.Add(scienceRenovatePlantholdersItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovatePlantholdersItems, "ScienceRenovatePlantholders");
+            }
+            foreach (var scienceRenovateColumnsItems in science.Renovate.RenovateColumns.Science)
+            {
+                scienceRenovateColumnsItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateColumnsItems.Picture);
+                ScienceRenovateColumnsData.Add(scienceRenovateColumnsItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateColumnsItems, "ScienceRenovateColumns");
+            }
+            foreach (var scienceRenovateWallPapersItems in science.Renovate.RenovateWallPapers.Science)
+            {
+                scienceRenovateWallPapersItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateWallPapersItems.Picture);
+                ScienceRenovateWallPapersData.Add(scienceRenovateWallPapersItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateWallPapersItems, "ScienceRenovateWallPapers");
+            }
+            foreach (var scienceRenovateCeilingLightsItems in science.Renovate.RenovateCeilingLights.Science)
+            {
+                scienceRenovateCeilingLightsItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateCeilingLightsItems.Picture);
+                ScienceRenovateCeilingLightsData.Add(scienceRenovateCeilingLightsItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateCeilingLightsItems, "ScienceRenovateCeilingLights");
+            }
+            foreach (var scienceRenovateWallDecorationsItems in science.Renovate.RenovateWallDecorations.Science)
+            {
+                scienceRenovateWallDecorationsItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateWallDecorationsItems.Picture);
+                ScienceRenovateWallDecorationsData.Add(scienceRenovateWallDecorationsItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateWallDecorationsItems, "ScienceRenovateWallDecorations");
+            }
+            foreach (var scienceRenovateChairsItems in science.Renovate.RenovateChairs.Science)
+            {
+                scienceRenovateChairsItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateChairsItems.Picture);
+                ScienceRenovateChairsData.Add(scienceRenovateChairsItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateChairsItems, "ScienceRenovateChairs");
+            }
+            foreach (var scienceRenovateHouseUpgradesItems in science.Renovate.RenovateHouseUpgrades.Science)
+            {
+                scienceRenovateHouseUpgradesItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateHouseUpgradesItems.Picture);
+                ScienceRenovateHouseUpgradesData.Add(scienceRenovateHouseUpgradesItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateHouseUpgradesItems, "ScienceRenovateHouseUpgrades");
+            }
+            foreach (var scienceRenovateWindowsItems in science.Renovate.RenovateWindows.Science)
+            {
+                scienceRenovateWindowsItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateWindowsItems.Picture);
+                ScienceRenovateWindowsData.Add(scienceRenovateWindowsItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateWindowsItems, "ScienceRenovateWindows");
+            }
+            foreach (var scienceRenovateRugsItems in science.Renovate.RenovateRugs.Science)
+            {
+                scienceRenovateRugsItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateRugsItems.Picture);
+                ScienceRenovateRugsData.Add(scienceRenovateRugsItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateRugsItems, "ScienceRenovateRugs");
+            }
+            foreach (var scienceRenovateLampsItems in science.Renovate.RenovateLamps.Science)
+            {
+                scienceRenovateLampsItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateLampsItems.Picture);
+                ScienceRenovateLampsData.Add(scienceRenovateLampsItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateLampsItems, "ScienceRenovateLamps");
+            }
+            foreach (var scienceRenovateTablesItems in science.Renovate.RenovateTables.Science)
+            {
+                scienceRenovateTablesItems.Picture = StringProcess.GetGameResourcePath(scienceRenovateTablesItems.Picture);
+                ScienceRenovateTablesData.Add(scienceRenovateTablesItems);
+                AutoSuggestBoxItemSourceAdd(scienceRenovateTablesItems, "ScienceRenovateTables");
             }
             #endregion
             #region 生物

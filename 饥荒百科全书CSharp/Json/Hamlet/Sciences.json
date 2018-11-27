@@ -2081,26 +2081,830 @@
         "Need3": "G_oinc",
         "Need3Value": 30,
         "Unlock": [ "G_key_to_the_city" ],
-        "Introduction": "建造一个歪斜的小木屋。里面会有两个木炭。",
+        "Introduction": "建造一个自己的歪斜的小木屋。里面会有两个木炭。",
         "ConsoleCommand": "c_spawn",
         "Console": "playerhouse_city"
       }
     ]
   },
   "Renovate": {
-    "Science": [
-      {
-        "Picture": "S_birds_of_the_world",
-        "Name": "《世界鸟类》",
-        "EnName": "Birds Of The World",
-        "Need1": "S_papyrus",
-        "Need1Value": 2,
-        "Need2": "G_egg",
-        "Need2Value": 2,
-        "Unlock": [ "S_science_machine" ],
-        "Introduction": "维克波顿周围将出现大量的鸟类，阅读书籍将会降低50精神，维克波顿专有，可使用5次。",
-        "Console": "book_birds"
-      }
-    ]
+    "RenovateFlooring":{
+      "Science": [
+        {
+          "Picture": "S_wood_flooring",
+          "Name": "木质地板",
+          "EnName": "Wood Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成木质地板。"
+        },
+        {
+          "Picture": "S_marble_flooring",
+          "Name": "大理石地板",
+          "EnName": "Marble Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 15,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成大理石地板。"
+        },
+        {
+          "Picture": "S_checkered_flooring",
+          "Name": "方格地板",
+          "EnName": "Checkered Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 7,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成方格地板。"
+        },
+        {
+          "Picture": "S_slate_flooring",
+          "Name": "石地板",
+          "EnName": "Slate Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成石地板。"
+        },
+        {
+          "Picture": "S_sheet_metal_flooring",
+          "Name": "金属地板",
+          "EnName": "Sheet Metal Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成金属地板。"
+        }
+      ]
+    },
+    "RenovateShelves":{
+      "Science": [
+        {
+          "Picture": "S_carved_bookshelf",
+          "Name": "木刻书架",
+          "EnName": "Carved Bookshelf",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个木刻书架。"
+        },
+        {
+          "Picture": "S_basic_bookshelf",
+          "Name": "简易书架",
+          "EnName": "Basic Bookshelf",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个简易书架。"
+        },
+        {
+          "Picture": "S_cinderblock_bookshelf",
+          "Name": "砖砌书架",
+          "EnName": "Cinderblock Bookshelf",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个砖砌书架。"
+        },
+        {
+          "Picture": "S_marble_shelf",
+          "Name": "大理石架",
+          "EnName": "Marble Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个大理石架。"
+        },
+        {
+          "Picture": "S_glass_shelf",
+          "Name": "玻璃架",
+          "EnName": "Glass Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个玻璃架。"
+        },
+        {
+          "Picture": "S_ladder_shelf",
+          "Name": "梯架",
+          "EnName": "Ladder Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个梯架。"
+        },
+        {
+          "Picture": "S_hutch_shelf",
+          "Name": "储物架",
+          "EnName": "Hutch Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个储物架。"
+        },
+        {
+          "Picture": "S_industrial_shelf",
+          "Name": "工业货架",
+          "EnName": "Industrial Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个工业货架。"
+        },
+        {
+          "Picture": "S_adjustable_shelf",
+          "Name": "活动架",
+          "EnName": "Adjustable Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个活动架。"
+        },
+        {
+          "Picture": "S_windowed_cabinet",
+          "Name": "玻璃柜",
+          "EnName": "Windowed Cabinet",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个玻璃柜。"
+        },
+        {
+          "Picture": "S_wall_mounted_shelf",
+          "Name": "墙上置物架",
+          "EnName": "Wall Mounted Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个墙上置物架。"
+        },
+        {
+          "Picture": "S_a_frame_shelf",
+          "Name": "A型架",
+          "EnName": "A-Frame Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个A型架。"
+        },
+        {
+          "Picture": "S_crates_shelf",
+          "Name": "板条架",
+          "EnName": "Crates Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个板条架。"
+        },
+        {
+          "Picture": "S_fridge",
+          "Name": "冰箱",
+          "EnName": "Fridge",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个冰箱。"
+        },
+        {
+          "Picture": "S_hook_shelf",
+          "Name": "挂钩架",
+          "EnName": "Hook Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个挂钩架。"
+        },
+        {
+          "Picture": "S_pipe_shelf",
+          "Name": "水管架",
+          "EnName": "Pipe Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个水管架。"
+        },
+        {
+          "Picture": "S_hat_tree",
+          "Name": "衣帽架",
+          "EnName": "Hat Tree",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个衣帽架。"
+        },
+        {
+          "Picture": "S_pallet_shelf",
+          "Name": "托盘架",
+          "EnName": "Pallet Shelf",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "建造一个托盘架。"
+        }
+      ]
+    },
+    "RenovatePlantholders":{
+      "Science": [
+        {
+          "Picture": "S_basic_plantholder",
+          "Name": "简易植物种植盆",
+          "EnName": "Basic Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个简易植物种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_wip_plantholder",
+          "Name": "半成品种植盆",
+          "EnName": "WIP Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个半成品种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_fancy_plantholder",
+          "Name": "花俏植物种植盆",
+          "EnName": "Fancy Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个花俏植物种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_bonsai_plantholder",
+          "Name": "盆景植物种植盆",
+          "EnName": "Bonsai Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个盆景植物种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_dishgarden_plantholder",
+          "Name": "菜园植物种植盆",
+          "EnName": "Dishgarden Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个菜园植物种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_philodendron_plantholder",
+          "Name": "喜林芋种植盆",
+          "EnName": "Philodendron Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个喜林芋种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_orchid_plantholder",
+          "Name": "兰花种植盆",
+          "EnName": "Orchid Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个兰花种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_draceana_plantholder",
+          "Name": "龙血植物种植盆",
+          "EnName": "Draceana Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个龙血植物种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_xerographica_plantholder",
+          "Name": "空气凤梨种植盆",
+          "EnName": "Xerographica Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个空气凤梨种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_birdcage_plantholder",
+          "Name": "鸟笼植物种植盆",
+          "EnName": "Birdcage Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个鸟笼植物种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_palm_plantholder",
+          "Name": "棕榈树种植盆",
+          "EnName": "Palm Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个棕榈树种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_zz_plantholder",
+          "Name": "金钱树种植盆",
+          "EnName": "ZZ Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个金钱树种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_fernstand_plantholder",
+          "Name": "蕨林种植盆",
+          "EnName": "Fernstand Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个蕨林种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_fern_plantholder",
+          "Name": "蕨类植物种植盆",
+          "EnName": "Fern Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个蕨类植物种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_terrarium_plantholder",
+          "Name": "水晶种植盆",
+          "EnName": "Terrarium Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个水晶种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_plantpet_plantholder",
+          "Name": "盆栽种植盆",
+          "EnName": "Plantpet Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个盆栽种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_traps_plantholder",
+          "Name": "捕蝇草种植盆",
+          "EnName": "Traps Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个捕蝇草种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_pitcher_plantholder",
+          "Name": "猪笼草种植盆",
+          "EnName": "Pitcher Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个猪笼草种植盆（可以按Q或E更换方向）。"
+        },
+        {
+          "Picture": "S_marble_plantholder",
+          "Name": "大理石种植盆",
+          "EnName": "Marble Plantholder",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个大理石种植盆（可以按Q或E更换方向）。"
+        }
+      ]
+    },
+    "RenovateColumns":{
+      "Science": [
+        {
+          "Picture": "S_planed_wood_column",
+          "Name": "被刨平的木柱",
+          "EnName": "Planed Wood Column",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间梁柱换成被刨平的木柱。"
+        },
+        {
+          "Picture": "S_millinery_column",
+          "Name": "女帽柱",
+          "EnName": "Millinery Column",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间梁柱换成女帽柱。"
+        },
+        {
+          "Picture": "S_round_column",
+          "Name": "圆柱",
+          "EnName": "Round Column",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间梁柱换成圆柱。"
+        },
+        {
+          "Picture": "S_lit_marble_column",
+          "Name": "发光大理石灯",
+          "EnName": "Lit Marble Column",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间梁柱换成发光大理石灯。"
+        }
+      ]
+    },
+    "RenovateWallPapers":{
+      "Science": [
+        {
+          "Picture": "S_wood_panelling",
+          "Name": "木栅栏",
+          "EnName": "Wood Panelling",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙纸换成木栅栏。"
+        },
+        {
+          "Picture": "S_checkered_wall_paper",
+          "Name": "格子墙纸",
+          "EnName": "Checkered Wall Paper",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙纸换成格子墙纸。"
+        },
+        {
+          "Picture": "S_floral_wall_paper",
+          "Name": "碎花墙纸",
+          "EnName": "Floral Wall Paper",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙纸换成碎花墙纸。"
+        },
+        {
+          "Picture": "S_sunflower_wall_paper",
+          "Name": "向日葵墙纸",
+          "EnName": "Sunflower Wall Paper",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙纸换成向日葵墙纸。"
+        },
+        {
+          "Picture": "S_harlequin_wall_paper",
+          "Name": "小丑墙纸",
+          "EnName": "Harlequin Wall Paper",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙纸换成小丑墙纸。"
+        }
+      ]
+    },
+    "RenovateCeilingLights":{
+      "Science": [
+        {
+          "Picture": "S_wired_bulb",
+          "Name": "诡异电灯",
+          "EnName": "Wired Bulb",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成诡异电灯。"
+        },
+        {
+          "Picture": "S_metal_shade_lamp",
+          "Name": "金属电灯",
+          "EnName": "Metal Shade Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 6,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成金属电灯。"
+        },
+        {
+          "Picture": "S_chandalier",
+          "Name": "蜡烛灯",
+          "EnName": "Chandalier",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成蜡烛灯。"
+        },
+        {
+          "Picture": "S_rope_light",
+          "Name": "绳索吊灯",
+          "EnName": "Rope Light",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成绳索吊灯。"
+        },
+        {
+          "Picture": "S_dual_rope_light",
+          "Name": "双绳吊灯",
+          "EnName": "Dual Rope Light",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成双绳吊灯。"
+        },
+        {
+          "Picture": "S_blown_glass_bulb",
+          "Name": "玻璃花灯",
+          "EnName": "Blown Glass Bulb",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成玻璃花灯。"
+        },
+        {
+          "Picture": "S_cherry_lamp_shade",
+          "Name": "樱桃灯",
+          "EnName": "Cherry Lamp Shade",
+          "Need1": "G_oinc",
+          "Need1Value": 12,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成樱桃灯。"
+        },
+        {
+          "Picture": "S_hanging_blooming_lamp",
+          "Name": "美丽花灯",
+          "EnName": "Hanging Blooming Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 12,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成美丽花灯。"
+        },
+        {
+          "Picture": "S_hanging_floral_lamp",
+          "Name": "花灯",
+          "EnName": "Hanging Floral Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 12,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成花灯。"
+        },
+        {
+          "Picture": "S_tophat_light",
+          "Name": "高礼帽灯",
+          "EnName": "Tophat Light",
+          "Need1": "G_oinc",
+          "Need1Value": 12,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成高礼帽灯。"
+        },
+        {
+          "Picture": "S_derby_light",
+          "Name": "帽灯",
+          "EnName": "Derby Light",
+          "Need1": "G_oinc",
+          "Need1Value": 12,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间吊灯换成帽灯。"
+        }
+      ]
+    },
+    "RenovateWallDecorations":{
+      "Science": [
+        {
+          "Picture": "S_photo",
+          "Name": "照片",
+          "EnName": "Photo",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成照片。"
+        },
+        {
+          "Picture": "S_full_length_mirror",
+          "Name": "穿衣镜",
+          "EnName": "Full Length Mirror",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成穿衣镜。"
+        },
+        {
+          "Picture": "S_embroidery_hoop",
+          "Name": "绣花圈",
+          "EnName": "Embroidery Hoop",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成绣花圈。"
+        },
+        {
+          "Picture": "S_mosaic",
+          "Name": "镶嵌工艺品",
+          "EnName": "Mosaic",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成镶嵌工艺品。"
+        },
+        {
+          "Picture": "S_wreath",
+          "Name": "花环",
+          "EnName": "Wreath",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成花环。"
+        },
+        {
+          "Picture": "S_axe_wall_decoration",
+          "Name": "斧子",
+          "EnName": "Axe",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成斧子。"
+        },
+        {
+          "Picture": "S_hunt",
+          "Name": "狩猎",
+          "EnName": "Hunt",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成狩猎。"
+        },
+        {
+          "Picture": "S_periodic_table",
+          "Name": "元素周期表",
+          "EnName": "Periodic Table",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成元素周期表。"
+        },
+        {
+          "Picture": "S_gears_art",
+          "Name": "齿轮艺术品",
+          "EnName": "Gears Art",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成齿轮艺术品。"
+        },
+        {
+          "Picture": "S_cape",
+          "Name": "斗篷",
+          "EnName": "Cape",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成斗篷。"
+        },
+        {
+          "Picture": "S_no_smoking",
+          "Name": "禁止吸烟",
+          "EnName": "No Smoking",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成禁止吸烟。"
+        },
+        {
+          "Picture": "S_black_cat",
+          "Name": "黑猫",
+          "EnName": "Black Cat",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成黑猫。"
+        },
+        {
+          "Picture": "S_tasteful_fish_mounting",
+          "Name": "美味的鱼挂饰",
+          "EnName": "Tasteful Fish Mounting",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Need2": "F_fish",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成美味的鱼挂饰。"
+        },
+        {
+          "Picture": "S_beefalo_mounting",
+          "Name": "皮弗娄牛挂饰",
+          "EnName": "Beefalo Mounting",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Need2": "G_beefalo_horn",
+          "Need2Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间墙壁装饰换成皮弗娄牛挂饰。"
+        }
+      ]
+    },
+    "RenovateChairs":{
+      "Science": [
+        {
+          "Picture": "S_wood_flooring",
+          "Name": "木质地板",
+          "EnName": "Wood Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成木质地板。"
+        }
+      ]
+    },
+    "RenovateHouseUpgrades":{
+      "Science": [
+        {
+          "Picture": "S_wood_flooring",
+          "Name": "木质地板",
+          "EnName": "Wood Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成木质地板。"
+        }
+      ]
+    },
+    "RenovateWindows":{
+      "Science": [
+        {
+          "Picture": "S_wood_flooring",
+          "Name": "木质地板",
+          "EnName": "Wood Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成木质地板。"
+        }
+      ]
+    },
+    "RenovateRugs":{
+      "Science": [
+        {
+          "Picture": "S_wood_flooring",
+          "Name": "木质地板",
+          "EnName": "Wood Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成木质地板。"
+        }
+      ]
+    },
+    "RenovateLamps":{
+      "Science": [
+        {
+          "Picture": "S_wood_flooring",
+          "Name": "木质地板",
+          "EnName": "Wood Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成木质地板。"
+        }
+      ]
+    },
+    "RenovateTables":{
+      "Science": [
+        {
+          "Picture": "S_wood_flooring",
+          "Name": "木质地板",
+          "EnName": "Wood Flooring",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自家房间地板换成木质地板。"
+        }
+      ]
+    }
   }
 }

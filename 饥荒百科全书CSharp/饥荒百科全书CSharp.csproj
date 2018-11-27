@@ -6846,6 +6846,108 @@
   <ItemGroup>
     <Resource Include="Resources\GameResources\Goods\G_key_to_the_city.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_adjustable_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_a_frame_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_basic_bookshelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_carved_bookshelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cinderblock_bookshelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_crates_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fridge.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_glass_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hat_tree.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hook_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hutch_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_industrial_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ladder_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_marble_flooring.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_marble_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_pallet_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_pipe_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sheet_metal_flooring.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_slate_flooring.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_wall_mounted_shelf.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_windowed_cabinet.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_wood_flooring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_basic_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_birdcage_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_bonsai_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_dishgarden_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_draceana_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fancy_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fernstand_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fern_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_marble_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_orchid_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_palm_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_philodendron_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_pitcher_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_plantpet_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_terrarium_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_traps_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_wip_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_xerographica_plantholder.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_zz_plantholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_plantholders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_columns.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_lit_marble_column.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_millinery_column.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_planed_wood_column.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_round_column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_blown_glass_bulb.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_chandalier.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_checkered_wall_paper.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cherry_lamp_shade.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_derby_light.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_dual_rope_light.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_floral_wall_paper.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hanging_blooming_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hanging_floral_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_harlequin_wall_paper.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_ceiling_lights.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_chairs.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_house_upgrades.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_lamps.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_rugs.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_shelves.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_tables.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_wall_decorations.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_wall_papers.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ico_renovate_windows.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_metal_shade_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_rope_light.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_sunflower_wall_paper.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tophat_light.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_wired_bulb.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_wood_panelling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_axe_wall_decoration.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_beefalo_mounting.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_black_cat.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cape.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_embroidery_hoop.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_full_length_mirror.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_gears_art.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hunt.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_mosaic.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_no_smoking.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_periodic_table.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_photo.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tasteful_fish_mounting.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_wreath.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

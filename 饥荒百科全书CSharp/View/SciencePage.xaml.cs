@@ -136,8 +136,44 @@ namespace 饥荒百科全书CSharp.View
                     case "ScienceCityPlanning":
                         OnNavigatedToScienceDialog(Global.ScienceCityPlanningData, suggestBoxItemPicture);
                         break;
-                    case "ScienceRenovate":
-                        OnNavigatedToScienceDialog(Global.ScienceRenovateData, suggestBoxItemPicture);
+                    case "ScienceRenovateFlooring":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateFlooringData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateShelves":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateShelvesData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovatePlantholders":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovatePlantholdersData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateColumns":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateColumnsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateWallPapers":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateWallPapersData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateCeilingLights":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateCeilingLightsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateWallDecorations":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateWallDecorationsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateChairs":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateChairsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateHouseUpgrades":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateHouseUpgradesData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateWindows":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateWindowsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateRugs":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateRugsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateLamps":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateLampsData, suggestBoxItemPicture);
+                        break;
+                    case "ScienceRenovateTables":
+                        OnNavigatedToScienceDialog(Global.ScienceRenovateTablesData, suggestBoxItemPicture);
                         break;
                 }
             }
@@ -244,7 +280,19 @@ namespace 饥荒百科全书CSharp.View
             OfferingsExpander.DataContext = Global.ScienceOfferingsData;
             VolcanoExpander.DataContext = Global.ScienceVolcanoData;
             CityPlanningExpander.DataContext = Global.ScienceCityPlanningData;
-            RenovateExpander.DataContext = Global.ScienceRenovateData;
+            RenovateFlooringExpander.DataContext = Global.ScienceRenovateFlooringData;
+            RenovateShelvesExpander.DataContext = Global.ScienceRenovateShelvesData;
+            RenovatePlantholdersExpander.DataContext = Global.ScienceRenovatePlantholdersData;
+            RenovateColumnsExpander.DataContext = Global.ScienceRenovateColumnsData;
+            RenovateWallPapersExpander.DataContext = Global.ScienceRenovateWallPapersData;
+            RenovateCeilingLightsExpander.DataContext = Global.ScienceRenovateCeilingLightsData;
+            RenovateWallDecorationsExpander.DataContext = Global.ScienceRenovateWallDecorationsData;
+            RenovateChairsExpander.DataContext = Global.ScienceRenovateChairsData;
+            RenovateHouseUpgradesExpander.DataContext = Global.ScienceRenovateHouseUpgradesData;
+            RenovateWindowsExpander.DataContext = Global.ScienceRenovateWindowsData;
+            RenovateRugsExpander.DataContext = Global.ScienceRenovateRugsData;
+            RenovateLampsExpander.DataContext = Global.ScienceRenovateLampsData;
+            RenovateTablesExpander.DataContext = Global.ScienceRenovateTablesData;
         }
 
         private void ScienceButton_Click(object sender, RoutedEventArgs e)
