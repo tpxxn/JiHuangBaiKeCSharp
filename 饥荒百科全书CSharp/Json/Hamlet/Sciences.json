@@ -2831,78 +2831,663 @@
     "RenovateChairs":{
       "Science": [
         {
-          "Picture": "S_wood_flooring",
-          "Name": "木质地板",
-          "EnName": "Wood Flooring",
+          "Picture": "S_classic_chair",
+          "Name": "古典椅",
+          "EnName": "Classic Chair",
           "Need1": "G_oinc",
-          "Need1Value": 5,
+          "Need1Value": 2,
           "Unlock": [ "S_slanty_shanty" ],
-          "Introduction": "将自家房间地板换成木质地板。"
+          "Introduction": "制作一个古典椅，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_corner_chair",
+          "Name": "转角椅",
+          "EnName": "Corner Chair",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个转角椅，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_bench",
+          "Name": "长凳",
+          "EnName": "Bench",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个长凳，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_horned_chair",
+          "Name": "有角的椅子",
+          "EnName": "Horned Chair",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个有角的椅子，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_footrest",
+          "Name": "踏板",
+          "EnName": "Footrest",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个踏板，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_lounge_chair",
+          "Name": "休息椅",
+          "EnName": "Lounge Chair",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个休息椅，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_massager_chair",
+          "Name": "信使椅",
+          "EnName": "Massager Chair",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个信使椅，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_stuffed_chair",
+          "Name": "填充椅",
+          "EnName": "Stuffed Chair",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个填充椅，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_rocking_chair",
+          "Name": "摇椅",
+          "EnName": "Rocking Chair",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个摇椅，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_ottoman_chair",
+          "Name": "奥斯曼椅",
+          "EnName": "Ottoman Chair",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个奥斯曼椅，可以放在自己的小屋里。"
+        },
+        {
+          "Picture": "S_fancy_chaise",
+          "Name": "花式躺椅",
+          "EnName": "Fancy Chaise",
+          "Need1": "G_oinc",
+          "Need1Value": 15,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个花式躺椅，可以放在自己的小屋里。"
         }
       ]
     },
     "RenovateHouseUpgrades":{
       "Science": [
         {
-          "Picture": "S_wood_flooring",
-          "Name": "木质地板",
-          "EnName": "Wood Flooring",
+          "Picture": "S_cottage_kit",
+          "Name": "小屋配套家具",
+          "EnName": "Cottage Kit",
           "Need1": "G_oinc",
-          "Need1Value": 5,
+          "Need1Value": 10,
           "Unlock": [ "S_slanty_shanty" ],
-          "Introduction": "将自家房间地板换成木质地板。"
+          "Introduction": "将自己歪斜的小木屋升级为舒适的小屋。"
+        },
+        {
+          "Picture": "S_tudor_home_kit",
+          "Name": "都铎配套家具",
+          "EnName": "Tudor Home Kit",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自己歪斜的小木屋升级为都铎式房屋。"
+        },
+        {
+          "Picture": "S_gothic_home_kit",
+          "Name": "哥特式家具",
+          "EnName": "Gothic Home Kit",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自己歪斜的小木屋升级为哥特式房屋。"
+        },
+        {
+          "Picture": "S_brick_home_kit",
+          "Name": "砖房配套家具",
+          "EnName": "Brick Home Kit",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自己歪斜的小木屋升级为砖房。"
+        },
+        {
+          "Picture": "S_turreted_home_kit",
+          "Name": "角塔配套家具",
+          "EnName": "Turreted Home Kit",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自己歪斜的小木屋升级为塔状房屋。"
+        },
+        {
+          "Picture": "S_villa_kit",
+          "Name": "别墅配套家具",
+          "EnName": "Villa Kit",
+          "Need1": "G_oinc",
+          "Need1Value": 30,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自己歪斜的小木屋升级为豪华别墅。"
+        },
+        {
+          "Picture": "S_manor_kit",
+          "Name": "庄园配套家具",
+          "EnName": "Manor Kit",
+          "Need1": "G_oinc",
+          "Need1Value": 30,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "将自己歪斜的小木屋升级为显赫的庄园。"
         }
       ]
     },
     "RenovateWindows":{
       "Science": [
         {
-          "Picture": "S_wood_flooring",
-          "Name": "木质地板",
-          "EnName": "Wood Flooring",
+          "Picture": "S_peaked_curtain_window",
+          "Name": "椭圆窗帘",
+          "EnName": "Peaked Curtain Window",
+          "Need1": "G_oinc",
+          "Need1Value": 3,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋建造一个椭圆窗帘。"
+        },
+        {
+          "Picture": "S_round_burlap_window",
+          "Name": "麻布窗帘",
+          "EnName": "Round Burlap Window",
+          "Need1": "G_oinc",
+          "Need1Value": 3,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋建造一个麻布窗帘。"
+        },
+        {
+          "Picture": "S_peaked_window",
+          "Name": "椭圆拱窗",
+          "EnName": "Peaked Window",
+          "Need1": "G_oinc",
+          "Need1Value": 3,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋建造一个椭圆拱窗。"
+        },
+        {
+          "Picture": "S_square_window",
+          "Name": "方形窗户",
+          "EnName": "Square Window",
+          "Need1": "G_oinc",
+          "Need1Value": 4,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋建造一个方形窗户。"
+        },
+        {
+          "Picture": "S_tall_window",
+          "Name": "椭圆玻璃窗",
+          "EnName": "Tall Window",
+          "Need1": "G_oinc",
+          "Need1Value": 4,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋建造一个椭圆玻璃窗。"
+        },
+        {
+          "Picture": "S_large_square_curtain_window",
+          "Name": "大方形窗帘",
+          "EnName": "Large Square Curtain Window",
           "Need1": "G_oinc",
           "Need1Value": 5,
           "Unlock": [ "S_slanty_shanty" ],
-          "Introduction": "将自家房间地板换成木质地板。"
+          "Introduction": "给自己的小屋建造一个大方形窗帘。"
+        },
+        {
+          "Picture": "S_tall_curtain_window",
+          "Name": "椭圆玻璃窗帘",
+          "EnName": "Tall Curtain Window",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋建造一个椭圆玻璃窗帘。"
         }
       ]
     },
     "RenovateRugs":{
       "Science": [
         {
-          "Picture": "S_wood_flooring",
-          "Name": "木质地板",
-          "EnName": "Wood Flooring",
+          "Picture": "S_eye_rug",
+          "Name": "圆地毯",
+          "EnName": "Eye Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块圆地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_square_throw_rug",
+          "Name": "方形地毯",
+          "EnName": "Square Throw Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块方形地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_oval_rug",
+          "Name": "椭圆地毯",
+          "EnName": "Oval Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 2,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块椭圆地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_large_rug",
+          "Name": "大地毯",
+          "EnName": "Large Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 3,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块大地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_fur_throw_rug",
+          "Name": "毛皮地毯",
+          "EnName": "Fur Throw Rug",
           "Need1": "G_oinc",
           "Need1Value": 5,
           "Unlock": [ "S_slanty_shanty" ],
-          "Introduction": "将自家房间地板换成木质地板。"
+          "Introduction": "给自己的小屋铺上一块毛皮地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_hedgehog_rug",
+          "Name": "刺猬地毯",
+          "EnName": "Hedgehog Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块刺猬地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_porcupus_rug",
+          "Name": "鸭嘴兽地毯",
+          "EnName": "Porcupus Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 10,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块鸭嘴兽地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_hoofprint_rug",
+          "Name": "蹄印地毯",
+          "EnName": "Hoofprint Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块蹄印地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_octagon_rug",
+          "Name": "八角地毯",
+          "EnName": "Octagon Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块八角地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_swirl_rug",
+          "Name": "漩涡地毯",
+          "EnName": "Swirl Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块漩涡地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_catcoon_rug",
+          "Name": "浣猫地毯",
+          "EnName": "Catcoon Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块浣猫地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_rubbermat_rug",
+          "Name": "橡胶地毯",
+          "EnName": "Rubbermat Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块橡胶地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_web_rug",
+          "Name": "网状地毯",
+          "EnName": "Web Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块网状地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_metal_rug",
+          "Name": "金属地毯",
+          "EnName": "Metal Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块金属地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_wormhole_rug",
+          "Name": "虫洞地毯",
+          "EnName": "Wormhole Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块虫洞地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_braid_rug",
+          "Name": "编织地毯",
+          "EnName": "Braid Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块编织地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_beard_rug",
+          "Name": "胡须地毯",
+          "EnName": "Beard Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块胡须地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_nailbed_rug",
+          "Name": "钉床地毯",
+          "EnName": "Nailbed Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块钉床地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_crime_rug",
+          "Name": "不法者的地毯",
+          "EnName": "Crime Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块不法者的地毯，地毯可以旋转方向，地毯之间可以重叠。"
+        },
+        {
+          "Picture": "S_soccer_rug",
+          "Name": "足球地毯",
+          "EnName": "Soccer Rug",
+          "Need1": "G_oinc",
+          "Need1Value": 5,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "给自己的小屋铺上一块足球地毯，地毯可以旋转方向，地毯之间可以重叠。"
         }
       ]
     },
     "RenovateLamps":{
       "Science": [
         {
-          "Picture": "S_wood_flooring",
-          "Name": "木质地板",
-          "EnName": "Wood Flooring",
+          "Picture": "S_fringe_lamp",
+          "Name": "条纹灯",
+          "EnName": "Fringe Lamp",
           "Need1": "G_oinc",
-          "Need1Value": 5,
+          "Need1Value": 8,
           "Unlock": [ "S_slanty_shanty" ],
-          "Introduction": "将自家房间地板换成木质地板。"
+          "Introduction": "制作一个可以放在地上的条纹灯。"
+        },
+        {
+          "Picture": "S_stainglass_lamp",
+          "Name": "彩色玻璃灯",
+          "EnName": "Stainglass Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的彩色玻璃灯。"
+        },
+        {
+          "Picture": "S_downbridge_lamp",
+          "Name": "地下灯",
+          "EnName": "Downbridge Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的地下灯。"
+        },
+        {
+          "Picture": "S_dual_embroidered_lamp",
+          "Name": "双纹花灯",
+          "EnName": "Dual Embroidered Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的双纹花灯。"
+        },
+        {
+          "Picture": "S_ceramic_lamp",
+          "Name": "陶瓷灯",
+          "EnName": "Ceramic Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的陶瓷灯。"
+        },
+        {
+          "Picture": "S_glass_lamp",
+          "Name": "玻璃灯",
+          "EnName": "Glass Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的玻璃灯。"
+        },
+        {
+          "Picture": "S_dual_fringes_lamp",
+          "Name": "双条纹灯",
+          "EnName": "Dual Fringes Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的双条纹灯。"
+        },
+        {
+          "Picture": "S_candelabra_lamp",
+          "Name": "烛台灯",
+          "EnName": "Candelabra Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的烛台灯。"
+        },
+        {
+          "Picture": "S_elizabethan_lamp",
+          "Name": "伊丽莎白灯",
+          "EnName": "Elizabethan Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的伊丽莎白灯。"
+        },
+        {
+          "Picture": "S_gothic_lamp",
+          "Name": "哥特灯",
+          "EnName": "Gothic Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的哥特灯。"
+        },
+        {
+          "Picture": "S_orb_lamp",
+          "Name": "天体灯",
+          "EnName": "Orb Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的天体灯。"
+        },
+        {
+          "Picture": "S_bellshade_lamp",
+          "Name": "钟罩灯",
+          "EnName": "Bellshade Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的钟罩灯。"
+        },
+        {
+          "Picture": "S_crystals_lamp",
+          "Name": "水晶灯",
+          "EnName": "Crystals Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的水晶灯。"
+        },
+        {
+          "Picture": "S_upturn_lamp",
+          "Name": "翻转灯",
+          "EnName": "Upturn Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的翻转灯。"
+        },
+        {
+          "Picture": "S_dual_upturn_lamp",
+          "Name": "双重转灯",
+          "EnName": "Dual Upturn Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的双重转灯。"
+        },
+        {
+          "Picture": "S_spool_lamp",
+          "Name": "线轴灯",
+          "EnName": "Spool Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的线轴灯。"
+        },
+        {
+          "Picture": "S_edison_lamp",
+          "Name": "爱迪生灯",
+          "EnName": "Edison Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的爱迪生灯。"
+        },
+        {
+          "Picture": "S_adjustable_lamp",
+          "Name": "可调整灯",
+          "EnName": "Adjustable Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的可调整灯。"
+        },
+        {
+          "Picture": "S_right_angle_lamp",
+          "Name": "直角灯",
+          "EnName": "Right Angle Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的直角灯。"
+        },
+        {
+          "Picture": "S_fancy_lamp",
+          "Name": "花式灯",
+          "EnName": "Fancy Lamp",
+          "Need1": "G_oinc",
+          "Need1Value": 8,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的花式灯。"
         }
       ]
     },
     "RenovateTables":{
       "Science": [
         {
-          "Picture": "S_wood_flooring",
-          "Name": "木质地板",
-          "EnName": "Wood Flooring",
+          "Picture": "S_round_table",
+          "Name": "圆桌",
+          "EnName": "Round Table",
           "Need1": "G_oinc",
-          "Need1Value": 5,
+          "Need1Value": 2,
           "Unlock": [ "S_slanty_shanty" ],
-          "Introduction": "将自家房间地板换成木质地板。"
+          "Introduction": "制作一个可以放在地上的圆桌，可以旋转方向。"
+        },
+        {
+          "Picture": "S_hard_wood_desk",
+          "Name": "硬木桌",
+          "EnName": "Hard Wood Desk",
+          "Need1": "G_oinc",
+          "Need1Value": 4,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的硬木桌，可以旋转方向。"
+        },
+        {
+          "Picture": "S_diy_table",
+          "Name": "手工桌",
+          "EnName": "DIY Table",
+          "Need1": "G_oinc",
+          "Need1Value": 3,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的手工桌，可以旋转方向。"
+        },
+        {
+          "Picture": "S_college_table",
+          "Name": "半成品桌",
+          "EnName": "College Table",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的半成品桌，可以旋转方向。"
+        },
+        {
+          "Picture": "S_crate_table",
+          "Name": "板条桌",
+          "EnName": "Crate Table",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的板条桌，可以旋转方向。"
+        },
+        {
+          "Picture": "S_chess_table",
+          "Name": "象棋桌",
+          "EnName": "Chess Table",
+          "Need1": "G_oinc",
+          "Need1Value": 1,
+          "Unlock": [ "S_slanty_shanty" ],
+          "Introduction": "制作一个可以放在地上的象棋桌，可以旋转方向。"
         }
       ]
     }

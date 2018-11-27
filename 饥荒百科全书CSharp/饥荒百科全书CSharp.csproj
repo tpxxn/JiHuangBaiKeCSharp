@@ -6948,6 +6948,87 @@
     <Resource Include="Resources\GameResources\Sciences\S_tasteful_fish_mounting.png" />
     <Resource Include="Resources\GameResources\Sciences\S_wreath.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_bench.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_classic_chair.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_corner_chair.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fancy_chaise.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_footrest.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_horned_chair.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_lounge_chair.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_massager_chair.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ottoman_chair.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_rocking_chair.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_stuffed_chair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_brick_home_kit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_cottage_kit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_gothic_home_kit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_manor_kit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tudor_home_kit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_turreted_home_kit.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_villa_kit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_large_square_curtain_window.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_peaked_curtain_window.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_peaked_window.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_round_burlap_window.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_square_window.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tall_curtain_window.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tall_window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_beard_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_braid_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_catcoon_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_crime_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_eye_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fur_throw_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hedgehog_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hoofprint_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_large_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_metal_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_nailbed_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_octagon_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_oval_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_porcupus_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_rubbermat_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_soccer_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_square_throw_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_swirl_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_web_rug.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_wormhole_rug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_adjustable_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_bellshade_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_candelabra_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_ceramic_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_chess_table.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_college_table.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_crate_table.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_crystals_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_diy_table.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_downbridge_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_dual_embroidered_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_dual_fringes_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_dual_upturn_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_edison_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_elizabethan_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fancy_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fringe_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_glass_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_gothic_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_hard_wood_desk.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_orb_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_right_angle_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_round_table.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_spool_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_stainglass_lamp.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_upturn_lamp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
