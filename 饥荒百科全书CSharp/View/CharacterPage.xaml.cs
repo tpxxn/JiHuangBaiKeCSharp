@@ -77,6 +77,12 @@ namespace 饥荒百科全书CSharp.View
         
         public void Deserialize()
         {
+            foreach (var character in (Global.CharacterData))
+            {
+                if (character.EnName != "Warbucks") continue;
+                Global.CharacterData.Remove(character);
+                break;
+            }
             CharacterItemsControl.DataContext = Global.CharacterData;
             if(LeftFrame.CanGoBack)LeftFrame.RemoveBackEntry();
             LeftFrame.NavigationService.Navigate(new CharacterDetail(), Global.CharacterData[0]);
