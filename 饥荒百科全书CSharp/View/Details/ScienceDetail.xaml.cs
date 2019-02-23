@@ -62,7 +62,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 Need3PicButton.Text = $"×{c.Need3Value}";
                 Need3PicButton.Visibility = Visibility.Visible;
             }
-            if (c.Unlock == null && c.UnlockCharcter == null && c.UnlockBlueprint == null)
+            if (c.Unlock.Count == 0 && c.UnlockCharcter == null && c.UnlockBlueprint == null)
             {
                 ScienceUnlockStackPanel.Visibility = Visibility.Collapsed;
             }

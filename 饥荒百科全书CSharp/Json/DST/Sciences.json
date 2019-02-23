@@ -1537,20 +1537,20 @@
       },
       {
         "Picture": "S_gobbler_shrine",
-        "Name": "火鸡神龛",
+        "Name": "火鸡神坛",
         "EnName": "Gobbler Shrine",
         "Need1": "G_gold_nugget",
         "Need1Value": 8,
         "Need2": "S_boards",
         "Need2Value": 2,
         "Unlock": [ "S_alchemy_engine" ],
-        "Introduction": "供奉上浆果灌木丛或者蜜汁浆果丛可以解锁年货标签。击杀火鸡掉落的红包开出的金元宝是制作年货标签物品的必要道具。Year Of The Gobbler 活动特有。",
+        "Introduction": "供奉浆果灌木丛或者蜜汁浆果丛可以解锁年货标签。击杀火鸡掉落的红包开出的金元宝是制作年货标签物品的必要道具。Year Of The Gobbler 活动特有。",
         "ConsoleCommand": "c_spawn",
         "Console": "perdshrine"
       },
       {
         "Picture": "S_varg_shrine_build",
-        "Name": "座狼神龛",
+        "Name": "座狼神坛",
         "EnName": "Varg Shrine",
         "Need1": "G_gold_nugget",
         "Need1Value": 8,
@@ -1559,6 +1559,18 @@
         "Introduction": "供奉火把可以解锁年货标签（此时火把的持续时间为 375 秒）。击杀黏土座狼和黏土猎犬掉落的红包开出的金元宝是制作年货标签物品的必要道具。Year Of The Varg 活动特有。",
         "ConsoleCommand": "c_spawn",
         "Console": "wargshrine"
+      },
+      {
+        "Picture": "S_pig_shrine",
+        "Name": "猪神坛",
+        "EnName": "Pig Shrine",
+        "Need1": "G_gold_nugget",
+        "Need1Value": 8,
+        "Need2": "S_boards",
+        "Need2Value": 2,
+        "Introduction": "供奉肉块、烤肉块或肉干可以解锁年货标签。参加猪王摔跤比赛掉落的红包开出的金元宝是制作年货标签物品的必要道具。猪王摔跤比赛参加条件：\n· 猪王必须醒着\n· 必须离晚上还有至少两分钟\n· 猪王旁边必须没有建筑、物品、玩具\n· 不会发生在猎犬警告阶段\n· 玩家没有在燃烧\n· 猪王旁边没有任何战斗目标\n· 当下没有正在进行的小游戏\nYear Of Pig King 活动特有。",
+        "ConsoleCommand": "c_spawn",
+        "Console": "pigshrine"
       },
       {
         "Picture": "S_potted_fern",

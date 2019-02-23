@@ -7032,6 +7032,12 @@
   <ItemGroup>
     <Resource Include="Resources\GameResources\Characters\C_wormwood.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_eight_treasure_mud_pie.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_fish_heads_on_a_stick.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_pig_shrine.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_tribute_roast.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
