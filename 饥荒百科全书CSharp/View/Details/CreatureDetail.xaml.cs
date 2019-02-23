@@ -506,6 +506,34 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 Margin = new Thickness(0, 10, 0, 10)
             };
+            var wrestlingMatchTextBlock = new TextBlock
+            {
+                Margin = new Thickness(10, 0, 0, 5),
+                Text = "猪王摔跤比赛参加条件：",
+                Background = new SolidColorBrush(Color.FromArgb(85, 178, 236, 237))
+            };
+            rootStackPanel.Children.Add(wrestlingMatchTextBlock);
+            var wrestlingMatchStackPanel = new StackPanel
+            {
+                Margin = new Thickness(10, 0, 10, 10)
+            };
+            var wrestlingMatchList = new List<string> { "1、猪王必须醒着", "2、必须离晚上还有至少两分钟", "3、猪王旁边必须没有建筑、物品、玩具", "4、不会发生在猎犬警告阶段", "5、玩家没有在燃烧", "6、猪王旁边没有任何战斗目标", "7、当下没有正在进行的小游戏" };
+            foreach (var wrestlingMatchString in wrestlingMatchList)
+            {
+                var wrestlingMatchConditionTextBlock = new TextBlock
+                {
+                    Text = wrestlingMatchString
+                };
+                wrestlingMatchStackPanel.Children.Add(wrestlingMatchConditionTextBlock);
+            }
+            //TODO
+            wrestlingMatchStackPanel.Children.Add(new TextBlock
+            {
+                Margin =  new Thickness(10,10,0,0),
+                TextWrapping = TextWrapping.Wrap,
+                Text = "将肉丸交给佩戴黄金腰带的猪人，猪人会将黄金腰带解下，捡起黄金腰带交给猪王，如果能达成上述条件，则可以开始猪王摔跤比赛"
+            });
+            rootStackPanel.Children.Add(wrestlingMatchStackPanel);
             var titleTextBlock = new TextBlock
             {
                 Margin = new Thickness(10, 0, 0, 5),
