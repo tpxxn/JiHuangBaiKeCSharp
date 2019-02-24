@@ -3449,8 +3449,8 @@
         "EnName": "Red Firecrackers",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 1,
-        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
-        "Introduction": "用火把或薇洛的打火机可以点燃鞭炮。可以使用三次。Year Of The Globber/Varg 活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build", "S_pig_shrine" ],
+        "Introduction": "用火把或薇洛的打火机可以点燃鞭炮。可以使用三次。Year Of The Globber/Varg/Pig King 活动特有。",
         "Console": "firecrackers"
       },
       {
@@ -3459,8 +3459,8 @@
         "EnName": "Red Lanterns",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 3,
-        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
-        "Introduction": "光照效果较弱，但是持续时间较长。Year Of The Globber/Varg 活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build", "S_pig_shrine" ],
+        "Introduction": "光照效果较弱，但是持续时间较长。Year Of The Globber/Varg/Pig King 活动特有。",
         "Console": "redlantern"
       },
       {
@@ -3470,7 +3470,7 @@
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 3,
         "Unlock": [ "S_varg_shrine_build" ],
-        "Introduction": "吹响幸运哨子可以驯服周围最多5只猎犬（包括黏土猎犬）40秒，被驯服的猎犬会追随玩家，且不会攻击玩家，但仍然会攻击其他生物。总共可以使用10次",
+        "Introduction": "吹响幸运哨子可以驯服周围最多5只猎犬（包括黏土猎犬）40秒，被驯服的猎犬会追随玩家，且不会攻击玩家，但仍然会攻击其他生物。总共可以使用10次。Year Of The Varg 活动特有。",
         "Console": "houndwhistle"
       },
       {
@@ -3480,7 +3480,7 @@
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 8,
         "Unlock": [ "S_varg_shrine_build" ],
-        "Introduction": "携带粘土猎犬雕塑草图并将大理石或石砖放在陶艺转盘上即可制作猎犬雕塑。",
+        "Introduction": "携带粘土猎犬雕塑草图并将大理石或石砖放在陶艺转盘上即可制作猎犬雕塑。Year Of The Varg 活动特有。",
         "Console": "chesspiece_clayhound_sketch"
       },
       {
@@ -3490,8 +3490,48 @@
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 16,
         "Unlock": [ "S_varg_shrine_build" ],
-        "Introduction": "携带粘土座狼雕塑草图并将大理石或石砖放在陶艺转盘上即可制作座狼雕塑。",
+        "Introduction": "携带粘土座狼雕塑草图并将大理石或石砖放在陶艺转盘上即可制作座狼雕塑。Year Of The Varg 活动特有。",
         "Console": "chesspiece_claywarg_sketch"
+      },
+      {
+        "Picture": "S_varg_sketch",
+        "Name": "粘土座狼雕塑草图",
+        "EnName": "Clay Varg Figure Sketch",
+        "Need1": "G_lucky_gold_nugget",
+        "Need1Value": 16,
+        "Unlock": [ "S_varg_shrine_build" ],
+        "Introduction": "携带粘土座狼雕塑草图并将大理石或石砖放在陶艺转盘上即可制作座狼雕塑。Year Of The Varg 活动特有。",
+        "Console": "chesspiece_claywarg_sketch"
+      },
+      {
+        "Picture": "S_fish_heads_on_a_stick",
+        "Name": "鱼头串",
+        "EnName": "Fish Heads on a Stick",
+        "Need1": "G_lucky_gold_nugget",
+        "Need1Value": 4,
+        "Unlock": [ "S_pig_shrine" ],
+        "Introduction": "提供的饥饿值足矣使得佩戴黄金腰带的猪人将腰带解下放在地上。Year Of The Pig King 活动特有。",
+        "Console": "yotpfood3"
+      },
+      {
+        "Picture": "S_tribute_roast",
+        "Name": "贡品烤肉",
+        "EnName": "Tribute Roast",
+        "Need1": "G_lucky_gold_nugget",
+        "Need1Value": 6,
+        "Unlock": [ "S_pig_shrine" ],
+        "Introduction": "提供的饥饿值足矣使得佩戴黄金腰带的猪人将腰带解下放在地上。Year Of The Pig King 活动特有。",
+        "Console": "yotpfood1"
+      },
+      {
+        "Picture": "S_eight_treasure_mud_pie",
+        "Name": "八宝泥巴派",
+        "EnName": "Eight Treasure Mud Pie",
+        "Need1": "G_lucky_gold_nugget",
+        "Need1Value": 1,
+        "Unlock": [ "S_pig_shrine" ],
+        "Introduction": "玩家不可食用！提供的饥饿值足矣使得佩戴黄金腰带的猪人将腰带解下放在地上。Year Of The Pig King 活动特有。",
+        "Console": "yotpfood2"
       },
       {
         "Picture": "S_lucky_fan",
@@ -3509,8 +3549,8 @@
         "EnName": "Lucky Beast Head",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 8,
-        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
-        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg 活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build", "S_pig_shrine" ],
+        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg/Pig King 活动特有。",
         "Console": "dragonheadhat"
       },
       {
@@ -3519,8 +3559,8 @@
         "EnName": "Lucky Beast Body",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 8,
-        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
-        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg 活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build", "S_pig_shrine" ],
+        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg/Pig King 活动特有。",
         "Console": "dragonbodyhat"
       },
       {
@@ -3529,8 +3569,8 @@
         "EnName": "Lucky Beast Tail",
         "Need1": "G_lucky_gold_nugget",
         "Need1Value": 8,
-        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build" ],
-        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg 活动特有。",
+        "Unlock": [ "S_gobbler_shrine", "S_varg_shrine_build", "S_pig_shrine" ],
+        "Introduction": "替代普通/dance命令的动作，跳舞时每分钟恢复6.7精神，如果有三名玩家一起跳则会每分钟恢复20精神。Year Of The Globber/Varg/Pig King 活动特有。",
         "Console": "dragontailhat"
       }
     ]

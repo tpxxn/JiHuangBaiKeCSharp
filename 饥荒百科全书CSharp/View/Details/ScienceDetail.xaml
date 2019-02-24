@@ -39,6 +39,7 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <uc:PicButton x:Name="UnlockPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60" Click="Science_Jump_Click"/>
                     <uc:PicButton x:Name="Unlock2PicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60" Click="Science_Jump_Click"/>
+                    <uc:PicButton x:Name="Unlock3PicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60" Click="Science_Jump_Click"/>
                 </StackPanel>
                 <uc:PicButton x:Name="UnlockBlueprintPicButton" Visibility="Collapsed" HorizontalAlignment="Center" PictureSize="60" Click="Science_Jump_Click"/>
             </StackPanel>

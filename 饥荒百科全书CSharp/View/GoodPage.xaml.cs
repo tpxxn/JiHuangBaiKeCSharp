@@ -100,6 +100,9 @@ namespace 饥荒百科全书CSharp.View
                     case "GoodYearOfTheGobbler":
                         OnNavigatedToGoodDialog(Global.GoodYearOfTheGobblerData, suggestBoxItemPicture);
                         break;
+                    case "GoodYearOfThePigKing":
+                        OnNavigatedToGoodDialog(Global.GoodYearOfThePigKingData, suggestBoxItemPicture);
+                        break;
                     case "GoodComponent":
                         OnNavigatedToGoodDialog(Global.GoodComponentData, suggestBoxItemPicture);
                         break;
@@ -341,6 +344,7 @@ namespace 饥荒百科全书CSharp.View
                 HallowedNightsExpander.Visibility = Visibility.Collapsed;
                 WintersFeastExpander.Visibility = Visibility.Collapsed;
                 YearOfTheGobblerExpander.Visibility = Visibility.Collapsed;
+                YearOfThePigKingExpander.Visibility = Visibility.Collapsed;
             }
             // DS版隐藏解锁
             if (Global.GameVersion == 2)
@@ -362,6 +366,7 @@ namespace 饥荒百科全书CSharp.View
             HallowedNightsExpander.DataContext = Global.GoodHallowedNightsData;
             WintersFeastExpander.DataContext = Global.GoodWintersFeastData;
             YearOfTheGobblerExpander.DataContext = Global.GoodYearOfTheGobblerData;
+            YearOfThePigKingExpander.DataContext = Global.GoodYearOfThePigKingData;
             ComponentExpander.DataContext = Global.GoodComponentData;
             GoodOthersExpander.DataContext = Global.GoodOthersData;
         }

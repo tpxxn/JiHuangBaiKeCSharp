@@ -88,7 +88,7 @@ namespace 饥荒百科全书CSharp.View
         // SteamCommunity
         private void W_button_SteamCommunity_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://pan.baidu.com/s/1pMcy1U7");
+            Process.Start("https://www.dogfight360.com/blog/wp-content/uploads/2017/12/steamcommunity_302_V9.5.zip");
         }
         #endregion
     }

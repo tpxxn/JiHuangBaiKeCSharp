@@ -79,7 +79,7 @@ namespace 饥荒百科全书CSharp
 
             private static void App_Startup(object sender, StartupEventArgs e)
             {
-                Global.VersionSuffix = " δ";
+                Global.VersionSuffix = " ε";
                 ////游戏版本
                 //double gameVersion = RegeditRw.RegRead("GameVersion");
                 //Global.GameVersion = gameVersion;

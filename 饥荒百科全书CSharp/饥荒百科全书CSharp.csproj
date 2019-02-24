@@ -7038,6 +7038,14 @@
     <Resource Include="Resources\GameResources\Sciences\S_pig_shrine.png" />
     <Resource Include="Resources\GameResources\Sciences\S_tribute_roast.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_golden_belt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Goods\G_red_pouch_1.png" />
+    <Resource Include="Resources\GameResources\Goods\G_red_pouch_2.png" />
+    <Resource Include="Resources\GameResources\Goods\G_red_pouch_3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

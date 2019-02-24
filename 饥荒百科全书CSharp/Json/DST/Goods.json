@@ -3563,5 +3563,44 @@
         "Console": "lucky_goldnugget"
       }
     ]
+  },
+  "YearOfThePigKing": {
+    "Good": [
+      {
+        "Picture": "G_golden_belt",
+        "Name": "黄金腰带",
+        "EnName": "Golden Belt",
+        "Introduction": "有的猪人会佩戴黄金腰带，将肉丸或者饥饿值更高的食物喂给猪人后，猪人会将黄金腰带放在地上。将黄金腰带给予猪王可以开始猪王摔跤比赛。",
+        "Console": "pig_token"
+      },
+      {
+        "Picture": "G_lucky_gold_nugget",
+        "Name": "好运金块",
+        "EnName": "Lucky Gold Nugget",
+        "Introduction": "建造贡品标签里的物品的材料。",
+        "Console": "lucky_goldnugget"
+      },
+      {
+        "Picture": "G_red_pouch_1",
+        "Name": "福袋（大）",
+        "EnName": "Red Pouch",
+        "Introduction": "参与猪王摔跤比赛后获得的福袋，打开后可以得到 4 个好运金块。",
+        "Console": "redpouch_yotp"
+      },
+      {
+        "Picture": "G_red_pouch_2",
+        "Name": "福袋（中）",
+        "EnName": "Red Pouch",
+        "Introduction": "参与猪王摔跤比赛后获得的福袋，打开后可以得到 2 个好运金块。",
+        "Console": "redpouch_yotp"
+      },
+      {
+        "Picture": "G_red_pouch_3",
+        "Name": "福袋（小）",
+        "EnName": "Red Pouch",
+        "Introduction": "参与猪王摔跤比赛后获得的福袋，打开后可以得到 1 个好运金块。",
+        "Console": "redpouch_yotp"
+      }
+    ]
   }
 }

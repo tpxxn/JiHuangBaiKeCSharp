@@ -348,6 +348,7 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Good> GoodHallowedNightsData = new List<Good>();
         public static readonly List<Good> GoodWintersFeastData = new List<Good>();
         public static readonly List<Good> GoodYearOfTheGobblerData = new List<Good>();
+        public static readonly List<Good> GoodYearOfThePigKingData = new List<Good>();
         public static readonly List<Good> GoodComponentData = new List<Good>();
         public static readonly List<Good> GoodOthersData = new List<Good>();
         public static readonly List<Skin> SkinsWatchTwitchLiveData = new List<Skin>();
@@ -445,6 +446,7 @@ namespace 饥荒百科全书CSharp.Class
             GoodHallowedNightsData.Clear();
             GoodWintersFeastData.Clear();
             GoodYearOfTheGobblerData.Clear();
+            GoodYearOfThePigKingData.Clear();
             GoodComponentData.Clear();
             GoodOthersData.Clear();
             SkinsWatchTwitchLiveData.Clear();
@@ -886,6 +888,12 @@ namespace 饥荒百科全书CSharp.Class
                 goodYearOfTheGobblerItems.Picture = StringProcess.GetGameResourcePath(goodYearOfTheGobblerItems.Picture);
                 GoodYearOfTheGobblerData.Add(goodYearOfTheGobblerItems);
                 AutoSuggestBoxItemSourceAdd(goodYearOfTheGobblerItems, "GoodYearOfTheGobbler");
+            }
+            foreach (var goodYearOfThePigKingItems in good.YearOfThePigKing.Good)
+            {
+                goodYearOfThePigKingItems.Picture = StringProcess.GetGameResourcePath(goodYearOfThePigKingItems.Picture);
+                GoodYearOfThePigKingData.Add(goodYearOfThePigKingItems);
+                AutoSuggestBoxItemSourceAdd(goodYearOfThePigKingItems, "GoodYearOfThePigKing");
             }
             foreach (var goodComponentItems in good.Component.Good)
             {

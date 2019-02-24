@@ -2103,6 +2103,42 @@
         "Console": "watermelon_seeds"
       },
       {
+        "Picture": "S_fish_heads_on_a_stick",
+        "Name": "鱼头串",
+        "EnName": "Fish Heads on a Stick",
+        "Health": 6,
+        "Hunger": 75,
+        "Sanity": 1,
+        "Perish": 15,
+        "Attribute": "荤",
+        "Introduce": "提供的饥饿值足矣使得佩戴黄金腰带的猪人将腰带解下放在地上。Year Of The Pig King 活动特有。",
+        "Console": "yotpfood3"
+      },
+      {
+        "Picture": "S_tribute_roast",
+        "Name": "贡品烤肉",
+        "EnName": "Tribute Roast",
+        "Health": 12,
+        "Hunger": 150,
+        "Sanity": 5,
+        "Perish": 15,
+        "Attribute": "荤",
+        "Introduce": "提供的饥饿值足矣使得佩戴黄金腰带的猪人将腰带解下放在地上。Year Of The Pig King 活动特有。",
+        "Console": "yotpfood1"
+      },
+      {
+        "Picture": "S_eight_treasure_mud_pie",
+        "Name": "八宝泥巴派",
+        "EnName": "Eight Treasure Mud Pie",
+        "Health": 0,
+        "Hunger": 150,
+        "Sanity": 0,
+        "Perish": 10001,
+        "Attribute": "未知",
+        "Introduce": "提供的饥饿值足矣使得佩戴黄金腰带的猪人将腰带解下放在地上。Year Of The Pig King 活动特有。",
+        "Console": "yotpfood3"
+      },
+      {
         "Picture": "F_rot",
         "Name": "腐烂物",
         "EnName": "Rot",

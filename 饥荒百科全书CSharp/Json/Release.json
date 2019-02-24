@@ -2,11 +2,15 @@
   "Release": [
     {
       "Version": "0.7.8.0",
-      "Data": "2019年2月23日",
+      "Data": "2019年2月24日",
       "UpdataContent": [
         {
           "Label": "新增",
-          "Content": "哈姆雷特版的人物、食物、模拟"
+          "Content": "增加哈姆雷特版的人物、食物、模拟"
+        },
+        {
+          "Label": "新增",
+          "Content": "增加 Year of the Pig King 内容"
         },
         {
           "Label": "修复",

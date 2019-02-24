@@ -272,6 +272,20 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
+                <Expander x:Name="YearOfThePigKingExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Year of the Pig King" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource GoodDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
                 <Expander x:Name="ComponentExpander" Style="{StaticResource ExpanderStyle}" >
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">

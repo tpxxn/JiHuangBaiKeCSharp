@@ -245,6 +245,16 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class YearOfThePigKing
+    {
+        public List<Good> Good { get; set; }
+
+        public YearOfThePigKing()
+        {
+            Good = new List<Good>();
+        }
+    }
+
     public class Component
     {
         public List<Good> Good { get; set; }
@@ -278,6 +288,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public HallowedNights HallowedNights { get; set; }
         public WintersFeast WintersFeast { get; set; }
         public YearOfTheGobbler YearOfTheGobbler { get; set; }
+        public YearOfThePigKing YearOfThePigKing { get; set; }
         public Component Component { get; set; }
         public GoodOthers GoodOthers { get; set; }
 
@@ -294,6 +305,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             HallowedNights = new HallowedNights();
             WintersFeast = new WintersFeast();
             YearOfTheGobbler = new YearOfTheGobbler();
+            YearOfThePigKing = new YearOfThePigKing();
             Component = new Component();
             GoodOthers = new GoodOthers();
         }

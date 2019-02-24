@@ -72,10 +72,15 @@ namespace 饥荒百科全书CSharp.View.Details
                 {
                     UnlockPicButton.Visibility = Visibility.Visible;
                     UnlockPicButton.Source = StringProcess.GetGameResourcePath(c.Unlock[0]);
-                    if (c.Unlock.Count == 2)
+                    if (c.Unlock.Count >= 2)
                     {
                         Unlock2PicButton.Visibility = Visibility.Visible;
                         Unlock2PicButton.Source = StringProcess.GetGameResourcePath(c.Unlock[1]);
+                    }
+                    if (c.Unlock.Count >= 3)
+                    {
+                        Unlock3PicButton.Visibility = Visibility.Visible;
+                        Unlock3PicButton.Source = StringProcess.GetGameResourcePath(c.Unlock[2]);
                     }
                 }
                 if (c.UnlockCharcter != null)
