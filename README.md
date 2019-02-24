@@ -9,7 +9,7 @@
 
 官网 http://www.jihuangbaike.com/ 
 
-[火叶]掌上饥荒 http://www.fireleaves.cn/
+[火叶]掌上饥荒 http://p.fireleaves.cn/
 
 开发环境：Visual Studio 2017、Windows 10 17763
 
