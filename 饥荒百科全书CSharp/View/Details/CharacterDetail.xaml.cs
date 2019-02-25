@@ -78,10 +78,11 @@ namespace 饥荒百科全书CSharp.View.Details
                 CharacterNightDamage.Value = c.DamageNight;
                 CharacterNightDamage.BarColor = Global.ColorBlue;
             }
-            if (c.Name == "海獭伍迪")
+            if (c.Name == "海獭伍迪" || c.Name == "疯猪威尔巴")
             {
                 CharacterDamage.Text = $"伤害：{c.Damage} 点";
                 CharacterHealth.LabelWidth = 45;
+                CharacterHunger.LabelWidth = 45;
                 CharacterSanity.LabelWidth = 45;
                 CharacterLog.Visibility = Visibility.Visible;
                 CharacterLog.Value = c.LogMeter;

@@ -7046,6 +7046,17 @@
     <Resource Include="Resources\GameResources\Goods\G_red_pouch_2.png" />
     <Resource Include="Resources\GameResources\Goods\G_red_pouch_3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Characters\C_werewilba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Skins\P_amazing_ringmaster_hat.png" />
+    <Resource Include="Resources\GameResources\Skins\P_equestrienne_headdress.png" />
+    <Resource Include="Resources\GameResources\Skins\P_spectacular_stationary_wayfinder.png" />
+    <Resource Include="Resources\GameResources\Skins\P_thermal_strength_measurer.png" />
+    <Resource Include="Resources\GameResources\Skins\P_umbrella_the_big_top.png" />
+    <Resource Include="Resources\GameResources\Skins\P_worlds_greatest_big_top_tent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

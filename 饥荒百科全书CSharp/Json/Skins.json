@@ -6,14 +6,56 @@
         "Name": "惊人的马戏鸟笼",
         "EnName": "The Amazing Sideshow",
         "Rarity": "Loyal",
-        "Introduction": "Circus freak not included."
+        "Introduction": "Circus freak not included.\n2018年9月27日-2018年10月11日"
       },
       {
         "Picture": "P_the_magnificent_rainometer",
         "Name": "华丽的雨量计",
         "EnName": "The Magnificent Rainometer",
         "Rarity": "Loyal",
-        "Introduction": "Guess the rainfall."
+        "Introduction": "Guess the rainfall.\n2018年10月11日-2018年10月25日"
+      },
+      {
+        "Picture": "P_amazing_ringmaster_hat",
+        "Name": "惊人的驯兽师帽",
+        "EnName": "Amazing Ringmaster Hat",
+        "Rarity": "Loyal",
+        "Introduction": "Come one, come all.\n2018年10月25日-2018年11月8日"
+      },
+      {
+        "Picture": "P_equestrienne_headdress",
+        "Name": "马戏女骑手头饰",
+        "EnName": "Equestrienne Headdress",
+        "Rarity": "Loyal",
+        "Introduction": "Enter the ring.\n2018年11月8日-2018年11月22日"
+      },
+      {
+        "Picture": "P_thermal_strength_measurer",
+        "Name": "热力测力器",
+        "EnName": "Thermal Strength Measurer",
+        "Rarity": "Loyal",
+        "Introduction": "Step right up.\n2018年11月22日-2018年12月6日"
+      },
+      {
+        "Picture": "P_umbrella_the_big_top",
+        "Name": "头等大雨伞",
+        "EnName": "Umbrella the Big Top",
+        "Rarity": "Loyal",
+        "Introduction": "Keeping dry is the main attraction.\n2018年12月6日-2018年12月20日"
+      },
+      {
+        "Picture": "P_spectacular_stationary_wayfinder",
+        "Name": "壮观的引路牌",
+        "EnName": "Spectacular Stationary Wayfinder",
+        "Rarity": "Loyal",
+        "Introduction": "Restrooms over here.\n2018年12月20日-2019年1月3日"
+      },
+      {
+        "Picture": "P_worlds_greatest_big_top_tent",
+        "Name": "世界上最宏伟的大帐篷",
+        "EnName": "World's Greatest Big Top Tent",
+        "Rarity": "Loyal",
+        "Introduction": "Have the World's Greatest Dreams.\n2019年1月3日-2019年1月17日"
       }
     ]
   },
