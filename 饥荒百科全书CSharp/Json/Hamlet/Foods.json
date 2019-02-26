@@ -616,7 +616,7 @@
         "NeedPicture1": "F_cactus_flower",
         "Need1": "×1",
         "NeedPicture2": "FC_Vegetables",
-        "Need2": "×2",
+        "Need2": "×1.5",
         "Restrictions1": {
           "Pre": "无",
           "Text": "FC_Fruit"

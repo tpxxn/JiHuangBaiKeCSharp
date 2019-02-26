@@ -433,6 +433,10 @@ namespace 饥荒百科全书CSharp.View
                     _csFtMeats += 0.5;
                     _csFtFrogLegs += 1;
                     break;
+                case "F_moleworm":
+                    _csFtMeats += 0.5;
+                    _csFtMoleworm += 1;
+                    break;
                 case "F_fish":
                     _csFtFishes += 1;
                     _csFtMeats += 0.5;
@@ -780,9 +784,6 @@ namespace 饥荒百科全书CSharp.View
                 case "F_twigs":
                     _csFtTwigs += 1;
                     _csFtInedible += 1;
-                    break;
-                case "F_moleworm":
-                    _csFtMoleworm += 1;
                     break;
                 case "F_nettle":
                     _csFtNettle += 1;

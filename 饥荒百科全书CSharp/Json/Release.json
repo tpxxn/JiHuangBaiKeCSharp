@@ -3,7 +3,7 @@
     {
       "Version": "0.7.8.0",
       "Data": "2019年2月24日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "增加哈姆雷特版的人物、食物、模拟"
@@ -33,7 +33,7 @@
     {
       "Version": "0.7.7.9",
       "Data": "2018年11月3日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "修复",
           "Content": "修正生物详情页显示不全的BUG"
@@ -43,7 +43,7 @@
     {
       "Version": "0.7.7.8",
       "Data": "2018年11月2日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "增加 2018 Hallowed Nights 活动科技、物品"
@@ -57,7 +57,7 @@
     {
       "Version": "0.7.7.7",
       "Data": "2018年10月30日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "改进",
           "Content": "降低切换页面时内存的增大"
@@ -75,7 +75,7 @@
     {
       "Version": "0.7.7.6",
       "Data": "2018年10月28日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "添加另外两种玻璃尖刺"
@@ -149,7 +149,7 @@
     {
       "Version": "0.7.7.5",
       "Data": "2018年10月25日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "添加Year of the Varg、The Gorge、观看直播获得的皮肤"
@@ -167,7 +167,7 @@
     {
       "Version": "0.7.7.4",
       "Data": "2018年1月31日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "改进",
           "Content": "现在未捕获的错误会记录在\"文档\\JiHuangBaiKeCSharp\\Log\"文件夹下，而不是用对话框提示"
@@ -181,7 +181,7 @@
     {
       "Version": "0.7.7.3",
       "Data": "2018年1月26日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "添加皮肤分类"
@@ -195,7 +195,7 @@
     {
       "Version": "0.7.7.2",
       "Data": "2018年1月23日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "添加小按钮模式(设置里选择)"
@@ -225,7 +225,7 @@
     {
       "Version": "0.7.7.1",
       "Data": "2018年1月22日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "皮肤菜单增加是否开启淡紫色光标选项"
@@ -235,7 +235,7 @@
     {
       "Version": "0.7.7.0",
       "Data": "2018年1月21日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "加入自然-生物巢穴"
@@ -277,7 +277,7 @@
     {
       "Version": "0.7.6.6",
       "Data": "2018年1月17日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "现在可以自定义老板键快捷键了"
@@ -299,7 +299,7 @@
     {
       "Version": "0.7.6.5",
       "Data": "2018年1月16日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "改进",
           "Content": "优化部分页面载入速度"
@@ -317,7 +317,7 @@
     {
       "Version": "0.7.6.4",
       "Data": "2018年1月15日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "启动自动检查更新"
@@ -339,7 +339,7 @@
     {
       "Version": "0.7.6.3",
       "Data": "2018年1月14日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "增加一个捕获异常机制，出现异常会以对话框形式提示错误信息"
@@ -357,7 +357,7 @@
     {
       "Version": "0.7.6.2",
       "Data": "2018年1月13日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "添加托盘区图标功能(为独立服务器功能做准备)，小幅修改菜单UI"
@@ -395,7 +395,7 @@
     {
       "Version": "0.7.6.1",
       "Data": "2018年1月11日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "修复",
           "Content": "修正“羽毛笔”中文名"
@@ -461,7 +461,7 @@
     {
       "Version": "0.7.6.0",
       "Data": "2018年1月10日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "改进",
           "Content": "修改科技分类“书、暗影巫术”为“书籍、暗影”"
@@ -523,7 +523,7 @@
     {
       "Version": "0.7.5.9",
       "Data": "2018年1月8日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "增加设置页面(通用、更新日志、关于)"
@@ -553,7 +553,7 @@
     {
       "Version": "0.7.5.8",
       "Data": "2018年1月6日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "增加“字体加粗”选项"
@@ -615,7 +615,7 @@
     {
       "Version": "0.7.5.7",
       "Data": "2017年12月31日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "自然页面添加小型植物"
@@ -645,7 +645,7 @@
     {
       "Version": "0.7.5.6",
       "Data": "2017年12月27日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "新增“万圣节之夜”、“冬季盛宴”更新内容"
@@ -711,7 +711,7 @@
     {
       "Version": "0.7.5.5",
       "Data": "2017年12月3日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "修复",
           "Content": "修正鱼子酱的推荐食谱、热带鱼羮的烹饪需求"
@@ -729,7 +729,7 @@
     {
       "Version": "0.7.5.4",
       "Data": "2017年12月3日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "修复",
           "Content": "修正点击跳转按钮卡死的BUG"
@@ -743,7 +743,7 @@
     {
       "Version": "0.7.5.3",
       "Data": "2017年12月2日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "改进",
           "Content": "优化资料读取速度"
@@ -769,7 +769,7 @@
     {
       "Version": "0.7.5.2",
       "Data": "2017年11月23日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "修复",
           "Content": "修正点击搜索结果后无法显示详情的BUG以及切换游戏版本搜索不到结果的BUG"
@@ -779,7 +779,7 @@
     {
       "Version": "0.7.5.1",
       "Data": "2017年11月23日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "修复",
           "Content": "修正程序无法打开的Bug"
@@ -789,7 +789,7 @@
     {
       "Version": "0.7.5",
       "Data": "2017年11月23日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "添加搜索框、添加跳转"
@@ -811,7 +811,7 @@
     {
       "Version": "0.6.0",
       "Data": "2017年11月22日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "迁移烹饪模拟器界面(依然没有跳转)"
@@ -829,7 +829,7 @@
     {
       "Version": "0.5.0",
       "Data": "2017年11月21日",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "迁移所有内容(暂时移除烹饪模拟器，没有做跳转按钮)"
@@ -839,7 +839,7 @@
     {
       "Version": "0.2.0",
       "Data": "2016年",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "完成食物、模拟"
@@ -849,7 +849,7 @@
     {
       "Version": "0.1.0",
       "Data": "2016年",
-      "UpdataContent": [
+      "UpdateContent": [
         {
           "Label": "新增",
           "Content": "完成人物"

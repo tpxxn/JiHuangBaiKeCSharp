@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace 饥荒百科全书CSharp.Class.JsonDeserialize
 {
-    public class UpdataContent
+    public class UpdateContent
     {
         public string Label { get; set; }
         public string Content { get; set; }
@@ -16,11 +16,11 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
     {
         public string Version { get; set; }
         public string Data { get; set; }
-        public List<UpdataContent> UpdataContent { get; set; }
+        public List<UpdateContent> UpdateContent { get; set; }
 
         public Release()
         {
-            UpdataContent = new List<UpdataContent>();
+            UpdateContent = new List<UpdateContent>();
         }
     }
 

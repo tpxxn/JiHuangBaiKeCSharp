@@ -81,12 +81,12 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
                 Grid.SetColumn(dataTextBlock, 1);
                 ReleaseStackPanel.Children.Add(rootGrid);
                 //添加更新内容
-                foreach (var updataContent in releaseData[i].UpdataContent)
+                foreach (var UpdateContent in releaseData[i].UpdateContent)
                 {
                     var updateContentRootGrid = new Grid { Margin = new Thickness(75, 15, 0, 0) };
                     updateContentRootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Auto) });
                     updateContentRootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Auto) });
-                    var solidColorBrush = updataContent.Label == "新增" ? new SolidColorBrush(Color.FromArgb(255, 40, 167, 69)) : new SolidColorBrush(Color.FromArgb(255, 3, 102, 214));
+                    var solidColorBrush = UpdateContent.Label == "新增" ? new SolidColorBrush(Color.FromArgb(255, 40, 167, 69)) : new SolidColorBrush(Color.FromArgb(255, 3, 102, 214));
                     updateContentRootGrid.Children.Add(new Border
                     {
                         Width = 55,
@@ -95,19 +95,19 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
                         Child = new TextBlock
                         {
                             FontSize = 17,
-                            Text = updataContent.Label,
+                            Text = UpdateContent.Label,
                             HorizontalAlignment = HorizontalAlignment.Center,
                             VerticalAlignment = VerticalAlignment.Center
                         }
                     });
-                    var updataContentDataTextBlock = new TextBlock
+                    var updateContentDataTextBlock = new TextBlock
                     {
                         FontSize = 17,
-                        Text = updataContent.Content,
+                        Text = UpdateContent.Content,
                         Margin = new Thickness(15, 0, 0, 0)
                     };
-                    updateContentRootGrid.Children.Add(updataContentDataTextBlock);
-                    Grid.SetColumn(updataContentDataTextBlock, 1);
+                    updateContentRootGrid.Children.Add(updateContentDataTextBlock);
+                    Grid.SetColumn(updateContentDataTextBlock, 1);
                     ReleaseStackPanel.Children.Add(updateContentRootGrid);
                 }
             }

@@ -612,7 +612,7 @@
         "NeedPicture1": "F_cactus_flower",
         "Need1": "×1",
         "NeedPicture2": "FC_Vegetables",
-        "Need2": "×2",
+        "Need2": "×1.5",
         "Restrictions1": {
           "Pre": "无",
           "Text": "FC_Fruit"
@@ -1024,6 +1024,21 @@
         "AttributeValue": "×0.5",
         "Introduce": "把青蛙放在篝火上烤制。",
         "Console": "froglegs_cooked"
+      },
+      {
+        "Picture": "F_moleworm",
+        "Name": "鼹鼠",
+        "EnName": "Moleworm",
+        "Health": 0,
+        "Hunger": 0,
+        "Sanity": 0,
+        "Perish": 2,
+        "Attribute": "FC_Meats",
+        "AttributeValue": "×0.5",
+        "Attribute2": "F_moleworm",
+        "AttributeValue2": "×1",
+        "Introduce": "用锤子把鼹鼠敲晕获得，不可食用。",
+        "Console": "mole"
       },
       {
         "Picture": "F_fish",
@@ -1701,19 +1716,6 @@
         "AttributeValue": "×1",
         "Introduce": "砍伐多枝的树或采集树苗获得。",
         "Console": "twigs"
-      },
-      {
-        "Picture": "F_moleworm",
-        "Name": "鼹鼠",
-        "EnName": "Moleworm",
-        "Health": 0,
-        "Hunger": 0,
-        "Sanity": 0,
-        "Perish": 2,
-        "Attribute": "F_moleworm",
-        "AttributeValue": "×1",
-        "Introduce": "用锤子把鼹鼠敲晕获得，不可食用。",
-        "Console": "mole"
       }
     ]
   },
