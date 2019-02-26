@@ -260,6 +260,16 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         }
     }
 
+    public class GreenThumb
+    {
+        public List<Science> Science { get; set; }
+
+        public GreenThumb()
+        {
+            Science = new List<Science>();
+        }
+    }
+
     public class Renovate
     {
         public RenovateFlooring RenovateFlooring { get; set; }
@@ -449,6 +459,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
         public Offerings Offerings { get; set; }
         public Volcano Volcano { get; set; }
         public CityPlanning CityPlanning { get; set; }
+        public GreenThumb GreenThumb { get; set; }
         public Renovate Renovate { get; set; }
 
         public ScienceRootObject()
@@ -476,6 +487,7 @@ namespace 饥荒百科全书CSharp.Class.JsonDeserialize
             Offerings = new Offerings();
             Volcano = new Volcano();
             CityPlanning = new CityPlanning();
+            GreenThumb = new GreenThumb();
             Renovate = new Renovate();
         }
     }

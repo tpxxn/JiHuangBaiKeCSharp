@@ -312,6 +312,7 @@ namespace 饥荒百科全书CSharp.Class
         public static readonly List<Science> ScienceOfferingsData = new List<Science>();
         public static readonly List<Science> ScienceVolcanoData = new List<Science>();
         public static readonly List<Science> ScienceCityPlanningData = new List<Science>();
+        public static readonly List<Science> ScienceGreenThumbData = new List<Science>();
         public static readonly List<Science> ScienceRenovateFlooringData = new List<Science>();
         public static readonly List<Science> ScienceRenovateShelvesData = new List<Science>();
         public static readonly List<Science> ScienceRenovatePlantholdersData = new List<Science>();
@@ -410,6 +411,7 @@ namespace 饥荒百科全书CSharp.Class
             ScienceOfferingsData.Clear();
             ScienceVolcanoData.Clear();
             ScienceCityPlanningData.Clear();
+            ScienceGreenThumbData.Clear();
             ScienceRenovateFlooringData.Clear();
             ScienceRenovateShelvesData.Clear();
             ScienceRenovatePlantholdersData.Clear();
@@ -662,6 +664,12 @@ namespace 饥荒百科全书CSharp.Class
                 scienceCityPlanningItems.Picture = StringProcess.GetGameResourcePath(scienceCityPlanningItems.Picture);
                 ScienceCityPlanningData.Add(scienceCityPlanningItems);
                 AutoSuggestBoxItemSourceAdd(scienceCityPlanningItems, "ScienceCityPlanning");
+            }
+            foreach (var scienceGreenThumbItems in science.GreenThumb.Science)
+            {
+                scienceGreenThumbItems.Picture = StringProcess.GetGameResourcePath(scienceGreenThumbItems.Picture);
+                ScienceGreenThumbData.Add(scienceGreenThumbItems);
+                AutoSuggestBoxItemSourceAdd(scienceGreenThumbItems, "ScienceGreenThumb");
             }
             foreach (var scienceRenovateFlooringItems in science.Renovate.RenovateFlooring.Science)
             {

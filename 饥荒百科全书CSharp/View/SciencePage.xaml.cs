@@ -136,6 +136,9 @@ namespace 饥荒百科全书CSharp.View
                     case "ScienceCityPlanning":
                         OnNavigatedToScienceDialog(Global.ScienceCityPlanningData, suggestBoxItemPicture);
                         break;
+                    case "ScienceGreenThumb":
+                        OnNavigatedToScienceDialog(Global.ScienceGreenThumbData, suggestBoxItemPicture);
+                        break;
                     case "ScienceRenovateFlooring":
                         OnNavigatedToScienceDialog(Global.ScienceRenovateFlooringData, suggestBoxItemPicture);
                         break;
@@ -230,6 +233,7 @@ namespace 饥荒百科全书CSharp.View
             {
                 TreasureHuntingExpander.Visibility = Visibility.Collapsed;
                 CityPlanningExpander.Visibility = Visibility.Collapsed;
+                GreenThumbExpander.Visibility = Visibility.Collapsed;
                 RenovateExpander.Visibility = Visibility.Collapsed;
             }
             if (Global.GameVersion != 0 && Global.GameVersion != 1)
@@ -280,6 +284,7 @@ namespace 饥荒百科全书CSharp.View
             OfferingsExpander.DataContext = Global.ScienceOfferingsData;
             VolcanoExpander.DataContext = Global.ScienceVolcanoData;
             CityPlanningExpander.DataContext = Global.ScienceCityPlanningData;
+            GreenThumbExpander.DataContext = Global.ScienceGreenThumbData;
             RenovateFlooringExpander.DataContext = Global.ScienceRenovateFlooringData;
             RenovateShelvesExpander.DataContext = Global.ScienceRenovateShelvesData;
             RenovatePlantholdersExpander.DataContext = Global.ScienceRenovatePlantholdersData;

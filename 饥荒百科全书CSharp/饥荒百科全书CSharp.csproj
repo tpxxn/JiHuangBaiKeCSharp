@@ -7057,6 +7057,15 @@
     <Resource Include="Resources\GameResources\Skins\P_umbrella_the_big_top.png" />
     <Resource Include="Resources\GameResources\Skins\P_worlds_greatest_big_top_tent.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_ico_green_thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GameResources\Sciences\S_bramble_husk.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_bramble_trap.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_compost_wrap.png" />
+    <Resource Include="Resources\GameResources\Sciences\S_poison_balm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

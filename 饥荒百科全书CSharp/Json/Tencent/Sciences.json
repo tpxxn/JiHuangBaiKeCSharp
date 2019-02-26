@@ -772,7 +772,7 @@
         "Need3": "G_living_log",
         "Need3Value": 2,
         "Unlock": [ "S_science_machine" ],
-        "Introduction": "种植三种颜色蘑菇或三种颜色孢子可以在上面生长对应颜色的蘑菇。",
+        "Introduction": "种植三种颜色蘑菇或三种颜色孢子可以在上面生长对应颜色的蘑菇，种植孢子到达最大水平时，有 50% 几率释放孢子。在不到一天内收获只能获得 1 个蘑菇，最多（需要 3.75 天）可以收获 4 个（用孢子种植则为 6 个）蘑菇。可以收获 4 次，但是要使用活木施肥。在地面上，冬天蘑菇将会腐烂。",
         "ConsoleCommand": "c_spawn",
         "Console": "mushroom_farm"
       },

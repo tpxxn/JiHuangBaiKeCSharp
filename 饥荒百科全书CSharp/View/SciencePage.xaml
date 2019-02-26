@@ -377,6 +377,21 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Expander>
+                <Expander x:Name="GreenThumbExpander" Style="{StaticResource ExpanderStyle}" >
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="32" Source="/饥荒百科全书CSharp;component/Resources/GameResources/Sciences/S_ico_green_thumb.png" />
+                            <TextBlock x:Name="GreenThumbExpanderTextBolck" Text="园艺师" Margin="10,0,0,0" FontSize="20" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <ItemsControl ItemTemplate="{StaticResource ScienceDataTemplate}" ItemsSource="{Binding}" Margin="10">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Expander>
                 <Expander x:Name="RenovateExpander" Style="{StaticResource ExpanderStyle2}">
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">

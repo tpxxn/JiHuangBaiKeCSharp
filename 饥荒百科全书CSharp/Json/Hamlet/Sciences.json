@@ -1841,6 +1841,70 @@
       }
     ]
   },
+  "GreenThumb": {
+    "Science": [
+      {
+        "Picture": "G_living_log",
+        "Name": "活木",
+        "EnName": "Living Log",
+        "Need1": "G_health",
+        "Need1Value": -20,
+        "UnlockCharcter": "C_wormwood",
+        "Introduction": "沃姆伍德可以消耗 20 点生命制作活木。飞猪神秘商店花 5 呼噜币收购。",
+        "Console": "livinglog"
+      },
+      {
+        "Picture": "S_poison_balm",
+        "Name": "解毒药",
+        "EnName": "Poison Balm",
+        "Need1": "G_living_log",
+        "Need1Value": 1,
+        "Need2": "G_venom_gland",
+        "Need2Value": 1,
+        "UnlockCharcter": "C_wormwood",
+        "Introduction": "效果与抗毒血清一样，使用一次解除中毒效果。",
+        "Console": "poisonbalm"
+      },
+      {
+        "Picture": "S_bramble_husk",
+        "Name": "荆棘壳甲",
+        "EnName": "Bramble Husk",
+        "Need1": "G_living_log",
+        "Need1Value": 2,
+        "Need2": "G_boneshard",
+        "Need2Value": 4,
+        "UnlockCharcter": "C_wormwood",
+        "Introduction": "荆棘壳甲具有 375 点耐久并能吸收 65% 物理伤害，每当穿着荆棘壳甲的角色被攻击，在一个方形半径范围内的怪物都将受到 22.5 点伤害。荆棘壳甲还能免疫荆棘和荆棘陷阱的伤害。",
+        "Console": "armor_bramble"
+      },
+      {
+        "Picture": "S_bramble_trap",
+        "Name": "荆棘陷阱",
+        "EnName": "Bramble Trap",
+        "Need1": "G_living_log",
+        "Need1Value": 1,
+        "Need2": "G_stinger",
+        "Need2Value": 1,
+        "UnlockCharcter": "C_wormwood",
+        "Introduction": "有生物触发荆棘陷阱时会造成 40 点伤害，该伤害对建筑和玩家也有效，穿荆棘壳甲可以免疫该伤害。荆棘陷阱可以使用 10 次，每次被触发后都需要手动重置。飞行的生物不会触发荆棘陷阱。",
+        "Console": "trap_bramble"
+      },
+      {
+        "Picture": "S_compost_wrap",
+        "Name": "堆肥包",
+        "EnName": "Compost Wrap",
+        "Need1": "G_manure",
+        "Need1Value": 5,
+        "Need2": "F_rot",
+        "Need2Value": 2,
+        "Need3": "G_nitre",
+        "Need3Value": 1,
+        "UnlockCharcter": "C_wormwood",
+        "Introduction": "使用堆肥包可以给玩家和大多数生物（除了怪物）恢复 30 点生命。",
+        "Console": "compostwrap"
+      }
+    ]
+  },
   "CityPlanning": {
     "Science": [
       {
