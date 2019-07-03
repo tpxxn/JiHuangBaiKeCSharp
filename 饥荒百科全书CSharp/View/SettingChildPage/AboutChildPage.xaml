@@ -25,7 +25,7 @@
             </StackPanel>
             <StackPanel x:Name="ContentStackPanel">
                 <!--请客-->
-                <TextBlock x:Name="DonationTextBlock" Text="请作者姐姐吃点东西~" FontSize="22" Margin="20,20,0,0"/>
+                <TextBlock x:Name="DonationTextBlock" Text="请作者吃点东西~" FontSize="22" Margin="20,20,0,0"/>
                 <StackPanel Margin="20,5,0,5" Orientation="Horizontal">
                     <RadioButton x:Name="ZfbRadioButton" Content="支付宝" Click="ZfbRadioButton_Click" IsChecked="True" Cursor="{StaticResource CursorLink}"/>
                     <RadioButton x:Name="WxRadioButton" Content="微信" Click="WxRadioButton_Click" Margin="10,0,0,0" Cursor="{StaticResource CursorLink}"/>

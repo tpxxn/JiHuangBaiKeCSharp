@@ -1,6 +1,20 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.8.1",
+      "Data": "2019年7月3日",
+      "UpdateContent": [
+        {
+          "Label": "修复",
+          "Content": "修复 WeGame 单机版饥荒无法使用代码快捷输入 BUG"
+        },
+        {
+          "Label": "修复",
+          "Content": "修复因为服务器更换域名导致的软件启动错误提示"
+        }
+      ]
+    },
+    {
       "Version": "0.7.8.0",
       "Data": "2019年2月24日",
       "UpdateContent": [

@@ -290,12 +290,18 @@ namespace 饥荒百科全书CSharp.Class
                 processes = Process.GetProcessesByName("dontstarve_rail");
                 if (!processes.Any())
                 {
-                    return null;
+                    processes = Process.GetProcessesByName("dontstarvev_rail");
+                    if (!processes.Any())
+                    {
+                        return null;
+                    }
+                    Debug.WriteLine("WeGame 单机版");
+                    return processes;
                 }
-                Debug.WriteLine("WeGame版/QQ游戏大厅版");
+                Debug.WriteLine("WeGame 联机版");
                 return processes;
             }
-            Debug.WriteLine("Steam版");
+            Debug.WriteLine("Steam 版");
             return processes;
         }
 

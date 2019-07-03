@@ -57,8 +57,9 @@ namespace 饥荒百科全书CSharp.Class
                 {
                     File.Delete(UpdateXmlPath);
                 }
+                ServicePointManager.ServerCertificateValidationCallback += delegate { return true; };// **** Always accept
                 //第一个参数是下载地址,第二个参数是文件保存的路径文件名
-                _client.DownloadFileAsync(new Uri("http://47.107.95.224//update/update.xml"), UpdateXmlPath);
+                _client.DownloadFileAsync(new Uri("https://www.jihuangbaike.com/update/update.xml"), UpdateXmlPath);
                 //读取从服务器获取的最新版本号(读取XML文件)
                 _client.DownloadFileCompleted += Completed;
                 //LatestVersion();
@@ -121,11 +122,6 @@ namespace 饥荒百科全书CSharp.Class
         //获取新版本
         private void GetNewVersion()
         {
-            //if (_localVersion == NewVersion)
-            //{
-            //    var downloadWindow = new DownloadWindow(false);
-            //    downloadWindow.Show();
-            //}
             if (VersionCompare(_localVersion, NewVersion) && File.Exists(UpdateXmlPath))
             {
                 var downloadWindow = new DownloadWindow(true);

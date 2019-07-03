@@ -69,7 +69,8 @@ namespace 饥荒百科全书CSharp.Class
                     Directory.CreateDirectory(UpdatePath);
                 }
                 //第一个参数是文件的地址,第二个参数是文件保存的路径文件名
-                _client.DownloadFile("http://www.jihuangbaike.com/Update/update.xml", UpdateXmlPath);
+                ServicePointManager.ServerCertificateValidationCallback += delegate { return true; };// **** Always accept
+                _client.DownloadFile("https://www.jihuangbaike.com/update/update.xml", UpdateXmlPath);
                 LatestVersion();
             }
             catch
@@ -111,7 +112,7 @@ namespace 饥荒百科全书CSharp.Class
                     var slashPlace = _newVersionDownloadUrl.LastIndexOf('/');
                     _newVersionFileName = _newVersionDownloadUrl.Replace(".zip", "").Replace("_", " ")
                         .Substring(slashPlace + 1);
-                    DownloadNewvirsion();
+                    DownloadNewVersion();
                 }
             }
             else if (!File.Exists(UpdateXmlPath))
@@ -124,7 +125,7 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// 下载新版本
         /// </summary>
-        private void DownloadNewvirsion()
+        private void DownloadNewVersion()
         {
             if (_localVersion == _newVersion)
             {
@@ -147,12 +148,12 @@ namespace 饥荒百科全书CSharp.Class
                         else
                         {
                             File.Delete(CurrentPath + _newVersionFileName + ".zip");
-                            DownloadNewversion_();
+                            DownloadNewVersion_();
                         }
                     }
                     else
                     {
-                        DownloadNewversion_();
+                        DownloadNewVersion_();
                     }
                 }
             }
@@ -161,7 +162,7 @@ namespace 饥荒百科全书CSharp.Class
         /// <summary>
         /// 下载
         /// </summary>
-        private void DownloadNewversion_()
+        private void DownloadNewVersion_()
         {
             var downloadWindow = new DownloadWindow(true);
             downloadWindow.Show();
