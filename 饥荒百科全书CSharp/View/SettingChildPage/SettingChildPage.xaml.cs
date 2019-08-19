@@ -105,6 +105,22 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
                     SmallButtonModeCloseRadioButton.IsChecked = true;
                 }
             }
+            // 读取复制自身模式设置
+            if (string.IsNullOrEmpty(RegeditRw.RegReadString("CopySelfMode")))
+            {
+                CopySelfModeCloseRadioButton.IsChecked = true;
+            }
+            else
+            {
+                if (Settings.CopySelfMode)
+                {
+                    CopySelfModeOpenRadioButton.IsChecked = true;
+                }
+                else
+                {
+                    CopySelfModeCloseRadioButton.IsChecked = true;
+                }
+            }
         }
 
         private static string ControlKeyToString(double controlKeyValue)
@@ -263,6 +279,26 @@ namespace 饥荒百科全书CSharp.View.SettingChildPage
             {
                 Settings.SmallButtonMode = false;
                 RegeditRw.RegWrite("SmallButtonMode", "False");
+            }
+            var copySplashWindow = new CopySplashScreen("已保存");
+            copySplashWindow.InitializeComponent();
+            copySplashWindow.Show();
+        }
+
+        /// <summary>
+        /// 是否仅复制本身
+        /// </summary>
+        private void CopySelfModeRadioButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (CopySelfModeOpenRadioButton.IsChecked == true)
+            {
+                Settings.CopySelfMode = true;
+                RegeditRw.RegWrite("CopySelfMode", "True");
+            }
+            else if (CopySelfModeCloseRadioButton.IsChecked == true)
+            {
+                Settings.CopySelfMode = false;
+                RegeditRw.RegWrite("CopySelfMode", "False");
             }
             var copySplashWindow = new CopySplashScreen("已保存");
             copySplashWindow.InitializeComponent();

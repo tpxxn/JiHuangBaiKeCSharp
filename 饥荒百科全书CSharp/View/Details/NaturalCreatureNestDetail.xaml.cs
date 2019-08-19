@@ -26,6 +26,8 @@ namespace 饥荒百科全书CSharp.View.Details
     {
         private int _loadedTime;
 
+        private string console;
+
         public void LoadCompleted(object sender, NavigationEventArgs e)
         {
             if (e.ExtraData == null || _loadedTime != 0) return;
@@ -236,6 +238,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 {
                     _creatureNestConsoleStringList.Add(console);
                 }
+                console = c.Console[0];
             }
             else
             {
@@ -693,6 +696,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 if (_creatureNestConsoleStringList.Count != 1)
                 {
                     ConsolePre.Text = $"c_spawn(\"{_creatureNestConsoleStringList[_creatureNestIndex]}\",";
+                    console = _creatureNestConsoleStringList[_creatureNestIndex];
                 }
             }
         }
@@ -721,6 +725,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 if (_creatureNestConsoleStringList.Count != 1)
                 {
                     ConsolePre.Text = $"c_spawn(\"{_creatureNestConsoleStringList[_creatureNestIndex]}\",";
+                    console = _creatureNestConsoleStringList[_creatureNestIndex];
                 }
             }
         }
@@ -737,7 +742,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 ConsoleNum.Text = "1";
             }
-            Global.SetClipboard(ConsolePre.Text + ConsoleNum.Text + ConsolePos.Text);
+            Global.SetClipboard(Settings.CopySelfMode == false ? $"{ConsolePre.Text}{ConsoleNum.Text}{ConsolePos.Text}" : $"{console}");
         }
 
         private void Console_Click(object sender, RoutedEventArgs e)

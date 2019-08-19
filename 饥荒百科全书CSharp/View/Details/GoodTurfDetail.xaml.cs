@@ -24,6 +24,8 @@ namespace 饥荒百科全书CSharp.View.Details
     {
         private int _loadedTime;
 
+        private string console;
+
         public void LoadCompleted(object sender, NavigationEventArgs e)
         {
             if (e.ExtraData == null || _loadedTime != 0) return;
@@ -64,6 +66,7 @@ namespace 饥荒百科全书CSharp.View.Details
             if (c.Console != null)
             {
                 ConsolePre.Text = $"c_give(\"{c.Console}\",";
+                console = c.Console;
             }
             else
             {
@@ -95,7 +98,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 ConsoleNum.Text = "1";
             }
-            Global.SetClipboard(ConsolePre.Text + ConsoleNum.Text + ")");
+            Global.SetClipboard(Settings.CopySelfMode == false ? $"{ConsolePre.Text}{ConsoleNum.Text})" : $"{console}");
         }
 
         private void Console_Click(object sender, RoutedEventArgs e)

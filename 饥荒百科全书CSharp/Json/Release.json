@@ -1,6 +1,16 @@
 ﻿{
   "Release": [
     {
+      "Version": "0.7.8.2",
+      "Data": "2019年8月19日",
+      "UpdateContent": [
+        {
+          "Label": "新增",
+          "Content": "添加复制控制台代码时仅复制本身模式"
+        }
+      ]
+    },
+    {
       "Version": "0.7.8.1",
       "Data": "2019年7月3日",
       "UpdateContent": [

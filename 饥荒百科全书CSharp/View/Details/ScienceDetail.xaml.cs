@@ -24,6 +24,8 @@ namespace 饥荒百科全书CSharp.View.Details
     {
         private int _loadedTime;
 
+        private string console;
+
         public void LoadCompleted(object sender, NavigationEventArgs e)
         {
             if (e.ExtraData == null || _loadedTime != 0) return;
@@ -87,7 +89,7 @@ namespace 饥荒百科全书CSharp.View.Details
                 {
                     UnlockCharcterButton.Visibility = Visibility.Visible;
                     UnlockCharcterImage.Source = new BitmapImage(new Uri(StringProcess.GetGameResourcePath(c.UnlockCharcter),UriKind.Relative));
-                    _unlockCharcter = StringProcess.GetGameResourcePath(c.UnlockCharcter);
+                    _unlockCharacter = StringProcess.GetGameResourcePath(c.UnlockCharcter);
                 }
                 if (c.UnlockBlueprint != null)
                 {
@@ -105,9 +107,13 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 CopyGrid.Visibility = Visibility.Collapsed;
             }
+            else
+            {
+                console = c.Console;
+            }
         }
 
-        private string _unlockCharcter;
+        private string _unlockCharacter;
 
         private void Science_Jump_Click(object sender, RoutedEventArgs e)
         {
@@ -136,7 +142,7 @@ namespace 饥荒百科全书CSharp.View.Details
 
         private void Science_CharacterJump_Click(object sender, RoutedEventArgs e)
         {
-            var picturePath = _unlockCharcter;
+            var picturePath = _unlockCharacter;
             
             Global.SetAutoSuggestBoxItem();
             foreach (var suggestBoxItem in Global.AutoSuggestBoxItemSource)
@@ -159,7 +165,7 @@ namespace 饥荒百科全书CSharp.View.Details
             {
                 ConsoleNum.Text = "1";
             }
-            Global.SetClipboard(ConsolePre.Text + ConsoleNum.Text + ")");
+            Global.SetClipboard(Settings.CopySelfMode == false ? $"{ConsolePre.Text}{ConsoleNum.Text})" : $"{console}");
         }
 
         private void Console_Click(object sender, RoutedEventArgs e)

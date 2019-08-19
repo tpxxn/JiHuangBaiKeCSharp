@@ -22,5 +22,10 @@ namespace 饥荒百科全书CSharp.Class
         /// 小图标模式
         /// </summary>
         public static bool SmallButtonMode { get; set; }
+
+        /// <summary>
+        /// 控制台代码复制
+        /// </summary>
+        public static bool CopySelfMode { get; set; }
     }
 }

@@ -98,6 +98,7 @@ namespace 饥荒百科全书CSharp
             Settings.HideToNotifyIcon = RegeditRw.RegReadString("HideToNotifyIcon") == "True";
             Settings.HideToNotifyIconPrompt = RegeditRw.RegReadString("HideToNotifyIconPrompt") == "True";
             Settings.SmallButtonMode = RegeditRw.RegReadString("SmallButtonMode") == "True";
+            Settings.CopySelfMode = RegeditRw.RegReadString("CopySelfMode") == "True";
             #endregion
             // 初始化
             InitializeComponent();
